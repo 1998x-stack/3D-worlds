@@ -13,7 +13,36 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [30 previous assets · v0.3](docs/30-assets-v03.md) ·
 [MCP contract](docs/mcp-contract.md) ·
 [Manifest schema](schemas/manifest.schema.json) ·
-[Model-building Skill](.codex/skills/threejs-model-builder/SKILL.md)
+[Model-building Skill v2](.codex/skills/threejs-model-builder/SKILL.md) ·
+[Skill architecture](docs/skill-architecture.md)
+
+
+## Three.js Model Builder · Skill v2
+
+The model-building Agent Skill now ships as a **complete, portable directory**
+for Codex, Claude and Pi — not only a single `SKILL.md`. Each mirror includes:
+
+- `SKILL.md`: task routing, safe defaults and execution/acceptance rules.
+- `references/`: procedural modeling, category taxonomy, catalog/provenance,
+  GLB ingestion, thumbnails/LOD, Pages/MCP/storage, QA and official external sources.
+- `assets/`: model design brief, acceptance report, import-batch manifest and
+  working recipe module template.
+- `examples/`: procedural furniture design and audited GLB import walk-through.
+- `scripts/preflight.py`: read-only project integration and reference checks.
+
+Begin at [the canonical Skill](.codex/skills/threejs-model-builder/SKILL.md)
+and [Skill architecture](docs/skill-architecture.md). All Markdown references
+use **paths relative to the Skill root**; external authoritative URLs are
+collected in [EXTERNAL-SOURCES.md](.codex/skills/threejs-model-builder/references/EXTERNAL-SOURCES.md).
+
+```bash
+python3 scripts/verify_skill_mirrors.py
+python3 .codex/skills/threejs-model-builder/scripts/preflight.py --json
+```
+
+Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
+resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
+broken local links.
 
 ## V0.5 — 50 new scene assets
 
@@ -38,8 +67,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
 
 ## Capabilities
 
-- **135 original procedural models across 13 categories:** 85 historical
-  assets and 50 new v0.5 scene models, each with editable native Three.js source.
+- **135 original procedural models across 13 categories:** 85 historical assets and 50 new v0.5 scene models, each with editable native Three.js source.
 - **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
   model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.

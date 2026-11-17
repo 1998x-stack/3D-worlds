@@ -26,6 +26,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate three portable Skill packages and references
+        run: |
+          python scripts/verify_skill_mirrors.py
+          python .codex/skills/threejs-model-builder/scripts/preflight.py --json
       - name: Validate and build SQLite catalog
         run: |
           python scripts/catalog.py validate
