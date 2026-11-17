@@ -14,11 +14,11 @@
 
 ## Overview
 
-3D Worlds connects a catalog of **535 original, source-editable procedural models across 14 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
+3D Worlds connects a catalog of **565 original, source-editable procedural models across 14 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
 
 | Layer | Key capability | Delivery |
 |---|---|---|
-| Catalog | 535 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
+| Catalog | 565 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
 | Gallery | Real WebP/AVIF thumbnails, interactive model inspector, category search | [GitHub Pages](https://1998x-stack.github.io/3D-worlds/) |
 | Game assets | GLB generation and Meshopt LOD0/LOD1/LOD2 optimization | Local build / CI artifact |
 | 3D print workbench | Printer-bed dimensions, scaled size estimate, P0/P1/P2 category guidance, STL draft | Browser · **not audited** |
@@ -26,6 +26,24 @@
 | Integrations | SQLite FTS5, read-only MCP tools, paginated API, optional local/S3 object storage | Self-hosted |
 
 **P0/P1/P2 are workflow priorities, not quality grades.** The catalog does not label any generated model as physically verified.
+
+## Creative maker-market scenes · v1.4
+
+The newest release adds **30 original, editable Three.js models** across the
+**13 general scene categories**, increasing the full catalog from **535 to 565
+models in 14 categories**. Maker-inspired designs include geometric laptop
+stands, modular electronics learning blocks, Truchet textile tiles, trellises,
+original botanical miniatures, display organizers, functional-looking (but
+nonfunctional) scientific devices, and nonweapon sci-fi habitats.
+
+Geometry is original and MIT-licensed. Amazon and eBay listings are qualitative
+product idea signals, while Hacker News supplies maker/CAD inspiration;
+this release does not import or copy their meshes, prove market demand, or
+certify 3D printability.
+
+[30-model bilingual inventory and sources](docs/30-assets-v14.md) ·
+[Machine-readable V1.4 scene collection](catalog/collections/v14.json) ·
+[Verification checklist](docs/verification-v14.md)
 
 ## Overseas print-commerce · v1.3
 

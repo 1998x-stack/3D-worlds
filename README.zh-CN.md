@@ -2,9 +2,20 @@
 
 **[English](README.md) · [在线模型库](https://1998x-stack.github.io/3D-worlds/) · [打印工作台](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [CI 状态](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml)**
 
-3D Worlds 将 **535 个可编辑程序化 Three.js 模型、14 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
+3D Worlds 将 **565 个可编辑程序化 Three.js 模型、14 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
 
 > **关键：** P0/P1/P2 是工程任务优先级，不是可打印性评分；通过 CLI 几何审核也不等于切片或实体打印成功。当前模型默认未经制造验证。
+
+## 最新创意模型批次 · v1.4
+
+在原有 535 个模型的基础上新增 30 个原创、可编辑的 Three.js 创意资产，
+现为 **565 个模型 / 14 个类别**（新增模型覆盖 13 个通用场景类别）。
+研究方向包括 Amazon/eBay 桌面收纳与园艺配件，以及 Hacker News
+中的 OpenSCAD、Build123d 和模块化电子设计。均为原创可视化模型，
+不是未经校验就可以销售或实际承重的 3D 打印文件。
+
+[30 个双语模型清单及研究引用](docs/30-assets-v14.md) ·
+[模型集合元数据](catalog/collections/v14.json)
 
 ## 海外3D打印商品专项 · v1.3
 
