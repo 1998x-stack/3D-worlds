@@ -43,8 +43,28 @@ jobs:
         run: node scripts/validate_models.mjs
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
+      - name: Install headless Chromium for asset rendering
+        run: npx playwright install --with-deps chromium
+      - name: P0 generate WebP/AVIF thumbnails and P1 Meshopt LOD0/1/2
+        run: npm run generate:assets
+      - name: Verify P0 previews, LOD hashes and decodable GLBs
+        run: node scripts/verify_generated.mjs
+      - name: P2 mirror all actual LOD binaries into immutable local object storage
+        run: python scripts/smoke_p2.py
+      - name: Archive P0/P1 generation quality report
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-worlds-previews-and-lods
+          path: |
+            public/thumbs/
+            public/generated/
+          retention-days: 7
       - name: Build Vite static site
         run: npm run build
+      - name: Browser end-to-end smoke test
+        run: node scripts/smoke_gallery.mjs
+      - name: P2 browser integration against SQLite search API
+        run: node scripts/smoke_remote_gallery.mjs
       - name: Validate MCP Python SDK v2 integration
         run: |
           python -m pip install -r requirements-mcp.txt

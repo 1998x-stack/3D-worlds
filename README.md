@@ -7,30 +7,36 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [Architecture](docs/architecture.md) ·
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
+[P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
+[30 new assets](docs/30-assets-v03.md) ·
 [MCP contract](docs/mcp-contract.md) ·
 [Manifest schema](schemas/manifest.schema.json) ·
 [Model-building Skill](.codex/skills/threejs-model-builder/SKILL.md)
 
 ## Capabilities
 
-- **Fifteen original procedural models:** five v0.1 assets plus sofa,
-  bookshelf, bed, floor lamp, sink, bathtub, garden tree, electric car,
-  laptop and potted plant. Seven categories.
-- **Web Gallery:** responsive cards, bilingual text search, categories and sorting.
+- **45 original procedural models across 13 categories:** five initial props,
+  ten v0.2 props, and thirty v0.3 models, all editable as native Three.js.
+- **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
+  model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
-- **Portable output:** copy self-contained Three.js source or generate a downloadable GLB.
+- **Portable output:** copy self-contained Three.js source or export GLB; build
+  pipeline publishes Meshopt compressed GLB LOD0/1/2 variants.
 - **GLB batch ingestion:** Khronos specification validation, budgets,
   license/source evidence, content hashes, dry run and explicit publishing.
+- **P2 object storage:** content-addressed local/S3/MinIO adapters, signed
+  downloads and paginated SQLite search API (optional separate server).
 - **SQLite catalog:** normalized categories, tags, files, provenance, relations
   and incremental-search FTS5 index.
 - **MCP:** search/get/source/import tools for an AI game-building assistant,
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v0.2 engineering iteration. All 15 original generators can be
-> inspected, copied and exported as GLB. The included GLB batch import pipeline
-> accepts small self-contained local GLB files; large-scale CDN storage and a
-> hosted MCP service remain future capabilities. The humanoids are unrigged.
+> **Status:** v0.3, 45 editable original generators. CI generates real
+> WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
+> S3/MinIO implementation is configurable but requires your credentials and
+> external deployment; remote MCP hosting and real 50K-asset load testing
+> are not claimed. Humanoid prototypes remain unrigged.
 
 ## Local run
 
@@ -132,6 +138,23 @@ npm run build
 See [GLB ingestion architecture](docs/ingestion-architecture.md),
 [Ten new asset briefs](docs/asset-designs-v02.md) and
 [glTF Validator](https://github.com/KhronosGroup/glTF-Validator).
+
+## P0/P1/P2 — production pipeline
+
+```bash
+npm install
+npx playwright install --with-deps chromium
+npm run generate:assets    # WebP/AVIF + raw GLB + Meshopt LOD0/1/2
+npm run verify:assets      # image formats, SHA-256 and decodable GLBs
+npm run build
+npm run test:gallery       # real Chromium Pages smoke
+python3 scripts/catalog.py build
+python3 services/search_api.py  # P2 separate local query server
+```
+
+See [the P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) for object storage,
+import and S3/MinIO configurations. Generated binaries and thumbnails are
+build artifacts, not source files committed to Git.
 
 ## Publish to GitHub Pages
 
