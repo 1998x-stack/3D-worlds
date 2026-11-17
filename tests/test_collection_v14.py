@@ -10,11 +10,11 @@ ROOT=Path(__file__).resolve().parents[1]
 class V14CollectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.collection=json.loads((ROOT/"catalog/collections/v13.json").read_text(encoding="utf8"))
+        cls.collection=json.loads((ROOT/"catalog/collections/v14.json").read_text(encoding="utf8"))
         cls.assets=json.loads((ROOT/"catalog/models.json").read_text(encoding="utf8"))["assets"]
         cls.by_id={a["id"]:a for a in cls.assets}
 
-    def test_v13_inventory_and_preserved_history(self):
+    def test_v14_inventory_and_preserved_history(self):
         c=self.collection
         self.assertEqual(c["version"],"v1.4")
         self.assertEqual(c["asset_count"],30)
