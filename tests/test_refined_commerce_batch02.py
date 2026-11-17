@@ -53,8 +53,8 @@ class Batch02Tests(unittest.TestCase):
                 self.assertIn(f'slug="{slug}"',content)
                 self.assertNotIn('resize(',content)
                 for mm in (w,d,h): self.assertIn(f'= {mm};',content)
-                self.assertIn('variant='+str(spec['variant']),content)
-                self.assertIn(f'family="{spec["commerce_family"]}"',content)
+                self.assertIn('variant='+str(self.collection[slug]['variant']),content)
+                self.assertIn(f'family="{self.collection[slug]["commerce_family"]}"',content)
 
     def test_cad_and_three_specific_dispatch_are_in_sync(self):
         lib = (ROOT/'printables/lib/refined_batch02_forms.scad').read_text(encoding='utf-8')
