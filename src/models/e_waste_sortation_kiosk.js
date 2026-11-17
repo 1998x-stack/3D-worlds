@@ -8,7 +8,6 @@ export const assetMeta = {
   "summary": "Three-channel community recycling station with pictogram slots and screen",
   "category": "urban",
   "tags": [
-    "e",
     "waste",
     "sortation",
     "kiosk",

@@ -9,7 +9,6 @@ export const assetMeta = {
   "category": "bathroom",
   "tags": [
     "clip",
-    "on",
     "soap",
     "drainage",
     "bridge",
