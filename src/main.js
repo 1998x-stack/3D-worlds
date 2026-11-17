@@ -1,33 +1,24 @@
 import catalog from '../catalog/models.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
-import { createTable } from './models/table.js';
-import { createChair } from './models/chair.js';
-import { createToilet } from './models/toilet.js';
-import { createMan } from './models/man.js';
-import { createWoman } from './models/woman.js';
-import primitiveSource from './models/primitives.js?raw';
-import tableSource from './models/table.js?raw';
-import chairSource from './models/chair.js?raw';
-import toiletSource from './models/toilet.js?raw';
-import manSource from './models/man.js?raw';
-import womanSource from './models/woman.js?raw';
-
+// Vite auto-discovers procedural modules; new models need no hard-coded registry.
+const modules = import.meta.glob('./models/*.js', { eager: true });
+const sources = import.meta.glob('./models/*.js', { query: '?raw', import: 'default', eager: true });
 const assets = catalog.assets;
-const factories = {
-  'furniture.table.oak-study-001': createTable,
-  'furniture.chair.linen-001': createChair,
-  'bathroom.toilet.ceramic-001': createToilet,
-  'characters.man.study-001': createMan,
-  'characters.woman.study-001': createWoman
-};
-const sourceFiles = {
-  'furniture.table.oak-study-001': tableSource,
-  'furniture.chair.linen-001': chairSource,
-  'bathroom.toilet.ceramic-001': toiletSource,
-  'characters.man.study-001': manSource,
-  'characters.woman.study-001': womanSource
-};
+const factories = Object.fromEntries(
+  assets.filter(asset => asset.kind === 'procedural').map(asset => {
+    const moduleKey = './models/' + asset.source_path.split('/').pop();
+    const factory = modules[moduleKey]?.[asset.generator];
+    if (typeof factory !== 'function') throw new Error('Missing generator: ' + asset.id);
+    return [asset.id, factory];
+  })
+);
+const sourceFiles = Object.fromEntries(
+  assets.filter(asset => asset.kind === 'procedural').map(asset => [
+    asset.id, sources['./models/' + asset.source_path.split('/').pop()]
+  ])
+);
+const primitiveSource = sources['./models/primitives.js'];
 const labels = { all: '全部模型', furniture: '家具', bathroom: '卫浴', characters: '人物原型' };
 let category = 'all', search = '', sorting = 'featured';
 let activeAsset = null, viewer = null, lastFocus = null;
