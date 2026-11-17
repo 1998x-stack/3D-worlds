@@ -70,7 +70,7 @@ class V07CollectionTests(unittest.TestCase):
                 self.assertTrue(all(math.isfinite(v) and v > 0 for v in asset["dimensions_m"]))
 
     def test_historical_185_assets_not_reassigned(self):
-        old = [a for a in self.assets if a.get("collection") not in ("v0.7", "v0.8", "v0.9")]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.7", "v0.8", "v0.9", "v1.0")]
         self.assertEqual(len(old), 185)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.6"]), 50)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.5"]), 50)

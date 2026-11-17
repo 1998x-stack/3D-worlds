@@ -32,8 +32,8 @@ for (const asset of manifest.assets) {
       ? node.geometry.index.count / 3 : node.geometry.attributes.position.count / 3;
   });
   if (meshes < 1) throw new Error('Empty asset: ' + asset.id);
-  if (['v0.4','v0.5','v0.6','v0.7','v0.8','v0.9'].includes(asset.collection)) {
-    const minimum = ['v0.6','v0.7','v0.8','v0.9'].includes(asset.collection) ? 9 : asset.collection === 'v0.5' ? 8 : 5;
+  if (['v0.4','v0.5','v0.6','v0.7','v0.8','v0.9','v1.0'].includes(asset.collection)) {
+    const minimum = ['v0.6','v0.7','v0.8','v0.9','v1.0'].includes(asset.collection) ? 9 : asset.collection === 'v0.5' ? 8 : 5;
     if (meshes < minimum) throw new Error('Insufficient authored parts ('+minimum+') for '+asset.id);
   }
   const boundingBox = new THREE.Box3().setFromObject(object);
@@ -59,7 +59,7 @@ for (const asset of manifest.assets) {
   checked += 1;
   console.log('OK', asset.id, { meshes, vertices, triangles: Math.round(triangles), dimensions });
 }
-if (checked !== manifest.assets.filter(asset => asset.kind === 'procedural').length || checked < 335) {
-  throw new Error('Expected all 335+ registered procedural models to validate; found ' + checked);
+if (checked !== manifest.assets.filter(asset => asset.kind === 'procedural').length || checked < 385) {
+  throw new Error('Expected all 385+ registered procedural models to validate; found ' + checked);
 }
 console.log('Verified', checked, 'procedural models');
