@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Monogram Desk Coaster
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Monogram Desk Coaster | 字母装饰杯垫 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="gift",variant=5,label="CUSTOM");
+resize([155,75,13],auto=false)
+    commercial_form(family="gift",variant=5,label="CUSTOM");

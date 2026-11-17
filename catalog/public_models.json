@@ -13683,9 +13683,9 @@
       "license": "MIT",
       "author": "3D Worlds",
       "dimensions_m": [
-        0.145,
-        0.064,
-        0.078
+        0.135,
+        0.009,
+        0.067
       ],
       "source_path": "src/models/custom_desk_nameplate.js",
       "generator": "createCustomDeskNameplate",
@@ -13713,9 +13713,9 @@
       "license": "MIT",
       "author": "3D Worlds",
       "dimensions_m": [
-        0.148,
-        0.068,
-        0.081
+        0.14,
+        0.01,
+        0.069
       ],
       "source_path": "src/models/wedding_place_card.js",
       "generator": "createWeddingPlaceCard",
@@ -13743,9 +13743,9 @@
       "license": "MIT",
       "author": "3D Worlds",
       "dimensions_m": [
-        0.151,
-        0.072,
-        0.084
+        0.145,
+        0.011,
+        0.071
       ],
       "source_path": "src/models/house_number_plaque.js",
       "generator": "createHouseNumberPlaque",
@@ -13773,9 +13773,9 @@
       "license": "MIT",
       "author": "3D Worlds",
       "dimensions_m": [
-        0.154,
-        0.076,
-        0.087
+        0.15,
+        0.012,
+        0.073
       ],
       "source_path": "src/models/anniversary_message_plaque.js",
       "generator": "createAnniversaryMessagePlaque",
@@ -13803,9 +13803,9 @@
       "license": "MIT",
       "author": "3D Worlds",
       "dimensions_m": [
-        0.157,
-        0.08,
-        0.09
+        0.155,
+        0.013,
+        0.075
       ],
       "source_path": "src/models/monogram_desk_coaster.js",
       "generator": "createMonogramDeskCoaster",
@@ -13834,8 +13834,8 @@
       "author": "3D Worlds",
       "dimensions_m": [
         0.075,
-        0.085,
-        0.02
+        0.009,
+        0.075
       ],
       "source_path": "src/models/celestial_guild_medallion.js",
       "generator": "createCelestialGuildMedallion",
@@ -13864,8 +13864,8 @@
       "author": "3D Worlds",
       "dimensions_m": [
         0.078,
-        0.089,
-        0.023
+        0.01,
+        0.078
       ],
       "source_path": "src/models/fantasy_crest_badge.js",
       "generator": "createFantasyCrestBadge",
@@ -13894,8 +13894,8 @@
       "author": "3D Worlds",
       "dimensions_m": [
         0.081,
-        0.093,
-        0.026
+        0.011,
+        0.081
       ],
       "source_path": "src/models/space_explorer_insignia.js",
       "generator": "createSpaceExplorerInsignia",
@@ -13924,8 +13924,8 @@
       "author": "3D Worlds",
       "dimensions_m": [
         0.084,
-        0.097,
-        0.029
+        0.012,
+        0.084
       ],
       "source_path": "src/models/alchemist_costume_brooch.js",
       "generator": "createAlchemistCostumeBrooch",
@@ -13954,8 +13954,8 @@
       "author": "3D Worlds",
       "dimensions_m": [
         0.087,
-        0.101,
-        0.032
+        0.013,
+        0.087
       ],
       "source_path": "src/models/mythic_rune_emblem.js",
       "generator": "createMythicRuneEmblem",

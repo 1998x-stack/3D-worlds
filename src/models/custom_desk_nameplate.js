@@ -6,9 +6,9 @@ export const assetMeta = {
   "title": "Custom Desk Nameplate",
   "title_zh": "定制桌面姓名牌",
   "dimensions_m": [
-    0.145,
-    0.064,
-    0.078
+    0.135,
+    0.009,
+    0.067
   ],
   "source_path": "src/models/custom_desk_nameplate.js",
   "generator": "createCustomDeskNameplate",

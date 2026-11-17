@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Handheld Console Stand
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Handheld Console Stand | 掌机展示支架 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="gaming",variant=5);
+resize([147,112,90],auto=false)
+    commercial_form(family="gaming",variant=5);

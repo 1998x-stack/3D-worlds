@@ -6,9 +6,9 @@ export const assetMeta = {
   "title": "Wedding Place Card",
   "title_zh": "婚礼席位姓名牌",
   "dimensions_m": [
-    0.148,
-    0.068,
-    0.081
+    0.14,
+    0.01,
+    0.069
   ],
   "source_path": "src/models/wedding_place_card.js",
   "generator": "createWeddingPlaceCard",

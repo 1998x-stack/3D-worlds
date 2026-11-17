@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Aurora Wave Lantern
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Aurora Wave Lantern | 极光波纹灯罩 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="lantern",variant=2);
+resize([87,87,112],auto=false)
+    commercial_form(family="lantern",variant=2);

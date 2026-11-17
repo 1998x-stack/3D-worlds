@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Ribbed Succulent Pot
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Ribbed Succulent Pot | 竖纹多肉盆 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="planter",variant=1);
+resize([107,107,100],auto=false)
+    commercial_form(family="planter",variant=1);

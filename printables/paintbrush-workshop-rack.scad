@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Paintbrush Workshop Rack
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Paintbrush Workshop Rack | 手工画笔整理架 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="organizer",variant=3);
+resize([136,93,80],auto=false)
+    commercial_form(family="organizer",variant=3);

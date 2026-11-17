@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Pendant Sorting Tray
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Pendant Sorting Tray | 吊坠分格托盘 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="jewelry",variant=4);
+resize([121,91,111],auto=false)
+    commercial_form(family="jewelry",variant=4);

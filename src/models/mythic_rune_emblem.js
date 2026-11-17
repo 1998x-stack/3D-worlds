@@ -7,8 +7,8 @@ export const assetMeta = {
   "title_zh": "神话符文装饰徽章",
   "dimensions_m": [
     0.087,
-    0.101,
-    0.032
+    0.013,
+    0.087
   ],
   "source_path": "src/models/mythic_rune_emblem.js",
   "generator": "createMythicRuneEmblem",

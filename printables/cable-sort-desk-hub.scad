@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Cable Sort Desk Hub
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Cable Sort Desk Hub | 桌面线材分拣座 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="organizer",variant=2);
+resize([133,90,76],auto=false)
+    commercial_form(family="organizer",variant=2);

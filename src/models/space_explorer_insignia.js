@@ -7,8 +7,8 @@ export const assetMeta = {
   "title_zh": "太空探索徽记",
   "dimensions_m": [
     0.081,
-    0.093,
-    0.026
+    0.011,
+    0.081
   ],
   "source_path": "src/models/space_explorer_insignia.js",
   "generator": "createSpaceExplorerInsignia",

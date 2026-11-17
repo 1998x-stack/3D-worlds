@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Bracelet Display Arch
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Bracelet Display Arch | 手镯拱形陈列架 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="jewelry",variant=3);
+resize([118,88,107],auto=false)
+    commercial_form(family="jewelry",variant=3);

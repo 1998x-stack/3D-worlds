@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Mythic Rune Emblem
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Mythic Rune Emblem | 神话符文装饰徽章 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="cosplay",variant=5);
+resize([87,87,13],auto=false)
+    commercial_form(family="cosplay",variant=5);

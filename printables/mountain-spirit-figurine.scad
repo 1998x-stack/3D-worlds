@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Mountain Spirit Figurine
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Mountain Spirit Figurine | 山灵原创雕像 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="figurine",variant=5);
+resize([104,92,141],auto=false)
+    commercial_form(family="figurine",variant=5);

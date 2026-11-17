@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Trading Card Display
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Trading Card Display | 收藏卡片展示架 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="display",variant=3);
+resize([116,106,93],auto=false)
+    commercial_form(family="display",variant=3);

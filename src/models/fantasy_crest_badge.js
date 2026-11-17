@@ -7,8 +7,8 @@ export const assetMeta = {
   "title_zh": "奇幻原创纹章",
   "dimensions_m": [
     0.078,
-    0.089,
-    0.023
+    0.01,
+    0.078
   ],
   "source_path": "src/models/fantasy_crest_badge.js",
   "generator": "createFantasyCrestBadge",

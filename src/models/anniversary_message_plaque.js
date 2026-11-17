@@ -6,9 +6,9 @@ export const assetMeta = {
   "title": "Anniversary Message Plaque",
   "title_zh": "纪念日祝福牌",
   "dimensions_m": [
-    0.154,
-    0.076,
-    0.087
+    0.15,
+    0.012,
+    0.073
   ],
   "source_path": "src/models/anniversary_message_plaque.js",
   "generator": "createAnniversaryMessagePlaque",

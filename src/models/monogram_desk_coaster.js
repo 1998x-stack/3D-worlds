@@ -6,9 +6,9 @@ export const assetMeta = {
   "title": "Monogram Desk Coaster",
   "title_zh": "字母装饰杯垫",
   "dimensions_m": [
-    0.157,
-    0.08,
-    0.09
+    0.155,
+    0.013,
+    0.075
   ],
   "source_path": "src/models/monogram_desk_coaster.js",
   "generator": "createMonogramDeskCoaster",

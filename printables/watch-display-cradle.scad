@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Watch Display Cradle
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Watch Display Cradle | 手表陈列托架 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="display",variant=2);
+resize([113,103,89],auto=false)
+    commercial_form(family="display",variant=2);

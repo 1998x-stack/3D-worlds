@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Lunar Fox Bust
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Lunar Fox Bust | 月狐半身像 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="figurine",variant=3);
+resize([98,86,133],auto=false)
+    commercial_form(family="figurine",variant=3);

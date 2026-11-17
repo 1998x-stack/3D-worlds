@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Geo Cactus Planter
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Geo Cactus Planter | 几何仙人掌花盆 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="planter",variant=2);
+resize([110,110,104],auto=false)
+    commercial_form(family="planter",variant=2);

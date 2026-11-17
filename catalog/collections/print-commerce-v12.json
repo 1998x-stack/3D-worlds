@@ -869,9 +869,9 @@
       "title": "Custom Desk Nameplate",
       "title_zh": "定制桌面姓名牌",
       "dimensions_m": [
-        0.145,
-        0.064,
-        0.078
+        0.135,
+        0.009,
+        0.067
       ],
       "source_path": "src/models/custom_desk_nameplate.js",
       "generator": "createCustomDeskNameplate",
@@ -890,9 +890,9 @@
       "title": "Wedding Place Card",
       "title_zh": "婚礼席位姓名牌",
       "dimensions_m": [
-        0.148,
-        0.068,
-        0.081
+        0.14,
+        0.01,
+        0.069
       ],
       "source_path": "src/models/wedding_place_card.js",
       "generator": "createWeddingPlaceCard",
@@ -911,9 +911,9 @@
       "title": "House Number Plaque",
       "title_zh": "房屋门牌号牌",
       "dimensions_m": [
-        0.151,
-        0.072,
-        0.084
+        0.145,
+        0.011,
+        0.071
       ],
       "source_path": "src/models/house_number_plaque.js",
       "generator": "createHouseNumberPlaque",
@@ -932,9 +932,9 @@
       "title": "Anniversary Message Plaque",
       "title_zh": "纪念日祝福牌",
       "dimensions_m": [
-        0.154,
-        0.076,
-        0.087
+        0.15,
+        0.012,
+        0.073
       ],
       "source_path": "src/models/anniversary_message_plaque.js",
       "generator": "createAnniversaryMessagePlaque",
@@ -953,9 +953,9 @@
       "title": "Monogram Desk Coaster",
       "title_zh": "字母装饰杯垫",
       "dimensions_m": [
-        0.157,
-        0.08,
-        0.09
+        0.155,
+        0.013,
+        0.075
       ],
       "source_path": "src/models/monogram_desk_coaster.js",
       "generator": "createMonogramDeskCoaster",
@@ -975,8 +975,8 @@
       "title_zh": "星穹公会原创徽章",
       "dimensions_m": [
         0.075,
-        0.085,
-        0.02
+        0.009,
+        0.075
       ],
       "source_path": "src/models/celestial_guild_medallion.js",
       "generator": "createCelestialGuildMedallion",
@@ -996,8 +996,8 @@
       "title_zh": "奇幻原创纹章",
       "dimensions_m": [
         0.078,
-        0.089,
-        0.023
+        0.01,
+        0.078
       ],
       "source_path": "src/models/fantasy_crest_badge.js",
       "generator": "createFantasyCrestBadge",
@@ -1017,8 +1017,8 @@
       "title_zh": "太空探索徽记",
       "dimensions_m": [
         0.081,
-        0.093,
-        0.026
+        0.011,
+        0.081
       ],
       "source_path": "src/models/space_explorer_insignia.js",
       "generator": "createSpaceExplorerInsignia",
@@ -1038,8 +1038,8 @@
       "title_zh": "炼金师服装胸针",
       "dimensions_m": [
         0.084,
-        0.097,
-        0.029
+        0.012,
+        0.084
       ],
       "source_path": "src/models/alchemist_costume_brooch.js",
       "generator": "createAlchemistCostumeBrooch",
@@ -1059,8 +1059,8 @@
       "title_zh": "神话符文装饰徽章",
       "dimensions_m": [
         0.087,
-        0.101,
-        0.032
+        0.013,
+        0.087
       ],
       "source_path": "src/models/mythic_rune_emblem.js",
       "generator": "createMythicRuneEmblem",

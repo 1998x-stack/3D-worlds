@@ -7,8 +7,8 @@ export const assetMeta = {
   "title_zh": "星穹公会原创徽章",
   "dimensions_m": [
     0.075,
-    0.085,
-    0.02
+    0.009,
+    0.075
   ],
   "source_path": "src/models/celestial_guild_medallion.js",
   "generator": "createCelestialGuildMedallion",

@@ -6,9 +6,9 @@ export const assetMeta = {
   "title": "House Number Plaque",
   "title_zh": "房屋门牌号牌",
   "dimensions_m": [
-    0.151,
-    0.072,
-    0.084
+    0.145,
+    0.011,
+    0.071
   ],
   "source_path": "src/models/house_number_plaque.js",
   "generator": "createHouseNumberPlaque",

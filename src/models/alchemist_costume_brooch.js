@@ -7,8 +7,8 @@ export const assetMeta = {
   "title_zh": "炼金师服装胸针",
   "dimensions_m": [
     0.084,
-    0.097,
-    0.029
+    0.012,
+    0.084
   ],
   "source_path": "src/models/alchemist_costume_brooch.js",
   "generator": "createAlchemistCostumeBrooch",

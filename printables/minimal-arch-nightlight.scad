@@ -1,4 +1,6 @@
-// Original 3D printable CAD prototype for Minimal Arch Nightlight
-// Millimeter units; edit parameters and print-test before commercial shipment.
+// Minimal Arch Nightlight | 拱形氛围灯罩 | original parametric CAD prototype
+// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
+// Product hypothesis only; full slicer/manifold and real-print checks required.
 use <lib/commerce_forms.scad>
-commercial_form(family="lantern",variant=5);
+resize([96,96,124],auto=false)
+    commercial_form(family="lantern",variant=5);
