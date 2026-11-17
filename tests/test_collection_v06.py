@@ -26,10 +26,10 @@ class V06CollectionTests(unittest.TestCase):
         self.assertEqual(len(self.by_id), len(self.assets))
         self.assertEqual(len({a["slug"] for a in self.assets}), len(self.assets))
         categories = {x["id"] for x in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), categories)
+        self.assertEqual(set(c["category_counts"]), categories - {"print-commerce"})
         self.assertEqual(sum(c["category_counts"].values()), 50)
         self.assertGreaterEqual(min(c["category_counts"].values()), 3)
-        self.assertEqual({a["category"] for a in c["assets"]}, categories)
+        self.assertEqual({a["category"] for a in c["assets"]}, categories - {"print-commerce"})
         self.assertEqual(len([a for a in self.assets if a.get("collection") == "v0.6"]), 50)
 
     def test_real_3d_geometry_and_provenance(self):
@@ -70,7 +70,7 @@ class V06CollectionTests(unittest.TestCase):
                 self.assertTrue(all(math.isfinite(v) and v > 0 for v in asset["dimensions_m"]))
 
     def test_historical_135_assets_not_reassigned(self):
-        old = [a for a in self.assets if a.get("collection") not in ("v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1", "v1.2")]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1", "v1.2", "v1.3")]
         self.assertEqual(len(old), 135)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.5"]), 50)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.4"]), 40)
