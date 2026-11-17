@@ -1,7 +1,7 @@
 # 3D Worlds → 3D Printing Pipeline (STL / 3MF)
 
 > **Current capability: audited geometry candidates, NOT print certification.**
-> Do not mark all 435 scene assets as printable. Preserve Three.js/GLB as the
+> Do not mark all 485 scene assets as printable. Preserve Three.js/GLB as the
 > editable visual source of truth.
 
 ## Why direct GLB → STL is not enough

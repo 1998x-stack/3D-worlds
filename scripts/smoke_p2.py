@@ -37,6 +37,8 @@ for asset_id in (
     "architecture.underground-utility-tunnel.001",
     "scifi.orbital-navigation-beacon.001",
     "scifi.orbital-research-airlock-module.001",
+    "scifi.orbital-debris-collector-drone.001",
+    "architecture.modular-disaster-relief-clinic.001",
     "architecture.subway-platform-edge-module.001",
 ):
     for level in (0, 1, 2):

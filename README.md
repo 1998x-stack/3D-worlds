@@ -14,11 +14,11 @@
 
 ## Overview
 
-3D Worlds connects a catalog of **435 original, source-editable procedural models across 13 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
+3D Worlds connects a catalog of **485 original, source-editable procedural models across 13 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
 
 | Layer | Key capability | Delivery |
 |---|---|---|
-| Catalog | 435 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
+| Catalog | 485 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
 | Gallery | Real WebP/AVIF thumbnails, interactive model inspector, category search | [GitHub Pages](https://1998x-stack.github.io/3D-worlds/) |
 | Game assets | GLB generation and Meshopt LOD0/LOD1/LOD2 optimization | Local build / CI artifact |
 | 3D print workbench | Printer-bed dimensions, scaled size estimate, P0/P1/P2 category guidance, STL draft | Browser · **not audited** |

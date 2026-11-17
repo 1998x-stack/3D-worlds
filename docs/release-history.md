@@ -2,6 +2,14 @@
 
 The root README focuses on current use and reproducible verification. Historical collection briefs are preserved below.
 
+## V1.2 — 50 original source-backed Three.js models
+
+V1.2 expands the library from **435 to 485 independently editable Three.js models across all 13 categories**. The 50 new generators add **1,414 named geometry parts** (minimum 18 per model) and preserve the preexisting 435 original sources. It adds accessible facilities, natural biomes, environmental research, robotics, transit, public spaces, sports and nonweapon orbital science.
+
+- [V1.2 bilingual inventory](docs/50-assets-v12.md)
+- [V1.2 collection manifest](catalog/collections/v12.json)
+- [V1.2 acceptance checklist](docs/verification-v12.md)
+
 ## V1.1 — 50 next-generation original procedural scene assets
 
 V1.1 expands the open catalog from **385** to **435 editable Three.js models across 13 categories**. This release includes **50 individual source modules** with distinct editable geometry recipes and **1,465 named Mesh parts**, with durable IDs, bilingual metadata, physical dimensions, and original MIT authorship. The focus is on transit infrastructure, accessible facilities, architectural scenes, research instruments, natural biomes, vehicles and nonweapon science fiction.

@@ -1,0 +1,827 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v1.2",
+  "title": "V1.2 Fifty Original Modular Scene and Research Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 50,
+  "category_count": 13,
+  "category_counts": {
+    "furniture": 4,
+    "bathroom": 4,
+    "characters": 4,
+    "nature": 4,
+    "vehicles": 4,
+    "electronics": 4,
+    "decor": 4,
+    "kitchen": 4,
+    "architecture": 4,
+    "urban": 4,
+    "tools": 4,
+    "sports": 3,
+    "scifi": 3
+  },
+  "assets": [
+    {
+      "category": "furniture",
+      "slug": "mobile-classroom-desk-pod",
+      "title": "Mobile Classroom Desk Pod",
+      "title_zh": "移动课堂学习桌舱",
+      "dimensions_m": [
+        1.56,
+        1.38,
+        1.28
+      ],
+      "design_focus": "A wheeled collaborative learning desk with foldable side shields, tablet shelf and cable cubby",
+      "id": "furniture.mobile-classroom-desk-pod.001",
+      "source_path": "src/models/mobile_classroom_desk_pod.js",
+      "generator": "createMobileClassroomDeskPod",
+      "part_count": 18
+    },
+    {
+      "category": "furniture",
+      "slug": "parametric-rocking-lounge-chair",
+      "title": "Parametric Rocking Lounge Chair",
+      "title_zh": "参数化摇椅",
+      "dimensions_m": [
+        1.08,
+        1.26,
+        1.48
+      ],
+      "design_focus": "Sculptural curved rocking chair with lamellar ribs and upholstered seat insert",
+      "id": "furniture.parametric-rocking-lounge-chair.001",
+      "source_path": "src/models/parametric_rocking_lounge_chair.js",
+      "generator": "createParametricRockingLoungeChair",
+      "part_count": 29
+    },
+    {
+      "category": "furniture",
+      "slug": "industrial-tool-shadowboard-cabinet",
+      "title": "Industrial Tool Shadowboard Cabinet",
+      "title_zh": "工业工具影子板柜",
+      "dimensions_m": [
+        1.85,
+        2.12,
+        0.72
+      ],
+      "design_focus": "Workshop cabinet with perforated pegboard, silhouettes, locking drawers and modular holders",
+      "id": "furniture.industrial-tool-shadowboard-cabinet.001",
+      "source_path": "src/models/industrial_tool_shadowboard_cabinet.js",
+      "generator": "createIndustrialToolShadowboardCabinet",
+      "part_count": 27
+    },
+    {
+      "category": "furniture",
+      "slug": "museum-modular-bench-island",
+      "title": "Museum Modular Bench Island",
+      "title_zh": "博物馆组合式休息座岛",
+      "dimensions_m": [
+        2.42,
+        0.95,
+        1.62
+      ],
+      "design_focus": "Public seating island with radial wooden benches, central planter and foot pads",
+      "id": "furniture.museum-modular-bench-island.001",
+      "source_path": "src/models/museum_modular_bench_island.js",
+      "generator": "createMuseumModularBenchIsland",
+      "part_count": 18
+    },
+    {
+      "category": "bathroom",
+      "slug": "smart-leak-detection-manifold",
+      "title": "Smart Leak Detection Manifold",
+      "title_zh": "智能漏水检测歧管",
+      "dimensions_m": [
+        1.26,
+        1.05,
+        0.7
+      ],
+      "design_focus": "Water supply monitoring manifold with valves, digital flow sensors and status panel",
+      "id": "bathroom.smart-leak-detection-manifold.001",
+      "source_path": "src/models/smart_leak_detection_manifold.js",
+      "generator": "createSmartLeakDetectionManifold",
+      "part_count": 19
+    },
+    {
+      "category": "bathroom",
+      "slug": "outdoor-accessible-drinking-fountain",
+      "title": "Outdoor Accessible Drinking Fountain",
+      "title_zh": "无障碍户外饮水台",
+      "dimensions_m": [
+        1.08,
+        1.38,
+        0.9
+      ],
+      "design_focus": "Dual height public drinking fountain with bottle filler and low reachable basin",
+      "id": "bathroom.outdoor-accessible-drinking-fountain.001",
+      "source_path": "src/models/outdoor_accessible_drinking_fountain.js",
+      "generator": "createOutdoorAccessibleDrinkingFountain",
+      "part_count": 18
+    },
+    {
+      "category": "bathroom",
+      "slug": "modular-triple-handwash-sink",
+      "title": "Modular Triple Handwash Sink",
+      "title_zh": "模块化三人洗手池",
+      "dimensions_m": [
+        2.36,
+        1.35,
+        0.91
+      ],
+      "design_focus": "Three-station public washbasin with faucets, soap dispensers and splash protection",
+      "id": "bathroom.modular-triple-handwash-sink.001",
+      "source_path": "src/models/modular_triple_handwash_sink.js",
+      "generator": "createModularTripleHandwashSink",
+      "part_count": 18
+    },
+    {
+      "category": "bathroom",
+      "slug": "compact-sterilization-wash-cabinet",
+      "title": "Compact Sterilization Wash Cabinet",
+      "title_zh": "紧凑型清洗消毒柜",
+      "dimensions_m": [
+        0.94,
+        1.45,
+        0.84
+      ],
+      "design_focus": "Nonfunctional hospital instrument cleaning cabinet with basket trays and control panel",
+      "id": "bathroom.compact-sterilization-wash-cabinet.001",
+      "source_path": "src/models/compact_sterilization_wash_cabinet.js",
+      "generator": "createCompactSterilizationWashCabinet",
+      "part_count": 24
+    },
+    {
+      "category": "characters",
+      "slug": "deep-sea-rov-pilot",
+      "title": "Deep Sea ROV Pilot",
+      "title_zh": "深海遥控潜器驾驶员人物",
+      "dimensions_m": [
+        1.05,
+        1.92,
+        0.9
+      ],
+      "design_focus": "Unrigged marine robotics operator in dry suit with remote console and headset",
+      "id": "characters.deep-sea-rov-pilot.001",
+      "source_path": "src/models/deep_sea_rov_pilot.js",
+      "generator": "createDeepSeaRovPilot",
+      "part_count": 22
+    },
+    {
+      "category": "characters",
+      "slug": "forest-fire-lookout-ranger",
+      "title": "Forest Fire Lookout Ranger",
+      "title_zh": "森林火情瞭望员人物",
+      "dimensions_m": [
+        1.14,
+        2.06,
+        0.93
+      ],
+      "design_focus": "Unrigged forest safety ranger with binoculars, high visibility vest and field radio",
+      "id": "characters.forest-fire-lookout-ranger.001",
+      "source_path": "src/models/forest_fire_lookout_ranger.js",
+      "generator": "createForestFireLookoutRanger",
+      "part_count": 22
+    },
+    {
+      "category": "characters",
+      "slug": "bicycle-repair-mechanic",
+      "title": "Bicycle Repair Mechanic",
+      "title_zh": "自行车维修技师人物",
+      "dimensions_m": [
+        1.11,
+        1.93,
+        0.96
+      ],
+      "design_focus": "Unrigged mechanic wearing gloves with repair wrench and service apron",
+      "id": "characters.bicycle-repair-mechanic.001",
+      "source_path": "src/models/bicycle_repair_mechanic.js",
+      "generator": "createBicycleRepairMechanic",
+      "part_count": 23
+    },
+    {
+      "category": "characters",
+      "slug": "museum-art-conservator",
+      "title": "Museum Art Conservator",
+      "title_zh": "博物馆文物修复师人物",
+      "dimensions_m": [
+        1.07,
+        1.9,
+        0.89
+      ],
+      "design_focus": "Unrigged conservator with brush, cotton gloves and restoration clipboard",
+      "id": "characters.museum-art-conservator.001",
+      "source_path": "src/models/museum_art_conservator.js",
+      "generator": "createMuseumArtConservator",
+      "part_count": 22
+    },
+    {
+      "category": "nature",
+      "slug": "bamboo-wetland-walkway-biome",
+      "title": "Bamboo Wetland Walkway Biome",
+      "title_zh": "竹林湿地栈道微景观",
+      "dimensions_m": [
+        3.5,
+        2.78,
+        3
+      ],
+      "design_focus": "Wetland pool with bamboo clusters, wooden boardwalk and lily pads",
+      "id": "nature.bamboo-wetland-walkway-biome.001",
+      "source_path": "src/models/bamboo_wetland_walkway_biome.js",
+      "generator": "createBambooWetlandWalkwayBiome",
+      "part_count": 31
+    },
+    {
+      "category": "nature",
+      "slug": "volcanic-lava-tube-entrance",
+      "title": "Volcanic Lava Tube Entrance",
+      "title_zh": "火山熔岩洞入口",
+      "dimensions_m": [
+        3.45,
+        2.46,
+        3.22
+      ],
+      "design_focus": "Hardened basalt cave mouth with lava folds, obsidian rocks and ember cracks",
+      "id": "nature.volcanic-lava-tube-entrance.001",
+      "source_path": "src/models/volcanic_lava_tube_entrance.js",
+      "generator": "createVolcanicLavaTubeEntrance",
+      "part_count": 31
+    },
+    {
+      "category": "nature",
+      "slug": "desert-salt-flat-crystals",
+      "title": "Desert Salt Flat Crystals",
+      "title_zh": "沙漠盐晶盐沼地块",
+      "dimensions_m": [
+        3.22,
+        1.42,
+        2.9
+      ],
+      "design_focus": "Salt-crusted desert basin with polygonal plates and crystalline mineral towers",
+      "id": "nature.desert-salt-flat-crystals.001",
+      "source_path": "src/models/desert_salt_flat_crystals.js",
+      "generator": "createDesertSaltFlatCrystals",
+      "part_count": 39
+    },
+    {
+      "category": "nature",
+      "slug": "temperate-rainforest-nurse-log",
+      "title": "Temperate Rainforest Nurse Log",
+      "title_zh": "温带雨林倒木生态",
+      "dimensions_m": [
+        3.32,
+        1.58,
+        2.66
+      ],
+      "design_focus": "Moss-covered fallen log supporting miniature ferns, mushrooms and seedlings",
+      "id": "nature.temperate-rainforest-nurse-log.001",
+      "source_path": "src/models/temperate_rainforest_nurse_log.js",
+      "generator": "createTemperateRainforestNurseLog",
+      "part_count": 51
+    },
+    {
+      "category": "vehicles",
+      "slug": "last-mile-delivery-cargo-tricycle",
+      "title": "Last Mile Delivery Cargo Tricycle",
+      "title_zh": "末端物流载货三轮车",
+      "dimensions_m": [
+        2.08,
+        1.98,
+        3.45
+      ],
+      "design_focus": "Electric cargo tricycle with front steering wheel, boxy rear loading compartment and canopy",
+      "id": "vehicles.last-mile-delivery-cargo-tricycle.001",
+      "source_path": "src/models/last_mile_delivery_cargo_tricycle.js",
+      "generator": "createLastMileDeliveryCargoTricycle",
+      "part_count": 18
+    },
+    {
+      "category": "vehicles",
+      "slug": "amphibious-flood-response-boat",
+      "title": "Amphibious Flood Response Boat",
+      "title_zh": "水陆两栖防汛救援艇",
+      "dimensions_m": [
+        2.7,
+        2.26,
+        4.62
+      ],
+      "design_focus": "Civilian flood response craft with pontoons, folded wheels, life ring and rescue rail",
+      "id": "vehicles.amphibious-flood-response-boat.001",
+      "source_path": "src/models/amphibious_flood_response_boat.js",
+      "generator": "createAmphibiousFloodResponseBoat",
+      "part_count": 18
+    },
+    {
+      "category": "vehicles",
+      "slug": "robotic-warehouse-pallet-mover",
+      "title": "Robotic Warehouse Pallet Mover",
+      "title_zh": "仓储机器人托盘搬运车",
+      "dimensions_m": [
+        1.55,
+        1.42,
+        2.85
+      ],
+      "design_focus": "Autonomous indoor pallet transporter with low forks, sensor towers and safety lamps",
+      "id": "vehicles.robotic-warehouse-pallet-mover.001",
+      "source_path": "src/models/robotic_warehouse_pallet_mover.js",
+      "generator": "createRoboticWarehousePalletMover",
+      "part_count": 18
+    },
+    {
+      "category": "vehicles",
+      "slug": "modular-city-tram-car",
+      "title": "Modular City Tram Car",
+      "title_zh": "模块化城市有轨电车车厢",
+      "dimensions_m": [
+        2.66,
+        3.05,
+        5.74
+      ],
+      "design_focus": "Low-floor articulated city tram segment with panoramic glazing and passenger doors",
+      "id": "vehicles.modular-city-tram-car.001",
+      "source_path": "src/models/modular_city_tram_car.js",
+      "generator": "createModularCityTramCar",
+      "part_count": 25
+    },
+    {
+      "category": "electronics",
+      "slug": "desktop-lidar-scanning-platform",
+      "title": "Desktop LiDAR Scanning Platform",
+      "title_zh": "桌面激光雷达扫描平台",
+      "dimensions_m": [
+        0.92,
+        1.17,
+        0.84
+      ],
+      "design_focus": "3D surveying lidar unit on motorized platform with sensor head and alignment markings",
+      "id": "electronics.desktop-lidar-scanning-platform.001",
+      "source_path": "src/models/desktop_lidar_scanning_platform.js",
+      "generator": "createDesktopLidarScanningPlatform",
+      "part_count": 18
+    },
+    {
+      "category": "electronics",
+      "slug": "portable-acoustic-measurement-kit",
+      "title": "Portable Acoustic Measurement Kit",
+      "title_zh": "便携声学测量套件",
+      "dimensions_m": [
+        1.01,
+        0.72,
+        0.78
+      ],
+      "design_focus": "Field sound measurement case with microphone, foam windscreen and digital spectrum readout",
+      "id": "electronics.portable-acoustic-measurement-kit.001",
+      "source_path": "src/models/portable_acoustic_measurement_kit.js",
+      "generator": "createPortableAcousticMeasurementKit",
+      "part_count": 21
+    },
+    {
+      "category": "electronics",
+      "slug": "vr-motion-capture-rig",
+      "title": "VR Motion Capture Rig",
+      "title_zh": "VR 动作捕捉实验架",
+      "dimensions_m": [
+        2.2,
+        2.32,
+        1.83
+      ],
+      "design_focus": "Optical movement tracking rig with marker cameras, wearable trackers and virtual headset",
+      "id": "electronics.vr-motion-capture-rig.001",
+      "source_path": "src/models/vr_motion_capture_rig.js",
+      "generator": "createVrMotionCaptureRig",
+      "part_count": 20
+    },
+    {
+      "category": "electronics",
+      "slug": "atmospheric-particle-counter",
+      "title": "Atmospheric Particle Counter",
+      "title_zh": "大气颗粒物计数器",
+      "dimensions_m": [
+        0.92,
+        1.36,
+        0.82
+      ],
+      "design_focus": "Research particle sampler with intake chimney, filter cartridge and telemetry readout",
+      "id": "electronics.atmospheric-particle-counter.001",
+      "source_path": "src/models/atmospheric_particle_counter.js",
+      "generator": "createAtmosphericParticleCounter",
+      "part_count": 20
+    },
+    {
+      "category": "decor",
+      "slug": "suspended-paper-lantern-grove",
+      "title": "Suspended Paper Lantern Grove",
+      "title_zh": "悬挂纸灯笼群组",
+      "dimensions_m": [
+        2.22,
+        2.5,
+        1.92
+      ],
+      "design_focus": "Overhead hanging lantern cluster with scalloped paper shades and braided cords",
+      "id": "decor.suspended-paper-lantern-grove.001",
+      "source_path": "src/models/suspended_paper_lantern_grove.js",
+      "generator": "createSuspendedPaperLanternGrove",
+      "part_count": 46
+    },
+    {
+      "category": "decor",
+      "slug": "fractal-bookshelf-sculpture",
+      "title": "Fractal Bookshelf Sculpture",
+      "title_zh": "分形书架艺术装置",
+      "dimensions_m": [
+        2.16,
+        2.2,
+        0.85
+      ],
+      "design_focus": "Tree-like asymmetric sculptural shelving system with fractal branches and books",
+      "id": "decor.fractal-bookshelf-sculpture.001",
+      "source_path": "src/models/fractal_bookshelf_sculpture.js",
+      "generator": "createFractalBookshelfSculpture",
+      "part_count": 62
+    },
+    {
+      "category": "decor",
+      "slug": "tessellated-mirror-art-wall",
+      "title": "Tessellated Mirror Art Wall",
+      "title_zh": "镜面镶嵌艺术墙",
+      "dimensions_m": [
+        2.4,
+        2.05,
+        0.39
+      ],
+      "design_focus": "Interior feature wall with staggered rhombus mirror tiles and beveled frames",
+      "id": "decor.tessellated-mirror-art-wall.001",
+      "source_path": "src/models/tessellated_mirror_art_wall.js",
+      "generator": "createTessellatedMirrorArtWall",
+      "part_count": 53
+    },
+    {
+      "category": "decor",
+      "slug": "botanical-glass-terrarium-orb",
+      "title": "Botanical Glass Terrarium Orb",
+      "title_zh": "植物生态玻璃球",
+      "dimensions_m": [
+        1.24,
+        1.45,
+        1.1
+      ],
+      "design_focus": "Large spherical terrarium with miniature moss, rocks, ferns and suspended orb stand",
+      "id": "decor.botanical-glass-terrarium-orb.001",
+      "source_path": "src/models/botanical_glass_terrarium_orb.js",
+      "generator": "createBotanicalGlassTerrariumOrb",
+      "part_count": 33
+    },
+    {
+      "category": "kitchen",
+      "slug": "robotic-coffee-pourover-counter",
+      "title": "Robotic Coffee Pourover Counter",
+      "title_zh": "机器人手冲咖啡台",
+      "dimensions_m": [
+        1.7,
+        1.58,
+        1.05
+      ],
+      "design_focus": "Automated coffee brewing counter with robotic arm, dripper, scale and kettle",
+      "id": "kitchen.robotic-coffee-pourover-counter.001",
+      "source_path": "src/models/robotic_coffee_pourover_counter.js",
+      "generator": "createRoboticCoffeePouroverCounter",
+      "part_count": 18
+    },
+    {
+      "category": "kitchen",
+      "slug": "modular-sushi-display-conveyor",
+      "title": "Modular Sushi Display Conveyor",
+      "title_zh": "模块化回转寿司展示台",
+      "dimensions_m": [
+        2.28,
+        1.28,
+        1.12
+      ],
+      "design_focus": "Miniature conveyor-belt sushi service with dish plates, glass guard and LED counter",
+      "id": "kitchen.modular-sushi-display-conveyor.001",
+      "source_path": "src/models/modular_sushi_display_conveyor.js",
+      "generator": "createModularSushiDisplayConveyor",
+      "part_count": 36
+    },
+    {
+      "category": "kitchen",
+      "slug": "commercial-ice-flake-dispenser",
+      "title": "Commercial Ice Flake Dispenser",
+      "title_zh": "商用片冰出冰机",
+      "dimensions_m": [
+        1.02,
+        1.5,
+        1
+      ],
+      "design_focus": "Foodservice nugget ice dispenser with hopper, chute and drainage grate",
+      "id": "kitchen.commercial-ice-flake-dispenser.001",
+      "source_path": "src/models/commercial_ice_flake_dispenser.js",
+      "generator": "createCommercialIceFlakeDispenser",
+      "part_count": 27
+    },
+    {
+      "category": "kitchen",
+      "slug": "countertop-sprout-growing-cabinet",
+      "title": "Countertop Sprout Growing Cabinet",
+      "title_zh": "台式芽苗种植柜",
+      "dimensions_m": [
+        1.12,
+        1.35,
+        0.92
+      ],
+      "design_focus": "Kitchen hydroponic sprouts cabinet with tiered seed trays, water pump and grow lights",
+      "id": "kitchen.countertop-sprout-growing-cabinet.001",
+      "source_path": "src/models/countertop_sprout_growing_cabinet.js",
+      "generator": "createCountertopSproutGrowingCabinet",
+      "part_count": 67
+    },
+    {
+      "category": "architecture",
+      "slug": "modular-disaster-relief-clinic",
+      "title": "Modular Disaster Relief Clinic",
+      "title_zh": "模块化应急诊疗建筑",
+      "dimensions_m": [
+        3.7,
+        3.42,
+        3.3
+      ],
+      "design_focus": "Prefabricated medical outreach clinic with entrance ramp, solar roof and treatment signage",
+      "id": "architecture.modular-disaster-relief-clinic.001",
+      "source_path": "src/models/modular_disaster_relief_clinic.js",
+      "generator": "createModularDisasterReliefClinic",
+      "part_count": 19
+    },
+    {
+      "category": "architecture",
+      "slug": "astronomy-observatory-slit-dome",
+      "title": "Astronomy Observatory Slit Dome",
+      "title_zh": "天文台观测穹顶",
+      "dimensions_m": [
+        3.56,
+        3.62,
+        3.42
+      ],
+      "design_focus": "Small scientific observatory with ribbed telescope dome, shutter slot and base structure",
+      "id": "architecture.astronomy-observatory-slit-dome.001",
+      "source_path": "src/models/astronomy_observatory_slit_dome.js",
+      "generator": "createAstronomyObservatorySlitDome",
+      "part_count": 38
+    },
+    {
+      "category": "architecture",
+      "slug": "warehouse-loading-dock-bay",
+      "title": "Warehouse Loading Dock Bay",
+      "title_zh": "仓储装卸月台模块",
+      "dimensions_m": [
+        3.74,
+        3.25,
+        3.1
+      ],
+      "design_focus": "Industrial loading dock with roller gate, bumper pads, ramp and dock leveler",
+      "id": "architecture.warehouse-loading-dock-bay.001",
+      "source_path": "src/models/warehouse_loading_dock_bay.js",
+      "generator": "createWarehouseLoadingDockBay",
+      "part_count": 27
+    },
+    {
+      "category": "architecture",
+      "slug": "passive-solar-balcony-facade",
+      "title": "Passive Solar Balcony Facade",
+      "title_zh": "被动式太阳能阳台立面",
+      "dimensions_m": [
+        3.52,
+        3.36,
+        1.91
+      ],
+      "design_focus": "Energy-saving balcony facade module with adjustable shade fins, glazed door and planter",
+      "id": "architecture.passive-solar-balcony-facade.001",
+      "source_path": "src/models/passive_solar_balcony_facade.js",
+      "generator": "createPassiveSolarBalconyFacade",
+      "part_count": 26
+    },
+    {
+      "category": "urban",
+      "slug": "wildlife-crossing-ecoduct-module",
+      "title": "Wildlife Crossing Ecoduct Module",
+      "title_zh": "野生动物生态廊桥",
+      "dimensions_m": [
+        3.72,
+        2.58,
+        3.2
+      ],
+      "design_focus": "Vegetated pedestrian-free wildlife overpass with soil cover, fencing and habitat paths",
+      "id": "urban.wildlife-crossing-ecoduct-module.001",
+      "source_path": "src/models/wildlife_crossing_ecoduct_module.js",
+      "generator": "createWildlifeCrossingEcoductModule",
+      "part_count": 24
+    },
+    {
+      "category": "urban",
+      "slug": "tactile-bus-stop-information-rail",
+      "title": "Tactile Bus Stop Information Rail",
+      "title_zh": "无障碍公交站信息栏",
+      "dimensions_m": [
+        2.96,
+        2.48,
+        0.95
+      ],
+      "design_focus": "Accessible bus stop wayfinding bar with tactile map, braille dots and illuminated route sign",
+      "id": "urban.tactile-bus-stop-information-rail.001",
+      "source_path": "src/models/tactile_bus_stop_information_rail.js",
+      "generator": "createTactileBusStopInformationRail",
+      "part_count": 36
+    },
+    {
+      "category": "urban",
+      "slug": "modular-public-flood-barrier-gate",
+      "title": "Modular Public Flood Barrier Gate",
+      "title_zh": "城市防洪闸门模块",
+      "dimensions_m": [
+        3.66,
+        2.28,
+        1.52
+      ],
+      "design_focus": "Removable municipal flood barrier gate with side posts, stacked seals and warning lights",
+      "id": "urban.modular-public-flood-barrier-gate.001",
+      "source_path": "src/models/modular_public_flood_barrier_gate.js",
+      "generator": "createModularPublicFloodBarrierGate",
+      "part_count": 29
+    },
+    {
+      "category": "urban",
+      "slug": "smart-reverse-vending-recycling-kiosk",
+      "title": "Smart Reverse Vending Recycling Kiosk",
+      "title_zh": "智能回收返利终端",
+      "dimensions_m": [
+        1.72,
+        2.45,
+        1.2
+      ],
+      "design_focus": "Public bottle recycling kiosk with insertion port, digital reward screen and collection bins",
+      "id": "urban.smart-reverse-vending-recycling-kiosk.001",
+      "source_path": "src/models/smart_reverse_vending_recycling_kiosk.js",
+      "generator": "createSmartReverseVendingRecyclingKiosk",
+      "part_count": 18
+    },
+    {
+      "category": "tools",
+      "slug": "drone-calibration-test-cage",
+      "title": "Drone Calibration Test Cage",
+      "title_zh": "无人机校准测试笼",
+      "dimensions_m": [
+        2.18,
+        2.23,
+        2.08
+      ],
+      "design_focus": "Nonweapon drone electronics test chamber with mesh safety cage, marker grid and diagnostic table",
+      "id": "tools.drone-calibration-test-cage.001",
+      "source_path": "src/models/drone_calibration_test_cage.js",
+      "generator": "createDroneCalibrationTestCage",
+      "part_count": 37
+    },
+    {
+      "category": "tools",
+      "slug": "portable-welding-fume-extractor",
+      "title": "Portable Welding Fume Extractor",
+      "title_zh": "移动焊烟净化器",
+      "dimensions_m": [
+        1.25,
+        2.06,
+        1.02
+      ],
+      "design_focus": "Workshop air extraction trolley with flexible capture arm, filter housing and caster wheels",
+      "id": "tools.portable-welding-fume-extractor.001",
+      "source_path": "src/models/portable_welding_fume_extractor.js",
+      "generator": "createPortableWeldingFumeExtractor",
+      "part_count": 20
+    },
+    {
+      "category": "tools",
+      "slug": "handheld-rebar-scanner-kit",
+      "title": "Handheld Rebar Scanner Kit",
+      "title_zh": "手持钢筋探测仪套装",
+      "dimensions_m": [
+        0.87,
+        0.56,
+        0.72
+      ],
+      "design_focus": "Civil engineering rebar detection scanner kit with handheld head, cable and protective carry case",
+      "id": "tools.handheld-rebar-scanner-kit.001",
+      "source_path": "src/models/handheld_rebar_scanner_kit.js",
+      "generator": "createHandheldRebarScannerKit",
+      "part_count": 18
+    },
+    {
+      "category": "tools",
+      "slug": "benchtop-pick-and-place-machine",
+      "title": "Benchtop Pick And Place Machine",
+      "title_zh": "台式电子元件贴片机",
+      "dimensions_m": [
+        1.82,
+        1.53,
+        1.18
+      ],
+      "design_focus": "Small electronics manufacturing placement robot with PCB conveyor, nozzle gantry and parts feeders",
+      "id": "tools.benchtop-pick-and-place-machine.001",
+      "source_path": "src/models/benchtop_pick_and_place_machine.js",
+      "generator": "createBenchtopPickAndPlaceMachine",
+      "part_count": 26
+    },
+    {
+      "category": "sports",
+      "slug": "adaptive-seated-rowing-machine",
+      "title": "Adaptive Seated Rowing Machine",
+      "title_zh": "适应性坐姿划船训练机",
+      "dimensions_m": [
+        2.28,
+        1.63,
+        1.14
+      ],
+      "design_focus": "Accessible gym rowing trainer with supportive seat, footrest, flywheel and restraint rail",
+      "id": "sports.adaptive-seated-rowing-machine.001",
+      "source_path": "src/models/adaptive_seated_rowing_machine.js",
+      "generator": "createAdaptiveSeatedRowingMachine",
+      "part_count": 18
+    },
+    {
+      "category": "sports",
+      "slug": "climbing-route-setting-ladder-cart",
+      "title": "Climbing Route Setting Ladder Cart",
+      "title_zh": "攀岩线路布置梯车",
+      "dimensions_m": [
+        1.48,
+        2.46,
+        1.2
+      ],
+      "design_focus": "Climbing gym mobile ladder cart with color-coded holds, storage bins and wheel locks",
+      "id": "sports.climbing-route-setting-ladder-cart.001",
+      "source_path": "src/models/climbing_route_setting_ladder_cart.js",
+      "generator": "createClimbingRouteSettingLadderCart",
+      "part_count": 27
+    },
+    {
+      "category": "sports",
+      "slug": "fencing-electronic-scoring-piste",
+      "title": "Fencing Electronic Scoring Piste",
+      "title_zh": "击剑电子计分剑道",
+      "dimensions_m": [
+        3.9,
+        1.43,
+        1.96
+      ],
+      "design_focus": "Competition fencing piste with score displays, boundary stripes and cable reels",
+      "id": "sports.fencing-electronic-scoring-piste.001",
+      "source_path": "src/models/fencing_electronic_scoring_piste.js",
+      "generator": "createFencingElectronicScoringPiste",
+      "part_count": 21
+    },
+    {
+      "category": "scifi",
+      "slug": "lunar-ice-extraction-laboratory",
+      "title": "Lunar Ice Extraction Laboratory",
+      "title_zh": "月球冰资源提取实验舱",
+      "dimensions_m": [
+        3.62,
+        3.34,
+        3.32
+      ],
+      "design_focus": "Nonweapon lunar polar research platform with sampling auger, ice tanks and pressurized analysis pod",
+      "id": "scifi.lunar-ice-extraction-laboratory.001",
+      "source_path": "src/models/lunar_ice_extraction_laboratory.js",
+      "generator": "createLunarIceExtractionLaboratory",
+      "part_count": 21
+    },
+    {
+      "category": "scifi",
+      "slug": "bio-digital-archive-vault",
+      "title": "Bio Digital Archive Vault",
+      "title_zh": "生物数字档案存储舱",
+      "dimensions_m": [
+        3.44,
+        3.11,
+        2.93
+      ],
+      "design_focus": "Science-fiction living research archive with data pillars, illuminated bio sample racks and sealed doors",
+      "id": "scifi.bio-digital-archive-vault.001",
+      "source_path": "src/models/bio_digital_archive_vault.js",
+      "generator": "createBioDigitalArchiveVault",
+      "part_count": 66
+    },
+    {
+      "category": "scifi",
+      "slug": "orbital-debris-collector-drone",
+      "title": "Orbital Debris Collector Drone",
+      "title_zh": "轨道碎片清理无人机",
+      "dimensions_m": [
+        3.53,
+        2.66,
+        3.3
+      ],
+      "design_focus": "Nonweapon orbital cleanup drone with capture net frame, grappling arms and sensor array",
+      "id": "scifi.orbital-debris-collector-drone.001",
+      "source_path": "src/models/orbital_debris_collector_drone.js",
+      "generator": "createOrbitalDebrisCollectorDrone",
+      "part_count": 31
+    }
+  ]
+}
