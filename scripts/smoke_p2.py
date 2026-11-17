@@ -36,6 +36,8 @@ for asset_id in (
     "nature.glacial-ice-cave.001",
     "architecture.underground-utility-tunnel.001",
     "scifi.orbital-navigation-beacon.001",
+    "scifi.orbital-research-airlock-module.001",
+    "architecture.subway-platform-edge-module.001",
 ):
     for level in (0, 1, 2):
         metadata = download_metadata(asset_id, level)

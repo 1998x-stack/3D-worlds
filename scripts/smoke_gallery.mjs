@@ -91,12 +91,20 @@ try{
  await page.locator('.detail-modal').waitFor({state:'visible'});
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0)) throw Error('V0.8 WebGL inspector canvas missing');
  await page.locator('#close-detail').click();
+ const v11 = page.locator('[data-id="scifi.orbital-research-airlock-module.001"]');
+ if(await v11.count()!==1)throw Error('V1.1 orbital research airlock not found in Gallery');
+ await v11.scrollIntoViewIfNeeded();
+ await v11.locator('img').evaluate(img=>img.decode());
+ await v11.click();
+ await page.locator('.detail-modal').waitFor({state:'visible'});
+ if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('V1.1 airlock WebGL viewer missing');
+ await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
  await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
    null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
- console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7/v0.8/v0.9/v1.0 inspectors and Chinese search');
+ console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7/v0.8/v0.9/v1.0/v1.1 inspectors and Chinese search');
 }finally{
  await browser?.close();
  await new Promise(resolve=>server?.httpServer?.close(resolve)??resolve());
