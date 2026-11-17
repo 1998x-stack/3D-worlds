@@ -18,6 +18,15 @@ export function buildRecipe(spec) {
       case 'box': geometry=new THREE.BoxGeometry(...part.s); break;
       case 'sphere': geometry=new THREE.SphereGeometry(1,20,12); break;
       case 'cylinder': geometry=new THREE.CylinderGeometry(.5,.5,1,24); break;
+      case 'cone': geometry=new THREE.ConeGeometry(.5,1,24); break;
+      case 'triangle': {
+        if (!Array.isArray(part.vertices) || part.vertices.length !== 3) throw new Error('Triangle requires 3 vertices');
+        geometry=new THREE.BufferGeometry();
+        geometry.setAttribute('position',new THREE.Float32BufferAttribute(part.vertices.flat(),3));
+        geometry.setIndex([0,1,2]);
+        geometry.computeVertexNormals();
+        break;
+      }
       case 'torus': geometry=new THREE.TorusGeometry(.34,.10,10,32); break;
       case 'rod': {
         const from=new THREE.Vector3(...part.from),to=new THREE.Vector3(...part.to);
@@ -36,8 +45,9 @@ export function buildRecipe(spec) {
     const mesh=new THREE.Mesh(geometry,material(part.c));
     mesh.name=part.n;
     mesh.position.set(...part.p);
-    if(part.t==='box') { /* dimensions are defined by geometry itself */ }
+    if(part.t==='box'||part.t==='triangle') { /* geometry stores physical vertices */ }
     else mesh.scale.set(...part.s);
+    if(part.t==='triangle')mesh.material.side=THREE.DoubleSide;
     if(part.rot) mesh.rotation.set(...part.rot);
     mesh.castShadow=true;mesh.receiveShadow=true;root.add(mesh);
   }
