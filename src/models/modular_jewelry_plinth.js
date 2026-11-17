@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/modular_jewelry_plinth.js",
   "generator": "createModularJewelryPlinth",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "jewelry",
   "variant": 5,
   "cad_path": "printables/modular-jewelry-plinth.scad",

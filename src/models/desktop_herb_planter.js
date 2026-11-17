@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/desktop_herb_planter.js",
   "generator": "createDesktopHerbPlanter",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "planter",
   "variant": 5,
   "cad_path": "printables/desktop-herb-planter.scad",

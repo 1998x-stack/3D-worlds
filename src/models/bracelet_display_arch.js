@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/bracelet_display_arch.js",
   "generator": "createBraceletDisplayArch",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "jewelry",
   "variant": 3,
   "cad_path": "printables/bracelet-display-arch.scad",

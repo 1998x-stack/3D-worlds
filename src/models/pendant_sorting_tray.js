@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/pendant_sorting_tray.js",
   "generator": "createPendantSortingTray",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "jewelry",
   "variant": 4,
   "cad_path": "printables/pendant-sorting-tray.scad",

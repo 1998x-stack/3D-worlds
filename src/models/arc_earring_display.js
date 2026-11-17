@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/arc_earring_display.js",
   "generator": "createArcEarringDisplay",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "jewelry",
   "variant": 1,
   "cad_path": "printables/arc-earring-display.scad",

@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/bonsai_display_pot.js",
   "generator": "createBonsaiDisplayPot",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "planter",
   "variant": 4,
   "cad_path": "printables/bonsai-display-pot.scad",

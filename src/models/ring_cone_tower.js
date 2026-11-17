@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/ring_cone_tower.js",
   "generator": "createRingConeTower",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "jewelry",
   "variant": 2,
   "cad_path": "printables/ring-cone-tower.scad",

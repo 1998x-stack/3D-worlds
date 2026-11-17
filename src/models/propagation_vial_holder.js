@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/propagation_vial_holder.js",
   "generator": "createPropagationVialHolder",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "planter",
   "variant": 3,
   "cad_path": "printables/propagation-vial-holder.scad",

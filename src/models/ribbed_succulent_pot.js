@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/ribbed_succulent_pot.js",
   "generator": "createRibbedSucculentPot",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "planter",
   "variant": 1,
   "cad_path": "printables/ribbed-succulent-pot.scad",

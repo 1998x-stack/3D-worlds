@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/geo_cactus_planter.js",
   "generator": "createGeoCactusPlanter",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "planter",
   "variant": 2,
   "cad_path": "printables/geo-cactus-planter.scad",
