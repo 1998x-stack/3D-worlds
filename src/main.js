@@ -8,7 +8,7 @@ const sourceLoaders = import.meta.glob('./models/*.js', { query: '?raw', import:
 const assets = catalog.assets;
 const assetMap = new Map(assets.map(item => [item.id,item]));
 const factoryCache = new Map();
-const API_BASE = (import.meta.env.VITE_CATALOG_API_URL || '').replace(/\\/$/, '');
+const API_BASE = (import.meta.env.VITE_CATALOG_API_URL || '').replace(/[/]+$/, '');
 let remoteResults = API_BASE ? [] : null;
 let remoteCursor = null;
 let remoteRequestId = 0;
@@ -32,12 +32,12 @@ async function getRawSource(filename) {
   if (!loader) throw new Error('Missing model source: ' + filename);
   return loader();
 }
-const stripImports = source => source.replace(/^import[^\\n]+\\n/gm, '');
-const publicPath = path => import.meta.env.BASE_URL + String(path).replace(/^public\\//, '');
+const stripImports = source => source.split('\n').filter(line => !line.trimStart().startsWith('import ')).join('\n');
+const publicPath = path => import.meta.env.BASE_URL + (String(path).startsWith('public/') ? String(path).slice(7) : String(path));
 function previewMarkup(asset) {
   if (!asset.preview_path) return '<span class="glb-placeholder">◈<small>3D ASSET</small></span>';
   const webp = publicPath(asset.preview_path);
-  const avif = webp.replace(/\\.webp$/, '.avif');
+  const avif = webp.endsWith('.webp') ? webp.slice(0, -5) + '.avif' : webp;
   return `<picture><source type="image/avif" srcset="${safe(avif)}"/><img class="asset-thumbnail" loading="lazy" decoding="async" src="${safe(webp)}" alt=""/></picture>`;
 }
 async function binaryUrl(asset,lod=0) {
@@ -173,7 +173,7 @@ async function codeSnippet(asset) {
   const helpers = stripImports(await getRawSource('primitives.js'));
   const modelCode = stripImports(await getRawSource(asset.source_path.split('/').pop()));
   const recipe = modelCode.includes('buildRecipe(') ?
-    stripImports(await getRawSource('recipe_engine.js')) + '\\n' : '';
+    stripImports(await getRawSource('recipe_engine.js')) + String.fromCharCode(10) : '';
   return `// 3D Worlds · ${asset.title} · ${asset.license}
 // npm install three
 import * as THREE from 'three';
@@ -325,8 +325,6 @@ document.getElementById('download-optimized').addEventListener('click', async ()
   const asset=activeAsset,level=Number(document.getElementById('lod-level').value);
   try {
     const url = await binaryUrl(asset,level);
-    const response = await fetch(url,{method:'HEAD'});
-    if (!response.ok) throw Error('LOD unavailable');
     const link=document.createElement('a');
     link.href=url;link.download=asset.slug+'-lod'+level+'.glb';link.click();
     toast('优化 LOD'+level+' 模型已准备下载');
@@ -393,7 +391,7 @@ async function initRemote(){
 }
 
 renderFilters();
-refreshResults();
-initRemote();
+if (API_BASE) initRemote();
+else renderGrid();
 const initial = new URL(window.location.href).searchParams.get('model');
 if (initial) openAsset(initial, { updateHistory: false });
