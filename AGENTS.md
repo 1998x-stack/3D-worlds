@@ -29,6 +29,16 @@ This is a public, reusable **asset platform**, not a one-off scene demo.
 - After changes run `python3 -m pip install -r requirements-print.txt` and
   `python3 -m unittest discover -s tests -p test_print_export.py -v`.
 
+## Print Workbench release guarantees
+- `catalog/print_policy.json` maps all 13 categories to workflow priorities; these are **not printable grades**.
+- Browser `src/print-planner.js` uses declared model bounds and preset machine envelope, and always returns `status=not_audited`.
+- `scripts/audit_print_catalog.py --metadata-only` must never open a mesh or mark a model physically verified.
+- CLI audits are mandatory before making STL/3MF manufacturing **candidates**. `--mode separated` exports source mesh parts only; not smart segmentation.
+- Support/down-facing, component bounding-box and overlap indicators are **heuristics**, not proof of thickness, fit, or strength.
+- Functional `--clearance-mm` records a desired design clearance and never changes geometry.
+- For any changes run `npm run test:print`, `python3 -m unittest discover -s tests -v` and a new browser smoke.
+- Keep English/Chinese README and engineering runbooks synchronized; never hardcode "ready to print" in public UI.
+
 ## Quality gate
 1. `python3 scripts/catalog.py validate`
 2. `python3 scripts/catalog.py build`
