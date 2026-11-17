@@ -14,6 +14,21 @@ This is a public, reusable **asset platform**, not a one-off scene demo.
 - Check model count and tests dynamically. Avoid code paths that enumerate all assets on the server or construct a WebGLRenderer for every result when scaling past the starter set.
 - Model source copying must include `primitives.js` helpers; a bare generator with a relative import is not a portable snippet.
 
+## 3D Printing pipeline safeguards
+
+- Treat browser-downloaded STL as a **draft only**, not a validated printable
+  file. Models in this repository may have zero-thickness triangles, gaps,
+  intersecting shells or impractically thin details.
+- The print CLI in `scripts/export_print.py` uses the full-resolution source
+  GLB, **not LOD1/LOD2**, and normalizes meters/Y-up to millimeters/Z-up.
+- Do not commit/generated STL/3MF as endorsed printable artifacts until
+  asset-specific slicer review and physical manufacturing evidence exist.
+- STL has no unit semantics. The 3MF Core package explicitly declares mm.
+- `geometry_pass_manual_review_required` is NOT print certification.
+- Keep print-specific code and its reports distinct from glTF/GLB optimization.
+- After changes run `python3 -m pip install -r requirements-print.txt` and
+  `python3 -m unittest discover -s tests -p test_print_export.py -v`.
+
 ## Quality gate
 1. `python3 scripts/catalog.py validate`
 2. `python3 scripts/catalog.py build`

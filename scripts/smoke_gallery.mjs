@@ -11,7 +11,7 @@ let server, browser;
 try{
  server=await preview({preview:{host:'127.0.0.1',port:4180,strictPort:true}});
  browser=await chromium.launch({headless:true,args:['--use-gl=angle','--use-angle=swiftshader-webgl','--enable-unsafe-swiftshader']});
- const page=await browser.newPage({viewport:{width:1300,height:900}});
+ const page=await browser.newPage({viewport:{width:1300,height:900},acceptDownloads:true});
  const errors=[];
  page.on('pageerror',error=>errors.push(error.message));
  await page.goto('http://127.0.0.1:4180/3D-worlds/',{waitUntil:'networkidle'});
@@ -24,6 +24,33 @@ try{
  await page.locator('.detail-modal').waitFor({state:'visible'});
  const canvas=page.locator('#detail-canvas');
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('Inspector WebGL canvas missing');
+ // The STL draft action must genuinely produce a binary STL scaled in mm.
+ await page.locator('#print-size-mm').fill('80');
+ const draftDownload = page.waitForEvent('download',{timeout:30000});
+ await page.locator('#print-stl').click();
+ const draft = await draftDownload;
+ if(!draft.suggestedFilename().endsWith('-draft-80mm.stl')) {
+   throw Error('Unexpected STL filename: '+draft.suggestedFilename());
+ }
+ const draftData = readFileSync(await draft.path());
+ if(draftData.length<84 || !draftData.toString('ascii',0,34).includes('3D WORLDS STL DRAFT')) {
+   throw Error('STL draft missing binary header');
+ }
+ const faceCount=draftData.readUInt32LE(80);
+ if(!faceCount || draftData.length!==84+faceCount*50) {
+   throw Error('Invalid binary STL triangle count/length');
+ }
+ let lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];
+ for(let t=0;t<faceCount;t++){
+   const base=84+t*50+12;
+   for(let v=0;v<3;v++)for(let a=0;a<3;a++){
+     const n=draftData.readFloatLE(base+v*12+a*4);
+     if(!Number.isFinite(n))throw Error('Nonfinite STL coordinate');
+     lo[a]=Math.min(lo[a],n);hi[a]=Math.max(hi[a],n);
+   }
+ }
+ const largest=Math.max(...hi.map((value,i)=>value-lo[i]));
+ if(Math.abs(largest-80)>.1)throw Error('Incorrect browser STL millimeter scaling: '+largest);
  await page.locator('#close-detail').click();
  const recent = page.locator('[data-id="vehicles.coastal-sailboat.001"]');
  if(await recent.count()!==1)throw Error('New v0.4 asset missing in gallery');

@@ -1,0 +1,7 @@
+# Optional manufacturing geometry toolchain. Install separately from Vite/MCP.
+# For --mode fused additionally install: pip install manifold3d
+trimesh>=4.5,<5
+numpy>=1.26,<3
+# Independent 3MF importer for test verification:
+lxml>=5,<7
+networkx>=3,<5
