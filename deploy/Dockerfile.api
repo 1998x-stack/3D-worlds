@@ -3,10 +3,11 @@ WORKDIR /app
 COPY catalog/ ./catalog/
 COPY db/ ./db/
 COPY scripts/catalog.py ./scripts/catalog.py
+COPY public/generated/ ./public/generated/
 COPY services/search_api.py services/storage.py ./services/
 COPY requirements-api.txt ./
 RUN pip install --no-cache-dir -r requirements-api.txt && useradd -r app
-RUN python scripts/catalog.py build
+RUN python scripts/catalog.py build && chown -R app:app /app/data /app/public
 USER app
 ENV THREED_WORLDS_HOST=0.0.0.0 THREED_WORLDS_PORT=8071
 EXPOSE 8071

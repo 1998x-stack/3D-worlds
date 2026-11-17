@@ -1,0 +1,24 @@
+# Local P2 API and immutable object store without cloud credentials.
+# cd repo && docker compose -f deploy/compose.local.yml up --build
+services:
+  catalog-api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    ports:
+      - "127.0.0.1:8071:8071"
+    environment:
+      THREED_WORLDS_HOST: "0.0.0.0"
+      THREED_WORLDS_PORT: "8071"
+      THREED_WORLDS_STORE: "local"
+      THREED_WORLDS_LOCAL_STORE: "/object-store"
+      THREED_WORLDS_ALLOWED_ORIGINS: "http://localhost:5173,http://127.0.0.1:5173,https://1998x-stack.github.io"
+    volumes:
+      - ../.cache/object-store:/object-store:ro
+      - ../public/generated:/app/public/generated:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

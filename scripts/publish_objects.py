@@ -30,6 +30,17 @@ def publish(index_path: Path, apply: bool = False) -> dict:
             if checksum(src) != variant["sha256"]:
                 raise ValueError(f"SHA mismatch: {entry['asset_id']}")
             pending.append((src, variant["sha256"]))
+    # Imported third-party GLBs use the same content-addressed store.
+    catalog = json.loads((ROOT / "catalog" / "models.json").read_text(encoding="utf8"))
+    for item in catalog.get("assets", []):
+        if item.get("kind") != "glb":
+            continue
+        src = (ROOT / item["binary_path"]).resolve()
+        if not src.is_relative_to((ROOT / "public" / "assets").resolve()):
+            raise ValueError("Imported asset escapes public/assets")
+        if checksum(src) != item.get("content_sha256"):
+            raise ValueError("Imported asset checksum mismatch")
+        pending.append((src, item["content_sha256"]))
     # Never resolve credentials or call external storage on dry-run.
     if apply:
         store = from_environment()

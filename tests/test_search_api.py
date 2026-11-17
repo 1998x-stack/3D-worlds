@@ -60,6 +60,33 @@ class SearchTests(unittest.TestCase):
         self.assertTrue(asset["tags"])
         self.assertIsNone(api.get_asset("../etc/passwd"))
 
+
+    def test_http_endpoints_and_cors(self):
+        import threading
+        import urllib.request
+        from http.server import ThreadingHTTPServer
+        server = ThreadingHTTPServer(("127.0.0.1", 0), api.Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            base = f"http://127.0.0.1:{server.server_port}"
+            request = urllib.request.Request(
+                base + "/api/v1/assets?limit=3",
+                headers={"Origin": "https://1998x-stack.github.io"}
+            )
+            with urllib.request.urlopen(request, timeout=4) as response:
+                data = __import__("json").load(response)
+                self.assertEqual(len(data["items"]), 3)
+                self.assertTrue(data["next_cursor"])
+                self.assertEqual(response.headers["Access-Control-Allow-Origin"],
+                                 "https://1998x-stack.github.io")
+            with urllib.request.urlopen(base + "/api/v1/categories", timeout=4) as response:
+                self.assertEqual(len(__import__("json").load(response)), 13)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=3)
+
     def test_local_storage_roundtrip(self):
         store = LocalStore(Path(self.temp.name) / "objects")
         source = Path(self.temp.name) / "triangle.glb"
