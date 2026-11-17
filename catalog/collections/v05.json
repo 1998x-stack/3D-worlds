@@ -5,12 +5,15 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 12,
-  "category_count": 3,
+  "asset_count": 24,
+  "category_count": 6,
   "category_counts": {
     "bathroom": 4,
     "characters": 4,
-    "furniture": 4
+    "electronics": 4,
+    "furniture": 4,
+    "nature": 4,
+    "vehicles": 4
   },
   "assets": [
     {
@@ -216,6 +219,210 @@
       "design_focus": "Unrigged culinary character with tall toque, double-button jacket and apron.",
       "usage": "chef",
       "part_count": 20
+    },
+    {
+      "id": "nature.autumn-maple-tree.001",
+      "slug": "autumn-maple-tree",
+      "title": "Autumn Maple Tree",
+      "title_zh": "秋季红枫树",
+      "category": "nature",
+      "source_path": "src/models/autumn_maple_tree.js",
+      "generator": "createAutumnMapleTree",
+      "dimensions_m": [
+        3.1,
+        3.42,
+        2.7
+      ],
+      "design_focus": "Branching maple with red-orange layered canopy and exposed trunk roots.",
+      "usage": "maple",
+      "part_count": 25
+    },
+    {
+      "id": "nature.wildflower-meadow-patch.001",
+      "slug": "wildflower-meadow-patch",
+      "title": "Wildflower Meadow Patch",
+      "title_zh": "野花草甸地块",
+      "category": "nature",
+      "source_path": "src/models/wildflower_meadow_patch.js",
+      "generator": "createWildflowerMeadowPatch",
+      "dimensions_m": [
+        1.75,
+        0.67,
+        1.38
+      ],
+      "design_focus": "Ground vegetation cluster with diverse stem heights, petals, and low grasses.",
+      "usage": "grass",
+      "part_count": 66
+    },
+    {
+      "id": "nature.mossy-fallen-log.001",
+      "slug": "mossy-fallen-log",
+      "title": "Mossy Fallen Log",
+      "title_zh": "苔藓倒木",
+      "category": "nature",
+      "source_path": "src/models/mossy_fallen_log.js",
+      "generator": "createMossyFallenLog",
+      "dimensions_m": [
+        2.07,
+        0.66,
+        0.72
+      ],
+      "design_focus": "Rotated fallen trunk with bark bands, exposed cut ends and moss islands.",
+      "usage": "fallen",
+      "part_count": 18
+    },
+    {
+      "id": "nature.desert-sand-dune-patch.001",
+      "slug": "desert-sand-dune-patch",
+      "title": "Desert Sand Dune Patch",
+      "title_zh": "沙漠沙丘地块",
+      "category": "nature",
+      "source_path": "src/models/desert_sand_dune_patch.js",
+      "generator": "createDesertSandDunePatch",
+      "dimensions_m": [
+        2.28,
+        0.83,
+        1.75
+      ],
+      "design_focus": "Layered sand mound with wind ripples and dry shrub accents.",
+      "usage": "desert",
+      "part_count": 13
+    },
+    {
+      "id": "vehicles.medical-rescue-ambulance.001",
+      "slug": "medical-rescue-ambulance",
+      "title": "Medical Rescue Ambulance",
+      "title_zh": "急救救护车",
+      "category": "vehicles",
+      "source_path": "src/models/medical_rescue_ambulance.js",
+      "generator": "createMedicalRescueAmbulance",
+      "dimensions_m": [
+        2.22,
+        2.66,
+        4.56
+      ],
+      "design_focus": "Rescue vehicle with raised medical roof, cross emblems, beacons and emergency lamps.",
+      "usage": "ambulance",
+      "part_count": 24
+    },
+    {
+      "id": "vehicles.cargo-electric-tricycle.001",
+      "slug": "cargo-electric-tricycle",
+      "title": "Cargo Electric Tricycle",
+      "title_zh": "电动货运三轮车",
+      "category": "vehicles",
+      "source_path": "src/models/cargo_electric_tricycle.js",
+      "generator": "createCargoElectricTricycle",
+      "dimensions_m": [
+        1.26,
+        1.43,
+        2.6
+      ],
+      "design_focus": "Three-wheel cargo tricycle with front fork, electric battery and wooden flatbed.",
+      "usage": "tricycle",
+      "part_count": 15
+    },
+    {
+      "id": "vehicles.low-floor-city-bus.001",
+      "slug": "low-floor-city-bus",
+      "title": "Low-Floor City Bus",
+      "title_zh": "低地板城市公交车",
+      "category": "vehicles",
+      "source_path": "src/models/low_floor_city_bus.js",
+      "generator": "createLowFloorCityBus",
+      "dimensions_m": [
+        2.54,
+        3.04,
+        8.65
+      ],
+      "design_focus": "Urban low-floor bus with sectional windows, passenger doors and route marquee.",
+      "usage": "bus",
+      "part_count": 32
+    },
+    {
+      "id": "vehicles.coastal-fishing-dinghy.001",
+      "slug": "coastal-fishing-dinghy",
+      "title": "Coastal Fishing Dinghy",
+      "title_zh": "沿海小型渔船",
+      "category": "vehicles",
+      "source_path": "src/models/coastal_fishing_dinghy.js",
+      "generator": "createCoastalFishingDinghy",
+      "dimensions_m": [
+        1.72,
+        1.28,
+        3.3
+      ],
+      "design_focus": "Open-top fishing dinghy with side rails, seating benches, nets and outboard motor.",
+      "usage": "boat",
+      "part_count": 19
+    },
+    {
+      "id": "electronics.desktop-fdm-3d-printer.001",
+      "slug": "desktop-fdm-3d-printer",
+      "title": "Desktop FDM 3D Printer",
+      "title_zh": "桌面熔融沉积3D打印机",
+      "category": "electronics",
+      "source_path": "src/models/desktop_fdm_3d_printer.js",
+      "generator": "createDesktopFdm3dPrinter",
+      "dimensions_m": [
+        0.51,
+        0.66,
+        0.52
+      ],
+      "design_focus": "Open-frame 3D printer with gantry, heated bed, printhead, filament reel and small print.",
+      "usage": "3d-printer",
+      "part_count": 13
+    },
+    {
+      "id": "electronics.stereo-bookshelf-speakers.001",
+      "slug": "stereo-bookshelf-speakers",
+      "title": "Stereo Bookshelf Speakers",
+      "title_zh": "双声道书架音箱",
+      "category": "electronics",
+      "source_path": "src/models/stereo_bookshelf_speakers.js",
+      "generator": "createStereoBookshelfSpeakers",
+      "dimensions_m": [
+        0.82,
+        0.46,
+        0.25
+      ],
+      "design_focus": "Matched speaker pair with woven grille, tweeter, bass driver and volume dial.",
+      "usage": "speaker",
+      "part_count": 13
+    },
+    {
+      "id": "electronics.rugged-handheld-radio.001",
+      "slug": "rugged-handheld-radio",
+      "title": "Rugged Handheld Radio",
+      "title_zh": "手持对讲机",
+      "category": "electronics",
+      "source_path": "src/models/rugged_handheld_radio.js",
+      "generator": "createRuggedHandheldRadio",
+      "dimensions_m": [
+        0.15,
+        0.39,
+        0.094
+      ],
+      "design_focus": "Portable radio with flexible antenna, push-to-talk key, speaker grid and channel selector.",
+      "usage": "radio",
+      "part_count": 15
+    },
+    {
+      "id": "electronics.ceiling-security-camera.001",
+      "slug": "ceiling-security-camera",
+      "title": "Ceiling Security Camera",
+      "title_zh": "吊顶半球监控摄像机",
+      "category": "electronics",
+      "source_path": "src/models/ceiling_security_camera.js",
+      "generator": "createCeilingSecurityCamera",
+      "dimensions_m": [
+        0.29,
+        0.2,
+        0.29
+      ],
+      "design_focus": "Ceiling-mounted dome camera with black lens, rotating hood and indicator light.",
+      "usage": "camera",
+      "part_count": 10
     }
   ]
 }

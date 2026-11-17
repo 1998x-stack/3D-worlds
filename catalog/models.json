@@ -2755,6 +2755,342 @@
       "collection": "v0.5",
       "preview_path": "public/thumbs/chef-mannequin.webp",
       "accent": "#c6bbab"
+    },
+    {
+      "id": "nature.autumn-maple-tree.001",
+      "slug": "autumn-maple-tree",
+      "title": "Autumn Maple Tree",
+      "title_zh": "秋季红枫树",
+      "summary": "Branching maple with red-orange layered canopy and exposed trunk roots.",
+      "category": "nature",
+      "tags": [
+        "maple",
+        "autumn",
+        "tree",
+        "forest"
+      ],
+      "dimensions_m": [
+        3.1,
+        3.42,
+        2.7
+      ],
+      "generator": "createAutumnMapleTree",
+      "source_path": "src/models/autumn_maple_tree.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/autumn-maple-tree.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "nature.wildflower-meadow-patch.001",
+      "slug": "wildflower-meadow-patch",
+      "title": "Wildflower Meadow Patch",
+      "title_zh": "野花草甸地块",
+      "summary": "Ground vegetation cluster with diverse stem heights, petals, and low grasses.",
+      "category": "nature",
+      "tags": [
+        "grass",
+        "wildflower",
+        "meadow",
+        "landscape"
+      ],
+      "dimensions_m": [
+        1.75,
+        0.67,
+        1.38
+      ],
+      "generator": "createWildflowerMeadowPatch",
+      "source_path": "src/models/wildflower_meadow_patch.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/wildflower-meadow-patch.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "nature.mossy-fallen-log.001",
+      "slug": "mossy-fallen-log",
+      "title": "Mossy Fallen Log",
+      "title_zh": "苔藓倒木",
+      "summary": "Rotated fallen trunk with bark bands, exposed cut ends and moss islands.",
+      "category": "nature",
+      "tags": [
+        "fallen",
+        "log",
+        "forest",
+        "moss"
+      ],
+      "dimensions_m": [
+        2.07,
+        0.66,
+        0.72
+      ],
+      "generator": "createMossyFallenLog",
+      "source_path": "src/models/mossy_fallen_log.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/mossy-fallen-log.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "nature.desert-sand-dune-patch.001",
+      "slug": "desert-sand-dune-patch",
+      "title": "Desert Sand Dune Patch",
+      "title_zh": "沙漠沙丘地块",
+      "summary": "Layered sand mound with wind ripples and dry shrub accents.",
+      "category": "nature",
+      "tags": [
+        "desert",
+        "sand",
+        "dune",
+        "terrain"
+      ],
+      "dimensions_m": [
+        2.28,
+        0.83,
+        1.75
+      ],
+      "generator": "createDesertSandDunePatch",
+      "source_path": "src/models/desert_sand_dune_patch.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/desert-sand-dune-patch.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "vehicles.medical-rescue-ambulance.001",
+      "slug": "medical-rescue-ambulance",
+      "title": "Medical Rescue Ambulance",
+      "title_zh": "急救救护车",
+      "summary": "Rescue vehicle with raised medical roof, cross emblems, beacons and emergency lamps.",
+      "category": "vehicles",
+      "tags": [
+        "ambulance",
+        "medical",
+        "rescue",
+        "vehicle"
+      ],
+      "dimensions_m": [
+        2.22,
+        2.66,
+        4.56
+      ],
+      "generator": "createMedicalRescueAmbulance",
+      "source_path": "src/models/medical_rescue_ambulance.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/medical-rescue-ambulance.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "vehicles.cargo-electric-tricycle.001",
+      "slug": "cargo-electric-tricycle",
+      "title": "Cargo Electric Tricycle",
+      "title_zh": "电动货运三轮车",
+      "summary": "Three-wheel cargo tricycle with front fork, electric battery and wooden flatbed.",
+      "category": "vehicles",
+      "tags": [
+        "tricycle",
+        "cargo",
+        "delivery",
+        "electric"
+      ],
+      "dimensions_m": [
+        1.26,
+        1.43,
+        2.6
+      ],
+      "generator": "createCargoElectricTricycle",
+      "source_path": "src/models/cargo_electric_tricycle.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/cargo-electric-tricycle.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "vehicles.low-floor-city-bus.001",
+      "slug": "low-floor-city-bus",
+      "title": "Low-Floor City Bus",
+      "title_zh": "低地板城市公交车",
+      "summary": "Urban low-floor bus with sectional windows, passenger doors and route marquee.",
+      "category": "vehicles",
+      "tags": [
+        "bus",
+        "public",
+        "transit",
+        "urban"
+      ],
+      "dimensions_m": [
+        2.54,
+        3.04,
+        8.65
+      ],
+      "generator": "createLowFloorCityBus",
+      "source_path": "src/models/low_floor_city_bus.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/low-floor-city-bus.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "vehicles.coastal-fishing-dinghy.001",
+      "slug": "coastal-fishing-dinghy",
+      "title": "Coastal Fishing Dinghy",
+      "title_zh": "沿海小型渔船",
+      "summary": "Open-top fishing dinghy with side rails, seating benches, nets and outboard motor.",
+      "category": "vehicles",
+      "tags": [
+        "boat",
+        "fishing",
+        "marine",
+        "dinghy"
+      ],
+      "dimensions_m": [
+        1.72,
+        1.28,
+        3.3
+      ],
+      "generator": "createCoastalFishingDinghy",
+      "source_path": "src/models/coastal_fishing_dinghy.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/coastal-fishing-dinghy.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "electronics.desktop-fdm-3d-printer.001",
+      "slug": "desktop-fdm-3d-printer",
+      "title": "Desktop FDM 3D Printer",
+      "title_zh": "桌面熔融沉积3D打印机",
+      "summary": "Open-frame 3D printer with gantry, heated bed, printhead, filament reel and small print.",
+      "category": "electronics",
+      "tags": [
+        "3d-printer",
+        "fabrication",
+        "printer",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.51,
+        0.66,
+        0.52
+      ],
+      "generator": "createDesktopFdm3dPrinter",
+      "source_path": "src/models/desktop_fdm_3d_printer.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/desktop-fdm-3d-printer.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "electronics.stereo-bookshelf-speakers.001",
+      "slug": "stereo-bookshelf-speakers",
+      "title": "Stereo Bookshelf Speakers",
+      "title_zh": "双声道书架音箱",
+      "summary": "Matched speaker pair with woven grille, tweeter, bass driver and volume dial.",
+      "category": "electronics",
+      "tags": [
+        "speaker",
+        "audio",
+        "stereo",
+        "music"
+      ],
+      "dimensions_m": [
+        0.82,
+        0.46,
+        0.25
+      ],
+      "generator": "createStereoBookshelfSpeakers",
+      "source_path": "src/models/stereo_bookshelf_speakers.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/stereo-bookshelf-speakers.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "electronics.rugged-handheld-radio.001",
+      "slug": "rugged-handheld-radio",
+      "title": "Rugged Handheld Radio",
+      "title_zh": "手持对讲机",
+      "summary": "Portable radio with flexible antenna, push-to-talk key, speaker grid and channel selector.",
+      "category": "electronics",
+      "tags": [
+        "radio",
+        "walkie-talkie",
+        "communication",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.15,
+        0.39,
+        0.094
+      ],
+      "generator": "createRuggedHandheldRadio",
+      "source_path": "src/models/rugged_handheld_radio.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/rugged-handheld-radio.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "electronics.ceiling-security-camera.001",
+      "slug": "ceiling-security-camera",
+      "title": "Ceiling Security Camera",
+      "title_zh": "吊顶半球监控摄像机",
+      "summary": "Ceiling-mounted dome camera with black lens, rotating hood and indicator light.",
+      "category": "electronics",
+      "tags": [
+        "camera",
+        "security",
+        "surveillance",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.29,
+        0.2,
+        0.29
+      ],
+      "generator": "createCeilingSecurityCamera",
+      "source_path": "src/models/ceiling_security_camera.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/ceiling-security-camera.webp",
+      "accent": "#aec3cb"
     }
   ]
 }
