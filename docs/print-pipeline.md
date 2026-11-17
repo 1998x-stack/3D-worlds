@@ -4,6 +4,14 @@
 > Do not mark all 485 scene assets as printable. Preserve Three.js/GLB as the
 > editable visual source of truth.
 
+## V1.3 · printable overseas product CAD
+
+A dedicated 50-product collection stores original parametric OpenSCAD
+manufacturing-design masters in `printables/`. The standalone exporter
+(`scripts/export_print_commerce.py`) produces STL/3MF prototypes; it does
+**not** certify minimum wall thickness, real fit, or market compliance.
+See [market hypotheses](print-commerce-v13.md) and [CAD notes](../printables/README.md).
+
 ## Why direct GLB → STL is not enough
 
 Models in `src/models/` are predominantly assembled Three.js primitives,

@@ -2,6 +2,16 @@
 
 The root README focuses on current use and reproducible verification. Historical collection briefs are preserved below.
 
+## V1.3 — 50 original print-commerce CAD concepts
+
+An overseas commerce-specific `print-commerce` category adds 50 original
+parametric CAD-backed product candidates to the 485 existing scene assets
+(**535 models / 14 categories** total). Design hypotheses are not verified
+sales and all CAD exports require slicer/physical validation.
+
+- [Market research and complete 50-model inventory](print-commerce-v13.md)
+- [V1.3 machine-readable collection](../catalog/collections/print-commerce-v13.json)
+
 ## V1.2 — 50 original source-backed Three.js models
 
 V1.2 expands the library from **435 to 485 independently editable Three.js models across all 13 categories**. The 50 new generators add **1,414 named geometry parts** (minimum 18 per model) and preserve the preexisting 435 original sources. It adds accessible facilities, natural biomes, environmental research, robotics, transit, public spaces, sports and nonweapon orbital science.

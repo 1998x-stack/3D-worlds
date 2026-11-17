@@ -14,11 +14,11 @@
 
 ## Overview
 
-3D Worlds connects a catalog of **485 original, source-editable procedural models across 13 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
+3D Worlds connects a catalog of **535 original, source-editable procedural models across 14 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
 
 | Layer | Key capability | Delivery |
 |---|---|---|
-| Catalog | 485 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
+| Catalog | 535 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
 | Gallery | Real WebP/AVIF thumbnails, interactive model inspector, category search | [GitHub Pages](https://1998x-stack.github.io/3D-worlds/) |
 | Game assets | GLB generation and Meshopt LOD0/LOD1/LOD2 optimization | Local build / CI artifact |
 | 3D print workbench | Printer-bed dimensions, scaled size estimate, P0/P1/P2 category guidance, STL draft | Browser · **not audited** |
@@ -26,6 +26,23 @@
 | Integrations | SQLite FTS5, read-only MCP tools, paginated API, optional local/S3 object storage | Self-hosted |
 
 **P0/P1/P2 are workflow priorities, not quality grades.** The catalog does not label any generated model as physically verified.
+
+## Overseas print-commerce · v1.3
+
+An independent **海外3D打印商品 / print-commerce** collection adds 50 original
+CAD-backed product hypotheses (total **535 models / 14 categories**), preserving
+all 485 preexisting scenes. Each product has a procedural Three.js preview,
+a dedicated editable `.scad` source (dimensions in millimeters), and market
+evidence fields. Its CAD file can be exported to STL or 3MF with OpenSCAD.
+No model has been physically tested or certified for sale.
+
+[Overseas customer preference research and all 50 original candidates](docs/print-commerce-v13.md) ·
+[Machine-readable product collection](catalog/collections/print-commerce-v13.json) ·
+[STL / 3MF CAD export](printables/README.md)
+
+~~~bash
+python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve
+~~~
 
 ## Quick start
 

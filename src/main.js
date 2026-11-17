@@ -80,8 +80,8 @@ root.innerHTML = `
     </section>
     <section class="catalog-section" id="collection">
       <div class="section-intro">
-        <div><span class="section-kicker">THE COLLECTION / V 1.2</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
-        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">485 ASSETS</span></div>
+        <div><span class="section-kicker">THE COLLECTION / V 1.3</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
+        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">535 ASSETS</span></div>
       </div>
       <div class="catalog-layout">
         <aside class="filters" aria-label="模型分类">
@@ -95,7 +95,7 @@ root.innerHTML = `
             <label class="search-box"><span aria-hidden="true">⌕</span><input id="asset-search" type="search" placeholder="搜索模型、名称或标签..." aria-label="搜索模型" autocomplete="off"/><kbd>/</kbd></label>
             <div class="sort-box"><span>排序</span><select id="sort-select" aria-label="模型排序"><option value="featured">精选推荐</option><option value="name">名称 A–Z</option><option value="category">分类</option></select></div>
           </div>
-          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">485 RESULTS</span></div>
+          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">535 RESULTS</span></div>
           <div id="asset-grid" class="asset-grid"></div><div class="load-more-box" id="load-more-box" hidden><button id="load-more" class="button button-soft" type="button">加载更多模型 ↓</button></div>
           <div class="catalog-footer"><span>Built for the makers, by the makers.</span><span>GLB / THREE.JS / MCP / SQLITE</span></div>
         </div>
@@ -124,7 +124,7 @@ root.innerHTML = `
   <label class="print-export-label" for="print-size-mm">最长边尺寸 <span><input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/> mm</span></label>
   <label class="print-export-label" for="print-printer">打印平台 <select id="print-printer" aria-label="打印平台"><option value="fdm-220">FDM 通用 220 × 220 × 250 mm</option><option value="fdm-300">FDM 大平台 300 × 300 × 300 mm</option><option value="resin-192">树脂光固化参考 192 × 120 × 200 mm</option></select></label>
   <div id="print-plan-summary" class="print-plan-summary" role="status" aria-live="polite">选择模型后计算打印规划。</div>
-  <button id="print-stl" class="button button-dark" type="button">↓ 下载未审核 STL 草稿</button>
+  <button id="print-stl" class="button button-dark" type="button">↓ 下载未审核 STL 草稿</button><a id="download-parametric-cad" class="button button-soft" href="#" target="_blank" rel="noopener noreferrer" hidden>↗ 获取可编辑 OpenSCAD CAD 源码</a>
   <button id="copy-print-command" class="button button-soft" type="button">⧉ 复制本地 STL/3MF 审核命令</button>
   <p class="print-export-note">P0/P1/P2 表示处理优先级，不是质量评级。STL 不包含单位；导入切片软件时须确认 mm。复杂结构与功能件仍需独立评审。</p>
   <a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">打印规范、分件与制造安全说明 ↗</a>
@@ -263,6 +263,11 @@ async function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('export-glb').textContent = isProcedural ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB';
   document.getElementById('lod-row').hidden = !isProcedural;
   document.getElementById('print-stl').disabled = !isProcedural;
+  const cadLink = document.getElementById('download-parametric-cad');
+  cadLink.hidden = asset.category !== 'print-commerce';
+  if (asset.category === 'print-commerce' && /^[a-z0-9-]+$/.test(asset.slug))
+    cadLink.href = 'https://raw.githubusercontent.com/1998x-stack/3D-worlds/main/printables/' + asset.slug + '.scad';
+  else cadLink.removeAttribute('href');
   document.getElementById('print-stl').title = isProcedural
     ? '直接下载未经制造审核的 STL 几何草稿'
     : '外部 GLB 请使用 Python 打印流水线进行转换和审核';

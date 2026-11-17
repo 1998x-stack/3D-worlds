@@ -37,7 +37,7 @@ try{
  }
  if(await page.locator('.asset-card').count()!==expected)throw Error('Missing remote catalog pages');
  await page.locator('#asset-search').fill('仙人掌');
- await page.waitForFunction(()=>document.querySelectorAll('.asset-card').length===1,null,{timeout:12000});
+ await page.waitForFunction(() => [...document.querySelectorAll('.asset-card')].some(card => card.dataset.id === 'print-commerce.geo-cactus-planter.001'), null, {timeout:12000});
  if(errors.length)throw Error('P2 remote browser errors: '+errors.join('; '));
  console.log('P2 REMOTE GALLERY OK: 24-item cursor pages,',expected,'assets and Chinese search');
 }finally{

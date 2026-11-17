@@ -2,9 +2,20 @@
 
 **[English](README.md) · [在线模型库](https://1998x-stack.github.io/3D-worlds/) · [打印工作台](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [CI 状态](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml)**
 
-3D Worlds 将 **485 个可编辑程序化 Three.js 模型、13 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
+3D Worlds 将 **535 个可编辑程序化 Three.js 模型、14 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
 
 > **关键：** P0/P1/P2 是工程任务优先级，不是可打印性评分；通过 CLI 几何审核也不等于切片或实体打印成功。当前模型默认未经制造验证。
+
+## 海外3D打印商品专项 · v1.3
+
+新增 **50 个原创实体商品概念模型**，覆盖10个细分系列。每个模型同时有
+Three.js 预览与 OpenSCAD 参数化 CAD（`printables/`），支持批量导出
+STL/3MF。海外市场偏好与50个候选完整目录见
+[专项研究](docs/print-commerce-v13.md)；具体导出命令见
+[可编辑CAD说明](printables/README.md)。
+
+**注意：** 目前为可编辑设计候选，未经实际打印及产品安全认证，
+不得将平台品类销售数据当作本仓库单个模型的销量。
 
 ## 能力矩阵
 

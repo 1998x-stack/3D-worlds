@@ -41,3 +41,5 @@
 .print-plan-summary ul{margin:0;padding-left:18px;display:grid;gap:3px}
 @media(max-width:900px){.print-workflow-head{display:block}.print-workflow-cards{grid-template-columns:1fr}.print-workflow-card{min-height:auto}.print-workflow-foot{flex-direction:column;align-items:flex-start}}
 @media(max-width:760px){.print-workflow{padding:52px 22px}.print-export-label{align-items:flex-start;flex-direction:column}.print-export-label select{max-width:100%;width:100%}}
+
+#download-parametric-cad[hidden] { display: none !important; }

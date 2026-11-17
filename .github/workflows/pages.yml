@@ -41,6 +41,21 @@ jobs:
           python scripts/catalog.py validate
           python scripts/catalog.py build
           python -m unittest discover -s tests -v
+      - name: Install OpenSCAD CAD compiler
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends openscad
+      - name: Verify representative product CAD STL exports
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          for slug in moon-phase-light-sleeve cloud-whale-totem harbor-cargo-diorama modular-pencil-caddy collectible-display-plinth universal-controller-cradle arc-earring-display ribbed-succulent-pot custom-desk-nameplate celestial-guild-medallion; do
+            python3 scripts/export_print_commerce.py --only "$slug" --format stl --out .cache/print-cad-test
+          done
+      - name: Verify parameterized CAD 3MF export
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/export_print_commerce.py --only monogram-desk-coaster --format 3mf --out .cache/print-cad-test
       - name: Archive generated SQLite catalog
         uses: actions/upload-artifact@v4
         with:
