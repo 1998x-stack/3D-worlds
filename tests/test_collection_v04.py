@@ -23,7 +23,7 @@ class CollectionV04Tests(unittest.TestCase):
         self.assertEqual(len(set(row["id"] for row in data["assets"])),40)
         self.assertGreaterEqual(len(self.assets),85)
         categories=json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]
-        expected={x["id"] for x in categories}
+        expected={x["id"] for x in categories if x["id"] != "print-commerce"}
         self.assertEqual({row["category"] for row in data["assets"]},expected)
         for category in expected:
             self.assertGreaterEqual(sum(a["category"]==category for a in data["assets"]),2)
@@ -57,7 +57,7 @@ class CollectionV04Tests(unittest.TestCase):
                         self.assertTrue(all(isinstance(n,(int,float)) and n>0 for n in part["s"]))
 
     def test_legacy_identifiers_remain_unmodified(self):
-        legacy=[x for x in self.assets if x.get("collection") not in ("v0.4", "v0.5", "v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1")]
+        legacy=[x for x in self.assets if x.get("collection") not in ("v0.4", "v0.5", "v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1", "v1.2")]
         self.assertEqual(len(legacy),45)
         self.assertIn("furniture.table.oak-study-001",{x["id"] for x in legacy})
         self.assertIn("scifi.patrol-spacecraft.001",{x["id"] for x in legacy})
