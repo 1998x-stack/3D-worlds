@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/folding-cargo-bicycle-miniature.webp",
-  "accent": "#df8468"
+  "accent": "#df8468",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createFoldingCargoBicycleMiniature() { return buildRecipe({
   "title": "Folding Cargo Bicycle Miniature",
@@ -58,7 +60,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0,
         1.5707963267948966,
         0
-      ]
+      ],
+      "finish": "rubber"
     },
     {
       "t": "cylinder",
@@ -78,7 +81,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -94,7 +98,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -0.7
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -110,7 +115,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -0.96
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -126,7 +132,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -1.48
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -142,7 +149,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -1.74
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -158,7 +166,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -1.4800000000000002
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -174,7 +183,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -0.96
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "torus",
@@ -194,7 +204,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0,
         1.5707963267948966,
         0
-      ]
+      ],
+      "finish": "rubber"
     },
     {
       "t": "cylinder",
@@ -214,7 +225,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -230,7 +242,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         1.74
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -246,7 +259,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         1.48
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -262,7 +276,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.9600000000000001
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -278,7 +293,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.7
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -294,7 +310,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.9599999999999997
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -310,7 +327,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         1.48
       ],
       "r": 0.023,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -326,7 +344,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0
       ],
       "r": 0.08,
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -342,7 +361,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         -0.38
       ],
       "r": 0.08,
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -405,7 +425,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.95
       ],
       "r": 0.065,
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -420,7 +441,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.47,
         0.65
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -435,7 +457,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.41,
         0.06
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -450,7 +473,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.41,
         0.06
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -465,7 +489,8 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.41,
         0.06
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -480,7 +505,471 @@ export function createFoldingCargoBicycleMiniature() { return buildRecipe({
         0.41,
         0.06
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "wood"
+    },
+    {
+      "t": "cylinder",
+      "n": "hub-disc-0",
+      "p": [
+        0,
+        0.58,
+        -1.22
+      ],
+      "s": [
+        0.24,
+        0.22,
+        0.24
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "arc",
+      "n": "brake-rotor-0",
+      "p": [
+        0,
+        0.58,
+        -1.22
+      ],
+      "s": [
+        0.76,
+        0.76,
+        0.6
+      ],
+      "c": 14989405,
+      "finish": "metal",
+      "start": 0,
+      "sweep": 5.811946409141117,
+      "rot": [
+        0,
+        1.5707963267948966,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-0-0",
+      "p": [
+        0,
+        1.12,
+        -1.22
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-0-1",
+      "p": [
+        0,
+        0.7468691769624716,
+        -0.706429481200617
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-0-2",
+      "p": [
+        0,
+        0.1431308230375284,
+        -0.9025959637620644
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-0-3",
+      "p": [
+        0,
+        0.14313082303752822,
+        -1.5374040362379353
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-0-4",
+      "p": [
+        0,
+        0.7468691769624715,
+        -1.7335705187993828
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "hub-disc-1",
+      "p": [
+        0,
+        0.58,
+        1.22
+      ],
+      "s": [
+        0.24,
+        0.22,
+        0.24
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "arc",
+      "n": "brake-rotor-1",
+      "p": [
+        0,
+        0.58,
+        1.22
+      ],
+      "s": [
+        0.76,
+        0.76,
+        0.6
+      ],
+      "c": 14989405,
+      "finish": "metal",
+      "start": 0,
+      "sweep": 5.811946409141117,
+      "rot": [
+        0,
+        1.5707963267948966,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-1-0",
+      "p": [
+        0,
+        1.12,
+        1.22
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-1-1",
+      "p": [
+        0,
+        0.7468691769624716,
+        1.7335705187993828
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-1-2",
+      "p": [
+        0,
+        0.1431308230375284,
+        1.5374040362379355
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-1-3",
+      "p": [
+        0,
+        0.14313082303752822,
+        0.9025959637620645
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "rim-reflector-1-4",
+      "p": [
+        0,
+        0.7468691769624715,
+        0.706429481200617
+      ],
+      "s": [
+        0.035,
+        0.095,
+        0.11
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "drive-crank-assembly",
+      "p": [
+        0,
+        0.72,
+        -0.26
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.3
+      ],
+      "c": 3162970,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "rod",
+      "n": "rear-luggage-rack",
+      "from": [
+        0,
+        1,
+        -1.11
+      ],
+      "to": [
+        0,
+        1,
+        -0.51
+      ],
+      "r": 0.055,
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "folding-hinge-body",
+      "p": [
+        0,
+        0.79,
+        0
+      ],
+      "s": [
+        0.34,
+        0.25,
+        0.29
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-0",
+      "p": [
+        -0.37,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-1",
+      "p": [
+        -0.22999999999999998,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-2",
+      "p": [
+        -0.08999999999999997,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-3",
+      "p": [
+        0.050000000000000044,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-4",
+      "p": [
+        0.19000000000000006,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "box",
+      "n": "cargo-basket-weave-5",
+      "p": [
+        0.33000000000000007,
+        1.1,
+        0.47
+      ],
+      "s": [
+        0.055,
+        0.26,
+        0.56
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "sphere",
+      "n": "front-headlamp",
+      "p": [
+        0,
+        1.53,
+        1
+      ],
+      "s": [
+        0.18,
+        0.18,
+        0.21
+      ],
+      "c": 16381934,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "saddle-stitch-0",
+      "p": [
+        -0.13,
+        1.59,
+        -0.44
+      ],
+      "s": [
+        0.03,
+        0.01,
+        0.28
+      ],
+      "c": 15918798,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "saddle-stitch-1",
+      "p": [
+        0,
+        1.59,
+        -0.44
+      ],
+      "s": [
+        0.03,
+        0.01,
+        0.28
+      ],
+      "c": 15918798,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "saddle-stitch-2",
+      "p": [
+        0.13,
+        1.59,
+        -0.44
+      ],
+      "s": [
+        0.03,
+        0.01,
+        0.28
+      ],
+      "c": 15918798,
+      "finish": "fabric"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

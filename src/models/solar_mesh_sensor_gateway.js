@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/solar-mesh-sensor-gateway.webp",
-  "accent": "#9ac5d1"
+  "accent": "#9ac5d1",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createSolarMeshSensorGateway() { return buildRecipe({
   "title": "Solar Mesh Sensor Gateway",
@@ -71,7 +73,7 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "weather-box",
       "p": [
         0,
@@ -103,7 +105,8 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         -0.28,
         0,
         0
-      ]
+      ],
+      "finish": "glass"
     },
     {
       "t": "box",
@@ -238,7 +241,8 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         0.035,
         0.05
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -253,7 +257,8 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         0.035,
         0.05
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -268,7 +273,8 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         0.035,
         0.05
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -283,7 +289,8 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         0.035,
         0.05
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -346,7 +353,354 @@ export function createSolarMeshSensorGateway() { return buildRecipe({
         0.11,
         0.1
       ],
-      "c": 14648424
+      "c": 14648424,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "pv-busbar-0",
+      "p": [
+        -0.72,
+        2.262,
+        -0.1
+      ],
+      "s": [
+        0.022,
+        0.018,
+        1.1
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        -0.28,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "pv-busbar-1",
+      "p": [
+        -0.36,
+        2.262,
+        -0.1
+      ],
+      "s": [
+        0.022,
+        0.018,
+        1.1
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        -0.28,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "pv-busbar-2",
+      "p": [
+        0,
+        2.262,
+        -0.1
+      ],
+      "s": [
+        0.022,
+        0.018,
+        1.1
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        -0.28,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "pv-busbar-3",
+      "p": [
+        0.3600000000000001,
+        2.262,
+        -0.1
+      ],
+      "s": [
+        0.022,
+        0.018,
+        1.1
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        -0.28,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "pv-busbar-4",
+      "p": [
+        0.72,
+        2.262,
+        -0.1
+      ],
+      "s": [
+        0.022,
+        0.018,
+        1.1
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        -0.28,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "panel-edge-clip-0",
+      "p": [
+        -0.83,
+        2.24,
+        -0.44
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.11
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "anchor-bolt-0",
+      "p": [
+        -0.34,
+        0.24,
+        -0.33
+      ],
+      "s": [
+        0.12,
+        0.14,
+        0.12
+      ],
+      "c": 3162970,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "panel-edge-clip-1",
+      "p": [
+        0.83,
+        2.24,
+        -0.44
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.11
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "anchor-bolt-1",
+      "p": [
+        0.34,
+        0.24,
+        -0.33
+      ],
+      "s": [
+        0.12,
+        0.14,
+        0.12
+      ],
+      "c": 3162970,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "panel-edge-clip-2",
+      "p": [
+        -0.83,
+        2.24,
+        0.44
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.11
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "anchor-bolt-2",
+      "p": [
+        -0.34,
+        0.24,
+        0.33
+      ],
+      "s": [
+        0.12,
+        0.14,
+        0.12
+      ],
+      "c": 3162970,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "panel-edge-clip-3",
+      "p": [
+        0.83,
+        2.24,
+        0.44
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.11
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "anchor-bolt-3",
+      "p": [
+        0.34,
+        0.24,
+        0.33
+      ],
+      "s": [
+        0.12,
+        0.14,
+        0.12
+      ],
+      "c": 3162970,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "fins-vent-0",
+      "p": [
+        -0.32,
+        1.47,
+        0.34
+      ],
+      "s": [
+        0.075,
+        0.018,
+        0.026
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "fins-vent-1",
+      "p": [
+        -0.16,
+        1.47,
+        0.34
+      ],
+      "s": [
+        0.075,
+        0.018,
+        0.026
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "fins-vent-2",
+      "p": [
+        0,
+        1.47,
+        0.34
+      ],
+      "s": [
+        0.075,
+        0.018,
+        0.026
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "fins-vent-3",
+      "p": [
+        0.15999999999999998,
+        1.47,
+        0.34
+      ],
+      "s": [
+        0.075,
+        0.018,
+        0.026
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "fins-vent-4",
+      "p": [
+        0.32,
+        1.47,
+        0.34
+      ],
+      "s": [
+        0.075,
+        0.018,
+        0.026
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "gateway-screen",
+      "p": [
+        0,
+        1.32,
+        0.35
+      ],
+      "s": [
+        0.36,
+        0.17,
+        0.03
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "antenna-node-led",
+      "p": [
+        0.67,
+        2.41,
+        -0.26
+      ],
+      "s": [
+        0.13,
+        0.13,
+        0.13
+      ],
+      "c": 7981487,
+      "finish": "glow"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

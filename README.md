@@ -21,6 +21,7 @@
 ## Contents
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
+- [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
 - [Explore the platform](#explore-the-platform)
 - [Quick start](#quick-start)
 - [Capabilities and boundaries](#capabilities-and-boundaries)
@@ -50,6 +51,19 @@ The project serves several different audiences:
 | AI coding agents | [`AGENTS.md`](AGENTS.md), [portable Skill](.codex/skills/threejs-model-builder/SKILL.md), local MCP | Searchable IDs, attribution-aware source and import guidance |
 | Designers and makers | [Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow), `printables/` | Initial geometric drafts and editable CAD prototypes |
 | Contributors and maintainers | `catalog/`, `scripts/`, `tests/` and GitHub Actions | A reproducible path to add, validate, review, and publish assets |
+
+## V1.4.1 · Maker model fine-detail refresh
+
+All **30 previously released V1.4 maker-scene models** have undergone an original geometry and material-detail revision (not a new catalog batch). Existing model IDs, titles, generator names, metric envelopes and licensing remain stable; the complete catalog stays at **565 assets / 14 categories**.
+
+- **825 → 1,824 individually named mesh parts** (+999 semantically designed details), documented per model with before/after counts.
+- Six-sided storage cells, open soap drainage slats, true-aperture shade bricks, curved Truchet geometries, authentic surface fixtures, circuit traces, fasteners and biome microdetails.
+- Portable Three.js recipe extensions for rounded profiles, hexagonal prisms and arcs, with exportable PBR material treatments. Browser source-copy and GLB export remain supported.
+- **Manufacturing disclaimer:** the revisions improve *appearance* and some geometric openings, but do not establish printability, measured clearances, watertightness, physical strength or slicer approval.
+
+[Full bilingual 30-model refinement report](docs/v14-fine-detail-refinement.md) ·
+[V1.4 manifest / revision metadata](catalog/collections/v14.json) ·
+[Verification gates](docs/verification-v14.md)
 
 ## Explore the platform
 

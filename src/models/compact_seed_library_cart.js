@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/compact-seed-library-cart.webp",
-  "accent": "#df8468"
+  "accent": "#df8468",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createCompactSeedLibraryCart() { return buildRecipe({
   "title": "Compact Seed Library Cart",
@@ -148,7 +150,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         1.55,
         0.14
       ],
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -163,10 +166,11 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         1.55,
         0.14
       ],
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "seed-kiosk-case",
       "p": [
         0,
@@ -193,7 +197,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.14,
         1.35
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -343,7 +348,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.04,
         1.3
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -358,7 +364,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.04,
         1.3
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -373,7 +380,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.04,
         1.3
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -388,7 +396,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.04,
         1.3
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "wood"
     },
     {
       "t": "rod",
@@ -404,7 +413,8 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0
       ],
       "r": 0.07,
-      "c": 4084325
+      "c": 4084325,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -420,7 +430,493 @@ export function createCompactSeedLibraryCart() { return buildRecipe({
         0.49
       ],
       "r": 0.07,
-      "c": 4084325
+      "c": 4084325,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-0",
+      "p": [
+        -0.48,
+        1.15,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 15383673,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-0",
+      "p": [
+        -0.48,
+        1.15,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-1",
+      "p": [
+        0,
+        1.15,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-1",
+      "p": [
+        0,
+        1.15,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-2",
+      "p": [
+        0.48,
+        1.15,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-2",
+      "p": [
+        0.48,
+        1.15,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-3",
+      "p": [
+        -0.48,
+        1.44,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 15383673,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-3",
+      "p": [
+        -0.48,
+        1.44,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-4",
+      "p": [
+        0,
+        1.44,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-4",
+      "p": [
+        0,
+        1.44,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-5",
+      "p": [
+        0.48,
+        1.44,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-5",
+      "p": [
+        0.48,
+        1.44,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-6",
+      "p": [
+        -0.48,
+        1.73,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 15383673,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-6",
+      "p": [
+        -0.48,
+        1.73,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-7",
+      "p": [
+        0,
+        1.73,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-7",
+      "p": [
+        0,
+        1.73,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "rounded-box",
+      "n": "seed-packet-8",
+      "p": [
+        0.48,
+        1.73,
+        0.54
+      ],
+      "s": [
+        0.31,
+        0.15,
+        0.024
+      ],
+      "c": 7981487,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "illustrated-seed-swatch-8",
+      "p": [
+        0.48,
+        1.73,
+        0.577
+      ],
+      "s": [
+        0.17,
+        0.045,
+        0.02
+      ],
+      "c": 5742453,
+      "finish": "wood"
+    },
+    {
+      "t": "cylinder",
+      "n": "wheel-hubcap-0",
+      "p": [
+        -0.91,
+        0.31,
+        -0.56
+      ],
+      "s": [
+        0.17,
+        0.17,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "cylinder",
+      "n": "wheel-hubcap-1",
+      "p": [
+        0.91,
+        0.31,
+        -0.56
+      ],
+      "s": [
+        0.17,
+        0.17,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "cylinder",
+      "n": "wheel-hubcap-2",
+      "p": [
+        -0.91,
+        0.31,
+        0.56
+      ],
+      "s": [
+        0.17,
+        0.17,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "cylinder",
+      "n": "wheel-hubcap-3",
+      "p": [
+        0.91,
+        0.31,
+        0.56
+      ],
+      "s": [
+        0.17,
+        0.17,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal",
+      "rot": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-0",
+      "p": [
+        -0.55,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-1",
+      "p": [
+        -0.33000000000000007,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-2",
+      "p": [
+        -0.11000000000000004,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-3",
+      "p": [
+        0.10999999999999999,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-4",
+      "p": [
+        0.32999999999999996,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "library-header-glyph-5",
+      "p": [
+        0.55,
+        2.34,
+        0.49
+      ],
+      "s": [
+        0.12,
+        0.08,
+        0.024
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "library-nameplate",
+      "p": [
+        0,
+        2.04,
+        0.51
+      ],
+      "s": [
+        1.14,
+        0.17,
+        0.035
+      ],
+      "c": 14989405,
+      "finish": "metal"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/microcontroller-learning-blocks.webp",
-  "accent": "#9ac5d1"
+  "accent": "#9ac5d1",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createMicrocontrollerLearningBlocks() { return buildRecipe({
   "title": "Microcontroller Learning Blocks",
@@ -235,7 +237,7 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "module-board-0",
       "p": [
         -0.67,
@@ -310,7 +312,7 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
       "c": 13938523
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "module-board-1",
       "p": [
         0,
@@ -385,7 +387,7 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
       "c": 13938523
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "module-board-2",
       "p": [
         0.67,
@@ -487,7 +489,8 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
         0.24,
         0.3
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -502,7 +505,8 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
         0.22,
         0.22
       ],
-      "c": 14648424
+      "c": 14648424,
+      "finish": "glow"
     },
     {
       "t": "box",
@@ -548,6 +552,631 @@ export function createMicrocontrollerLearningBlocks() { return buildRecipe({
         0.13
       ],
       "c": 4084325
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-0",
+      "p": [
+        -0.89,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-1",
+      "p": [
+        -0.8180000000000001,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-2",
+      "p": [
+        -0.746,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-3",
+      "p": [
+        -0.674,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-4",
+      "p": [
+        -0.6020000000000001,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-5",
+      "p": [
+        -0.53,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-0-6",
+      "p": [
+        -0.4580000000000001,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "socket-retainer-0",
+      "p": [
+        -0.67,
+        0.62,
+        -0.35
+      ],
+      "s": [
+        0.25,
+        0.06,
+        0.24
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "board-silk-label-0",
+      "p": [
+        -0.67,
+        0.53,
+        0.5
+      ],
+      "s": [
+        0.32,
+        0.04,
+        0.02
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-0",
+      "p": [
+        -0.22,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-1",
+      "p": [
+        -0.14800000000000002,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-2",
+      "p": [
+        -0.07600000000000001,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-3",
+      "p": [
+        -0.004000000000000031,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-4",
+      "p": [
+        0.06799999999999998,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-5",
+      "p": [
+        0.13999999999999999,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-1-6",
+      "p": [
+        0.21199999999999994,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "socket-retainer-1",
+      "p": [
+        0,
+        0.62,
+        -0.35
+      ],
+      "s": [
+        0.25,
+        0.06,
+        0.24
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "board-silk-label-1",
+      "p": [
+        0,
+        0.53,
+        0.5
+      ],
+      "s": [
+        0.32,
+        0.04,
+        0.02
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-0",
+      "p": [
+        0.45000000000000007,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-1",
+      "p": [
+        0.522,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-2",
+      "p": [
+        0.5940000000000001,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-3",
+      "p": [
+        0.666,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-4",
+      "p": [
+        0.738,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-5",
+      "p": [
+        0.81,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "pcb-trace-2-6",
+      "p": [
+        0.882,
+        0.53,
+        0.08
+      ],
+      "s": [
+        0.018,
+        0.014,
+        0.7
+      ],
+      "c": 7981487,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "socket-retainer-2",
+      "p": [
+        0.67,
+        0.62,
+        -0.35
+      ],
+      "s": [
+        0.25,
+        0.06,
+        0.24
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "board-silk-label-2",
+      "p": [
+        0.67,
+        0.53,
+        0.5
+      ],
+      "s": [
+        0.32,
+        0.04,
+        0.02
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-0",
+      "p": [
+        -0.86,
+        0.2,
+        -0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-1",
+      "p": [
+        -0.020000000000000018,
+        0.2,
+        -0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-2",
+      "p": [
+        0.82,
+        0.2,
+        -0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-3",
+      "p": [
+        -0.86,
+        0.2,
+        0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-4",
+      "p": [
+        -0.020000000000000018,
+        0.2,
+        0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "magnetic-interface-5",
+      "p": [
+        0.82,
+        0.2,
+        0.6
+      ],
+      "s": [
+        0.22,
+        0.09,
+        0.22
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-0",
+      "p": [
+        -0.8,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-1",
+      "p": [
+        -0.5,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-2",
+      "p": [
+        -0.20000000000000007,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-3",
+      "p": [
+        0.09999999999999987,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-4",
+      "p": [
+        0.3999999999999999,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "status-smd-led-5",
+      "p": [
+        0.7,
+        0.59,
+        0.3
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14781814,
+      "finish": "glow"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

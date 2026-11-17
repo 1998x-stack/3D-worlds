@@ -15545,7 +15545,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/origami-laptop-riser.webp",
-      "accent": "#c5b6a2"
+      "accent": "#c5b6a2",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "furniture.honeycomb-desk-tidy.001",
@@ -15576,7 +15578,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/honeycomb-desk-tidy.webp",
-      "accent": "#c5b6a2"
+      "accent": "#c5b6a2",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "furniture.stackable-mini-drawer-tower.001",
@@ -15608,7 +15612,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/stackable-mini-drawer-tower.webp",
-      "accent": "#c5b6a2"
+      "accent": "#c5b6a2",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "bathroom.clip-on-soap-drainage-bridge.001",
@@ -15640,7 +15646,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/clip-on-soap-drainage-bridge.webp",
-      "accent": "#78c9ad"
+      "accent": "#78c9ad",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "bathroom.refillable-toothbrush-station.001",
@@ -15671,7 +15679,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/refillable-toothbrush-station.webp",
-      "accent": "#78c9ad"
+      "accent": "#78c9ad",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "characters.micro-maker-robot-mascot.001",
@@ -15702,7 +15712,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/micro-maker-robot-mascot.webp",
-      "accent": "#f0bc71"
+      "accent": "#f0bc71",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "characters.terrarium-gardener-figurine.001",
@@ -15733,7 +15745,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/terrarium-gardener-figurine.webp",
-      "accent": "#f0bc71"
+      "accent": "#f0bc71",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "nature.mushroom-propagation-log.001",
@@ -15764,7 +15778,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/mushroom-propagation-log.webp",
-      "accent": "#4d9e72"
+      "accent": "#4d9e72",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "nature.tidal-pool-ecology-diorama.001",
@@ -15796,7 +15812,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/tidal-pool-ecology-diorama.webp",
-      "accent": "#4d9e72"
+      "accent": "#4d9e72",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "vehicles.compact-seed-library-cart.001",
@@ -15828,7 +15846,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/compact-seed-library-cart.webp",
-      "accent": "#df8468"
+      "accent": "#df8468",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "vehicles.folding-cargo-bicycle-miniature.001",
@@ -15860,7 +15880,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/folding-cargo-bicycle-miniature.webp",
-      "accent": "#df8468"
+      "accent": "#df8468",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "electronics.microcontroller-learning-blocks.001",
@@ -15891,7 +15913,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/microcontroller-learning-blocks.webp",
-      "accent": "#9ac5d1"
+      "accent": "#9ac5d1",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "electronics.constellation-cable-dock.001",
@@ -15922,7 +15946,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/constellation-cable-dock.webp",
-      "accent": "#9ac5d1"
+      "accent": "#9ac5d1",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "electronics.solar-mesh-sensor-gateway.001",
@@ -15954,7 +15980,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/solar-mesh-sensor-gateway.webp",
-      "accent": "#9ac5d1"
+      "accent": "#9ac5d1",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "decor.truchet-hex-fabric-tile.001",
@@ -15986,7 +16014,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/truchet-hex-fabric-tile.webp",
-      "accent": "#d4af5b"
+      "accent": "#d4af5b",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "decor.hex-vine-trellis-kit.001",
@@ -16018,7 +16048,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/hex-vine-trellis-kit.webp",
-      "accent": "#d4af5b"
+      "accent": "#d4af5b",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "decor.lunar-phase-gyro-lamp.001",
@@ -16050,7 +16082,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/lunar-phase-gyro-lamp.webp",
-      "accent": "#d4af5b"
+      "accent": "#d4af5b",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "kitchen.rotary-spice-pod-display.001",
@@ -16082,7 +16116,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/rotary-spice-pod-display.webp",
-      "accent": "#c992a7"
+      "accent": "#c992a7",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "kitchen.pour-over-coffee-filter-tree.001",
@@ -16115,7 +16151,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/pour-over-coffee-filter-tree.webp",
-      "accent": "#c992a7"
+      "accent": "#c992a7",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "architecture.parametric-shade-brick-screen.001",
@@ -16147,7 +16185,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/parametric-shade-brick-screen.webp",
-      "accent": "#c5b6a2"
+      "accent": "#c5b6a2",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "architecture.modular-mini-greenhouse-bay.001",
@@ -16179,7 +16219,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/modular-mini-greenhouse-bay.webp",
-      "accent": "#c5b6a2"
+      "accent": "#c5b6a2",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "urban.e-waste-sortation-kiosk.001",
@@ -16210,7 +16252,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/e-waste-sortation-kiosk.webp",
-      "accent": "#78c9ad"
+      "accent": "#78c9ad",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "urban.parcel-pickup-locker-wall.001",
@@ -16242,7 +16286,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/parcel-pickup-locker-wall.webp",
-      "accent": "#78c9ad"
+      "accent": "#78c9ad",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "tools.caliper-protection-stand.001",
@@ -16273,7 +16319,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/caliper-protection-stand.webp",
-      "accent": "#6d8394"
+      "accent": "#6d8394",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "tools.hex-driver-bit-index-dock.001",
@@ -16306,7 +16354,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/hex-driver-bit-index-dock.webp",
-      "accent": "#6d8394"
+      "accent": "#6d8394",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "tools.rotary-calculation-cuff.001",
@@ -16337,7 +16387,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/rotary-calculation-cuff.webp",
-      "accent": "#6d8394"
+      "accent": "#6d8394",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "sports.compact-bouldering-training-board.001",
@@ -16369,7 +16421,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/compact-bouldering-training-board.webp",
-      "accent": "#df8468"
+      "accent": "#df8468",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "sports.table-tennis-paddle-display.001",
@@ -16401,7 +16455,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/table-tennis-paddle-display.webp",
-      "accent": "#df8468"
+      "accent": "#df8468",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "scifi.orbital-seed-archive-rover.001",
@@ -16433,7 +16489,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/orbital-seed-archive-rover.webp",
-      "accent": "#82b9c5"
+      "accent": "#82b9c5",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     },
     {
       "id": "scifi.deep-ocean-luminescence-lab.001",
@@ -16465,7 +16523,9 @@
       "style": "Creative Parametric",
       "collection": "v1.4",
       "preview_path": "public/thumbs/deep-ocean-luminescence-lab.webp",
-      "accent": "#82b9c5"
+      "accent": "#82b9c5",
+      "geometry_revision": "1.4.1",
+      "refinement": "geometry+materials"
     }
   ],
   "projection": "static-bootstrap",

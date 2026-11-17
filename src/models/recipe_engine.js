@@ -7,15 +7,66 @@ import * as THREE from 'three';
 export function buildRecipe(spec) {
   const root = new THREE.Group();
   root.name = spec.title;
+  // Visual finishes are deliberately lightweight and exportable as glTF PBR.
+  // Defaults remain byte-for-byte compatible with legacy recipe definitions.
+  const finishes = {
+    matte: { roughness: .74, metalness: .06 },
+    metal: { roughness: .28, metalness: .72 },
+    anodized: { roughness: .42, metalness: .48 },
+    ceramic: { roughness: .26, metalness: 0 },
+    rubber: { roughness: .96, metalness: 0 },
+    fabric: { roughness: 1, metalness: 0 },
+    wood: { roughness: .88, metalness: 0 },
+    glass: { roughness: .18, metalness: 0, transparent: true, opacity: .58, depthWrite: false, side: THREE.DoubleSide }
+  };
   const materials = new Map();
-  const material = color => {
-    if (!materials.has(color)) materials.set(color,new THREE.MeshStandardMaterial({color,roughness:.74,metalness:.06}));
-    return materials.get(color);
+  const material = (color, finish = 'matte') => {
+    const key = color + ':' + finish;
+    if (!materials.has(key)) {
+      const options = finishes[finish] || finishes.matte;
+      const glow = finish === 'glow';
+      materials.set(key, new THREE.MeshStandardMaterial({
+        color, ...options,
+        ...(glow ? { roughness: .31, metalness: .06,
+          emissive: new THREE.Color(color), emissiveIntensity: .42 } : {})
+      }));
+    }
+    return materials.get(key);
+  };
+  // An extruded, double-beveled unit profile: no dependency on addons, so
+  // Gallery "copy Three.js source" remains standalone with just THREE installed.
+  const roundedBox = () => {
+    const shape = new THREE.Shape();
+    const e = .44, r = .08;
+    shape.moveTo(-e + r, -e);
+    shape.lineTo(e - r, -e);
+    shape.quadraticCurveTo(e, -e, e, -e + r);
+    shape.lineTo(e, e - r);
+    shape.quadraticCurveTo(e, e, e - r, e);
+    shape.lineTo(-e + r, e);
+    shape.quadraticCurveTo(-e, e, -e, e - r);
+    shape.lineTo(-e, -e + r);
+    shape.quadraticCurveTo(-e, -e, -e + r, -e);
+    const g = new THREE.ExtrudeGeometry(shape, {
+      depth: .88, steps: 1, curveSegments: 3,
+      bevelEnabled: true, bevelThickness: .06, bevelSize: .06, bevelSegments: 2
+    });
+    g.translate(0, 0, -.44);
+    return g;
   };
   for (const part of spec.parts) {
     let geometry;
     switch(part.t) {
       case 'box': geometry=new THREE.BoxGeometry(...part.s); break;
+      case 'rounded-box': geometry=roundedBox(); break;
+      case 'hex': geometry=new THREE.CylinderGeometry(.5,.5,1,6,1); break;
+      case 'arc': {
+        const sweep=part.sweep ?? Math.PI/2;
+        if (!(Number.isFinite(sweep) && sweep>0 && sweep<=2*Math.PI)) throw Error('Invalid arc sweep: '+part.n);
+        geometry=new THREE.TorusGeometry(.5,.035,8,48,sweep);
+        geometry.rotateZ(part.start ?? 0);
+        break;
+      }
       case 'sphere': geometry=new THREE.SphereGeometry(1,20,12); break;
       case 'cylinder': geometry=new THREE.CylinderGeometry(.5,.5,1,24); break;
       case 'cone': geometry=new THREE.ConeGeometry(.5,1,24); break;
@@ -33,7 +84,7 @@ export function buildRecipe(spec) {
         const direction=to.clone().sub(from);
         if(direction.lengthSq()<1e-8) throw new Error('Degenerate rod: '+part.n);
         geometry=new THREE.CylinderGeometry(part.r,part.r,direction.length(),12);
-        const mesh=new THREE.Mesh(geometry,material(part.c));
+        const mesh=new THREE.Mesh(geometry,material(part.c, part.finish));
         mesh.name=part.n;
         mesh.position.copy(from.add(to).multiplyScalar(.5));
         mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),direction.normalize());
@@ -42,7 +93,7 @@ export function buildRecipe(spec) {
       }
       default: throw new Error('Unknown shape '+part.t);
     }
-    const mesh=new THREE.Mesh(geometry,material(part.c));
+    const mesh=new THREE.Mesh(geometry,material(part.c, part.finish));
     mesh.name=part.n;
     mesh.position.set(...part.p);
     if(part.t==='box'||part.t==='triangle') { /* geometry stores physical vertices */ }

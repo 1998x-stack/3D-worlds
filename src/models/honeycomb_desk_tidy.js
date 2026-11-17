@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/honeycomb-desk-tidy.webp",
-  "accent": "#c5b6a2"
+  "accent": "#c5b6a2",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createHoneycombDeskTidy() { return buildRecipe({
   "title": "Honeycomb Desk Tidy",
@@ -52,10 +54,11 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.2,
         1.72
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "ceramic"
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-0",
       "p": [
         0,
@@ -67,7 +70,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -135,7 +139,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-1",
       "p": [
         -0.7,
@@ -147,7 +151,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -215,7 +220,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-2",
       "p": [
         0.7,
@@ -227,7 +232,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -295,7 +301,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-3",
       "p": [
         -0.35,
@@ -307,7 +313,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -375,7 +382,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-4",
       "p": [
         0.35,
@@ -387,7 +394,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -455,7 +463,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-5",
       "p": [
         -0.35,
@@ -467,7 +475,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -535,7 +544,7 @@ export function createHoneycombDeskTidy() { return buildRecipe({
       "c": 7177108
     },
     {
-      "t": "cylinder",
+      "t": "hex",
       "n": "cell-shell-6",
       "p": [
         0.35,
@@ -547,7 +556,8 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.75,
         0.55
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -613,6 +623,956 @@ export function createHoneycombDeskTidy() { return buildRecipe({
         0.03
       ],
       "c": 7177108
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-0",
+      "p": [
+        0,
+        0.925,
+        0
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-0",
+      "p": [
+        0.24,
+        0.955,
+        0
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-1",
+      "p": [
+        0.12000000000000002,
+        0.955,
+        0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-2",
+      "p": [
+        -0.11999999999999994,
+        0.955,
+        0.20784609690826528
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-3",
+      "p": [
+        -0.24,
+        0.955,
+        2.9391523179536474e-17
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-4",
+      "p": [
+        -0.1200000000000001,
+        0.955,
+        -0.2078460969082652
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-0-5",
+      "p": [
+        0.12000000000000002,
+        0.955,
+        -0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-1",
+      "p": [
+        -0.7,
+        0.925,
+        0
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-0",
+      "p": [
+        -0.45999999999999996,
+        0.955,
+        0
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-1",
+      "p": [
+        -0.58,
+        0.955,
+        0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-2",
+      "p": [
+        -0.8199999999999998,
+        0.955,
+        0.20784609690826528
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-3",
+      "p": [
+        -0.94,
+        0.955,
+        2.9391523179536474e-17
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-4",
+      "p": [
+        -0.8200000000000001,
+        0.955,
+        -0.2078460969082652
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-1-5",
+      "p": [
+        -0.58,
+        0.955,
+        -0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-2",
+      "p": [
+        0.7,
+        0.925,
+        0
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-0",
+      "p": [
+        0.94,
+        0.955,
+        0
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-1",
+      "p": [
+        0.82,
+        0.955,
+        0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-2",
+      "p": [
+        0.5800000000000001,
+        0.955,
+        0.20784609690826528
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-3",
+      "p": [
+        0.45999999999999996,
+        0.955,
+        2.9391523179536474e-17
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-4",
+      "p": [
+        0.5799999999999998,
+        0.955,
+        -0.2078460969082652
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-2-5",
+      "p": [
+        0.82,
+        0.955,
+        -0.20784609690826525
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-3",
+      "p": [
+        -0.35,
+        0.925,
+        0.6
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-0",
+      "p": [
+        -0.10999999999999999,
+        0.955,
+        0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-1",
+      "p": [
+        -0.22999999999999995,
+        0.955,
+        0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-2",
+      "p": [
+        -0.4699999999999999,
+        0.955,
+        0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-3",
+      "p": [
+        -0.59,
+        0.955,
+        0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-4",
+      "p": [
+        -0.4700000000000001,
+        0.955,
+        0.3921539030917348
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-3-5",
+      "p": [
+        -0.22999999999999995,
+        0.955,
+        0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-4",
+      "p": [
+        0.35,
+        0.925,
+        0.6
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-0",
+      "p": [
+        0.59,
+        0.955,
+        0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-1",
+      "p": [
+        0.47,
+        0.955,
+        0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-2",
+      "p": [
+        0.23000000000000004,
+        0.955,
+        0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-3",
+      "p": [
+        0.10999999999999999,
+        0.955,
+        0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-4",
+      "p": [
+        0.22999999999999987,
+        0.955,
+        0.3921539030917348
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-4-5",
+      "p": [
+        0.47,
+        0.955,
+        0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-5",
+      "p": [
+        -0.35,
+        0.925,
+        -0.6
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-0",
+      "p": [
+        -0.10999999999999999,
+        0.955,
+        -0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-1",
+      "p": [
+        -0.22999999999999995,
+        0.955,
+        -0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-2",
+      "p": [
+        -0.4699999999999999,
+        0.955,
+        -0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-3",
+      "p": [
+        -0.59,
+        0.955,
+        -0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-4",
+      "p": [
+        -0.4700000000000001,
+        0.955,
+        -0.8078460969082651
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-5-5",
+      "p": [
+        -0.22999999999999995,
+        0.955,
+        -0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "inset-recess-well-6",
+      "p": [
+        0.35,
+        0.925,
+        -0.6
+      ],
+      "s": [
+        0.47,
+        0.018,
+        0.47
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-0",
+      "p": [
+        0.59,
+        0.955,
+        -0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-1",
+      "p": [
+        0.47,
+        0.955,
+        -0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-2",
+      "p": [
+        0.23000000000000004,
+        0.955,
+        -0.3921539030917347
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-3",
+      "p": [
+        0.10999999999999999,
+        0.955,
+        -0.6
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-4",
+      "p": [
+        0.22999999999999987,
+        0.955,
+        -0.8078460969082651
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cell-brass-rivet-6-5",
+      "p": [
+        0.47,
+        0.955,
+        -0.8078460969082653
+      ],
+      "s": [
+        0.055,
+        0.02,
+        0.055
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "sample-pencil-0",
+      "from": [
+        0,
+        0.97,
+        0
+      ],
+      "to": [
+        0,
+        1.31,
+        0
+      ],
+      "r": 0.035,
+      "c": 9487573,
+      "finish": "ceramic"
+    },
+    {
+      "t": "sphere",
+      "n": "pencil-eraser-0",
+      "p": [
+        0,
+        1.34,
+        0
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 14781814,
+      "finish": "rubber"
+    },
+    {
+      "t": "rod",
+      "n": "sample-pencil-1",
+      "from": [
+        -0.7,
+        0.97,
+        0
+      ],
+      "to": [
+        -0.7,
+        1.4300000000000002,
+        0
+      ],
+      "r": 0.035,
+      "c": 15383673,
+      "finish": "ceramic"
+    },
+    {
+      "t": "sphere",
+      "n": "pencil-eraser-1",
+      "p": [
+        -0.7,
+        1.46,
+        0
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 14781814,
+      "finish": "rubber"
+    },
+    {
+      "t": "rod",
+      "n": "sample-pencil-2",
+      "from": [
+        0.7,
+        0.97,
+        0
+      ],
+      "to": [
+        0.7,
+        1.31,
+        0
+      ],
+      "r": 0.035,
+      "c": 9487573,
+      "finish": "ceramic"
+    },
+    {
+      "t": "sphere",
+      "n": "pencil-eraser-2",
+      "p": [
+        0.7,
+        1.34,
+        0
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 14781814,
+      "finish": "rubber"
+    },
+    {
+      "t": "rod",
+      "n": "sample-pencil-3",
+      "from": [
+        -0.35,
+        0.97,
+        0.6
+      ],
+      "to": [
+        -0.35,
+        1.4300000000000002,
+        0.6
+      ],
+      "r": 0.035,
+      "c": 15383673,
+      "finish": "ceramic"
+    },
+    {
+      "t": "sphere",
+      "n": "pencil-eraser-3",
+      "p": [
+        -0.35,
+        1.46,
+        0.6
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 14781814,
+      "finish": "rubber"
+    },
+    {
+      "t": "rod",
+      "n": "sample-pencil-4",
+      "from": [
+        0.35,
+        0.97,
+        0.6
+      ],
+      "to": [
+        0.35,
+        1.31,
+        0.6
+      ],
+      "r": 0.035,
+      "c": 9487573,
+      "finish": "ceramic"
+    },
+    {
+      "t": "sphere",
+      "n": "pencil-eraser-4",
+      "p": [
+        0.35,
+        1.34,
+        0.6
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 14781814,
+      "finish": "rubber"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

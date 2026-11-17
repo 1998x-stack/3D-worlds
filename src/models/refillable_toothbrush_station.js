@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/refillable-toothbrush-station.webp",
-  "accent": "#78c9ad"
+  "accent": "#78c9ad",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createRefillableToothbrushStation() { return buildRecipe({
   "title": "Refillable Toothbrush Station",
@@ -40,7 +42,7 @@ export function createRefillableToothbrushStation() { return buildRecipe({
   ],
   "parts": [
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "water-tray",
       "p": [
         0,
@@ -52,7 +54,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.18,
         1.3
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "glass"
     },
     {
       "t": "cylinder",
@@ -67,7 +70,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.82,
         0.7
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "glass"
     },
     {
       "t": "cylinder",
@@ -82,7 +86,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.14,
         0.82
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -327,7 +332,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.02,
         0.24
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -342,7 +348,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.02,
         0.24
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -357,7 +364,8 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.02,
         0.24
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -372,7 +380,505 @@ export function createRefillableToothbrushStation() { return buildRecipe({
         0.02,
         0.24
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
+    },
+    {
+      "t": "cylinder",
+      "n": "sanitary-collar-seal-0",
+      "p": [
+        0.78,
+        0.53,
+        0
+      ],
+      "s": [
+        0.3,
+        0.045,
+        0.3
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-0-0",
+      "p": [
+        0.73,
+        1.55,
+        0
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-0-1",
+      "p": [
+        0.78,
+        1.55,
+        0
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-0-2",
+      "p": [
+        0.8300000000000001,
+        1.55,
+        0
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-slot-id-0",
+      "p": [
+        0.78,
+        0.33,
+        0.15
+      ],
+      "s": [
+        0.18,
+        0.04,
+        0.014
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sanitary-collar-seal-1",
+      "p": [
+        0.24103325561245903,
+        0.53,
+        0.39944373684396445
+      ],
+      "s": [
+        0.3,
+        0.045,
+        0.3
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-1-0",
+      "p": [
+        0.19103325561245904,
+        1.55,
+        0.39944373684396445
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-1-1",
+      "p": [
+        0.24103325561245903,
+        1.55,
+        0.39944373684396445
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-1-2",
+      "p": [
+        0.291033255612459,
+        1.55,
+        0.39944373684396445
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-slot-id-1",
+      "p": [
+        0.24103325561245903,
+        0.33,
+        0.5494437368439644
+      ],
+      "s": [
+        0.18,
+        0.04,
+        0.014
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sanitary-collar-seal-2",
+      "p": [
+        -0.6310332556124589,
+        0.53,
+        0.24686980596283875
+      ],
+      "s": [
+        0.3,
+        0.045,
+        0.3
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-2-0",
+      "p": [
+        -0.681033255612459,
+        1.55,
+        0.24686980596283875
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-2-1",
+      "p": [
+        -0.6310332556124589,
+        1.55,
+        0.24686980596283875
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-2-2",
+      "p": [
+        -0.5810332556124589,
+        1.55,
+        0.24686980596283875
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-slot-id-2",
+      "p": [
+        -0.6310332556124589,
+        0.33,
+        0.3968698059628387
+      ],
+      "s": [
+        0.18,
+        0.04,
+        0.014
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sanitary-collar-seal-3",
+      "p": [
+        -0.6310332556124592,
+        0.53,
+        -0.24686980596283867
+      ],
+      "s": [
+        0.3,
+        0.045,
+        0.3
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-3-0",
+      "p": [
+        -0.6810332556124592,
+        1.55,
+        -0.24686980596283867
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-3-1",
+      "p": [
+        -0.6310332556124592,
+        1.55,
+        -0.24686980596283867
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-3-2",
+      "p": [
+        -0.5810332556124591,
+        1.55,
+        -0.24686980596283867
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-slot-id-3",
+      "p": [
+        -0.6310332556124592,
+        0.33,
+        -0.09686980596283867
+      ],
+      "s": [
+        0.18,
+        0.04,
+        0.014
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sanitary-collar-seal-4",
+      "p": [
+        0.24103325561245884,
+        0.53,
+        -0.3994437368439645
+      ],
+      "s": [
+        0.3,
+        0.045,
+        0.3
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-4-0",
+      "p": [
+        0.19103325561245882,
+        1.55,
+        -0.3994437368439645
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-4-1",
+      "p": [
+        0.24103325561245884,
+        1.55,
+        -0.3994437368439645
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-bristle-tuft-4-2",
+      "p": [
+        0.29103325561245885,
+        1.55,
+        -0.3994437368439645
+      ],
+      "s": [
+        0.03,
+        0.18,
+        0.05
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "brush-slot-id-4",
+      "p": [
+        0.24103325561245884,
+        0.33,
+        -0.2494437368439645
+      ],
+      "s": [
+        0.18,
+        0.04,
+        0.014
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "reservoir-level-indicator-0",
+      "p": [
+        0.36,
+        0.25,
+        0.24
+      ],
+      "s": [
+        0.045,
+        0.025,
+        0.025
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "reservoir-level-indicator-1",
+      "p": [
+        0.36,
+        0.36,
+        0.24
+      ],
+      "s": [
+        0.045,
+        0.025,
+        0.025
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "reservoir-level-indicator-2",
+      "p": [
+        0.36,
+        0.47,
+        0.24
+      ],
+      "s": [
+        0.045,
+        0.025,
+        0.025
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "reservoir-level-indicator-3",
+      "p": [
+        0.36,
+        0.5800000000000001,
+        0.24
+      ],
+      "s": [
+        0.045,
+        0.025,
+        0.025
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "reservoir-level-indicator-4",
+      "p": [
+        0.36,
+        0.69,
+        0.24
+      ],
+      "s": [
+        0.045,
+        0.025,
+        0.025
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "refill-lid-gasket",
+      "p": [
+        0,
+        0.91,
+        0
+      ],
+      "s": [
+        0.68,
+        0.06,
+        0.68
+      ],
+      "c": 2570573,
+      "finish": "rubber"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

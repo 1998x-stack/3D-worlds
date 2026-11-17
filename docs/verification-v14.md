@@ -21,3 +21,13 @@ npm run test:gallery
 ## Source interpretation
 
 Concepts were independently authored from qualitative commercial demand signals, and are nonfunctional visual models unless individually validated for manufacturing. No Amazon/eBay seller geometry or brand/model likeness was copied.
+
+## V1.4.1 detail revision gates
+
+- 30/30 geometry_revision fields equal `1.4.1` in model source and catalog.
+- Parts per model increase by at least eight, with three or more distinguishable material finishes.
+- Validate portable `rounded-box`, `hex`, and `arc` recipes in the existing Three.js source-copy flow.
+- Ensure all 565 registered models pass generation & bounds checks.
+- **No physical print certification:** in particular, labels, micro rivets, fine-scale slots and optical glass are preview geometry only.
+
+See [the side-by-side geometric change log](v14-fine-detail-refinement.md).
