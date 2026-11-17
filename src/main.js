@@ -23,7 +23,8 @@ const primitiveSource = sources['./models/primitives.js'];
 const labels = Object.fromEntries([['all', '全部模型'], ...categoryCatalog.categories.map(c => [c.id, c.label])]);
 let category = 'all', search = '', sorting = 'featured';
 let activeAsset = null, viewer = null, lastFocus = null;
-const thumbs = new Map();
+const thumbnailCache = new Map();
+const assetBinaryUrl = asset => import.meta.env.BASE_URL + asset.binary_path.replace(/^public\//, '');
 const root = document.getElementById('app');
 const safe = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -56,7 +57,7 @@ root.innerHTML = `
         <aside class="filters" aria-label="模型分类">
           <div class="filter-head">BROWSE BY <span>↙</span></div>
           <div id="category-filters" class="filter-items"></div>
-          <div class="sidebar-note"><span class="sidebar-note-icon">✳</span><strong>Build without boundaries.</strong><p>每个模型都附带可编辑的程序化源码，支持 GLB 导出与 MCP 检索。</p><a href="https://github.com/1998x-stack/3D-worlds/tree/main/services" target="_blank" rel="noopener noreferrer">查看 MCP 服务 ↗</a></div>
+          <div class="sidebar-note"><span class="sidebar-note-icon">✳</span><strong>Build without boundaries.</strong><p>程序化模型可复制源码；二进制 GLB 可直接下载，均可通过 MCP 检索。</p><a href="https://github.com/1998x-stack/3D-worlds/tree/main/services" target="_blank" rel="noopener noreferrer">查看 MCP 服务 ↗</a></div>
           <div class="sidebar-small">3D WORLDS / OPEN ASSETS © 2026</div>
         </aside>
         <div class="catalog-content">
@@ -78,7 +79,7 @@ root.innerHTML = `
       <div class="detail-topbar"><span>ASSET INSPECTOR <span class="detail-topbar-id" id="detail-id"></span></span><button id="close-detail" class="icon-button" aria-label="关闭详情">×</button></div>
       <div class="detail-layout">
         <div class="detail-viewer"><canvas id="detail-canvas" aria-label="可拖动旋转缩放的 3D 模型"></canvas><span class="viewer-badge">LIVE 3D VIEW</span><div class="viewer-controls"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><button id="reset-view" type="button">↺ 重置视角</button></div></div>
-        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">源代码包含可直接编辑的几何构建函数。下载 GLB 后可用于支持 glTF 的引擎。人物模型为未绑定骨骼的场景原型。</div></div>
+        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
       </div>
     </section>
   </div>
@@ -116,14 +117,13 @@ function getFiltered() {
 }
 
 function renderGrid() {
-  for (const preview of thumbs.values()) preview.dispose();
-  thumbs.clear();
+  // Thumbnails are cached raster images; do not keep one WebGL context per card.
   const result = getFiltered();
   document.getElementById('result-count').textContent = String(result.length).padStart(2, '0') + ' RESULTS';
   document.getElementById('result-caption').textContent = (category === 'all' ? 'ALL OBJECTS' : category.toUpperCase()) + (search ? ' · FILTERED' : '');
   grid.innerHTML = result.length ? result.map((asset, i) => `
     <button class="asset-card" type="button" data-id="${safe(asset.id)}" aria-label="查看 ${safe(asset.title_zh)} 的 3D 模型">
-      <span class="card-art" style="--asset-bg:${safe(asset.accent)}"><canvas class="asset-thumbnail" data-thumbnail="${safe(asset.id)}" aria-hidden="true"></canvas><span class="card-index">№ ${String(i + 1).padStart(3, '0')}</span><span class="card-expand" aria-hidden="true">↗</span></span>
+      <span class="card-art" style="--asset-bg:${safe(asset.accent)}">${asset.kind === 'procedural' ? `<canvas class="asset-thumbnail" data-thumbnail="${safe(asset.id)}" aria-hidden="true"></canvas>` : (asset.preview_path ? `<img class="asset-thumbnail" loading="lazy" src="${safe(import.meta.env.BASE_URL + asset.preview_path.replace(/^public\\//, ''))}" alt=""/>` : '<span class="glb-placeholder">◈<small>GLB · IMPORTED ASSET</small></span>')}<span class="card-index">№ ${String(i + 1).padStart(3, '0')}</span><span class="card-expand" aria-hidden="true">↗</span></span>
       <span class="card-body"><span class="card-kicker">${safe(labels[asset.category])} <span>·</span> ${safe(asset.style)}</span><span class="card-title">${safe(asset.title)}</span><span class="card-zh">${safe(asset.title_zh)}</span><span class="card-bottom"><span>${safe(asset.kind.toUpperCase())}</span><span class="card-open">VIEW OBJECT ↗</span></span></span>
     </button>`).join('') : '<div class="empty-state"><span>◇</span><h3>没有找到匹配模型</h3><p>尝试使用其他关键词，或者切换模型分类。</p><button id="reset-filters">清除筛选</button></div>';
   const canvases = [...grid.querySelectorAll('canvas[data-thumbnail]')];
@@ -132,9 +132,26 @@ function renderGrid() {
       if (!entry.isIntersecting) continue;
       const canvas = entry.target;
       const id = canvas.dataset.thumbnail;
-      if (factories[id] && !thumbs.has(id)) {
-        try { thumbs.set(id, createScene(canvas, factories[id], { interactive: false })); }
-        catch (error) { console.warn('Preview unavailable:', error); }
+      if (factories[id]) {
+        if (thumbnailCache.has(id)) {
+          const image = document.createElement('img');
+          image.src = thumbnailCache.get(id);
+          image.className = 'asset-thumbnail';
+          image.alt = '';
+          canvas.replaceWith(image);
+        } else {
+          try {
+            const preview = createScene(canvas, factories[id], { interactive: false });
+            const dataUrl = canvas.toDataURL('image/png');
+            preview.dispose();
+            thumbnailCache.set(id, dataUrl);
+            const image = document.createElement('img');
+            image.src = dataUrl;
+            image.className = 'asset-thumbnail';
+            image.alt = '';
+            canvas.replaceWith(image);
+          } catch (error) { console.warn('Preview unavailable:', error); }
+        }
       }
       pending.unobserve(canvas);
     }
@@ -164,7 +181,7 @@ scene.add(model);
 }
 
 function loaderSnippet(asset) {
-  return `// Download ${asset.slug}.glb from 3D Worlds, then place it in public/assets/
+  return `// Download ${asset.slug}.glb from 3D Worlds, then place it in YOUR game project's public/assets/
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
@@ -200,16 +217,30 @@ function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('detail-category').textContent = labels[asset.category] + ' · ' + asset.style.toUpperCase();
   document.getElementById('detail-title').textContent = asset.title;
   document.getElementById('detail-summary').textContent = asset.summary;
+  const isProcedural = asset.kind === 'procedural';
+  document.getElementById('copy-model').disabled = !isProcedural;
+  document.getElementById('copy-model').title = isProcedural ? '复制原始 Three.js 生成函数' : '二进制资产不提供程序化源码';
+  document.getElementById('export-glb').textContent = isProcedural ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB';
   document.getElementById('detail-specs').innerHTML = [
-    ['LICENSE', asset.license], ['FORMAT', 'Three.js / GLB'], ['DIMENSIONS', asset.dimensions_m.map(n => Number(n).toFixed(2)).join(' × ') + ' m'], ['IDENTIFIER', asset.id]
+    ['LICENSE', asset.license], ['FORMAT', asset.kind === 'procedural' ? 'Three.js / GLB' : 'Binary GLB'], ['DIMENSIONS', asset.dimensions_m.map(n => Number(n).toFixed(2)).join(' × ') + ' m'], ['IDENTIFIER', asset.id]
   ].map(([name, value]) => `<div><span>${safe(name)}</span><strong>${safe(value)}</strong></div>`).join('');
   overlay.hidden = false;
   document.body.classList.add('modal-open');
   document.getElementById('close-detail').focus();
   requestAnimationFrame(() => {
     if (activeAsset?.id !== id) return;
-    try { viewer = createScene(document.getElementById('detail-canvas'), factories[id], { interactive: true }); }
-    catch (error) { console.error(error); toast('该设备无法启用 WebGL 预览'); }
+    (async () => {
+      try {
+        if (asset.kind === 'procedural') {
+          viewer = createScene(document.getElementById('detail-canvas'), factories[id], { interactive: true });
+        } else {
+          const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js');
+          const model = await new GLTFLoader().loadAsync(assetBinaryUrl(asset));
+          if (activeAsset?.id !== id) return;
+          viewer = createScene(document.getElementById('detail-canvas'), () => model.scene, { interactive: true });
+        }
+      } catch (error) { console.error(error); toast('模型预览加载失败，请检查 GLB 文件或 WebGL'); }
+    })();
   });
   if (updateHistory) history.pushState({ model: id }, '', getUrl(id));
 }
@@ -252,9 +283,18 @@ document.getElementById('export-glb').addEventListener('click', async event => {
   const button = event.currentTarget;
   button.disabled = true;
   button.textContent = '正在导出 GLB…';
-  try { await downloadAsGlb(factories[asset.id], asset.slug + '.glb'); toast('GLB 文件已准备下载'); }
-  catch (error) { console.error(error); toast('导出失败，请检查浏览器兼容性'); }
-  finally { button.disabled = false; button.textContent = '↓ 下载 GLB 模型'; }
+  try {
+    if (asset.kind === 'procedural') {
+      await downloadAsGlb(factories[asset.id], asset.slug + '.glb');
+    } else {
+      const link = document.createElement('a');
+      link.href = assetBinaryUrl(asset);
+      link.download = asset.slug + '.glb';
+      link.click();
+    }
+    toast('GLB 文件已准备下载');
+  } catch (error) { console.error(error); toast('导出失败，请检查浏览器兼容性'); }
+  finally { button.disabled = false; button.textContent = asset.kind === 'procedural' ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB'; }
 });
 overlay.addEventListener('click', event => { if (event.target === overlay) closeAsset(); });
 document.addEventListener('keydown', event => {
