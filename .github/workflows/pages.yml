@@ -33,8 +33,15 @@ jobs:
           python -m unittest discover -s tests -v
       - name: Install frontend dependencies
         run: npm install --no-audit --no-fund
+      - name: Check model geometry and coordinates
+        run: node scripts/validate_models.mjs
       - name: Build Vite static site
         run: npm run build
+      - name: Validate MCP Python SDK v2 integration
+        run: |
+          python -m pip install -r requirements-mcp.txt
+          python -m py_compile services/mcp_server.py
+          python scripts/smoke_mcp.py
       - uses: actions/upload-artifact@v4
         with:
           name: threejs-pages-dist
