@@ -20,13 +20,14 @@ class CatalogTests(unittest.TestCase):
     def test_database_schema_relations_and_fts(self):
         with tempfile.TemporaryDirectory() as directory:
             db = Path(directory) / "catalog.sqlite"
-            self.assertEqual(build_catalog(db), 5)
+            self.assertEqual(build_catalog(db), len(validate_manifest()["assets"]))
             with sqlite3.connect(db) as connection:
                 self.assertEqual(connection.execute("SELECT count(*) FROM assets").fetchone()[0], len(validate_manifest()["assets"]))
                 self.assertEqual(connection.execute("PRAGMA integrity_check").fetchone()[0], "ok")
                 self.assertEqual(connection.execute("PRAGMA foreign_key_check").fetchall(), [])
                 self.assertEqual(
-                    connection.execute("SELECT count(*) FROM asset_tags").fetchone()[0],\n                    sum(len(set(item.get("tags", []))) for item in validate_manifest()["assets"])
+                    connection.execute("SELECT count(*) FROM asset_tags").fetchone()[0],
+                    sum(len(set(item.get("tags", []))) for item in validate_manifest()["assets"])
                 )
                 rows = connection.execute(
                     "SELECT a.asset_id FROM assets a JOIN assets_fts ON a.rowid=assets_fts.rowid "
