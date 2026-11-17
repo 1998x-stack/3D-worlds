@@ -27,7 +27,8 @@
         0.88
       ],
       "accent": "#dcc09b",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/oak-study-table.webp"
     },
     {
       "id": "furniture.chair.linen-001",
@@ -54,7 +55,8 @@
         0.55
       ],
       "accent": "#d6c6b1",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/linen-dining-chair.webp"
     },
     {
       "id": "bathroom.toilet.ceramic-001",
@@ -81,7 +83,8 @@
         0.98
       ],
       "accent": "#d5e5e9",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/ceramic-toilet.webp"
     },
     {
       "id": "characters.man.study-001",
@@ -109,7 +112,8 @@
         0.37
       ],
       "accent": "#bdd4ca",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/male-character-study.webp"
     },
     {
       "id": "characters.woman.study-001",
@@ -137,7 +141,8 @@
         0.36
       ],
       "accent": "#e7c0ba",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/female-character-study.webp"
     },
     {
       "id": "furniture.sofa.clay-linen-001",
@@ -163,7 +168,8 @@
         0.89
       ],
       "accent": "#d7aaa0",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/clay-linen-sofa.webp"
     },
     {
       "id": "furniture.bookshelf.oak-studio-001",
@@ -190,7 +196,8 @@
         0.34
       ],
       "accent": "#d8b998",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/oak-studio-bookshelf.webp"
     },
     {
       "id": "furniture.bed.coastal-queen-001",
@@ -217,7 +224,8 @@
         2.12
       ],
       "accent": "#b9d1cb",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/coastal-queen-bed.webp"
     },
     {
       "id": "furniture.lamp.flared-floor-001",
@@ -244,7 +252,8 @@
         0.66
       ],
       "accent": "#e2d0a6",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/flared-floor-lamp.webp"
     },
     {
       "id": "bathroom.sink.vessel-vanity-001",
@@ -271,7 +280,8 @@
         0.57
       ],
       "accent": "#cfc2b8",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/vessel-sink-vanity.webp"
     },
     {
       "id": "bathroom.bath.freestanding-001",
@@ -298,7 +308,8 @@
         0.86
       ],
       "accent": "#d7e3e0",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/freestanding-oval-bath.webp"
     },
     {
       "id": "nature.tree.green-canopy-001",
@@ -325,7 +336,8 @@
         1.4
       ],
       "accent": "#98b7a2",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/green-canopy-tree.webp"
     },
     {
       "id": "vehicles.car.city-electric-001",
@@ -352,7 +364,8 @@
         3.31
       ],
       "accent": "#a7c2c5",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/city-electric-sedan.webp"
     },
     {
       "id": "electronics.laptop.studio-001",
@@ -379,7 +392,8 @@
         0.25
       ],
       "accent": "#aebcc3",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/studio-laptop.webp"
     },
     {
       "id": "decor.plant.monstera-pot-001",
@@ -406,7 +420,8 @@
         0.8
       ],
       "accent": "#b8cba6",
-      "style": "Stylized"
+      "style": "Stylized",
+      "preview_path": "public/thumbs/monstera-pot.webp"
     },
     {
       "id": "furniture.marble-dining-table.001",
@@ -432,7 +447,8 @@
         0.96
       ],
       "accent": "#d6d5c8",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/marble-dining-table.webp"
     },
     {
       "id": "furniture.swivel-office-chair.001",
@@ -458,7 +474,8 @@
         0.67
       ],
       "accent": "#a7bcc1",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/swivel-office-chair.webp"
     },
     {
       "id": "furniture.round-coffee-table.001",
@@ -484,7 +501,8 @@
         0.95
       ],
       "accent": "#c9b18c",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/round-coffee-table.webp"
     },
     {
       "id": "furniture.oak-wardrobe.001",
@@ -510,7 +528,8 @@
         0.58
       ],
       "accent": "#c5a47f",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/oak-wardrobe.webp"
     },
     {
       "id": "kitchen.smart-refrigerator.001",
@@ -536,7 +555,8 @@
         0.74
       ],
       "accent": "#bbc9cb",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/smart-refrigerator.webp"
     },
     {
       "id": "kitchen.induction-stove.001",
@@ -562,7 +582,8 @@
         0.7
       ],
       "accent": "#c8ccc8",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/induction-stove.webp"
     },
     {
       "id": "kitchen.porcelain-kitchen-sink.001",
@@ -588,7 +609,8 @@
         0.65
       ],
       "accent": "#d9c5ae",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/porcelain-kitchen-sink.webp"
     },
     {
       "id": "kitchen.compact-microwave.001",
@@ -614,7 +636,8 @@
         0.36
       ],
       "accent": "#b7c3c6",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/compact-microwave.webp"
     },
     {
       "id": "kitchen.electric-kettle.001",
@@ -640,7 +663,8 @@
         0.27
       ],
       "accent": "#c4d1d2",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/electric-kettle.webp"
     },
     {
       "id": "kitchen.wooden-bar-stool.001",
@@ -666,7 +690,8 @@
         0.48
       ],
       "accent": "#d1b28a",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/wooden-bar-stool.webp"
     },
     {
       "id": "architecture.arched-wood-door.001",
@@ -692,7 +717,8 @@
         0.18
       ],
       "accent": "#b49774",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/arched-wood-door.webp"
     },
     {
       "id": "architecture.steel-window.001",
@@ -718,7 +744,8 @@
         0.13
       ],
       "accent": "#a8bbbf",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/steel-window.webp"
     },
     {
       "id": "architecture.concrete-stairs.001",
@@ -744,7 +771,8 @@
         2
       ],
       "accent": "#b8b8b4",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/concrete-stairs.webp"
     },
     {
       "id": "architecture.picket-fence.001",
@@ -770,7 +798,8 @@
         0.16
       ],
       "accent": "#e2d3b6",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/picket-fence.webp"
     },
     {
       "id": "urban.urban-streetlight.001",
@@ -796,7 +825,8 @@
         0.52
       ],
       "accent": "#adb6a9",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/urban-streetlight.webp"
     },
     {
       "id": "urban.park-bench.001",
@@ -822,7 +852,8 @@
         0.67
       ],
       "accent": "#b79b7f",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/park-bench.webp"
     },
     {
       "id": "urban.traffic-signal.001",
@@ -848,7 +879,8 @@
         0.56
       ],
       "accent": "#9caeb3",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/traffic-signal.webp"
     },
     {
       "id": "urban.red-fire-hydrant.001",
@@ -874,7 +906,8 @@
         0.63
       ],
       "accent": "#c9796a",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/red-fire-hydrant.webp"
     },
     {
       "id": "nature.alpine-pine-tree.001",
@@ -900,7 +933,8 @@
         1.67
       ],
       "accent": "#91ad8f",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/alpine-pine-tree.webp"
     },
     {
       "id": "nature.granite-boulder.001",
@@ -926,7 +960,8 @@
         1.1
       ],
       "accent": "#a8aaa8",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/granite-boulder.webp"
     },
     {
       "id": "nature.forest-mushrooms.001",
@@ -952,7 +987,8 @@
         0.69
       ],
       "accent": "#c8a990",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/forest-mushrooms.webp"
     },
     {
       "id": "nature.desert-cactus.001",
@@ -978,7 +1014,8 @@
         0.57
       ],
       "accent": "#88ad7e",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/desert-cactus.webp"
     },
     {
       "id": "electronics.studio-monitor.001",
@@ -1004,7 +1041,8 @@
         0.19
       ],
       "accent": "#b4bfc7",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/studio-monitor.webp"
     },
     {
       "id": "electronics.digital-camera.001",
@@ -1030,7 +1068,8 @@
         0.24
       ],
       "accent": "#9aa8b2",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/digital-camera.webp"
     },
     {
       "id": "tools.steel-toolbox.001",
@@ -1056,7 +1095,8 @@
         0.27
       ],
       "accent": "#cf7860",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/steel-toolbox.webp"
     },
     {
       "id": "tools.claw-hammer.001",
@@ -1082,7 +1122,8 @@
         0.18
       ],
       "accent": "#bead92",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/claw-hammer.webp"
     },
     {
       "id": "sports.soccer-ball.001",
@@ -1108,7 +1149,8 @@
         0.22
       ],
       "accent": "#c7d2d4",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/soccer-ball.webp"
     },
     {
       "id": "sports.basketball-hoop.001",
@@ -1134,7 +1176,8 @@
         1.27
       ],
       "accent": "#b9c6c4",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/basketball-hoop.webp"
     },
     {
       "id": "scifi.patrol-spacecraft.001",
@@ -1160,7 +1203,8 @@
         3.25
       ],
       "accent": "#95b5bd",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/patrol-spacecraft.webp"
     },
     {
       "id": "scifi.survey-drone.001",
@@ -1186,7 +1230,8 @@
         1.28
       ],
       "accent": "#a9bbb8",
-      "style": "Parametric"
+      "style": "Parametric",
+      "preview_path": "public/thumbs/survey-drone.webp"
     }
   ]
 }

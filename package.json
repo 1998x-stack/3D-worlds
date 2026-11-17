@@ -11,13 +11,22 @@
     "build:catalog": "python3 scripts/catalog.py build",
     "audit:glb": "node scripts/audit_glb.mjs",
     "ingest:glb": "node scripts/ingest_glb.mjs",
-    "test:ingest": "node scripts/test_ingest.mjs"
+    "test:ingest": "node scripts/test_ingest.mjs",
+    "generate:previews": "node scripts/render_assets.mjs --only-images",
+    "generate:assets": "node scripts/render_assets.mjs && node scripts/optimize_assets.mjs",
+    "optimize:glb": "node scripts/optimize_assets.mjs"
   },
   "dependencies": {
     "three": "0.180.0"
   },
   "devDependencies": {
     "vite": "7.1.10",
-    "gltf-validator": "2.0.0-dev.3.10"
+    "gltf-validator": "2.0.0-dev.3.10",
+    "playwright": "1.65.1",
+    "sharp": "0.34.4",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "0.24.0"
   }
 }

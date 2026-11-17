@@ -43,6 +43,18 @@ jobs:
         run: node scripts/validate_models.mjs
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
+      - name: Install headless Chromium for asset rendering
+        run: npx playwright install --with-deps chromium
+      - name: P0 generate WebP/AVIF thumbnails and P1 Meshopt LOD0/1/2
+        run: npm run generate:assets
+      - name: Archive P0/P1 generation quality report
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-worlds-previews-and-lods
+          path: |
+            public/thumbs/
+            public/generated/
+          retention-days: 7
       - name: Build Vite static site
         run: npm run build
       - name: Validate MCP Python SDK v2 integration

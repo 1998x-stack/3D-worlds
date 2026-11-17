@@ -8,3 +8,10 @@ __pycache__/
 data/*.sqlite
 data/*.sqlite-*
 coverage/
+
+.cache/
+public/thumbs/*.webp
+public/thumbs/*.avif
+public/thumbs/capture-report.json
+public/generated/*.glb
+public/generated/index.json
