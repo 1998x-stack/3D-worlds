@@ -15,3 +15,5 @@ public/thumbs/*.avif
 public/thumbs/capture-report.json
 public/generated/*.glb
 public/generated/index.json
+
+data/object_manifest.json
