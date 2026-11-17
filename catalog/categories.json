@@ -34,6 +34,36 @@
       "id": "decor",
       "label": "装饰绿植",
       "sort_order": 70
+    },
+    {
+      "id": "kitchen",
+      "label": "厨房家电",
+      "sort_order": 80
+    },
+    {
+      "id": "architecture",
+      "label": "建筑构件",
+      "sort_order": 90
+    },
+    {
+      "id": "urban",
+      "label": "城市设施",
+      "sort_order": 100
+    },
+    {
+      "id": "tools",
+      "label": "工具器材",
+      "sort_order": 110
+    },
+    {
+      "id": "sports",
+      "label": "运动设施",
+      "sort_order": 120
+    },
+    {
+      "id": "scifi",
+      "label": "科幻道具",
+      "sort_order": 130
     }
   ]
 }

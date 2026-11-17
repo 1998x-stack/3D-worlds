@@ -407,6 +407,786 @@
       ],
       "accent": "#b8cba6",
       "style": "Stylized"
+    },
+    {
+      "id": "furniture.marble-dining-table.001",
+      "slug": "marble-dining-table",
+      "title": "Marble Dining Table",
+      "title_zh": "大理石餐桌",
+      "summary": "Original stylized marble dining table scene prop, editable procedural construction.",
+      "category": "furniture",
+      "tags": [
+        "dining",
+        "table",
+        "stone",
+        "low-poly"
+      ],
+      "generator": "createMarbleDiningTable",
+      "source_path": "src/models/marble_dining_table.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.8,
+        0.8,
+        0.96
+      ],
+      "accent": "#d6d5c8",
+      "style": "Parametric"
+    },
+    {
+      "id": "furniture.swivel-office-chair.001",
+      "slug": "swivel-office-chair",
+      "title": "Swivel Office Chair",
+      "title_zh": "旋转办公椅",
+      "summary": "Original stylized swivel office chair scene prop, editable procedural construction.",
+      "category": "furniture",
+      "tags": [
+        "chair",
+        "office",
+        "swivel",
+        "low-poly"
+      ],
+      "generator": "createSwivelOfficeChair",
+      "source_path": "src/models/swivel_office_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.7,
+        1.22,
+        0.67
+      ],
+      "accent": "#a7bcc1",
+      "style": "Parametric"
+    },
+    {
+      "id": "furniture.round-coffee-table.001",
+      "slug": "round-coffee-table",
+      "title": "Round Coffee Table",
+      "title_zh": "圆形茶几",
+      "summary": "Original stylized round coffee table scene prop, editable procedural construction.",
+      "category": "furniture",
+      "tags": [
+        "coffee",
+        "table",
+        "round",
+        "low-poly"
+      ],
+      "generator": "createRoundCoffeeTable",
+      "source_path": "src/models/round_coffee_table.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.95,
+        0.49,
+        0.95
+      ],
+      "accent": "#c9b18c",
+      "style": "Parametric"
+    },
+    {
+      "id": "furniture.oak-wardrobe.001",
+      "slug": "oak-wardrobe",
+      "title": "Oak Wardrobe",
+      "title_zh": "原木衣柜",
+      "summary": "Original stylized oak wardrobe scene prop, editable procedural construction.",
+      "category": "furniture",
+      "tags": [
+        "wardrobe",
+        "storage",
+        "bedroom",
+        "low-poly"
+      ],
+      "generator": "createOakWardrobe",
+      "source_path": "src/models/oak_wardrobe.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.35,
+        2.06,
+        0.58
+      ],
+      "accent": "#c5a47f",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.smart-refrigerator.001",
+      "slug": "smart-refrigerator",
+      "title": "Smart Refrigerator",
+      "title_zh": "双门冰箱",
+      "summary": "Original stylized smart refrigerator scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "fridge",
+        "kitchen",
+        "appliance",
+        "low-poly"
+      ],
+      "generator": "createSmartRefrigerator",
+      "source_path": "src/models/smart_refrigerator.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.92,
+        1.87,
+        0.74
+      ],
+      "accent": "#bbc9cb",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.induction-stove.001",
+      "slug": "induction-stove",
+      "title": "Induction Stove",
+      "title_zh": "四眼炉灶",
+      "summary": "Original stylized induction stove scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "stove",
+        "kitchen",
+        "induction",
+        "low-poly"
+      ],
+      "generator": "createInductionStove",
+      "source_path": "src/models/induction_stove.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.84,
+        0.93,
+        0.7
+      ],
+      "accent": "#c8ccc8",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.porcelain-kitchen-sink.001",
+      "slug": "porcelain-kitchen-sink",
+      "title": "Porcelain Kitchen Sink",
+      "title_zh": "厨房水槽",
+      "summary": "Original stylized porcelain kitchen sink scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "sink",
+        "kitchen",
+        "cabinet",
+        "low-poly"
+      ],
+      "generator": "createPorcelainKitchenSink",
+      "source_path": "src/models/kitchen_sink.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.1,
+        1.05,
+        0.65
+      ],
+      "accent": "#d9c5ae",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.compact-microwave.001",
+      "slug": "compact-microwave",
+      "title": "Compact Microwave",
+      "title_zh": "微波炉",
+      "summary": "Original stylized compact microwave scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "microwave",
+        "kitchen",
+        "appliance",
+        "low-poly"
+      ],
+      "generator": "createCompactMicrowave",
+      "source_path": "src/models/compact_microwave.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.5,
+        0.31,
+        0.36
+      ],
+      "accent": "#b7c3c6",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.electric-kettle.001",
+      "slug": "electric-kettle",
+      "title": "Electric Kettle",
+      "title_zh": "电热水壶",
+      "summary": "Original stylized electric kettle scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "kettle",
+        "tea",
+        "kitchen",
+        "low-poly"
+      ],
+      "generator": "createElectricKettle",
+      "source_path": "src/models/electric_kettle.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.32,
+        0.34,
+        0.27
+      ],
+      "accent": "#c4d1d2",
+      "style": "Parametric"
+    },
+    {
+      "id": "kitchen.wooden-bar-stool.001",
+      "slug": "wooden-bar-stool",
+      "title": "Wooden Bar Stool",
+      "title_zh": "木质吧台椅",
+      "summary": "Original stylized wooden bar stool scene prop, editable procedural construction.",
+      "category": "kitchen",
+      "tags": [
+        "stool",
+        "kitchen",
+        "wood",
+        "low-poly"
+      ],
+      "generator": "createWoodenBarStool",
+      "source_path": "src/models/wooden_bar_stool.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.48,
+        0.78,
+        0.48
+      ],
+      "accent": "#d1b28a",
+      "style": "Parametric"
+    },
+    {
+      "id": "architecture.arched-wood-door.001",
+      "slug": "arched-wood-door",
+      "title": "Arched Wood Door",
+      "title_zh": "拱形木门",
+      "summary": "Original stylized arched wood door scene prop, editable procedural construction.",
+      "category": "architecture",
+      "tags": [
+        "door",
+        "wood",
+        "building",
+        "low-poly"
+      ],
+      "generator": "createArchedWoodDoor",
+      "source_path": "src/models/arched_wood_door.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.06,
+        2.25,
+        0.18
+      ],
+      "accent": "#b49774",
+      "style": "Parametric"
+    },
+    {
+      "id": "architecture.steel-window.001",
+      "slug": "steel-window",
+      "title": "Industrial Window",
+      "title_zh": "工业钢窗",
+      "summary": "Original stylized industrial window scene prop, editable procedural construction.",
+      "category": "architecture",
+      "tags": [
+        "window",
+        "building",
+        "glass",
+        "low-poly"
+      ],
+      "generator": "createIndustrialWindow",
+      "source_path": "src/models/industrial_window.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.35,
+        1.25,
+        0.13
+      ],
+      "accent": "#a8bbbf",
+      "style": "Parametric"
+    },
+    {
+      "id": "architecture.concrete-stairs.001",
+      "slug": "concrete-stairs",
+      "title": "Concrete Stairs",
+      "title_zh": "混凝土楼梯",
+      "summary": "Original stylized concrete stairs scene prop, editable procedural construction.",
+      "category": "architecture",
+      "tags": [
+        "stairs",
+        "steps",
+        "concrete",
+        "low-poly"
+      ],
+      "generator": "createConcreteStairs",
+      "source_path": "src/models/concrete_stairs.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.4,
+        1.2,
+        2
+      ],
+      "accent": "#b8b8b4",
+      "style": "Parametric"
+    },
+    {
+      "id": "architecture.picket-fence.001",
+      "slug": "picket-fence",
+      "title": "Picket Fence Section",
+      "title_zh": "栅栏围栏",
+      "summary": "Original stylized picket fence section scene prop, editable procedural construction.",
+      "category": "architecture",
+      "tags": [
+        "fence",
+        "building",
+        "garden",
+        "low-poly"
+      ],
+      "generator": "createPicketFence",
+      "source_path": "src/models/picket_fence.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.1,
+        1.05,
+        0.16
+      ],
+      "accent": "#e2d3b6",
+      "style": "Parametric"
+    },
+    {
+      "id": "urban.urban-streetlight.001",
+      "slug": "urban-streetlight",
+      "title": "Urban Streetlight",
+      "title_zh": "城市路灯",
+      "summary": "Original stylized urban streetlight scene prop, editable procedural construction.",
+      "category": "urban",
+      "tags": [
+        "streetlight",
+        "urban",
+        "lighting",
+        "low-poly"
+      ],
+      "generator": "createUrbanStreetlight",
+      "source_path": "src/models/urban_streetlight.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.18,
+        3.8,
+        0.52
+      ],
+      "accent": "#adb6a9",
+      "style": "Parametric"
+    },
+    {
+      "id": "urban.park-bench.001",
+      "slug": "park-bench",
+      "title": "Park Bench",
+      "title_zh": "公园长椅",
+      "summary": "Original stylized park bench scene prop, editable procedural construction.",
+      "category": "urban",
+      "tags": [
+        "bench",
+        "park",
+        "outdoor",
+        "low-poly"
+      ],
+      "generator": "createParkBench",
+      "source_path": "src/models/park_bench.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.66,
+        0.94,
+        0.67
+      ],
+      "accent": "#b79b7f",
+      "style": "Parametric"
+    },
+    {
+      "id": "urban.traffic-signal.001",
+      "slug": "traffic-signal",
+      "title": "Traffic Signal",
+      "title_zh": "交通信号灯",
+      "summary": "Original stylized traffic signal scene prop, editable procedural construction.",
+      "category": "urban",
+      "tags": [
+        "traffic",
+        "signal",
+        "road",
+        "low-poly"
+      ],
+      "generator": "createTrafficSignal",
+      "source_path": "src/models/traffic_signal.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.55,
+        3.08,
+        0.56
+      ],
+      "accent": "#9caeb3",
+      "style": "Parametric"
+    },
+    {
+      "id": "urban.red-fire-hydrant.001",
+      "slug": "red-fire-hydrant",
+      "title": "Red Fire Hydrant",
+      "title_zh": "红色消防栓",
+      "summary": "Original stylized red fire hydrant scene prop, editable procedural construction.",
+      "category": "urban",
+      "tags": [
+        "hydrant",
+        "water",
+        "urban",
+        "low-poly"
+      ],
+      "generator": "createRedFireHydrant",
+      "source_path": "src/models/red_fire_hydrant.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.66,
+        0.93,
+        0.63
+      ],
+      "accent": "#c9796a",
+      "style": "Parametric"
+    },
+    {
+      "id": "nature.alpine-pine-tree.001",
+      "slug": "alpine-pine-tree",
+      "title": "Alpine Pine Tree",
+      "title_zh": "高山松树",
+      "summary": "Original stylized alpine pine tree scene prop, editable procedural construction.",
+      "category": "nature",
+      "tags": [
+        "pine",
+        "forest",
+        "nature",
+        "low-poly"
+      ],
+      "generator": "createAlpinePineTree",
+      "source_path": "src/models/alpine_pine_tree.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.67,
+        3,
+        1.67
+      ],
+      "accent": "#91ad8f",
+      "style": "Parametric"
+    },
+    {
+      "id": "nature.granite-boulder.001",
+      "slug": "granite-boulder",
+      "title": "Granite Boulder",
+      "title_zh": "花岗岩岩石",
+      "summary": "Original stylized granite boulder scene prop, editable procedural construction.",
+      "category": "nature",
+      "tags": [
+        "rock",
+        "stone",
+        "nature",
+        "low-poly"
+      ],
+      "generator": "createGraniteBoulder",
+      "source_path": "src/models/granite_boulder.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.3,
+        0.84,
+        1.1
+      ],
+      "accent": "#a8aaa8",
+      "style": "Parametric"
+    },
+    {
+      "id": "nature.forest-mushrooms.001",
+      "slug": "forest-mushrooms",
+      "title": "Forest Mushrooms",
+      "title_zh": "森林蘑菇群",
+      "summary": "Original stylized forest mushrooms scene prop, editable procedural construction.",
+      "category": "nature",
+      "tags": [
+        "mushroom",
+        "forest",
+        "nature",
+        "low-poly"
+      ],
+      "generator": "createForestMushrooms",
+      "source_path": "src/models/forest_mushrooms.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.82,
+        0.46,
+        0.69
+      ],
+      "accent": "#c8a990",
+      "style": "Parametric"
+    },
+    {
+      "id": "nature.desert-cactus.001",
+      "slug": "desert-cactus",
+      "title": "Desert Cactus",
+      "title_zh": "沙漠仙人掌",
+      "summary": "Original stylized desert cactus scene prop, editable procedural construction.",
+      "category": "nature",
+      "tags": [
+        "cactus",
+        "desert",
+        "nature",
+        "low-poly"
+      ],
+      "generator": "createDesertCactus",
+      "source_path": "src/models/desert_cactus.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.85,
+        1.68,
+        0.57
+      ],
+      "accent": "#88ad7e",
+      "style": "Parametric"
+    },
+    {
+      "id": "electronics.studio-monitor.001",
+      "slug": "studio-monitor",
+      "title": "Studio Monitor",
+      "title_zh": "桌面显示器",
+      "summary": "Original stylized studio monitor scene prop, editable procedural construction.",
+      "category": "electronics",
+      "tags": [
+        "monitor",
+        "display",
+        "office",
+        "low-poly"
+      ],
+      "generator": "createStudioMonitor",
+      "source_path": "src/models/studio_monitor.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.7,
+        0.56,
+        0.19
+      ],
+      "accent": "#b4bfc7",
+      "style": "Parametric"
+    },
+    {
+      "id": "electronics.digital-camera.001",
+      "slug": "digital-camera",
+      "title": "Digital Camera",
+      "title_zh": "数码相机",
+      "summary": "Original stylized digital camera scene prop, editable procedural construction.",
+      "category": "electronics",
+      "tags": [
+        "camera",
+        "photo",
+        "electronics",
+        "low-poly"
+      ],
+      "generator": "createDigitalCamera",
+      "source_path": "src/models/digital_camera.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.32,
+        0.22,
+        0.24
+      ],
+      "accent": "#9aa8b2",
+      "style": "Parametric"
+    },
+    {
+      "id": "tools.steel-toolbox.001",
+      "slug": "steel-toolbox",
+      "title": "Steel Toolbox",
+      "title_zh": "钢制工具箱",
+      "summary": "Original stylized steel toolbox scene prop, editable procedural construction.",
+      "category": "tools",
+      "tags": [
+        "toolbox",
+        "workshop",
+        "tools",
+        "low-poly"
+      ],
+      "generator": "createSteelToolbox",
+      "source_path": "src/models/steel_toolbox.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.51,
+        0.31,
+        0.27
+      ],
+      "accent": "#cf7860",
+      "style": "Parametric"
+    },
+    {
+      "id": "tools.claw-hammer.001",
+      "slug": "claw-hammer",
+      "title": "Claw Hammer",
+      "title_zh": "木柄羊角锤",
+      "summary": "Original stylized claw hammer scene prop, editable procedural construction.",
+      "category": "tools",
+      "tags": [
+        "hammer",
+        "workshop",
+        "tools",
+        "low-poly"
+      ],
+      "generator": "createClawHammer",
+      "source_path": "src/models/claw_hammer.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.36,
+        0.47,
+        0.18
+      ],
+      "accent": "#bead92",
+      "style": "Parametric"
+    },
+    {
+      "id": "sports.soccer-ball.001",
+      "slug": "soccer-ball",
+      "title": "Soccer Ball",
+      "title_zh": "足球",
+      "summary": "Original stylized soccer ball scene prop, editable procedural construction.",
+      "category": "sports",
+      "tags": [
+        "football",
+        "soccer",
+        "sports",
+        "low-poly"
+      ],
+      "generator": "createSoccerBall",
+      "source_path": "src/models/soccer_ball.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.22,
+        0.22,
+        0.22
+      ],
+      "accent": "#c7d2d4",
+      "style": "Parametric"
+    },
+    {
+      "id": "sports.basketball-hoop.001",
+      "slug": "basketball-hoop",
+      "title": "Basketball Hoop",
+      "title_zh": "篮球架",
+      "summary": "Original stylized basketball hoop scene prop, editable procedural construction.",
+      "category": "sports",
+      "tags": [
+        "basketball",
+        "hoop",
+        "sports",
+        "low-poly"
+      ],
+      "generator": "createBasketballHoop",
+      "source_path": "src/models/basketball_hoop.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.18,
+        3.06,
+        1.27
+      ],
+      "accent": "#b9c6c4",
+      "style": "Parametric"
+    },
+    {
+      "id": "scifi.patrol-spacecraft.001",
+      "slug": "patrol-spacecraft",
+      "title": "Patrol Spacecraft",
+      "title_zh": "科幻巡逻飞船",
+      "summary": "Original stylized patrol spacecraft scene prop, editable procedural construction.",
+      "category": "scifi",
+      "tags": [
+        "spaceship",
+        "scifi",
+        "game",
+        "low-poly"
+      ],
+      "generator": "createPatrolSpacecraft",
+      "source_path": "src/models/patrol_spacecraft.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.8,
+        0.84,
+        3.25
+      ],
+      "accent": "#95b5bd",
+      "style": "Parametric"
+    },
+    {
+      "id": "scifi.survey-drone.001",
+      "slug": "survey-drone",
+      "title": "Survey Drone",
+      "title_zh": "勘测四旋翼无人机",
+      "summary": "Original stylized survey drone scene prop, editable procedural construction.",
+      "category": "scifi",
+      "tags": [
+        "drone",
+        "scifi",
+        "robotics",
+        "low-poly"
+      ],
+      "generator": "createSurveyDrone",
+      "source_path": "src/models/survey_drone.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.28,
+        0.38,
+        1.28
+      ],
+      "accent": "#a9bbb8",
+      "style": "Parametric"
     }
   ]
 }
