@@ -10,15 +10,15 @@ from scripts.export_static_catalog import export
 
 
 class StaticCatalogTest(unittest.TestCase):
-    def test_default_projection_includes_all_535_current_assets(self):
+    def test_default_projection_includes_all_565_current_assets(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "public-all.json"
             result = export(target=path)
             public = json.loads(path.read_text(encoding="utf8"))
             source = json.loads((ROOT / "catalog/models.json").read_text(encoding="utf8"))
-            self.assertEqual(len(source["assets"]), 535)
-            self.assertEqual(result["static_count"], 535)
-            self.assertEqual(result["total_catalog_count"], 535)
+            self.assertEqual(len(source["assets"]), 565)
+            self.assertEqual(result["static_count"], 565)
+            self.assertEqual(result["total_catalog_count"], 565)
             self.assertFalse(result["requires_remote_api_for_full_collection"])
             self.assertEqual(public["assets"], source["assets"])
             self.assertIn("scifi.ion-propulsion-test-platform.001",

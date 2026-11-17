@@ -1,5 +1,15 @@
 # Catalog release history
 
+## V1.4 — 30 original maker-market scene models
+
+The full catalog grows from **535 to 565 models across 14 categories**, adding
+30 new independent Three.js generators within the 13 general scene categories.
+The separate V1.3 print-commerce CAD assortment remains intact.
+
+- [All 30 bilingual designs and qualitative Amazon/eBay/HN research](30-assets-v14.md)
+- [Machine-readable V1.4 collection](../catalog/collections/v14.json)
+- [V1.4 geometry/printing limitations and verification](verification-v14.md)
+
 The root README focuses on current use and reproducible verification. Historical collection briefs are preserved below.
 
 ## V1.3 — 50 original print-commerce CAD concepts
