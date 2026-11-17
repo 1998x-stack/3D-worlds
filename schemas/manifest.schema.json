@@ -161,6 +161,10 @@
         "qa_warnings": {
           "type": "integer",
           "minimum": 0
+        },
+        "collection": {
+          "type": "string",
+          "pattern": "^v[0-9]+[.][0-9]+$"
         }
       },
       "allOf": [

@@ -1232,6 +1232,1193 @@
       "accent": "#a9bbb8",
       "style": "Parametric",
       "preview_path": "public/thumbs/survey-drone.webp"
+    },
+    {
+      "id": "furniture.modular-sectional-sofa.001",
+      "slug": "modular-sectional-sofa",
+      "title": "Modular Sectional Sofa",
+      "title_zh": "模块化转角沙发",
+      "summary": "Separate sectional seats, chaise extension, back pillows and feet. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "furniture",
+      "tags": [
+        "furniture",
+        "interior",
+        "low-poly",
+        "modular",
+        "sectional",
+        "sofa"
+      ],
+      "generator": "createModularSectionalSofa",
+      "source_path": "src/models/modular_sectional_sofa.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.55,
+        0.96,
+        1.7
+      ],
+      "accent": "#d0bba5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/modular-sectional-sofa.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "furniture.rolling-file-cabinet.001",
+      "slug": "rolling-file-cabinet",
+      "title": "Rolling File Cabinet",
+      "title_zh": "滚轮文件柜",
+      "summary": "Three drawers, handles and four rolling castors. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "furniture",
+      "tags": [
+        "furniture",
+        "office",
+        "low-poly",
+        "rolling",
+        "file",
+        "cabinet"
+      ],
+      "generator": "createRollingFileCabinet",
+      "source_path": "src/models/rolling_file_cabinet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.49,
+        0.72,
+        0.55
+      ],
+      "accent": "#d0bba5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/rolling-file-cabinet.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "furniture.floating-wall-shelf.001",
+      "slug": "floating-wall-shelf",
+      "title": "Floating Wall Shelf",
+      "title_zh": "墙面悬浮置物架",
+      "summary": "Floating timber planks, brackets, books and a display plant. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "furniture",
+      "tags": [
+        "furniture",
+        "interior",
+        "low-poly",
+        "floating",
+        "wall",
+        "shelf"
+      ],
+      "generator": "createFloatingWallShelf",
+      "source_path": "src/models/floating_wall_shelf.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.34,
+        0.72,
+        0.25
+      ],
+      "accent": "#d0bba5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/floating-wall-shelf.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "furniture.wooden-rocking-chair.001",
+      "slug": "wooden-rocking-chair",
+      "title": "Wooden Rocking Chair",
+      "title_zh": "木质摇椅",
+      "summary": "Rocking runners, seat, armrests and back slats. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "furniture",
+      "tags": [
+        "furniture",
+        "interior",
+        "low-poly",
+        "wooden",
+        "rocking",
+        "chair"
+      ],
+      "generator": "createWoodenRockingChair",
+      "source_path": "src/models/wooden_rocking_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.73,
+        1.05,
+        0.95
+      ],
+      "accent": "#d0bba5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/wooden-rocking-chair.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "bathroom.walk-in-rain-shower.001",
+      "slug": "walk-in-rain-shower",
+      "title": "Walk-in Rain Shower",
+      "title_zh": "步入式雨淋花洒",
+      "summary": "Glass enclosure, shower controls and rain showerhead. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "bathroom",
+      "tags": [
+        "bathroom",
+        "interior",
+        "low-poly",
+        "walk",
+        "rain",
+        "shower"
+      ],
+      "generator": "createWalkInRainShower",
+      "source_path": "src/models/walk_in_rain_shower.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.13,
+        2.22,
+        1.04
+      ],
+      "accent": "#bfd9dd",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/walk-in-rain-shower.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "bathroom.backlit-vanity-mirror.001",
+      "slug": "backlit-vanity-mirror",
+      "title": "Backlit Vanity Mirror",
+      "title_zh": "背光浴室镜",
+      "summary": "Mirrored face, LED bands and proximity sensor. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "bathroom",
+      "tags": [
+        "bathroom",
+        "interior",
+        "low-poly",
+        "backlit",
+        "vanity",
+        "mirror"
+      ],
+      "generator": "createBacklitVanityMirror",
+      "source_path": "src/models/backlit_vanity_mirror.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.79,
+        1.04,
+        0.12
+      ],
+      "accent": "#bfd9dd",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/backlit-vanity-mirror.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "bathroom.freestanding-towel-rack.001",
+      "slug": "freestanding-towel-rack",
+      "title": "Freestanding Towel Rack",
+      "title_zh": "落地毛巾架",
+      "summary": "Vertical stands, towel bars and draped textile. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "bathroom",
+      "tags": [
+        "bathroom",
+        "interior",
+        "low-poly",
+        "freestanding",
+        "towel",
+        "rack"
+      ],
+      "generator": "createFreestandingTowelRack",
+      "source_path": "src/models/freestanding_towel_rack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.86,
+        1.26,
+        0.36
+      ],
+      "accent": "#bfd9dd",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/freestanding-towel-rack.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "characters.astronaut-mannequin.001",
+      "slug": "astronaut-mannequin",
+      "title": "Astronaut Mannequin",
+      "title_zh": "宇航员人物原型",
+      "summary": "Helmet, visor, oxygen backpack, limb assemblies and control panel. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "characters",
+      "tags": [
+        "characters",
+        "character",
+        "low-poly",
+        "astronaut",
+        "mannequin"
+      ],
+      "generator": "createAstronautMannequin",
+      "source_path": "src/models/astronaut_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.91,
+        1.84,
+        0.62
+      ],
+      "accent": "#a8c8c7",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/astronaut-mannequin.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "characters.armored-knight-mannequin.001",
+      "slug": "armored-knight-mannequin",
+      "title": "Armored Knight Mannequin",
+      "title_zh": "骑士盔甲人物原型",
+      "summary": "Helmet, chestplate, pauldrons, greaves and armored boots. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "characters",
+      "tags": [
+        "characters",
+        "character",
+        "low-poly",
+        "armored",
+        "knight",
+        "mannequin"
+      ],
+      "generator": "createArmoredKnightMannequin",
+      "source_path": "src/models/armored_knight_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.88,
+        1.89,
+        0.5
+      ],
+      "accent": "#a8c8c7",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/armored-knight-mannequin.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "characters.service-robot-character.001",
+      "slug": "service-robot-character",
+      "title": "Service Robot Character",
+      "title_zh": "服务机器人角色原型",
+      "summary": "Display torso, wheeled base, antenna and two grippers. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "characters",
+      "tags": [
+        "characters",
+        "character",
+        "low-poly",
+        "service",
+        "robot"
+      ],
+      "generator": "createServiceRobotCharacter",
+      "source_path": "src/models/service_robot_character.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.82,
+        1.49,
+        0.78
+      ],
+      "accent": "#a8c8c7",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/service-robot-character.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "nature.flowering-cherry-tree.001",
+      "slug": "flowering-cherry-tree",
+      "title": "Flowering Cherry Tree",
+      "title_zh": "盛开樱花树",
+      "summary": "Branching blossom canopy and seasonal floral color. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "nature",
+      "tags": [
+        "nature",
+        "environment",
+        "low-poly",
+        "flowering",
+        "cherry",
+        "tree"
+      ],
+      "generator": "createFloweringCherryTree",
+      "source_path": "src/models/flowering_cherry_tree.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.8,
+        3.25,
+        2.5
+      ],
+      "accent": "#a8c8a9",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/flowering-cherry-tree.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "nature.tropical-coconut-palm.001",
+      "slug": "tropical-coconut-palm",
+      "title": "Tropical Coconut Palm",
+      "title_zh": "热带椰子树",
+      "summary": "Six radial palm fronds, coconut clusters and palm trunk. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "nature",
+      "tags": [
+        "nature",
+        "environment",
+        "low-poly",
+        "tropical",
+        "coconut",
+        "palm"
+      ],
+      "generator": "createTropicalCoconutPalm",
+      "source_path": "src/models/tropical_coconut_palm.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.95,
+        4.1,
+        2.95
+      ],
+      "accent": "#a8c8a9",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/tropical-coconut-palm.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "nature.river-pebble-cluster.001",
+      "slug": "river-pebble-cluster",
+      "title": "River Pebble Cluster",
+      "title_zh": "河床鹅卵石群",
+      "summary": "Natural pebble scatter with variations in stone color and form. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "nature",
+      "tags": [
+        "nature",
+        "environment",
+        "low-poly",
+        "river",
+        "pebble",
+        "cluster"
+      ],
+      "generator": "createRiverPebbleCluster",
+      "source_path": "src/models/river_pebble_cluster.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.5,
+        0.36,
+        1.05
+      ],
+      "accent": "#a8c8a9",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/river-pebble-cluster.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "vehicles.compact-delivery-van.001",
+      "slug": "compact-delivery-van",
+      "title": "Compact Delivery Van",
+      "title_zh": "城市配送厢式货车",
+      "summary": "Cargo compartment, cab, glazing, mirrors and four wheels. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "vehicles",
+      "tags": [
+        "vehicles",
+        "vehicle",
+        "low-poly",
+        "compact",
+        "delivery",
+        "van"
+      ],
+      "generator": "createCompactDeliveryVan",
+      "source_path": "src/models/compact_delivery_van.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.12,
+        2.4,
+        4.38
+      ],
+      "accent": "#abc7ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/compact-delivery-van.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "vehicles.commuter-city-bicycle.001",
+      "slug": "commuter-city-bicycle",
+      "title": "Commuter City Bicycle",
+      "title_zh": "通勤城市自行车",
+      "summary": "Commuter frame, dual wheels, rear basket and pedals. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "vehicles",
+      "tags": [
+        "vehicles",
+        "vehicle",
+        "low-poly",
+        "commuter",
+        "city",
+        "bicycle"
+      ],
+      "generator": "createCommuterCityBicycle",
+      "source_path": "src/models/commuter_city_bicycle.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.72,
+        1.28,
+        1.78
+      ],
+      "accent": "#abc7ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/commuter-city-bicycle.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "vehicles.warehouse-forklift.001",
+      "slug": "warehouse-forklift",
+      "title": "Warehouse Forklift",
+      "title_zh": "仓储叉车",
+      "summary": "Lifting mast, load forks, drive wheels and rollbar. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "vehicles",
+      "tags": [
+        "vehicles",
+        "vehicle",
+        "low-poly",
+        "warehouse",
+        "forklift"
+      ],
+      "generator": "createWarehouseForklift",
+      "source_path": "src/models/warehouse_forklift.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.46,
+        2.31,
+        2.72
+      ],
+      "accent": "#abc7ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/warehouse-forklift.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "vehicles.coastal-sailboat.001",
+      "slug": "coastal-sailboat",
+      "title": "Coastal Sailboat",
+      "title_zh": "海岸单桅帆船",
+      "summary": "Single mast, hull, boom, two triangular sails and cabin. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "vehicles",
+      "tags": [
+        "vehicles",
+        "vehicle",
+        "low-poly",
+        "coastal",
+        "sailboat"
+      ],
+      "generator": "createCoastalSailboat",
+      "source_path": "src/models/coastal_sailboat.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.42,
+        4.15,
+        3.64
+      ],
+      "accent": "#abc7ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/coastal-sailboat.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "electronics.retro-arcade-cabinet.001",
+      "slug": "retro-arcade-cabinet",
+      "title": "Retro Arcade Cabinet",
+      "title_zh": "复古街机柜",
+      "summary": "Arcade marquee, display, joystick and coin compartment. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "electronics",
+      "tags": [
+        "electronics",
+        "interior",
+        "low-poly",
+        "retro",
+        "arcade",
+        "cabinet"
+      ],
+      "generator": "createRetroArcadeCabinet",
+      "source_path": "src/models/retro_arcade_cabinet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.74,
+        1.76,
+        0.82
+      ],
+      "accent": "#acbcc6",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/retro-arcade-cabinet.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "electronics.wifi-router.001",
+      "slug": "wifi-router",
+      "title": "Wi-Fi Router",
+      "title_zh": "无线网络路由器",
+      "summary": "Triple-antenna network box, indicators and ventilation. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "electronics",
+      "tags": [
+        "electronics",
+        "interior",
+        "low-poly",
+        "wifi",
+        "router"
+      ],
+      "generator": "createWifiRouter",
+      "source_path": "src/models/wifi_router.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.37,
+        0.24,
+        0.25
+      ],
+      "accent": "#acbcc6",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/wifi-router.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "electronics.dual-stick-gamepad.001",
+      "slug": "dual-stick-gamepad",
+      "title": "Dual Stick Gamepad",
+      "title_zh": "双摇杆游戏手柄",
+      "summary": "Twin analog sticks, d-pad, face buttons and triggers. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "electronics",
+      "tags": [
+        "electronics",
+        "interior",
+        "low-poly",
+        "dual",
+        "stick",
+        "gamepad"
+      ],
+      "generator": "createDualStickGamepad",
+      "source_path": "src/models/dual_stick_gamepad.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.44,
+        0.16,
+        0.27
+      ],
+      "accent": "#acbcc6",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/dual-stick-gamepad.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "decor.brass-pendant-light.001",
+      "slug": "brass-pendant-light",
+      "title": "Brass Pendant Light",
+      "title_zh": "黄铜吊灯",
+      "summary": "Suspended conical shade, opal lamp and support cord. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "decor",
+      "tags": [
+        "decor",
+        "interior",
+        "low-poly",
+        "brass",
+        "pendant",
+        "light"
+      ],
+      "generator": "createBrassPendantLight",
+      "source_path": "src/models/brass_pendant_light.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.66,
+        1.24,
+        0.66
+      ],
+      "accent": "#dbc6af",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/brass-pendant-light.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "decor.ceramic-flower-bouquet.001",
+      "slug": "ceramic-flower-bouquet",
+      "title": "Ceramic Flower Bouquet",
+      "title_zh": "陶瓷花瓶插花",
+      "summary": "Ceramic vase with seven branching flowering stems. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "decor",
+      "tags": [
+        "decor",
+        "interior",
+        "low-poly",
+        "ceramic",
+        "flower",
+        "bouquet"
+      ],
+      "generator": "createCeramicFlowerBouquet",
+      "source_path": "src/models/ceramic_flower_bouquet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.58,
+        0.99,
+        0.53
+      ],
+      "accent": "#dbc6af",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/ceramic-flower-bouquet.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "decor.midcentury-wall-clock.001",
+      "slug": "midcentury-wall-clock",
+      "title": "Midcentury Wall Clock",
+      "title_zh": "复古挂钟",
+      "summary": "Clock face, twelve hour markers and decorative hands. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "decor",
+      "tags": [
+        "decor",
+        "interior",
+        "low-poly",
+        "midcentury",
+        "wall",
+        "clock"
+      ],
+      "generator": "createMidcenturyWallClock",
+      "source_path": "src/models/midcentury_wall_clock.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.61,
+        0.61,
+        0.11
+      ],
+      "accent": "#dbc6af",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/midcentury-wall-clock.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "kitchen.professional-espresso-machine.001",
+      "slug": "professional-espresso-machine",
+      "title": "Professional Espresso Machine",
+      "title_zh": "专业意式咖啡机",
+      "summary": "Dual brewing heads, portafilters, display and steam wand. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "kitchen",
+      "tags": [
+        "kitchen",
+        "interior",
+        "low-poly",
+        "professional",
+        "espresso",
+        "machine"
+      ],
+      "generator": "createProfessionalEspressoMachine",
+      "source_path": "src/models/professional_espresso_machine.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.65,
+        0.49,
+        0.53
+      ],
+      "accent": "#d6c7b8",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/professional-espresso-machine.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "kitchen.butcher-block-island.001",
+      "slug": "butcher-block-island",
+      "title": "Butcher Block Island",
+      "title_zh": "实木厨房中岛",
+      "summary": "Worktop, pantry cabinets, metal handles and food-prep surface. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "kitchen",
+      "tags": [
+        "kitchen",
+        "interior",
+        "low-poly",
+        "butcher",
+        "block",
+        "island"
+      ],
+      "generator": "createButcherBlockIsland",
+      "source_path": "src/models/butcher_block_island.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.84,
+        0.96,
+        0.96
+      ],
+      "accent": "#d6c7b8",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/butcher-block-island.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "kitchen.stainless-range-hood.001",
+      "slug": "stainless-range-hood",
+      "title": "Stainless Range Hood",
+      "title_zh": "不锈钢抽油烟机",
+      "summary": "Vent chimney, filter slats and integrated task lights. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "kitchen",
+      "tags": [
+        "kitchen",
+        "interior",
+        "low-poly",
+        "stainless",
+        "range",
+        "hood"
+      ],
+      "generator": "createStainlessRangeHood",
+      "source_path": "src/models/stainless_range_hood.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.98,
+        0.82,
+        0.65
+      ],
+      "accent": "#d6c7b8",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/stainless-range-hood.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "architecture.masonry-brick-archway.001",
+      "slug": "masonry-brick-archway",
+      "title": "Masonry Brick Archway",
+      "title_zh": "砖砌门洞",
+      "summary": "Brick piers, lintel, keystone and threshold. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "architecture",
+      "tags": [
+        "architecture",
+        "low-poly",
+        "masonry",
+        "brick",
+        "archway"
+      ],
+      "generator": "createMasonryBrickArchway",
+      "source_path": "src/models/masonry_brick_archway.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.22,
+        2.64,
+        0.48
+      ],
+      "accent": "#c2b9ae",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/masonry-brick-archway.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "architecture.structural-steel-column.001",
+      "slug": "structural-steel-column",
+      "title": "Structural Steel Column",
+      "title_zh": "建筑工字钢立柱",
+      "summary": "Steel web, flanges, gussets and baseplate anchor bolts. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "architecture",
+      "tags": [
+        "architecture",
+        "low-poly",
+        "structural",
+        "steel",
+        "column"
+      ],
+      "generator": "createStructuralSteelColumn",
+      "source_path": "src/models/structural_steel_column.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.54,
+        3.18,
+        0.51
+      ],
+      "accent": "#c2b9ae",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/structural-steel-column.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "architecture.pitched-roof-skylight.001",
+      "slug": "pitched-roof-skylight",
+      "title": "Pitched Roof Skylight",
+      "title_zh": "坡屋顶天窗",
+      "summary": "Pitch glazing, ridge, hinges and metal mullions. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "architecture",
+      "tags": [
+        "architecture",
+        "low-poly",
+        "pitched",
+        "roof",
+        "skylight"
+      ],
+      "generator": "createPitchedRoofSkylight",
+      "source_path": "src/models/pitched_roof_skylight.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.4,
+        0.47,
+        1.03
+      ],
+      "accent": "#c2b9ae",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/pitched-roof-skylight.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "urban.glass-bus-shelter.001",
+      "slug": "glass-bus-shelter",
+      "title": "Glass Bus Shelter",
+      "title_zh": "城市公交候车亭",
+      "summary": "Canopy, glazing, bench, curb and route sign. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "urban",
+      "tags": [
+        "urban",
+        "low-poly",
+        "glass",
+        "bus",
+        "shelter"
+      ],
+      "generator": "createGlassBusShelter",
+      "source_path": "src/models/glass_bus_shelter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        3.38,
+        2.82,
+        1.57
+      ],
+      "accent": "#b3c8ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/glass-bus-shelter.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "urban.solar-parking-meter.001",
+      "slug": "solar-parking-meter",
+      "title": "Solar Parking Meter",
+      "title_zh": "太阳能停车计时器",
+      "summary": "Solar panel, payment display and slim pedestal. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "urban",
+      "tags": [
+        "urban",
+        "low-poly",
+        "solar",
+        "parking",
+        "meter"
+      ],
+      "generator": "createSolarParkingMeter",
+      "source_path": "src/models/solar_parking_meter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.38,
+        1.56,
+        0.34
+      ],
+      "accent": "#b3c8ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/solar-parking-meter.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "urban.color-coded-recycling-bin.001",
+      "slug": "color-coded-recycling-bin",
+      "title": "Color-Coded Recycling Bin",
+      "title_zh": "城市分类回收箱",
+      "summary": "Three color-coded bin compartments and collection slots. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "urban",
+      "tags": [
+        "urban",
+        "low-poly",
+        "color",
+        "coded",
+        "recycling",
+        "bin"
+      ],
+      "generator": "createColorCodedRecyclingBin",
+      "source_path": "src/models/color_coded_recycling_bin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.05,
+        1.35,
+        0.55
+      ],
+      "accent": "#b3c8ce",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/color-coded-recycling-bin.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "tools.cordless-power-drill.001",
+      "slug": "cordless-power-drill",
+      "title": "Cordless Power Drill",
+      "title_zh": "无绳电钻",
+      "summary": "Motor housing, chuck, trigger, handle and battery. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "tools",
+      "tags": [
+        "tools",
+        "tool",
+        "low-poly",
+        "cordless",
+        "power",
+        "drill"
+      ],
+      "generator": "createCordlessPowerDrill",
+      "source_path": "src/models/cordless_power_drill.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.26,
+        0.37,
+        0.43
+      ],
+      "accent": "#c5c8c5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/cordless-power-drill.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "tools.adjustable-steel-wrench.001",
+      "slug": "adjustable-steel-wrench",
+      "title": "Adjustable Steel Wrench",
+      "title_zh": "活动扳手",
+      "summary": "Long handle, fixed jaw, sliding jaw and adjustment wheel. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "tools",
+      "tags": [
+        "tools",
+        "tool",
+        "low-poly",
+        "adjustable",
+        "steel",
+        "wrench"
+      ],
+      "generator": "createAdjustableSteelWrench",
+      "source_path": "src/models/adjustable_steel_wrench.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.25,
+        0.58,
+        0.08
+      ],
+      "accent": "#c5c8c5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/adjustable-steel-wrench.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "tools.folding-step-ladder.001",
+      "slug": "folding-step-ladder",
+      "title": "Folding Step Ladder",
+      "title_zh": "折叠人字梯",
+      "summary": "Articulated frame with steps, feet and safety braces. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "tools",
+      "tags": [
+        "tools",
+        "tool",
+        "low-poly",
+        "folding",
+        "step",
+        "ladder"
+      ],
+      "generator": "createFoldingStepLadder",
+      "source_path": "src/models/folding_step_ladder.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.74,
+        1.6,
+        1.17
+      ],
+      "accent": "#c5c8c5",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/folding-step-ladder.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "sports.portable-tennis-net.001",
+      "slug": "portable-tennis-net",
+      "title": "Portable Tennis Net",
+      "title_zh": "便携式网球网",
+      "summary": "Freestanding net with posts, taut threads and side supports. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "sports",
+      "tags": [
+        "sports",
+        "low-poly",
+        "portable",
+        "tennis",
+        "net"
+      ],
+      "generator": "createPortableTennisNet",
+      "source_path": "src/models/portable_tennis_net.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        3.08,
+        0.95,
+        0.3
+      ],
+      "accent": "#b7d0c8",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/portable-tennis-net.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "sports.street-skateboard.001",
+      "slug": "street-skateboard",
+      "title": "Street Skateboard",
+      "title_zh": "街头滑板",
+      "summary": "Maple deck, grip tape, two axles and four wheels. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "sports",
+      "tags": [
+        "sports",
+        "low-poly",
+        "street",
+        "skateboard"
+      ],
+      "generator": "createStreetSkateboard",
+      "source_path": "src/models/street_skateboard.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.29,
+        0.14,
+        0.83
+      ],
+      "accent": "#b7d0c8",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/street-skateboard.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "scifi.reactor-energy-core.001",
+      "slug": "reactor-energy-core",
+      "title": "Reactor Energy Core",
+      "title_zh": "科幻反应堆能量核心",
+      "summary": "Futuristic chamber with energy rings and cooling spokes. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "scifi",
+      "tags": [
+        "scifi",
+        "game",
+        "low-poly",
+        "reactor",
+        "energy",
+        "core"
+      ],
+      "generator": "createReactorEnergyCore",
+      "source_path": "src/models/reactor_energy_core.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.55,
+        1.82,
+        1.48
+      ],
+      "accent": "#a3becb",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/reactor-energy-core.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "scifi.ancient-portal-gateway.001",
+      "slug": "ancient-portal-gateway",
+      "title": "Ancient Portal Gateway",
+      "title_zh": "古代传送门",
+      "summary": "Stone gateway and concentric portal energy effect. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "scifi",
+      "tags": [
+        "scifi",
+        "game",
+        "low-poly",
+        "ancient",
+        "portal",
+        "gateway"
+      ],
+      "generator": "createAncientPortalGateway",
+      "source_path": "src/models/ancient_portal_gateway.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.58,
+        3.64,
+        0.71
+      ],
+      "accent": "#a3becb",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/ancient-portal-gateway.webp",
+      "collection": "v0.4"
+    },
+    {
+      "id": "scifi.cargo-loading-mech.001",
+      "slug": "cargo-loading-mech",
+      "title": "Cargo Loading Mech",
+      "title_zh": "货运装载机甲",
+      "summary": "Industrial utility mech with cargo grippers and hydraulic supports. Editable original stylized game-scene blockout; not manufacturing CAD.",
+      "category": "scifi",
+      "tags": [
+        "scifi",
+        "game",
+        "low-poly",
+        "cargo",
+        "loading",
+        "mech"
+      ],
+      "generator": "createCargoLoadingMech",
+      "source_path": "src/models/cargo_loading_mech.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.62,
+        2.71,
+        1.42
+      ],
+      "accent": "#a3becb",
+      "style": "Stylized",
+      "preview_path": "public/thumbs/cargo-loading-mech.webp",
+      "collection": "v0.4"
     }
   ]
 }

@@ -32,6 +32,7 @@ for (const asset of manifest.assets) {
       ? node.geometry.index.count / 3 : node.geometry.attributes.position.count / 3;
   });
   if (meshes < 1) throw new Error('Empty asset: ' + asset.id);
+  if (asset.collection === 'v0.4' && meshes < 5) throw new Error('Insufficient authored parts for v0.4: ' + asset.id);
   const boundingBox = new THREE.Box3().setFromObject(object);
   const dimensions = boundingBox.getSize(new THREE.Vector3()).toArray();
   if (dimensions.some(n => !Number.isFinite(n) || n <= 0)) {
@@ -55,5 +56,7 @@ for (const asset of manifest.assets) {
   checked += 1;
   console.log('OK', asset.id, { meshes, vertices, triangles: Math.round(triangles), dimensions });
 }
-if (checked < 45) throw new Error('Expected at least forty-five authored asset models');
+if (checked !== manifest.assets.filter(asset => asset.kind === 'procedural').length || checked < 85) {
+  throw new Error('Expected all 85+ registered procedural models to validate; found ' + checked);
+}
 console.log('Verified', checked, 'procedural models');
