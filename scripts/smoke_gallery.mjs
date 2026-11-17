@@ -31,12 +31,19 @@ try{
  await recent.click();
  await page.locator('.detail-modal').waitFor({state:'visible'});
  await page.locator('#close-detail').click();
+ const newest = page.locator('[data-id="scifi.holographic-command-console.001"]');
+ if(await newest.count()!==1)throw Error('V0.5 hologram console missing');
+ await newest.scrollIntoViewIfNeeded();
+ await newest.locator('img').evaluate(img=>img.decode());
+ await newest.click();
+ await page.locator('.detail-modal').waitFor({state:'visible'});
+ await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
  await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
    null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
- console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4 inspector and Chinese search');
+ console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5 inspectors and Chinese search');
 }finally{
  await browser?.close();
  await new Promise(resolve=>server?.httpServer?.close(resolve)??resolve());
