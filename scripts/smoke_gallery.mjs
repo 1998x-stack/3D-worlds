@@ -5,6 +5,8 @@ import { chromium } from 'playwright';
 import { readFileSync } from 'node:fs';
 const registered=JSON.parse(readFileSync(new URL('../catalog/public_models.json',import.meta.url),'utf8')).assets;
 const expected=registered.length;
+const total=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8')).assets.length;
+if(total<=500 && expected!==total)throw Error('Static Gallery silently truncated: '+expected+'/'+total);
 let server, browser;
 try{
  server=await preview({preview:{host:'127.0.0.1',port:4180,strictPort:true}});
@@ -46,12 +48,20 @@ try{
  await page.locator('.detail-modal').waitFor({state:'visible'});
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('V0.6 inspector canvas missing');
  await page.locator('#close-detail').click();
+ const v07 = page.locator('[data-id="scifi.orbital-hydroponic-growing-tower.001"]');
+ if(await v07.count()!==1) throw Error('V0.7 orbital hydroponic tower missing');
+ await v07.scrollIntoViewIfNeeded();
+ await v07.locator('img').evaluate(img=>img.decode());
+ await v07.click();
+ await page.locator('.detail-modal').waitFor({state:'visible'});
+ if(!await canvas.evaluate(el=>el.width>0&&el.height>0)) throw Error('V0.7 WebGL inspector canvas missing');
+ await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
  await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
    null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
- console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6 inspectors and Chinese search');
+ console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7 inspectors and Chinese search');
 }finally{
  await browser?.close();
  await new Promise(resolve=>server?.httpServer?.close(resolve)??resolve());

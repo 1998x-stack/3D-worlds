@@ -5161,6 +5161,1356 @@
       "collection": "v0.6",
       "preview_path": "public/thumbs/woodworking-bench-vise.webp",
       "accent": "#c7bdad"
+    },
+    {
+      "id": "furniture.acoustic-reading-pod-chair.001",
+      "slug": "acoustic-reading-pod-chair",
+      "title": "Acoustic Reading Pod Chair",
+      "title_zh": "隔音阅读舱座椅",
+      "summary": "High-sided private reading chair with upholstered alcove, cushion and integrated reading light",
+      "category": "furniture",
+      "tags": [
+        "reading",
+        "chair",
+        "privacy"
+      ],
+      "dimensions_m": [
+        1.25,
+        1.72,
+        1.03
+      ],
+      "generator": "createAcousticReadingPodChair",
+      "source_path": "src/models/acoustic_reading_pod_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/acoustic-reading-pod-chair.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "vehicles.airport-baggage-tug.001",
+      "slug": "airport-baggage-tug",
+      "title": "Airport Baggage Tug",
+      "title_zh": "机场行李牵引车",
+      "summary": "Small airport tug with tow hitch, cabin, orange safety beacon and four wheels",
+      "category": "vehicles",
+      "tags": [
+        "airport",
+        "baggage",
+        "tug"
+      ],
+      "dimensions_m": [
+        1.6,
+        1.79,
+        2.44
+      ],
+      "generator": "createAirportBaggageTug",
+      "source_path": "src/models/airport_baggage_tug.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/airport-baggage-tug.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "scifi.alien-botanical-specimen.001",
+      "slug": "alien-botanical-specimen",
+      "title": "Alien Botanical Specimen",
+      "title_zh": "外星植物研究标本",
+      "summary": "Fictional alien bioluminescent plant with spiral stalk, luminous pods and transparent sample vessel",
+      "category": "scifi",
+      "tags": [
+        "alien",
+        "botanical",
+        "specimen"
+      ],
+      "dimensions_m": [
+        1.34,
+        2.04,
+        1.18
+      ],
+      "generator": "createAlienBotanicalSpecimen",
+      "source_path": "src/models/alien_botanical_specimen.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/alien-botanical-specimen.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "urban.automated-parcel-locker-wall.001",
+      "slug": "automated-parcel-locker-wall",
+      "title": "Automated Parcel Locker Wall",
+      "title_zh": "智能快递自提柜墙",
+      "summary": "Self-service parcel locker station with compartment doors, scanner and touchscreen",
+      "category": "urban",
+      "tags": [
+        "parcel",
+        "locker",
+        "urban"
+      ],
+      "dimensions_m": [
+        2.12,
+        2.11,
+        0.62
+      ],
+      "generator": "createAutomatedParcelLockerWall",
+      "source_path": "src/models/automated_parcel_locker_wall.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/automated-parcel-locker-wall.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "urban.automatic-parking-barrier.001",
+      "slug": "automatic-parking-barrier",
+      "title": "Automatic Parking Barrier",
+      "title_zh": "停车场自动道闸",
+      "summary": "Parking lot gate with hinged striped beam, control cabinet, infrared sensor and road anchors",
+      "category": "urban",
+      "tags": [
+        "parking",
+        "barrier",
+        "gate"
+      ],
+      "dimensions_m": [
+        3.38,
+        1.14,
+        0.51
+      ],
+      "generator": "createAutomaticParkingBarrier",
+      "source_path": "src/models/automatic_parking_barrier.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/automatic-parking-barrier.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "kitchen.bakery-bread-display-rack.001",
+      "slug": "bakery-bread-display-rack",
+      "title": "Bakery Bread Display Rack",
+      "title_zh": "面包店展示货架",
+      "summary": "Open bakery bread stand with angled shelves, loaves and price tags",
+      "category": "kitchen",
+      "tags": [
+        "bakery",
+        "bread",
+        "display"
+      ],
+      "dimensions_m": [
+        1.33,
+        1.48,
+        0.7
+      ],
+      "generator": "createBakeryBreadDisplayRack",
+      "source_path": "src/models/bakery_bread_display_rack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bakery-bread-display-rack.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "kitchen.bamboo-dimsum-steamer-set.001",
+      "slug": "bamboo-dimsum-steamer-set",
+      "title": "Bamboo Dimsum Steamer Set",
+      "title_zh": "竹制蒸笼点心组合",
+      "summary": "Stacked bamboo dim sum steamers with woven rings, dumplings and serving tray",
+      "category": "kitchen",
+      "tags": [
+        "dimsum",
+        "steamer",
+        "bamboo"
+      ],
+      "dimensions_m": [
+        0.49,
+        0.59,
+        0.52
+      ],
+      "generator": "createBambooDimsumSteamerSet",
+      "source_path": "src/models/bamboo_dimsum_steamer_set.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bamboo-dimsum-steamer-set.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.bench-belt-sander.001",
+      "slug": "bench-belt-sander",
+      "title": "Bench Belt Sander",
+      "title_zh": "台式砂带打磨机",
+      "summary": "Stationary belt sander with abrasive loop, motor, work rest and dust exhaust port",
+      "category": "tools",
+      "tags": [
+        "sander",
+        "abrasive",
+        "workshop"
+      ],
+      "dimensions_m": [
+        0.58,
+        0.63,
+        0.81
+      ],
+      "generator": "createBenchBeltSander",
+      "source_path": "src/models/bench_belt_sander.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bench-belt-sander.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "sports.boxing-heavy-bag-station.001",
+      "slug": "boxing-heavy-bag-station",
+      "title": "Boxing Heavy Bag Station",
+      "title_zh": "拳击沙袋训练站",
+      "summary": "Standing exercise bag rig with steel top arm, chains, reinforced heavy bag and floor mat",
+      "category": "sports",
+      "tags": [
+        "boxing",
+        "bag",
+        "training"
+      ],
+      "dimensions_m": [
+        1.28,
+        2.45,
+        1.11
+      ],
+      "generator": "createBoxingHeavyBagStation",
+      "source_path": "src/models/boxing_heavy_bag_station.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/boxing-heavy-bag-station.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "architecture.castle-crenellated-wall-module.001",
+      "slug": "castle-crenellated-wall-module",
+      "title": "Castle Crenellated Wall Module",
+      "title_zh": "城堡垛口墙模块",
+      "summary": "Medieval masonry battlement wall tile with merlons and arrow slit",
+      "category": "architecture",
+      "tags": [
+        "castle",
+        "fortress",
+        "masonry"
+      ],
+      "dimensions_m": [
+        3.2,
+        2.76,
+        0.81
+      ],
+      "generator": "createCastleCrenellatedWallModule",
+      "source_path": "src/models/castle_crenellated_wall_module.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/castle-crenellated-wall-module.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "vehicles.coastal-rescue-hovercraft.001",
+      "slug": "coastal-rescue-hovercraft",
+      "title": "Coastal Rescue Hovercraft",
+      "title_zh": "海上救援气垫船",
+      "summary": "Rescue hovercraft with inflatable skirt, cabin, fan guard, searchlight and deck equipment",
+      "category": "vehicles",
+      "tags": [
+        "hovercraft",
+        "rescue",
+        "marine"
+      ],
+      "dimensions_m": [
+        2.51,
+        1.91,
+        3.86
+      ],
+      "generator": "createCoastalRescueHovercraft",
+      "source_path": "src/models/coastal_rescue_hovercraft.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/coastal-rescue-hovercraft.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "bathroom.compact-cedar-sauna-cabin.001",
+      "slug": "compact-cedar-sauna-cabin",
+      "title": "Compact Cedar Sauna Cabin",
+      "title_zh": "小型雪松桑拿房",
+      "summary": "Cedar mini-sauna enclosure with glazing, stacked benches, heater and ventilation slats",
+      "category": "bathroom",
+      "tags": [
+        "sauna",
+        "cedar",
+        "wellness"
+      ],
+      "dimensions_m": [
+        1.73,
+        2.2,
+        1.44
+      ],
+      "generator": "createCompactCedarSaunaCabin",
+      "source_path": "src/models/compact_cedar_sauna_cabin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/compact-cedar-sauna-cabin.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "kitchen.countertop-food-processor.001",
+      "slug": "countertop-food-processor",
+      "title": "Countertop Food Processor",
+      "title_zh": "台式多功能料理机",
+      "summary": "Transparent blender processor with chopping blades, feed tube and LCD control",
+      "category": "kitchen",
+      "tags": [
+        "processor",
+        "food-prep",
+        "appliance"
+      ],
+      "dimensions_m": [
+        0.32,
+        0.58,
+        0.37
+      ],
+      "generator": "createCountertopFoodProcessor",
+      "source_path": "src/models/countertop_food_processor.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/countertop-food-processor.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.digital-multimeter-kit.001",
+      "slug": "digital-multimeter-kit",
+      "title": "Digital Multimeter Kit",
+      "title_zh": "数字万用表检测套装",
+      "summary": "Handheld electrical multimeter with LCD, rotary range switch and pair of probe leads",
+      "category": "tools",
+      "tags": [
+        "multimeter",
+        "measurement",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.24,
+        0.51,
+        0.23
+      ],
+      "generator": "createDigitalMultimeterKit",
+      "source_path": "src/models/digital_multimeter_kit.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/digital-multimeter-kit.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "kitchen.digital-rice-cooker.001",
+      "slug": "digital-rice-cooker",
+      "title": "Digital Rice Cooker",
+      "title_zh": "智能电饭煲",
+      "summary": "Smart kitchen rice cooker with sealed lid, digital display and serving scoop",
+      "category": "kitchen",
+      "tags": [
+        "rice",
+        "cooker",
+        "appliance"
+      ],
+      "dimensions_m": [
+        0.42,
+        0.43,
+        0.39
+      ],
+      "generator": "createDigitalRiceCooker",
+      "source_path": "src/models/digital_rice_cooker.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/digital-rice-cooker.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "characters.field-botanist-mannequin.001",
+      "slug": "field-botanist-mannequin",
+      "title": "Field Botanist Mannequin",
+      "title_zh": "野外植物学家原型",
+      "summary": "Unrigged botanist with brim hat, herbarium case, field notebook and walking boots",
+      "category": "characters",
+      "tags": [
+        "botanist",
+        "research",
+        "character"
+      ],
+      "dimensions_m": [
+        1.02,
+        1.89,
+        0.8
+      ],
+      "generator": "createFieldBotanistMannequin",
+      "source_path": "src/models/field_botanist_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/field-botanist-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "urban.folding-newsstand-kiosk.001",
+      "slug": "folding-newsstand-kiosk",
+      "title": "Folding Newsstand Kiosk",
+      "title_zh": "街头报刊售卖亭",
+      "summary": "Outdoor press kiosk with folding newspaper racks, awning, price strip and shutters",
+      "category": "urban",
+      "tags": [
+        "newsstand",
+        "retail",
+        "street"
+      ],
+      "dimensions_m": [
+        1.97,
+        2.34,
+        1.35
+      ],
+      "generator": "createFoldingNewsstandKiosk",
+      "source_path": "src/models/folding_newsstand_kiosk.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/folding-newsstand-kiosk.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "decor.glass-desert-terrarium.001",
+      "slug": "glass-desert-terrarium",
+      "title": "Glass Desert Terrarium",
+      "title_zh": "玻璃沙漠微景观",
+      "summary": "Glass succulent terrarium with sand layers and pebbles",
+      "category": "decor",
+      "tags": [
+        "terrarium",
+        "plant",
+        "glass"
+      ],
+      "dimensions_m": [
+        0.58,
+        0.61,
+        0.48
+      ],
+      "generator": "createGlassDesertTerrarium",
+      "source_path": "src/models/glass_desert_terrarium.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/glass-desert-terrarium.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "architecture.glass-greenhouse-bay.001",
+      "slug": "glass-greenhouse-bay",
+      "title": "Glass Greenhouse Bay",
+      "title_zh": "玻璃温室单元",
+      "summary": "Modular greenhouse with glass roof, irrigated planters and door",
+      "category": "architecture",
+      "tags": [
+        "greenhouse",
+        "architecture",
+        "modular"
+      ],
+      "dimensions_m": [
+        2.41,
+        2.63,
+        2.13
+      ],
+      "generator": "createGlassGreenhouseBay",
+      "source_path": "src/models/glass_greenhouse_bay.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/glass-greenhouse-bay.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "decor.hanging-macrame-planter.001",
+      "slug": "hanging-macrame-planter",
+      "title": "Hanging Macrame Planter",
+      "title_zh": "编织吊篮绿植",
+      "summary": "Braided macrame suspension with clay plant pot and trailing vines",
+      "category": "decor",
+      "tags": [
+        "macrame",
+        "hanger",
+        "plant"
+      ],
+      "dimensions_m": [
+        0.79,
+        1.36,
+        0.75
+      ],
+      "generator": "createHangingMacramePlanter",
+      "source_path": "src/models/hanging_macrame_planter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/hanging-macrame-planter.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "bathroom.heated-wall-towel-rail.001",
+      "slug": "heated-wall-towel-rail",
+      "title": "Heated Wall Towel Rail",
+      "title_zh": "壁挂式电热毛巾架",
+      "summary": "Stainless electric ladder-style towel heater with vertical pipes and towel drape",
+      "category": "bathroom",
+      "tags": [
+        "towel",
+        "heater",
+        "bathroom"
+      ],
+      "dimensions_m": [
+        0.77,
+        1.22,
+        0.19
+      ],
+      "generator": "createHeatedWallTowelRail",
+      "source_path": "src/models/heated_wall_towel_rail.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/heated-wall-towel-rail.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "tools.hydraulic-floor-jack.001",
+      "slug": "hydraulic-floor-jack",
+      "title": "Hydraulic Floor Jack",
+      "title_zh": "液压汽车地牛千斤顶",
+      "summary": "Low-profile wheeled car jack with hydraulic cylinder, lifting saddle and long pumping handle",
+      "category": "tools",
+      "tags": [
+        "jack",
+        "automotive",
+        "hydraulic"
+      ],
+      "dimensions_m": [
+        0.47,
+        0.5,
+        0.99
+      ],
+      "generator": "createHydraulicFloorJack",
+      "source_path": "src/models/hydraulic_floor_jack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/hydraulic-floor-jack.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "characters.industrial-mechanic-mannequin.001",
+      "slug": "industrial-mechanic-mannequin",
+      "title": "Industrial Mechanic Mannequin",
+      "title_zh": "工业机械维修师原型",
+      "summary": "Unrigged industrial mechanic with coveralls, safety visor, tool belt and wrench",
+      "category": "characters",
+      "tags": [
+        "mechanic",
+        "maintenance",
+        "character"
+      ],
+      "dimensions_m": [
+        1.09,
+        1.92,
+        0.75
+      ],
+      "generator": "createIndustrialMechanicMannequin",
+      "source_path": "src/models/industrial_mechanic_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/industrial-mechanic-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "decor.kinetic-balance-sculpture.001",
+      "slug": "kinetic-balance-sculpture",
+      "title": "Kinetic Balance Sculpture",
+      "title_zh": "动感平衡艺术雕塑",
+      "summary": "Kinetic desktop mobile with counterweighted rods, fins and stone pedestal",
+      "category": "decor",
+      "tags": [
+        "kinetic",
+        "sculpture",
+        "balance"
+      ],
+      "dimensions_m": [
+        1.25,
+        1.65,
+        0.87
+      ],
+      "generator": "createKineticBalanceSculpture",
+      "source_path": "src/models/kinetic_balance_sculpture.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/kinetic-balance-sculpture.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "nature.mangrove-root-island.001",
+      "slug": "mangrove-root-island",
+      "title": "Mangrove Root Island",
+      "title_zh": "红树林气根小岛",
+      "summary": "Coastal mangrove with stilt roots, branching trunk and shallow blue tidal water",
+      "category": "nature",
+      "tags": [
+        "mangrove",
+        "wetland",
+        "coastal"
+      ],
+      "dimensions_m": [
+        2.16,
+        2.61,
+        1.9
+      ],
+      "generator": "createMangroveRootIsland",
+      "source_path": "src/models/mangrove_root_island.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mangrove-root-island.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "sports.mini-golf-putting-green.001",
+      "slug": "mini-golf-putting-green",
+      "title": "Mini Golf Putting Green",
+      "title_zh": "迷你高尔夫推杆练习场",
+      "summary": "Portable putting green with synthetic turf, two ball holes, flag, golf balls and edge rail",
+      "category": "sports",
+      "tags": [
+        "golf",
+        "putting",
+        "sport"
+      ],
+      "dimensions_m": [
+        2.43,
+        0.37,
+        1.54
+      ],
+      "generator": "createMiniGolfPuttingGreen",
+      "source_path": "src/models/mini_golf_putting_green.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mini-golf-putting-green.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "tools.mobile-welding-tool-cart.001",
+      "slug": "mobile-welding-tool-cart",
+      "title": "Mobile Welding Tool Cart",
+      "title_zh": "移动焊接工具车",
+      "summary": "Steel welding cart with gas cylinder cradle, hose reel, welding machine and pushbar",
+      "category": "tools",
+      "tags": [
+        "welding",
+        "cart",
+        "workshop"
+      ],
+      "dimensions_m": [
+        0.88,
+        1.21,
+        0.61
+      ],
+      "generator": "createMobileWeldingToolCart",
+      "source_path": "src/models/mobile_welding_tool_cart.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mobile-welding-tool-cart.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "architecture.modular-glass-curtain-wall.001",
+      "slug": "modular-glass-curtain-wall",
+      "title": "Modular Glass Curtain Wall",
+      "title_zh": "建筑玻璃幕墙模块",
+      "summary": "Reusable office facade tile with aluminum mullions, glass panes and anchors",
+      "category": "architecture",
+      "tags": [
+        "curtain-wall",
+        "facade",
+        "architecture"
+      ],
+      "dimensions_m": [
+        2.45,
+        3.02,
+        0.31
+      ],
+      "generator": "createModularGlassCurtainWall",
+      "source_path": "src/models/modular_glass_curtain_wall.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/modular-glass-curtain-wall.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "furniture.modular-stair-storage-cabinet.001",
+      "slug": "modular-stair-storage-cabinet",
+      "title": "Modular Stair Storage Cabinet",
+      "title_zh": "阶梯式组合储物柜",
+      "summary": "Three-level stepped storage cabinet with cubbies, drawer pulls and contrasting stair tread",
+      "category": "furniture",
+      "tags": [
+        "storage",
+        "modular",
+        "stair"
+      ],
+      "dimensions_m": [
+        1.65,
+        1.56,
+        0.49
+      ],
+      "generator": "createModularStairStorageCabinet",
+      "source_path": "src/models/modular_stair_storage_cabinet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/modular-stair-storage-cabinet.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "vehicles.mountain-cable-car-gondola.001",
+      "slug": "mountain-cable-car-gondola",
+      "title": "Mountain Cable Car Gondola",
+      "title_zh": "山地缆车吊厢",
+      "summary": "Suspended passenger gondola with panoramic glass, overhead hanger and cable clamp",
+      "category": "vehicles",
+      "tags": [
+        "gondola",
+        "mountain",
+        "transit"
+      ],
+      "dimensions_m": [
+        1.82,
+        2.53,
+        1.98
+      ],
+      "generator": "createMountainCableCarGondola",
+      "source_path": "src/models/mountain_cable_car_gondola.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mountain-cable-car-gondola.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "electronics.omnidirectional-conference-camera.001",
+      "slug": "omnidirectional-conference-camera",
+      "title": "Omnidirectional Conference Camera",
+      "title_zh": "全向会议摄像机",
+      "summary": "360-degree conference camera with four radial lenses, sound pickup ring and indicator base",
+      "category": "electronics",
+      "tags": [
+        "conference",
+        "camera",
+        "meeting"
+      ],
+      "dimensions_m": [
+        0.22,
+        0.35,
+        0.23
+      ],
+      "generator": "createOmnidirectionalConferenceCamera",
+      "source_path": "src/models/omnidirectional_conference_camera.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/omnidirectional-conference-camera.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "scifi.orbital-hydroponic-growing-tower.001",
+      "slug": "orbital-hydroponic-growing-tower",
+      "title": "Orbital Hydroponic Growing Tower",
+      "title_zh": "轨道空间站水培塔",
+      "summary": "Vertical space hydroponic grower with LED bars, stacked trays, transparent reservoir and leafy food crops",
+      "category": "scifi",
+      "tags": [
+        "hydroponic",
+        "orbital",
+        "agriculture"
+      ],
+      "dimensions_m": [
+        1.33,
+        2.62,
+        1.26
+      ],
+      "generator": "createOrbitalHydroponicGrowingTower",
+      "source_path": "src/models/orbital_hydroponic_growing_tower.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/orbital-hydroponic-growing-tower.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "characters.orchestra-conductor-mannequin.001",
+      "slug": "orchestra-conductor-mannequin",
+      "title": "Orchestra Conductor Mannequin",
+      "title_zh": "交响乐团指挥人物原型",
+      "summary": "Unrigged stage conductor in tailcoat carrying baton and pocket square",
+      "category": "characters",
+      "tags": [
+        "conductor",
+        "music",
+        "character"
+      ],
+      "dimensions_m": [
+        1.08,
+        1.95,
+        0.69
+      ],
+      "generator": "createOrchestraConductorMannequin",
+      "source_path": "src/models/orchestra_conductor_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/orchestra-conductor-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "characters.paramedic-mannequin.001",
+      "slug": "paramedic-mannequin",
+      "title": "Paramedic Mannequin",
+      "title_zh": "急救医护人员原型",
+      "summary": "Unrigged paramedic wearing reflective uniform, medical satchel and portable radio",
+      "category": "characters",
+      "tags": [
+        "paramedic",
+        "rescue",
+        "character"
+      ],
+      "dimensions_m": [
+        0.99,
+        1.91,
+        0.74
+      ],
+      "generator": "createParamedicMannequin",
+      "source_path": "src/models/paramedic_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/paramedic-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "urban.playground-spiral-slide.001",
+      "slug": "playground-spiral-slide",
+      "title": "Playground Spiral Slide",
+      "title_zh": "儿童游乐旋转滑梯",
+      "summary": "Children's playground slide with raised deck, helical-style descending ramp, ladder and guard rails",
+      "category": "urban",
+      "tags": [
+        "playground",
+        "slide",
+        "park"
+      ],
+      "dimensions_m": [
+        2.38,
+        2.64,
+        2.26
+      ],
+      "generator": "createPlaygroundSpiralSlide",
+      "source_path": "src/models/playground_spiral_slide.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/playground-spiral-slide.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "electronics.portable-digital-oscilloscope.001",
+      "slug": "portable-digital-oscilloscope",
+      "title": "Portable Digital Oscilloscope",
+      "title_zh": "便携数字示波器",
+      "summary": "Benchtop waveform oscilloscope with dual probe ports, side knobs and carry handle",
+      "category": "electronics",
+      "tags": [
+        "oscilloscope",
+        "measurement",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.44,
+        0.31,
+        0.21
+      ],
+      "generator": "createPortableDigitalOscilloscope",
+      "source_path": "src/models/portable_digital_oscilloscope.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/portable-digital-oscilloscope.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "bathroom.recessed-shower-shelf-niche.001",
+      "slug": "recessed-shower-shelf-niche",
+      "title": "Recessed Shower Shelf Niche",
+      "title_zh": "淋浴墙体内嵌置物格",
+      "summary": "Tile-lined wall niche with two recessed compartments, skincare bottles and LED rim",
+      "category": "bathroom",
+      "tags": [
+        "shower",
+        "niche",
+        "storage"
+      ],
+      "dimensions_m": [
+        0.91,
+        1.42,
+        0.27
+      ],
+      "generator": "createRecessedShowerShelfNiche",
+      "source_path": "src/models/recessed_shower_shelf_niche.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/recessed-shower-shelf-niche.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "vehicles.retro-ice-cream-truck.001",
+      "slug": "retro-ice-cream-truck",
+      "title": "Retro Ice Cream Truck",
+      "title_zh": "复古冰淇淋售卖车",
+      "summary": "Pastel mobile ice cream van with service hatch, striped canopy, freezer counter and wheels",
+      "category": "vehicles",
+      "tags": [
+        "ice-cream",
+        "truck",
+        "street-food"
+      ],
+      "dimensions_m": [
+        2.13,
+        2.61,
+        4.02
+      ],
+      "generator": "createRetroIceCreamTruck",
+      "source_path": "src/models/retro_ice_cream_truck.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/retro-ice-cream-truck.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "electronics.smart-robot-floor-vacuum.001",
+      "slug": "smart-robot-floor-vacuum",
+      "title": "Smart Robot Floor Vacuum",
+      "title_zh": "智能扫地清洁机器人",
+      "summary": "Disk robot vacuum with lidar turret, bumper, wheel housings, brush and docking marker",
+      "category": "electronics",
+      "tags": [
+        "robot",
+        "vacuum",
+        "home"
+      ],
+      "dimensions_m": [
+        0.37,
+        0.21,
+        0.37
+      ],
+      "generator": "createSmartRobotFloorVacuum",
+      "source_path": "src/models/smart_robot_floor_vacuum.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/smart-robot-floor-vacuum.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "nature.snowy-fir-grove.001",
+      "slug": "snowy-fir-grove",
+      "title": "Snowy Fir Grove",
+      "title_zh": "积雪冷杉树林",
+      "summary": "Cluster of five fir trees with multi-tiered conifer foliage, snow caps and icy terrain",
+      "category": "nature",
+      "tags": [
+        "winter",
+        "fir",
+        "forest"
+      ],
+      "dimensions_m": [
+        2.75,
+        3.21,
+        2.17
+      ],
+      "generator": "createSnowyFirGrove",
+      "source_path": "src/models/snowy_fir_grove.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/snowy-fir-grove.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "scifi.solar-sail-deep-space-probe.001",
+      "slug": "solar-sail-deep-space-probe",
+      "title": "Solar Sail Deep Space Probe",
+      "title_zh": "太阳帆深空探测器",
+      "summary": "Nonweapon space science probe with large reflective triangular sail panels, central satellite and telemetry antenna",
+      "category": "scifi",
+      "tags": [
+        "solar-sail",
+        "probe",
+        "space"
+      ],
+      "dimensions_m": [
+        3.16,
+        3.29,
+        0.92
+      ],
+      "generator": "createSolarSailDeepSpaceProbe",
+      "source_path": "src/models/solar_sail_deep_space_probe.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/solar-sail-deep-space-probe.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "bathroom.spa-foot-soak-station.001",
+      "slug": "spa-foot-soak-station",
+      "title": "Spa Foot Soak Station",
+      "title_zh": "足浴泡脚护理站",
+      "summary": "Compact foot soak chair and inset basin with massage rollers, controls and drainage",
+      "category": "bathroom",
+      "tags": [
+        "spa",
+        "footbath",
+        "relaxation"
+      ],
+      "dimensions_m": [
+        0.79,
+        0.69,
+        0.91
+      ],
+      "generator": "createSpaFootSoakStation",
+      "source_path": "src/models/spa_foot_soak_station.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/spa-foot-soak-station.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "nature.sunflower-farm-strip.001",
+      "slug": "sunflower-farm-strip",
+      "title": "Sunflower Farm Strip",
+      "title_zh": "向日葵农田地块",
+      "summary": "Three neat rows of sunflowers with layered petals, seed disks, stems and farmland furrows",
+      "category": "nature",
+      "tags": [
+        "sunflower",
+        "field",
+        "farmland"
+      ],
+      "dimensions_m": [
+        1.98,
+        1.71,
+        1.56
+      ],
+      "generator": "createSunflowerFarmStrip",
+      "source_path": "src/models/sunflower_farm_strip.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/sunflower-farm-strip.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "furniture.tilting-architect-drafting-desk.001",
+      "slug": "tilting-architect-drafting-desk",
+      "title": "Tilting Architect Drafting Desk",
+      "title_zh": "可倾斜建筑绘图桌",
+      "summary": "Adjustable angled drafting desktop with angle locks, ruler tray and tubular height frame",
+      "category": "furniture",
+      "tags": [
+        "drafting",
+        "studio",
+        "adjustable"
+      ],
+      "dimensions_m": [
+        1.45,
+        1.37,
+        0.93
+      ],
+      "generator": "createTiltingArchitectDraftingDesk",
+      "source_path": "src/models/tilting_architect_drafting_desk.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/tilting-architect-drafting-desk.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "architecture.timber-garden-pergola.001",
+      "slug": "timber-garden-pergola",
+      "title": "Timber Garden Pergola",
+      "title_zh": "花园木质廊架",
+      "summary": "Open timber garden pergola with posts, rafters and grapevine supports",
+      "category": "architecture",
+      "tags": [
+        "pergola",
+        "garden",
+        "timber"
+      ],
+      "dimensions_m": [
+        3.14,
+        2.52,
+        2.67
+      ],
+      "generator": "createTimberGardenPergola",
+      "source_path": "src/models/timber_garden_pergola.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/timber-garden-pergola.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "sports.track-hurdle-training-set.001",
+      "slug": "track-hurdle-training-set",
+      "title": "Track Hurdle Training Set",
+      "title_zh": "田径跨栏训练组合",
+      "summary": "Three adjustable track hurdles with striped crossbars, stabilizer supports and numbered height marks",
+      "category": "sports",
+      "tags": [
+        "hurdles",
+        "track",
+        "training"
+      ],
+      "dimensions_m": [
+        2.54,
+        1.19,
+        0.75
+      ],
+      "generator": "createTrackHurdleTrainingSet",
+      "source_path": "src/models/track_hurdle_training_set.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/track-hurdle-training-set.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "nature.tropical-coral-reef-garden.001",
+      "slug": "tropical-coral-reef-garden",
+      "title": "Tropical Coral Reef Garden",
+      "title_zh": "热带珊瑚礁群",
+      "summary": "Underwater reef tile with branching corals, tube sponges, sea grass and two stylized fish",
+      "category": "nature",
+      "tags": [
+        "coral",
+        "ocean",
+        "reef"
+      ],
+      "dimensions_m": [
+        2.04,
+        1.17,
+        1.7
+      ],
+      "generator": "createTropicalCoralReefGarden",
+      "source_path": "src/models/tropical_coral_reef_garden.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/tropical-coral-reef-garden.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "decor.vintage-brass-gramophone.001",
+      "slug": "vintage-brass-gramophone",
+      "title": "Vintage Brass Gramophone",
+      "title_zh": "黄铜留声机",
+      "summary": "Analog gramophone with brass horn, record, walnut plinth and crank",
+      "category": "decor",
+      "tags": [
+        "gramophone",
+        "vinyl",
+        "vintage"
+      ],
+      "dimensions_m": [
+        0.64,
+        0.89,
+        0.65
+      ],
+      "generator": "createVintageBrassGramophone",
+      "source_path": "src/models/vintage_brass_gramophone.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/vintage-brass-gramophone.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "electronics.vintage-film-projector.001",
+      "slug": "vintage-film-projector",
+      "title": "Vintage Film Projector",
+      "title_zh": "复古胶片放映机",
+      "summary": "Twin-reel analog movie projector with optical lens, feed rollers, drive housing and tripod",
+      "category": "electronics",
+      "tags": [
+        "film",
+        "projector",
+        "retro"
+      ],
+      "dimensions_m": [
+        0.61,
+        0.59,
+        0.56
+      ],
+      "generator": "createVintageFilmProjector",
+      "source_path": "src/models/vintage_film_projector.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/vintage-film-projector.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "furniture.wrought-iron-garden-swing.001",
+      "slug": "wrought-iron-garden-swing",
+      "title": "Wrought Iron Garden Swing",
+      "title_zh": "铁艺花园双人秋千",
+      "summary": "Outdoor A-frame two-person swing with chained bench, curved armrests and cushion slats",
+      "category": "furniture",
+      "tags": [
+        "garden",
+        "swing",
+        "outdoor"
+      ],
+      "dimensions_m": [
+        2.28,
+        2.12,
+        1.5
+      ],
+      "generator": "createWroughtIronGardenSwing",
+      "source_path": "src/models/wrought_iron_garden_swing.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/wrought-iron-garden-swing.webp",
+      "accent": "#c8b3a4"
     }
   ]
 }

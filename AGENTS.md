@@ -72,3 +72,10 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - Run `tests/test_collection_v06.py` and full asset pipeline: 185 WebP, 185 AVIF, 555 GLB variants.
 - API limit is 100 per request. Validate 185 model records with keyset pagination, not a single page.
 - Keep the portable Codex, Claude and Pi Skill v2 bundles unchanged unless mirrored validation is run.
+
+## V0.7 collection integrity (235 assets)
+- `catalog/collections/v07.json` registers exactly 50 new original generators across all 13 categories, with 1,357 individually named 3D primitives.
+- Retain all 185 V0.1–V0.6 assets, IDs and source paths unchanged; don't override geometry sources of previously published assets.
+- V0.7 generator requires source-backed `assetMeta`, `buildRecipe`, Y-up meter dimensions, MIT author/license and at least nine unique named geometry parts.
+- End-to-end acceptance: 235 WebP, 235 AVIF previews; 705 verified Meshopt GLB binaries; 705 local content-addressed published objects; SQLite and remote cursor pagination to 235 unique IDs; Gallery browser smoke and MCP v2.
+- Run `tests/test_collection_v07.py` and all legacy collection tests. Preserve and preflight the portable Codex/Claude/Pi Skill v2 mirrors.
