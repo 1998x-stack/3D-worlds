@@ -3,7 +3,9 @@
 import { spawn } from 'node:child_process';
 import { createServer } from 'vite';
 import { chromium } from 'playwright';
+import { readFileSync } from 'node:fs';
 const API='http://127.0.0.1:8071', FRONTEND='http://127.0.0.1:5174';
+const expected=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8')).assets.length;
 process.env.VITE_CATALOG_API_URL=API;
 const server=spawn('python3',['services/search_api.py'],{
   env:{...process.env,THREED_WORLDS_HOST:'127.0.0.1',THREED_WORLDS_PORT:'8071',
@@ -27,12 +29,17 @@ try{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(FRONTEND+'/',{waitUntil:'networkidle',timeout:45000});
  await page.waitForFunction(()=>document.querySelectorAll('.asset-card').length===24,null,{timeout:12000});
- await page.locator('#load-more').click();
- await page.waitForFunction(()=>document.querySelectorAll('.asset-card').length===45,null,{timeout:12000});
+ for(let target=48;target<=expected+24;target+=24){
+   if(await page.locator('.asset-card').count()===expected)break;
+   await page.locator('#load-more').click();
+   await page.waitForFunction(limit=>document.querySelectorAll('.asset-card').length===limit,
+     Math.min(expected,target),{timeout:12000});
+ }
+ if(await page.locator('.asset-card').count()!==expected)throw Error('Missing remote catalog pages');
  await page.locator('#asset-search').fill('仙人掌');
  await page.waitForFunction(()=>document.querySelectorAll('.asset-card').length===1,null,{timeout:12000});
  if(errors.length)throw Error('P2 remote browser errors: '+errors.join('; '));
- console.log('P2 REMOTE GALLERY OK: API categories, 24-item cursor page, load more to 45, Chinese search');
+ console.log('P2 REMOTE GALLERY OK: 24-item cursor pages,',expected,'assets and Chinese search');
 }finally{
  await browser?.close();
  await vite?.close();

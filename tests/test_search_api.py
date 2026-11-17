@@ -5,6 +5,7 @@ import tempfile
 import unittest
 import sys
 import hashlib
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -19,6 +20,8 @@ class SearchTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory()
         api.DB = Path(cls.temp.name) / "catalog.sqlite"
         build_catalog(api.DB)
+        cls.registry = json.loads((ROOT / 'catalog/models.json').read_text(encoding='utf8'))['assets']
+        cls.expected = len(cls.registry)
 
     @classmethod
     def tearDownClass(cls):
@@ -33,17 +36,17 @@ class SearchTests(unittest.TestCase):
             cursor = result["next_cursor"]
             if not cursor:
                 break
-        self.assertEqual(len(visited), 45)
-        self.assertEqual(len(set(visited)), 45)
+        self.assertEqual(len(visited), self.expected)
+        self.assertEqual(len(set(visited)), self.expected)
         self.assertEqual(visited, sorted(visited))
 
     def test_search_and_category(self):
         items = api.search_assets(search="chair", limit=20)["items"]
         self.assertTrue(any("chair" in row["slug"] for row in items))
         self.assertTrue(all(row["id"] and row["license"] for row in items))
-        self.assertEqual(len(api.search_assets(category="scifi")["items"]), 2)
+        self.assertEqual(len(api.search_assets(category="scifi")["items"]), sum(a['category'] == 'scifi' for a in self.registry))
         categories = {item["id"]: item["count"] for item in api.get_categories()}
-        self.assertEqual(sum(categories.values()), 45)
+        self.assertEqual(sum(categories.values()), self.expected)
         self.assertEqual(len(categories), 13)
 
     def test_invalid_cursor_and_filters(self):

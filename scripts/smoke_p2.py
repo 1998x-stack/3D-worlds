@@ -14,13 +14,17 @@ from scripts.publish_objects import publish
 from services.search_api import download_metadata, search_assets, get_categories
 from services.storage import from_environment
 
+catalog = json.loads((ROOT / "catalog/models.json").read_text(encoding="utf8"))
+expected = sum(asset["kind"] == "procedural" for asset in catalog["assets"])
 report = publish(ROOT / "public/generated/index.json", apply=True)
-assert report["objects"] == 45 * 3, report
+assert report["objects"] == expected * 3, report
 store = from_environment()
 for asset_id in (
     "furniture.table.oak-study-001",
     "scifi.patrol-spacecraft.001",
     "nature.desert-cactus.001",
+    "vehicles.coastal-sailboat.001",
+    "scifi.ancient-portal-gateway.001",
 ):
     for level in (0, 1, 2):
         metadata = download_metadata(asset_id, level)
@@ -28,5 +32,5 @@ for asset_id in (
         assert metadata["url"].startswith("/api/v1/objects/"), metadata
         assert store.exists(metadata["sha256"]), metadata
 assert len(get_categories()) == 13
-assert len(search_assets(limit=100)["items"]) == 45
+assert len(search_assets(limit=100)["items"]) == expected
 print("P2 END-TO-END OK:",json.dumps(report))
