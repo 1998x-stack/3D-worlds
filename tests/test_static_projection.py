@@ -10,18 +10,18 @@ from scripts.export_static_catalog import export
 
 
 class StaticCatalogTest(unittest.TestCase):
-    def test_default_projection_includes_all_285_current_assets(self):
+    def test_default_projection_includes_all_335_current_assets(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "public-all.json"
             result = export(target=path)
             public = json.loads(path.read_text(encoding="utf8"))
             source = json.loads((ROOT / "catalog/models.json").read_text(encoding="utf8"))
-            self.assertEqual(len(source["assets"]), 285)
-            self.assertEqual(result["static_count"], 285)
-            self.assertEqual(result["total_catalog_count"], 285)
+            self.assertEqual(len(source["assets"]), 335)
+            self.assertEqual(result["static_count"], 335)
+            self.assertEqual(result["total_catalog_count"], 335)
             self.assertFalse(result["requires_remote_api_for_full_collection"])
             self.assertEqual(public["assets"], source["assets"])
-            self.assertIn("scifi.orbital-navigation-beacon.001",
+            self.assertIn("scifi.interstellar-cargo-transit-gate.001",
                           {a["id"] for a in public["assets"]})
 
     def test_projection_is_bounded(self):

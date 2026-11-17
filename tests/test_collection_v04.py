@@ -57,7 +57,7 @@ class CollectionV04Tests(unittest.TestCase):
                         self.assertTrue(all(isinstance(n,(int,float)) and n>0 for n in part["s"]))
 
     def test_legacy_identifiers_remain_unmodified(self):
-        legacy=[x for x in self.assets if x.get("collection") not in ("v0.4", "v0.5", "v0.6", "v0.7", "v0.8")]
+        legacy=[x for x in self.assets if x.get("collection") not in ("v0.4", "v0.5", "v0.6", "v0.7", "v0.8", "v0.9")]
         self.assertEqual(len(legacy),45)
         self.assertIn("furniture.table.oak-study-001",{x["id"] for x in legacy})
         self.assertIn("scifi.patrol-spacecraft.001",{x["id"] for x in legacy})
