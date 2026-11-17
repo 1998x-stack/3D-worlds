@@ -5,19 +5,21 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 20,
-  "category_count": 11,
+  "asset_count": 30,
+  "category_count": 13,
   "category_counts": {
+    "architecture": 1,
     "bathroom": 3,
     "characters": 1,
-    "decor": 2,
-    "electronics": 1,
+    "decor": 3,
+    "electronics": 3,
     "furniture": 2,
-    "kitchen": 1,
-    "nature": 1,
+    "kitchen": 2,
+    "nature": 2,
     "scifi": 1,
     "sports": 2,
-    "urban": 2,
+    "tools": 3,
+    "urban": 3,
     "vehicles": 4
   },
   "assets": [
@@ -360,6 +362,176 @@
       "design_focus": "Hospital patient care bed with adjustable backrest, guard rails and lockable casters",
       "usage": "hospital",
       "part_count": 22
+    },
+    {
+      "id": "kitchen.induction-wok-station.001",
+      "slug": "induction-wok-station",
+      "title": "Induction Wok Station",
+      "title_zh": "商用电磁炒锅工作站",
+      "category": "kitchen",
+      "source_path": "src/models/induction_wok_station.js",
+      "generator": "createInductionWokStation",
+      "dimensions_m": [
+        1.03,
+        1.28,
+        0.86
+      ],
+      "design_focus": "Industrial wok station with cooking ring, handled wok, splashback and control dials",
+      "usage": "wok",
+      "part_count": 18
+    },
+    {
+      "id": "tools.industrial-chain-pipe-cutter.001",
+      "slug": "industrial-chain-pipe-cutter",
+      "title": "Industrial Chain Pipe Cutter",
+      "title_zh": "工业管道链式切割器",
+      "category": "tools",
+      "source_path": "src/models/industrial_chain_pipe_cutter.js",
+      "generator": "createIndustrialChainPipeCutter",
+      "dimensions_m": [
+        0.51,
+        0.48,
+        0.77
+      ],
+      "design_focus": "Industrial manual chain-style pipe cutter with adjustable jaw, wheel and crank handle",
+      "usage": "pipe",
+      "part_count": 16
+    },
+    {
+      "id": "electronics.industrial-robot-controller.001",
+      "slug": "industrial-robot-controller",
+      "title": "Industrial Robot Controller",
+      "title_zh": "工业机器人控制器",
+      "category": "electronics",
+      "source_path": "src/models/industrial_robot_controller.js",
+      "generator": "createIndustrialRobotController",
+      "dimensions_m": [
+        0.76,
+        1.35,
+        0.57
+      ],
+      "design_focus": "Industrial robot teach-pendant cabinet with safety stop and thermal vents",
+      "usage": "robotics",
+      "part_count": 25
+    },
+    {
+      "id": "urban.interactive-public-info-totem.001",
+      "slug": "interactive-public-info-totem",
+      "title": "Interactive Public Info Totem",
+      "title_zh": "城市智能信息查询屏",
+      "category": "urban",
+      "source_path": "src/models/interactive_public_info_totem.js",
+      "generator": "createInteractivePublicInfoTotem",
+      "dimensions_m": [
+        0.73,
+        2.21,
+        0.47
+      ],
+      "design_focus": "Interactive urban information kiosk with touch screen, speakers and emergency call button",
+      "usage": "interactive",
+      "part_count": 18
+    },
+    {
+      "id": "decor.kinetic-water-wall-fountain.001",
+      "slug": "kinetic-water-wall-fountain",
+      "title": "Kinetic Water Wall Fountain",
+      "title_zh": "室内动态水幕装饰墙",
+      "category": "decor",
+      "source_path": "src/models/kinetic_water_wall_fountain.js",
+      "generator": "createKineticWaterWallFountain",
+      "dimensions_m": [
+        1.42,
+        2.14,
+        0.56
+      ],
+      "design_focus": "Indoor water wall with illuminated waterfall panel, stone basin and stepping ripple jets",
+      "usage": "waterwall",
+      "part_count": 24
+    },
+    {
+      "id": "tools.laboratory-tabletop-centrifuge.001",
+      "slug": "laboratory-tabletop-centrifuge",
+      "title": "Laboratory Tabletop Centrifuge",
+      "title_zh": "实验室桌面离心机",
+      "category": "tools",
+      "source_path": "src/models/laboratory_tabletop_centrifuge.js",
+      "generator": "createLaboratoryTabletopCentrifuge",
+      "dimensions_m": [
+        0.63,
+        0.48,
+        0.58
+      ],
+      "design_focus": "Bench laboratory centrifuge with six-place rotor, tube holders, lid and digital control",
+      "usage": "centrifuge",
+      "part_count": 15
+    },
+    {
+      "id": "tools.laser-distance-meter.001",
+      "slug": "laser-distance-meter",
+      "title": "Laser Distance Meter",
+      "title_zh": "激光测距仪",
+      "category": "tools",
+      "source_path": "src/models/laser_distance_meter.js",
+      "generator": "createLaserDistanceMeter",
+      "dimensions_m": [
+        0.19,
+        0.33,
+        0.14
+      ],
+      "design_focus": "Compact handheld digital range finder with laser port, numeric display and keypad",
+      "usage": "laser",
+      "part_count": 15
+    },
+    {
+      "id": "electronics.lidar-mapping-scanner.001",
+      "slug": "lidar-mapping-scanner",
+      "title": "Lidar Mapping Scanner",
+      "title_zh": "激光雷达三维扫描头",
+      "category": "electronics",
+      "source_path": "src/models/lidar_mapping_scanner.js",
+      "generator": "createLidarMappingScanner",
+      "dimensions_m": [
+        0.64,
+        1.18,
+        0.57
+      ],
+      "design_focus": "Three-dimensional terrestrial lidar mapping scanner and tripod support",
+      "usage": "lidar",
+      "part_count": 22
+    },
+    {
+      "id": "nature.lily-pond-garden.001",
+      "slug": "lily-pond-garden",
+      "title": "Lily Pond Garden",
+      "title_zh": "睡莲荷塘庭院",
+      "category": "nature",
+      "source_path": "src/models/lily_pond_garden.js",
+      "generator": "createLilyPondGarden",
+      "dimensions_m": [
+        2.18,
+        0.74,
+        1.84
+      ],
+      "design_focus": "Garden lily pond with broad aquatic leaves, lotus flowers and reeds",
+      "usage": "pond",
+      "part_count": 28
+    },
+    {
+      "id": "architecture.modular-factory-sawtooth-roof.001",
+      "slug": "modular-factory-sawtooth-roof",
+      "title": "Modular Factory Sawtooth Roof",
+      "title_zh": "工业厂房锯齿形屋顶模块",
+      "category": "architecture",
+      "source_path": "src/models/modular_factory_sawtooth_roof.js",
+      "generator": "createModularFactorySawtoothRoof",
+      "dimensions_m": [
+        3.54,
+        2.04,
+        2.64
+      ],
+      "design_focus": "Modular industrial roof structure with repeated sawtooth skylights and steel trusses",
+      "usage": "factory",
+      "part_count": 20
     }
   ]
 }

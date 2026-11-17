@@ -7051,6 +7051,276 @@
       "collection": "v0.8",
       "preview_path": "public/thumbs/hospital-adjustable-bed.webp",
       "accent": "#c8b3a4"
+    },
+    {
+      "id": "kitchen.induction-wok-station.001",
+      "slug": "induction-wok-station",
+      "title": "Induction Wok Station",
+      "title_zh": "商用电磁炒锅工作站",
+      "summary": "Industrial wok station with cooking ring, handled wok, splashback and control dials",
+      "category": "kitchen",
+      "tags": [
+        "wok",
+        "induction",
+        "commercial"
+      ],
+      "dimensions_m": [
+        1.03,
+        1.28,
+        0.86
+      ],
+      "generator": "createInductionWokStation",
+      "source_path": "src/models/induction_wok_station.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/induction-wok-station.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.industrial-chain-pipe-cutter.001",
+      "slug": "industrial-chain-pipe-cutter",
+      "title": "Industrial Chain Pipe Cutter",
+      "title_zh": "工业管道链式切割器",
+      "summary": "Industrial manual chain-style pipe cutter with adjustable jaw, wheel and crank handle",
+      "category": "tools",
+      "tags": [
+        "pipe",
+        "cutter",
+        "industrial"
+      ],
+      "dimensions_m": [
+        0.51,
+        0.48,
+        0.77
+      ],
+      "generator": "createIndustrialChainPipeCutter",
+      "source_path": "src/models/industrial_chain_pipe_cutter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/industrial-chain-pipe-cutter.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "electronics.industrial-robot-controller.001",
+      "slug": "industrial-robot-controller",
+      "title": "Industrial Robot Controller",
+      "title_zh": "工业机器人控制器",
+      "summary": "Industrial robot teach-pendant cabinet with safety stop and thermal vents",
+      "category": "electronics",
+      "tags": [
+        "robotics",
+        "controller",
+        "industrial"
+      ],
+      "dimensions_m": [
+        0.76,
+        1.35,
+        0.57
+      ],
+      "generator": "createIndustrialRobotController",
+      "source_path": "src/models/industrial_robot_controller.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/industrial-robot-controller.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "urban.interactive-public-info-totem.001",
+      "slug": "interactive-public-info-totem",
+      "title": "Interactive Public Info Totem",
+      "title_zh": "城市智能信息查询屏",
+      "summary": "Interactive urban information kiosk with touch screen, speakers and emergency call button",
+      "category": "urban",
+      "tags": [
+        "interactive",
+        "totem",
+        "information"
+      ],
+      "dimensions_m": [
+        0.73,
+        2.21,
+        0.47
+      ],
+      "generator": "createInteractivePublicInfoTotem",
+      "source_path": "src/models/interactive_public_info_totem.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/interactive-public-info-totem.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "decor.kinetic-water-wall-fountain.001",
+      "slug": "kinetic-water-wall-fountain",
+      "title": "Kinetic Water Wall Fountain",
+      "title_zh": "室内动态水幕装饰墙",
+      "summary": "Indoor water wall with illuminated waterfall panel, stone basin and stepping ripple jets",
+      "category": "decor",
+      "tags": [
+        "waterwall",
+        "fountain",
+        "decor"
+      ],
+      "dimensions_m": [
+        1.42,
+        2.14,
+        0.56
+      ],
+      "generator": "createKineticWaterWallFountain",
+      "source_path": "src/models/kinetic_water_wall_fountain.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/kinetic-water-wall-fountain.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "tools.laboratory-tabletop-centrifuge.001",
+      "slug": "laboratory-tabletop-centrifuge",
+      "title": "Laboratory Tabletop Centrifuge",
+      "title_zh": "实验室桌面离心机",
+      "summary": "Bench laboratory centrifuge with six-place rotor, tube holders, lid and digital control",
+      "category": "tools",
+      "tags": [
+        "centrifuge",
+        "laboratory",
+        "instrument"
+      ],
+      "dimensions_m": [
+        0.63,
+        0.48,
+        0.58
+      ],
+      "generator": "createLaboratoryTabletopCentrifuge",
+      "source_path": "src/models/laboratory_tabletop_centrifuge.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/laboratory-tabletop-centrifuge.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "tools.laser-distance-meter.001",
+      "slug": "laser-distance-meter",
+      "title": "Laser Distance Meter",
+      "title_zh": "激光测距仪",
+      "summary": "Compact handheld digital range finder with laser port, numeric display and keypad",
+      "category": "tools",
+      "tags": [
+        "laser",
+        "distance",
+        "measuring"
+      ],
+      "dimensions_m": [
+        0.19,
+        0.33,
+        0.14
+      ],
+      "generator": "createLaserDistanceMeter",
+      "source_path": "src/models/laser_distance_meter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/laser-distance-meter.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "electronics.lidar-mapping-scanner.001",
+      "slug": "lidar-mapping-scanner",
+      "title": "Lidar Mapping Scanner",
+      "title_zh": "激光雷达三维扫描头",
+      "summary": "Three-dimensional terrestrial lidar mapping scanner and tripod support",
+      "category": "electronics",
+      "tags": [
+        "lidar",
+        "scanner",
+        "mapping"
+      ],
+      "dimensions_m": [
+        0.64,
+        1.18,
+        0.57
+      ],
+      "generator": "createLidarMappingScanner",
+      "source_path": "src/models/lidar_mapping_scanner.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/lidar-mapping-scanner.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "nature.lily-pond-garden.001",
+      "slug": "lily-pond-garden",
+      "title": "Lily Pond Garden",
+      "title_zh": "睡莲荷塘庭院",
+      "summary": "Garden lily pond with broad aquatic leaves, lotus flowers and reeds",
+      "category": "nature",
+      "tags": [
+        "pond",
+        "lily",
+        "garden"
+      ],
+      "dimensions_m": [
+        2.18,
+        0.74,
+        1.84
+      ],
+      "generator": "createLilyPondGarden",
+      "source_path": "src/models/lily_pond_garden.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/lily-pond-garden.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "architecture.modular-factory-sawtooth-roof.001",
+      "slug": "modular-factory-sawtooth-roof",
+      "title": "Modular Factory Sawtooth Roof",
+      "title_zh": "工业厂房锯齿形屋顶模块",
+      "summary": "Modular industrial roof structure with repeated sawtooth skylights and steel trusses",
+      "category": "architecture",
+      "tags": [
+        "factory",
+        "roof",
+        "sawtooth"
+      ],
+      "dimensions_m": [
+        3.54,
+        2.04,
+        2.64
+      ],
+      "generator": "createModularFactorySawtoothRoof",
+      "source_path": "src/models/modular_factory_sawtooth_roof.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/modular-factory-sawtooth-roof.webp",
+      "accent": "#c9c9c1"
     }
   ]
 }
