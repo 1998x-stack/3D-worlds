@@ -23,6 +23,7 @@ class PrintExportTests(unittest.TestCase):
                 root / 'box.glb', root / 'print', 'test-box', longest_mm=100)
             self.assertEqual(report['status'], 'geometry_pass_manual_review_required')
             self.assertFalse(report['manufacturing_certified'])
+            self.assertEqual(len(report['source_sha256']), 64)
             self.assertAlmostEqual(max(report['dimensions_mm']), 100., places=4)
             stl = trimesh.load(root / 'print/test-box.stl', force='mesh')
             self.assertTrue(stl.is_watertight)
