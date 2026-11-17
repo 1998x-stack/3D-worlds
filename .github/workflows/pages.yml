@@ -49,6 +49,8 @@ jobs:
         run: npm run generate:assets
       - name: Verify P0 previews, LOD hashes and decodable GLBs
         run: node scripts/verify_generated.mjs
+      - name: P2 mirror all actual LOD binaries into immutable local object storage
+        run: python scripts/smoke_p2.py
       - name: Archive P0/P1 generation quality report
         uses: actions/upload-artifact@v4
         with:
