@@ -59,7 +59,7 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(scifi_ids, sorted(scifi_ids))
         categories = {item["id"]: item["count"] for item in api.get_categories()}
         self.assertEqual(sum(categories.values()), self.expected)
-        self.assertEqual(len(categories), 13)
+        self.assertEqual(len(categories), 14)
 
     def test_invalid_cursor_and_filters(self):
         token = api.search_assets(limit=1)["next_cursor"]
@@ -96,7 +96,7 @@ class SearchTests(unittest.TestCase):
                 self.assertEqual(response.headers["Access-Control-Allow-Origin"],
                                  "https://1998x-stack.github.io")
             with urllib.request.urlopen(base + "/api/v1/categories", timeout=4) as response:
-                self.assertEqual(len(__import__("json").load(response)), 13)
+                self.assertEqual(len(__import__("json").load(response)), 14)
         finally:
             server.shutdown()
             server.server_close()

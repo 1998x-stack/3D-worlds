@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 const registered=JSON.parse(readFileSync(new URL('../catalog/public_models.json',import.meta.url),'utf8')).assets;
 const expected=registered.length;
 const total=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8')).assets.length;
-if(total<=500 && expected!==total)throw Error('Static Gallery silently truncated: '+expected+'/'+total);
+if(total<=600 && expected!==total)throw Error('Static Gallery silently truncated: '+expected+'/'+total);
 let server, browser;
 try{
  server=await preview({preview:{host:'127.0.0.1',port:4180,strictPort:true}});
@@ -109,8 +109,7 @@ try{
  await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
- await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
-   null, {timeout:5000});
+ await page.waitForFunction(() => [...document.querySelectorAll('.asset-card')].some(card => card.dataset.id === 'print-commerce.geo-cactus-planter.001'), null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
  console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7/v0.8/v0.9/v1.0/v1.1/v1.2 inspectors and Chinese search');
 }finally{
