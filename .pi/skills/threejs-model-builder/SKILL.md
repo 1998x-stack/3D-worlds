@@ -65,6 +65,23 @@ no rig, MIT original code license, no external textures.
 - Keep model creation separate from presentation code.
 - Avoid breaking old asset IDs; use versions and derived asset links.
 
+
+## External GLB batch-ingestion branch
+
+If the input is an existing GLB instead of a new Three.js generator, use
+`docs/ingestion-architecture.md` and `scripts/ingest_glb.mjs`. Never
+execute imported code. Require verified permission and a license evidence
+URL for third-party authors, a category from `catalog/categories.json`,
+and author-supplied dimensions in meters. Run a read-only dry run first;
+apply only with `--apply` after checking the official Khronos Validator
+report. Record SHA-256, file metrics and origin. Inspect the resulting
+binary in the Gallery, then verify retrieval through MCP.
+
+The CLI does not certify ownership, transform-aware dimensions, safety
+for 3D printing, or professional game readiness; those require separate
+review. Models that exceed the repository size budget belong in a future
+object-storage pipeline, not directly in Git history.
+
 ## Output checklist
 
 - [ ] Original source module works as a pure `THREE.Group` factory.

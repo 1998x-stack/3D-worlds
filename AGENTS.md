@@ -19,8 +19,9 @@ This is a public, reusable **asset platform**, not a one-off scene demo.
 2. `python3 scripts/catalog.py build`
 3. `python3 -m unittest discover -s tests -v`
 4. `npm install && npm run build`
-5. Open gallery; verify search, inspector controls, clipboard source, exported GLB and deep link.
-6. Run MCP inspector with `python services/mcp_server.py` after `pip install -r requirements-mcp.txt`.
+5. `npm run test:ingest` checks the official GLB validator + batch publication.
+6. Open gallery; verify search, inspector controls, clipboard source, exported GLB and deep link.
+7. Run MCP inspector with `python services/mcp_server.py` after `pip install -r requirements-mcp.txt`.
 
 Read `docs/architecture.md`, `docs/threejs-research.md` and
 `.codex/skills/threejs-model-builder/SKILL.md` for the workflow.
