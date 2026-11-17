@@ -44,7 +44,19 @@ class SearchTests(unittest.TestCase):
         items = api.search_assets(search="chair", limit=20)["items"]
         self.assertTrue(any("chair" in row["slug"] for row in items))
         self.assertTrue(all(row["id"] and row["license"] for row in items))
-        self.assertEqual(len(api.search_assets(category="scifi")["items"]), sum(a['category'] == 'scifi' for a in self.registry))
+        # Category result sets can exceed the API default page size (24).
+        # Traverse the cursor instead of treating the first page as complete.
+        scifi_ids = []
+        cursor = ""
+        while True:
+            page = api.search_assets(category="scifi", limit=17, cursor=cursor)
+            scifi_ids.extend(item["id"] for item in page["items"])
+            cursor = page["next_cursor"]
+            if not cursor:
+                break
+        self.assertEqual(len(scifi_ids), sum(a["category"] == "scifi" for a in self.registry))
+        self.assertEqual(len(set(scifi_ids)), len(scifi_ids))
+        self.assertEqual(scifi_ids, sorted(scifi_ids))
         categories = {item["id"]: item["count"] for item in api.get_categories()}
         self.assertEqual(sum(categories.values()), self.expected)
         self.assertEqual(len(categories), 13)
