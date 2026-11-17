@@ -2,6 +2,8 @@ import catalog from '../catalog/public_models.json';
 import categoryCatalog from '../catalog/categories.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
+import printPolicy from '../catalog/print_policy.json';
+import { buildPrintPlan } from './print-planner.js';
 // Lazy Three.js modules: adding 30 assets must not pull all geometry into initial page.
 const moduleLoaders = import.meta.glob('./models/*.js');
 const sourceLoaders = import.meta.glob('./models/*.js', { query: '?raw', import: 'default' });
@@ -60,7 +62,7 @@ root.innerHTML = `
   <header class="site-header">
     <a class="brand" href="./" aria-label="3D Worlds 首页"><span class="brand-mark">◈</span><span>3D<span class="brand-light">WORLDS</span></span><span class="brand-divider"></span><span class="brand-caption">ASSET LIBRARY</span></a>
     <nav class="header-links" aria-label="站点链接">
-      <a href="#collection" class="active-link">Explore</a>
+      <a href="#collection" class="active-link">Explore</a><a href="#print-workflow">3D Print</a>
       <a href="https://github.com/1998x-stack/3D-worlds" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer">Documentation ↗</a>
     </nav>
@@ -72,7 +74,7 @@ root.innerHTML = `
         <div class="eyebrow"><span class="dash"></span> EXPLORE · BUILD · REUSE</div>
         <h1>Objects for<br/><em>worlds</em> yet to come.</h1>
         <p>开放的 3D 模型目录。浏览精心组织的模型、交互式查看细节，复制 Three.js 源码或导出 GLB，直接带入你的下一个作品。</p>
-        <div class="hero-actions"><a class="button button-primary" href="#collection">探索模型库 <span aria-hidden="true">↗</span></a><span class="hero-meta">FREE TO USE <span class="small-separator">·</span> THREE.JS NATIVE</span></div>
+        <div class="hero-actions"><a class="button button-primary" href="#collection">探索模型库 <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#print-workflow">打印工作台</a><span class="hero-meta">FREE TO USE <span class="small-separator">·</span> THREE.JS NATIVE</span></div>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-1"></div><div class="art-orbit orbit-2"></div><div class="art-center"><div class="art-cube"></div></div><span class="art-axis">X&nbsp; Y&nbsp; Z</span><span class="art-label">OPEN GEOMETRY / 001</span></div>
     </section>
@@ -99,6 +101,15 @@ root.innerHTML = `
         </div>
       </div>
     </section>
+    <section class="print-workflow" id="print-workflow" aria-labelledby="print-workflow-title">
+      <div class="print-workflow-head"><div><span class="section-kicker">3D PRINT / MANUFACTURING READINESS</span><h2 id="print-workflow-title">从可视化到可制造<span class="heading-period">.</span></h2></div><p>根据资产类别选择审核路线，而不是把任意 GLB 直接当作可打印实体。在线生成 STL 草稿；本地运行拓扑审核后才输出 STL/3MF 候选文件。</p></div>
+      <div class="print-workflow-cards">
+        <article class="print-workflow-card"><span class="print-stage">P0 · 基础摆件</span><h3>几何与尺寸</h3><p>装饰绿植、家具缩模、简单道具：封闭网格、正确毫米尺寸、底面接触及平台范围。</p><span>01 / GEOMETRY</span></article>
+        <article class="print-workflow-card"><span class="print-stage">P1 · 复杂模型</span><h3>支撑与装配</h3><p>人物、自然场景、载具、建筑：细杆、悬空面、独立零件、分件和装配间隙。</p><span>02 / ASSEMBLY</span></article>
+        <article class="print-workflow-card"><span class="print-stage">P2 · 功能性零件</span><h3>公差与材料</h3><p>电子外壳、工具及结构件：孔位、实际壁厚、配合公差与强度必须额外验证。</p><span>03 / ENGINEERING</span></article>
+      </div>
+      <div class="print-workflow-foot"><span><strong>安全边界：</strong>网页的尺寸和平台提示只是预估，不代表流形、壁厚、切片或实物验证通过。</span><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">查看打印流水线与审核标准 ↗</a></div>
+    </section>
     <section class="bottom-banner"><div><span class="section-kicker">DESIGNED TO SCALE</span><h2>More than a gallery.<br/>An open asset infrastructure.</h2></div><a href="https://github.com/1998x-stack/3D-worlds" target="_blank" rel="noopener noreferrer" class="button button-outline">Explore the source ↗</a></section>
   </main>
   <footer class="footer"><div class="footer-brand">◈ 3D WORLDS</div><span>OPEN-ASSET INFRASTRUCTURE · 2026</span><a href="https://github.com/1998x-stack/3D-worlds" target="_blank" rel="noopener noreferrer">CONTRIBUTE ON GITHUB ↗</a></footer>
@@ -107,7 +118,17 @@ root.innerHTML = `
       <div class="detail-topbar"><span>ASSET INSPECTOR <span class="detail-topbar-id" id="detail-id"></span></span><button id="close-detail" class="icon-button" aria-label="关闭详情">×</button></div>
       <div class="detail-layout">
         <div class="detail-viewer"><canvas id="detail-canvas" aria-label="可拖动旋转缩放的 3D 模型"></canvas><span class="viewer-badge">LIVE 3D VIEW</span><div class="viewer-controls"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><button id="reset-view" type="button">↺ 重置视角</button></div></div>
-        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><div class="print-export-panel"><div class="print-export-heading">3D 打印导出 · STL 草稿</div><label class="print-export-label" for="print-size-mm">模型最长边 (mm) <input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/></label><button id="print-stl" class="button button-dark" type="button">↓ 下载 STL 草稿</button><p class="print-export-note">自动按比例缩放并转换为 Z-up / mm；不含材质、壁厚或流形审核。请使用仓库打印流水线复核 STL/3MF，再导入切片软件。</p><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">查看 STL / 3MF 审核操作指南 ↗</a></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
+        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><div class="print-export-panel" aria-labelledby="print-export-heading">
+  <div class="print-export-heading" id="print-export-heading">3D 打印工作台 <span class="print-unverified">未审核 / NOT AUDITED</span></div>
+  <p class="print-export-note">选择设备与目标尺寸；这里仅提供包围盒估算和 STL 草稿，不会伪造可打印性认证。</p>
+  <label class="print-export-label" for="print-size-mm">最长边尺寸 <span><input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/> mm</span></label>
+  <label class="print-export-label" for="print-printer">打印平台 <select id="print-printer" aria-label="打印平台"><option value="fdm-220">FDM 通用 220 × 220 × 250 mm</option><option value="fdm-300">FDM 大平台 300 × 300 × 300 mm</option><option value="resin-192">树脂光固化参考 192 × 120 × 200 mm</option></select></label>
+  <div id="print-plan-summary" class="print-plan-summary" role="status" aria-live="polite">选择模型后计算打印规划。</div>
+  <button id="print-stl" class="button button-dark" type="button">↓ 下载未审核 STL 草稿</button>
+  <button id="copy-print-command" class="button button-soft" type="button">⧉ 复制本地 STL/3MF 审核命令</button>
+  <p class="print-export-note">P0/P1/P2 表示处理优先级，不是质量评级。STL 不包含单位；导入切片软件时须确认 mm。复杂结构与功能件仍需独立评审。</p>
+  <a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">打印规范、分件与制造安全说明 ↗</a>
+</div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
       </div>
     </section>
   </div>
@@ -248,6 +269,7 @@ async function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('detail-specs').innerHTML = [
     ['LICENSE', asset.license], ['FORMAT', asset.kind === 'procedural' ? 'Three.js / GLB' : 'Binary GLB'], ['DIMENSIONS', asset.dimensions_m.map(n => Number(n).toFixed(2)).join(' × ') + ' m'], ['IDENTIFIER', asset.id]
   ].map(([name, value]) => `<div><span>${safe(name)}</span><strong>${safe(value)}</strong></div>`).join('');
+  renderPrintPanel();
   overlay.hidden = false;
   document.body.classList.add('modal-open');
   document.getElementById('close-detail').focus();
@@ -273,6 +295,51 @@ async function openAsset(id, { updateHistory = true } = {}) {
   });
   if (updateHistory) history.pushState({ model: id }, '', getUrl(id));
 }
+
+function renderPrintPanel() {
+  if (!activeAsset) return;
+  const container=document.getElementById('print-plan-summary');
+  const button=document.getElementById('print-stl');
+  const isProcedural=activeAsset.kind==='procedural';
+  button.disabled=!isProcedural;
+  button.title=isProcedural?'仅下载未审核的 STL 草稿':'导入的 GLB 请使用本地审核命令';
+  const size=Number(document.getElementById('print-size-mm').value);
+  const printerId=document.getElementById('print-printer').value;
+  try {
+    const plan=buildPrintPlan(activeAsset,{longestMm:size,printerId},printPolicy);
+    const dims=plan.size_mm.map(x=>x.toFixed(1)).join(' × ');
+    const platform=plan.bed_mm.join(' × ');
+    const fits=plan.bed_fit_estimate ?
+      '包围盒预计可放入（未验证网格/支撑）' : '尺寸预计超出台面，请缩小或切分';
+    const focus=plan.focus_zh.map(t=>'<li>'+safe(t)+'</li>').join('');
+    container.innerHTML='<div class="print-plan-meta"><span>处理路线 '+safe(plan.priority)+'</span><span>未审核</span></div>'+
+      '<strong>'+safe(plan.goal_zh)+'</strong>'+
+      '<div class="print-measure">估算成品尺寸 <b>'+safe(dims)+' mm</b></div>'+
+      '<div class="print-measure">打印平台 <b>'+safe(platform)+' mm</b></div>'+
+      '<div class="print-fit '+(plan.bed_fit_estimate?'print-fit-note':'print-fit-warning')+'">'+safe(fits)+(plan.rotate_xy_estimate?'（需平面内旋转 90°）':'')+'</div>'+
+      '<span class="print-plan-label">必须核查</span><ul>'+focus+'</ul>';
+  } catch (error) {
+    container.textContent='打印规划输入错误：'+error.message;
+    button.disabled=true;
+  }
+}
+document.getElementById('print-size-mm').addEventListener('input',renderPrintPanel);
+document.getElementById('print-printer').addEventListener('change',renderPrintPanel);
+document.getElementById('copy-print-command').addEventListener('click',()=>{
+  if(!activeAsset)return;
+  try {
+    const plan=buildPrintPlan(activeAsset,{
+      longestMm:Number(document.getElementById('print-size-mm').value),
+      printerId:document.getElementById('print-printer').value
+    },printPolicy);
+    const capture=activeAsset.kind==='procedural'?
+      'node scripts/render_assets.mjs --id '+activeAsset.id+'\n':'';
+    const command=capture+'python3 scripts/export_print.py --asset-id '+activeAsset.id+
+      ' --longest-mm '+Number(document.getElementById('print-size-mm').value)+
+      ' --profile '+plan.printer_id+' --bed-mm '+plan.bed_mm.join(' ');
+    copyText(command,'打印审核命令已复制，需在本地仓库执行');
+  } catch(error) {toast('尺寸或打印机配置无效');}
+});
 
 function closeAsset({ updateHistory = true } = {}) {
   if (!activeAsset) return;

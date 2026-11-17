@@ -32,6 +32,10 @@ jobs:
           python .codex/skills/threejs-model-builder/scripts/preflight.py --json
       - name: Install opt-in print geometry test dependencies
         run: python -m pip install -r requirements-print.txt
+      - name: Validate P0/P1/P2 print policy and unreviewed catalog readiness
+        run: |
+          npm run test:print
+          python scripts/audit_print_catalog.py --metadata-only --output .cache/print/catalog-metadata.json
       - name: Validate and build SQLite catalog
         run: |
           python scripts/catalog.py validate
@@ -55,6 +59,14 @@ jobs:
         run: npm run generate:assets
       - name: Verify P0 previews, LOD hashes and decodable GLBs
         run: node scripts/verify_generated.mjs
+      - name: Audit small sample of original GLBs (never publish print-ready claims)
+        run: python scripts/audit_print_catalog.py --limit 8 --longest-mm 120 --output .cache/print/catalog-geometry-sample.json
+      - name: Archive unreviewed and sampled print QA evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-worlds-print-audit-evidence
+          path: .cache/print/catalog-*.json
+          retention-days: 7
       - name: P2 mirror all actual LOD binaries into immutable local object storage
         run: python scripts/smoke_p2.py
       - name: Archive P0/P1 generation quality report

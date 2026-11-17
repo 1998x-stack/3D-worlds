@@ -20,7 +20,9 @@
     "test:remote": "node scripts/smoke_remote_gallery.mjs",
     "predev": "python3 scripts/export_static_catalog.py",
     "prebuild": "python3 scripts/export_static_catalog.py",
-    "export:static": "python3 scripts/export_static_catalog.py"
+    "export:static": "python3 scripts/export_static_catalog.py",
+    "test:print": "node --test scripts/test_print_plan.mjs",
+    "audit:print": "python3 scripts/audit_print_catalog.py --metadata-only"
   },
   "dependencies": {
     "three": "0.180.0",
