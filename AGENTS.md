@@ -57,3 +57,10 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - Run `python3 scripts/verify_skill_mirrors.py` and the read-only
   `python3 .codex/skills/threejs-model-builder/scripts/preflight.py` on
   every Skill change. See `docs/skill-architecture.md` for design decisions.
+
+## V0.5 collection integrity (135 assets)
+- `catalog/collections/v05.json` has exactly 50 stable IDs; 13 existing categories have new models.
+- Keep all historical v0.1–v0.4 IDs and their original source paths unchanged. Never overwrite a published geometry without versioning.
+- Each new asset must have editable Three.js `assetMeta` and `buildRecipe` source, >=8 uniquely named meshes, dimensions in meters, and explicit MIT license.
+- Run `tests/test_collection_v05.py` and verify 135 GLB0/GLB1/GLB2 outputs and 270 thumbnails.
+- Search API has a hard per-request page cap of 100; audit 135+ assets through cursor pagination, never via a single `limit=100` request.

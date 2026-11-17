@@ -25,6 +25,8 @@ for asset_id in (
     "nature.desert-cactus.001",
     "vehicles.coastal-sailboat.001",
     "scifi.ancient-portal-gateway.001",
+    "urban.public-bicycle-parking-rack.001",
+    "scifi.holographic-command-console.001",
 ):
     for level in (0, 1, 2):
         metadata = download_metadata(asset_id, level)
@@ -32,5 +34,15 @@ for asset_id in (
         assert metadata["url"].startswith("/api/v1/objects/"), metadata
         assert store.exists(metadata["sha256"]), metadata
 assert len(get_categories()) == 13
-assert len(search_assets(limit=100)["items"]) == expected
+all_ids = []
+cursor = ""
+while True:
+    page = search_assets(limit=29, cursor=cursor)
+    all_ids.extend(row["id"] for row in page["items"])
+    cursor = page["next_cursor"]
+    if not cursor:
+        break
+assert len(all_ids) == expected, (len(all_ids), expected)
+assert len(set(all_ids)) == expected
+assert all_ids == sorted(all_ids)
 print("P2 END-TO-END OK:",json.dumps(report))
