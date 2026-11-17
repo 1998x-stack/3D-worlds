@@ -31,7 +31,7 @@ support structures or wall-thickness guarantees.
 ```bash
 npm install
 npx playwright install chromium
-npm run generate:assets                 # creates full-res .cache/raw/<slug>.glb
+node scripts/render_assets.mjs --id furniture.chair.linen-001  # one raw GLB + thumbnail
 python3 -m pip install -r requirements-print.txt
 
 # Suggested miniature: longest side 120mm, build plate 220×220×250 mm
