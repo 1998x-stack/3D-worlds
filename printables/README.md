@@ -1,8 +1,9 @@
 # Print Commerce · CAD source / 海外3D打印商品
 
 **50 original prototype designs**, each with a dedicated `.scad` source that
-calls either `lib/commerce_forms.scad` or the ten-SKU detailed
-`lib/refined_forms.scad` construction library.
+calls one of three CAD constructions: `lib/commerce_forms.scad` (20 older
+prototypes), `lib/refined_forms.scad` (10 batch-01 prototypes), or
+`lib/refined_batch02_forms.scad` (20 new batch-02 refinements).
 OpenSCAD uses **millimeters and Z-up**; Three.js gallery uses **meters and Y-up**.
 Gallery preview meshes are stylized representations, not a manufacturing mesh.
 
@@ -23,6 +24,25 @@ python3 scripts/export_print_commerce.py --only handheld-console-stand --format 
 The audit requires OpenSCAD and Python `trimesh`; its JSON report checks only
 basic mesh topology and envelopes. **Not a slicer or real-print certification.**
 See the [design, fit and safety checklist](../docs/overseas-refinement-batch-01.md).
+
+## Overseas refined batch 02 · twenty additional SKU-specific prototypes
+
+The new twenty OpenSCAD entrypoints preserve the original v1.3 family/variant
+metadata but call `lib/refined_batch02_forms.scad` with explicit dimensions.
+Personalized nameplates expose an editable `label` value. Geometry and preview
+tests are separate from printing and physical fit reviews.
+
+```bash
+python3 scripts/audit_refined_commerce_batch02.py
+python3 scripts/audit_refined_commerce_batch02.py --only arc-earring-display
+python3 scripts/export_print_commerce.py --only geo-cactus-planter --format 3mf
+npm run test:refined-commerce
+```
+
+The [batch-02 engineering spec](../docs/overseas-refinement-batch-02.md)
+documents twenty product-specific features, nominal dimensions and mandatory
+human review. **A watertight export is not print certification.** The existing
+batch-01 designs are unchanged.
 
 ## Export
 
