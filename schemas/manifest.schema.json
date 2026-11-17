@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/1998x-stack/3D-worlds/blob/main/schemas/manifest.schema.json",
+  "title": "3D Worlds asset manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "catalog_name",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "catalog_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slug",
+        "title",
+        "category",
+        "tags",
+        "kind",
+        "license",
+        "author",
+        "dimensions_m"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,119}$"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{2,119}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title_zh": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 5000
+        },
+        "category": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          },
+          "uniqueItems": true
+        },
+        "kind": {
+          "enum": [
+            "procedural",
+            "glb",
+            "gltf"
+          ]
+        },
+        "license": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9.+-]*$"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source_path": {
+          "type": "string",
+          "pattern": "^src/models/[a-z0-9_-]+\\\\.js$"
+        },
+        "binary_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preview_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generator": {
+          "type": "string",
+          "pattern": "^create[A-Za-z0-9]+$"
+        },
+        "dimensions_m": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          ],
+          "items": false,
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "style": {
+          "type": "string",
+          "maxLength": 100
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "procedural"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "source_path",
+              "generator"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "glb",
+                  "gltf"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "binary_path"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
