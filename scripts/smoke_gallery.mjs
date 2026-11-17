@@ -101,8 +101,7 @@ try{
  await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
- await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
-   null, {timeout:5000});
+ await page.waitForFunction(() => [...document.querySelectorAll('.asset-card')].some(card => card.dataset.id === 'print-commerce.geo-cactus-planter.001'), null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
  console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7/v0.8/v0.9/v1.0/v1.1 inspectors and Chinese search');
 }finally{
