@@ -4891,6 +4891,276 @@
       "collection": "v0.6",
       "preview_path": "public/thumbs/stainless-two-slot-toaster.webp",
       "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.surveying-camera-tripod.001",
+      "slug": "surveying-camera-tripod",
+      "title": "Surveying Camera Tripod",
+      "title_zh": "野外测绘三脚架",
+      "summary": "Adjustable survey tripod with telescopic legs, rotation head and bubble level",
+      "category": "tools",
+      "tags": [
+        "survey",
+        "tripod",
+        "camera"
+      ],
+      "dimensions_m": [
+        1.11,
+        1.69,
+        1.08
+      ],
+      "generator": "createSurveyingCameraTripod",
+      "source_path": "src/models/surveying_camera_tripod.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/surveying-camera-tripod.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "nature.tidal-rock-pool.001",
+      "slug": "tidal-rock-pool",
+      "title": "Tidal Rock Pool",
+      "title_zh": "海滨潮汐礁石池",
+      "summary": "Natural shallow tide pool with rock ring, aquatic plants, and starfish details",
+      "category": "nature",
+      "tags": [
+        "tidepool",
+        "coast",
+        "rocks"
+      ],
+      "dimensions_m": [
+        1.74,
+        0.56,
+        1.45
+      ],
+      "generator": "createTidalRockPool",
+      "source_path": "src/models/tidal_rock_pool.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/tidal-rock-pool.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "decor.tiered-candle-centerpiece.001",
+      "slug": "tiered-candle-centerpiece",
+      "title": "Tiered Candle Centerpiece",
+      "title_zh": "错层蜡烛烛台组合",
+      "summary": "Three differing-height brass candlesticks with ivory wax",
+      "category": "decor",
+      "tags": [
+        "candle",
+        "centerpiece",
+        "home"
+      ],
+      "dimensions_m": [
+        0.79,
+        0.74,
+        0.57
+      ],
+      "generator": "createTieredCandleCenterpiece",
+      "source_path": "src/models/tiered_candle_centerpiece.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/tiered-candle-centerpiece.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "architecture.timber-balcony-module.001",
+      "slug": "timber-balcony-module",
+      "title": "Timber Balcony Module",
+      "title_zh": "木质外挑阳台模块",
+      "summary": "Modular balcony with deck planking, wall fasteners, railings and support corbels",
+      "category": "architecture",
+      "tags": [
+        "balcony",
+        "wood",
+        "modular"
+      ],
+      "dimensions_m": [
+        2.62,
+        1.57,
+        1.5
+      ],
+      "generator": "createTimberBalconyModule",
+      "source_path": "src/models/timber_balcony_module.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/timber-balcony-module.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "bathroom.timber-bath-tray.001",
+      "slug": "timber-bath-tray",
+      "title": "Timber Bath Tray",
+      "title_zh": "实木浴缸托盘",
+      "summary": "Slatted bath caddy with book rest, glass stem holder and small soap bowl",
+      "category": "bathroom",
+      "tags": [
+        "caddy",
+        "bath",
+        "timber"
+      ],
+      "dimensions_m": [
+        0.94,
+        0.21,
+        0.3
+      ],
+      "generator": "createTimberBathTray",
+      "source_path": "src/models/timber_bath_tray.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/timber-bath-tray.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "bathroom.triple-mirror-medicine-cabinet.001",
+      "slug": "triple-mirror-medicine-cabinet",
+      "title": "Triple Mirror Medicine Cabinet",
+      "title_zh": "三门镜面药柜",
+      "summary": "Wall medicine cabinet with three mirrored doors, shelf insets and side pull tabs",
+      "category": "bathroom",
+      "tags": [
+        "medicine",
+        "cabinet",
+        "storage"
+      ],
+      "dimensions_m": [
+        0.88,
+        0.67,
+        0.19
+      ],
+      "generator": "createTripleMirrorMedicineCabinet",
+      "source_path": "src/models/triple_mirror_medicine_cabinet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/triple-mirror-medicine-cabinet.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "furniture.velvet-chaise-lounge.001",
+      "slug": "velvet-chaise-lounge",
+      "title": "Velvet Chaise Lounge",
+      "title_zh": "丝绒贵妃躺椅",
+      "summary": "Low asymmetric chaise lounge with sculpted curved pillow and brass feet",
+      "category": "furniture",
+      "tags": [
+        "chaise",
+        "living",
+        "lounge"
+      ],
+      "dimensions_m": [
+        1.7,
+        0.87,
+        0.76
+      ],
+      "generator": "createVelvetChaiseLounge",
+      "source_path": "src/models/velvet_chaise_lounge.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/velvet-chaise-lounge.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "bathroom.wall-hung-toilet.001",
+      "slug": "wall-hung-toilet",
+      "title": "Wall Hung Toilet",
+      "title_zh": "壁挂式马桶",
+      "summary": "Wall-mounted tankless ceramic toilet with floating bowl, flush panel and hinges",
+      "category": "bathroom",
+      "tags": [
+        "toilet",
+        "bathroom",
+        "ceramic"
+      ],
+      "dimensions_m": [
+        0.39,
+        0.78,
+        0.64
+      ],
+      "generator": "createWallHungToilet",
+      "source_path": "src/models/wall_hung_toilet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/wall-hung-toilet.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "kitchen.wood-fired-pizza-oven.001",
+      "slug": "wood-fired-pizza-oven",
+      "title": "Wood Fired Pizza Oven",
+      "title_zh": "柴火石砌披萨炉",
+      "summary": "Outdoor pizzeria masonry oven with domed hearth, brick apron, chimney and bread peel",
+      "category": "kitchen",
+      "tags": [
+        "pizza",
+        "oven",
+        "wood-fired"
+      ],
+      "dimensions_m": [
+        1.45,
+        1.36,
+        1.29
+      ],
+      "generator": "createWoodFiredPizzaOven",
+      "source_path": "src/models/wood_fired_pizza_oven.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/wood-fired-pizza-oven.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.woodworking-bench-vise.001",
+      "slug": "woodworking-bench-vise",
+      "title": "Woodworking Bench Vise",
+      "title_zh": "木工台钳",
+      "summary": "Heavy bench vise with twin jaws, tightening screw, swiveling handle and mounting foot",
+      "category": "tools",
+      "tags": [
+        "vise",
+        "workbench",
+        "clamp"
+      ],
+      "dimensions_m": [
+        0.41,
+        0.32,
+        0.57
+      ],
+      "generator": "createWoodworkingBenchVise",
+      "source_path": "src/models/woodworking_bench_vise.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/woodworking-bench-vise.webp",
+      "accent": "#c7bdad"
     }
   ]
 }
