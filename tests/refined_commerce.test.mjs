@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import * as THREE from 'three';
 import {buildRefinedCommerceModel,REFINED_COMMERCE_SLUGS} from '../src/models/refined_commerce_engine.js';
 import {buildCommerceModel} from '../src/models/print_commerce_engine.js';
+import {assetMeta as legacyCommerceExample} from '../src/models/cloud_whale_totem.js';
 import {readFileSync} from 'node:fs';
 const catalog=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8')).assets;
 
@@ -28,7 +29,7 @@ for (const slug of REFINED_COMMERCE_SLUGS) {
   });
 }
 test('unselected v1.3 SKU stays on established engine',()=>{
-  const spec=catalog.find(item=>item.slug==='geo-cactus-planter');
+  const spec=legacyCommerceExample;
   assert.ok(spec);
   assert.equal(buildRefinedCommerceModel(spec),null);
   const model=buildCommerceModel(spec);
