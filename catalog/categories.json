@@ -64,6 +64,11 @@
       "id": "scifi",
       "label": "科幻道具",
       "sort_order": 130
+    },
+    {
+      "id": "print-commerce",
+      "label": "海外3D打印商品",
+      "sort_order": 140
     }
   ]
 }

@@ -12464,6 +12464,1506 @@
       "collection": "v1.1",
       "preview_path": "public/thumbs/ion-propulsion-test-platform.webp",
       "accent": "#343b5b"
+    },
+    {
+      "id": "print-commerce.moon-phase-light-sleeve.001",
+      "slug": "moon-phase-light-sleeve",
+      "title": "Moon Phase Light Sleeve",
+      "title_zh": "月相镂空灯罩",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "lantern",
+        "lamp",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.084,
+        0.108,
+        0.084
+      ],
+      "source_path": "src/models/moon_phase_light_sleeve.js",
+      "generator": "createMoonPhaseLightSleeve",
+      "summary": "Original parametric 创意灯饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/moon-phase-light-sleeve.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.aurora-wave-lantern.001",
+      "slug": "aurora-wave-lantern",
+      "title": "Aurora Wave Lantern",
+      "title_zh": "极光波纹灯罩",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "lantern",
+        "lamp",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.087,
+        0.112,
+        0.087
+      ],
+      "source_path": "src/models/aurora_wave_lantern.js",
+      "generator": "createAuroraWaveLantern",
+      "summary": "Original parametric 创意灯饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/aurora-wave-lantern.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.geometric-star-lightbox.001",
+      "slug": "geometric-star-lightbox",
+      "title": "Geometric Star Lightbox",
+      "title_zh": "几何星光灯罩",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "lantern",
+        "lamp",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.09,
+        0.116,
+        0.09
+      ],
+      "source_path": "src/models/geometric_star_lightbox.js",
+      "generator": "createGeometricStarLightbox",
+      "summary": "Original parametric 创意灯饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/geometric-star-lightbox.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.forest-shadow-lantern.001",
+      "slug": "forest-shadow-lantern",
+      "title": "Forest Shadow Lantern",
+      "title_zh": "森林剪影灯罩",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "lantern",
+        "lamp",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.093,
+        0.12,
+        0.093
+      ],
+      "source_path": "src/models/forest_shadow_lantern.js",
+      "generator": "createForestShadowLantern",
+      "summary": "Original parametric 创意灯饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/forest-shadow-lantern.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.minimal-arch-nightlight.001",
+      "slug": "minimal-arch-nightlight",
+      "title": "Minimal Arch Nightlight",
+      "title_zh": "拱形氛围灯罩",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "lantern",
+        "lamp",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.096,
+        0.124,
+        0.096
+      ],
+      "source_path": "src/models/minimal_arch_nightlight.js",
+      "generator": "createMinimalArchNightlight",
+      "summary": "Original parametric 创意灯饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/minimal-arch-nightlight.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.cloud-whale-totem.001",
+      "slug": "cloud-whale-totem",
+      "title": "Cloud Whale Totem",
+      "title_zh": "云鲸图腾摆件",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "figurine",
+        "figurine",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.092,
+        0.125,
+        0.08
+      ],
+      "source_path": "src/models/cloud_whale_totem.js",
+      "generator": "createCloudWhaleTotem",
+      "summary": "Original parametric 原创雕塑 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/cloud-whale-totem.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.sleepy-owl-guardian.001",
+      "slug": "sleepy-owl-guardian",
+      "title": "Sleepy Owl Guardian",
+      "title_zh": "沉睡猫头鹰守护雕像",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "figurine",
+        "figurine",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.095,
+        0.129,
+        0.083
+      ],
+      "source_path": "src/models/sleepy_owl_guardian.js",
+      "generator": "createSleepyOwlGuardian",
+      "summary": "Original parametric 原创雕塑 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/sleepy-owl-guardian.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.lunar-fox-bust.001",
+      "slug": "lunar-fox-bust",
+      "title": "Lunar Fox Bust",
+      "title_zh": "月狐半身像",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "figurine",
+        "figurine",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.098,
+        0.133,
+        0.086
+      ],
+      "source_path": "src/models/lunar_fox_bust.js",
+      "generator": "createLunarFoxBust",
+      "summary": "Original parametric 原创雕塑 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/lunar-fox-bust.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.garden-robot-companion.001",
+      "slug": "garden-robot-companion",
+      "title": "Garden Robot Companion",
+      "title_zh": "园艺机器人摆件",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "figurine",
+        "figurine",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.101,
+        0.137,
+        0.089
+      ],
+      "source_path": "src/models/garden_robot_companion.js",
+      "generator": "createGardenRobotCompanion",
+      "summary": "Original parametric 原创雕塑 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/garden-robot-companion.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.mountain-spirit-figurine.001",
+      "slug": "mountain-spirit-figurine",
+      "title": "Mountain Spirit Figurine",
+      "title_zh": "山灵原创雕像",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "figurine",
+        "figurine",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.104,
+        0.141,
+        0.092
+      ],
+      "source_path": "src/models/mountain_spirit_figurine.js",
+      "generator": "createMountainSpiritFigurine",
+      "summary": "Original parametric 原创雕塑 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/mountain-spirit-figurine.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.harbor-cargo-diorama.001",
+      "slug": "harbor-cargo-diorama",
+      "title": "Harbor Cargo Diorama",
+      "title_zh": "港口集装箱微景观",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "scenery",
+        "scenery",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.13,
+        0.071,
+        0.087
+      ],
+      "source_path": "src/models/harbor_cargo_diorama.js",
+      "generator": "createHarborCargoDiorama",
+      "summary": "Original parametric 微缩模型 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/harbor-cargo-diorama.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.desert-roadway-diorama.001",
+      "slug": "desert-roadway-diorama",
+      "title": "Desert Roadway Diorama",
+      "title_zh": "沙漠公路微景观",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "scenery",
+        "scenery",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.133,
+        0.075,
+        0.09
+      ],
+      "source_path": "src/models/desert_roadway_diorama.js",
+      "generator": "createDesertRoadwayDiorama",
+      "summary": "Original parametric 微缩模型 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/desert-roadway-diorama.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.alpine-cabin-miniature.001",
+      "slug": "alpine-cabin-miniature",
+      "title": "Alpine Cabin Miniature",
+      "title_zh": "高山木屋微缩场景",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "scenery",
+        "scenery",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.136,
+        0.079,
+        0.093
+      ],
+      "source_path": "src/models/alpine_cabin_miniature.js",
+      "generator": "createAlpineCabinMiniature",
+      "summary": "Original parametric 微缩模型 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/alpine-cabin-miniature.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.urban-street-corner.001",
+      "slug": "urban-street-corner",
+      "title": "Urban Street Corner",
+      "title_zh": "城市街角微缩场景",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "scenery",
+        "scenery",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.139,
+        0.083,
+        0.096
+      ],
+      "source_path": "src/models/urban_street_corner.js",
+      "generator": "createUrbanStreetCorner",
+      "summary": "Original parametric 微缩模型 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/urban-street-corner.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.retro-station-platform.001",
+      "slug": "retro-station-platform",
+      "title": "Retro Station Platform",
+      "title_zh": "复古站台微缩场景",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "scenery",
+        "scenery",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.142,
+        0.087,
+        0.099
+      ],
+      "source_path": "src/models/retro_station_platform.js",
+      "generator": "createRetroStationPlatform",
+      "summary": "Original parametric 微缩模型 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/retro-station-platform.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.modular-pencil-caddy.001",
+      "slug": "modular-pencil-caddy",
+      "title": "Modular Pencil Caddy",
+      "title_zh": "模块化笔筒",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "organizer",
+        "organizer",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.13,
+        0.072,
+        0.087
+      ],
+      "source_path": "src/models/modular_pencil_caddy.js",
+      "generator": "createModularPencilCaddy",
+      "summary": "Original parametric 桌面收纳 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/modular-pencil-caddy.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.cable-sort-desk-hub.001",
+      "slug": "cable-sort-desk-hub",
+      "title": "Cable Sort Desk Hub",
+      "title_zh": "桌面线材分拣座",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "organizer",
+        "organizer",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.133,
+        0.076,
+        0.09
+      ],
+      "source_path": "src/models/cable_sort_desk_hub.js",
+      "generator": "createCableSortDeskHub",
+      "summary": "Original parametric 桌面收纳 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/cable-sort-desk-hub.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.paintbrush-workshop-rack.001",
+      "slug": "paintbrush-workshop-rack",
+      "title": "Paintbrush Workshop Rack",
+      "title_zh": "手工画笔整理架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "organizer",
+        "organizer",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.136,
+        0.08,
+        0.093
+      ],
+      "source_path": "src/models/paintbrush_workshop_rack.js",
+      "generator": "createPaintbrushWorkshopRack",
+      "summary": "Original parametric 桌面收纳 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/paintbrush-workshop-rack.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.craft-spool-organizer.001",
+      "slug": "craft-spool-organizer",
+      "title": "Craft Spool Organizer",
+      "title_zh": "手工线轴整理架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "organizer",
+        "organizer",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.139,
+        0.084,
+        0.096
+      ],
+      "source_path": "src/models/craft_spool_organizer.js",
+      "generator": "createCraftSpoolOrganizer",
+      "summary": "Original parametric 桌面收纳 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/craft-spool-organizer.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.studio-tool-bin.001",
+      "slug": "studio-tool-bin",
+      "title": "Studio Tool Bin",
+      "title_zh": "工作室多格工具盒",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "organizer",
+        "organizer",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.142,
+        0.088,
+        0.099
+      ],
+      "source_path": "src/models/studio_tool_bin.js",
+      "generator": "createStudioToolBin",
+      "summary": "Original parametric 桌面收纳 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/studio-tool-bin.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.collectible-display-plinth.001",
+      "slug": "collectible-display-plinth",
+      "title": "Collectible Display Plinth",
+      "title_zh": "收藏品展示底座",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "display",
+        "display",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.11,
+        0.085,
+        0.1
+      ],
+      "source_path": "src/models/collectible_display_plinth.js",
+      "generator": "createCollectibleDisplayPlinth",
+      "summary": "Original parametric 展示支架 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/collectible-display-plinth.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.watch-display-cradle.001",
+      "slug": "watch-display-cradle",
+      "title": "Watch Display Cradle",
+      "title_zh": "手表陈列托架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "display",
+        "display",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.113,
+        0.089,
+        0.103
+      ],
+      "source_path": "src/models/watch_display_cradle.js",
+      "generator": "createWatchDisplayCradle",
+      "summary": "Original parametric 展示支架 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/watch-display-cradle.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.trading-card-display.001",
+      "slug": "trading-card-display",
+      "title": "Trading Card Display",
+      "title_zh": "收藏卡片展示架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "display",
+        "display",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.116,
+        0.093,
+        0.106
+      ],
+      "source_path": "src/models/trading_card_display.js",
+      "generator": "createTradingCardDisplay",
+      "summary": "Original parametric 展示支架 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/trading-card-display.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.miniature-tiered-riser.001",
+      "slug": "miniature-tiered-riser",
+      "title": "Miniature Tiered Riser",
+      "title_zh": "三层模型展示台",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "display",
+        "display",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.119,
+        0.097,
+        0.109
+      ],
+      "source_path": "src/models/miniature_tiered_riser.js",
+      "generator": "createMiniatureTieredRiser",
+      "summary": "Original parametric 展示支架 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/miniature-tiered-riser.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.eyewear-display-stand.001",
+      "slug": "eyewear-display-stand",
+      "title": "Eyewear Display Stand",
+      "title_zh": "眼镜展示托架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "display",
+        "display",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.122,
+        0.101,
+        0.112
+      ],
+      "source_path": "src/models/eyewear_display_stand.js",
+      "generator": "createEyewearDisplayStand",
+      "summary": "Original parametric 展示支架 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/eyewear-display-stand.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.universal-controller-cradle.001",
+      "slug": "universal-controller-cradle",
+      "title": "Universal Controller Cradle",
+      "title_zh": "通用手柄托架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gaming",
+        "gaming",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.135,
+        0.074,
+        0.1
+      ],
+      "source_path": "src/models/universal_controller_cradle.js",
+      "generator": "createUniversalControllerCradle",
+      "summary": "Original parametric 桌游游戏周边 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/universal-controller-cradle.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.retro-cartridge-rack.001",
+      "slug": "retro-cartridge-rack",
+      "title": "Retro Cartridge Rack",
+      "title_zh": "复古游戏卡带架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gaming",
+        "gaming",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.138,
+        0.078,
+        0.103
+      ],
+      "source_path": "src/models/retro_cartridge_rack.js",
+      "generator": "createRetroCartridgeRack",
+      "summary": "Original parametric 桌游游戏周边 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/retro-cartridge-rack.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.tabletop-dice-tray.001",
+      "slug": "tabletop-dice-tray",
+      "title": "Tabletop Dice Tray",
+      "title_zh": "桌游骰子托盘",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gaming",
+        "gaming",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.141,
+        0.082,
+        0.106
+      ],
+      "source_path": "src/models/tabletop_dice_tray.js",
+      "generator": "createTabletopDiceTray",
+      "summary": "Original parametric 桌游游戏周边 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/tabletop-dice-tray.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.boardgame-token-sorter.001",
+      "slug": "boardgame-token-sorter",
+      "title": "Boardgame Token Sorter",
+      "title_zh": "桌游代币整理座",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gaming",
+        "gaming",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.144,
+        0.086,
+        0.109
+      ],
+      "source_path": "src/models/boardgame_token_sorter.js",
+      "generator": "createBoardgameTokenSorter",
+      "summary": "Original parametric 桌游游戏周边 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/boardgame-token-sorter.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.handheld-console-stand.001",
+      "slug": "handheld-console-stand",
+      "title": "Handheld Console Stand",
+      "title_zh": "掌机展示支架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gaming",
+        "gaming",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.147,
+        0.09,
+        0.112
+      ],
+      "source_path": "src/models/handheld_console_stand.js",
+      "generator": "createHandheldConsoleStand",
+      "summary": "Original parametric 桌游游戏周边 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/handheld-console-stand.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.arc-earring-display.001",
+      "slug": "arc-earring-display",
+      "title": "Arc Earring Display",
+      "title_zh": "拱形耳饰陈列架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "jewelry",
+        "jewelry",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.112,
+        0.099,
+        0.082
+      ],
+      "source_path": "src/models/arc_earring_display.js",
+      "generator": "createArcEarringDisplay",
+      "summary": "Original parametric 珠宝陈列 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/arc-earring-display.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.ring-cone-tower.001",
+      "slug": "ring-cone-tower",
+      "title": "Ring Cone Tower",
+      "title_zh": "戒指锥形展示座",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "jewelry",
+        "jewelry",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.115,
+        0.103,
+        0.085
+      ],
+      "source_path": "src/models/ring_cone_tower.js",
+      "generator": "createRingConeTower",
+      "summary": "Original parametric 珠宝陈列 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/ring-cone-tower.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.bracelet-display-arch.001",
+      "slug": "bracelet-display-arch",
+      "title": "Bracelet Display Arch",
+      "title_zh": "手镯拱形陈列架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "jewelry",
+        "jewelry",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.118,
+        0.107,
+        0.088
+      ],
+      "source_path": "src/models/bracelet_display_arch.js",
+      "generator": "createBraceletDisplayArch",
+      "summary": "Original parametric 珠宝陈列 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/bracelet-display-arch.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.pendant-sorting-tray.001",
+      "slug": "pendant-sorting-tray",
+      "title": "Pendant Sorting Tray",
+      "title_zh": "吊坠分格托盘",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "jewelry",
+        "jewelry",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.121,
+        0.111,
+        0.091
+      ],
+      "source_path": "src/models/pendant_sorting_tray.js",
+      "generator": "createPendantSortingTray",
+      "summary": "Original parametric 珠宝陈列 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/pendant-sorting-tray.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.modular-jewelry-plinth.001",
+      "slug": "modular-jewelry-plinth",
+      "title": "Modular Jewelry Plinth",
+      "title_zh": "模块化珠宝陈列台",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "jewelry",
+        "jewelry",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.124,
+        0.115,
+        0.094
+      ],
+      "source_path": "src/models/modular_jewelry_plinth.js",
+      "generator": "createModularJewelryPlinth",
+      "summary": "Original parametric 珠宝陈列 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/modular-jewelry-plinth.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.ribbed-succulent-pot.001",
+      "slug": "ribbed-succulent-pot",
+      "title": "Ribbed Succulent Pot",
+      "title_zh": "竖纹多肉盆",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "planter",
+        "planter",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.107,
+        0.1,
+        0.107
+      ],
+      "source_path": "src/models/ribbed_succulent_pot.js",
+      "generator": "createRibbedSucculentPot",
+      "summary": "Original parametric 园艺装饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/ribbed-succulent-pot.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.geo-cactus-planter.001",
+      "slug": "geo-cactus-planter",
+      "title": "Geo Cactus Planter",
+      "title_zh": "几何仙人掌花盆",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "planter",
+        "planter",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.11,
+        0.104,
+        0.11
+      ],
+      "source_path": "src/models/geo_cactus_planter.js",
+      "generator": "createGeoCactusPlanter",
+      "summary": "Original parametric 园艺装饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/geo-cactus-planter.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.propagation-vial-holder.001",
+      "slug": "propagation-vial-holder",
+      "title": "Propagation Vial Holder",
+      "title_zh": "水培试管支架",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "planter",
+        "planter",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.113,
+        0.108,
+        0.113
+      ],
+      "source_path": "src/models/propagation_vial_holder.js",
+      "generator": "createPropagationVialHolder",
+      "summary": "Original parametric 园艺装饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/propagation-vial-holder.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.bonsai-display-pot.001",
+      "slug": "bonsai-display-pot",
+      "title": "Bonsai Display Pot",
+      "title_zh": "盆景展示盆",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "planter",
+        "planter",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.116,
+        0.112,
+        0.116
+      ],
+      "source_path": "src/models/bonsai_display_pot.js",
+      "generator": "createBonsaiDisplayPot",
+      "summary": "Original parametric 园艺装饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/bonsai-display-pot.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.desktop-herb-planter.001",
+      "slug": "desktop-herb-planter",
+      "title": "Desktop Herb Planter",
+      "title_zh": "桌面香草盆",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "planter",
+        "planter",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.119,
+        0.116,
+        0.119
+      ],
+      "source_path": "src/models/desktop_herb_planter.js",
+      "generator": "createDesktopHerbPlanter",
+      "summary": "Original parametric 园艺装饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/desktop-herb-planter.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.custom-desk-nameplate.001",
+      "slug": "custom-desk-nameplate",
+      "title": "Custom Desk Nameplate",
+      "title_zh": "定制桌面姓名牌",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gift",
+        "gift",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.145,
+        0.064,
+        0.078
+      ],
+      "source_path": "src/models/custom_desk_nameplate.js",
+      "generator": "createCustomDeskNameplate",
+      "summary": "Original parametric 个性化礼品 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/custom-desk-nameplate.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.wedding-place-card.001",
+      "slug": "wedding-place-card",
+      "title": "Wedding Place Card",
+      "title_zh": "婚礼席位姓名牌",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gift",
+        "gift",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.148,
+        0.068,
+        0.081
+      ],
+      "source_path": "src/models/wedding_place_card.js",
+      "generator": "createWeddingPlaceCard",
+      "summary": "Original parametric 个性化礼品 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/wedding-place-card.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.house-number-plaque.001",
+      "slug": "house-number-plaque",
+      "title": "House Number Plaque",
+      "title_zh": "房屋门牌号牌",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gift",
+        "gift",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.151,
+        0.072,
+        0.084
+      ],
+      "source_path": "src/models/house_number_plaque.js",
+      "generator": "createHouseNumberPlaque",
+      "summary": "Original parametric 个性化礼品 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/house-number-plaque.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.anniversary-message-plaque.001",
+      "slug": "anniversary-message-plaque",
+      "title": "Anniversary Message Plaque",
+      "title_zh": "纪念日祝福牌",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gift",
+        "gift",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.154,
+        0.076,
+        0.087
+      ],
+      "source_path": "src/models/anniversary_message_plaque.js",
+      "generator": "createAnniversaryMessagePlaque",
+      "summary": "Original parametric 个性化礼品 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/anniversary-message-plaque.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.monogram-desk-coaster.001",
+      "slug": "monogram-desk-coaster",
+      "title": "Monogram Desk Coaster",
+      "title_zh": "字母装饰杯垫",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "gift",
+        "gift",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.157,
+        0.08,
+        0.09
+      ],
+      "source_path": "src/models/monogram_desk_coaster.js",
+      "generator": "createMonogramDeskCoaster",
+      "summary": "Original parametric 个性化礼品 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/monogram-desk-coaster.webp",
+      "accent": "#d9a5a4"
+    },
+    {
+      "id": "print-commerce.celestial-guild-medallion.001",
+      "slug": "celestial-guild-medallion",
+      "title": "Celestial Guild Medallion",
+      "title_zh": "星穹公会原创徽章",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "cosplay",
+        "cosplay",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.075,
+        0.085,
+        0.02
+      ],
+      "source_path": "src/models/celestial_guild_medallion.js",
+      "generator": "createCelestialGuildMedallion",
+      "summary": "Original parametric 原创服装配饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/celestial-guild-medallion.webp",
+      "accent": "#dfb77d"
+    },
+    {
+      "id": "print-commerce.fantasy-crest-badge.001",
+      "slug": "fantasy-crest-badge",
+      "title": "Fantasy Crest Badge",
+      "title_zh": "奇幻原创纹章",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "cosplay",
+        "cosplay",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.078,
+        0.089,
+        0.023
+      ],
+      "source_path": "src/models/fantasy_crest_badge.js",
+      "generator": "createFantasyCrestBadge",
+      "summary": "Original parametric 原创服装配饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/fantasy-crest-badge.webp",
+      "accent": "#9eafbd"
+    },
+    {
+      "id": "print-commerce.space-explorer-insignia.001",
+      "slug": "space-explorer-insignia",
+      "title": "Space Explorer Insignia",
+      "title_zh": "太空探索徽记",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "cosplay",
+        "cosplay",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.081,
+        0.093,
+        0.026
+      ],
+      "source_path": "src/models/space_explorer_insignia.js",
+      "generator": "createSpaceExplorerInsignia",
+      "summary": "Original parametric 原创服装配饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/space-explorer-insignia.webp",
+      "accent": "#baa3d4"
+    },
+    {
+      "id": "print-commerce.alchemist-costume-brooch.001",
+      "slug": "alchemist-costume-brooch",
+      "title": "Alchemist Costume Brooch",
+      "title_zh": "炼金师服装胸针",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "cosplay",
+        "cosplay",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.084,
+        0.097,
+        0.029
+      ],
+      "source_path": "src/models/alchemist_costume_brooch.js",
+      "generator": "createAlchemistCostumeBrooch",
+      "summary": "Original parametric 原创服装配饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/alchemist-costume-brooch.webp",
+      "accent": "#85b3a1"
+    },
+    {
+      "id": "print-commerce.mythic-rune-emblem.001",
+      "slug": "mythic-rune-emblem",
+      "title": "Mythic Rune Emblem",
+      "title_zh": "神话符文装饰徽章",
+      "category": "print-commerce",
+      "tags": [
+        "3d-print",
+        "print-commerce",
+        "cosplay",
+        "cosplay",
+        "original-design",
+        "parametric"
+      ],
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.087,
+        0.101,
+        0.032
+      ],
+      "source_path": "src/models/mythic_rune_emblem.js",
+      "generator": "createMythicRuneEmblem",
+      "summary": "Original parametric 原创服装配饰 product concept for overseas 3D-print commerce; CAD source and prototype testing required.",
+      "style": "Print Commerce / Concept",
+      "collection": "v1.2",
+      "preview_path": "public/thumbs/mythic-rune-emblem.webp",
+      "accent": "#d9a5a4"
     }
   ]
 }
