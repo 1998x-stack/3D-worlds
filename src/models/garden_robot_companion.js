@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/garden_robot_companion.js",
   "generator": "createGardenRobotCompanion",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "figurine",
   "variant": 4,
   "cad_path": "printables/garden-robot-companion.scad",

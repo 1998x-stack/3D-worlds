@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/forest_shadow_lantern.js",
   "generator": "createForestShadowLantern",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "lantern",
   "variant": 4,
   "cad_path": "printables/forest-shadow-lantern.scad",

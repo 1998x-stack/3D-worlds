@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/sleepy_owl_guardian.js",
   "generator": "createSleepyOwlGuardian",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "figurine",
   "variant": 2,
   "cad_path": "printables/sleepy-owl-guardian.scad",

@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/minimal_arch_nightlight.js",
   "generator": "createMinimalArchNightlight",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "lantern",
   "variant": 5,
   "cad_path": "printables/minimal-arch-nightlight.scad",

@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/lunar_fox_bust.js",
   "generator": "createLunarFoxBust",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "figurine",
   "variant": 3,
   "cad_path": "printables/lunar-fox-bust.scad",

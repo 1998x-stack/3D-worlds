@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/moon_phase_light_sleeve.js",
   "generator": "createMoonPhaseLightSleeve",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "lantern",
   "variant": 1,
   "cad_path": "printables/moon-phase-light-sleeve.scad",

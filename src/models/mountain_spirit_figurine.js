@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/mountain_spirit_figurine.js",
   "generator": "createMountainSpiritFigurine",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "figurine",
   "variant": 5,
   "cad_path": "printables/mountain-spirit-figurine.scad",

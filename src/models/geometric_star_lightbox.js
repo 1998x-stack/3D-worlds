@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/geometric_star_lightbox.js",
   "generator": "createGeometricStarLightbox",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "lantern",
   "variant": 3,
   "cad_path": "printables/geometric-star-lightbox.scad",

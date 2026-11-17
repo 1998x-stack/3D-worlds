@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/cloud_whale_totem.js",
   "generator": "createCloudWhaleTotem",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "figurine",
   "variant": 1,
   "cad_path": "printables/cloud-whale-totem.scad",

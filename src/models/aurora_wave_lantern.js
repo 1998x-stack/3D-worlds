@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/aurora_wave_lantern.js",
   "generator": "createAuroraWaveLantern",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "lantern",
   "variant": 2,
   "cad_path": "printables/aurora-wave-lantern.scad",
