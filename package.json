@@ -17,7 +17,10 @@
     "optimize:glb": "node scripts/optimize_assets.mjs",
     "verify:assets": "node scripts/verify_generated.mjs",
     "test:gallery": "node scripts/smoke_gallery.mjs",
-    "test:remote": "node scripts/smoke_remote_gallery.mjs"
+    "test:remote": "node scripts/smoke_remote_gallery.mjs",
+    "predev": "python3 scripts/export_static_catalog.py",
+    "prebuild": "python3 scripts/export_static_catalog.py",
+    "export:static": "python3 scripts/export_static_catalog.py"
   },
   "dependencies": {
     "three": "0.180.0",

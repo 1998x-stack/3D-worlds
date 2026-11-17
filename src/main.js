@@ -1,4 +1,4 @@
-import catalog from '../catalog/models.json';
+import catalog from '../catalog/public_models.json';
 import categoryCatalog from '../catalog/categories.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
