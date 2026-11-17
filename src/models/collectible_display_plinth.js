@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/collectible_display_plinth.js",
   "generator": "createCollectibleDisplayPlinth",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "display",
   "variant": 1,
   "cad_path": "printables/collectible-display-plinth.scad",

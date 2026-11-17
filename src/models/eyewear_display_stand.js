@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/eyewear_display_stand.js",
   "generator": "createEyewearDisplayStand",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "display",
   "variant": 5,
   "cad_path": "printables/eyewear-display-stand.scad",

@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/miniature_tiered_riser.js",
   "generator": "createMiniatureTieredRiser",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "display",
   "variant": 4,
   "cad_path": "printables/miniature-tiered-riser.scad",

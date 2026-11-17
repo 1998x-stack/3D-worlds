@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/retro_cartridge_rack.js",
   "generator": "createRetroCartridgeRack",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gaming",
   "variant": 2,
   "cad_path": "printables/retro-cartridge-rack.scad",

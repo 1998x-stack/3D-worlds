@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/universal_controller_cradle.js",
   "generator": "createUniversalControllerCradle",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gaming",
   "variant": 1,
   "cad_path": "printables/universal-controller-cradle.scad",

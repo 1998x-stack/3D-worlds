@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/watch_display_cradle.js",
   "generator": "createWatchDisplayCradle",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "display",
   "variant": 2,
   "cad_path": "printables/watch-display-cradle.scad",

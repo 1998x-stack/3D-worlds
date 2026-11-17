@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/tabletop_dice_tray.js",
   "generator": "createTabletopDiceTray",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gaming",
   "variant": 3,
   "cad_path": "printables/tabletop-dice-tray.scad",

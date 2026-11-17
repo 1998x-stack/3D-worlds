@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/boardgame_token_sorter.js",
   "generator": "createBoardgameTokenSorter",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gaming",
   "variant": 4,
   "cad_path": "printables/boardgame-token-sorter.scad",

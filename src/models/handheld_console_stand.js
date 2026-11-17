@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/handheld_console_stand.js",
   "generator": "createHandheldConsoleStand",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gaming",
   "variant": 5,
   "cad_path": "printables/handheld-console-stand.scad",

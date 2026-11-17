@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/trading_card_display.js",
   "generator": "createTradingCardDisplay",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "display",
   "variant": 3,
   "cad_path": "printables/trading-card-display.scad",
