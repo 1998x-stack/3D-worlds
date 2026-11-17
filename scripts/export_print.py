@@ -196,6 +196,9 @@ def export_print(input_path: Path, output_dir: Path, slug: str,
         raise ValueError('mode must be parts or fused')
     if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,119}', slug):
         raise ValueError('Unsafe output slug')
+    # Content provenance stays stable even if names/IDs are later changed.
+    with input_path.open('rb') as source:
+        source_sha256 = hashlib.file_digest(source, 'sha256').hexdigest()
     meshes, dims = normalize(load_meshes(input_path), longest_mm, repair_normals)
     if mode == 'fused' and len(meshes) > 1:
         try:
@@ -208,7 +211,7 @@ def export_print(input_path: Path, output_dir: Path, slug: str,
     parts, errors, warnings = audit(meshes, max_triangles, bed_mm)
     if errors:
         return {
-            'status': 'blocked', 'source': str(input_path), 'asset': slug,
+            'status': 'blocked', 'source': str(input_path), 'source_sha256': source_sha256, 'asset': slug,
             'mode': mode, **dims, 'parts': parts, 'errors': errors,
             'warnings': warnings, 'files': {},
         }
@@ -226,7 +229,8 @@ def export_print(input_path: Path, output_dir: Path, slug: str,
         }
     report = {
         'status': 'geometry_pass_manual_review_required',
-        'source': str(input_path), 'asset': slug, 'mode': mode, **dims,
+        'source': str(input_path), 'source_sha256': source_sha256,
+        'asset': slug, 'mode': mode, **dims,
         'parts': parts, 'errors': errors, 'warnings': warnings, 'files': files,
         'manufacturing_certified': False, 'unit': 'millimeter', 'up_axis': 'Z',
     }
