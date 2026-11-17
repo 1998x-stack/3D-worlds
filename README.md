@@ -7,6 +7,8 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [Architecture](docs/architecture.md) ·
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
+[MCP contract](docs/mcp-contract.md) ·
+[Manifest schema](schemas/manifest.schema.json) ·
 [Model-building Skill](.codex/skills/threejs-model-builder/SKILL.md)
 
 ## Capabilities
@@ -47,9 +49,12 @@ python3 scripts/catalog.py validate
 python3 scripts/catalog.py build
 python3 scripts/catalog.py stats
 python3 -m unittest discover -s tests -v
+npm install && node scripts/validate_models.mjs
 ```
 
-Database is generated as `data/catalog.sqlite` and ignored by Git; metadata
+Database is generated as `data/catalog.sqlite` and ignored by Git. CI also
+publishes the compiled SQLite file as a 30-day downloadable Actions artifact
+(`3d-worlds-catalog-sqlite`). Metadata
 source of truth is `catalog/models.json`. Rebuild after changing the manifest.
 
 ### Start MCP server
