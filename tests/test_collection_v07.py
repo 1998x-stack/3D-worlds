@@ -22,9 +22,9 @@ class V07CollectionTests(unittest.TestCase):
         self.assertEqual(c["asset_count"], 50)
         self.assertEqual(c["category_count"], 13)
         self.assertEqual(len(c["assets"]), 50)
-        self.assertEqual(len(self.assets), 235)
-        self.assertEqual(len(self.by_id), 235)
-        self.assertEqual(len({a["slug"] for a in self.assets}), 235)
+        self.assertGreaterEqual(len(self.assets), 235)
+        self.assertEqual(len(self.by_id), len(self.assets))
+        self.assertEqual(len({a["slug"] for a in self.assets}), len(self.assets))
         categories = {x["id"] for x in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
         self.assertEqual(set(c["category_counts"]), categories)
         self.assertEqual(sum(c["category_counts"].values()), 50)
@@ -70,7 +70,7 @@ class V07CollectionTests(unittest.TestCase):
                 self.assertTrue(all(math.isfinite(v) and v > 0 for v in asset["dimensions_m"]))
 
     def test_historical_185_assets_not_reassigned(self):
-        old = [a for a in self.assets if a.get("collection") != "v0.7"]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.7", "v0.8")]
         self.assertEqual(len(old), 185)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.6"]), 50)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.5"]), 50)

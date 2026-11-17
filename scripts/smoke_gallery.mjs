@@ -56,12 +56,20 @@ try{
  await page.locator('.detail-modal').waitFor({state:'visible'});
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0)) throw Error('V0.7 WebGL inspector canvas missing');
  await page.locator('#close-detail').click();
+ const v08 = page.locator('[data-id="scifi.orbital-navigation-beacon.001"]');
+ if(await v08.count()!==1) throw Error('V0.8 orbital navigation beacon missing');
+ await v08.scrollIntoViewIfNeeded();
+ await v08.locator('img').evaluate(img=>img.decode());
+ await v08.click();
+ await page.locator('.detail-modal').waitFor({state:'visible'});
+ if(!await canvas.evaluate(el=>el.width>0&&el.height>0)) throw Error('V0.8 WebGL inspector canvas missing');
+ await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
  await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
    null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
- console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7 inspectors and Chinese search');
+ console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6/v0.7/v0.8 inspectors and Chinese search');
 }finally{
  await browser?.close();
  await new Promise(resolve=>server?.httpServer?.close(resolve)??resolve());
