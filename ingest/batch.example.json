@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "file": "your-asset.glb",
+      "slug": "example-architectural-asset",
+      "category": "decor",
+      "title": "Example Architectural Asset",
+      "title_zh": "示例建筑装饰资产",
+      "summary": "Replace with an accurate, original description.",
+      "tags": [
+        "architectural",
+        "decor",
+        "glb"
+      ],
+      "license": "CC-BY-4.0",
+      "author": "Actual Author Name",
+      "license_evidence_url": "https://example.org/original-asset-license",
+      "source_url": "https://example.org/original-asset",
+      "provenance_note": "Describe acquisition and permission evidence.",
+      "dimensions_m": [
+        1,
+        1,
+        1
+      ],
+      "style": "Imported GLB",
+      "accent": "#a2b9bd"
+    }
+  ]
+}
