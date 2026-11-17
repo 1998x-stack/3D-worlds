@@ -4,7 +4,7 @@
 
 **Open 3D asset infrastructure — inspectable Three.js scenes, reproducible GLB outputs, and honest 3D printing candidates.**
 
-[**Explore the gallery**](https://1998x-stack.github.io/3D-worlds/) · [**3D Print Workbench**](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [**中文文档**](README.zh-CN.md) · [**Architecture**](docs/architecture.md)
+[**Explore the gallery**](https://1998x-stack.github.io/3D-worlds/) · [**3D Print Workbench**](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [**中文文档**](README.zh-CN.md) · [**Architecture**](docs/architecture.md) · [**CAD & HN Research**](docs/codex-cad-3d-printing-hn-research-2026.md)
 
 [![Verify and Deploy Pages](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml/badge.svg)](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml) [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -65,6 +65,10 @@ npm run build
 ~~~
 
 Generated previews, LOD binaries and SQLite files are build outputs, not tracked source artifacts.
+
+### Codex × CAD × 3D printing research (2026)
+
+An evidence-graded technical study of seven Hacker News project directions, covering source architecture, practical print workflows, CAD Agent integration, safety limitations, and a roadmap for this repository. Read the [full Chinese Markdown report](docs/codex-cad-3d-printing-hn-research-2026.md), [print-ready HTML](docs/codex-cad-3d-printing-hn-research-2026.html), or [generated PDF](docs/Codex_CAD_3DPrinting_HackerNews_DeepResearch_2026.pdf). The PDF is created by [GitHub Actions](.github/workflows/build-hn-research-pdf.yml) from the reviewed HTML source.
 
 ## From Three.js to 3D printing
 
