@@ -8,6 +8,7 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
+[STL / 3MF printing pipeline](docs/print-pipeline.md) ·
 [50 newest assets · v1.0](docs/50-assets-v10.md) ·
 [50 previous assets · v0.9](docs/50-assets-v09.md) ·
 [50 previous assets · v0.8](docs/50-assets-v08.md) ·
@@ -21,6 +22,30 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [Model-building Skill v2](.codex/skills/threejs-model-builder/SKILL.md) ·
 [Skill architecture](docs/skill-architecture.md)
 
+
+## 3D Printing / STL / 3MF (experimental)
+
+The Gallery now offers a **dimension-aware STL draft** download for each
+procedural model. Enter the intended longest dimension in millimeters; the
+browser converts Y-up models to Z-up, uniformly scales the model and emits
+binary STL. **Browser STL is not manufacturing-validated.**
+
+For checked exports, first produce a full-resolution `.cache/raw/*.glb`
+using `npm run generate:assets`, then install the optional Trimesh dependency
+and run the offline print exporter:
+
+```bash
+python3 -m pip install -r requirements-print.txt
+python3 scripts/export_print.py --asset-id furniture.chair.linen-001 \\
+  --longest-mm 120 --bed-mm 220 220 250
+```
+
+If each mesh component passes basic manifoldness, orientation, volume and bed
+checks, this writes STL, 3MF (explicit millimeter units) and a SHA-256
+print-quality report to `.cache/print/`. Failed geometry is **blocked**.
+Separate parts may intersect, and wall thickness, stability and slicer
+compatibility still require review. See the
+[full print pipeline, commands, limitations and roadmap](docs/print-pipeline.md).
 
 ## Three.js Model Builder · Skill v2
 
