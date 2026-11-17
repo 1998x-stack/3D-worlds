@@ -21,7 +21,9 @@ try{
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('Inspector WebGL canvas missing');
  await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
- if(await cards.count()!==1)throw Error('Chinese search did not match cactus');
+ // The Gallery debounces input before updating its cards.
+ await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
+   null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
  console.log('PAGES SMOKE OK: 45 cards, raster thumbnail, inspector, Chinese search');
 }finally{
