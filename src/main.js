@@ -2,29 +2,57 @@ import catalog from '../catalog/models.json';
 import categoryCatalog from '../catalog/categories.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
-// Vite auto-discovers procedural modules; new models need no hard-coded registry.
-const modules = import.meta.glob('./models/*.js', { eager: true });
-const sources = import.meta.glob('./models/*.js', { query: '?raw', import: 'default', eager: true });
+// Lazy Three.js modules: adding 30 assets must not pull all geometry into initial page.
+const moduleLoaders = import.meta.glob('./models/*.js');
+const sourceLoaders = import.meta.glob('./models/*.js', { query: '?raw', import: 'default' });
 const assets = catalog.assets;
-const factories = Object.fromEntries(
-  assets.filter(asset => asset.kind === 'procedural').map(asset => {
-    const moduleKey = './models/' + asset.source_path.split('/').pop();
-    const factory = modules[moduleKey]?.[asset.generator];
-    if (typeof factory !== 'function') throw new Error('Missing generator: ' + asset.id);
-    return [asset.id, factory];
-  })
-);
-const sourceFiles = Object.fromEntries(
-  assets.filter(asset => asset.kind === 'procedural').map(asset => [
-    asset.id, sources['./models/' + asset.source_path.split('/').pop()]
-  ])
-);
-const primitiveSource = sources['./models/primitives.js'];
+const assetMap = new Map(assets.map(item => [item.id,item]));
+const factoryCache = new Map();
+const API_BASE = (import.meta.env.VITE_CATALOG_API_URL || '').replace(/\\/$/, '');
+let remoteResults = API_BASE ? [] : null;
+let remoteCursor = null;
+let remoteRequestId = 0;
+let remoteCategories = null;
+let remoteDebounce = null;
+async function getFactory(asset) {
+  if (factoryCache.has(asset.id)) return factoryCache.get(asset.id);
+  const path = './models/' + (asset.source_path || '').split('/').pop();
+  const loader = moduleLoaders[path];
+  if (!loader) throw new Error('Three.js generator not present in client bundle: ' + asset.id);
+  const promise = loader().then(module => {
+    const factory = module[asset.generator];
+    if (typeof factory !== 'function') throw new Error('Missing generator ' + asset.generator);
+    return factory;
+  });
+  factoryCache.set(asset.id, promise);
+  return promise;
+}
+async function getRawSource(filename) {
+  const loader = sourceLoaders['./models/' + filename];
+  if (!loader) throw new Error('Missing model source: ' + filename);
+  return loader();
+}
+const stripImports = source => source.replace(/^import[^\\n]+\\n/gm, '');
+const publicPath = path => import.meta.env.BASE_URL + String(path).replace(/^public\\//, '');
+function previewMarkup(asset) {
+  if (!asset.preview_path) return '<span class="glb-placeholder">◈<small>3D ASSET</small></span>';
+  const webp = publicPath(asset.preview_path);
+  const avif = webp.replace(/\\.webp$/, '.avif');
+  return `<picture><source type="image/avif" srcset="${safe(avif)}"/><img class="asset-thumbnail" loading="lazy" decoding="async" src="${safe(webp)}" alt=""/></picture>`;
+}
+async function binaryUrl(asset,lod=0) {
+  if (API_BASE) {
+    const r = await fetch(API_BASE + '/api/v1/assets/' + encodeURIComponent(asset.id) + '/download?lod=' + lod);
+    if (!r.ok) throw Error('Remote GLB unavailable (' + r.status + ')');
+    const data = await r.json();
+    return new URL(data.url, API_BASE + '/').href;
+  }
+  if (asset.kind === 'procedural') return publicPath('public/generated/' + asset.slug + '-lod' + lod + '.glb');
+  return publicPath(asset.binary_path);
+}
 const labels = Object.fromEntries([['all', '全部模型'], ...categoryCatalog.categories.map(c => [c.id, c.label])]);
 let category = 'all', search = '', sorting = 'featured';
 let activeAsset = null, viewer = null, lastFocus = null;
-const thumbnailCache = new Map();
-const assetBinaryUrl = asset => import.meta.env.BASE_URL + asset.binary_path.replace(/^public\//, '');
 const root = document.getElementById('app');
 const safe = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -66,7 +94,7 @@ root.innerHTML = `
             <div class="sort-box"><span>排序</span><select id="sort-select" aria-label="模型排序"><option value="featured">精选推荐</option><option value="name">名称 A–Z</option><option value="category">分类</option></select></div>
           </div>
           <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">05 RESULTS</span></div>
-          <div id="asset-grid" class="asset-grid"></div>
+          <div id="asset-grid" class="asset-grid"></div><div class="load-more-box" id="load-more-box" hidden><button id="load-more" class="button button-soft" type="button">加载更多模型 ↓</button></div>
           <div class="catalog-footer"><span>Built for the makers, by the makers.</span><span>GLB / THREE.JS / MCP / SQLITE</span></div>
         </div>
       </div>
@@ -79,7 +107,7 @@ root.innerHTML = `
       <div class="detail-topbar"><span>ASSET INSPECTOR <span class="detail-topbar-id" id="detail-id"></span></span><button id="close-detail" class="icon-button" aria-label="关闭详情">×</button></div>
       <div class="detail-layout">
         <div class="detail-viewer"><canvas id="detail-canvas" aria-label="可拖动旋转缩放的 3D 模型"></canvas><span class="viewer-badge">LIVE 3D VIEW</span><div class="viewer-controls"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><button id="reset-view" type="button">↺ 重置视角</button></div></div>
-        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
+        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
       </div>
     </section>
   </div>
@@ -100,81 +128,60 @@ function toast(message) {
 
 function renderFilters() {
   const counts = Object.fromEntries(Object.keys(labels).map(key => [key, key === 'all' ? assets.length : 0]));
+  if (remoteCategories) {
+    counts.all = remoteCategories.reduce((sum,item)=>sum+item.count,0);
+    for (const item of remoteCategories) counts[item.id] = item.count;
+  }
   for (const item of assets) counts[item.category] = (counts[item.category] || 0) + 1;
   document.getElementById('category-filters').innerHTML = Object.entries(labels).map(([key, label]) => `<button class="filter-item ${category === key ? 'selected' : ''}" data-category="${key}" aria-pressed="${category === key}"><span>${label}</span><span class="filter-count">${String(counts[key] || 0).padStart(2, '0')}</span></button>`).join('');
 }
 
 function getFiltered() {
   const query = search.trim().toLocaleLowerCase();
-  const result = assets.filter(asset => {
+  const result = remoteResults !== null ? [...remoteResults] : assets.filter(asset => {
     if (category !== 'all' && category !== asset.category) return false;
     const terms = [asset.title, asset.title_zh, asset.summary, ...(asset.tags || [])].join(' ').toLocaleLowerCase();
     return !query || terms.includes(query);
   });
+  if (API_BASE) return result;
   if (sorting === 'name') result.sort((a, b) => a.title.localeCompare(b.title));
   if (sorting === 'category') result.sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
   return result;
 }
 
 function renderGrid() {
-  // Thumbnails are cached raster images; do not keep one WebGL context per card.
+  // P0 pipeline delivers real raster WebP/AVIF thumbnails; no card WebGL contexts.
   const result = getFiltered();
   document.getElementById('result-count').textContent = String(result.length).padStart(2, '0') + ' RESULTS';
   document.getElementById('result-caption').textContent = (category === 'all' ? 'ALL OBJECTS' : category.toUpperCase()) + (search ? ' · FILTERED' : '');
   grid.innerHTML = result.length ? result.map((asset, i) => `
     <button class="asset-card" type="button" data-id="${safe(asset.id)}" aria-label="查看 ${safe(asset.title_zh)} 的 3D 模型">
-      <span class="card-art" style="--asset-bg:${safe(asset.accent)}">${asset.kind === 'procedural' ? `<canvas class="asset-thumbnail" data-thumbnail="${safe(asset.id)}" aria-hidden="true"></canvas>` : (asset.preview_path ? `<img class="asset-thumbnail" loading="lazy" src="${safe(import.meta.env.BASE_URL + asset.preview_path.replace('public/', ''))}" alt=""/>` : '<span class="glb-placeholder">◈<small>GLB · IMPORTED ASSET</small></span>')}<span class="card-index">№ ${String(i + 1).padStart(3, '0')}</span><span class="card-expand" aria-hidden="true">↗</span></span>
+      <span class="card-art" style="--asset-bg:${safe(asset.accent)}">${previewMarkup(asset)}<span class="card-index">№ ${String(i + 1).padStart(3, '0')}</span><span class="card-expand" aria-hidden="true">↗</span></span>
       <span class="card-body"><span class="card-kicker">${safe(labels[asset.category])} <span>·</span> ${safe(asset.style)}</span><span class="card-title">${safe(asset.title)}</span><span class="card-zh">${safe(asset.title_zh)}</span><span class="card-bottom"><span>${safe(asset.kind.toUpperCase())}</span><span class="card-open">VIEW OBJECT ↗</span></span></span>
     </button>`).join('') : '<div class="empty-state"><span>◇</span><h3>没有找到匹配模型</h3><p>尝试使用其他关键词，或者切换模型分类。</p><button id="reset-filters">清除筛选</button></div>';
-  const canvases = [...grid.querySelectorAll('canvas[data-thumbnail]')];
-  const pending = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      const canvas = entry.target;
-      const id = canvas.dataset.thumbnail;
-      if (factories[id]) {
-        if (thumbnailCache.has(id)) {
-          const image = document.createElement('img');
-          image.src = thumbnailCache.get(id);
-          image.className = 'asset-thumbnail';
-          image.alt = '';
-          canvas.replaceWith(image);
-        } else {
-          try {
-            const preview = createScene(canvas, factories[id], { interactive: false });
-            const dataUrl = canvas.toDataURL('image/png');
-            preview.dispose();
-            thumbnailCache.set(id, dataUrl);
-            const image = document.createElement('img');
-            image.src = dataUrl;
-            image.className = 'asset-thumbnail';
-            image.alt = '';
-            canvas.replaceWith(image);
-          } catch (error) { console.warn('Preview unavailable:', error); }
-        }
-      }
-      pending.unobserve(canvas);
-    }
-  }, { rootMargin: '120px' });
-  canvases.forEach(canvas => pending.observe(canvas));
+  const more = document.getElementById('load-more-box');
+  more.hidden = !API_BASE || !remoteCursor;
   const emptyReset = document.getElementById('reset-filters');
   if (emptyReset) emptyReset.addEventListener('click', () => {
     search = ''; category = 'all'; document.getElementById('asset-search').value = '';
-    renderFilters(); renderGrid();
+    renderFilters(); refreshResults();
   });
 }
 
-function codeSnippet(asset) {
-  const helpers = primitiveSource.replace(/^import\s+\*\s+as\s+THREE\s+from\s+['"]three['"];?\s*/m, '');
-  const modelCode = sourceFiles[asset.id].replace(/^import[^\n]+\n/gm, '');
-  return `// 3D Worlds · ${asset.title} · MIT
-// Install: npm install three
+async function codeSnippet(asset) {
+  if (asset.kind !== 'procedural') throw Error('Imported GLB has no procedural source');
+  const helpers = stripImports(await getRawSource('primitives.js'));
+  const modelCode = stripImports(await getRawSource(asset.source_path.split('/').pop()));
+  const recipe = modelCode.includes('buildRecipe(') ?
+    stripImports(await getRawSource('recipe_engine.js')) + '\\n' : '';
+  return `// 3D Worlds · ${asset.title} · ${asset.license}
+// npm install three
 import * as THREE from 'three';
 
 ${helpers}
+${recipe}
 ${modelCode}
-
-// Place in your Three.js scene:
+// Add the model to your own THREE.Scene:
 const model = ${asset.generator}();
 scene.add(model);
 `;
@@ -207,8 +214,17 @@ function getUrl(id = null) {
   return url;
 }
 
-function openAsset(id, { updateHistory = true } = {}) {
-  const asset = assets.find(item => item.id === id);
+async function openAsset(id, { updateHistory = true } = {}) {
+  let asset = assetMap.get(id);
+  if (!asset && API_BASE) {
+    try {
+      const response = await fetch(API_BASE + '/api/v1/assets/' + encodeURIComponent(id));
+      if (response.ok) {
+        asset = await response.json();
+        assetMap.set(asset.id, asset);
+      }
+    } catch (error) { console.warn('Remote asset lookup failed',error); }
+  }
   if (!asset) { if (updateHistory) toast('找不到对应模型'); return; }
   if (viewer) { viewer.dispose(); viewer = null; }
   activeAsset = asset;
@@ -218,9 +234,10 @@ function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('detail-title').textContent = asset.title;
   document.getElementById('detail-summary').textContent = asset.summary;
   const isProcedural = asset.kind === 'procedural';
-  document.getElementById('copy-model').disabled = !isProcedural;
+  document.getElementById('copy-model').disabled = !isProcedural || !asset.source_path;
   document.getElementById('copy-model').title = isProcedural ? '复制原始 Three.js 生成函数' : '二进制资产不提供程序化源码';
   document.getElementById('export-glb').textContent = isProcedural ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB';
+  document.getElementById('lod-row').hidden = !isProcedural;
   document.getElementById('detail-specs').innerHTML = [
     ['LICENSE', asset.license], ['FORMAT', asset.kind === 'procedural' ? 'Three.js / GLB' : 'Binary GLB'], ['DIMENSIONS', asset.dimensions_m.map(n => Number(n).toFixed(2)).join(' × ') + ' m'], ['IDENTIFIER', asset.id]
   ].map(([name, value]) => `<div><span>${safe(name)}</span><strong>${safe(value)}</strong></div>`).join('');
@@ -232,10 +249,12 @@ function openAsset(id, { updateHistory = true } = {}) {
     (async () => {
       try {
         if (asset.kind === 'procedural') {
-          viewer = createScene(document.getElementById('detail-canvas'), factories[id], { interactive: true });
+          const factory = await getFactory(asset);
+          if (activeAsset?.id !== id) return;
+          viewer = createScene(document.getElementById('detail-canvas'), factory, { interactive: true });
         } else {
           const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js');
-          const model = await new GLTFLoader().loadAsync(assetBinaryUrl(asset));
+          const model = await new GLTFLoader().loadAsync(await binaryUrl(asset));
           if (activeAsset?.id !== id) return;
           viewer = createScene(document.getElementById('detail-canvas'), () => model.scene, { interactive: true });
         }
@@ -263,18 +282,23 @@ document.getElementById('category-filters').addEventListener('click', event => {
   const button = event.target.closest('[data-category]');
   if (!button) return;
   category = button.dataset.category;
-  renderFilters(); renderGrid();
+  renderFilters(); refreshResults();
 });
 document.getElementById('asset-search').addEventListener('input', event => {
   search = event.target.value;
-  renderGrid();
+  clearTimeout(remoteDebounce);
+  remoteDebounce = setTimeout(refreshResults, API_BASE ? 220 : 0);
 });
 document.getElementById('sort-select').addEventListener('change', event => {
-  sorting = event.target.value; renderGrid();
+  sorting = event.target.value; if (!API_BASE) renderGrid();
 });
 document.getElementById('close-detail').addEventListener('click', () => closeAsset());
 document.getElementById('reset-view').addEventListener('click', () => viewer?.reset());
-document.getElementById('copy-model').addEventListener('click', () => activeAsset && copyText(codeSnippet(activeAsset), 'Three.js 模型源码已复制'));
+document.getElementById('copy-model').addEventListener('click', async () => {
+  if (!activeAsset) return;
+  try { await copyText(await codeSnippet(activeAsset), 'Three.js 模型源码已复制'); }
+  catch (error) { console.error(error); toast('未能读取可复制源码'); }
+});
 document.getElementById('copy-loader').addEventListener('click', () => activeAsset && copyText(loaderSnippet(activeAsset), 'GLB 导入示例已复制'));
 document.getElementById('copy-link').addEventListener('click', () => activeAsset && copyText(getUrl(activeAsset.id).href, '模型链接已复制'));
 document.getElementById('export-glb').addEventListener('click', async event => {
@@ -285,10 +309,10 @@ document.getElementById('export-glb').addEventListener('click', async event => {
   button.textContent = '正在导出 GLB…';
   try {
     if (asset.kind === 'procedural') {
-      await downloadAsGlb(factories[asset.id], asset.slug + '.glb');
+      await downloadAsGlb(await getFactory(asset), asset.slug + '.glb');
     } else {
       const link = document.createElement('a');
-      link.href = assetBinaryUrl(asset);
+      link.href = await binaryUrl(asset);
       link.download = asset.slug + '.glb';
       link.click();
     }
@@ -296,6 +320,19 @@ document.getElementById('export-glb').addEventListener('click', async event => {
   } catch (error) { console.error(error); toast('导出失败，请检查浏览器兼容性'); }
   finally { button.disabled = false; button.textContent = asset.kind === 'procedural' ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB'; }
 });
+document.getElementById('download-optimized').addEventListener('click', async () => {
+  if (!activeAsset) return;
+  const asset=activeAsset,level=Number(document.getElementById('lod-level').value);
+  try {
+    const url = await binaryUrl(asset,level);
+    const response = await fetch(url,{method:'HEAD'});
+    if (!response.ok) throw Error('LOD unavailable');
+    const link=document.createElement('a');
+    link.href=url;link.download=asset.slug+'-lod'+level+'.glb';link.click();
+    toast('优化 LOD'+level+' 模型已准备下载');
+  } catch (error) { console.error(error);toast('未找到该 LOD；请先运行构建流水线或配置对象存储'); }
+});
+document.getElementById('load-more').addEventListener('click',()=>loadRemote(false));
 overlay.addEventListener('click', event => { if (event.target === overlay) closeAsset(); });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && activeAsset) closeAsset();
@@ -312,11 +349,51 @@ document.addEventListener('keydown', event => {
 });
 window.addEventListener('popstate', () => {
   const id = new URL(window.location.href).searchParams.get('model');
-  if (id && assets.some(item => item.id === id)) openAsset(id, { updateHistory: false });
+  if (id) openAsset(id, { updateHistory: false });
   else closeAsset({ updateHistory: false });
 });
 document.getElementById('total-count').textContent = String(assets.length).padStart(2, '0') + ' ASSETS';
+async function loadRemote(reset=true) {
+  if(!API_BASE)return;
+  const requestId=++remoteRequestId;
+  const url=new URL(API_BASE+'/api/v1/assets');
+  url.searchParams.set('limit','24');
+  if(search.trim())url.searchParams.set('search',search.trim());
+  if(category!=='all')url.searchParams.set('category',category);
+  if(!reset && remoteCursor)url.searchParams.set('cursor',remoteCursor);
+  const button=document.getElementById('load-more');
+  button.disabled=true;button.textContent='正在获取模型…';
+  try {
+    const response=await fetch(url);
+    if(!response.ok)throw Error('Search API '+response.status);
+    const payload=await response.json();
+    if(requestId!==remoteRequestId)return;
+    remoteResults=reset?payload.items:[...remoteResults,...payload.items];
+    for(const item of payload.items)assetMap.set(item.id,item);
+    remoteCursor=payload.next_cursor;
+    renderGrid();
+  }catch(error){console.error(error);toast('远端模型检索失败，请检查 API 服务');}
+  finally{
+    if(requestId===remoteRequestId){button.disabled=false;button.textContent='加载更多模型 ↓';}
+  }
+}
+function refreshResults(){
+  if(API_BASE){remoteCursor=null;loadRemote(true);}
+  else renderGrid();
+}
+async function initRemote(){
+  if(!API_BASE)return;
+  document.getElementById('sort-select').disabled=true;
+  document.getElementById('sort-select').title='服务端使用稳定资产 ID 排序';
+  try{
+    const response=await fetch(API_BASE+'/api/v1/categories');
+    if(response.ok){remoteCategories=await response.json();renderFilters();}
+  }catch(error){console.warn('Unable to load categories',error);}
+  await loadRemote(true);
+}
+
 renderFilters();
-renderGrid();
+refreshResults();
+initRemote();
 const initial = new URL(window.location.href).searchParams.get('model');
-if (initial && assets.some(item => item.id === initial)) openAsset(initial, { updateHistory: false });
+if (initial) openAsset(initial, { updateHistory: false });
