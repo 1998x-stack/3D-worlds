@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/origami-laptop-riser.webp",
-  "accent": "#c5b6a2"
+  "accent": "#c5b6a2",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createOrigamiLaptopRiser() { return buildRecipe({
   "title": "Origami Laptop Riser",
@@ -40,7 +42,7 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
   ],
   "parts": [
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "laptop-deck",
       "p": [
         0,
@@ -73,7 +75,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         -0.52
       ],
       "r": 0.065,
-      "c": 15776881
+      "c": 15776881,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -89,7 +92,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.48
       ],
       "r": 0.065,
-      "c": 15776881
+      "c": 15776881,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -104,7 +108,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.15,
         1.16
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -120,7 +125,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         -0.52
       ],
       "r": 0.065,
-      "c": 15776881
+      "c": 15776881,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -136,7 +142,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.48
       ],
       "r": 0.065,
-      "c": 15776881
+      "c": 15776881,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -151,7 +158,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.15,
         1.16
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -316,7 +324,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.04,
         0.12
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "rubber"
     },
     {
       "t": "cylinder",
@@ -331,7 +340,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.04,
         0.12
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "rubber"
     },
     {
       "t": "cylinder",
@@ -346,7 +356,8 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.04,
         0.12
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "rubber"
     },
     {
       "t": "cylinder",
@@ -361,7 +372,314 @@ export function createOrigamiLaptopRiser() { return buildRecipe({
         0.04,
         0.12
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-0",
+      "p": [
+        -0.72,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-1",
+      "p": [
+        -0.5599999999999999,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-2",
+      "p": [
+        -0.39999999999999997,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-3",
+      "p": [
+        -0.24,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-4",
+      "p": [
+        -0.07999999999999996,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-5",
+      "p": [
+        0.08000000000000007,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-6",
+      "p": [
+        0.24,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-7",
+      "p": [
+        0.40000000000000013,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-8",
+      "p": [
+        0.56,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "vent-slot-9",
+      "p": [
+        0.72,
+        1.152,
+        -0.16
+      ],
+      "s": [
+        0.055,
+        0.015,
+        0.58
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "fold-bearing-0",
+      "p": [
+        -0.75,
+        0.15,
+        -0.53
+      ],
+      "s": [
+        0.17,
+        0.1,
+        0.18
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "anti-slip-deck-pad-0",
+      "p": [
+        -0.75,
+        1.168,
+        0.49
+      ],
+      "s": [
+        0.22,
+        0.035,
+        0.16
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "fold-release-key-0",
+      "p": [
+        -0.75,
+        0.7,
+        0.49
+      ],
+      "s": [
+        0.14,
+        0.18,
+        0.14
+      ],
+      "c": 15383673,
+      "finish": "anodized"
+    },
+    {
+      "t": "cylinder",
+      "n": "fold-bearing-1",
+      "p": [
+        0.75,
+        0.15,
+        -0.53
+      ],
+      "s": [
+        0.17,
+        0.1,
+        0.18
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "anti-slip-deck-pad-1",
+      "p": [
+        0.75,
+        1.168,
+        0.49
+      ],
+      "s": [
+        0.22,
+        0.035,
+        0.16
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "fold-release-key-1",
+      "p": [
+        0.75,
+        0.7,
+        0.49
+      ],
+      "s": [
+        0.14,
+        0.18,
+        0.14
+      ],
+      "c": 15383673,
+      "finish": "anodized"
+    },
+    {
+      "t": "rod",
+      "n": "torsion-crossbar",
+      "from": [
+        -0.72,
+        0.35,
+        -0.39
+      ],
+      "to": [
+        0.72,
+        0.35,
+        -0.39
+      ],
+      "r": 0.026,
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "rear-laptop-stop",
+      "p": [
+        0,
+        1.21,
+        -0.57
+      ],
+      "s": [
+        1.39,
+        0.16,
+        0.07
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "hinge-lock-plaque",
+      "p": [
+        0,
+        0.95,
+        0.62
+      ],
+      "s": [
+        0.34,
+        0.06,
+        0.04
+      ],
+      "c": 14989405,
+      "finish": "metal"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

@@ -31,7 +31,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/pour-over-coffee-filter-tree.webp",
-  "accent": "#c992a7"
+  "accent": "#c992a7",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createPourOverCoffeeFilterTree() { return buildRecipe({
   "title": "Pour-over Coffee Filter Tree",
@@ -54,7 +56,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.16,
         1.28
       ],
-      "c": 4084325
+      "c": 4084325,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -105,7 +108,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         3.141592653589793,
         0,
         0
-      ]
+      ],
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -125,7 +129,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -140,7 +145,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.06,
         0.26
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "wood"
     },
     {
       "t": "rod",
@@ -176,7 +182,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         3.141592653589793,
         0,
         0
-      ]
+      ],
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -196,7 +203,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -211,7 +219,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.06,
         0.26
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "wood"
     },
     {
       "t": "rod",
@@ -247,7 +256,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         3.141592653589793,
         0,
         0
-      ]
+      ],
+      "finish": "ceramic"
     },
     {
       "t": "torus",
@@ -267,7 +277,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -282,7 +293,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.06,
         0.26
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "wood"
     },
     {
       "t": "box",
@@ -297,7 +309,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.03,
         0.36
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -312,7 +325,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.03,
         0.36
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -327,7 +341,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.03,
         0.36
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -342,7 +357,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.03,
         0.36
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -357,7 +373,8 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.03,
         0.36
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -372,7 +389,509 @@ export function createPourOverCoffeeFilterTree() { return buildRecipe({
         0.17,
         0.35
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-0-0",
+      "from": [
+        -0.92,
+        0.45000000000000007,
+        0.32
+      ],
+      "to": [
+        -0.92,
+        0.79,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-0-1",
+      "from": [
+        -0.8600000000000001,
+        0.45000000000000007,
+        0.32
+      ],
+      "to": [
+        -0.8600000000000001,
+        0.79,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-0-2",
+      "from": [
+        -0.8,
+        0.45000000000000007,
+        0.32
+      ],
+      "to": [
+        -0.8,
+        0.79,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-0-3",
+      "from": [
+        -0.74,
+        0.45000000000000007,
+        0.32
+      ],
+      "to": [
+        -0.74,
+        0.79,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-0-4",
+      "from": [
+        -0.68,
+        0.45000000000000007,
+        0.32
+      ],
+      "to": [
+        -0.68,
+        0.79,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "arc",
+      "n": "filter-hem-arc-0",
+      "p": [
+        -0.8,
+        0.81,
+        0.11
+      ],
+      "s": [
+        0.56,
+        0.13,
+        0.5
+      ],
+      "c": 2570573,
+      "finish": "metal",
+      "start": 0,
+      "sweep": 5.969026041820607,
+      "rot": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "sphere",
+      "n": "porcelain-stop-0",
+      "p": [
+        -0.8,
+        0.8200000000000001,
+        0.12
+      ],
+      "s": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-1-0",
+      "from": [
+        0.68,
+        0.9100000000000001,
+        0.32
+      ],
+      "to": [
+        0.68,
+        1.25,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-1-1",
+      "from": [
+        0.74,
+        0.9100000000000001,
+        0.32
+      ],
+      "to": [
+        0.74,
+        1.25,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-1-2",
+      "from": [
+        0.8,
+        0.9100000000000001,
+        0.32
+      ],
+      "to": [
+        0.8,
+        1.25,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-1-3",
+      "from": [
+        0.8600000000000001,
+        0.9100000000000001,
+        0.32
+      ],
+      "to": [
+        0.8600000000000001,
+        1.25,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-1-4",
+      "from": [
+        0.92,
+        0.9100000000000001,
+        0.32
+      ],
+      "to": [
+        0.92,
+        1.25,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "arc",
+      "n": "filter-hem-arc-1",
+      "p": [
+        0.8,
+        1.27,
+        0.11
+      ],
+      "s": [
+        0.56,
+        0.13,
+        0.5
+      ],
+      "c": 2570573,
+      "finish": "metal",
+      "start": 0,
+      "sweep": 5.969026041820607,
+      "rot": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "sphere",
+      "n": "porcelain-stop-1",
+      "p": [
+        0.8,
+        1.28,
+        0.12
+      ],
+      "s": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-2-0",
+      "from": [
+        -0.92,
+        1.37,
+        0.32
+      ],
+      "to": [
+        -0.92,
+        1.71,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-2-1",
+      "from": [
+        -0.8600000000000001,
+        1.37,
+        0.32
+      ],
+      "to": [
+        -0.8600000000000001,
+        1.71,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-2-2",
+      "from": [
+        -0.8,
+        1.37,
+        0.32
+      ],
+      "to": [
+        -0.8,
+        1.71,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-2-3",
+      "from": [
+        -0.74,
+        1.37,
+        0.32
+      ],
+      "to": [
+        -0.74,
+        1.71,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rod",
+      "n": "fluted-ceramic-groove-2-4",
+      "from": [
+        -0.68,
+        1.37,
+        0.32
+      ],
+      "to": [
+        -0.68,
+        1.71,
+        0.32
+      ],
+      "r": 0.017,
+      "c": 15918798,
+      "finish": "ceramic"
+    },
+    {
+      "t": "arc",
+      "n": "filter-hem-arc-2",
+      "p": [
+        -0.8,
+        1.73,
+        0.11
+      ],
+      "s": [
+        0.56,
+        0.13,
+        0.5
+      ],
+      "c": 2570573,
+      "finish": "metal",
+      "start": 0,
+      "sweep": 5.969026041820607,
+      "rot": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "sphere",
+      "n": "porcelain-stop-2",
+      "p": [
+        -0.8,
+        1.74,
+        0.12
+      ],
+      "s": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-0",
+      "p": [
+        -0.65,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-1",
+      "p": [
+        -0.39,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-2",
+      "p": [
+        -0.13,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-3",
+      "p": [
+        0.13,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-4",
+      "p": [
+        0.39,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "tray-embossed-drain-5",
+      "p": [
+        0.65,
+        0.2,
+        0.25
+      ],
+      "s": [
+        0.045,
+        0.015,
+        0.46
+      ],
+      "c": 3162970,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "coffee-brand-medallion",
+      "p": [
+        0,
+        1.91,
+        0
+      ],
+      "s": [
+        0.29,
+        0.05,
+        0.28
+      ],
+      "c": 15383673,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "filter-storage-tab",
+      "p": [
+        0,
+        1.7,
+        -0.24
+      ],
+      "s": [
+        0.57,
+        0.1,
+        0.1
+      ],
+      "c": 9332813,
+      "finish": "wood"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/hex-vine-trellis-kit.webp",
-  "accent": "#d4af5b"
+  "accent": "#d4af5b",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createHexVineTrellisKit() { return buildRecipe({
   "title": "Hex Vine Trellis Kit",
@@ -656,6 +658,525 @@ export function createHexVineTrellisKit() { return buildRecipe({
         1.05
       ],
       "c": 12957346
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-0",
+      "p": [
+        -0.5,
+        0.46,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-0-0",
+      "p": [
+        -0.74,
+        0.56,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-0-1",
+      "p": [
+        -0.26,
+        0.56,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-1",
+      "p": [
+        0.5,
+        0.79,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-1-0",
+      "p": [
+        0.26,
+        0.89,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-1-1",
+      "p": [
+        0.74,
+        0.89,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-2",
+      "p": [
+        -0.5,
+        1.12,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-2-0",
+      "p": [
+        -0.74,
+        1.2200000000000002,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-2-1",
+      "p": [
+        -0.26,
+        1.2200000000000002,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-3",
+      "p": [
+        0.5,
+        1.45,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-3-0",
+      "p": [
+        0.26,
+        1.55,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-3-1",
+      "p": [
+        0.74,
+        1.55,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-4",
+      "p": [
+        -0.5,
+        1.78,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-4-0",
+      "p": [
+        -0.74,
+        1.8800000000000001,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-4-1",
+      "p": [
+        -0.26,
+        1.8800000000000001,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "hex",
+      "n": "snap-collar-5",
+      "p": [
+        0.5,
+        2.1100000000000003,
+        0.03
+      ],
+      "s": [
+        0.19,
+        0.12,
+        0.21
+      ],
+      "c": 14989405,
+      "finish": "anodized"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-5-0",
+      "p": [
+        0.26,
+        2.2100000000000004,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "botanical-leaf-5-1",
+      "p": [
+        0.74,
+        2.2100000000000004,
+        0.07
+      ],
+      "s": [
+        0.27,
+        0.15,
+        0.14
+      ],
+      "c": 5742453,
+      "finish": "matte"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-0",
+      "from": [
+        -0.4,
+        0.42,
+        0.02
+      ],
+      "to": [
+        -0.3,
+        0.65,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-1",
+      "from": [
+        0.4,
+        0.6699999999999999,
+        0.02
+      ],
+      "to": [
+        0.3,
+        0.9,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-2",
+      "from": [
+        -0.4,
+        0.9199999999999999,
+        0.02
+      ],
+      "to": [
+        -0.3,
+        1.15,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-3",
+      "from": [
+        0.4,
+        1.17,
+        0.02
+      ],
+      "to": [
+        0.3,
+        1.4,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-4",
+      "from": [
+        -0.4,
+        1.42,
+        0.02
+      ],
+      "to": [
+        -0.3,
+        1.65,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "climbing-tendril-5",
+      "from": [
+        0.4,
+        1.67,
+        0.02
+      ],
+      "to": [
+        0.3,
+        1.9,
+        0.06
+      ],
+      "r": 0.025,
+      "c": 5742453,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "soil-anchor-shoe-0",
+      "p": [
+        -0.5,
+        0.12,
+        0
+      ],
+      "s": [
+        0.25,
+        0.16,
+        0.25
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "cylinder",
+      "n": "stake-safety-cap-0",
+      "p": [
+        -0.5,
+        0.9,
+        0
+      ],
+      "s": [
+        0.21,
+        0.08,
+        0.21
+      ],
+      "c": 15918798,
+      "finish": "rubber"
+    },
+    {
+      "t": "hex",
+      "n": "soil-anchor-shoe-1",
+      "p": [
+        0.5,
+        0.12,
+        0
+      ],
+      "s": [
+        0.25,
+        0.16,
+        0.25
+      ],
+      "c": 9332813,
+      "finish": "wood"
+    },
+    {
+      "t": "cylinder",
+      "n": "stake-safety-cap-1",
+      "p": [
+        0.5,
+        0.9,
+        0
+      ],
+      "s": [
+        0.21,
+        0.08,
+        0.21
+      ],
+      "c": 15918798,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interlock-clasp-0",
+      "p": [
+        -0.48,
+        0.88,
+        0.02
+      ],
+      "s": [
+        0.14,
+        0.09,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interlock-clasp-1",
+      "p": [
+        0.48,
+        1.19,
+        0.02
+      ],
+      "s": [
+        0.14,
+        0.09,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interlock-clasp-2",
+      "p": [
+        -0.48,
+        1.5,
+        0.02
+      ],
+      "s": [
+        0.14,
+        0.09,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interlock-clasp-3",
+      "p": [
+        0.48,
+        1.81,
+        0.02
+      ],
+      "s": [
+        0.14,
+        0.09,
+        0.17
+      ],
+      "c": 11648457,
+      "finish": "metal"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

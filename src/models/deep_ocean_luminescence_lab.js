@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/deep-ocean-luminescence-lab.webp",
-  "accent": "#82b9c5"
+  "accent": "#82b9c5",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createDeepOceanLuminescenceLab() { return buildRecipe({
   "title": "Deep Ocean Luminescence Lab",
@@ -68,7 +70,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         1.72,
         1.36
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "glass"
     },
     {
       "t": "cylinder",
@@ -83,7 +86,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.19,
         1.44
       ],
-      "c": 7177108
+      "c": 7177108,
+      "finish": "glass"
     },
     {
       "t": "torus",
@@ -103,7 +107,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         1.5707963267948966,
         0,
         0
-      ]
+      ],
+      "finish": "glass"
     },
     {
       "t": "rod",
@@ -119,7 +124,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -149,7 +155,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "rod",
@@ -165,7 +172,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.8487048957087499
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -195,7 +203,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "rod",
@@ -211,7 +220,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.84870489570875
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -241,7 +251,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "rod",
@@ -257,7 +268,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         1.2001538631644062e-16
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -287,7 +299,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "rod",
@@ -303,7 +316,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         -0.8487048957087496
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -333,7 +347,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "rod",
@@ -349,7 +364,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         -0.8487048957087499
       ],
       "r": 0.08,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -379,7 +395,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.08,
         0.29
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "ceramic"
     },
     {
       "t": "sphere",
@@ -394,7 +411,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -409,7 +427,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -424,7 +443,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -439,7 +459,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -454,7 +475,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -469,7 +491,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -484,7 +507,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -499,7 +523,8 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
         0.14,
         0.11
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "glow"
     },
     {
       "t": "rod",
@@ -516,6 +541,654 @@ export function createDeepOceanLuminescenceLab() { return buildRecipe({
       ],
       "r": 0.04,
       "c": 15776881
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-0",
+      "p": [
+        1.12,
+        1.16,
+        0
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-0",
+      "p": [
+        1.12,
+        0.9,
+        0
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-0-0",
+      "p": [
+        1.12,
+        1.06,
+        0
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-0-1",
+      "p": [
+        1.12,
+        1.1400000000000001,
+        0
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-1",
+      "p": [
+        0.5600000000000002,
+        1.16,
+        0.8487048957087499
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-1",
+      "p": [
+        0.5600000000000002,
+        0.9,
+        0.8487048957087499
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-1-0",
+      "p": [
+        0.5600000000000002,
+        1.06,
+        0.8487048957087499
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-1-1",
+      "p": [
+        0.5600000000000002,
+        1.1400000000000001,
+        0.8487048957087499
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-2",
+      "p": [
+        -0.5599999999999998,
+        1.16,
+        0.84870489570875
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-2",
+      "p": [
+        -0.5599999999999998,
+        0.9,
+        0.84870489570875
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-2-0",
+      "p": [
+        -0.5599999999999998,
+        1.06,
+        0.84870489570875
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-2-1",
+      "p": [
+        -0.5599999999999998,
+        1.1400000000000001,
+        0.84870489570875
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-3",
+      "p": [
+        -1.12,
+        1.16,
+        1.2001538631644062e-16
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-3",
+      "p": [
+        -1.12,
+        0.9,
+        1.2001538631644062e-16
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-3-0",
+      "p": [
+        -1.12,
+        1.06,
+        1.2001538631644062e-16
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-3-1",
+      "p": [
+        -1.12,
+        1.1400000000000001,
+        1.2001538631644062e-16
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-4",
+      "p": [
+        -0.5600000000000005,
+        1.16,
+        -0.8487048957087496
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-4",
+      "p": [
+        -0.5600000000000005,
+        0.9,
+        -0.8487048957087496
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-4-0",
+      "p": [
+        -0.5600000000000005,
+        1.06,
+        -0.8487048957087496
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-4-1",
+      "p": [
+        -0.5600000000000005,
+        1.1400000000000001,
+        -0.8487048957087496
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "biocell-hatch-seal-5",
+      "p": [
+        0.5600000000000002,
+        1.16,
+        -0.8487048957087499
+      ],
+      "s": [
+        0.29,
+        0.055,
+        0.29
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "microbial-fluorophore-5",
+      "p": [
+        0.5600000000000002,
+        0.9,
+        -0.8487048957087499
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-5-0",
+      "p": [
+        0.5600000000000002,
+        1.06,
+        -0.8487048957087499
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "sample-tube-rim-5-1",
+      "p": [
+        0.5600000000000002,
+        1.1400000000000001,
+        -0.8487048957087499
+      ],
+      "s": [
+        0.24,
+        0.025,
+        0.24
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-0",
+      "p": [
+        0.6,
+        1.73,
+        0
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-1",
+      "p": [
+        0.4242640687119285,
+        1.81,
+        0.417193000900063
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-2",
+      "p": [
+        3.6739403974420595e-17,
+        1.89,
+        0.59
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-3",
+      "p": [
+        -0.42426406871192845,
+        1.73,
+        0.41719300090006306
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-4",
+      "p": [
+        -0.6,
+        1.81,
+        7.225416114969384e-17
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-5",
+      "p": [
+        -0.4242640687119286,
+        1.89,
+        -0.417193000900063
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-6",
+      "p": [
+        -1.1021821192326178e-16,
+        1.73,
+        -0.59
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "drifting-plankton-particle-7",
+      "p": [
+        0.4242640687119284,
+        1.81,
+        -0.4171930009000631
+      ],
+      "s": [
+        0.075,
+        0.08,
+        0.08
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-0",
+      "p": [
+        0.8,
+        0.53,
+        0
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-1",
+      "p": [
+        0.40000000000000013,
+        0.53,
+        0.6235382907247957
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-2",
+      "p": [
+        -0.39999999999999986,
+        0.53,
+        0.6235382907247958
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-3",
+      "p": [
+        -0.8,
+        0.53,
+        8.817456953860943e-17
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-4",
+      "p": [
+        -0.40000000000000036,
+        0.53,
+        -0.6235382907247956
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "pressure-hull-bolt-5",
+      "p": [
+        0.40000000000000013,
+        0.53,
+        -0.6235382907247957
+      ],
+      "s": [
+        0.11,
+        0.08,
+        0.11
+      ],
+      "c": 11648457,
+      "finish": "metal"
+    },
+    {
+      "t": "arc",
+      "n": "observation-viewport-gasket",
+      "p": [
+        0,
+        1.28,
+        0.68
+      ],
+      "s": [
+        1.1,
+        1.02,
+        0.2
+      ],
+      "c": 14989405,
+      "finish": "metal",
+      "start": 0.7853981633974483,
+      "sweep": 4.39822971502571,
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "rounded-box",
+      "n": "deep-sea-research-plate",
+      "p": [
+        0,
+        0.34,
+        0.85
+      ],
+      "s": [
+        0.62,
+        0.13,
+        0.033
+      ],
+      "c": 15918798,
+      "finish": "ceramic"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

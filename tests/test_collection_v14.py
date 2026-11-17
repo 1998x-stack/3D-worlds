@@ -54,12 +54,24 @@ class V14CollectionTests(unittest.TestCase):
                 self.assertEqual(spec["title"],a["title"])
                 self.assertEqual(spec["dimensions"],a["dimensions_m"])
                 self.assertEqual(len(spec["parts"]),e["part_count"])
-                self.assertGreaterEqual(len(spec["parts"]),18)
+                self.assertEqual(a["geometry_revision"], "1.4.1")
+                self.assertEqual(meta["geometry_revision"], "1.4.1")
+                self.assertEqual(spec["geometry_revision"], "1.4.1")
+                self.assertGreaterEqual(e["part_count"]-e["baseline_part_count"], 8)
+                finishes={part.get("finish","matte") for part in spec["parts"]}
+                self.assertGreaterEqual(len(finishes),3)
+                self.assertEqual(e["finish_count"], len(finishes))
+                for part in spec["parts"]:
+                    if part["t"]=="arc":
+                        self.assertGreater(part["sweep"],0)
+                        self.assertLessEqual(part["sweep"], 2*math.pi)
+                    self.assertIn(part.get("finish","matte"),{"matte","metal","anodized","ceramic","rubber","fabric","wood","glass","glow"})
+                self.assertGreaterEqual(len(spec["parts"]),38)
                 names=[p["n"] for p in spec["parts"]]
                 self.assertEqual(len(names),len(set(names)))
                 signatures.add(tuple(names))
                 for part in spec["parts"]:
-                    self.assertIn(part["t"],("box","sphere","cylinder","cone","torus","rod","triangle"))
+                    self.assertIn(part["t"],("box","sphere","cylinder","cone","torus","rod","triangle","rounded-box","hex","arc"))
                     if part["t"]=="rod":
                         self.assertGreater(part["r"],0)
                         self.assertNotEqual(part["from"],part["to"])

@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/caliper-protection-stand.webp",
-  "accent": "#6d8394"
+  "accent": "#6d8394",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createCaliperProtectionStand() { return buildRecipe({
   "title": "Caliper Protection Stand",
@@ -55,7 +57,7 @@ export function createCaliperProtectionStand() { return buildRecipe({
       "c": 3229017
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "angled-backrest",
       "p": [
         0,
@@ -72,7 +74,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         -0.23,
         0,
         0
-      ]
+      ],
+      "finish": "glow"
     },
     {
       "t": "rod",
@@ -88,7 +91,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         -0.26
       ],
       "r": 0.06,
-      "c": 7915949
+      "c": 7915949,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -104,7 +108,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         -0.17
       ],
       "r": 0.035,
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -254,7 +259,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         0.06,
         0.14
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -284,7 +290,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         0.06,
         0.14
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -314,7 +321,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         0.06,
         0.14
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -344,7 +352,8 @@ export function createCaliperProtectionStand() { return buildRecipe({
         0.06,
         0.14
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -375,6 +384,439 @@ export function createCaliperProtectionStand() { return buildRecipe({
         0.28
       ],
       "c": 15776881
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-0",
+      "p": [
+        -0.71,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.13,
+        0.022
+      ],
+      "c": 14989405,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-1",
+      "p": [
+        -0.616,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-2",
+      "p": [
+        -0.522,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-3",
+      "p": [
+        -0.42799999999999994,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-4",
+      "p": [
+        -0.33399999999999996,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-5",
+      "p": [
+        -0.24,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.13,
+        0.022
+      ],
+      "c": 14989405,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-6",
+      "p": [
+        -0.1459999999999999,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-7",
+      "p": [
+        -0.051999999999999935,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-8",
+      "p": [
+        0.04200000000000004,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-9",
+      "p": [
+        0.136,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-10",
+      "p": [
+        0.22999999999999998,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.13,
+        0.022
+      ],
+      "c": 14989405,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-11",
+      "p": [
+        0.32400000000000007,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-12",
+      "p": [
+        0.41800000000000015,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-13",
+      "p": [
+        0.512,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-14",
+      "p": [
+        0.6060000000000001,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.058,
+        0.022
+      ],
+      "c": 16381934,
+      "finish": "ceramic"
+    },
+    {
+      "t": "box",
+      "n": "noncalibrated-index-mark-15",
+      "p": [
+        0.7,
+        1.05,
+        -0.22
+      ],
+      "s": [
+        0.02,
+        0.13,
+        0.022
+      ],
+      "c": 14989405,
+      "finish": "ceramic"
+    },
+    {
+      "t": "rounded-box",
+      "n": "anodized-caliper-jaw-0",
+      "p": [
+        -0.62,
+        0.93,
+        -0.12
+      ],
+      "s": [
+        0.12,
+        0.44,
+        0.12
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "jaw-retainer-screw-0",
+      "p": [
+        -0.62,
+        0.73,
+        -0.015
+      ],
+      "s": [
+        0.12,
+        0.09,
+        0.11
+      ],
+      "c": 2570573,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "anodized-caliper-jaw-1",
+      "p": [
+        0.62,
+        0.93,
+        -0.12
+      ],
+      "s": [
+        0.12,
+        0.44,
+        0.12
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "jaw-retainer-screw-1",
+      "p": [
+        0.62,
+        0.73,
+        -0.015
+      ],
+      "s": [
+        0.12,
+        0.09,
+        0.11
+      ],
+      "c": 2570573,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "desk-isolation-foot-0",
+      "p": [
+        -0.82,
+        0.05,
+        -0.45
+      ],
+      "s": [
+        0.2,
+        0.11,
+        0.2
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "desk-isolation-foot-1",
+      "p": [
+        0.82,
+        0.05,
+        -0.45
+      ],
+      "s": [
+        0.2,
+        0.11,
+        0.2
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "desk-isolation-foot-2",
+      "p": [
+        -0.82,
+        0.05,
+        0.45
+      ],
+      "s": [
+        0.2,
+        0.11,
+        0.2
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "desk-isolation-foot-3",
+      "p": [
+        0.82,
+        0.05,
+        0.45
+      ],
+      "s": [
+        0.2,
+        0.11,
+        0.2
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "readout-style-logo",
+      "p": [
+        0,
+        0.42,
+        0.55
+      ],
+      "s": [
+        0.55,
+        0.14,
+        0.035
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "soft-insert-stopper-0",
+      "p": [
+        -0.72,
+        0.28,
+        0.46
+      ],
+      "s": [
+        0.14,
+        0.13,
+        0.18
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "soft-insert-stopper-1",
+      "p": [
+        0.72,
+        0.28,
+        0.46
+      ],
+      "s": [
+        0.14,
+        0.13,
+        0.18
+      ],
+      "c": 2570573,
+      "finish": "rubber"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

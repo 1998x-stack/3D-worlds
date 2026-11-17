@@ -2,6 +2,13 @@
 
 ## V1.4 — 30 original maker-market scene models
 
+**V1.4.1 detail refresh:** 30/30 scene models receive revision metadata,
+refined shapes/materials, and 1824 named pieces (previously 825).
+See [detailed refinement + QA](v14-fine-detail-refinement.md). Stable IDs,
+the 50 print-commerce CAD models and historical collections remain untouched.
+
+
+
 The full catalog grows from **535 to 565 models across 14 categories**, adding
 30 new independent Three.js generators within the 13 general scene categories.
 The separate V1.3 print-commerce CAD assortment remains intact.

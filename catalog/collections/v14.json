@@ -38,7 +38,11 @@
       "id": "furniture.origami-laptop-riser.001",
       "source_path": "src/models/origami_laptop_riser.js",
       "generator": "createOrigamiLaptopRiser",
-      "part_count": 21
+      "part_count": 40,
+      "baseline_part_count": 21,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "通风槽、折叠轴承、双侧防滑垫和释放扣"
     },
     {
       "category": "furniture",
@@ -55,7 +59,11 @@
       "id": "furniture.honeycomb-desk-tidy.001",
       "source_path": "src/models/honeycomb_desk_tidy.js",
       "generator": "createHoneycombDeskTidy",
-      "part_count": 36
+      "part_count": 95,
+      "baseline_part_count": 36,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "六角格体、凹陷内衬、六边连接铆钉与笔具样件"
     },
     {
       "category": "furniture",
@@ -72,7 +80,11 @@
       "id": "furniture.stackable-mini-drawer-tower.001",
       "source_path": "src/models/stackable_mini_drawer_tower.js",
       "generator": "createStackableMiniDrawerTower",
-      "part_count": 29
+      "part_count": 58,
+      "baseline_part_count": 29,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "软关闭轨道、抽屉标签、金属螺钉和防滑脚"
     },
     {
       "category": "bathroom",
@@ -89,7 +101,11 @@
       "id": "bathroom.clip-on-soap-drainage-bridge.001",
       "source_path": "src/models/clip_on_soap_drainage_bridge.js",
       "generator": "createClipOnSoapDrainageBridge",
-      "part_count": 21
+      "part_count": 42,
+      "baseline_part_count": 21,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "移除实心底板，建造可见排水缝、纵向梁和弹簧夹"
     },
     {
       "category": "bathroom",
@@ -106,7 +122,11 @@
       "id": "bathroom.refillable-toothbrush-station.001",
       "source_path": "src/models/refillable_toothbrush_station.js",
       "generator": "createRefillableToothbrushStation",
-      "part_count": 22
+      "part_count": 53,
+      "baseline_part_count": 22,
+      "finish_count": 6,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "牙刷刷毛、卫生密封圈、水位指示和模块标号"
     },
     {
       "category": "characters",
@@ -123,7 +143,11 @@
       "id": "characters.micro-maker-robot-mascot.001",
       "source_path": "src/models/micro_maker_robot_mascot.js",
       "generator": "createMicroMakerRobotMascot",
-      "part_count": 21
+      "part_count": 41,
+      "baseline_part_count": 21,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "圆角机身、肩关节、发光面板、通风孔和电路纹"
     },
     {
       "category": "characters",
@@ -140,7 +164,11 @@
       "id": "characters.terrarium-gardener-figurine.001",
       "source_path": "src/models/terrarium_gardener_figurine.js",
       "generator": "createTerrariumGardenerFigurine",
-      "part_count": 20
+      "part_count": 40,
+      "baseline_part_count": 20,
+      "finish_count": 7,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "帽檐、围裙缝线、手套、喷水莲蓬与花瓣"
     },
     {
       "category": "nature",
@@ -157,7 +185,11 @@
       "id": "nature.mushroom-propagation-log.001",
       "source_path": "src/models/mushroom_propagation_log.js",
       "generator": "createMushroomPropagationLog",
-      "part_count": 30
+      "part_count": 67,
+      "baseline_part_count": 30,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "圆润蘑菇伞、菌褶、地衣和曲线生长纹"
     },
     {
       "category": "nature",
@@ -174,7 +206,11 @@
       "id": "nature.tidal-pool-ecology-diorama.001",
       "source_path": "src/models/tidal_pool_ecology_diorama.js",
       "generator": "createTidalPoolEcologyDiorama",
-      "part_count": 25
+      "part_count": 51,
+      "baseline_part_count": 25,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "玻璃质感水面、藤壶、潮水泡沫弧线和荧光细节"
     },
     {
       "category": "vehicles",
@@ -191,7 +227,11 @@
       "id": "vehicles.compact-seed-library-cart.001",
       "source_path": "src/models/compact_seed_library_cart.js",
       "generator": "createCompactSeedLibraryCart",
-      "part_count": 24
+      "part_count": 53,
+      "baseline_part_count": 24,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "种子信封、图案标签、轮毂、遮棚标识"
     },
     {
       "category": "vehicles",
@@ -208,7 +248,11 @@
       "id": "vehicles.folding-cargo-bicycle-miniature.001",
       "source_path": "src/models/folding_cargo_bicycle_miniature.js",
       "generator": "createFoldingCargoBicycleMiniature",
-      "part_count": 27
+      "part_count": 54,
+      "baseline_part_count": 27,
+      "finish_count": 7,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "制动盘、反光片、折叠铰链、车篮编织和前灯"
     },
     {
       "category": "electronics",
@@ -225,7 +269,11 @@
       "id": "electronics.microcontroller-learning-blocks.001",
       "source_path": "src/models/microcontroller_learning_blocks.js",
       "generator": "createMicrocontrollerLearningBlocks",
-      "part_count": 34
+      "part_count": 73,
+      "baseline_part_count": 34,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "PCB 金属线路、板上接口、丝印标签和 LED"
     },
     {
       "category": "electronics",
@@ -242,7 +290,11 @@
       "id": "electronics.constellation-cable-dock.001",
       "source_path": "src/models/constellation_cable_dock.js",
       "generator": "createConstellationCableDock",
-      "part_count": 25
+      "part_count": 55,
+      "baseline_part_count": 25,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "柔性线圈、锁紧插头、充电状态灯和底座减震"
     },
     {
       "category": "electronics",
@@ -259,7 +311,11 @@
       "id": "electronics.solar-mesh-sensor-gateway.001",
       "source_path": "src/models/solar_mesh_sensor_gateway.js",
       "generator": "createSolarMeshSensorGateway",
-      "part_count": 18
+      "part_count": 38,
+      "baseline_part_count": 18,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "光伏汇流线、外壳密封、固定螺丝和通风叶片"
     },
     {
       "category": "decor",
@@ -276,7 +332,11 @@
       "id": "decor.truchet-hex-fabric-tile.001",
       "source_path": "src/models/truchet_hex_fabric_tile.js",
       "generator": "createTruchetHexFabricTile",
-      "part_count": 26
+      "part_count": 52,
+      "baseline_part_count": 26,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "六角真正截面、数学圆弧、纹样节点和织物饰边"
     },
     {
       "category": "decor",
@@ -293,7 +353,11 @@
       "id": "decor.hex-vine-trellis-kit.001",
       "source_path": "src/models/hex_vine_trellis_kit.js",
       "generator": "createHexVineTrellisKit",
-      "part_count": 39
+      "part_count": 71,
+      "baseline_part_count": 39,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "联结卡扣、卷须、叶对和土壤固定件"
     },
     {
       "category": "decor",
@@ -310,7 +374,11 @@
       "id": "decor.lunar-phase-gyro-lamp.001",
       "source_path": "src/models/lunar_phase_gyro_lamp.js",
       "generator": "createLunarPhaseGyroLamp",
-      "part_count": 25
+      "part_count": 52,
+      "baseline_part_count": 25,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "月球微陨坑、轨道标点、触控刻度与轴承"
     },
     {
       "category": "kitchen",
@@ -327,7 +395,11 @@
       "id": "kitchen.rotary-spice-pod-display.001",
       "source_path": "src/models/rotary_spice_pod_display.js",
       "generator": "createRotarySpicePodDisplay",
-      "part_count": 29
+      "part_count": 78,
+      "baseline_part_count": 29,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "罐盖防滑密封、香料刻度标签与转台定位点"
     },
     {
       "category": "kitchen",
@@ -344,7 +416,11 @@
       "id": "kitchen.pour-over-coffee-filter-tree.001",
       "source_path": "src/models/pour_over_coffee_filter_tree.js",
       "generator": "createPourOverCoffeeFilterTree",
-      "part_count": 20
+      "part_count": 49,
+      "baseline_part_count": 20,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "滤杯沟槽、滤纸卷边、滴水槽与陶瓷衬件"
     },
     {
       "category": "architecture",
@@ -361,7 +437,11 @@
       "id": "architecture.parametric-shade-brick-screen.001",
       "source_path": "src/models/parametric_shade_brick_screen.js",
       "generator": "createParametricShadeBrickScreen",
-      "part_count": 48
+      "part_count": 115,
+      "baseline_part_count": 48,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "20 块实心面板替换为有实际开口的 4 边框花砖"
     },
     {
       "category": "architecture",
@@ -378,7 +458,11 @@
       "id": "architecture.modular-mini-greenhouse-bay.001",
       "source_path": "src/models/modular_mini_greenhouse_bay.js",
       "generator": "createModularMiniGreenhouseBay",
-      "part_count": 28
+      "part_count": 58,
+      "baseline_part_count": 28,
+      "finish_count": 7,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "温室排水梁、育苗铭牌、浇灌阀和通风百叶"
     },
     {
       "category": "urban",
@@ -395,7 +479,11 @@
       "id": "urban.e-waste-sortation-kiosk.001",
       "source_path": "src/models/e_waste_sortation_kiosk.js",
       "generator": "createEWasteSortationKiosk",
-      "part_count": 21
+      "part_count": 47,
+      "baseline_part_count": 21,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "投入口护板、分类符号、门铰链和防水基座"
     },
     {
       "category": "urban",
@@ -412,7 +500,11 @@
       "id": "urban.parcel-pickup-locker-wall.001",
       "source_path": "src/models/parcel_pickup_locker_wall.js",
       "generator": "createParcelPickupLockerWall",
-      "part_count": 33
+      "part_count": 83,
+      "baseline_part_count": 33,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "圆角门、柜号标牌、开箱状态灯和取件码点阵"
     },
     {
       "category": "tools",
@@ -429,7 +521,11 @@
       "id": "tools.caliper-protection-stand.001",
       "source_path": "src/models/caliper_protection_stand.js",
       "generator": "createCaliperProtectionStand",
-      "part_count": 22
+      "part_count": 49,
+      "baseline_part_count": 22,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "密集刻度、防滑托条、夹口样件和桌面隔振脚"
     },
     {
       "category": "tools",
@@ -446,7 +542,11 @@
       "id": "tools.hex-driver-bit-index-dock.001",
       "source_path": "src/models/hex_driver_bit_index_dock.js",
       "generator": "createHexDriverBitIndexDock",
-      "part_count": 38
+      "part_count": 82,
+      "baseline_part_count": 38,
+      "finish_count": 6,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "六角收纳格、批头锁定环、定位标号和橡胶脚"
     },
     {
       "category": "tools",
@@ -463,7 +563,11 @@
       "id": "tools.rotary-calculation-cuff.001",
       "source_path": "src/models/rotary_calculation_cuff.js",
       "generator": "createRotaryCalculationCuff",
-      "part_count": 29
+      "part_count": 73,
+      "baseline_part_count": 29,
+      "finish_count": 4,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "双层细微刻度、索引六角点、读数圆弧与防滑柄"
     },
     {
       "category": "sports",
@@ -480,7 +584,11 @@
       "id": "sports.compact-bouldering-training-board.001",
       "source_path": "src/models/compact_bouldering_training_board.js",
       "generator": "createCompactBoulderingTrainingBoard",
-      "part_count": 35
+      "part_count": 67,
+      "baseline_part_count": 35,
+      "finish_count": 6,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "铆钉垫圈、线路标记、软垫分缝和粉镁颗粒"
     },
     {
       "category": "sports",
@@ -497,7 +605,11 @@
       "id": "sports.table-tennis-paddle-display.001",
       "source_path": "src/models/table_tennis_paddle_display.js",
       "generator": "createTableTennisPaddleDisplay",
-      "part_count": 22
+      "part_count": 47,
+      "baseline_part_count": 22,
+      "finish_count": 5,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "球拍封边、握把纹理、球座与球台标记"
     },
     {
       "category": "scifi",
@@ -514,7 +626,11 @@
       "id": "scifi.orbital-seed-archive-rover.001",
       "source_path": "src/models/orbital_seed_archive_rover.js",
       "generator": "createOrbitalSeedArchiveRover",
-      "part_count": 26
+      "part_count": 70,
+      "baseline_part_count": 26,
+      "finish_count": 6,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "车轮胎纹、样本封签、太阳能板和维护舱盖"
     },
     {
       "category": "scifi",
@@ -531,8 +647,14 @@
       "id": "scifi.deep-ocean-luminescence-lab.001",
       "source_path": "src/models/deep_ocean_luminescence_lab.js",
       "generator": "createDeepOceanLuminescenceLab",
-      "part_count": 31
+      "part_count": 71,
+      "baseline_part_count": 31,
+      "finish_count": 6,
+      "geometry_revision": "1.4.1",
+      "refinement_focus": "透明观察舱、取样环、荧光粒子和耐压舱螺钉"
     }
   ],
-  "reference_note": "Retail listings and Hacker News discussions are idea signals only; all geometry is original stylized source. No actual printability, mechanical performance or demand claims."
+  "reference_note": "Retail listings and Hacker News discussions are idea signals only; all geometry is original stylized source. No actual printability, mechanical performance or demand claims.",
+  "refinement_revision": "1.4.1",
+  "refinement_note": "Non-destructive ID-preserving detail revision: original design identity retained, 30 independent recipes refined with PBR materials and visible geometry details. Non-manufacturing-certified."
 }

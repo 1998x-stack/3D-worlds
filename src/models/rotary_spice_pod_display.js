@@ -30,7 +30,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/rotary-spice-pod-display.webp",
-  "accent": "#c992a7"
+  "accent": "#c992a7",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createRotarySpicePodDisplay() { return buildRecipe({
   "title": "Rotary Spice Pod Display",
@@ -68,7 +70,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         1.63,
         0.19
       ],
-      "c": 7177108
+      "c": 7177108,
+      "finish": "metal"
     },
     {
       "t": "cylinder",
@@ -113,7 +116,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 14648424
+      "c": 14648424,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -128,7 +132,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -158,7 +163,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -173,7 +179,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -203,7 +210,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 5086834
+      "c": 5086834,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -218,7 +226,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -248,7 +257,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -263,7 +273,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -293,7 +304,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 14648424
+      "c": 14648424,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -308,7 +320,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -338,7 +351,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 15776881
+      "c": 15776881,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -353,7 +367,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -383,7 +398,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 5086834
+      "c": 5086834,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -398,7 +414,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -428,7 +445,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.43,
         0.28
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "ceramic"
     },
     {
       "t": "cylinder",
@@ -443,7 +461,8 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.08,
         0.3
       ],
-      "c": 2570315
+      "c": 2570315,
+      "finish": "ceramic"
     },
     {
       "t": "box",
@@ -473,7 +492,793 @@ export function createRotarySpicePodDisplay() { return buildRecipe({
         0.19,
         0.37
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-0",
+      "p": [
+        0.76,
+        1.02,
+        0
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-0-0",
+      "p": [
+        0.675,
+        0.85,
+        0.19
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-0-1",
+      "p": [
+        0.76,
+        0.85,
+        0.19
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-0-2",
+      "p": [
+        0.8450000000000001,
+        0.85,
+        0.19
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-0",
+      "p": [
+        0.76,
+        0.71,
+        0.17
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-1",
+      "p": [
+        0.5374011537017762,
+        1.02,
+        0.5374011537017761
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-1-0",
+      "p": [
+        0.4524011537017762,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-1-1",
+      "p": [
+        0.5374011537017762,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-1-2",
+      "p": [
+        0.6224011537017762,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-1",
+      "p": [
+        0.5374011537017762,
+        0.71,
+        0.7074011537017761
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-2",
+      "p": [
+        4.6536578367599424e-17,
+        1.02,
+        0.76
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-2-0",
+      "p": [
+        -0.08499999999999996,
+        0.85,
+        0.95
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-2-1",
+      "p": [
+        4.163336342344337e-17,
+        0.85,
+        0.95
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-2-2",
+      "p": [
+        0.08500000000000005,
+        0.85,
+        0.95
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-2",
+      "p": [
+        4.6536578367599424e-17,
+        0.71,
+        0.93
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-3",
+      "p": [
+        -0.5374011537017761,
+        1.02,
+        0.5374011537017762
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-3-0",
+      "p": [
+        -0.6224011537017761,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-3-1",
+      "p": [
+        -0.5374011537017761,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-3-2",
+      "p": [
+        -0.452401153701776,
+        0.85,
+        0.7274011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-3",
+      "p": [
+        -0.5374011537017761,
+        0.71,
+        0.7074011537017763
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-4",
+      "p": [
+        -0.76,
+        1.02,
+        9.307315673519885e-17
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-4-0",
+      "p": [
+        -0.845,
+        0.85,
+        0.19000000000000009
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-4-1",
+      "p": [
+        -0.76,
+        0.85,
+        0.19000000000000009
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-4-2",
+      "p": [
+        -0.6749999999999999,
+        0.85,
+        0.19000000000000009
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-4",
+      "p": [
+        -0.76,
+        0.71,
+        0.1700000000000001
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-5",
+      "p": [
+        -0.5374011537017762,
+        1.02,
+        -0.5374011537017761
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-5-0",
+      "p": [
+        -0.6224011537017762,
+        0.85,
+        -0.3474011537017761
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-5-1",
+      "p": [
+        -0.5374011537017762,
+        0.85,
+        -0.3474011537017761
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-5-2",
+      "p": [
+        -0.45240115370177614,
+        0.85,
+        -0.3474011537017761
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-5",
+      "p": [
+        -0.5374011537017762,
+        0.71,
+        -0.36740115370177606
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-6",
+      "p": [
+        -1.3960973510279825e-16,
+        1.02,
+        -0.76
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-6-0",
+      "p": [
+        -0.08500000000000014,
+        0.85,
+        -0.5700000000000001
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-6-1",
+      "p": [
+        -1.3877787807814457e-16,
+        0.85,
+        -0.5700000000000001
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-6-2",
+      "p": [
+        0.08499999999999987,
+        0.85,
+        -0.5700000000000001
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-6",
+      "p": [
+        -1.3960973510279825e-16,
+        0.71,
+        -0.59
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "jar-lid-gasket-7",
+      "p": [
+        0.537401153701776,
+        1.02,
+        -0.5374011537017762
+      ],
+      "s": [
+        0.26,
+        0.045,
+        0.26
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-7-0",
+      "p": [
+        0.45240115370177597,
+        0.85,
+        -0.3474011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-7-1",
+      "p": [
+        0.537401153701776,
+        0.85,
+        -0.3474011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "label-rule-7-2",
+      "p": [
+        0.622401153701776,
+        0.85,
+        -0.3474011537017762
+      ],
+      "s": [
+        0.04,
+        0.013,
+        0.02
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "box",
+      "n": "jar-scale-window-7",
+      "p": [
+        0.537401153701776,
+        0.71,
+        -0.3674011537017762
+      ],
+      "s": [
+        0.12,
+        0.19,
+        0.023
+      ],
+      "c": 16381934,
+      "finish": "glass"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-0",
+      "p": [
+        0.58,
+        0.52,
+        0
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-1",
+      "p": [
+        0.41012193308819755,
+        0.52,
+        0.4101219330881975
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-2",
+      "p": [
+        3.551475717527324e-17,
+        0.52,
+        0.58
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-3",
+      "p": [
+        -0.4101219330881975,
+        0.52,
+        0.41012193308819755
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-4",
+      "p": [
+        -0.58,
+        0.52,
+        7.102951435054648e-17
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-5",
+      "p": [
+        -0.4101219330881976,
+        0.52,
+        -0.4101219330881975
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-6",
+      "p": [
+        -1.0654427152581971e-16,
+        0.52,
+        -0.58
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "rotation-detent-7",
+      "p": [
+        0.41012193308819744,
+        0.52,
+        -0.4101219330881976
+      ],
+      "s": [
+        0.09,
+        0.05,
+        0.09
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "carousel-top-label",
+      "p": [
+        0,
+        1.48,
+        0.4
+      ],
+      "s": [
+        0.39,
+        0.09,
+        0.035
+      ],
+      "c": 15918798,
+      "finish": "ceramic"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

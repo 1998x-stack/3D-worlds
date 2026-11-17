@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/micro-maker-robot-mascot.webp",
-  "accent": "#f0bc71"
+  "accent": "#f0bc71",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createMicroMakerRobotMascot() { return buildRecipe({
   "title": "Micro Maker Robot Mascot",
@@ -40,7 +42,7 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
   ],
   "parts": [
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "body-chassis",
       "p": [
         0,
@@ -55,7 +57,7 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
       "c": 10143185
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "face-screen",
       "p": [
         0,
@@ -67,7 +69,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.66,
         0.13
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "glow"
     },
     {
       "t": "sphere",
@@ -82,7 +85,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.17,
         0.12
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "rod",
@@ -143,7 +147,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.14,
         0.13
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -158,7 +163,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.17,
         0.12
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "glow"
     },
     {
       "t": "rod",
@@ -219,7 +225,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.14,
         0.13
       ],
-      "c": 13938523
+      "c": 13938523,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -249,7 +256,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -264,7 +272,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -279,7 +288,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -294,7 +304,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -309,7 +320,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "box",
@@ -324,7 +336,8 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.08,
         0.08
       ],
-      "c": 15001563
+      "c": 15001563,
+      "finish": "rubber"
     },
     {
       "t": "rod",
@@ -355,7 +368,332 @@ export function createMicroMakerRobotMascot() { return buildRecipe({
         0.17,
         0.17
       ],
-      "c": 14648424
+      "c": 14648424,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "shoulder-axle-0",
+      "p": [
+        -0.55,
+        1.22,
+        0
+      ],
+      "s": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cheek-led-0",
+      "p": [
+        -0.38,
+        1.54,
+        0.51
+      ],
+      "s": [
+        0.16,
+        0.11,
+        0.12
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "rounded-box",
+      "n": "boot-sole-0",
+      "p": [
+        -0.31,
+        0.06,
+        0.24
+      ],
+      "s": [
+        0.39,
+        0.11,
+        0.72
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "shoulder-axle-1",
+      "p": [
+        0.55,
+        1.22,
+        0
+      ],
+      "s": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "cheek-led-1",
+      "p": [
+        0.38,
+        1.54,
+        0.51
+      ],
+      "s": [
+        0.16,
+        0.11,
+        0.12
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "rounded-box",
+      "n": "boot-sole-1",
+      "p": [
+        0.31,
+        0.06,
+        0.24
+      ],
+      "s": [
+        0.39,
+        0.11,
+        0.72
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-0",
+      "p": [
+        -0.37,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-1",
+      "p": [
+        -0.22,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-2",
+      "p": [
+        -0.07,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-3",
+      "p": [
+        0.07999999999999996,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-4",
+      "p": [
+        0.22999999999999998,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "chest-thermal-vent-5",
+      "p": [
+        0.38,
+        1.18,
+        0.39
+      ],
+      "s": [
+        0.05,
+        0.17,
+        0.027
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "face-panel-screw-0",
+      "p": [
+        -0.47,
+        1.51,
+        0.52
+      ],
+      "s": [
+        0.07,
+        0.04,
+        0.07
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "face-panel-screw-1",
+      "p": [
+        0.47,
+        1.51,
+        0.52
+      ],
+      "s": [
+        0.07,
+        0.04,
+        0.07
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "face-panel-screw-2",
+      "p": [
+        -0.47,
+        2.02,
+        0.52
+      ],
+      "s": [
+        0.07,
+        0.04,
+        0.07
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "face-panel-screw-3",
+      "p": [
+        0.47,
+        2.02,
+        0.52
+      ],
+      "s": [
+        0.07,
+        0.04,
+        0.07
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "maker-badge",
+      "p": [
+        0,
+        0.79,
+        0.4
+      ],
+      "s": [
+        0.41,
+        0.2,
+        0.05
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "rod",
+      "n": "circuit-trace-0",
+      "from": [
+        -0.35,
+        0.63,
+        0.38
+      ],
+      "to": [
+        0.35,
+        0.63,
+        0.38
+      ],
+      "r": 0.018,
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "rod",
+      "n": "circuit-trace-1",
+      "from": [
+        -0.35,
+        0.74,
+        0.38
+      ],
+      "to": [
+        0.35,
+        0.74,
+        0.38
+      ],
+      "r": 0.018,
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "rod",
+      "n": "circuit-trace-2",
+      "from": [
+        -0.35,
+        0.85,
+        0.38
+      ],
+      "to": [
+        0.35,
+        0.85,
+        0.38
+      ],
+      "r": 0.018,
+      "c": 9487573,
+      "finish": "glow"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/terrarium-gardener-figurine.webp",
-  "accent": "#f0bc71"
+  "accent": "#f0bc71",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createTerrariumGardenerFigurine() { return buildRecipe({
   "title": "Terrarium Gardener Figurine",
@@ -67,10 +69,11 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.38,
         0.33
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "rubber"
     },
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "apron",
       "p": [
         0,
@@ -82,7 +85,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         1,
         0.4
       ],
-      "c": 7915949
+      "c": 7915949,
+      "finish": "ceramic"
     },
     {
       "t": "sphere",
@@ -159,7 +163,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.07,
         0.06
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "glow"
     },
     {
       "t": "rod",
@@ -206,7 +211,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.07,
         0.06
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "glow"
     },
     {
       "t": "cylinder",
@@ -221,7 +227,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.42,
         0.48
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "glass"
     },
     {
       "t": "torus",
@@ -236,7 +243,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.62,
         0.3
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "metal"
     },
     {
       "t": "rod",
@@ -252,7 +260,8 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.6
       ],
       "r": 0.065,
-      "c": 10143185
+      "c": 10143185,
+      "finish": "metal"
     },
     {
       "t": "sphere",
@@ -343,6 +352,328 @@ export function createTerrariumGardenerFigurine() { return buildRecipe({
         0.08
       ],
       "c": 5086834
+    },
+    {
+      "t": "cylinder",
+      "n": "hat-sun-brim",
+      "p": [
+        0,
+        2.22,
+        0
+      ],
+      "s": [
+        1.03,
+        0.11,
+        1.03
+      ],
+      "c": 15383673,
+      "finish": "fabric"
+    },
+    {
+      "t": "rounded-box",
+      "n": "apron-stitched-pocket",
+      "p": [
+        0,
+        1.08,
+        0.39
+      ],
+      "s": [
+        0.42,
+        0.3,
+        0.06
+      ],
+      "c": 15918798,
+      "finish": "fabric"
+    },
+    {
+      "t": "sphere",
+      "n": "garden-glove-0",
+      "p": [
+        -0.71,
+        1.03,
+        0.28
+      ],
+      "s": [
+        0.22,
+        0.18,
+        0.18
+      ],
+      "c": 16381934,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "boot-trim-0",
+      "p": [
+        -0.23,
+        0.22,
+        0.07
+      ],
+      "s": [
+        0.4,
+        0.07,
+        0.39
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "garden-glove-1",
+      "p": [
+        0.71,
+        1.03,
+        0.28
+      ],
+      "s": [
+        0.22,
+        0.18,
+        0.18
+      ],
+      "c": 16381934,
+      "finish": "fabric"
+    },
+    {
+      "t": "box",
+      "n": "boot-trim-1",
+      "p": [
+        0.23,
+        0.22,
+        0.07
+      ],
+      "s": [
+        0.4,
+        0.07,
+        0.39
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-0",
+      "p": [
+        -0.64,
+        0.75,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 15918798,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-1",
+      "p": [
+        -0.7150000000000001,
+        0.8712435565298214,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 14781814,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-2",
+      "p": [
+        -0.865,
+        0.8712435565298214,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 15918798,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-3",
+      "p": [
+        -0.9400000000000001,
+        0.75,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 14781814,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-4",
+      "p": [
+        -0.8650000000000001,
+        0.6287564434701787,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 15918798,
+      "finish": "matte"
+    },
+    {
+      "t": "sphere",
+      "n": "flower-petal-5",
+      "p": [
+        -0.7150000000000001,
+        0.6287564434701786,
+        0.34
+      ],
+      "s": [
+        0.16,
+        0.08,
+        0.08
+      ],
+      "c": 14781814,
+      "finish": "matte"
+    },
+    {
+      "t": "cylinder",
+      "n": "watering-can-lip",
+      "p": [
+        0.72,
+        1.03,
+        0.42
+      ],
+      "s": [
+        0.51,
+        0.06,
+        0.51
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "hex",
+      "n": "watering-rose-nozzle",
+      "p": [
+        1.28,
+        0.92,
+        0.6
+      ],
+      "s": [
+        0.24,
+        0.08,
+        0.24
+      ],
+      "c": 11648457,
+      "finish": "matte"
+    },
+    {
+      "t": "box",
+      "n": "shower-head-drill-0",
+      "p": [
+        1.196,
+        0.975,
+        0.63
+      ],
+      "s": [
+        0.021,
+        0.012,
+        0.022
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "shower-head-drill-1",
+      "p": [
+        1.233,
+        0.975,
+        0.63
+      ],
+      "s": [
+        0.021,
+        0.012,
+        0.022
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "shower-head-drill-2",
+      "p": [
+        1.27,
+        0.975,
+        0.63
+      ],
+      "s": [
+        0.021,
+        0.012,
+        0.022
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "shower-head-drill-3",
+      "p": [
+        1.307,
+        0.975,
+        0.63
+      ],
+      "s": [
+        0.021,
+        0.012,
+        0.022
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "box",
+      "n": "shower-head-drill-4",
+      "p": [
+        1.344,
+        0.975,
+        0.63
+      ],
+      "s": [
+        0.021,
+        0.012,
+        0.022
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rod",
+      "n": "apron-neckband",
+      "from": [
+        -0.28,
+        1.52,
+        0.13
+      ],
+      "to": [
+        0.28,
+        1.52,
+        0.13
+      ],
+      "r": 0.029,
+      "c": 15918798,
+      "finish": "fabric"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }

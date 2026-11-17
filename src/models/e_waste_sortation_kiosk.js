@@ -29,7 +29,9 @@ export const assetMeta = {
   "style": "Creative Parametric",
   "collection": "v1.4",
   "preview_path": "public/thumbs/e-waste-sortation-kiosk.webp",
-  "accent": "#78c9ad"
+  "accent": "#78c9ad",
+  "geometry_revision": "1.4.1",
+  "refinement": "geometry+materials"
 };
 export function createEWasteSortationKiosk() { return buildRecipe({
   "title": "E-waste Sortation Kiosk",
@@ -40,7 +42,7 @@ export function createEWasteSortationKiosk() { return buildRecipe({
   ],
   "parts": [
     {
-      "t": "box",
+      "t": "rounded-box",
       "n": "kiosk-housing",
       "p": [
         0,
@@ -112,7 +114,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.08,
         0.13
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "glow"
     },
     {
       "t": "box",
@@ -127,7 +130,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.1,
         0.08
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -202,7 +206,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.08,
         0.13
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "glow"
     },
     {
       "t": "box",
@@ -217,7 +222,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.1,
         0.08
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -292,7 +298,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.08,
         0.13
       ],
-      "c": 15853002
+      "c": 15853002,
+      "finish": "glow"
     },
     {
       "t": "box",
@@ -307,7 +314,8 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.1,
         0.08
       ],
-      "c": 3229017
+      "c": 3229017,
+      "finish": "metal"
     },
     {
       "t": "box",
@@ -352,7 +360,425 @@ export function createEWasteSortationKiosk() { return buildRecipe({
         0.18,
         0.07
       ],
-      "c": 10143185
+      "c": 10143185,
+      "finish": "glow"
+    },
+    {
+      "t": "rounded-box",
+      "n": "drop-guard-0",
+      "p": [
+        -0.73,
+        1.77,
+        0.66
+      ],
+      "s": [
+        0.48,
+        0.15,
+        0.07
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-0-0",
+      "p": [
+        -0.99,
+        0.6,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-0-1",
+      "p": [
+        -0.99,
+        1.25,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "drop-slot-indicator-0",
+      "p": [
+        -0.73,
+        1.9,
+        0.65
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.1
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-0-0",
+      "p": [
+        -0.82,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-0-1",
+      "p": [
+        -0.73,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-0-2",
+      "p": [
+        -0.64,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 9487573,
+      "finish": "glow"
+    },
+    {
+      "t": "rounded-box",
+      "n": "drop-guard-1",
+      "p": [
+        0,
+        1.77,
+        0.66
+      ],
+      "s": [
+        0.48,
+        0.15,
+        0.07
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-1-0",
+      "p": [
+        -0.26,
+        0.6,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-1-1",
+      "p": [
+        -0.26,
+        1.25,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "drop-slot-indicator-1",
+      "p": [
+        0,
+        1.9,
+        0.65
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.1
+      ],
+      "c": 7981487,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-1-0",
+      "p": [
+        -0.09,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 5742453,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-1-1",
+      "p": [
+        0,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 5742453,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-1-2",
+      "p": [
+        0.09,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 5742453,
+      "finish": "glow"
+    },
+    {
+      "t": "rounded-box",
+      "n": "drop-guard-2",
+      "p": [
+        0.73,
+        1.77,
+        0.66
+      ],
+      "s": [
+        0.48,
+        0.15,
+        0.07
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-2-0",
+      "p": [
+        0.47,
+        0.6,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "cylinder",
+      "n": "compartment-hinge-2-1",
+      "p": [
+        0.47,
+        1.25,
+        0.67
+      ],
+      "s": [
+        0.1,
+        0.08,
+        0.1
+      ],
+      "c": 14989405,
+      "finish": "metal"
+    },
+    {
+      "t": "sphere",
+      "n": "drop-slot-indicator-2",
+      "p": [
+        0.73,
+        1.9,
+        0.65
+      ],
+      "s": [
+        0.12,
+        0.12,
+        0.1
+      ],
+      "c": 15383673,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-2-0",
+      "p": [
+        0.64,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-2-1",
+      "p": [
+        0.73,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "box",
+      "n": "recycling-symbol-dash-2-2",
+      "p": [
+        0.82,
+        1.21,
+        0.67
+      ],
+      "s": [
+        0.04,
+        0.1,
+        0.028
+      ],
+      "c": 14781814,
+      "finish": "glow"
+    },
+    {
+      "t": "sphere",
+      "n": "weather-base-foot-0",
+      "p": [
+        -0.95,
+        0.11,
+        -0.36
+      ],
+      "s": [
+        0.17,
+        0.15,
+        0.15
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "weather-base-foot-1",
+      "p": [
+        0.95,
+        0.11,
+        -0.36
+      ],
+      "s": [
+        0.17,
+        0.15,
+        0.15
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "weather-base-foot-2",
+      "p": [
+        -0.95,
+        0.11,
+        0.36
+      ],
+      "s": [
+        0.17,
+        0.15,
+        0.15
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "sphere",
+      "n": "weather-base-foot-3",
+      "p": [
+        0.95,
+        0.11,
+        0.36
+      ],
+      "s": [
+        0.17,
+        0.15,
+        0.15
+      ],
+      "c": 2570573,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "kiosk-solar-id-plate",
+      "p": [
+        0,
+        2.13,
+        0.6
+      ],
+      "s": [
+        0.77,
+        0.11,
+        0.03
+      ],
+      "c": 15918798,
+      "finish": "ceramic"
     }
-  ]
+  ],
+  "geometry_revision": "1.4.1"
 }); }
