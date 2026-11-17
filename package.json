@@ -34,5 +34,8 @@
     "@gltf-transform/core": "4.5.1",
     "@gltf-transform/extensions": "4.5.1",
     "@gltf-transform/functions": "4.5.1"
+  },
+  "overrides": {
+    "rollup": "4.68.3"
   }
 }
