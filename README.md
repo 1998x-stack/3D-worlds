@@ -31,7 +31,7 @@ browser converts Y-up models to Z-up, uniformly scales the model and emits
 binary STL. **Browser STL is not manufacturing-validated.**
 
 For checked exports, first produce a full-resolution `.cache/raw/*.glb`
-using `npm run generate:assets`, then install the optional Trimesh dependency
+using `node scripts/render_assets.mjs --id furniture.chair.linen-001`, then install the optional Trimesh dependency
 and run the offline print exporter:
 
 ```bash
