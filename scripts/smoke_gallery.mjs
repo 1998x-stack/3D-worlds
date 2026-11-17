@@ -5,6 +5,8 @@ import { chromium } from 'playwright';
 import { readFileSync } from 'node:fs';
 const registered=JSON.parse(readFileSync(new URL('../catalog/public_models.json',import.meta.url),'utf8')).assets;
 const expected=registered.length;
+const total=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8')).assets.length;
+if(total<=500 && expected!==total)throw Error('Static Gallery silently truncated: '+expected+'/'+total);
 let server, browser;
 try{
  server=await preview({preview:{host:'127.0.0.1',port:4180,strictPort:true}});

@@ -15,7 +15,7 @@ SOURCE = ROOT / "catalog" / "models.json"
 PUBLIC = ROOT / "catalog" / "public_models.json"
 
 
-def export(limit: int = 200, source: Path = SOURCE, target: Path = PUBLIC) -> dict:
+def export(limit: int = 500, source: Path = SOURCE, target: Path = PUBLIC) -> dict:
     if limit < 1 or limit > 2000:
         raise ValueError("Static Gallery projection limit must be 1..2000")
     data = json.loads(Path(source).read_text(encoding="utf8"))
@@ -35,6 +35,6 @@ def export(limit: int = 200, source: Path = SOURCE, target: Path = PUBLIC) -> di
 
 if __name__ == "__main__":
     parser=argparse.ArgumentParser()
-    parser.add_argument("--limit",type=int,default=200)
+    parser.add_argument("--limit",type=int,default=500)
     args=parser.parse_args()
     print(json.dumps(export(args.limit),ensure_ascii=False))
