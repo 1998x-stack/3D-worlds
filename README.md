@@ -8,7 +8,8 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
-[50 newest assets · v1.1](docs/50-assets-v11.md) ·
+[50 new overseas 3D-print products · v1.2](docs/print-commerce-v12.md) ·
+[50 newest scene assets · v1.1](docs/50-assets-v11.md) ·
 [50 previous assets · v1.0](docs/50-assets-v10.md) ·
 [50 previous assets · v0.9](docs/50-assets-v09.md) ·
 [50 previous assets · v0.8](docs/50-assets-v08.md) ·
@@ -49,6 +50,20 @@ python3 .codex/skills/threejs-model-builder/scripts/preflight.py --json
 Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
 resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
 broken local links.
+
+## V1.2 — Overseas 3D Print Commerce · 50 prototype product models
+
+The dedicated **海外3D打印商品 / print-commerce** category adds 50 independently
+indexed original parametric concepts (485 total, 14 categories). Each item has
+both a live Three.js preview module and **editable OpenSCAD CAD source** in
+`printables/`; the latter is the manufacturing authority for STL/3MF exports.
+Market evidence is category-level, not a sales guarantee. **No STL has been
+physically printed or safety-certified in this release.**
+
+- [Research, 50-item inventory, overseas consumer preferences and risk controls](docs/print-commerce-v12.md)
+- [CAD authoring and slicer export](printables/README.md)
+- [Machine-readable 50-item launch collection](catalog/collections/print-commerce-v12.json)
+- Export: `python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve`
 
 ## V1.1 — 50 next-generation original procedural scene assets
 

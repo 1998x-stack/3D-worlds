@@ -22,14 +22,14 @@ class V08CollectionTests(unittest.TestCase):
         self.assertEqual(c["asset_count"], 50)
         self.assertEqual(c["category_count"], 13)
         self.assertEqual(len(c["assets"]), 50)
-        self.assertEqual(len(self.assets), 435)
-        self.assertEqual(len(self.by_id), 435)
-        self.assertEqual(len({a["slug"] for a in self.assets}), 435)
+        self.assertEqual(len(self.assets), 485)
+        self.assertEqual(len(self.by_id), 485)
+        self.assertEqual(len({a["slug"] for a in self.assets}), 485)
         categories = {x["id"] for x in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), categories)
+        self.assertEqual(set(c["category_counts"]), categories - {"print-commerce"})
         self.assertEqual(sum(c["category_counts"].values()), 50)
         self.assertGreaterEqual(min(c["category_counts"].values()), 3)
-        self.assertEqual({a["category"] for a in c["assets"]}, categories)
+        self.assertEqual({a["category"] for a in c["assets"]}, categories - {"print-commerce"})
         self.assertEqual(len([a for a in self.assets if a.get("collection") == "v0.8"]), 50)
 
     def test_real_3d_geometry_and_provenance(self):
@@ -70,7 +70,7 @@ class V08CollectionTests(unittest.TestCase):
                 self.assertTrue(all(math.isfinite(v) and v > 0 for v in asset["dimensions_m"]))
 
     def test_historical_235_assets_not_reassigned(self):
-        old = [a for a in self.assets if a.get("collection") not in ("v0.8", "v0.9", "v1.0", "v1.1")]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.8", "v0.9", "v1.0", "v1.1", "v1.2")]
         self.assertEqual(len(old), 235)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.7"]), 50)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.6"]), 50)
