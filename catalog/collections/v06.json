@@ -5,16 +5,20 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 10,
-  "category_count": 7,
+  "asset_count": 20,
+  "category_count": 11,
   "category_counts": {
-    "architecture": 1,
+    "architecture": 2,
     "bathroom": 1,
+    "characters": 1,
     "decor": 2,
+    "electronics": 2,
     "furniture": 1,
-    "nature": 1,
-    "sports": 1,
-    "vehicles": 3
+    "kitchen": 2,
+    "nature": 2,
+    "sports": 2,
+    "urban": 1,
+    "vehicles": 4
   },
   "assets": [
     {
@@ -186,6 +190,176 @@
       "design_focus": "Copper freestanding bathtub with contrasting enamel interior and four ornate feet",
       "usage": "bathtub",
       "part_count": 13
+    },
+    {
+      "id": "kitchen.countertop-vacuum-sealer.001",
+      "slug": "countertop-vacuum-sealer",
+      "title": "Countertop Vacuum Sealer",
+      "title_zh": "桌面真空食品封口机",
+      "category": "kitchen",
+      "source_path": "src/models/countertop_vacuum_sealer.js",
+      "generator": "createCountertopVacuumSealer",
+      "dimensions_m": [
+        0.47,
+        0.25,
+        0.36
+      ],
+      "design_focus": "Countertop vacuum packer with transparent lid, control keys, heating seal and food bag",
+      "usage": "vacuum",
+      "part_count": 15
+    },
+    {
+      "id": "nature.dense-bamboo-grove.001",
+      "slug": "dense-bamboo-grove",
+      "title": "Dense Bamboo Grove",
+      "title_zh": "竹林竹丛",
+      "category": "nature",
+      "source_path": "src/models/dense_bamboo_grove.js",
+      "generator": "createDenseBambooGrove",
+      "dimensions_m": [
+        1.35,
+        3.17,
+        1.28
+      ],
+      "design_focus": "Layered cluster of green bamboo canes with node rings and horizontal leaves",
+      "usage": "bamboo",
+      "part_count": 77
+    },
+    {
+      "id": "electronics.desktop-laser-engraver.001",
+      "slug": "desktop-laser-engraver",
+      "title": "Desktop Laser Engraver",
+      "title_zh": "桌面激光雕刻机",
+      "category": "electronics",
+      "source_path": "src/models/desktop_laser_engraver.js",
+      "generator": "createDesktopLaserEngraver",
+      "dimensions_m": [
+        0.63,
+        0.57,
+        0.6
+      ],
+      "design_focus": "Enclosed compact laser engraver with X-Y bridge, safety shroud, bed and fume tube",
+      "usage": "laser",
+      "part_count": 14
+    },
+    {
+      "id": "electronics.digital-stage-keyboard.001",
+      "slug": "digital-stage-keyboard",
+      "title": "Digital Stage Keyboard",
+      "title_zh": "电子舞台键盘",
+      "category": "electronics",
+      "source_path": "src/models/digital_stage_keyboard.js",
+      "generator": "createDigitalStageKeyboard",
+      "dimensions_m": [
+        1.25,
+        0.83,
+        0.43
+      ],
+      "design_focus": "Portable stage piano with 28 keys, control knobs, display and X-frame stand",
+      "usage": "piano",
+      "part_count": 48
+    },
+    {
+      "id": "urban.electric-vehicle-charging-pillar.001",
+      "slug": "electric-vehicle-charging-pillar",
+      "title": "Electric Vehicle Charging Pillar",
+      "title_zh": "电动车公共充电桩",
+      "category": "urban",
+      "source_path": "src/models/electric_vehicle_charging_pillar.js",
+      "generator": "createElectricVehicleChargingPillar",
+      "dimensions_m": [
+        0.58,
+        1.78,
+        0.47
+      ],
+      "design_focus": "Outdoor EV charger with touch display, payment terminal, cable loop and plug",
+      "usage": "ev",
+      "part_count": 15
+    },
+    {
+      "id": "vehicles.festival-hot-air-balloon.001",
+      "slug": "festival-hot-air-balloon",
+      "title": "Festival Hot Air Balloon",
+      "title_zh": "节庆热气球",
+      "category": "vehicles",
+      "source_path": "src/models/festival_hot_air_balloon.js",
+      "generator": "createFestivalHotAirBalloon",
+      "dimensions_m": [
+        2.57,
+        4.4,
+        2.48
+      ],
+      "design_focus": "Bright striped hot-air balloon with basket, four suspension ropes and central burner",
+      "usage": "balloon",
+      "part_count": 25
+    },
+    {
+      "id": "kitchen.freestanding-gas-range-oven.001",
+      "slug": "freestanding-gas-range-oven",
+      "title": "Freestanding Gas Range Oven",
+      "title_zh": "独立式燃气炉灶烤箱",
+      "category": "kitchen",
+      "source_path": "src/models/freestanding_gas_range_oven.js",
+      "generator": "createFreestandingGasRangeOven",
+      "dimensions_m": [
+        0.68,
+        0.89,
+        0.68
+      ],
+      "design_focus": "Gas cooktop and oven combination with burner grates and control dials",
+      "usage": "oven",
+      "part_count": 31
+    },
+    {
+      "id": "architecture.gothic-stone-arch-module.001",
+      "slug": "gothic-stone-arch-module",
+      "title": "Gothic Stone Arch Module",
+      "title_zh": "尖拱石门建筑模块",
+      "category": "architecture",
+      "source_path": "src/models/gothic_stone_arch_module.js",
+      "generator": "createGothicStoneArchModule",
+      "dimensions_m": [
+        2.24,
+        3.28,
+        0.55
+      ],
+      "design_focus": "Pointed sandstone portal with voussoirs, carved bosses and threshold",
+      "usage": "gothic",
+      "part_count": 22
+    },
+    {
+      "id": "sports.indoor-bouldering-wall.001",
+      "slug": "indoor-bouldering-wall",
+      "title": "Indoor Bouldering Wall",
+      "title_zh": "室内抱石攀岩墙",
+      "category": "sports",
+      "source_path": "src/models/indoor_bouldering_wall.js",
+      "generator": "createIndoorBoulderingWall",
+      "dimensions_m": [
+        2.73,
+        3.07,
+        0.95
+      ],
+      "design_focus": "Overhanging bouldering wall with color-coded holds, crash mat and support frames",
+      "usage": "climbing",
+      "part_count": 31
+    },
+    {
+      "id": "characters.laboratory-technician-mannequin.001",
+      "slug": "laboratory-technician-mannequin",
+      "title": "Laboratory Technician Mannequin",
+      "title_zh": "实验室技术员原型",
+      "category": "characters",
+      "source_path": "src/models/laboratory_technician_mannequin.js",
+      "generator": "createLaboratoryTechnicianMannequin",
+      "dimensions_m": [
+        0.95,
+        1.92,
+        0.68
+      ],
+      "design_focus": "Unrigged scientist wearing goggles, lab coat, nitrile gloves and microscope clipboard",
+      "usage": "scientist",
+      "part_count": 19
     }
   ]
 }

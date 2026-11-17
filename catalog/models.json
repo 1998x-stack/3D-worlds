@@ -4081,6 +4081,276 @@
       "collection": "v0.6",
       "preview_path": "public/thumbs/copper-clawfoot-bathtub.webp",
       "accent": "#bed7d4"
+    },
+    {
+      "id": "kitchen.countertop-vacuum-sealer.001",
+      "slug": "countertop-vacuum-sealer",
+      "title": "Countertop Vacuum Sealer",
+      "title_zh": "桌面真空食品封口机",
+      "summary": "Countertop vacuum packer with transparent lid, control keys, heating seal and food bag",
+      "category": "kitchen",
+      "tags": [
+        "vacuum",
+        "sealer",
+        "food-prep"
+      ],
+      "dimensions_m": [
+        0.47,
+        0.25,
+        0.36
+      ],
+      "generator": "createCountertopVacuumSealer",
+      "source_path": "src/models/countertop_vacuum_sealer.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/countertop-vacuum-sealer.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "nature.dense-bamboo-grove.001",
+      "slug": "dense-bamboo-grove",
+      "title": "Dense Bamboo Grove",
+      "title_zh": "竹林竹丛",
+      "summary": "Layered cluster of green bamboo canes with node rings and horizontal leaves",
+      "category": "nature",
+      "tags": [
+        "bamboo",
+        "grove",
+        "vegetation"
+      ],
+      "dimensions_m": [
+        1.35,
+        3.17,
+        1.28
+      ],
+      "generator": "createDenseBambooGrove",
+      "source_path": "src/models/dense_bamboo_grove.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/dense-bamboo-grove.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "electronics.desktop-laser-engraver.001",
+      "slug": "desktop-laser-engraver",
+      "title": "Desktop Laser Engraver",
+      "title_zh": "桌面激光雕刻机",
+      "summary": "Enclosed compact laser engraver with X-Y bridge, safety shroud, bed and fume tube",
+      "category": "electronics",
+      "tags": [
+        "laser",
+        "engraver",
+        "fabrication"
+      ],
+      "dimensions_m": [
+        0.63,
+        0.57,
+        0.6
+      ],
+      "generator": "createDesktopLaserEngraver",
+      "source_path": "src/models/desktop_laser_engraver.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/desktop-laser-engraver.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "electronics.digital-stage-keyboard.001",
+      "slug": "digital-stage-keyboard",
+      "title": "Digital Stage Keyboard",
+      "title_zh": "电子舞台键盘",
+      "summary": "Portable stage piano with 28 keys, control knobs, display and X-frame stand",
+      "category": "electronics",
+      "tags": [
+        "piano",
+        "keyboard",
+        "music"
+      ],
+      "dimensions_m": [
+        1.25,
+        0.83,
+        0.43
+      ],
+      "generator": "createDigitalStageKeyboard",
+      "source_path": "src/models/digital_stage_keyboard.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/digital-stage-keyboard.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "urban.electric-vehicle-charging-pillar.001",
+      "slug": "electric-vehicle-charging-pillar",
+      "title": "Electric Vehicle Charging Pillar",
+      "title_zh": "电动车公共充电桩",
+      "summary": "Outdoor EV charger with touch display, payment terminal, cable loop and plug",
+      "category": "urban",
+      "tags": [
+        "ev",
+        "charger",
+        "infrastructure"
+      ],
+      "dimensions_m": [
+        0.58,
+        1.78,
+        0.47
+      ],
+      "generator": "createElectricVehicleChargingPillar",
+      "source_path": "src/models/electric_vehicle_charging_pillar.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/electric-vehicle-charging-pillar.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "vehicles.festival-hot-air-balloon.001",
+      "slug": "festival-hot-air-balloon",
+      "title": "Festival Hot Air Balloon",
+      "title_zh": "节庆热气球",
+      "summary": "Bright striped hot-air balloon with basket, four suspension ropes and central burner",
+      "category": "vehicles",
+      "tags": [
+        "balloon",
+        "festival",
+        "flight"
+      ],
+      "dimensions_m": [
+        2.57,
+        4.4,
+        2.48
+      ],
+      "generator": "createFestivalHotAirBalloon",
+      "source_path": "src/models/festival_hot_air_balloon.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/festival-hot-air-balloon.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "kitchen.freestanding-gas-range-oven.001",
+      "slug": "freestanding-gas-range-oven",
+      "title": "Freestanding Gas Range Oven",
+      "title_zh": "独立式燃气炉灶烤箱",
+      "summary": "Gas cooktop and oven combination with burner grates and control dials",
+      "category": "kitchen",
+      "tags": [
+        "oven",
+        "range",
+        "stove"
+      ],
+      "dimensions_m": [
+        0.68,
+        0.89,
+        0.68
+      ],
+      "generator": "createFreestandingGasRangeOven",
+      "source_path": "src/models/freestanding_gas_range_oven.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/freestanding-gas-range-oven.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "architecture.gothic-stone-arch-module.001",
+      "slug": "gothic-stone-arch-module",
+      "title": "Gothic Stone Arch Module",
+      "title_zh": "尖拱石门建筑模块",
+      "summary": "Pointed sandstone portal with voussoirs, carved bosses and threshold",
+      "category": "architecture",
+      "tags": [
+        "gothic",
+        "arch",
+        "modular"
+      ],
+      "dimensions_m": [
+        2.24,
+        3.28,
+        0.55
+      ],
+      "generator": "createGothicStoneArchModule",
+      "source_path": "src/models/gothic_stone_arch_module.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/gothic-stone-arch-module.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "sports.indoor-bouldering-wall.001",
+      "slug": "indoor-bouldering-wall",
+      "title": "Indoor Bouldering Wall",
+      "title_zh": "室内抱石攀岩墙",
+      "summary": "Overhanging bouldering wall with color-coded holds, crash mat and support frames",
+      "category": "sports",
+      "tags": [
+        "climbing",
+        "bouldering",
+        "sport"
+      ],
+      "dimensions_m": [
+        2.73,
+        3.07,
+        0.95
+      ],
+      "generator": "createIndoorBoulderingWall",
+      "source_path": "src/models/indoor_bouldering_wall.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/indoor-bouldering-wall.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "characters.laboratory-technician-mannequin.001",
+      "slug": "laboratory-technician-mannequin",
+      "title": "Laboratory Technician Mannequin",
+      "title_zh": "实验室技术员原型",
+      "summary": "Unrigged scientist wearing goggles, lab coat, nitrile gloves and microscope clipboard",
+      "category": "characters",
+      "tags": [
+        "scientist",
+        "lab",
+        "character"
+      ],
+      "dimensions_m": [
+        0.95,
+        1.92,
+        0.68
+      ],
+      "generator": "createLaboratoryTechnicianMannequin",
+      "source_path": "src/models/laboratory_technician_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/laboratory-technician-mannequin.webp",
+      "accent": "#c6bbab"
     }
   ]
 }
