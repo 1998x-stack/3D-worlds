@@ -28,7 +28,7 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 
 ## P0/P1/P2 quality gate
 
-- At 45 models, all card images **must** be real build-time renderer outputs,
+- At any catalog size, all card images **must** be real build-time renderer outputs,
   not live 45-context WebGL cards or AI-generated stock images.
 - Run `npm run generate:assets && npm run verify:assets && npm run build && npm run test:gallery` before deploy.
 - Report actual Meshopt binary sizes and LOD triangle counts; LOD ratios are approximate targets.
@@ -36,3 +36,10 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - Remote API uses a cursor/pagination; do not bundle 50K records into one static JS payload.
 - For copied recipe assets, provide `recipe_engine.js` and all required helpers.
 - Read `docs/p0-p1-p2-delivery.md` before modifying renderer, optimizer, or object storage.
+
+## V0.4 collection guardrails
+- `catalog/collections/v04.json` is a historical immutable collection manifest: 40 assets, 13 categories, source paths and declared bounding dimensions.
+- Keep all 45 existing asset IDs unchanged; subsequent collections append rather than renumber.
+- For any new kind of primitive, add geometry creation in `src/models/recipe_engine.js` and ensure the copy-to-game snippet includes this engine.
+- Do not treat an unrigged stylized humanoid or scene prop as manufacturing-grade CAD.
+- Run `tests/test_collection_v04.py` for each new asset to validate source-backed recipes before rendering.

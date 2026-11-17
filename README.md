@@ -3,20 +3,31 @@
 **Explore, inspect, copy, export and integrate 3D assets.** A public Three.js
 gallery paired with a local, searchable SQLite catalog and MCP server.
 
-**[Live site (after Pages activation)](https://1998x-stack.github.io/3D-worlds/)** ·
+**[Live Gallery](https://1998x-stack.github.io/3D-worlds/)** ·
 [Architecture](docs/architecture.md) ·
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
-[30 new assets](docs/30-assets-v03.md) ·
+[40 new assets · v0.4](docs/40-assets-v04.md) ·
+[30 previous assets · v0.3](docs/30-assets-v03.md) ·
 [MCP contract](docs/mcp-contract.md) ·
 [Manifest schema](schemas/manifest.schema.json) ·
 [Model-building Skill](.codex/skills/threejs-model-builder/SKILL.md)
 
+## V0.4 — 40 new scene assets
+
+This release adds **40 original scene props** across every existing category:
+furniture (4), bathroom (3), characters (3), nature (3), vehicles (4),
+electronics (3), decor (3), kitchen (3), architecture (3), urban (3),
+tools (3), sports (2) and sci-fi (3).
+
+Review [the full bilingual design inventory](docs/40-assets-v04.md) and the
+machine-readable [collection specification](catalog/collections/v04.json).
+
 ## Capabilities
 
-- **45 original procedural models across 13 categories:** five initial props,
-  ten v0.2 props, and thirty v0.3 models, all editable as native Three.js.
+- **85 original procedural models across 13 categories:** 45 historical models
+  and 40 new v0.4 game-scene assets, each with editable native Three.js source.
 - **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
   model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
@@ -32,7 +43,7 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v0.3, 45 editable original generators. CI generates real
+> **Status:** v0.4, 85 editable original generators. CI generates real
 > WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
 > S3/MinIO implementation is configurable but requires your credentials and
 > external deployment; remote MCP hosting and real 50K-asset load testing
