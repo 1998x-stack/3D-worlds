@@ -30,6 +30,9 @@ for asset_id in (
     "nature.alpine-waterfall-cliff.001",
     "architecture.timber-balcony-module.001",
     "scifi.robotic-mining-excavator.001",
+    "nature.mangrove-root-island.001",
+    "architecture.modular-glass-curtain-wall.001",
+    "scifi.orbital-hydroponic-growing-tower.001",
 ):
     for level in (0, 1, 2):
         metadata = download_metadata(asset_id, level)
