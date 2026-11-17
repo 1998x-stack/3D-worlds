@@ -43,3 +43,10 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - For any new kind of primitive, add geometry creation in `src/models/recipe_engine.js` and ensure the copy-to-game snippet includes this engine.
 - Do not treat an unrigged stylized humanoid or scene prop as manufacturing-grade CAD.
 - Run `tests/test_collection_v04.py` for each new asset to validate source-backed recipes before rendering.
+
+## V0.5 collection integrity (135 assets)
+- `catalog/collections/v05.json` has exactly 50 stable IDs; 13 existing categories have new models.
+- Keep all historical v0.1–v0.4 IDs and their original source paths unchanged. Never overwrite a published geometry without versioning.
+- Each new asset must have editable Three.js `assetMeta` and `buildRecipe` source, >=8 uniquely named meshes, dimensions in meters, and explicit MIT license.
+- Run `tests/test_collection_v05.py` and verify 135 GLB0/GLB1/GLB2 outputs and 270 thumbnails.
+- Search API has a hard per-request page cap of 100; audit 135+ assets through cursor pagination, never via a single `limit=100` request.
