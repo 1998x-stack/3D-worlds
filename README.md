@@ -8,7 +8,8 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
-[50 newest assets · v0.6](docs/50-assets-v06.md) ·
+[50 newest assets · v0.7](docs/50-assets-v07.md) ·
+[50 previous assets · v0.6](docs/50-assets-v06.md) ·
 [50 previous assets · v0.5](docs/50-assets-v05.md) ·
 [40 previous assets · v0.4](docs/40-assets-v04.md) ·
 [30 previous assets · v0.3](docs/30-assets-v03.md) ·
@@ -45,7 +46,18 @@ Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
 resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
 broken local links.
 
-## V0.6 — next 50 original scene assets
+## V0.7 — 50 new procedural scene assets
+
+V0.7 extends the existing 185 models with **50 original Three.js procedural scene assets**
+across all 13 categories: **235 source-editable assets** in total, including new
+modular architecture, equipment and landscape props. All prior model IDs remain
+stable; CI renders 235 WebP, 235 AVIF and 705 optimized GLB LOD0/1/2 variants.
+
+- [Full bilingual V0.7 50-asset design catalog](docs/50-assets-v07.md)
+- [Machine-readable V0.7 collection](catalog/collections/v07.json)
+- [V0.7 verification and publishing gate](docs/verification-v07.md)
+
+## V0.6 — previous 50 original scene assets
 
 V0.6 expands the original **135** source-editable models with **50 more
 individually authored Three.js generators** to **185 assets / 13 categories**.
@@ -78,7 +90,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
 
 ## Capabilities
 
-- **185 original procedural models across 13 categories:** 135 historical assets plus 50 new v0.6 scene models, each with editable native Three.js source.
+- **235 original procedural models across 13 categories:** 185 historical assets plus 50 new V0.7 scene models, each with editable native Three.js source.
 - **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
   model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
@@ -94,7 +106,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v0.6, 185 editable original generators. CI generates real
+> **Status:** v0.7, 235 editable original generators. CI generates real
 > WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
 > S3/MinIO implementation is configurable but requires your credentials and
 > external deployment; remote MCP hosting and real 50K-asset load testing
