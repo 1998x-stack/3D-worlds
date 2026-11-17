@@ -1,0 +1,61 @@
+name: Verify and Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate and build SQLite catalog
+        run: |
+          python scripts/catalog.py validate
+          python scripts/catalog.py build
+          python -m unittest discover -s tests -v
+      - name: Install frontend dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build Vite static site
+        run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: threejs-pages-dist
+          path: dist/
+          retention-days: 7
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: threejs-pages-dist
+          path: dist/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+      - id: deployment
+        uses: actions/deploy-pages@v4
