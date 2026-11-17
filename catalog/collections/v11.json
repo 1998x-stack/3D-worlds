@@ -37,7 +37,7 @@
         1.45
       ],
       "design_focus": "Enclosed focus-work booth with acoustic felt ribs, desk, lamp and privacy screen",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "furniture.rotating-archive-storage-carousel.001",
@@ -53,7 +53,7 @@
         1.65
       ],
       "design_focus": "Circular multi-tier archive organizer with indexed shelves and card drawers",
-      "part_count": null
+      "part_count": 71
     },
     {
       "id": "furniture.folding-hospital-visitor-chair.001",
@@ -69,7 +69,7 @@
         1.05
       ],
       "design_focus": "Convertible hospital guest chair with fold-out sleeping pad, casters and side pocket",
-      "part_count": null
+      "part_count": 17
     },
     {
       "id": "furniture.compact-podcast-interview-sofa.001",
@@ -85,7 +85,7 @@
         1.3
       ],
       "design_focus": "Two-seat studio sofa with divided cushions, integrated microphone booms and side trays",
-      "part_count": null
+      "part_count": 16
     },
     {
       "id": "bathroom.outdoor-beach-rinse-station.001",
@@ -101,7 +101,7 @@
         1.25
       ],
       "design_focus": "Coastal public rinse station with elevated nozzles, foot taps and grated drain",
-      "part_count": null
+      "part_count": 20
     },
     {
       "id": "bathroom.dual-flush-restroom-cubicle.001",
@@ -117,7 +117,7 @@
         1.75
       ],
       "design_focus": "Modular privacy toilet cubicle with low-water dual flush, doors and ventilation",
-      "part_count": null
+      "part_count": 16
     },
     {
       "id": "bathroom.marine-composting-toilet-module.001",
@@ -133,7 +133,7 @@
         1.25
       ],
       "design_focus": "Water-saving compact marine composting restroom with vent chimney and sealed tank",
-      "part_count": null
+      "part_count": 18
     },
     {
       "id": "bathroom.wall-mounted-baby-changing-station.001",
@@ -149,7 +149,7 @@
         0.78
       ],
       "design_focus": "Fold-down infant changing station with straps, rounded deck and accessible instruction panel",
-      "part_count": null
+      "part_count": 15
     },
     {
       "id": "characters.wind-turbine-service-technician.001",
@@ -165,7 +165,7 @@
         0.92
       ],
       "design_focus": "Unrigged wind technician with helmet, safety harness and inspection tablet",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "characters.archaeological-field-surveyor.001",
@@ -181,7 +181,7 @@
         0.91
       ],
       "design_focus": "Unrigged archaeology field worker with trowel, measuring rod and excavation satchel",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "characters.disaster-relief-supply-coordinator.001",
@@ -197,7 +197,7 @@
         0.95
       ],
       "design_focus": "Unrigged humanitarian logistics volunteer with clipboard and marked supply case",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "characters.urban-drone-delivery-operator.001",
@@ -213,7 +213,7 @@
         0.9
       ],
       "design_focus": "Unrigged civilian drone courier operator with controller, headset and parcel",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "nature.bioluminescent-mushroom-glade.001",
@@ -229,7 +229,7 @@
         2.45
       ],
       "design_focus": "Stylized magical forest-floor glade with layered luminous mushroom caps and mossy stones",
-      "part_count": null
+      "part_count": 72
     },
     {
       "id": "nature.basalt-sea-stack-coastline.001",
@@ -245,7 +245,7 @@
         2.9
       ],
       "design_focus": "Wave-cut basalt sea stacks with columnar rock bands, tide pools and foam",
-      "part_count": null
+      "part_count": 45
     },
     {
       "id": "nature.alpine-rhododendron-grove.001",
@@ -261,7 +261,7 @@
         2.35
       ],
       "design_focus": "Alpine flowering shrub group with woody stems, clustered pink blossoms and rock base",
-      "part_count": null
+      "part_count": 64
     },
     {
       "id": "nature.limestone-sinkhole-garden.001",
@@ -277,7 +277,7 @@
         3
       ],
       "design_focus": "Small karst sinkhole terrain ring with layered limestone rim, ferns and bottom pool",
-      "part_count": null
+      "part_count": 50
     },
     {
       "id": "vehicles.wind-farm-service-buggy.001",
@@ -293,7 +293,7 @@
         3.85
       ],
       "design_focus": "Rugged electric maintenance buggy with roof rack, inspection cases and safety lights",
-      "part_count": null
+      "part_count": 17
     },
     {
       "id": "vehicles.electric-harbor-tugboat.001",
@@ -309,7 +309,7 @@
         4.35
       ],
       "design_focus": "Compact battery-electric harbor assist vessel with wheelhouse, fenders and tow bollard",
-      "part_count": null
+      "part_count": 19
     },
     {
       "id": "vehicles.autonomous-park-mower-rover.001",
@@ -325,7 +325,7 @@
         2.1
       ],
       "design_focus": "Self-driving landscape maintenance rover with deck blades guard, lidar and four turf wheels",
-      "part_count": null
+      "part_count": 18
     },
     {
       "id": "vehicles.maglev-passenger-train-nose.001",
@@ -341,7 +341,7 @@
         6.4
       ],
       "design_focus": "Streamlined high-speed train lead unit with panoramic windscreen and guideway skirt",
-      "part_count": null
+      "part_count": 29
     },
     {
       "id": "electronics.cryogenic-quantum-computer-rig.001",
@@ -357,7 +357,7 @@
         1.38
       ],
       "design_focus": "Dilution refrigerator research tower with thermal stages, cabling and control meters",
-      "part_count": null
+      "part_count": 53
     },
     {
       "id": "electronics.portable-ebook-field-notebook.001",
@@ -373,7 +373,7 @@
         0.39
       ],
       "design_focus": "Field-ready e-ink data notebook with stylus, rugged cover and sensor card slot",
-      "part_count": null
+      "part_count": 22
     },
     {
       "id": "electronics.weather-radar-analysis-console.001",
@@ -389,7 +389,7 @@
         1.04
       ],
       "design_focus": "Dual-monitor meteorological radar workstation with joystick, keyboard and signal readouts",
-      "part_count": null
+      "part_count": 27
     },
     {
       "id": "electronics.laboratory-fpga-dev-station.001",
@@ -405,7 +405,7 @@
         0.84
       ],
       "design_focus": "Programmable logic lab bench with circuit board, probes, oscilloscope and breadboard",
-      "part_count": null
+      "part_count": 27
     },
     {
       "id": "decor.stained-glass-dome-luminaire.001",
@@ -421,7 +421,7 @@
         1.65
       ],
       "design_focus": "Decorative domed luminaire with stained radial panels and suspended brass mount",
-      "part_count": null
+      "part_count": 28
     },
     {
       "id": "decor.tabletop-zen-waterfall.001",
@@ -437,7 +437,7 @@
         0.95
       ],
       "design_focus": "Meditation tabletop fountain with stepped stone bowls, pebbles and small bamboo planting",
-      "part_count": null
+      "part_count": 31
     },
     {
       "id": "decor.kinetic-pendulum-art-mobile.001",
@@ -453,7 +453,7 @@
         1.2
       ],
       "design_focus": "Suspended kinetic sculpture with nested pendulums, weighted spheres and radial frames",
-      "part_count": null
+      "part_count": 25
     },
     {
       "id": "decor.gallery-illuminated-art-frame.001",
@@ -469,7 +469,7 @@
         0.55
       ],
       "design_focus": "Museum artwork display with backlit canvas, layered frame, spotlights and label",
-      "part_count": null
+      "part_count": 15
     },
     {
       "id": "kitchen.restaurant-pasta-drying-rack.001",
@@ -485,7 +485,7 @@
         0.9
       ],
       "design_focus": "Commercial pasta drying frame with hanging spaghetti strands, folding legs and trays",
-      "part_count": null
+      "part_count": 49
     },
     {
       "id": "kitchen.mobile-induction-food-cart.001",
@@ -501,7 +501,7 @@
         1
       ],
       "design_focus": "Street-food cart with induction cooktop, vent hood, side shelves and storage",
-      "part_count": null
+      "part_count": 16
     },
     {
       "id": "kitchen.automatic-bubble-tea-sealer.001",
@@ -517,7 +517,7 @@
         0.63
       ],
       "design_focus": "Countertop cup-sealing machine with film roll, touch controls and sample beverages",
-      "part_count": null
+      "part_count": 16
     },
     {
       "id": "kitchen.solar-herb-dehydrator-cabinet.001",
@@ -533,7 +533,7 @@
         1.02
       ],
       "design_focus": "Solar-powered herb drying cabinet with stacked mesh trays, exhaust chimney and panel",
-      "part_count": null
+      "part_count": 34
     },
     {
       "id": "architecture.subway-platform-edge-module.001",
@@ -549,7 +549,7 @@
         2.15
       ],
       "design_focus": "Modular urban transit platform with tactile strips, safety screen doors and overhead signage",
-      "part_count": null
+      "part_count": 29
     },
     {
       "id": "architecture.geodesic-timber-gazebo.001",
@@ -565,7 +565,7 @@
         3.55
       ],
       "design_focus": "Open garden pavilion with timber geodesic roof triangles and circular decking",
-      "part_count": null
+      "part_count": 44
     },
     {
       "id": "architecture.reinforced-soil-retaining-wall.001",
@@ -581,7 +581,7 @@
         1.7
       ],
       "design_focus": "Civil engineering earth-retaining wall segment with drainage outlets and soil layers",
-      "part_count": null
+      "part_count": 61
     },
     {
       "id": "architecture.suspended-glass-skybridge-bay.001",
@@ -597,7 +597,7 @@
         2.65
       ],
       "design_focus": "Building-to-building enclosed glass skybridge with trusses, deck and ceiling supports",
-      "part_count": null
+      "part_count": 40
     },
     {
       "id": "urban.river-flood-level-sensor-pole.001",
@@ -613,7 +613,7 @@
         1.05
       ],
       "design_focus": "Smart river-level gauge with solar panel, telemetry cabinet and calibrated ruler",
-      "part_count": null
+      "part_count": 19
     },
     {
       "id": "urban.electric-bicycle-charging-island.001",
@@ -629,7 +629,7 @@
         1.85
       ],
       "design_focus": "Public e-bike charging canopy with parking bays, smart chargers and photovoltaic roof",
-      "part_count": null
+      "part_count": 25
     },
     {
       "id": "urban.traffic-calming-raised-crosswalk.001",
@@ -645,7 +645,7 @@
         2.45
       ],
       "design_focus": "Modular street raised pedestrian crossing with ramp slopes and bold reflective markings",
-      "part_count": null
+      "part_count": 17
     },
     {
       "id": "urban.street-tree-root-cell-system.001",
@@ -661,7 +661,7 @@
         2.35
       ],
       "design_focus": "Urban tree root-cell below paving with open soil grid, tree trunk and root support",
-      "part_count": null
+      "part_count": 46
     },
     {
       "id": "tools.photogrammetry-turntable-rig.001",
@@ -677,7 +677,7 @@
         1.18
       ],
       "design_focus": "Tabletop 3D capture station with motorized turntable, camera rail and calibration markers",
-      "part_count": null
+      "part_count": 24
     },
     {
       "id": "tools.portable-cable-pulling-winch.001",
@@ -693,7 +693,7 @@
         0.85
       ],
       "design_focus": "Portable industrial cable winch with spool, control lever and anchoring feet",
-      "part_count": null
+      "part_count": 16
     },
     {
       "id": "tools.field-soil-compaction-kit.001",
@@ -709,7 +709,7 @@
         0.88
       ],
       "design_focus": "Field geotechnical testing case with probe rods, hand rammer and numbered sample pots",
-      "part_count": null
+      "part_count": 21
     },
     {
       "id": "tools.microscope-repair-workbench.001",
@@ -725,7 +725,7 @@
         0.97
       ],
       "design_focus": "Precision optics service bench with microscope, articulated lighting and calibration blocks",
-      "part_count": null
+      "part_count": 21
     },
     {
       "id": "sports.skatepark-quarter-pipe-module.001",
@@ -741,7 +741,7 @@
         2.65
       ],
       "design_focus": "Skateboard quarter-pipe ramp with curved deck ribs, coping and safety rails",
-      "part_count": null
+      "part_count": 27
     },
     {
       "id": "sports.beach-volleyball-referee-stand.001",
@@ -757,7 +757,7 @@
         1.45
       ],
       "design_focus": "Elevated referee stand beside volleyball net with ladder, seat and score placards",
-      "part_count": null
+      "part_count": 20
     },
     {
       "id": "sports.rowing-launch-dock-module.001",
@@ -773,7 +773,7 @@
         2.75
       ],
       "design_focus": "Low-profile floating sport dock with cleats, water-facing ramp and lane marker",
-      "part_count": null
+      "part_count": 23
     },
     {
       "id": "scifi.orbital-research-airlock-module.001",
@@ -789,7 +789,7 @@
         2.75
       ],
       "design_focus": "Nonweapon orbital habitat airlock with pressure door, docking collar and handrails",
-      "part_count": null
+      "part_count": 21
     },
     {
       "id": "scifi.asteroid-botanical-terrace.001",
@@ -805,7 +805,7 @@
         3.1
       ],
       "design_focus": "Space-based botanical garden with pressurized plant beds and translucent environmental shield",
-      "part_count": null
+      "part_count": 40
     },
     {
       "id": "scifi.ion-propulsion-test-platform.001",
@@ -821,7 +821,7 @@
         3.2
       ],
       "design_focus": "Science fiction propulsion research test stand with ion nozzle, diagnostics and safety rail",
-      "part_count": null
+      "part_count": 21
     }
   ]
 }
