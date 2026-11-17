@@ -2,69 +2,76 @@
 
 # 3D Worlds
 
-**Open 3D asset infrastructure — inspectable Three.js scenes, reproducible GLB outputs, and honest 3D printing candidates.**
+### Open, source-editable 3D assets for the web, games, agents, and responsible 3D-print prototyping
 
-[**Explore the gallery**](https://1998x-stack.github.io/3D-worlds/) · [**3D Print Workbench**](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [**中文文档**](README.zh-CN.md) · [**Architecture**](docs/architecture.md) · [**CAD & HN Research**](docs/codex-cad-3d-printing-hn-research-2026.md)
+**Explore models in Three.js · Reproduce GLB/LOD builds · Query assets via SQLite/MCP · Prototype STL/3MF responsibly**
 
-[![Verify and Deploy Pages](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml/badge.svg)](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml) [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[**Live Gallery**](https://1998x-stack.github.io/3D-worlds/) · [**3D Print Workbench**](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [**中文说明**](README.zh-CN.md) · [**Contributor Guide**](CONTRIBUTING.md) · [**AI Agent Guide**](AGENTS.md)
+
+[![Verify and Deploy Pages](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml/badge.svg)](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-097b55.svg)](LICENSE)
+[![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-43853d.svg)](package.json)
+[![Three.js](https://img.shields.io/badge/Three.js-0.180.0-252525.svg)](package.json)
 
 </div>
 
-> **Manufacturing safety:** Browser STL output is an **unverified geometry draft**. Passing CLI mesh checks does not certify printability, physical strength, safe use, or printer compatibility.
+> [!IMPORTANT]
+> **A renderable model is not automatically a printable product.** Browser STL downloads are *unverified drafts*; a successful topology audit produces a *candidate for manual review*, not a slicer-approved, physically verified, load-rated, or sale-certified design. P0/P1/P2 denote engineering workflow priorities, **never quality or safety grades**.
 
-## Overview
+## Contents
 
-3D Worlds connects a catalog of **565 original, source-editable procedural models across 14 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
+- [What is 3D Worlds?](#what-is-3d-worlds)
+- [Explore the platform](#explore-the-platform)
+- [Quick start](#quick-start)
+- [Capabilities and boundaries](#capabilities-and-boundaries)
+- [System architecture](#system-architecture)
+- [Repository map](#repository-map)
+- [Asset contract and authoring](#asset-contract-and-authoring)
+- [Reproducible previews and GLB assets](#reproducible-previews-and-glb-assets)
+- [3D printing: two distinct workflows](#3d-printing-two-distinct-workflows)
+- [Search API, MCP, and storage](#search-api-mcp-and-storage)
+- [Verification and CI](#verification-and-ci)
+- [Deployment](#deployment)
+- [Contributing, security, and licensing](#contributing-security-and-licensing)
+- [Documentation index](#documentation-index)
 
-| Layer | Key capability | Delivery |
-|---|---|---|
-| Catalog | 565 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
-| Gallery | Real WebP/AVIF thumbnails, interactive model inspector, category search | [GitHub Pages](https://1998x-stack.github.io/3D-worlds/) |
-| Game assets | GLB generation and Meshopt LOD0/LOD1/LOD2 optimization | Local build / CI artifact |
-| 3D print workbench | Printer-bed dimensions, scaled size estimate, P0/P1/P2 category guidance, STL draft | Browser · **not audited** |
-| Print QA | Topology, winding, volume, file hashes, STL/3MF candidates, split part STLs | Optional Python CLI |
-| Integrations | SQLite FTS5, read-only MCP tools, paginated API, optional local/S3 object storage | Self-hosted |
+## What is 3D Worlds?
 
-**P0/P1/P2 are workflow priorities, not quality grades.** The catalog does not label any generated model as physically verified.
+**3D Worlds** is an open 3D asset infrastructure project, not merely a model-viewer demo. It joins original, editable Three.js model factories to a browsable static website, repeatable image/GLB builds, structured metadata, local AI-agent integrations, and optional manufacturing *assessment* tools.
 
-## Creative maker-market scenes · v1.4
+At the **v1.4 catalog snapshot**, the repository documents **565 original models across 14 categories**. This includes a 50-design, OpenSCAD-backed overseas print-commerce collection (v1.3) and a later 30-model maker-inspired scene collection (v1.4). The definitive inventory is always `catalog/models.json` and `catalog/collections/`; do not assume a count in this prose remains current after later batches.
 
-The newest release adds **30 original, editable Three.js models** across the
-**13 general scene categories**, increasing the full catalog from **535 to 565
-models in 14 categories**. Maker-inspired designs include geometric laptop
-stands, modular electronics learning blocks, Truchet textile tiles, trellises,
-original botanical miniatures, display organizers, functional-looking (but
-nonfunctional) scientific devices, and nonweapon sci-fi habitats.
+The project serves several different audiences:
 
-Geometry is original and MIT-licensed. Amazon and eBay listings are qualitative
-product idea signals, while Hacker News supplies maker/CAD inspiration;
-this release does not import or copy their meshes, prove market demand, or
-certify 3D printability.
+| Audience | Practical entry point | What they receive |
+| :-- | :-- | :-- |
+| Web/Three.js developers | [Gallery](https://1998x-stack.github.io/3D-worlds/) and `src/models/` | Editable procedural source, model dimensions, interactive inspection |
+| Game and simulation builders | GLB generation, optimized LODs, source recipes | Asset variants for integration and performance experiments |
+| AI coding agents | [`AGENTS.md`](AGENTS.md), [portable Skill](.codex/skills/threejs-model-builder/SKILL.md), local MCP | Searchable IDs, attribution-aware source and import guidance |
+| Designers and makers | [Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow), `printables/` | Initial geometric drafts and editable CAD prototypes |
+| Contributors and maintainers | `catalog/`, `scripts/`, `tests/` and GitHub Actions | A reproducible path to add, validate, review, and publish assets |
 
-[30-model bilingual inventory and sources](docs/30-assets-v14.md) ·
-[Machine-readable V1.4 scene collection](catalog/collections/v14.json) ·
-[Verification checklist](docs/verification-v14.md)
+## Explore the platform
 
-## Overseas print-commerce · v1.3
+**Live experience:** https://1998x-stack.github.io/3D-worlds/
 
-An independent **海外3D打印商品 / print-commerce** collection adds 50 original
-CAD-backed product hypotheses (total **535 models / 14 categories**), preserving
-all 485 preexisting scenes. Each product has a procedural Three.js preview,
-a dedicated editable `.scad` source (dimensions in millimeters), and market
-evidence fields. Its CAD file can be exported to STL or 3MF with OpenSCAD.
-No model has been physically tested or certified for sale.
+The static gallery supports category/search discovery, model detail inspection, and browser-side model/export interactions. The print workbench estimates fit using *declared catalog bounds* and reference printer envelopes. The gallery is static: it **does not run** the Python search API, MCP server, slicer, or print-geometry audit.
 
-[Overseas customer preference research and all 50 original candidates](docs/print-commerce-v13.md) ·
-[Machine-readable product collection](catalog/collections/print-commerce-v13.json) ·
-[STL / 3MF CAD export](printables/README.md)
+**Recent collections**
 
-~~~bash
-python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve
-~~~
+| Collection | Scope | Editable source | Status |
+| :-- | :-- | :-- | :-- |
+| [v1.4 creative maker-market scenes](docs/30-assets-v14.md) | 30 new designs, 13 general scene categories | Three.js factories and recipes | Original visual assets; physical use unverified |
+| [v1.3 overseas print-commerce](docs/print-commerce-v13.md) | 50 product hypotheses in 10 families | Three.js previews **plus** `printables/*.scad` | CAD prototypes; commercial demand and printability unverified |
+| [Earlier batches](docs/release-history.md) | Historical collections and acceptance notes | Versioned source references | Preserved IDs; refer to each collection's evidence |
+
+Amazon/eBay product listings and Hacker News maker discussions are **inspiration/research signals**, not proof of demand, permission to copy third-party geometry, endorsement, or product-safety certification. See [the v1.4 source notes](docs/30-assets-v14.md) and [CAD/HN technical research](docs/codex-cad-3d-printing-hn-research-2026.md).
 
 ## Quick start
 
-Requires Node.js 22+, Python 3.11+, and a modern browser.
+**Requirements:** Node.js **22+**, a modern WebGL-capable browser, and Python **3.11+** for catalog/CLI tooling. Chromium/Playwright is required for reproducible preview and GLB generation; OpenSCAD is required only for the CAD-backed print-commerce workflow.
+
+### 1. Run the gallery locally
 
 ~~~bash
 git clone https://github.com/1998x-stack/3D-worlds.git
@@ -73,150 +80,359 @@ npm install
 npm run dev
 ~~~
 
-The Vite server prints the local gallery URL. To regenerate full previews and raw source GLBs (GPU-backed Chromium required):
+Open the URL printed by Vite. The `predev` script generates the static catalog projection before starting the dev server. The Vite base path for GitHub Pages is `/3D-worlds/`; use `npm run dev` rather than opening `index.html` directly as a local file.
+
+### 2. Build the website
+
+~~~bash
+python3 scripts/catalog.py validate
+npm run build
+npm run preview
+~~~
+
+`prebuild` regenerates `catalog/public_models.json`. A website build is *not* the same as generating fresh GLB binaries or preview images.
+
+### 3. Rebuild previews and downloadable GLB/LOD artifacts
 
 ~~~bash
 npx playwright install --with-deps chromium
 npm run generate:assets
 npm run verify:assets
 npm run build
+npm run test:gallery
 ~~~
 
-Generated previews, LOD binaries and SQLite files are build outputs, not tracked source artifacts.
+This pipeline requires working headless Chromium/WebGL and can be substantially more expensive than a documentation-only build. It must fail on unavailable rendering support rather than substitute fake thumbnails.
 
-### Codex × CAD × 3D printing research (2026)
+### 4. Work with an existing asset
 
-An evidence-graded technical study of seven Hacker News project directions, covering source architecture, practical print workflows, CAD Agent integration, safety limitations, and a roadmap for this repository. Read the [full Chinese Markdown report](docs/codex-cad-3d-printing-hn-research-2026.md), [print-ready HTML](docs/codex-cad-3d-printing-hn-research-2026.html), or [generated PDF](docs/Codex_CAD_3DPrinting_HackerNews_DeepResearch_2026.pdf). The PDF is created by [GitHub Actions](.github/workflows/build-hn-research-pdf.yml) from the reviewed HTML source.
+For example, `furniture.chair.linen-001` is a stable catalog ID; its source factory is in `src/models/chair.js`. Edit the factory for a **new** asset/variant, or inspect the existing source and consume its generated GLB. **Do not silently mutate published model identity or geometry** in a way that breaks downstream consumers.
 
-## From Three.js to 3D printing
+## Capabilities and boundaries
 
-The [online Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow) offers a conservative build-volume estimate for a selected printer preset and a **draft** binary STL. The browser does not run Python, inspect true wall thickness, generate supports or approve manufacturing.
+| Area | Supported here | Explicit non-goals / additional work |
+| :-- | :-- | :-- |
+| Source catalog | Schema-validated model registry, bilingual labels, category metadata, immutable IDs | Third-party IP clearance cannot be inferred from a successful schema check |
+| Gallery | Static Three.js browsing, inspect/copy/export controls, prerendered cards | A permanent WebGL canvas for every catalog card |
+| Game delivery | Raw GLB, LOD0/1/2, Meshopt, image previews, hashes/metrics | Game-engine-specific rigs, animation, collision or performance guarantees |
+| Search and agents | Local SQLite FTS5, cursor-paginated HTTP API, read-only stdio MCP | Public hosted API/MCP on GitHub Pages |
+| Browser print planning | Reference build-volume fit estimate and STL **draft** | Slicer review, support generation, verified wall thickness or production sign-off |
+| Offline scene-mesh print audit | Meter-to-mm conversion, coordinate conversion, topology/volume gates, reports, candidate STL/3MF | Mechanical verification, native CAD/STEP reconstruction, automatic tolerancing |
+| Dedicated CAD prototypes | 50 OpenSCAD `.scad` design masters and export script | Production-ready products or verified overseas sales |
 
-For geometry-audited **candidate** STL/3MF output:
+The 14 top-level catalog categories include the 13 general scene categories (`furniture`, `bathroom`, `characters`, `nature`, `vehicles`, `electronics`, `decor`, `kitchen`, `architecture`, `urban`, `tools`, `sports`, `scifi`) plus `print-commerce`. The canonical category/priority mapping is [`catalog/print_policy.json`](catalog/print_policy.json).
 
-~~~bash
-python3 -m pip install -r requirements-print.txt
-
-# Export the original GLB for one model, never a simplified game LOD.
-node scripts/render_assets.mjs --id furniture.chair.linen-001
-
-# P0: standard assembly, longest printed dimension 120 mm.
-python3 scripts/export_print.py \
-  --asset-id furniture.chair.linen-001 \
-  --longest-mm 120 --profile fdm-220
-
-# P1: preserve a multi-object 3MF while also exporting separate per-part STLs.
-python3 scripts/export_print.py \
-  --asset-id furniture.chair.linen-001 \
-  --longest-mm 120 --profile fdm-220 --mode separated
-
-# P2: specify material and record a desired clearance for manual engineering review.
-python3 scripts/export_print.py \
-  --asset-id furniture.chair.linen-001 \
-  --longest-mm 120 --profile fdm-220 \
-  --material PETG --clearance-mm 0.25
-~~~
-
-**Important:** `--clearance-mm` records a design requirement; it **does not modify** CAD geometry or guarantee the actual clearance. Successful candidates are written under `.cache/print/` as STL, 3MF (explicit millimeter units), and a JSON source/geometry report. Rejected geometry produces a blocked JSON report without usable new STL/3MF output.
-
-### Catalog-wide audit
-
-~~~bash
-# Validate all category mappings; every asset remains "not_audited".
-python3 scripts/audit_print_catalog.py --metadata-only
-
-# Audit at most ten local original source GLBs; missing sources stay "missing_source".
-python3 scripts/audit_print_catalog.py --limit 10 --longest-mm 120
-
-# Fail the script when missing, blocked or errored sources are detected.
-python3 scripts/audit_print_catalog.py --category furniture --strict
-~~~
-
-The JSON summary distinguishes `not_audited`, `missing_source`, `blocked`, `audit_error` and `geometry_pass_manual_review_required`. None means slicer-reviewed or physically printed.
-
-## Manufacturing readiness tracks
-
-| Priority | Asset groups | Implemented automation | Mandatory human review |
-|---|---|---|---|
-| **P0 · Geometry** | Decor, miniature furniture, simple accessories | Meter→mm, Y-up→Z-up, manifold/winding/volume gates, nominal bed-envelope check | Real thickness, stable build-plate contact, slicer layers |
-| **P1 · Assembly** | Characters, nature, sci-fi, vehicles, architecture, urban models | Separate-part STL, 3MF build items, optional Boolean union, overlap/down-facing indicators | Supports, physical connections, actual part separation and fit |
-| **P2 · Functional** | Electronics housings, tools, structural equipment | Generic printer/material presets, recorded desired CAD clearance, unresolved checks | Precise holes, native CAD constraints, material shrinkage, stress and fatigue |
-
-**No** automatic G-code, exact thin-wall analysis, manufacturability guarantee, slicer review, physical printing certificate, or STEP reconstruction is included. STL has no trustworthy units; use millimeters in the slicer.
-
-- [Print pipeline, API and exact CLI behavior](docs/print-pipeline.md)
-- [P0/P1/P2 engineering acceptance checklist](docs/print-engineering.md)
-- [Machine-readable workflow policy](catalog/print_policy.json)
-- [3MF Consortium's Core specification](https://3mf.io/spec/)
-
-## Architecture
+## System architecture
 
 ~~~mermaid
-flowchart LR
-    A["Three.js generators<br/>catalog/models.json"] --> B["Gallery on Pages"]
-    A --> C["Original GLB"]
-    C --> D["Meshopt LOD0/1/2<br/>for realtime 3D"]
-    C --> E["Offline print audit<br/>Trimesh + profiles"]
-    E --> F{"Core mesh checks pass?"}
-    F -->|yes| G["STL / 3MF candidates<br/>manual slicer review"]
-    F -->|no| H["Blocked report"]
-    A --> I["SQLite + MCP + Search API"]
+flowchart TD
+    S["Three.js source factories<br/>src/models/"] --> M["Canonical catalog<br/>catalog/models.json"]
+    M --> V["Schema and catalog validation"]
+    S --> R["Playwright + Chromium renderer"]
+    V --> R
+    R --> T["WebP / AVIF thumbnails"]
+    R --> G["Raw full-resolution GLB"]
+    G --> L["glTF Transform + Meshopt<br/>LOD0 / LOD1 / LOD2"]
+    T --> P["Vite static gallery<br/>GitHub Pages"]
+    L --> P
+    V --> Q["SQLite FTS5 index"]
+    Q --> API["Self-hosted paginated API"]
+    Q --> MCP["Local stdio MCP"]
+    L --> STORE["Local or private S3/MinIO<br/>content-addressed objects"]
+    G --> QA["Offline print geometry audit"]
+    QA --> D{"Checks pass?"}
+    D -->|yes| C["STL / 3MF candidates<br/>+ audit JSON"]
+    D -->|no| X["Blocked JSON report"]
+    C --> H["Human slicer + physical review"]
+    CAD["OpenSCAD masters<br/>printables/*.scad"] --> CE["Separate CAD export CLI"]
+    CE --> H
 ~~~
 
-| Directory | Responsibility |
-|---|---|
-| `catalog/` · `schemas/` | Canonical manifests, categories and validation schemas |
-| `src/models/` · `src/` | Source-editable generators and gallery/print UI |
-| `scripts/` · `tests/` | Rendering, verification, printing and regression tests |
-| `services/` · `db/` | MCP, search, storage and SQLite |
-| `docs/` | Architecture, QA runbooks and [historic batch notes](docs/release-history.md) |
-| `.codex/` · `.pi/` · `.claude/` | Mirrored portable model-building skills |
+### Non-negotiable separation of concerns
 
-## Verify the repository
+1. **Metadata source of truth:** `catalog/models.json`. SQLite and static JSON are derived projections.
+2. **Visual source of truth:** `src/models/*.js` factories and reusable helpers; use original raw GLB for geometry audits.
+3. **Realtime transport optimization:** LOD/Meshopt is for game/website consumption; LOD1/LOD2 are **not** manufacturing masters.
+4. **Manufacturing geometry:** The print CLI verifies selected mesh properties; OpenSCAD masters use an independent mm/Z-up contract.
+5. **Hosting:** Pages is static; Python stdio MCP, SQLite API and storage adapters are local/self-hosted services, not hidden Pages features.
 
-~~~bash
-python3 scripts/catalog.py validate
-python3 scripts/catalog.py build
-npm run test:print
-python3 -m unittest discover -s tests -v
-node scripts/validate_models.mjs
-npm run generate:assets && npm run verify:assets
-npm run build && npm run test:gallery
+Architecture details: [`docs/architecture.md`](docs/architecture.md) · [P0/P1/P2 delivery runbook](docs/p0-p1-p2-delivery.md) · [Ingestion and provenance](docs/ingestion-architecture.md).
+
+## Repository map
+
+~~~text
+3D-worlds/
+├── catalog/
+│   ├── models.json              # canonical asset records and stable IDs
+│   ├── collections/             # historical additive release inventories
+│   └── print_policy.json        # print priority and reference printer profiles
+├── schemas/manifest.schema.json # registry contract
+├── src/
+│   ├── models/                  # procedural generators, primitives, recipes
+│   └── ...                      # gallery, inspector and browser print planning
+├── printables/                  # OpenSCAD CAD masters and helper library
+├── scripts/                     # catalog, rendering, GLB, print and QA commands
+├── tests/                       # Python regression and geometry/collection tests
+├── services/                    # read-only MCP, HTTP API, storage backends
+├── db/                          # SQLite schema and derived query model
+├── public/                      # static frontend assets / generated build outputs
+├── ingest/                      # optional third-party GLB ingest staging
+├── deploy/                      # optional local API deployment examples
+├── .github/workflows/           # verify + deploy Pages; research PDF workflow
+├── .codex/skills/               # canonical portable model-building Skill
+├── .claude/skills/              # byte-identical mirror
+├── .pi/skills/                  # byte-identical mirror
+├── docs/                        # architecture, QA, research, release history
+├── README.md                    # public technical entry point
+├── README.zh-CN.md              # Chinese project overview
+├── AGENTS.md                    # executable rules for coding agents
+└── CONTRIBUTING.md              # contribution process
 ~~~
 
-Tests validate catalog integrity, source-backed generators, preview/LOD structure, browser STL draft dimensions, basic 3MF interoperability, and conservative readiness reports. **Automated tests do not replace test printing.**
+Some folders contain generated data during local runs. Files in `.cache/`, generated GLBs/thumbnails, SQLite databases, and `dist/` are build products unless a particular reviewed publication workflow says otherwise. **Do not commit large generated artifacts just because a test created them.**
 
-### Extend the library
+## Asset contract and authoring
+
+### Canonical metadata
+
+A catalog record connects an immutable `id` and unique `slug` to a category, title, tags, license, author, source or binary path, declared dimensions, and optional provenance/variant metadata. Schema: [`schemas/manifest.schema.json`](schemas/manifest.schema.json).
+
+- **Units/orientation:** Three.js assets use **meters, +Y up**, floor-aligned origin, with the model locally centered on X/Z.
+- **Identity:** preserve published `id`, `slug` and source references. A substantially different object belongs in a new version or new asset ID.
+- **Source:** procedural assets expose an editable model factory returning `THREE.Group`, with clearly named components. Recipe-backed assets must remain reconstructible.
+- **Provenance:** retain accurate author, SPDX license and evidence. External references are not authorization to redistribute a model.
+- **Dimensions:** positive [width, height, depth] values in meters, checked against actual model geometry when feasible.
+- **Localization:** write meaningful English and Chinese titles for new authored catalog assets.
+
+### Scaffold a model
 
 ~~~bash
 python3 scripts/new_model.py \
   --slug side-table --category furniture \
   --title "Side Table" --title-zh "边桌" \
   --dimensions 0.8 0.6 0.8
-# Edit the generated src/models/side_table.js.
+~~~
+
+Then refine `src/models/side_table.js` into an original, named, visually intentional model. Adjust manifest metadata and add appropriate tests/release inventory before publishing.
+
+~~~bash
 python3 scripts/catalog.py validate
+python3 scripts/catalog.py build
 node scripts/validate_models.mjs
 ~~~
 
-Each asset needs immutable IDs, meaningful editable source, license/provenance evidence and dimensions in **meters, Y-up**. See [Contributing](CONTRIBUTING.md), [Agent instructions](AGENTS.md), [Model Builder Skill](.codex/skills/threejs-model-builder/SKILL.md) and [release history](docs/release-history.md).
+**AI-assisted batches:** do not merely output 30–50 differently named boxes. Require distinct silhouettes, useful part hierarchy, detailed source factories, plausible dimensions, originality, stable IDs, per-asset source evidence and runnable validation. The authoritative agent workflow is [`AGENTS.md`](AGENTS.md) and the [model builder Skill](.codex/skills/threejs-model-builder/SKILL.md).
 
-## Deploy and integrate
+## Reproducible previews and GLB assets
 
-[GitHub Actions](.github/workflows/pages.yml) builds verified static Pages output from the default branch. External S3/MinIO and search/MCP services need separate hosting and credentials; they are **not** provided by GitHub Pages. Read [MCP contract](docs/mcp-contract.md), [ingestion and provenance](docs/ingestion-architecture.md), and [deployment runbook](docs/p0-p1-p2-delivery.md). Never commit credentials or bypass asset licensing.
+The build route uses Playwright/Chromium to capture real rendered thumbnails and raw GLB, then glTF Transform/Meshopt for LOD0/1/2. A generated index records actual artifact sizes, geometry metrics and SHA-256 hashes. LOD simplification targets are approximate: report observed reductions, not marketing estimates.
 
-## Project maturity & limitations
+| Output | Typical location | Notes |
+| :-- | :-- | :-- |
+| Source GLB | `.cache/raw/<slug>.glb` | Original render-export mesh for offline audit |
+| WebP/AVIF | `public/thumbs/<slug>.webp` / `.avif` | Real renderer output; no placeholder stock assets |
+| Optimized GLB variants | `public/generated/<slug>-lod0.glb` through `-lod2.glb` | Meshopt-aware loader required |
+| Build index | `public/generated/index.json` | Actual variants, hashes and metrics |
+| Static website | `dist/` | Generated by Vite; deployed from verified CI artifact |
 
-| Verified automatically | Not verified automatically |
-|---|---|
-| Catalog & recipe integrity, browser inspector and binary STL dimensions | Successful printer operation, build adhesion, safe loads |
-| Trimesh watertightness, orientation and positive volume | Exact wall-thickness maps, supports, functional stress |
-| 3MF ZIP structure, millimeter units and Trimesh readback fixtures | Real-world printer/slicer-specific 3MF compatibility |
-| Source SHA-256 and explicit `not_checked` indicators | CAD hole tolerances, material shrinkage and dimensional accuracy |
+~~~bash
+# A single source GLB when investigating one model:
+node scripts/render_assets.mjs --id furniture.chair.linen-001
 
-## Community, credits, license
+# Entire model set (Chromium/WebGL required):
+npm run generate:assets
+npm run verify:assets
+~~~
 
-For bugs or improvements, see [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). Useful reports include an asset ID, exact command, affected printer profile, saved JSON output, expected behavior and reproduction steps.
+The exact pipeline, content-addressed publication mechanics, API pagination and storage options are documented in [`docs/p0-p1-p2-delivery.md`](docs/p0-p1-p2-delivery.md).
 
-Built with [Three.js](https://threejs.org/), [glTF Transform](https://gltf-transform.dev/), [Meshoptimizer](https://github.com/zeux/meshoptimizer), [Trimesh](https://trimesh.org/) and [Playwright](https://playwright.dev/). Documentation layout draws on the clear onboarding and capability boundaries of [FreeCAD](https://github.com/FreeCAD/FreeCAD), [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer), [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) and GitHub's repository guidance; 3D Worlds is an independent project.
+## 3D printing: two distinct workflows
 
-The project's original code is distributed under [MIT](LICENSE); third-party imported meshes require **per-asset** redistribution permission. The repository license does not override external authors' rights.
+**Choose the workflow by the authoritative geometry source.** A stylized Three.js scene and a native parametric CAD design are not interchangeable.
+
+### A. Scene asset → audited *candidate* STL/3MF
+
+~~~bash
+python3 -m pip install -r requirements-print.txt
+npx playwright install chromium
+
+# Export ORIGINAL source geometry, not a game LOD:
+node scripts/render_assets.mjs --id furniture.chair.linen-001
+
+# Basic topology-checked STL / mm-encoded 3MF and report:
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220
+
+# Preserve multi-object 3MF and export per-source-mesh STL parts:
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220 --mode separated
+
+# Record desired material/fit intent; no geometry change is performed:
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220 \
+  --material PETG --clearance-mm 0.25
+~~~
+
+The CLI transforms **meters/Y-up to millimeters/Z-up**; validates selected mesh invariants (including closure/orientation/positive volume); and emits a JSON evidence report. It blocks unsafe geometry rather than silently endorsing it. `--mode separated` is a source-mesh partition, **not automatic manufacturable segmentation**. `--clearance-mm` is a recorded design requirement, **not a boolean offset** or guaranteed real clearance.
+
+### B. CAD-backed print-commerce design → OpenSCAD prototype
+
+~~~bash
+# Install the OpenSCAD CLI first.
+python3 scripts/export_print_commerce.py \
+  --only moon-phase-light-sleeve --format stl
+
+python3 scripts/export_print_commerce.py \
+  --only custom-desk-nameplate --format 3mf
+
+# Preview planned batch work without exporting:
+python3 scripts/export_print_commerce.py --dry-run --limit 5
+~~~
+
+The 50 dedicated `printables/*.scad` source files are parameterized in **millimeters/Z-up**, using `printables/lib/commerce_forms.scad`. Their procedural gallery counterparts are **visual representations**, not a guarantee of identical watertight CAD geometry. See [CAD instructions](printables/README.md).
+
+### Print QA states and release decision
+
+~~~bash
+# Metadata survey only. Does NOT open meshes or approve anything.
+python3 scripts/audit_print_catalog.py --metadata-only
+
+# Try a limited number of locally generated source meshes.
+python3 scripts/audit_print_catalog.py --limit 10 --longest-mm 120
+
+# Make missing/blocked/audit errors fail the audit command.
+python3 scripts/audit_print_catalog.py --category furniture --strict
+~~~
+
+| Report state | Interpretation | May publicly claim "ready to print"? |
+| :-- | :-- | :-- |
+| `not_audited` | Metadata/planning only | **No** |
+| `missing_source` | Required source mesh unavailable | **No** |
+| `blocked` / `audit_error` | Failed or incomplete geometry checks | **No** |
+| `geometry_pass_manual_review_required` | Limited automatic checks passed | **No** |
+| Human slicer and physical review | Separate evidence outside the automatic pipeline | Only with precise, asset-specific substantiation |
+
+Before any real print or commercial sale, independently check actual minimum wall thickness, build orientation, adhesion/supports, islands, dimensional tolerances, device clearances, assembly, fatigue, material suitability, safety and target-market regulation. STL has **no reliable embedded unit**; verify mm in the slicer. No generated G-code or certification is implied.
+
+Read [print pipeline](docs/print-pipeline.md) · [engineering review](docs/print-engineering.md) · [reference profiles](catalog/print_policy.json).
+
+## Search API, MCP, and storage
+
+The **local and self-hosted** integrations are optional; they are not hosted by GitHub Pages.
+
+### SQLite and read-only search API
+
+~~~bash
+python3 scripts/catalog.py build
+python3 services/search_api.py
+
+curl http://127.0.0.1:8071/healthz
+curl 'http://127.0.0.1:8071/api/v1/assets?search=chair&limit=10'
+curl 'http://127.0.0.1:8071/api/v1/categories'
+~~~
+
+The API supports `GET /api/v1/assets` with `search`, `category`, bounded `limit` (maximum 100), and opaque `cursor` pagination, plus individual asset and download-metadata routes. It defaults to loopback; public production exposure requires independent HTTPS, identity/rate limiting, operational monitoring and storage planning.
+
+To exercise the gallery's API-backed mode:
+
+~~~bash
+VITE_CATALOG_API_URL=http://127.0.0.1:8071 npm run dev
+~~~
+
+Without that variable, the static deployment uses a generated catalog projection. Do not confuse the static subset/projection with the canonical full registry or claim the public Pages site has a live database.
+
+### Local MCP for coding agents
+
+~~~bash
+python3 scripts/catalog.py build
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r requirements-mcp.txt
+python3 services/mcp_server.py
+~~~
+
+Configure the MCP client to launch the Python program via **stdio** with the repository path (see [MCP contract](docs/mcp-contract.md)). Tools include `search_models`, `get_model`, `list_categories`, `get_threejs_source` and `get_import_recipe`. They return metadata/source/import guidance; they do **not** automatically modify another repository or perform arbitrary code execution.
+
+### Object storage
+
+A local content-addressed store can be smoke-tested without cloud access. S3/MinIO publication requires a separately provisioned **private** bucket and credentials supplied through environment variables, never Git. See [storage/deployment runbook](docs/p0-p1-p2-delivery.md). The repository does **not** provide a ready-made public S3 account or production service.
+
+## Verification and CI
+
+Run the **smallest relevant tests during iteration**, then the applicable full gate before a release. Examples below are commands present in the repository; do not report a pass unless you actually ran it.
+
+~~~bash
+# Registry, stable source contracts, Python tests
+python3 scripts/catalog.py validate
+python3 scripts/catalog.py build
+python3 -m unittest discover -s tests -v
+node scripts/validate_models.mjs
+
+# Printing policy and browser planning
+npm run test:print
+
+# GLB ingestion contract
+npm run test:ingest
+
+# Agent Skill mirror contract
+python3 scripts/verify_skill_mirrors.py
+python3 .codex/skills/threejs-model-builder/scripts/preflight.py
+
+# Full media + website gate
+npx playwright install --with-deps chromium
+npm run generate:assets
+npm run verify:assets
+npm run build
+npm run test:gallery
+npm run test:remote
+~~~
+
+The [Pages workflow](.github/workflows/pages.yml) checks the catalog, Python tests, print policies, representative OpenSCAD exports, the GLB ingest path, Skill mirrors, generated thumbnails/LODs, local storage/API behavior, gallery browser smoke and MCP integration. On a **pull request**, CI verifies without deploying; on a **main-branch push**, deployment follows successful verification.
+
+A passing CI build establishes that specific automated checks passed. It **does not** prove good-looking composition, perfect game performance, manufacturing safety, commercial compliance or successful physical fabrication.
+
+## Deployment
+
+| Target | Delivery | Operational boundary |
+| :-- | :-- | :-- |
+| GitHub Pages | Vite `dist/` via [`pages.yml`](.github/workflows/pages.yml) | Static assets only, base path `/3D-worlds/` |
+| Local gallery | `npm run dev` / `npm run preview` | Developer workstation |
+| Search API | `python3 services/search_api.py` or [local Compose example](deploy/compose.local.yml) | Self-hosted, initially loopback |
+| MCP | `python3 services/mcp_server.py` | Local stdio integration |
+| Asset store | Local SHA-256 store or externally configured S3/MinIO | Private credentials and provisioning required |
+
+For a release, review the commit diff, run the right gates, inspect representative assets in a real browser, verify Pages URL/deep links after deployment, and retain actual machine-readable reports. Do not publish unreviewed print-candidate files as certified production files.
+
+## Contributing, security, and licensing
+
+- **Contributions:** follow [CONTRIBUTING.md](CONTRIBUTING.md); keep changes focused, add evidence, do not change published IDs silently, and update docs when behavior changes.
+- **Agent execution:** use [AGENTS.md](AGENTS.md) for task routing, source-of-truth rules, validation matrix, safety constraints and handoff reports.
+- **Security reports:** follow [SECURITY.md](SECURITY.md); never commit tokens, private buckets, credentials or private user content.
+- **Licensing:** project-authored code is [MIT licensed](LICENSE). The license does not automatically grant rights to any imported mesh, brand, texture or trademark. Check *each asset's* SPDX/provenance and any third-party dependency conditions before redistribution or commercial use.
+- **Responsible product claims:** concepts are not verified sales results. For manufactured goods, the designer/seller must separately evaluate fit, mechanical/thermal/chemical safety, labeling and applicable rules.
+
+## Documentation index
+
+| Topic | Where to start |
+| :-- | :-- |
+| Chinese project overview | [`README.zh-CN.md`](README.zh-CN.md) |
+| Architecture and data ownership | [`docs/architecture.md`](docs/architecture.md) |
+| Three.js design and research | [`docs/threejs-research.md`](docs/threejs-research.md) |
+| Model-generation agent Skill | [`.codex/skills/threejs-model-builder/SKILL.md`](.codex/skills/threejs-model-builder/SKILL.md) |
+| Portable Skill design | [`docs/skill-architecture.md`](docs/skill-architecture.md) |
+| Rendering, LOD, API and object storage | [`docs/p0-p1-p2-delivery.md`](docs/p0-p1-p2-delivery.md) |
+| Ingest and provenance | [`docs/ingestion-architecture.md`](docs/ingestion-architecture.md) |
+| Search/MCP tool contract | [`docs/mcp-contract.md`](docs/mcp-contract.md) |
+| 3D-print pipeline and limitations | [`docs/print-pipeline.md`](docs/print-pipeline.md) |
+| Print engineering review checklist | [`docs/print-engineering.md`](docs/print-engineering.md) |
+| OpenSCAD prototypes | [`printables/README.md`](printables/README.md) |
+| Overseas market design hypotheses | [`docs/print-commerce-v13.md`](docs/print-commerce-v13.md) |
+| v1.4 30-model inventory and verification | [`docs/30-assets-v14.md`](docs/30-assets-v14.md), [`docs/verification-v14.md`](docs/verification-v14.md) |
+| Historical collections | [`docs/release-history.md`](docs/release-history.md) |
+
+---
+
+**Build original assets. Keep provenance inspectable. Verify what you can measure. Never mistake a visual preview for physical-world certification.**
