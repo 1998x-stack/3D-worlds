@@ -9,6 +9,7 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
 [STL / 3MF printing pipeline](docs/print-pipeline.md) ·
+[50 overseas printable product concepts · v1.3](docs/print-commerce-v13.md) ·
 [50 newest assets · v1.2](docs/50-assets-v12.md) ·
 [50 previous assets · v1.1](docs/50-assets-v11.md) ·
 [50 previous assets · v1.0](docs/50-assets-v10.md) ·
@@ -75,6 +76,23 @@ python3 .codex/skills/threejs-model-builder/scripts/preflight.py --json
 Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
 resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
 broken local links.
+
+## V1.3 — 50 original overseas print-commerce product prototypes
+
+This independent **海外3D打印商品 / print-commerce** category includes 50
+editable original CAD-backed concept models, raising the catalog to **535
+models in 14 categories** without replacing the 485 models already in main.
+Each SKU includes a separate Three.js preview generator in `src/models/`
+and an editable, dimension-aware OpenSCAD source in `printables/`.
+
+- [2026 overseas buyer research, product preferences and all 50 model concepts](docs/print-commerce-v13.md)
+- [Printable CAD sources and export guide](printables/README.md)
+- [Machine-readable collection of 50 design hypotheses](catalog/collections/print-commerce-v13.json)
+- `python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve`
+
+These are design and CAD export prototypes, **not** product safety-certified
+or validated as commercially successful products. Real print and slicer
+checks are required before selling.
 
 ## V1.2 — 50 original source-backed Three.js models
 

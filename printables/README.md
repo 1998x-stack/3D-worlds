@@ -35,5 +35,5 @@ orientation, scale, non-manifold faces, holes, layer adhesion, supports and fit.
 - The printed end product seller is responsible for product safety, listing
   descriptions, original-design rules, labels, shipping and applicable laws.
 
-`catalog/collections/print-commerce-v12.json` records each design and its
-market hypothesis. More research: `docs/print-commerce-v12.md`.
+`catalog/collections/print-commerce-v13.json` records each design and its
+market hypothesis. More research: `docs/print-commerce-v13.md`.

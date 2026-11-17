@@ -12,7 +12,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-COLLECTION = ROOT / "catalog/collections/print-commerce-v12.json"
+COLLECTION = ROOT / "catalog/collections/print-commerce-v13.json"
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)

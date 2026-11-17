@@ -78,8 +78,8 @@ root.innerHTML = `
     </section>
     <section class="catalog-section" id="collection">
       <div class="section-intro">
-        <div><span class="section-kicker">THE COLLECTION / V 1.2</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
-        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">485 ASSETS</span></div>
+        <div><span class="section-kicker">THE COLLECTION / V 1.3</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
+        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">535 ASSETS</span></div>
       </div>
       <div class="catalog-layout">
         <aside class="filters" aria-label="模型分类">
@@ -93,7 +93,7 @@ root.innerHTML = `
             <label class="search-box"><span aria-hidden="true">⌕</span><input id="asset-search" type="search" placeholder="搜索模型、名称或标签..." aria-label="搜索模型" autocomplete="off"/><kbd>/</kbd></label>
             <div class="sort-box"><span>排序</span><select id="sort-select" aria-label="模型排序"><option value="featured">精选推荐</option><option value="name">名称 A–Z</option><option value="category">分类</option></select></div>
           </div>
-          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">485 RESULTS</span></div>
+          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">535 RESULTS</span></div>
           <div id="asset-grid" class="asset-grid"></div><div class="load-more-box" id="load-more-box" hidden><button id="load-more" class="button button-soft" type="button">加载更多模型 ↓</button></div>
           <div class="catalog-footer"><span>Built for the makers, by the makers.</span><span>GLB / THREE.JS / MCP / SQLITE</span></div>
         </div>
@@ -107,7 +107,7 @@ root.innerHTML = `
       <div class="detail-topbar"><span>ASSET INSPECTOR <span class="detail-topbar-id" id="detail-id"></span></span><button id="close-detail" class="icon-button" aria-label="关闭详情">×</button></div>
       <div class="detail-layout">
         <div class="detail-viewer"><canvas id="detail-canvas" aria-label="可拖动旋转缩放的 3D 模型"></canvas><span class="viewer-badge">LIVE 3D VIEW</span><div class="viewer-controls"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><button id="reset-view" type="button">↺ 重置视角</button></div></div>
-        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><div class="print-export-panel"><div class="print-export-heading">3D 打印导出 · STL 草稿</div><label class="print-export-label" for="print-size-mm">模型最长边 (mm) <input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/></label><button id="print-stl" class="button button-dark" type="button">↓ 下载 STL 草稿</button><p class="print-export-note">自动按比例缩放并转换为 Z-up / mm；不含材质、壁厚或流形审核。请使用仓库打印流水线复核 STL/3MF，再导入切片软件。</p><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">查看 STL / 3MF 审核操作指南 ↗</a></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
+        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><div class="print-export-panel"><div class="print-export-heading">3D 打印导出 · STL 草稿</div><label class="print-export-label" for="print-size-mm">模型最长边 (mm) <input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/></label><button id="print-stl" class="button button-dark" type="button">↓ 下载 STL 草稿</button><a id="download-parametric-cad" class="button button-soft" href="#" target="_blank" rel="noopener noreferrer" hidden>↗ 获取可编辑 OpenSCAD CAD 源码</a><p class="print-export-note">自动按比例缩放并转换为 Z-up / mm；不含材质、壁厚或流形审核。请使用仓库打印流水线复核 STL/3MF，再导入切片软件。</p><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">查看 STL / 3MF 审核操作指南 ↗</a></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
       </div>
     </section>
   </div>
@@ -242,6 +242,11 @@ async function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('export-glb').textContent = isProcedural ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB';
   document.getElementById('lod-row').hidden = !isProcedural;
   document.getElementById('print-stl').disabled = !isProcedural;
+  const cadLink = document.getElementById('download-parametric-cad');
+  cadLink.hidden = asset.category !== 'print-commerce';
+  if (asset.category === 'print-commerce' && /^[a-z0-9-]+$/.test(asset.slug))
+    cadLink.href = 'https://raw.githubusercontent.com/1998x-stack/3D-worlds/main/printables/' + asset.slug + '.scad';
+  else cadLink.removeAttribute('href');
   document.getElementById('print-stl').title = isProcedural
     ? '直接下载未经制造审核的 STL 几何草稿'
     : '外部 GLB 请使用 Python 打印流水线进行转换和审核';

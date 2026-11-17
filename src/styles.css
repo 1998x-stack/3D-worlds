@@ -13,3 +13,5 @@
 .print-export-label input{width:100px;padding:7px 8px;border:1px solid #aaa;border-radius:6px;background:var(--bg,#fff);color:inherit;font:inherit}
 .print-export-note{font-size:.77rem;line-height:1.5;color:var(--text-muted,#666);margin:0}
 .print-export-panel a{font-size:.76rem;text-decoration:underline;text-underline-offset:3px}
+
+#download-parametric-cad[hidden] { display: none !important; }
