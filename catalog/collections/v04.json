@@ -1,0 +1,667 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v0.4",
+  "title": "Expanded World-Building Collection",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 40,
+  "category_count": 13,
+  "category_counts": {
+    "architecture": 3,
+    "bathroom": 3,
+    "characters": 3,
+    "decor": 3,
+    "electronics": 3,
+    "furniture": 4,
+    "kitchen": 3,
+    "nature": 3,
+    "scifi": 3,
+    "sports": 2,
+    "tools": 3,
+    "urban": 3,
+    "vehicles": 4
+  },
+  "assets": [
+    {
+      "id": "furniture.modular-sectional-sofa.001",
+      "slug": "modular-sectional-sofa",
+      "title": "Modular Sectional Sofa",
+      "title_zh": "模块化转角沙发",
+      "category": "furniture",
+      "source_path": "src/models/modular_sectional_sofa.js",
+      "generator": "createModularSectionalSofa",
+      "dimensions_m": [
+        2.55,
+        0.96,
+        1.7
+      ],
+      "design_focus": "Separate sectional seats, chaise extension, back pillows and feet",
+      "usage": "interior"
+    },
+    {
+      "id": "furniture.rolling-file-cabinet.001",
+      "slug": "rolling-file-cabinet",
+      "title": "Rolling File Cabinet",
+      "title_zh": "滚轮文件柜",
+      "category": "furniture",
+      "source_path": "src/models/rolling_file_cabinet.js",
+      "generator": "createRollingFileCabinet",
+      "dimensions_m": [
+        0.49,
+        0.72,
+        0.55
+      ],
+      "design_focus": "Three drawers, handles and four rolling castors",
+      "usage": "office"
+    },
+    {
+      "id": "furniture.floating-wall-shelf.001",
+      "slug": "floating-wall-shelf",
+      "title": "Floating Wall Shelf",
+      "title_zh": "墙面悬浮置物架",
+      "category": "furniture",
+      "source_path": "src/models/floating_wall_shelf.js",
+      "generator": "createFloatingWallShelf",
+      "dimensions_m": [
+        1.34,
+        0.72,
+        0.25
+      ],
+      "design_focus": "Floating timber planks, brackets, books and a display plant",
+      "usage": "interior"
+    },
+    {
+      "id": "furniture.wooden-rocking-chair.001",
+      "slug": "wooden-rocking-chair",
+      "title": "Wooden Rocking Chair",
+      "title_zh": "木质摇椅",
+      "category": "furniture",
+      "source_path": "src/models/wooden_rocking_chair.js",
+      "generator": "createWoodenRockingChair",
+      "dimensions_m": [
+        0.73,
+        1.05,
+        0.95
+      ],
+      "design_focus": "Rocking runners, seat, armrests and back slats",
+      "usage": "interior"
+    },
+    {
+      "id": "bathroom.walk-in-rain-shower.001",
+      "slug": "walk-in-rain-shower",
+      "title": "Walk-in Rain Shower",
+      "title_zh": "步入式雨淋花洒",
+      "category": "bathroom",
+      "source_path": "src/models/walk_in_rain_shower.js",
+      "generator": "createWalkInRainShower",
+      "dimensions_m": [
+        1.13,
+        2.22,
+        1.04
+      ],
+      "design_focus": "Glass enclosure, shower controls and rain showerhead",
+      "usage": "interior"
+    },
+    {
+      "id": "bathroom.backlit-vanity-mirror.001",
+      "slug": "backlit-vanity-mirror",
+      "title": "Backlit Vanity Mirror",
+      "title_zh": "背光浴室镜",
+      "category": "bathroom",
+      "source_path": "src/models/backlit_vanity_mirror.js",
+      "generator": "createBacklitVanityMirror",
+      "dimensions_m": [
+        0.79,
+        1.04,
+        0.12
+      ],
+      "design_focus": "Mirrored face, LED bands and proximity sensor",
+      "usage": "interior"
+    },
+    {
+      "id": "bathroom.freestanding-towel-rack.001",
+      "slug": "freestanding-towel-rack",
+      "title": "Freestanding Towel Rack",
+      "title_zh": "落地毛巾架",
+      "category": "bathroom",
+      "source_path": "src/models/freestanding_towel_rack.js",
+      "generator": "createFreestandingTowelRack",
+      "dimensions_m": [
+        0.86,
+        1.26,
+        0.36
+      ],
+      "design_focus": "Vertical stands, towel bars and draped textile",
+      "usage": "interior"
+    },
+    {
+      "id": "characters.astronaut-mannequin.001",
+      "slug": "astronaut-mannequin",
+      "title": "Astronaut Mannequin",
+      "title_zh": "宇航员人物原型",
+      "category": "characters",
+      "source_path": "src/models/astronaut_mannequin.js",
+      "generator": "createAstronautMannequin",
+      "dimensions_m": [
+        0.91,
+        1.84,
+        0.62
+      ],
+      "design_focus": "Helmet, visor, oxygen backpack, limb assemblies and control panel",
+      "usage": "character"
+    },
+    {
+      "id": "characters.armored-knight-mannequin.001",
+      "slug": "armored-knight-mannequin",
+      "title": "Armored Knight Mannequin",
+      "title_zh": "骑士盔甲人物原型",
+      "category": "characters",
+      "source_path": "src/models/armored_knight_mannequin.js",
+      "generator": "createArmoredKnightMannequin",
+      "dimensions_m": [
+        0.88,
+        1.89,
+        0.5
+      ],
+      "design_focus": "Helmet, chestplate, pauldrons, greaves and armored boots",
+      "usage": "character"
+    },
+    {
+      "id": "characters.service-robot-character.001",
+      "slug": "service-robot-character",
+      "title": "Service Robot Character",
+      "title_zh": "服务机器人角色原型",
+      "category": "characters",
+      "source_path": "src/models/service_robot_character.js",
+      "generator": "createServiceRobotCharacter",
+      "dimensions_m": [
+        0.82,
+        1.49,
+        0.78
+      ],
+      "design_focus": "Display torso, wheeled base, antenna and two grippers",
+      "usage": "character"
+    },
+    {
+      "id": "nature.flowering-cherry-tree.001",
+      "slug": "flowering-cherry-tree",
+      "title": "Flowering Cherry Tree",
+      "title_zh": "盛开樱花树",
+      "category": "nature",
+      "source_path": "src/models/flowering_cherry_tree.js",
+      "generator": "createFloweringCherryTree",
+      "dimensions_m": [
+        2.8,
+        3.25,
+        2.5
+      ],
+      "design_focus": "Branching blossom canopy and seasonal floral color",
+      "usage": "environment"
+    },
+    {
+      "id": "nature.tropical-coconut-palm.001",
+      "slug": "tropical-coconut-palm",
+      "title": "Tropical Coconut Palm",
+      "title_zh": "热带椰子树",
+      "category": "nature",
+      "source_path": "src/models/tropical_coconut_palm.js",
+      "generator": "createTropicalCoconutPalm",
+      "dimensions_m": [
+        2.95,
+        4.1,
+        2.95
+      ],
+      "design_focus": "Six radial palm fronds, coconut clusters and palm trunk",
+      "usage": "environment"
+    },
+    {
+      "id": "nature.river-pebble-cluster.001",
+      "slug": "river-pebble-cluster",
+      "title": "River Pebble Cluster",
+      "title_zh": "河床鹅卵石群",
+      "category": "nature",
+      "source_path": "src/models/river_pebble_cluster.js",
+      "generator": "createRiverPebbleCluster",
+      "dimensions_m": [
+        1.5,
+        0.36,
+        1.05
+      ],
+      "design_focus": "Natural pebble scatter with variations in stone color and form",
+      "usage": "environment"
+    },
+    {
+      "id": "vehicles.compact-delivery-van.001",
+      "slug": "compact-delivery-van",
+      "title": "Compact Delivery Van",
+      "title_zh": "城市配送厢式货车",
+      "category": "vehicles",
+      "source_path": "src/models/compact_delivery_van.js",
+      "generator": "createCompactDeliveryVan",
+      "dimensions_m": [
+        2.12,
+        2.4,
+        4.38
+      ],
+      "design_focus": "Cargo compartment, cab, glazing, mirrors and four wheels",
+      "usage": "vehicle"
+    },
+    {
+      "id": "vehicles.commuter-city-bicycle.001",
+      "slug": "commuter-city-bicycle",
+      "title": "Commuter City Bicycle",
+      "title_zh": "通勤城市自行车",
+      "category": "vehicles",
+      "source_path": "src/models/commuter_city_bicycle.js",
+      "generator": "createCommuterCityBicycle",
+      "dimensions_m": [
+        0.72,
+        1.28,
+        1.78
+      ],
+      "design_focus": "Commuter frame, dual wheels, rear basket and pedals",
+      "usage": "vehicle"
+    },
+    {
+      "id": "vehicles.warehouse-forklift.001",
+      "slug": "warehouse-forklift",
+      "title": "Warehouse Forklift",
+      "title_zh": "仓储叉车",
+      "category": "vehicles",
+      "source_path": "src/models/warehouse_forklift.js",
+      "generator": "createWarehouseForklift",
+      "dimensions_m": [
+        1.46,
+        2.31,
+        2.72
+      ],
+      "design_focus": "Lifting mast, load forks, drive wheels and rollbar",
+      "usage": "vehicle"
+    },
+    {
+      "id": "vehicles.coastal-sailboat.001",
+      "slug": "coastal-sailboat",
+      "title": "Coastal Sailboat",
+      "title_zh": "海岸单桅帆船",
+      "category": "vehicles",
+      "source_path": "src/models/coastal_sailboat.js",
+      "generator": "createCoastalSailboat",
+      "dimensions_m": [
+        1.42,
+        4.15,
+        3.64
+      ],
+      "design_focus": "Single mast, hull, boom, two triangular sails and cabin",
+      "usage": "vehicle"
+    },
+    {
+      "id": "electronics.retro-arcade-cabinet.001",
+      "slug": "retro-arcade-cabinet",
+      "title": "Retro Arcade Cabinet",
+      "title_zh": "复古街机柜",
+      "category": "electronics",
+      "source_path": "src/models/retro_arcade_cabinet.js",
+      "generator": "createRetroArcadeCabinet",
+      "dimensions_m": [
+        0.74,
+        1.76,
+        0.82
+      ],
+      "design_focus": "Arcade marquee, display, joystick and coin compartment",
+      "usage": "interior"
+    },
+    {
+      "id": "electronics.wifi-router.001",
+      "slug": "wifi-router",
+      "title": "Wi-Fi Router",
+      "title_zh": "无线网络路由器",
+      "category": "electronics",
+      "source_path": "src/models/wifi_router.js",
+      "generator": "createWifiRouter",
+      "dimensions_m": [
+        0.37,
+        0.24,
+        0.25
+      ],
+      "design_focus": "Triple-antenna network box, indicators and ventilation",
+      "usage": "interior"
+    },
+    {
+      "id": "electronics.dual-stick-gamepad.001",
+      "slug": "dual-stick-gamepad",
+      "title": "Dual Stick Gamepad",
+      "title_zh": "双摇杆游戏手柄",
+      "category": "electronics",
+      "source_path": "src/models/dual_stick_gamepad.js",
+      "generator": "createDualStickGamepad",
+      "dimensions_m": [
+        0.44,
+        0.16,
+        0.27
+      ],
+      "design_focus": "Twin analog sticks, d-pad, face buttons and triggers",
+      "usage": "interior"
+    },
+    {
+      "id": "decor.brass-pendant-light.001",
+      "slug": "brass-pendant-light",
+      "title": "Brass Pendant Light",
+      "title_zh": "黄铜吊灯",
+      "category": "decor",
+      "source_path": "src/models/brass_pendant_light.js",
+      "generator": "createBrassPendantLight",
+      "dimensions_m": [
+        0.66,
+        1.24,
+        0.66
+      ],
+      "design_focus": "Suspended conical shade, opal lamp and support cord",
+      "usage": "interior"
+    },
+    {
+      "id": "decor.ceramic-flower-bouquet.001",
+      "slug": "ceramic-flower-bouquet",
+      "title": "Ceramic Flower Bouquet",
+      "title_zh": "陶瓷花瓶插花",
+      "category": "decor",
+      "source_path": "src/models/ceramic_flower_bouquet.js",
+      "generator": "createCeramicFlowerBouquet",
+      "dimensions_m": [
+        0.58,
+        0.99,
+        0.53
+      ],
+      "design_focus": "Ceramic vase with seven branching flowering stems",
+      "usage": "interior"
+    },
+    {
+      "id": "decor.midcentury-wall-clock.001",
+      "slug": "midcentury-wall-clock",
+      "title": "Midcentury Wall Clock",
+      "title_zh": "复古挂钟",
+      "category": "decor",
+      "source_path": "src/models/midcentury_wall_clock.js",
+      "generator": "createMidcenturyWallClock",
+      "dimensions_m": [
+        0.61,
+        0.61,
+        0.11
+      ],
+      "design_focus": "Clock face, twelve hour markers and decorative hands",
+      "usage": "interior"
+    },
+    {
+      "id": "kitchen.professional-espresso-machine.001",
+      "slug": "professional-espresso-machine",
+      "title": "Professional Espresso Machine",
+      "title_zh": "专业意式咖啡机",
+      "category": "kitchen",
+      "source_path": "src/models/professional_espresso_machine.js",
+      "generator": "createProfessionalEspressoMachine",
+      "dimensions_m": [
+        0.65,
+        0.49,
+        0.53
+      ],
+      "design_focus": "Dual brewing heads, portafilters, display and steam wand",
+      "usage": "interior"
+    },
+    {
+      "id": "kitchen.butcher-block-island.001",
+      "slug": "butcher-block-island",
+      "title": "Butcher Block Island",
+      "title_zh": "实木厨房中岛",
+      "category": "kitchen",
+      "source_path": "src/models/butcher_block_island.js",
+      "generator": "createButcherBlockIsland",
+      "dimensions_m": [
+        1.84,
+        0.96,
+        0.96
+      ],
+      "design_focus": "Worktop, pantry cabinets, metal handles and food-prep surface",
+      "usage": "interior"
+    },
+    {
+      "id": "kitchen.stainless-range-hood.001",
+      "slug": "stainless-range-hood",
+      "title": "Stainless Range Hood",
+      "title_zh": "不锈钢抽油烟机",
+      "category": "kitchen",
+      "source_path": "src/models/stainless_range_hood.js",
+      "generator": "createStainlessRangeHood",
+      "dimensions_m": [
+        0.98,
+        0.82,
+        0.65
+      ],
+      "design_focus": "Vent chimney, filter slats and integrated task lights",
+      "usage": "interior"
+    },
+    {
+      "id": "architecture.masonry-brick-archway.001",
+      "slug": "masonry-brick-archway",
+      "title": "Masonry Brick Archway",
+      "title_zh": "砖砌门洞",
+      "category": "architecture",
+      "source_path": "src/models/masonry_brick_archway.js",
+      "generator": "createMasonryBrickArchway",
+      "dimensions_m": [
+        2.22,
+        2.64,
+        0.48
+      ],
+      "design_focus": "Brick piers, lintel, keystone and threshold",
+      "usage": "architecture"
+    },
+    {
+      "id": "architecture.structural-steel-column.001",
+      "slug": "structural-steel-column",
+      "title": "Structural Steel Column",
+      "title_zh": "建筑工字钢立柱",
+      "category": "architecture",
+      "source_path": "src/models/structural_steel_column.js",
+      "generator": "createStructuralSteelColumn",
+      "dimensions_m": [
+        0.54,
+        3.18,
+        0.51
+      ],
+      "design_focus": "Steel web, flanges, gussets and baseplate anchor bolts",
+      "usage": "architecture"
+    },
+    {
+      "id": "architecture.pitched-roof-skylight.001",
+      "slug": "pitched-roof-skylight",
+      "title": "Pitched Roof Skylight",
+      "title_zh": "坡屋顶天窗",
+      "category": "architecture",
+      "source_path": "src/models/pitched_roof_skylight.js",
+      "generator": "createPitchedRoofSkylight",
+      "dimensions_m": [
+        1.4,
+        0.47,
+        1.03
+      ],
+      "design_focus": "Pitch glazing, ridge, hinges and metal mullions",
+      "usage": "architecture"
+    },
+    {
+      "id": "urban.glass-bus-shelter.001",
+      "slug": "glass-bus-shelter",
+      "title": "Glass Bus Shelter",
+      "title_zh": "城市公交候车亭",
+      "category": "urban",
+      "source_path": "src/models/glass_bus_shelter.js",
+      "generator": "createGlassBusShelter",
+      "dimensions_m": [
+        3.38,
+        2.82,
+        1.57
+      ],
+      "design_focus": "Canopy, glazing, bench, curb and route sign",
+      "usage": "urban"
+    },
+    {
+      "id": "urban.solar-parking-meter.001",
+      "slug": "solar-parking-meter",
+      "title": "Solar Parking Meter",
+      "title_zh": "太阳能停车计时器",
+      "category": "urban",
+      "source_path": "src/models/solar_parking_meter.js",
+      "generator": "createSolarParkingMeter",
+      "dimensions_m": [
+        0.38,
+        1.56,
+        0.34
+      ],
+      "design_focus": "Solar panel, payment display and slim pedestal",
+      "usage": "urban"
+    },
+    {
+      "id": "urban.color-coded-recycling-bin.001",
+      "slug": "color-coded-recycling-bin",
+      "title": "Color-Coded Recycling Bin",
+      "title_zh": "城市分类回收箱",
+      "category": "urban",
+      "source_path": "src/models/color_coded_recycling_bin.js",
+      "generator": "createColorCodedRecyclingBin",
+      "dimensions_m": [
+        1.05,
+        1.35,
+        0.55
+      ],
+      "design_focus": "Three color-coded bin compartments and collection slots",
+      "usage": "urban"
+    },
+    {
+      "id": "tools.cordless-power-drill.001",
+      "slug": "cordless-power-drill",
+      "title": "Cordless Power Drill",
+      "title_zh": "无绳电钻",
+      "category": "tools",
+      "source_path": "src/models/cordless_power_drill.js",
+      "generator": "createCordlessPowerDrill",
+      "dimensions_m": [
+        0.26,
+        0.37,
+        0.43
+      ],
+      "design_focus": "Motor housing, chuck, trigger, handle and battery",
+      "usage": "tool"
+    },
+    {
+      "id": "tools.adjustable-steel-wrench.001",
+      "slug": "adjustable-steel-wrench",
+      "title": "Adjustable Steel Wrench",
+      "title_zh": "活动扳手",
+      "category": "tools",
+      "source_path": "src/models/adjustable_steel_wrench.js",
+      "generator": "createAdjustableSteelWrench",
+      "dimensions_m": [
+        0.25,
+        0.58,
+        0.08
+      ],
+      "design_focus": "Long handle, fixed jaw, sliding jaw and adjustment wheel",
+      "usage": "tool"
+    },
+    {
+      "id": "tools.folding-step-ladder.001",
+      "slug": "folding-step-ladder",
+      "title": "Folding Step Ladder",
+      "title_zh": "折叠人字梯",
+      "category": "tools",
+      "source_path": "src/models/folding_step_ladder.js",
+      "generator": "createFoldingStepLadder",
+      "dimensions_m": [
+        0.74,
+        1.6,
+        1.17
+      ],
+      "design_focus": "Articulated frame with steps, feet and safety braces",
+      "usage": "tool"
+    },
+    {
+      "id": "sports.portable-tennis-net.001",
+      "slug": "portable-tennis-net",
+      "title": "Portable Tennis Net",
+      "title_zh": "便携式网球网",
+      "category": "sports",
+      "source_path": "src/models/portable_tennis_net.js",
+      "generator": "createPortableTennisNet",
+      "dimensions_m": [
+        3.08,
+        0.95,
+        0.3
+      ],
+      "design_focus": "Freestanding net with posts, taut threads and side supports",
+      "usage": "sports"
+    },
+    {
+      "id": "sports.street-skateboard.001",
+      "slug": "street-skateboard",
+      "title": "Street Skateboard",
+      "title_zh": "街头滑板",
+      "category": "sports",
+      "source_path": "src/models/street_skateboard.js",
+      "generator": "createStreetSkateboard",
+      "dimensions_m": [
+        0.29,
+        0.14,
+        0.83
+      ],
+      "design_focus": "Maple deck, grip tape, two axles and four wheels",
+      "usage": "sports"
+    },
+    {
+      "id": "scifi.reactor-energy-core.001",
+      "slug": "reactor-energy-core",
+      "title": "Reactor Energy Core",
+      "title_zh": "科幻反应堆能量核心",
+      "category": "scifi",
+      "source_path": "src/models/reactor_energy_core.js",
+      "generator": "createReactorEnergyCore",
+      "dimensions_m": [
+        1.55,
+        1.82,
+        1.48
+      ],
+      "design_focus": "Futuristic chamber with energy rings and cooling spokes",
+      "usage": "game"
+    },
+    {
+      "id": "scifi.ancient-portal-gateway.001",
+      "slug": "ancient-portal-gateway",
+      "title": "Ancient Portal Gateway",
+      "title_zh": "古代传送门",
+      "category": "scifi",
+      "source_path": "src/models/ancient_portal_gateway.js",
+      "generator": "createAncientPortalGateway",
+      "dimensions_m": [
+        2.58,
+        3.64,
+        0.71
+      ],
+      "design_focus": "Stone gateway and concentric portal energy effect",
+      "usage": "game"
+    },
+    {
+      "id": "scifi.cargo-loading-mech.001",
+      "slug": "cargo-loading-mech",
+      "title": "Cargo Loading Mech",
+      "title_zh": "货运装载机甲",
+      "category": "scifi",
+      "source_path": "src/models/cargo_loading_mech.js",
+      "generator": "createCargoLoadingMech",
+      "dimensions_m": [
+        1.62,
+        2.71,
+        1.42
+      ],
+      "design_focus": "Industrial utility mech with cargo grippers and hydraulic supports",
+      "usage": "game"
+    }
+  ]
+}
