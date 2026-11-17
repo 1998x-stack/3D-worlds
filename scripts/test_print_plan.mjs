@@ -6,7 +6,7 @@ const policy=JSON.parse(readFileSync(new URL('../catalog/print_policy.json',impo
 const catalog=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8'));
 test('print policy covers all 14 catalog categories',()=>{
   assert.equal(validatePrintPolicy(policy),true);
-  assert.equal(new Set(catalog.assets.map(x=>x.category)).size,13);
+  assert.equal(new Set(catalog.assets.map(x=>x.category)).size,14);
   for(const cat of new Set(catalog.assets.map(x=>x.category)))assert.ok(policy.categories[cat]);
 });
 test('printer fit honors print Z-up with only in-plane turn',()=>{
