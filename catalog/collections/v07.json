@@ -5,19 +5,19 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 40,
+  "asset_count": 50,
   "category_count": 13,
   "category_counts": {
-    "architecture": 3,
-    "bathroom": 3,
+    "architecture": 4,
+    "bathroom": 4,
     "characters": 4,
-    "decor": 3,
-    "electronics": 3,
-    "furniture": 2,
+    "decor": 4,
+    "electronics": 4,
+    "furniture": 4,
     "kitchen": 4,
-    "nature": 2,
-    "scifi": 2,
-    "sports": 2,
+    "nature": 4,
+    "scifi": 3,
+    "sports": 3,
     "tools": 4,
     "urban": 4,
     "vehicles": 4
@@ -702,6 +702,176 @@
       "design_focus": "Cluster of five fir trees with multi-tiered conifer foliage, snow caps and icy terrain",
       "usage": "winter",
       "part_count": 32
+    },
+    {
+      "id": "scifi.solar-sail-deep-space-probe.001",
+      "slug": "solar-sail-deep-space-probe",
+      "title": "Solar Sail Deep Space Probe",
+      "title_zh": "太阳帆深空探测器",
+      "category": "scifi",
+      "source_path": "src/models/solar_sail_deep_space_probe.js",
+      "generator": "createSolarSailDeepSpaceProbe",
+      "dimensions_m": [
+        3.16,
+        3.29,
+        0.92
+      ],
+      "design_focus": "Nonweapon space science probe with large reflective triangular sail panels, central satellite and telemetry antenna",
+      "usage": "solar-sail",
+      "part_count": 22
+    },
+    {
+      "id": "bathroom.spa-foot-soak-station.001",
+      "slug": "spa-foot-soak-station",
+      "title": "Spa Foot Soak Station",
+      "title_zh": "足浴泡脚护理站",
+      "category": "bathroom",
+      "source_path": "src/models/spa_foot_soak_station.js",
+      "generator": "createSpaFootSoakStation",
+      "dimensions_m": [
+        0.79,
+        0.69,
+        0.91
+      ],
+      "design_focus": "Compact foot soak chair and inset basin with massage rollers, controls and drainage",
+      "usage": "spa",
+      "part_count": 17
+    },
+    {
+      "id": "nature.sunflower-farm-strip.001",
+      "slug": "sunflower-farm-strip",
+      "title": "Sunflower Farm Strip",
+      "title_zh": "向日葵农田地块",
+      "category": "nature",
+      "source_path": "src/models/sunflower_farm_strip.js",
+      "generator": "createSunflowerFarmStrip",
+      "dimensions_m": [
+        1.98,
+        1.71,
+        1.56
+      ],
+      "design_focus": "Three neat rows of sunflowers with layered petals, seed disks, stems and farmland furrows",
+      "usage": "sunflower",
+      "part_count": 80
+    },
+    {
+      "id": "furniture.tilting-architect-drafting-desk.001",
+      "slug": "tilting-architect-drafting-desk",
+      "title": "Tilting Architect Drafting Desk",
+      "title_zh": "可倾斜建筑绘图桌",
+      "category": "furniture",
+      "source_path": "src/models/tilting_architect_drafting_desk.js",
+      "generator": "createTiltingArchitectDraftingDesk",
+      "dimensions_m": [
+        1.45,
+        1.37,
+        0.93
+      ],
+      "design_focus": "Adjustable angled drafting desktop with angle locks, ruler tray and tubular height frame",
+      "usage": "drafting",
+      "part_count": 16
+    },
+    {
+      "id": "architecture.timber-garden-pergola.001",
+      "slug": "timber-garden-pergola",
+      "title": "Timber Garden Pergola",
+      "title_zh": "花园木质廊架",
+      "category": "architecture",
+      "source_path": "src/models/timber_garden_pergola.js",
+      "generator": "createTimberGardenPergola",
+      "dimensions_m": [
+        3.14,
+        2.52,
+        2.67
+      ],
+      "design_focus": "Open timber garden pergola with posts, rafters and grapevine supports",
+      "usage": "pergola",
+      "part_count": 33
+    },
+    {
+      "id": "sports.track-hurdle-training-set.001",
+      "slug": "track-hurdle-training-set",
+      "title": "Track Hurdle Training Set",
+      "title_zh": "田径跨栏训练组合",
+      "category": "sports",
+      "source_path": "src/models/track_hurdle_training_set.js",
+      "generator": "createTrackHurdleTrainingSet",
+      "dimensions_m": [
+        2.54,
+        1.19,
+        0.75
+      ],
+      "design_focus": "Three adjustable track hurdles with striped crossbars, stabilizer supports and numbered height marks",
+      "usage": "hurdles",
+      "part_count": 36
+    },
+    {
+      "id": "nature.tropical-coral-reef-garden.001",
+      "slug": "tropical-coral-reef-garden",
+      "title": "Tropical Coral Reef Garden",
+      "title_zh": "热带珊瑚礁群",
+      "category": "nature",
+      "source_path": "src/models/tropical_coral_reef_garden.js",
+      "generator": "createTropicalCoralReefGarden",
+      "dimensions_m": [
+        2.04,
+        1.17,
+        1.7
+      ],
+      "design_focus": "Underwater reef tile with branching corals, tube sponges, sea grass and two stylized fish",
+      "usage": "coral",
+      "part_count": 49
+    },
+    {
+      "id": "decor.vintage-brass-gramophone.001",
+      "slug": "vintage-brass-gramophone",
+      "title": "Vintage Brass Gramophone",
+      "title_zh": "黄铜留声机",
+      "category": "decor",
+      "source_path": "src/models/vintage_brass_gramophone.js",
+      "generator": "createVintageBrassGramophone",
+      "dimensions_m": [
+        0.64,
+        0.89,
+        0.65
+      ],
+      "design_focus": "Analog gramophone with brass horn, record, walnut plinth and crank",
+      "usage": "gramophone",
+      "part_count": 16
+    },
+    {
+      "id": "electronics.vintage-film-projector.001",
+      "slug": "vintage-film-projector",
+      "title": "Vintage Film Projector",
+      "title_zh": "复古胶片放映机",
+      "category": "electronics",
+      "source_path": "src/models/vintage_film_projector.js",
+      "generator": "createVintageFilmProjector",
+      "dimensions_m": [
+        0.61,
+        0.59,
+        0.56
+      ],
+      "design_focus": "Twin-reel analog movie projector with optical lens, feed rollers, drive housing and tripod",
+      "usage": "film",
+      "part_count": 27
+    },
+    {
+      "id": "furniture.wrought-iron-garden-swing.001",
+      "slug": "wrought-iron-garden-swing",
+      "title": "Wrought Iron Garden Swing",
+      "title_zh": "铁艺花园双人秋千",
+      "category": "furniture",
+      "source_path": "src/models/wrought_iron_garden_swing.js",
+      "generator": "createWroughtIronGardenSwing",
+      "dimensions_m": [
+        2.28,
+        2.12,
+        1.5
+      ],
+      "design_focus": "Outdoor A-frame two-person swing with chained bench, curved armrests and cushion slats",
+      "usage": "garden",
+      "part_count": 24
     }
   ]
 }
