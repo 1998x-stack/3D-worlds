@@ -190,8 +190,11 @@ scene.add(model);
 function loaderSnippet(asset) {
   return `// Download ${asset.slug}.glb from 3D Worlds, then place it in YOUR game project's public/assets/
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'meshoptimizer';
 
+// npm install three meshoptimizer
 const loader = new GLTFLoader();
+loader.setMeshoptDecoder(MeshoptDecoder);
 const gltf = await loader.loadAsync('/assets/${asset.slug}.glb');
 scene.add(gltf.scene);
 `;
@@ -254,7 +257,10 @@ async function openAsset(id, { updateHistory = true } = {}) {
           viewer = createScene(document.getElementById('detail-canvas'), factory, { interactive: true });
         } else {
           const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js');
-          const model = await new GLTFLoader().loadAsync(await binaryUrl(asset));
+          const { MeshoptDecoder } = await import('meshoptimizer');
+          const loader = new GLTFLoader();
+          loader.setMeshoptDecoder(MeshoptDecoder);
+          const model = await loader.loadAsync(await binaryUrl(asset));
           if (activeAsset?.id !== id) return;
           viewer = createScene(document.getElementById('detail-canvas'), () => model.scene, { interactive: true });
         }

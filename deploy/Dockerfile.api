@@ -6,7 +6,6 @@ COPY scripts/catalog.py ./scripts/catalog.py
 COPY services/search_api.py services/storage.py ./services/
 COPY requirements-api.txt ./
 RUN pip install --no-cache-dir -r requirements-api.txt && useradd -r app
-COPY public/generated/index.json ./public/generated/index.json
 RUN python scripts/catalog.py build
 USER app
 ENV THREED_WORLDS_HOST=0.0.0.0 THREED_WORLDS_PORT=8071

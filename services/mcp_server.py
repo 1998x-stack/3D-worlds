@@ -182,7 +182,9 @@ def get_import_recipe(asset_id: str, target: str = "threejs") -> dict:
                       f"Copy it into your game's public/assets/{filename}",
                       "Use GLTFLoader to instantiate and position it"],
             "code": ("import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';\n"
-                     f"const gltf = await new GLTFLoader().loadAsync('/assets/{filename}');\n"
+                     "import { MeshoptDecoder } from 'meshoptimizer';\n"
+                     "const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);\n"
+                     f"const gltf = await loader.loadAsync('/assets/{filename}');\n"
                      "scene.add(gltf.scene);"),
             "license": asset["license_spdx"]}
 
