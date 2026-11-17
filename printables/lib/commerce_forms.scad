@@ -19,15 +19,15 @@ module market_figurine(v=1) {
   r=18+v;
   union() {
     cylinder(r=29,h=6);
-    translate([0,0,7]) scale([1,0.85,1.15]) sphere(r=r);
-    translate([0,0,35]) scale([1,.91,.84]) sphere(r=r*.78);
+    translate([0,0,29]) scale([1,0.85,1.15]) sphere(r=r);
+    translate([0,0,59]) scale([1,.91,.84]) sphere(r=r*.78);
     for (s=[-1,1]) {
-      translate([s*(r*.58),0,49])
+      translate([s*(r*.58),0,71])
         rotate([0,s*13,0]) cylinder(r1=5+v*.4,r2=1,h=10+v*2);
-      translate([s*(r*.73),-2,20]) scale([.36,.55,.67]) sphere(r=r*.75);
+      translate([s*(r*.73),-2,41]) scale([.36,.55,.67]) sphere(r=r*.75);
     }
-    translate([0,-r*.62,39]) sphere(r=3.5+v*.2);
-    for(s=[-1,1])translate([s*7,-r*.72,43])sphere(r=1.8);
+    translate([0,-r*.62,63]) sphere(r=3.5+v*.2);
+    for(s=[-1,1])translate([s*7,-r*.72,67])sphere(r=1.8);
   }
 }
 module market_scenery(v=1) {
