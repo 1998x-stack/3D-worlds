@@ -1,0 +1,1027 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>Codex × 参数化CAD × 3D打印深度研究</title><style>
+@page {
+  size: A4;
+  margin: 17mm 18mm 19mm 18mm;
+  @top-left {content: "CODEX × CAD × 3D PRINTING  /  RESEARCH REPORT"; font: 500 8px "Noto Sans CJK SC",sans-serif; color:#71879b; letter-spacing:0.8px;}
+  @top-right {content: "17 NOV 2026"; font: 500 8px "Noto Sans CJK SC",sans-serif; color:#71879b;}
+  @bottom-left {content: "PUBLIC SOURCE REVIEW   •   NOT PHYSICALLY VERIFIED"; font: 500 7.7px "Noto Sans CJK SC",sans-serif; color:#8193a4;}
+  @bottom-right {content: counter(page) "  /  RESEARCH"; font: 700 8.2px "Noto Sans CJK SC",sans-serif; color:#536a80;}
+}
+@page cover { margin:0; @top-left{content:none;} @top-right{content:none;} @bottom-left{content:none;} @bottom-right{content:none;} }
+:root { --ink:#162d43; --blue:#164c77; --soft:#edf3f7; --line:#dbe4eb; --accent:#d58b42; }
+* {box-sizing:border-box;}
+html,body{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;color:var(--ink);background:#fff;}
+body{font-size:10.7pt;line-height:1.68;}
+a{color:#145b84;text-decoration:none;overflow-wrap:anywhere;}
+strong{color:#173f5e;font-weight:700;}
+p{margin:0 0 10px 0;orphans:3;widows:3;}
+ul,ol{margin:4px 0 12px;padding-left:1.5em;}
+li{margin:0 0 5px;}
+li::marker{color:#1a6792;}
+h1{font-size:20pt;line-height:1.28;color:#0b3555;letter-spacing:.2px;margin:0 0 18px;padding:0 0 11px;border-bottom:2px solid #86b0ca;break-after:avoid;}
+h1:not(.cover h1){break-before:page;}
+h2{font-size:13.6pt;color:#164b70;margin:17px 0 8px;border-left:4px solid #d08a48;padding-left:10px;line-height:1.45;break-after:avoid;}
+h3{font-size:11.3pt;color:#235574;line-height:1.4;break-after:avoid;}
+hr{border:none;border-top:1px solid #e1e9ef;margin:22px 0;}
+blockquote{border-left:3px solid #6da1bc;background:#f4f8fb;border-radius:0 8px 8px 0;padding:12px 17px;margin:12px 0 16px;font-size:10.3pt;}
+blockquote p{margin:0;}
+table{width:100%;border-collapse:collapse;font-size:8.7pt;line-height:1.45;margin:13px 0 17px;table-layout:fixed;}
+thead{display:table-header-group;}
+tr{break-inside:avoid;}
+th{background:#153f60;color:#fff;font-weight:600;}
+th,td{border:1px solid #dce5ec;padding:7px 7px;text-align:left;vertical-align:top;overflow-wrap:anywhere;}
+tbody tr:nth-child(even){background:#f5f9fb;}
+pre{background:#112a40;color:#e7f1f8;padding:14px 15px;border-radius:8px;line-height:1.42;font-family:"Noto Sans Mono CJK SC",monospace;font-size:8.1pt;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;break-inside:avoid;}
+pre code{background:none;padding:0;color:inherit;}
+code{background:#eaf1f7;padding:1px 4px;border-radius:3px;font-family:"Noto Sans Mono CJK SC",monospace;font-size:.87em;overflow-wrap:anywhere;}
+.diagram{margin:16px 0; break-inside:avoid;}
+.diagram svg{width:100%;height:auto;}
+.cover{page:cover; height:297mm; width:210mm; padding:28mm 23mm 21mm; break-after:page; background:linear-gradient(130deg,#fff,#eef5fa);position:relative;}
+.cover-kicker{font-size:10px;font-weight:700;color:#426f92;letter-spacing:3px;}
+.cover-rule{margin-top:13px;width:55px;height:4px;background:#d28b49;}
+.cover h1{font-size:33pt;line-height:1.39;color:#0c2f4a;margin-top:31px;border:0;padding:0;letter-spacing:0;}
+.cover h1 span,.cover h1 em{color:#d18d49;font-style:normal;}
+.cover-subtitle{font-size:14pt;line-height:1.8;color:#3f6885;margin-top:20px;}
+.cover-art{margin-top:24px;width:100%;border-radius:10px;overflow:hidden;background:#f4f8fc;border:1px solid #dde6ef;}
+.cover-meta{display:flex;justify-content:space-between;border-top:1px solid #ccdce8;margin-top:24px;padding-top:18px;}
+.cover-meta div{display:flex;flex-direction:column;gap:4px;}
+.cover-meta b{font-size:25pt;line-height:1;color:#174f78;}
+.cover-meta span{font-size:9.5pt;color:#577990;}
+.cover-footer{position:absolute;bottom:20mm;left:23mm;right:23mm;font-size:9pt;line-height:1.8;color:#6d8292;border-top:1px solid #ccdce8;padding-top:10px;}
+.toc-page{break-after:page;}
+.toc-page h1{break-before:auto!important;font-size:24pt;border-bottom:0;padding-bottom:0;}
+.toc-kicker{font-size:9px;color:#af713e;letter-spacing:2px;font-weight:800;}
+.toc-entry{display:flex;align-items:baseline;color:#204d6b;font-size:11.2pt;padding:9px 0;border-bottom:1px solid #e6edf3;}
+.toc-entry::after{content:leader('.') target-counter(attr(href),page);font-size:9.3pt;color:#5b8299;margin-left:auto;white-space:nowrap;}
+.toc-note{margin-top:28px;border-radius:9px;padding:16px 18px;background:#eef5fa;color:#4e6c80;font-size:9.4pt;line-height:1.65;}
+@media print { a{color:#185678;} }
+</style></head><body><section class="cover">
+  <div class="cover-kicker">DEEP RESEARCH / 2026.11</div>
+  <div class="cover-rule"></div>
+  <h1>Codex <span>×</span> 参数化 CAD<br><em>×</em> 3D 打印</h1>
+  <p class="cover-subtitle">七类 Hacker News 项目的源码调查、技术解构<br>制造风险与 3D-worlds 工程化路线图</p>
+  <div class="cover-art">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+    <defs><pattern id="g" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#d5e2f0" stroke-width="1"/></pattern></defs>
+    <rect width="900" height="360" fill="url(#g)"/>
+    <g fill="none" stroke="#174a71" stroke-width="3">
+      <path d="M155 227 280 149 405 226 280 303Z M155 227V112l125-75 125 74V226"/>
+      <path d="M280 37v112l125 77M280 149l-125 78"/>
+      <path d="M560 245 671 179l105 62-111 65Z M560 245v-95l111-63 105 62v92M671 87v92M560 150l111 70 105-71"/>
+      <path d="M605 185l66-41 65 38-66 38Z" stroke="#57a3b4"/>
+    </g>
+    <g font-family="Noto Sans CJK SC" font-size="14" fill="#48687d">
+    <text x="35" y="44">B-rep / mm</text><text x="686" y="35">STEP</text><text x="760" y="342">STL / 3MF</text>
+    <text x="260" y="339">CODE → SHAPE</text>
+    </g>
+    <path d="M428 193H531" stroke="#d58947" stroke-width="5" stroke-linecap="round"/>
+    <path d="m520 181 18 12-18 12" stroke="#d58947" stroke-width="5" fill="none" stroke-linejoin="round"/>
+  </svg>
+  </div>
+  <div class="cover-meta">
+   <div><b>7</b><span>重点研究对象</span></div><div><b>20</b><span>可核查资料入口</span></div><div><b>11</b><span>研究章节与附录</span></div>
+  </div>
+  <div class="cover-footer">研究用途｜事实与推导分级｜非实物打印合格证明<br>2026 年 11 月 17 日 · Version 1.0</div>
+</section><section class="toc-page"><div class="toc-kicker">CONTENTS</div><h1>目录</h1><p>本 PDF 采用带链接的目录和章节书签，方便回到原始项目与技术比较。</p><a class="toc-entry" href="#section-00"><span>执行摘要</span></a><a class="toc-entry" href="#section-01"><span>01｜Truchet Tilings：在布料上打印数学图案</span></a><a class="toc-entry" href="#section-02"><span>02｜Gridfinity 电子积木 + Replicad：标准接口和浏览器 CAD 的组合</span></a><a class="toc-entry" href="#section-03"><span>03｜Build123d 旋转计算尺手镯：把数学算法变成实体产品</span></a><a class="toc-entry" href="#section-04"><span>04｜Print-in-Place 与暂停嵌件：真正有趣、也最需要风险控制</span></a><a class="toc-entry" href="#section-05"><span>05｜Agent 设计产品外壳：CadQuery 与 FreeCAD MCP</span></a><a class="toc-entry" href="#section-06"><span>06｜CAD in Codex 与开源 text-to-cad：从提示词到可审计工程资产</span></a><a class="toc-entry" href="#section-07"><span>07｜Adam CADAM：浏览器 Text-to-CAD 和可交互参数滑块</span></a><a class="toc-entry" href="#section-08"><span>08｜跨项目横向比较：选谁作为技术基础？</span></a><a class="toc-entry" href="#section-09"><span>09｜落地 3D-worlds：新的 CAD-native 子系统蓝图</span></a><a class="toc-entry" href="#section-10"><span>10｜最小可行实验方案与验收指标</span></a><a class="toc-entry" href="#section-11"><span>11｜综合结论与采购/技术决策</span></a><a class="toc-entry" href="#section-12"><span>附录 A｜可直接交给 Codex 的工程研究任务书</span></a><a class="toc-entry" href="#section-13"><span>附录 B｜来源与核查范围</span></a><div class="toc-note"><b>证据标准：</b>A＝项目原始材料；B＝HN 开发者经验；C＝工程设计建议；D＝资料不足。所有项目均未在实际打印机上复现实物。</div></section><main><h1 id="section-00">执行摘要</h1>
+<h2>1. 七个对象的事实归类</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>对象</th>
+<th>原始证据性质</th>
+<th>最可复用的能力</th>
+<th>本报告判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Jeff Barr Truchet Tilings</td>
+<td>GitHub 仓库 + HN 作者自述</td>
+<td>可重复图案、分色 STL、拼接</td>
+<td>独特产品方向，先做小样验证</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Gridfinity 电子模块 / Replicad</td>
+<td><strong>两条不同 HN 评论</strong> + Replicad 官方文档</td>
+<td>标准化接口 + 浏览器 B-rep</td>
+<td>好的组合方向，不能当作同一既有项目</td>
+</tr>
+<tr>
+<td>03</td>
+<td>旋转计算尺手镯</td>
+<td>开源 Notebook + HN 作者自述</td>
+<td>数学算法驱动实体结构</td>
+<td>高性价比教学与文创样本</td>
+</tr>
+<tr>
+<td>04</td>
+<td>一次成型可动/暂停嵌件</td>
+<td>HN 经验 + 切片器官方指南</td>
+<td>机构间隙 + 分层人工操作</td>
+<td>有趣但需打印机与材料实测</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Agent 设计产品外壳 / FreeCAD MCP</td>
+<td>HN 经验 + 可核验 MCP 仓库</td>
+<td>精确孔位、装配、GUI/CLI 反馈</td>
+<td>商业价值高，建议 P0</td>
+</tr>
+<tr>
+<td>06</td>
+<td>CAD in Codex / text-to-cad</td>
+<td>HN 方法自述 + <strong>单独可验证仓库</strong></td>
+<td>“每件一个代码源”+几何反馈</td>
+<td>基础设施参考，建议 P0</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Adam CADAM</td>
+<td>HN 作者发布 + 官方仓库</td>
+<td>文本→OpenSCAD→浏览器 WASM→参数滑块</td>
+<td>Web UI 参考，GPL-3.0 需要审查</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要勘误 ①：</strong> HN 中介绍 Replicad 的评论，和描述 Gridfinity 电子积木及 Micro:bit 的评论并非同一作者；未查到充分证据证明后者使用 Replicad。[R01][R05]<br/>
+<strong>重要勘误 ②：</strong> HN 的 “CAD in Codex” 帖子提供了设计方法；<code>earthtojake/text-to-cad</code> 是可独立核实的项目。未查到足够直接证据证明二者就是同一作者/同一发布版本，因此本报告分别归因。[R10][R11]</p>
+<h2>2. 研究方法与证据分级</h2>
+<p><strong>A：项目一手资料。</strong> 源码仓库、原作者 README、正式技术文档、可追溯的安装和输出说明。可用于确认“项目声称提供什么”，但不等价于本报告已成功复现。<br/>
+<strong>B：开发者经验。</strong> Hacker News 原作者/用户评论，证明有人报告做过某事，但不能替代机器实测、完整 BOM 或测试数据。<br/>
+<strong>C：工程推导。</strong> 基于软件特性提出的可行集成设计、提示词、测量方法与优先级；不是原项目已有功能。<br/>
+<strong>D：未经验证或缺证。</strong> 版本差异、未公开源码、商业化销量、某个机型的兼容性等，明确保持未知。</p>
+<p>本报告以<strong>源码、README、HN 原始评论与官方规范的交叉阅读</strong>为主；<strong>没有</strong>在用户打印机上复现 7 个案例，没有进行实测公差/强度/销量测试。成熟度与评分均为本报告的<strong>定性主观判断</strong>，不是实验统计结果。</p>
+<h2>3. 一句话行动建议</h2>
+<p>先建立 <strong>P0: Build123d + Python → STEP/STL → QA → 人工切片</strong>；并行研究 <code>text-to-cad</code> 的 Codex 技能组织方式和 CADAM 的浏览器可视化；第一个实物优先选<strong>参数化电子外壳</strong>，第二个选<strong>Gridfinity 标准接口</strong>，第三个选<strong>数学机械教具</strong>。Truchet 布料和嵌件打印可作为差异化实验支线。</p>
+<p>&lt;div class="diagram"&gt;
+&lt;svg xmlns="<a href='http://www.w3.org/2000/svg"'>http://www.w3.org/2000/svg"</a> viewBox="0 0 940 242" role="img" aria-label="建议的工程流水线"&gt;
+&lt;rect x="0" y="5" width="940" height="232" rx="18" fill="#f6f9fc" stroke="#dbe4ef"/&gt;
+&lt;g font-family="Noto Sans CJK SC" text-anchor="middle"&gt;
+&lt;rect x="24" y="46" width="152" height="74" rx="11" fill="#173d65"/&gt;&lt;text x="100" y="75" fill="#fff" font-size="18" font-weight="700"&gt;设计意图&lt;/text&gt;&lt;text x="100" y="97" fill="#d7e6ff" font-size="13"&gt;规格 / 尺寸 / 约束&lt;/text&gt;
+&lt;rect x="207" y="46" width="152" height="74" rx="11" fill="#245f93"/&gt;&lt;text x="283" y="75" fill="#fff" font-size="18" font-weight="700"&gt;Codex&lt;/text&gt;&lt;text x="283" y="97" fill="#dfecff" font-size="13"&gt;可版本化源码&lt;/text&gt;
+&lt;rect x="390" y="46" width="152" height="74" rx="11" fill="#2f7d8f"/&gt;&lt;text x="466" y="75" fill="#fff" font-size="18" font-weight="700"&gt;CAD 内核&lt;/text&gt;&lt;text x="466" y="97" fill="#e0fdff" font-size="13"&gt;B-rep / STEP&lt;/text&gt;
+&lt;rect x="573" y="46" width="152" height="74" rx="11" fill="#277d70"/&gt;&lt;text x="649" y="75" fill="#fff" font-size="18" font-weight="700"&gt;自动验证&lt;/text&gt;&lt;text x="649" y="97" fill="#dffaf1" font-size="13"&gt;几何 / 单位 / 装配&lt;/text&gt;
+&lt;rect x="756" y="46" width="160" height="74" rx="11" fill="#b77937"/&gt;&lt;text x="836" y="75" fill="#fff" font-size="18" font-weight="700"&gt;人工门禁&lt;/text&gt;&lt;text x="836" y="97" fill="#ffecd3" font-size="13"&gt;切片 / 机型 / 复核&lt;/text&gt;
+&lt;g stroke="#6d879b" stroke-width="3" fill="none"&gt;&lt;path d="M177 83 H205"/&gt;&lt;path d="M360 83 H388"/&gt;&lt;path d="M543 83 H571"/&gt;&lt;path d="M726 83 H754"/&gt;&lt;/g&gt;
+&lt;text x="470" y="169" font-size="14" fill="#36546e"&gt;打印 → 量测 → 记录误差 → 参数与测试集更新 → 重新生成&lt;/text&gt;
+&lt;path d="M835 129 V195 H103 V130" fill="none" stroke="#94a9bd" stroke-width="3" stroke-dasharray="8 6"/&gt;
+&lt;text x="470" y="221" font-size="13" fill="#6b7c90"&gt;自动通过几何检查 ≠ 已经完成制造验证&lt;/text&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+&lt;/div&gt;</p>
+<hr/>
+<h1 id="section-01">01｜Truchet Tilings：在布料上打印数学图案</h1>
+<p><strong>项目地址：</strong> <a href="https://github.com/jeffbarr/TruchetTilings">https://github.com/jeffbarr/TruchetTilings</a><br/>
+<strong>讨论：</strong> <a href="https://news.ycombinator.com/item?id=49984349">https://news.ycombinator.com/item?id=49984349</a><br/>
+<strong>类型：</strong> OpenSCAD 参数化几何 / 多色 FDM / 柔性载体实验。<br/>
+<strong>证据：</strong> GitHub README（A）；Jeff Barr 在 HN 的自述（B）。[R01][R02]</p>
+<h2>1.1 它实际做了什么</h2>
+<p>仓库围绕 Truchet 六边形拼块：单块的弧线与区域经过组合，形成具有可控随机性或固定规则的大型二维图案。<code>hexagons_truchet.scad</code> 是主要建模源码；<code>render_hexagons_truchet.bat</code> 负责批量渲染。README 明示可选择六边形尺寸、X/Y 数量、花纹模式、随机种子、旋转、边角与边框，支持在织物上打印时设置拼块间隙，并可按挤出机分别输出 STL。作者使用多色 Prusa XL 展示了打印样例。[R02]</p>
+<p>不能把“在布料上打印几何结构”理解成“材料本身具有纺织面料的性能”：其力学、洗涤耐久、皮肤接触和附着仍取决于布料、材料与工艺。此仓库首先证明的是 <strong>参数化花纹 → 多色 STL</strong> 的设计工作流，不是可穿戴成品的行业质量认证。</p>
+<h2>1.2 代码层抽象</h2>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>概念参数</th>
+<th>工程作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元</td>
+<td>HexRadius、HexHeight</td>
+<td>决定花纹单元尺度与基底厚度</td>
+</tr>
+<tr>
+<td>图案</td>
+<td>TruchetMode、RandomSeed</td>
+<td>决定形状分布；保留 seed 才能复现</td>
+</tr>
+<tr>
+<td>拼布</td>
+<td>CountX、CountY、Gap</td>
+<td>决定网格规模与布面留缝</td>
+</tr>
+<tr>
+<td>连接</td>
+<td>Border、Corner、Mat</td>
+<td>多板拼接时保持边缘连续</td>
+</tr>
+<tr>
+<td>分色</td>
+<td>Tile/Arc/Fill/Edge Extruder</td>
+<td>分别导出相应色彩与材料 STL</td>
+</tr>
+</tbody>
+</table>
+<p>典型的数据结构可以抽象成 <code>PatternConfig -&gt; Tile(x,y,seed) -&gt; GeometryLayer[color] -&gt; STL[color]</code>。真正有价值的资产不是最终 STL，而是包含 <code>seed + 参数 + OpenSCAD 版本 + 导出脚本 + 材料说明</code> 的<strong>可重复设计配方</strong>。README 特别提醒：大图分区和多色文件可能迅速产生大量 STL，命名与追踪必须前置。[R02]</p>
+<h2>1.3 推荐复现实验（本报告方案，尚未运行）</h2>
+<ol>
+<li>固定一个 4×4 或 6×6 小网格，不从大型纺织品开始；保存初始配置及随机种子。</li>
+<li>先在普通平台上用 PLA 打印一个颜色分层样本，验证图案连续性、STL 分色原点和高度。</li>
+<li>再选择布料试样（分别记录材质、厚度、张紧方式及表面处理），以 <strong>不同 Gap 与首层条件</strong> 做试验矩阵。</li>
+<li>打印后测量：拼块脱落数、接触面破损、弯折前后表面变化、洗涤/摩擦影响；不把“能弯折”当“耐穿戴”。</li>
+<li>如要做灯罩或墙面装饰，则应独立检查温度、阻燃需求、安装结构与清洁维护。</li>
+</ol>
+<p><strong>验收样本建议：</strong> <code>config.json</code>、4 份分色 STL、切片项目、照片、耗材记录、布料批次、拉脱/弯折观察表。只用 GitHub 图片不能证明重复制造成功。</p>
+<h2>1.4 主要问题与改进方案</h2>
+<ul>
+<li><strong>渲染速度与复杂度</strong>：OpenSCAD 的 CSG 对大量布尔对象可能较慢；把图案的组合逻辑、单元缓存与高精度导出分开。</li>
+<li><strong>布料附着不确定</strong>：与喷嘴/首层距离、织物孔隙和粘附机制有关；明确这是工艺研究，而非单纯几何问题。</li>
+<li><strong>拆分拼接与颜色配准</strong>：按公共原点导出各色 STL，保持坐标一致；错误地单独居中会导致错位。</li>
+<li><strong>二次开发权利</strong>：仓库公开不自动意味着可商业再发行；分发/商用前查 LICENSE 和素材来源，未核实授权时仅内部研究。</li>
+</ul>
+<h2>1.5 值得迁移到 3D-worlds 的能力</h2>
+<p>新增 <code>generative-pattern</code> 类别、配方元数据、按种子再生功能、平铺拼接边界检查和多色文件组。Web 页面提供模式选择、seed、网格尺寸、织物/非织物开关与分色预览。<strong>技术复杂度：中；机器实验依赖：高；优先级：P2。</strong></p>
+<hr/>
+<h1 id="section-02">02｜Gridfinity 电子积木 + Replicad：标准接口和浏览器 CAD 的组合</h1>
+<p><strong>HN 讨论：</strong> <a href="https://news.ycombinator.com/item?id=49984349">https://news.ycombinator.com/item?id=49984349</a><br/>
+<strong>Replicad：</strong> <a href="https://github.com/sgenoud/replicad">https://github.com/sgenoud/replicad</a><br/>
+<strong>官方文档：</strong> <a href="https://replicad.xyz/">https://replicad.xyz/</a><br/>
+<strong>Gridfinity 规格参考：</strong> <a href="https://gridfinity.xyz/specification/">https://gridfinity.xyz/specification/</a></p>
+<h2>2.1 事实边界：它不是“一个已确认的 Replicad 项目”</h2>
+<p>同一条 HN 讨论串里，一位用户提到自己使用 TypeScript 的 Replicad 并喜欢可版本化的代码式设计；另一位用户分享了为孩子构建 Gridfinity 风格电子电路积木、让其使用 Micro:bit，并改造 Prusa 打印机做贴片辅助机的经历。<strong>两人是不同评论者</strong>，Hacker News 没有展示“Gridfinity 电子积木由 Replicad 制作”的充分证据。可以做技术组合方案，但不能据此归因。[R01][R05]</p>
+<p>此外，该开发者明确说明，打印机改贴片机的做法虽然成功，但不推荐照搬，因为打印机平台与贴片机需求有不少冲突。他特别认为通用吸嘴是较有复用价值的结果。[R01] 因此研究重点不应变成复制一个“成熟 3D 打印贴片机产品”。</p>
+<h2>2.2 为什么选择 Gridfinity 作为产品接口</h2>
+<p>Gridfinity 是围绕统一网格尺寸建立模块化收纳与互连生态的思路。公开规范描述常见 <strong>42 mm 网格间距、7 mm 高度单位</strong>；实际底脚几何、倒角和装配公差须根据所采用的标准版本核对，不能把“42 mm”误当成全部接口尺寸。[R06]</p>
+<p>一旦外形网格统一，上盖、分隔格、电子 PCB 底座、传感器模块、充电器、标识牌就可以组合。对于 Codex 来说，最重要的不是让模型自动“猜”结构，而是提前提供<strong>机器可读参数约束</strong>：板尺寸、定位孔、USB 方向、导线弯曲余量、散热与拆装空间。</p>
+<h2>2.3 Replicad 的真正技术价值</h2>
+<p>Replicad 是 TypeScript/JavaScript 风格的代码 CAD 工具，以 OpenCascade.js/WASM 内核计算实体，官方文档明确支持 STEP/STL 导出、圆角与倒角，且能与 Three.js 集成。它适合已有 React/Three.js 前端的项目：用 Web Worker 执行重计算，在网页中实时给出 CAD 预览。[R05][R07]</p>
+<p><strong>它与 Three.js 的职责不同：</strong> Replicad 负责边界表示（B-rep）与实体特征；Three.js 负责交互预览与资产渲染。若在浏览器仅得到三角网格、再将三角形保存成 STL，不会凭空获得可编辑的 CAD 面、孔特征或精密 STEP。</p>
+<h2>2.4 设计一个 1×1 网格电子模块的复现路径</h2>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>输出</th>
+<th>必测项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选择规范版本</td>
+<td><code>grid-standard.json</code></td>
+<td>pitch、底脚轮廓、相邻间隙</td>
+</tr>
+<tr>
+<td>输入电子板资料</td>
+<td><code>board-profile.json</code></td>
+<td>板外形、孔位、USB/电池方向</td>
+</tr>
+<tr>
+<td>编写 Replicad 模块</td>
+<td><code>module.replicad.ts</code></td>
+<td>板托、柱、通槽、固定件</td>
+</tr>
+<tr>
+<td>导出 STEP/STL</td>
+<td><code>module.step</code>, <code>module.stl</code></td>
+<td>单位、实体数、孔距</td>
+</tr>
+<tr>
+<td>打印接口试片</td>
+<td><code>interface-test.3mf</code></td>
+<td>与实际底板的可拆卸配合</td>
+</tr>
+<tr>
+<td>实装电子板</td>
+<td>实拍与测量报告</td>
+<td>线缆压力、误插、结构干涉</td>
+</tr>
+</tbody>
+</table>
+<p>建议测试三个梯度：<strong>标准底脚样片 → 空盒 → 放入真实电路板的成品</strong>。不要第一轮就尝试自动贴片机、带电池设备或高温电子元件。电气安全、散热、电池固定与线缆应力缓解须额外评价。</p>
+<h2>2.5 Codex 与浏览器之间的架构选择</h2>
+<ul>
+<li><strong>方案 A（推荐首期）</strong>：Codex 产出 Python/Build123d，后端导出 STEP/STL，前端 Three.js 预览。服务端容易做版本锁定、批量测试。</li>
+<li><strong>方案 B（前端探索）</strong>：Codex 产出 TypeScript/Replicad，浏览器 WASM 生成 B-rep，再导出 STEP/STL。适合“滑块即时试配”，但应测试 WASM 内存和浏览器兼容性。</li>
+<li><strong>方案 C（组合）</strong>：标准接口特征由 Python 生成，网页 Replicad 用于交互；需定义跨语言设计语义与参数一致性。不要让两套 CAD 内核无约束地分别修改同一零件。</li>
+</ul>
+<p><strong>优先级：P1；适合做可扩展的电子/教学模块 SKU。</strong></p>
+<hr/>
+<h1 id="section-03">03｜Build123d 旋转计算尺手镯：把数学算法变成实体产品</h1>
+<p><strong>源码：</strong> <a href="https://github.com/gcr/sliderule-bracelet">https://github.com/gcr/sliderule-bracelet</a><br/>
+<strong>具体 Notebook：</strong> <a href="https://github.com/gcr/sliderule-bracelet/blob/main/version-3.ipynb">https://github.com/gcr/sliderule-bracelet/blob/main/version-3.ipynb</a><br/>
+<strong>HN 讨论：</strong> <a href="https://news.ycombinator.com/item?id=47772725">https://news.ycombinator.com/item?id=47772725</a><br/>
+<strong>Build123d 文档：</strong> <a href="https://build123d.readthedocs.io/en/stable/">https://build123d.readthedocs.io/en/stable/</a></p>
+<h2>3.1 已核查的项目事实</h2>
+<p>开发者 <code>gcr</code> 在 CadQuery 主题的 HN 讨论中分享了自己用 Build123d 制作可佩戴的旋转计算尺手镯，用于乘法运算，并公开带图片的 Notebook。HN 评论者强调代码/Notebook 对重复刻度和复杂迭代有优势；也有人认为图形 CAD 配合外部矢量绘图可以完成类似图案，因此不要夸大为“GUI 不可能制作”。[R03][R04]</p>
+<p>源码仓库确实存在，HN 链接指向 <code>version-3.ipynb</code>。本报告核查了公开入口与讨论，<strong>未执行整份 Notebook 或独立打印</strong>，不对其最终机械公差与运算精度作实验宣称。</p>
+<h2>3.2 核心数学：对数刻度为何适合代码生成</h2>
+<p>对数把乘法变成加法：<code>log(a×b) = log(a) + log(b)</code>。如果将数值 a 映射到圆周位置 <code>θ(a) = k·log10(a)</code>，则将两条圆环相对旋转可以表现乘法关系。<strong>如何读取三位数、刻度分段和进位</strong>取决于具体刻度布局；不能只凭公式推断作品全部交互细节。</p>
+<p>关键的代码 CAD 优势在于：数百个不等间距刻度可由一个公式生成；字体、深度、内外环半径、手腕直径和刻度密度均可统一由参数驱动。每当尺寸变化时，程序自动重建整圈刻度，不必重排每个数字。</p>
+<h2>3.3 应用层建模管线</h2>
+<p><code>numeric scale -&gt; tick sampling -&gt; angle mapping -&gt; path/emboss -&gt; rigid ring -&gt; STL/STEP -&gt; fit test</code>。</p>
+<table>
+<thead>
+<tr>
+<th>子系统</th>
+<th>设计变量</th>
+<th>失效风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数值映射</td>
+<td>刻度范围、函数、角度零点</td>
+<td>刻度拥挤、读数误差</td>
+</tr>
+<tr>
+<td>外观刻字</td>
+<td>字高、雕刻深度、字体</td>
+<td>喷嘴无法分辨、字粘连</td>
+</tr>
+<tr>
+<td>双环机构</td>
+<td>环径、轴向锁定、配合间隙</td>
+<td>卡死、过松、脱落</td>
+</tr>
+<tr>
+<td>佩戴人体工学</td>
+<td>内径、边缘倒圆、重量</td>
+<td>磨擦、夹肤、易断</td>
+</tr>
+<tr>
+<td>参数可追溯</td>
+<td>单位、公式版本、校准点</td>
+<td>改一个参数后对应关系失真</td>
+</tr>
+</tbody>
+</table>
+<h2>3.4 推荐复现实验</h2>
+<ol>
+<li>不从整只手镯开始，先导出“平面刻度样片”，验证最小字高/刻度线宽；拍照与卡尺记录。</li>
+<li>制作无刻度双环试配模型，以 <strong>若干间隙等级</strong> 打印小样，找到适合具体耗材与机器的组合。</li>
+<li>保留全部数值映射算法与校准用例，验证 <code>a×b</code> 的读取对应；对边界数值进行单元测试。</li>
+<li>合并刻度与机械零件，做 10 次以上旋转操作观察磨损；不要把一次旋转成功当成寿命结论。</li>
+<li>输出 <code>parameter set + source + STEP/STL + accuracy/fit report + photo</code>。</li>
+</ol>
+<h2>3.5 适合衍生的产品</h2>
+<p>对数尺、齿轮比演示盘、可旋转密码盘、周期表齿圈、天文时间换算盘、函数图像教具、分数转小数圆盘。与传统静态模型不同，这些产品具有<strong>可交互的解释价值</strong>。结合教学场景能开发成“算法 + 参数化 CAD + 教案”三联资产。</p>
+<p><strong>建议研发：</strong> 数学实体教具生成器。优先级 P1，软件验证成本中，实体装配验证成本中。</p>
+<hr/>
+<h1 id="section-04">04｜Print-in-Place 与暂停嵌件：真正有趣、也最需要风险控制</h1>
+<p><strong>HN 经验：</strong> <a href="https://news.ycombinator.com/item?id=49984349">https://news.ycombinator.com/item?id=49984349</a><br/>
+<strong>切片器官方说明：</strong> <a href="https://help.prusa3d.com/article/insert-pause-or-custom-g-code-at-layer_120490">https://help.prusa3d.com/article/insert-pause-or-custom-g-code-at-layer_120490</a><br/>
+<strong>说明：</strong> 这是工艺类别，不是已找到的一个完整、可克隆的独立源码仓库。</p>
+<h2>4.1 先区分两种技术</h2>
+<p><strong>Print-in-Place（原位装配一次打印）</strong>：相邻活动件在同一制造任务中分开形成，通过设计间隙、支撑消除策略实现打印后能运动，如铰链、链条、连杆。<strong>暂停嵌件（pause-and-insert）</strong>：打印到指定层停止，由人加入螺母、磁铁、轴承等，再继续覆盖。这是两类不同的工作流；原位打印不必然包含人工插物。[R01][R08]</p>
+<p>HN 开发者分享了暂停打印加入金属角件再继续的经历；Prusa 官方指南明确提供按层暂停功能，也特别提醒磁铁可能被喷头吸走，必须牢固固定。[R01][R08]</p>
+<h2>4.2 最小工程模型：开合铰链</h2>
+<p>建议结构：固定叶片、运动叶片、同轴销轴/轴套；所有铰链部位定义清晰的径向和轴向间隙。最佳间隙没有通用常数：喷嘴口径、层高、材料、温度、XY补偿、打印方向会改变结果。研究应使用 0.20/0.30/0.40/0.50 mm 等 <strong>候选实验级别</strong> 做试片，而不是默认这些值均可成功。</p>
+<table>
+<thead>
+<tr>
+<th>质量层级</th>
+<th>检查项目</th>
+<th>典型失败</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAD</td>
+<td>机构活动空间、没有几何干涉</td>
+<td>轴与环相交</td>
+</tr>
+<tr>
+<td>STL</td>
+<td>水密、法线、零部件分离</td>
+<td>局部共享面被切片融合</td>
+</tr>
+<tr>
+<td>切片层</td>
+<td>喷嘴路径、桥接、支撑、孤岛</td>
+<td>小间隙被挤出线封死</td>
+</tr>
+<tr>
+<td>打印后</td>
+<td>启动扭矩、旋转角、断裂和磨损</td>
+<td>卡滞或间隙过大</td>
+</tr>
+</tbody>
+</table>
+<h2>4.3 暂停嵌入金属件的安全检查</h2>
+<ul>
+<li>尺寸：嵌件不得高出即将打印的层面；要考虑层高与真实件公差。</li>
+<li>热/碰撞：重启路径不能撞击嵌件；检查喷头、风道与金属件之间的最小空间。</li>
+<li>磁性：避免磁铁移位吸附喷头；采用适配槽与固定策略。</li>
+<li>操作：暂停后人员确认、清理、就位，再恢复；<strong>不得由 Codex 无人监管地自动恢复打印</strong>。</li>
+<li>制件：此类混合材料部件的最终强度、脱落与耐热性必须实测。</li>
+</ul>
+<h2>4.4 为什么适合 Agent，但不能完全自动化</h2>
+<p>Codex 很擅长生成多种间隙版本、自动编号、导出阵列以及写实验记录模板；Slicer 可以帮助计算暂停层位置。<strong>关键动作必须经人类门禁</strong>。对于强负载、儿童吞咽风险、食品接触、电子高温环境中的嵌件，实验评审应更严格。</p>
+<h2>4.5 可复用软件模块</h2>
+<p><code>clearance_coupon_generator</code>、<code>fit_test_matrix</code>、<code>assembly_collision_check</code>、<code>pause_layer_plan</code>、<code>slicer_inspection_required</code>、<code>physical_test_log</code>。优先做 <strong>配合试样生成器</strong>，而不是“自动打印所有可动机构”。</p>
+<p><strong>优先级：P2；有趣程度高，但对实际打印条件依赖非常高。</strong></p>
+<hr/>
+<h1 id="section-05">05｜Agent 设计产品外壳：CadQuery 与 FreeCAD MCP</h1>
+<p><strong>HN 讨论：</strong> <a href="https://news.ycombinator.com/item?id=50067325">https://news.ycombinator.com/item?id=50067325</a><br/>
+<strong>FreeCAD MCP：</strong> <a href="https://github.com/neka-nat/freecad-mcp">https://github.com/neka-nat/freecad-mcp</a><br/>
+<strong>技术性质：</strong> HN 案例经验（B）+ 开源 MCP 实现（A）。</p>
+<h2>5.1 公开案例显示的真实能力与局限</h2>
+<p>HN 有开发者表示使用 LLM 编写 CadQuery 脚本、导出 STL 和预览；另一位用户报告使用 FreeCAD MCP 做出了工作台（含裁切表、装配与五金材料）及复杂的全向轮模块。尤其值得关注的是<strong>失败描述</strong>：复杂齿轮/电机系统中，电机朝向、滑轨安装、螺钉槽可达性和布尔联合仍然出现大量返工。工作台一类长方体组合则更容易成功。[R09]</p>
+<p>因此“能生成外壳”应分成：<strong>几何生成成功、接口坐标正确、配件装得进去、可以量产打印、功能测试通过</strong>五个独立目标。再漂亮的 3D 截图，也无法证明 USB 口能插线或螺丝不顶住电池。</p>
+<h2>5.2 设计一套可验证电子外壳的工程规范</h2>
+<p><strong>必须输入的尺寸：</strong> PCB 外形长宽厚、安装孔中心坐标与孔径、连接器三维包络、按键行程、电池/屏幕位置、螺钉规格、盖板形式、目标材料与生产工艺。没有这些信息时，应生成需求缺失清单，不允许 Agent 盲猜“准确孔位”。</p>
+<p><strong>建议源文件组织：</strong> <code>enclosure_spec.json</code> -&gt; <code>pcb_mockup.py</code> -&gt; <code>bottom_case.py</code> + <code>lid.py</code> -&gt; <code>assembly.step</code> + <code>print_parts.stl</code> -&gt; <code>fit_report.json</code>。PCB 和真实标准件应当是<strong>不可任意改动的约束体</strong>，外壳为待优化目标体。</p>
+<table>
+<thead>
+<tr>
+<th>准确性门槛</th>
+<th>自动化检验</th>
+<th>需要实物确认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>孔位</td>
+<td>与输入孔中心坐标逐项比对</td>
+<td>钻孔/螺钉装入</td>
+</tr>
+<tr>
+<td>线缆口</td>
+<td>连接器包络不与壁面干涉</td>
+<td>插头插拔、应力释放</td>
+</tr>
+<tr>
+<td>螺丝柱</td>
+<td>柱体体积、剩余最薄壁厚</td>
+<td>攻丝、热熔螺母保持力</td>
+</tr>
+<tr>
+<td>上下盖</td>
+<td>CAD 碰撞检测、间隙检查</td>
+<td>卡扣耐久、拆装力</td>
+</tr>
+<tr>
+<td>散热</td>
+<td>预留通风区域/热源间距</td>
+<td>通电温升、电气安全</td>
+</tr>
+</tbody>
+</table>
+<h2>5.3 FreeCAD MCP 的实现思路</h2>
+<p>社区项目 <code>neka-nat/freecad-mcp</code> 通过 FreeCAD 内运行的 Addon/RPC，与独立 MCP Server 连接，允许 Agent 创建/编辑模型、查看文档和执行 Python；文档也描述截图与 FEM 等能力。它不是 FreeCAD 官方自带的 MCP 服务。安装分两端：FreeCAD 安装其 Addon，再由代理启动外部 MCP 进程，常见启动方式是 <code>uvx freecad-mcp</code>。[R12]</p>
+<p><strong>风险：</strong> 代码执行权限非常高。对 Agent 生成的 FreeCAD Python、读取文件的路径、网络访问和插件信任边界都要限制；不应把有权执行任意脚本的服务直接暴露到公网。对仅需本地无界面导出的任务，FreeCAD Python CLI/Build123d 往往比增加 MCP 层更少组件。</p>
+<h2>5.4 推荐初始实验：三件套外壳</h2>
+<ul>
+<li><code>E1</code>：只有四个螺钉孔和盖板的盒子，目标是校正坐标系与孔距。</li>
+<li><code>E2</code>：增加 USB-C 开孔和线缆绕行空间，目标是验证接口包络。</li>
+<li><code>E3</code>：增加 PCB 支撑柱、热熔螺母和插拔盖板，目标是验证装配公差与可维护性。</li>
+</ul>
+<p>三个实验都保留实测照片、卡尺数据和失败日志。避免从无人机、高负载机器人壳体或高压电源外壳起步。</p>
+<p><strong>优先级：P0。</strong> 这是生产需求最明确、性能可度量、相对容易建立质量门槛的类别之一。</p>
+<hr/>
+<h1 id="section-06">06｜CAD in Codex 与开源 text-to-cad：从提示词到可审计工程资产</h1>
+<p><strong>HN 方法讨论：</strong> <a href="https://news.ycombinator.com/item?id=47913203">https://news.ycombinator.com/item?id=47913203</a><br/>
+<strong>独立开源实现：</strong> <a href="https://github.com/earthtojake/text-to-cad">https://github.com/earthtojake/text-to-cad</a><br/>
+<strong>安装说明：</strong> <a href="https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md">https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md</a></p>
+<h2>6.1 HN 作者给出的四项方法论</h2>
+<p>HN “CAD in Codex” 的提交者 <code>softservo</code> 分享：①每个 STEP 对应可编辑的 Python 源；②通过指定面和边让 Agent 做精准修改；③为特征建立 Markdown 自然语言说明；④通过截图和几何约束共同核验。作者还提到希望解决 CAD 初学者的使用门槛，并支持 STEP/STL/GLB/DXF/URDF 输出。[R10]</p>
+<p>这四点非常重要：与其把复杂实体转成提示词，不如给 Agent 一个<strong>受约束、有反馈、可以重建的代码工程</strong>。缺点是 HN 评论并未给出完整复现日志或第三方基准；单凭一段帖子不能证明任意模型都能稳定自动生成。</p>
+<h2>6.2 独立核查 <code>earthtojake/text-to-cad</code></h2>
+<p>该仓库是可验证的开源项目，README 声明 MIT 许可，提供包含 Codex、Claude Code 等的技能/插件集成。项目的公开功能涵盖 Build123d/OpenCASCADE CAD、STEP/STL/GLB/3MF、DXF、PCB、制造检查、CalculiX 应力分析、工程图、渲染、OrcaSlicer 流程以及机器人描述等。[R11]</p>
+<p>其安装文档还提供了 Codex 插件市场的显式命令（见附录），比“一行 curl 脚本直接执行”更适合需要审计安装过程的工作站。<strong>代码审计、权限范围、实际本机兼容性仍需由使用者验证</strong>。不要因为 README 罗列了功能，就把所有模块视为已在本报告完成端到端测试。</p>
+<h2>6.3 关键架构：有语义的 CAD Source of Truth</h2>
+<ul>
+<li><strong>一零件一源码</strong>：<code>motor_mount.py</code> 对应 <code>motor_mount.step</code> 与 <code>motor_mount.stl</code>；派生二进制可重建，不手工反向修改 STL。</li>
+<li><strong>参数契约</strong>：<code>params.json</code> 列明单位、尺寸上下限、材料、机器配置与禁止更改的孔位。</li>
+<li><strong>面/边特征定位</strong>：优先用特征名、位置/法线/面积等几何性质描述选取，避免仅用易变化的拓扑索引。</li>
+<li><strong>可视反馈</strong>：固定角度六视图、剖切图、B-rep 特征清单与机器可读几何报告共同反馈给 Agent。</li>
+<li><strong>版本追溯</strong>：源文件哈希、内核版本、导出参数、质量报告与实物反馈挂同一 <code>design_revision</code>。</li>
+</ul>
+<h2>6.4 一个可靠的 Agent 循环</h2>
+<ol>
+<li>解析规格：缺失尺寸和不确定装配约束标记为 <code>UNKNOWN</code>。</li>
+<li>产出设计计划与参数 Schema，不允许一边推理一边随意更改关键尺寸。</li>
+<li>Codex 修改 Build123d Python，运行脚本导出 STEP 和 STL。</li>
+<li>在实体层检查有效性、几何包围盒、体积、孔距、面/边识别；失败则停止导出可交付标签。</li>
+<li>网格层检查 watertight、法线、非退化三角面和尺度；注意这些<strong>不替代最薄壁厚与切片检查</strong>。</li>
+<li>切片器使用固定配置生成预览与用料估算，执行人工评审。</li>
+<li>打印并量测，失败标签进入新 revision，更新公差模型与回归测试。</li>
+</ol>
+<h2>6.5 常见失效模式及回退策略</h2>
+<table>
+<thead>
+<tr>
+<th>故障</th>
+<th>原因倾向</th>
+<th>工程策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆角失败</td>
+<td>边太短、非流形、自相交</td>
+<td>降低半径、重排特征顺序、换选边条件</td>
+</tr>
+<tr>
+<td>尺寸正确但装不进</td>
+<td>连接器实际三维包络遗漏</td>
+<td>标准件作为碰撞体；照片标注位置</td>
+</tr>
+<tr>
+<td>STEP 与 STL 不一致</td>
+<td>导出基准/坐标/比例不统一</td>
+<td>同一内存实体导出，哈希与 bbox 对账</td>
+</tr>
+<tr>
+<td>Agent 改错面</td>
+<td>拓扑索引变化</td>
+<td>稳定几何签名、特征标签与剖视图</td>
+</tr>
+<tr>
+<td>成品打印失败</td>
+<td>薄壁、悬空、翘曲或工艺偏差</td>
+<td>分级关卡，不把 CAD valid 当 print verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优先级：P0。</strong> 本章的方法比单个演示模型更值得复用。需要特别指出：GitHub 仓库与 HN 提交是否存在作者/版本关系，目前的证据不足以确定，报告不会合并归属。</p>
+<hr/>
+<h1 id="section-07">07｜Adam CADAM：浏览器 Text-to-CAD 和可交互参数滑块</h1>
+<p><strong>GitHub：</strong> <a href="https://github.com/Adam-CAD/CADAM">https://github.com/Adam-CAD/CADAM</a><br/>
+<strong>HN 发布：</strong> <a href="https://news.ycombinator.com/item?id=45140921">https://news.ycombinator.com/item?id=45140921</a><br/>
+<strong>项目许可：</strong> GPL-3.0（官方 README）。</p>
+<h2>7.1 项目的真实定位</h2>
+<p>Adam 团队于 2025-09-05 在 Hacker News 宣布将其浏览器端 Text-to-CAD 应用开源。项目的主要产品体验是：输入文字或参考图片 → AI 生成 OpenSCAD → 自动提取可调参数 → 显示滑块 → 在浏览器重新编译几何并输出模型。HN 原作者还说明，其对话代理和代码代理分开，简单参数变化尽量走确定性改写，不再次调用模型。[R13]</p>
+<p>公开仓库 <code>Adam-CAD/CADAM</code> README 列出 React 19/TypeScript/TanStack Start/Vite、Three.js/React Three Fiber、OpenSCAD WebAssembly、Supabase 和 Anthropic API 等组件；支持 STL/SCAD/DXF，BOSL/BOSL2/MCAD 库，并提供多种展示用的 benchmark 模型。README 中展示的复杂发动机等案例代表<strong>项目自述的演示能力</strong>，不等于第三方检验的尺寸/功能验证。[R14]</p>
+<h2>7.2 核心数据流拆解</h2>
+<p><code>Prompt + image</code> → <code>conversation agent</code> → <code>code-generation agent</code> → <code>OpenSCAD source</code> → <code>parameter extraction</code> → <code>Web UI controls</code> → <code>OpenSCAD WASM worker</code> → <code>mesh</code> → <code>Three.js</code> → <code>STL/SCAD/DXF export</code>。</p>
+<p>这里最聪明的工程思想不是“生成代码”本身，而是把两类操作区分：<strong>语义上的设计变化</strong>需要大模型；<strong>既定参数值的微调</strong>应该是可重复、低延迟的确定性计算。这降低了调用成本，也避免同一模型在只改长度时被 LLM 随机改造。</p>
+<h2>7.3 独立重建时的四个技术难点</h2>
+<p><strong>参数提取。</strong> README 说明存在自动参数提取和快速更新。若仅靠正则字符串替换，必须处理同名变量、作用域、表达式以及多处引用；建议从长期架构改成受 Schema 约束的声明式参数清单和受控代码生成，而不是允许用户输入任意代码后直接盲改。</p>
+<p><strong>浏览器 CPU/WASM。</strong> CSG 大模型重新编译会阻塞交互，因此 CAD 内核应置于 Web Worker，建立任务取消、内存上限与缓存策略。编辑器应展示“正在构建 / 建模错误 / 模型不符合限制”的真实状态。</p>
+<p><strong>交互与制造脱钩。</strong> Three.js 可正确展示漂亮网格，但看不到隐藏空腔的最薄壁厚、全部装配间隙，也不等于 STEP 的精确实体。OpenSCAD 并不原生提供完整 STEP 语义；精密 CAD 仍需 Build123d/CadQuery/FreeCAD 等 B-rep 路径。[R13][R14][R15]</p>
+<p><strong>安全与许可。</strong> 应对用户输入和 AI 代码施加运行时间/资源/权限上限，限制注入式滥用；若复制 CADAM 的受 GPL-3.0 约束的源码，须按实际分发/部署方式履行许可证义务。仅参照 UI 思路并独立实现，不等于自动继承或规避具体源码许可义务；重要商业方案应咨询合格法律人员。</p>
+<h2>7.4 HN 社区支持与批评均需重视</h2>
+<p>有人报告通过文本描述得到带圆角和孔的尺寸化零件；也有人质疑，复杂真实设计很难被完整语言描述，实际会需要大量反复沟通。另有评论提醒 OpenSCAD 与 STEP 的边界。这些观点并不矛盾：文字适合表达<strong>功能目标和可枚举约束</strong>；复杂曲面、装配关系和关键特征往往需要<strong>在 3D 视图选择面/边、尺寸图以及实物照片</strong>配合。[R13]</p>
+<h2>7.5 对 3D-worlds Web UI 的具体设计建议</h2>
+<p>建议引入 <strong>双模式编辑器</strong>：左侧自然语言简报 + 参数面板；中央 Three.js/Replicad CAD 预览；右侧制造质量报告；下方固定标签页分别展示源代码、STEP/STL/3MF 文件、切片估算与物理验证日志。以 <code>revision_id</code> 为锚点展示来源、许可证、尺寸和检测状态。基础滑块必须调用确定性参数生成，不再请求大模型。</p>
+<p><strong>优先级：P0（借鉴 UI/流程），源码直接纳入项目需先完成 GPL 分析。</strong></p>
+<hr/>
+<h1 id="section-08">08｜跨项目横向比较：选谁作为技术基础？</h1>
+<h2>8.1 为什么 OpenSCAD、Replicad 和 Build123d 不能简单替换</h2>
+<table>
+<thead>
+<tr>
+<th>工具/路线</th>
+<th>主要几何表示</th>
+<th>适合任务</th>
+<th>弱点/注意</th>
+<th>推荐角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenSCAD</td>
+<td>参数化 CSG → 网格</td>
+<td>花纹、阵列、基本结构、快速文本生成</td>
+<td>任意后期圆角/复杂曲面难；无完整 CAD 特征树</td>
+<td>艺术和简易实物</td>
+</tr>
+<tr>
+<td>Replicad</td>
+<td>JS/TS + OCCT B-rep</td>
+<td>浏览器参数化 CAD、Three.js 集成</td>
+<td>WASM 内存、复杂特征稳定性需测</td>
+<td>前端交互 CAD</td>
+</tr>
+<tr>
+<td>Build123d</td>
+<td>Python + OCCT B-rep</td>
+<td>精密孔位、装配结构、STEP/制造自动化</td>
+<td>拓扑选边和内核运算可能失败</td>
+<td><strong>主制造引擎</strong></td>
+</tr>
+<tr>
+<td>CadQuery</td>
+<td>Python + OCCT B-rep</td>
+<td>工作面链式建模、脚本 CAD</td>
+<td>CAD 任务需有明确规格</td>
+<td>备选/生态兼容</td>
+</tr>
+<tr>
+<td>FreeCAD + MCP</td>
+<td>GUI/文档 + OCCT 内核</td>
+<td>GUI 辅助、复杂建模、工程审查</td>
+<td>安装更复杂；MCP 可运行代码</td>
+<td>专家修订台</td>
+</tr>
+<tr>
+<td>Three.js</td>
+<td>三角网格渲染</td>
+<td>网页浏览、预览、展示</td>
+<td>缺少 CAD 原始语义</td>
+<td><strong>前端展示引擎</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>8.2 定性评估矩阵（非实测成绩）</h2>
+<p>评分范围 1~5（越高表示越适合报告设定的目标）。维度为：可重复性、CAD 精密性、Web 集成、低门槛教学、制造闭环潜力。分数由本报告根据软件架构/公开案例评定，<strong>不是产品排行榜或统计实验</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th style="text-align:right">可重复</th>
+<th style="text-align:right">精密性</th>
+<th style="text-align:right">Web</th>
+<th style="text-align:right">教学</th>
+<th style="text-align:right">制造闭环</th>
+<th>初期等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Truchet + OpenSCAD</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>Gridfinity + Replicad</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">3</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>数学计算尺 + Build123d</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Print-in-Place/嵌件</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>外壳 + FreeCAD MCP</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">4</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>Codex + text-to-cad 方法</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">5</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>CADAM Web 模式</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+<td>P0（UI）</td>
+</tr>
+</tbody>
+</table>
+<h2>8.3 决策逻辑</h2>
+<ul>
+<li>想验证真正可出售的尺寸定制产品 → <strong>外壳/配件 + Build123d</strong>，先从可测量的结构件开始。</li>
+<li>想让 Codex 在浏览器直接设计 → <strong>CADAM 的产品交互 + Replicad 的 B-rep 技术</strong>，但保留服务端一致性与质量门禁。</li>
+<li>想做有辨识度的文创内容 → <strong>Truchet、多色装饰、数学计算尺</strong>。</li>
+<li>想测试物理机构智能 → <strong>Print-in-Place 试样和装配件</strong>，严格区分几何验证和实体实验。</li>
+</ul>
+<hr/>
+<h1 id="section-09">09｜落地 3D-worlds：新的 CAD-native 子系统蓝图</h1>
+<h2>9.1 与现有仓库的接口</h2>
+<p><code>1998x-stack/3D-worlds</code> 当前已有 Three.js 模型资源、GLB、网页预览、基础 STL/3MF 导出与几何审计。现有打印说明也明确：从以米为单位、Y-up 的 GLB 转成毫米、Z-up 的 STL，<strong>不保证薄壁、装配或可制造性</strong>；真正的可编辑 STEP 应从 CAD-native 建模源头生成。[R16]</p>
+<p>应追加 <code>cad/</code> 和 <code>printing/</code>，保留 <code>src/models/</code> 的可视化场景源。历史资产 ID 不应在升级为可打印模型时被静默覆盖。每个 CAD 成果指向一个独立 <code>print_variant</code>，持有原始模型、材料配置、状态与质量证据。</p>
+<pre><code class="language-text">3D-worlds/
+├── cad/
+│   ├── parts/                 # part_id.py / Build123d
+│   ├── assemblies/            # assembly_id.py
+│   ├── profiles/              # printer/material/fit schema
+│   ├── templates/             # enclosure/gridfinity/teaching
+│   └── examples/              # reproducible showcases
+├── printing/
+│   ├── generate.py            # CAD source → STEP/STL/GLB
+│   ├── validate_brep.py       # solids, volume, holes
+│   ├── validate_mesh.py       # watertight, degenerate faces
+│   ├── slice_orca.py          # opt-in, pin CLI version
+│   └── audit.py               # provenance + JSON report
+├── catalog/
+│   └── printable_models.json
+├── .codex/skills/
+│   └── printable-cad/{SKILL.md,references/,scripts/,assets/,examples/}
+└── docs/
+    ├── manufacturing-contract.md
+    └── verification-matrix.md
+</code></pre>
+<h2>9.2 数据 Schema：可审计比“模型数量”更重要</h2>
+<pre><code class="language-json">{
+  "asset_id": "cad.enclosure.sensor-v1",
+  "design_revision": "r001",
+  "source": {"engine": "build123d", "file": "cad/parts/sensor.py"},
+  "units": "mm",
+  "design_parameters": {"width": 80, "height": 30, "wall": 2.4},
+  "target": {"process": "FDM", "material": "PLA", "printer_profile": "PROFILE_ID"},
+  "outputs": {"step": "...", "stl": "...", "glb": "..."},
+  "quality": {"brep_valid": null, "mesh_watertight": null,
+              "slicer_reviewed": false, "physically_verified": false},
+  "evidence": {"source_sha256": "...", "report": "...", "photo": null}
+}
+</code></pre>
+<p>上面是<strong>建议 Schema 草案</strong>，不是现有仓库已接受的格式。<code>null</code> 表示未执行，不能默认为 PASS。指定 <code>PROFILE_ID</code> 时必须落地为实际可复现的切片配置版本。涉及外部作品还需 <code>license</code>, <code>author</code>, <code>source_url</code>, <code>license_evidence</code> 字段。</p>
+<h2>9.3 质量门禁：五步必须分级</h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>必要证据</th>
+<th>自动发布策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S0 设计完成</td>
+<td>源代码、参数、组件说明</td>
+<td>允许内部预览</td>
+</tr>
+<tr>
+<td>S1 CAD 几何通过</td>
+<td>Valid B-rep、bbox、体积、约束测试</td>
+<td>可以生成候选 STL</td>
+</tr>
+<tr>
+<td>S2 网格通过</td>
+<td>STL/3MF 单位、水密、法线、尺寸</td>
+<td>可标注“待切片复核”</td>
+</tr>
+<tr>
+<td>S3 切片通过</td>
+<td>特定机器/材料配置、逐层预览记录</td>
+<td>允许生成“试打印候选”</td>
+</tr>
+<tr>
+<td>S4 实物验证</td>
+<td>实际照片、关键尺寸量测、工况测试</td>
+<td>可标注“经过测试”</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要：</strong> 网格封闭不代表几何无自相交，切片成功也不代表长期机械强度。不同生产目标采用不同的工艺约束；未经测试的模型不应被描述成“量产级”。</p>
+<h2>9.4 六周实施路线</h2>
+<p><strong>W1 / P0：</strong> 固化 Python 环境与 Build123d 版本；新增参数 Schema、三种基础模型、STEP/STL 同源导出。<br/>
+<strong>W2 / P0：</strong> 写 B-rep/mesh QA，增加失败夹具（开孔错误、悬空、薄壁、错单位），生成审核 JSON。<br/>
+<strong>W3 / P0：</strong> 外壳模板 + PCB Mockup + 装配干涉检查；试打印与量测。<br/>
+<strong>W4 / P1：</strong> Gridfinity 标准脚位、可复用组件库、数学教具试样。<br/>
+<strong>W5 / P1：</strong> 页面参数控件、源文件展示、打印状态徽记、下载预览；探索 Replicad Web Worker。<br/>
+<strong>W6 / P2：</strong> Truchet 分色试验、PIP 间隙阵列、验证日志回流与成本面板。</p>
+<p>每周都应有 <strong>可恢复的真实构建产物</strong>，而不是仅有 README 或 AI 截图。</p>
+<hr/>
+<h1 id="section-10">10｜最小可行实验方案与验收指标</h1>
+<h2>10.1 测试矩阵（设计建议）</h2>
+<table>
+<thead>
+<tr>
+<th>测试集</th>
+<th style="text-align:right">建议数量</th>
+<th>自动验收</th>
+<th>必要实物检验</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单零件基础件</td>
+<td style="text-align:right">10</td>
+<td>尺寸、体积、孔位、STEP/STL 一致性</td>
+<td>卡尺尺寸</td>
+</tr>
+<tr>
+<td>标准接口/Gridfinity</td>
+<td style="text-align:right">6</td>
+<td>接口版本、bbox、装配间隙</td>
+<td>与底板真实配合</td>
+</tr>
+<tr>
+<td>电子外壳</td>
+<td style="text-align:right">6</td>
+<td>连接器不碰撞、螺丝柱孔距</td>
+<td>上下盖与 PCB 实装</td>
+</tr>
+<tr>
+<td>数学教具</td>
+<td style="text-align:right">4</td>
+<td>刻度函数测试、文字尺寸</td>
+<td>读数与转动</td>
+</tr>
+<tr>
+<td>多色花纹/布料</td>
+<td style="text-align:right">4</td>
+<td>分色坐标一致、种子可复现</td>
+<td>层间/织物附着</td>
+</tr>
+<tr>
+<td>可动关节</td>
+<td style="text-align:right">6</td>
+<td>部件不相交、切片间距</td>
+<td>启动扭矩、磨损</td>
+</tr>
+</tbody>
+</table>
+<p>上述数量是适合第一轮测试的<strong>规划建议</strong>，不是对现有项目成果的统计。建议每类至少保留一组故意失败的反例数据，以验证 Agent 能否正确拒绝错误模型。</p>
+<h2>10.2 记录哪些客观指标</h2>
+<ul>
+<li><strong>几何</strong>：尺寸误差（mm）、孔中心误差（mm）、有效实体数量、体积、模型是否封闭、导出文件哈希。</li>
+<li><strong>制造</strong>：切片耗材估算（g）、估算时间、支撑体积、悬空岛数量/类型（切片器支持时）、失败批次原因。</li>
+<li><strong>实物</strong>：实测长宽高、配合力/操作感、可动角度、成品数量、照片；关键负载件需另做工程测量。</li>
+<li><strong>Agent</strong>：首次几何通过率、平均修复轮数、人工修改数、回归失败率、可重现构建率、单模型工具调用成本。</li>
+</ul>
+<p>需要同时记录分母。例如“3/5 个样本首次几何检查通过”有意义；“成功率很高”则不可审计。</p>
+<h2>10.3 安装与集成注意事项</h2>
+<p><strong>CADAM 本地开发示例</strong>（项目 README 给出的方向）：</p>
+<pre><code class="language-bash">git clone https://github.com/Adam-CAD/CADAM.git
+cd CADAM
+npm install
+npx supabase start
+npm run dev
+</code></pre>
+<p>需根据仓库配置准备环境变量、AI API 与 Supabase 服务；本报告没有实际运行上述命令。仓库采用 GPL-3.0，产品集成前核查许可证义务。[R14]</p>
+<p><strong>text-to-cad 的 Codex 插件安装方式</strong>（来自其公开安装文档，请先审查来源与权限）：</p>
+<pre><code class="language-bash">codex plugin marketplace add earthtojake/text-to-cad --ref latest
+codex plugin add text-to-cad@earthtojake
+</code></pre>
+<p>这是该项目的可选插件流程，不等于本研究在当前 Codex 版本已执行成功。官方文档也指出不同安装路径可能出现重复插件，首次尝试建议隔离环境。[R17]</p>
+<p><strong>Build123d 程序化出口（概念代码）</strong>：</p>
+<pre><code class="language-python">from build123d import Box, export_step, export_stl
+part = Box(40, 30, 10)
+assert part.volume &gt; 0
+export_step(part, "part.step")
+export_stl(part, "part.stl")
+</code></pre>
+<p>此例展示两种格式来源于同一 CAD 实体，不含壁厚、装配或物理打印认证。要做制造审计还须增加特征、碰撞、网格、切片检查。[R15]</p>
+<hr/>
+<h1 id="section-11">11｜综合结论与采购/技术决策</h1>
+<p><strong>先做系统，再扩充模型数量。</strong> 在 7 个方向中，真正共用的底座是 CAD-as-code、明确规格与坐标系、可确定重建、分阶段验证。把每个 demo 直接转换成海量 STL 并不会形成长期壁垒。未来的可销售商品最好配有参数源、机器可读规格、材质假设、说明书、版本与实测证据。</p>
+<p><strong>路线优先级：</strong></p>
+<ul>
+<li><strong>P0 / 主线</strong>：Build123d + Codex + 制造质量关卡；以电子外壳为第一个真实使用场景；研究 text-to-cad 技能组织与 CADAM Web UI。</li>
+<li><strong>P1 / 标准产品库</strong>：Gridfinity 模块、电路板支架、数学机械教具；提供模型源、测量与版本对账。</li>
+<li><strong>P2 / 差异化探索</strong>：Truchet 多色布料、打印中嵌件、原位装配机构；投入必须建立在固定机型的实验记录之上。</li>
+</ul>
+<p><strong>不建议的捷径：</strong> 将 Three.js/GLB 当工程 CAD 源、直接信任 LLM 所谓“可打印”、把一次切片成功说成真实机械强度合格、混淆不同 HN 评论者的独立工作，或在没有核验授权的情况下打包再分发第三方源代码。</p>
+<p>这份报告是面向工程决策的<strong>公开资料研究</strong>，不是实验室验证或法规合规认证。</p>
+<hr/>
+<h1 id="section-12">附录 A｜可直接交给 Codex 的工程研究任务书</h1>
+<pre><code class="language-text">角色：资深 CAD 自动化工程师、FDM 制造与可复现实验负责人。
+目标：为现有 3D-worlds 新增独立 CAD-native 生产链。
+原则：原有 Three.js/GLB 流水线保持兼容，不得覆盖历史资产 ID。
+
+第一阶段：读取仓库和当前 docs/print-pipeline.md，盘点已有能力；
+建立 requirements and gaps 表，不凭空宣称已测试。
+第二阶段：创建 Build123d 参数源、最小单位与几何契约，
+统一 mm/Z-up；建立 STEP/STL/GLB 派生输出。
+第三阶段：新增三套示例：电子外壳、Gridfinity 适配模块、数学刻度盘。
+每套都提供 source.py、params.json、输出报告、失败反例和测试。
+第四阶段：独立 QA，至少包含 CAD 实体有效性、bbox、孔位、
+网格有效性、SHA-256、输出版本和依赖版本。
+第五阶段：制作可人工审核的切片准备包，但不自动发起实体打印。
+第六阶段：提供网页参数编辑与三视图、源代码、审核报告对照。
+第七阶段：执行测试、生成提交记录和 docs/verification.md，
+任何没执行的测试必须标记 NOT_RUN，不得写成 PASS。
+
+产出：结构化源码 + 示例模型 + 文档 + CI + 质量证据 + PR。
+禁止：下载运行不可信第三方脚本；虚构实物验证；取消人类门禁；
+把导出 STL 视为全面可制造证明；无依据改动既有资产许可。
+</code></pre>
+<h1 id="section-13">附录 B｜来源与核查范围</h1>
+<p>下表 URL 均指向<strong>原始 HN 评论、项目源仓库或正式技术文档</strong>。研究时间为 2026-11-17。页面后来可能更新，因此需要在实际复现时固定 commit、依赖版本与下载哈希。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>来源</th>
+<th>类型 / 用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td><a href="https://news.ycombinator.com/item?id=49984349">https://news.ycombinator.com/item?id=49984349</a></td>
+<td>HN 经验，OpenSCAD、Replicad、Gridfinity、嵌件等</td>
+</tr>
+<tr>
+<td>R02</td>
+<td><a href="https://github.com/jeffbarr/TruchetTilings">https://github.com/jeffbarr/TruchetTilings</a></td>
+<td>Truchet 原项目及功能说明</td>
+</tr>
+<tr>
+<td>R03</td>
+<td><a href="https://news.ycombinator.com/item?id=47772725">https://news.ycombinator.com/item?id=47772725</a></td>
+<td>CadQuery / Build123d 旋转计算尺讨论</td>
+</tr>
+<tr>
+<td>R04</td>
+<td><a href="https://github.com/gcr/sliderule-bracelet/blob/main/version-3.ipynb">https://github.com/gcr/sliderule-bracelet/blob/main/version-3.ipynb</a></td>
+<td>数学手镯 Notebook</td>
+</tr>
+<tr>
+<td>R05</td>
+<td><a href="https://replicad.xyz/">https://replicad.xyz/</a></td>
+<td>Replicad 产品/技术说明</td>
+</tr>
+<tr>
+<td>R06</td>
+<td><a href="https://gridfinity.xyz/specification/">https://gridfinity.xyz/specification/</a></td>
+<td>Gridfinity 规范来源</td>
+</tr>
+<tr>
+<td>R07</td>
+<td><a href="https://github.com/sgenoud/replicad/blob/main/packages/replicad-docs/docs/use-as-a-library.md">https://github.com/sgenoud/replicad/blob/main/packages/replicad-docs/docs/use-as-a-library.md</a></td>
+<td>Replicad JS/WASM/STEP 集成说明</td>
+</tr>
+<tr>
+<td>R08</td>
+<td><a href="https://help.prusa3d.com/article/insert-pause-or-custom-g-code-at-layer_120490">https://help.prusa3d.com/article/insert-pause-or-custom-g-code-at-layer_120490</a></td>
+<td>Prusa 暂停嵌件安全操作</td>
+</tr>
+<tr>
+<td>R09</td>
+<td><a href="https://news.ycombinator.com/item?id=50067325">https://news.ycombinator.com/item?id=50067325</a></td>
+<td>LLM CAD / FreeCAD MCP 经验与难点</td>
+</tr>
+<tr>
+<td>R10</td>
+<td><a href="https://news.ycombinator.com/item?id=47913203">https://news.ycombinator.com/item?id=47913203</a></td>
+<td>CAD in Codex 方法论</td>
+</tr>
+<tr>
+<td>R11</td>
+<td><a href="https://github.com/earthtojake/text-to-cad">https://github.com/earthtojake/text-to-cad</a></td>
+<td>独立 text-to-cad 源码与 README</td>
+</tr>
+<tr>
+<td>R12</td>
+<td><a href="https://github.com/neka-nat/freecad-mcp">https://github.com/neka-nat/freecad-mcp</a></td>
+<td>FreeCAD MCP 开源实现</td>
+</tr>
+<tr>
+<td>R13</td>
+<td><a href="https://news.ycombinator.com/item?id=45140921">https://news.ycombinator.com/item?id=45140921</a></td>
+<td>Adam 项目 HN 开源声明与社区争议</td>
+</tr>
+<tr>
+<td>R14</td>
+<td><a href="https://github.com/Adam-CAD/CADAM">https://github.com/Adam-CAD/CADAM</a></td>
+<td>CADAM 技术栈、安装、GPL、示例</td>
+</tr>
+<tr>
+<td>R15</td>
+<td><a href="https://build123d.readthedocs.io/en/stable/">https://build123d.readthedocs.io/en/stable/</a></td>
+<td>Build123d 几何 API 与 STEP/STL</td>
+</tr>
+<tr><td>R16</td>
+<td><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md">https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md</a></td>
+<td>现有模型库打印流程边界</td>
+</tr>
+<tr>
+<td>R17</td>
+<td><a href="https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md">https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md</a></td>
+<td>Codex 插件安装方式</td>
+</tr>
+<tr>
+<td>R18</td>
+<td><a href="https://github.com/OrcaSlicer/OrcaSlicer/wiki/cli_mode">https://github.com/OrcaSlicer/OrcaSlicer/wiki/cli_mode</a></td>
+<td>OrcaSlicer CLI 与自动化</td>
+</tr>
+<tr>
+<td>R19</td>
+<td><a href="https://3mf.io/spec/">https://3mf.io/spec/</a></td>
+<td>3MF 格式与国际标准</td>
+</tr>
+<tr>
+<td>R20</td>
+<td><a href="https://build123d.readthedocs.io/en/stable/topology_selection.html">https://build123d.readthedocs.io/en/stable/topology_selection.html</a></td>
+<td>B-rep 面/边选择策略</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核查边界：</strong> 已阅读并对照上述的公开网页与项目 README/资料；不声称已克隆、构建、测试或直接复现所有外部项目。项目许可证、部署要求、安全行为与输出质量须以实施时锁定的源码版本为准。</p>
+</main></body></html>
