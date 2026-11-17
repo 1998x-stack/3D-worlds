@@ -1,114 +1,83 @@
 ---
 name: threejs-model-builder
-description: Create, validate, catalog, preview and distribute reusable Three.js 3D models for the 3D Worlds asset library, with glTF export and MCP lookup compatibility.
+description: Create, extend, inspect, import, optimize, validate and publish licensed 3D assets in the 3D Worlds Three.js gallery and MCP catalog. Use for new procedural props, recipe-based collections, GLB ingestion, WebP/AVIF previews, Meshopt LODs, object storage and troubleshooting.
+license: MIT
+metadata:
+  author: 3D Worlds
+  version: "2.0.0"
 ---
 
-# Three.js Model Builder · Skill v1
+# Three.js Model Builder — 3D Worlds Skill v2
 
-## When to activate
+This Skill is a **repository-specific operator contract**, not a general-purpose 3D generator. It is mirrored verbatim in `.claude/skills/`, `.codex/skills/` and `.pi/skills/` so each client can load local resources independently. Resolve every `references/`, `assets/`, `examples/` or `scripts/` path **relative to this SKILL.md directory**, not the shell working directory. Execute project commands from the repository root.
 
-Use when asked to create a new 3D object, extend the 3D Worlds gallery,
-prepare an importable game prop, register model metadata, or make a model
-discoverable via local MCP. Never claim a mesh is production-grade without
-topology, performance, visual and license evidence.
+## When to activate / choose a workflow
 
-## Inputs and requirements
+| User goal | Read before modifying files |
+| --- | --- |
+| Create a primitive, stylized prop, or named assembly | [Workflows](references/WORKFLOWS.md), [Geometry contract](references/MODEL-GEOMETRY.md), [Taxonomy](references/TAXONOMY.md) |
+| Add many recipe-based assets or an entire category | [Workflows](references/WORKFLOWS.md), [Taxonomy](references/TAXONOMY.md), [Catalog & provenance](references/CATALOG-PROVENANCE.md) |
+| Import someone else's GLB or a batch | [GLB ingestion](references/GLB-INGESTION.md), [Catalog & provenance](references/CATALOG-PROVENANCE.md) |
+| Produce previews, compressed GLBs or LOD variants | [Rendering & LOD](references/RENDER-LOD.md), [QA](references/QA-TROUBLESHOOTING.md) |
+| Publish Pages, SQLite, MCP, storage or API | [Publishing & MCP](references/PUBLISH-MCP.md), [QA](references/QA-TROUBLESHOOTING.md) |
+| Investigate broken geometry, exports or CI | [QA & troubleshooting](references/QA-TROUBLESHOOTING.md), then the workflow-specific guide |
+| Verify upstream authority for a design decision | [External sources](references/EXTERNAL-SOURCES.md) |
 
-Collect/derive: object name, use context (game/web/print), dimensions in meters,
-target triangle budget, geometry hierarchy, style/level of detail, material
-palette, whether animation/colliders/LOD are needed, SPDX license, author,
-and whether an external source needs permission checks.
+**Never read every reference by default.** Load only the selected workflow and related reference(s), then inspect actual repository code. These files augment, not override, `AGENTS.md` and existing code.
 
-If unknown, use these defaults only for new **prototypes**: +Y up, floor at
-y=0, centered x/z, meters, MeshStandardMaterial, primitive mesh design,
-no rig, MIT original code license, no external textures.
+## Non-negotiable rules
 
-## Required workflow
+1. Original generators export `createX()` and return a `THREE.Group`; no DOM, global scene, renderer or network side effects. Name meaningful parts; meter units, +Y up, x/z centered, floor at y=0.
+2. `catalog/models.json` is the canonical metadata authoring source, NOT generated SQLite, static projection, thumbnails or optimized GLB files. Preserve published asset IDs; append a new slug/version instead of silently replacing incompatible geometry.
+3. Confirm license, original author and provenance. An external GLB requires actual reuse rights evidence; a URL or SPDX-shaped string alone does **not** prove a grant. Never invent authors, licenses, provenance, generated artifacts, topology, results or screenshots.
+4. Third-party files must be reviewed and processed by the local GLB importer; do not execute arbitrary imported code. Dry-run and inspect before `--apply`.
+5. Treat `public/thumbs/`, `public/generated/`, `.cache/` and `data/catalog.sqlite` as generated outputs. Do not claim these files are versioned in Git; they are reproduced in CI. Static Pages does not run Python, MCP or the live SQLite API.
+6. For game-ready claims require visual, performance, export/import and usage checks. For 3D printing require a separate watertight/manufacturing inspection; glTF validity is insufficient. An unrigged character must not be described as rigged.
+7. Report verification evidence and limitations, distinguishing executed commands from proposed checks. Do not paste access keys or make private buckets public.
 
-1. **Survey existing assets.** Inspect `catalog/models.json` and run
-   `python3 scripts/catalog.py validate`. Check duplicate slugs/IDs.
-2. **Write a model brief.** Record target dimensions, silhouette, assembly
-   breakdown, interaction points and whether model is stylized/blockout.
-3. **Scaffold:** run
-   `python3 scripts/new_model.py --slug example --category furniture --title "Example" --title-zh "示例" --dimensions 1 1 1`.
-   Or add a fully specified module and manifest record by hand.
-4. **Implement.** Put original, named meshes in
-   `src/models/<snake_case>.js` exporting one `createX()` that returns a
-   `THREE.Group`. Import helpers from `./primitives.js`; do not touch
-   global scene, window, lights, renderer, or DOM. Use +Y up and meters.
-5. **Inspect.** Run Vite, filter by category, click card, orbit, reset and
-   zoom. Check front/back, normals, local pivot, dimensions, material,
-   shadows, performance and phone rendering.
-6. **Deliver reusable form.** Confirm "copy Three.js source" includes
-   helper code, the generated module and a `scene.add(createX())` example.
-   Download the GLB and load it in an independent GLTFLoader viewer.
-7. **Register and index.** Include stable asset ID, localized title, tags,
-   category, dimensions, style, license, creator and path. Run
-   `python3 scripts/catalog.py build`.
-8. **Validate:** run `python3 -m unittest discover -s tests -v` and
-   `npm run build`. Inspect GitHub Pages route and the MCP `get_model`,
-   `get_threejs_source` and `search_models` results.
-9. **Report.** Provide file paths, asset ID, catalog count, license,
-   reproducible commands, actual test results and remaining limitations.
+## Input brief (infer conservatively, request only if blocking)
 
-## Hard constraints
+Record: desired object, function/game usage, category, dimensions **[width,height,depth] in meters**, visual style, reference constraints, named subparts, collision/animation needs, texture and LOD goals, triangle budget, author, license, rights evidence, and export target. Use [the brief template](assets/model-brief.md). For an unspecified **prototype**, default to original stylized geometry, procedural materials, +Y up, no animations, no external assets. A sketch is not a dimension/rights certificate.
 
-- Do not fabricate model screenshots, committed GLBs, verified topology,
-  animation rigs, provenance or licensing.
-- Do not ingest commercial meshes without evidence of reuse rights.
-- Do not put a live SQLite/MCP process behind GitHub Pages. MCP is a
-  separate local stdio process.
-- Use procedural geometry for simple props; for rich scans, use Blender/
-  DCC export to GLB and implement validated binary ingest in a later phase.
-- Skip expensive always-on WebGL thumbnails when catalog scales;
-  create cached thumbnails and shard the metadata API.
-- Keep model creation separate from presentation code.
-- Avoid breaking old asset IDs; use versions and derived asset links.
+## End-to-end execution
 
+1. **Inspect repository state.** Read `AGENTS.md`, `catalog/categories.json` and nearby `src/models/*.js`; check duplicates, build scripts and latest test results. Run `python3 scripts/catalog.py validate`. Optionally run the read-only [Skill preflight](scripts/preflight.py) with `python3 .codex/skills/threejs-model-builder/scripts/preflight.py`.
+2. **Plan the geometry.** Fill the [model brief](assets/model-brief.md); define silhouette, pivot, scale, part naming and exact category. Consult [geometry](references/MODEL-GEOMETRY.md) and [taxonomy](references/TAXONOMY.md).
+3. **Build from the correct source:** for a conventional procedural module, run `python3 scripts/new_model.py --slug side-table --category furniture --title "Side Table" --title-zh "边桌" --dimensions 0.8 0.6 0.8`, then replace the scaffold mesh with meaningful parts. For v0.4-style recipe assets, author `buildRecipe(spec)` using `src/models/recipe_engine.js`; see [recipe example](assets/recipe-example.js) and [worked case](examples/procedural-furniture.md). For verified imported GLBs use [the ingestion workflow](references/GLB-INGESTION.md), never the generator scaffold.
+4. **Register and reconcile.** Add or inspect catalog record: immutable ID, unique slug, localized title, category, tags, correct `source_path`/`generator` or `binary_path`, dimensions, kind, license, author, evidence. See [catalog contract](references/CATALOG-PROVENANCE.md). Do not edit generated `catalog/public_models.json` manually.
+5. **Run fast gates.** `python3 scripts/catalog.py validate`, `python3 scripts/catalog.py build`, `python3 -m unittest discover -s tests -v`, `node scripts/validate_models.mjs`, `npm run build`. Fix failures before claiming completion.
+6. **Render + optimize when applicable.** After installing npm and Chromium, `npm run generate:assets`, `npm run verify:assets`, `npm run test:gallery`. These may be slow, use local WebGL; only report success if actually run. Follow [rendering guide](references/RENDER-LOD.md). For imported GLBs, do not misrepresent the procedural export pipeline as processing the import.
+7. **Verify integration.** Inspect Gallery search, inspector/orbit/zoom, deep link, copy-ready source with `primitives.js` or `recipe_engine.js`, exported GLB via an independent GLTFLoader, and MCP tool retrieval after local SQLite build. Follow [publishing](references/PUBLISH-MCP.md).
+8. **Deliver evidence.** Complete [acceptance report](assets/acceptance-report.md) with files/IDs, per-command outcomes, hashes, preview links, license provenance, limitations and exact next actions. Prefer a small PR and gate it in CI.
 
-## External GLB batch-ingestion branch
+## Quick command menu
 
-If the input is an existing GLB instead of a new Three.js generator, use
-`docs/ingestion-architecture.md` and `scripts/ingest_glb.mjs`. Never
-execute imported code. Require verified permission and a license evidence
-URL for third-party authors, a category from `catalog/categories.json`,
-and author-supplied dimensions in meters. Run a read-only dry run first;
-apply only with `--apply` after checking the official Khronos Validator
-report. Record SHA-256, file metrics and origin. Inspect the resulting
-binary in the Gallery, then verify retrieval through MCP.
+```bash
+# Read-only consistency + metadata checks
+python3 .codex/skills/threejs-model-builder/scripts/preflight.py
+python3 scripts/verify_skill_mirrors.py
+python3 scripts/catalog.py validate
+# Source, catalog, and frontend gates
+python3 scripts/catalog.py build
+python3 -m unittest discover -s tests -v
+npm install && node scripts/validate_models.mjs && npm run build
+# Full local P0/P1, if Chromium + graphics dependencies exist
+npx playwright install chromium
+npm run generate:assets && npm run verify:assets && npm run test:gallery
+# Imported GLB: dry run before any mutation
+node scripts/ingest_glb.mjs --batch ingest/my-batch.json
+```
 
-The CLI does not certify ownership, transform-aware dimensions, safety
-for 3D printing, or professional game readiness; those require separate
-review. Models that exceed the repository size budget belong in a future
-object-storage pipeline, not directly in Git history.
+## Acceptance threshold
 
+A change is **done** only when the model is original or licensed for its documented use, IDs and dimensions validate, fast gates pass, and any promised preview/LOD/export/integration tests have real evidence. Missing local Chromium, credentials or manual review ⇒ explicitly mark **not verified** rather than pass. Read [QA](references/QA-TROUBLESHOOTING.md) for blockers and recovery.
 
-## P0/P1/P2 publishing gate
+## Bundled resources
 
-After creating or changing a generator, run `npm run generate:assets` to
-render **real 3D WebP/AVIF** cards and export GLB. Then run
-`npm run verify:assets` and `npm run build`. For binary variants, confirm
-LOD0/1/2 SHA, triangles, and that compressed files load with MeshoptDecoder.
-For an S3/MinIO delivery run `python scripts/publish_objects.py` as a dry
-run first; use `--apply` only with explicit storage credentials configured.
-For 50K-scale searches, use API cursor pagination rather than loading all
-assets from the JSON into the browser. See `docs/p0-p1-p2-delivery.md`.
+- [Workflow playbooks](references/WORKFLOWS.md), [geometry](references/MODEL-GEOMETRY.md), [category design](references/TAXONOMY.md), [catalog & provenance](references/CATALOG-PROVENANCE.md)
+- [GLB ingest](references/GLB-INGESTION.md), [render/LOD](references/RENDER-LOD.md), [publish/MCP](references/PUBLISH-MCP.md), [QA/recovery](references/QA-TROUBLESHOOTING.md), [official external links](references/EXTERNAL-SOURCES.md)
+- [Model brief](assets/model-brief.md), [acceptance report](assets/acceptance-report.md), [import manifest example](assets/import-batch.example.json), [recipe source template](assets/recipe-example.js)
+- [New furniture example](examples/procedural-furniture.md), [GLB audit example](examples/imported-glb.md), [read-only preflight](scripts/preflight.py)
 
-## Output checklist
+**External authoritative specifications** are linked with scope and authority notes in [EXTERNAL-SOURCES.md](references/EXTERNAL-SOURCES.md). Verify current APIs against pinned `package.json` and actual implementation before upgrading tools.
 
-- [ ] Original source module works as a pure `THREE.Group` factory.
-- [ ] Catalog entry validates and license/provenance is recorded.
-- [ ] Model appears in gallery with correct category/search.
-- [ ] Inspector supports orbit, zoom and reset.
-- [ ] Copy-ready JavaScript imports into an independent game project.
-- [ ] GLB export/import verified.
-- [ ] SQLite builder / tests / frontend build pass.
-- [ ] MCP retrieval uses exact asset ID and source path.
-- [ ] No unverified external model references or copied artwork.
-
-## References
-
-- `docs/threejs-research.md`: Three.js and glTF choices.
-- `docs/architecture.md`: SQLite, FTS5, CDN and scaling roadmap.
-- `docs/ui-design.md`: UI interaction and accessibility.
-- `AGENTS.md`: repository quality contract.
