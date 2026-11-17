@@ -5,19 +5,20 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 20,
-  "category_count": 11,
+  "asset_count": 30,
+  "category_count": 12,
   "category_counts": {
-    "architecture": 2,
+    "architecture": 3,
     "bathroom": 1,
-    "characters": 1,
+    "characters": 3,
     "decor": 2,
-    "electronics": 2,
-    "furniture": 1,
+    "electronics": 3,
+    "furniture": 2,
     "kitchen": 2,
-    "nature": 2,
+    "nature": 3,
+    "scifi": 2,
     "sports": 2,
-    "urban": 1,
+    "urban": 3,
     "vehicles": 4
   },
   "assets": [
@@ -360,6 +361,176 @@
       "design_focus": "Unrigged scientist wearing goggles, lab coat, nitrile gloves and microscope clipboard",
       "usage": "scientist",
       "part_count": 19
+    },
+    {
+      "id": "nature.lavender-field-patch.001",
+      "slug": "lavender-field-patch",
+      "title": "Lavender Field Patch",
+      "title_zh": "薰衣草田地块",
+      "category": "nature",
+      "source_path": "src/models/lavender_field_patch.js",
+      "generator": "createLavenderFieldPatch",
+      "dimensions_m": [
+        1.57,
+        0.77,
+        1.26
+      ],
+      "design_focus": "Six dense rows of purple lavender spikes above shallow soil and green stems",
+      "usage": "lavender",
+      "part_count": 94
+    },
+    {
+      "id": "scifi.lunar-habitat-module.001",
+      "slug": "lunar-habitat-module",
+      "title": "Lunar Habitat Module",
+      "title_zh": "月面居住舱模块",
+      "category": "scifi",
+      "source_path": "src/models/lunar_habitat_module.js",
+      "generator": "createLunarHabitatModule",
+      "dimensions_m": [
+        3.17,
+        2.32,
+        3.44
+      ],
+      "design_focus": "Modular pressurized lunar habitat with solar wing, airlock, windows and anchor feet",
+      "usage": "lunar",
+      "part_count": 23
+    },
+    {
+      "id": "characters.mail-carrier-mannequin.001",
+      "slug": "mail-carrier-mannequin",
+      "title": "Mail Carrier Mannequin",
+      "title_zh": "邮政投递员原型",
+      "category": "characters",
+      "source_path": "src/models/mail_carrier_mannequin.js",
+      "generator": "createMailCarrierMannequin",
+      "dimensions_m": [
+        0.99,
+        1.88,
+        0.68
+      ],
+      "design_focus": "Unrigged delivery worker with satchel, uniform cap, envelope and walking shoes",
+      "usage": "courier",
+      "part_count": 16
+    },
+    {
+      "id": "architecture.masonry-brick-chimney.001",
+      "slug": "masonry-brick-chimney",
+      "title": "Masonry Brick Chimney",
+      "title_zh": "砖砌屋顶烟囱",
+      "category": "architecture",
+      "source_path": "src/models/masonry_brick_chimney.js",
+      "generator": "createMasonryBrickChimney",
+      "dimensions_m": [
+        0.85,
+        2.31,
+        0.82
+      ],
+      "design_focus": "Brickwork flue with mortar pattern, cap supports and metal rain cover",
+      "usage": "chimney",
+      "part_count": 29
+    },
+    {
+      "id": "urban.metro-station-entrance.001",
+      "slug": "metro-station-entrance",
+      "title": "Metro Station Entrance",
+      "title_zh": "地铁站出入口",
+      "category": "urban",
+      "source_path": "src/models/metro_station_entrance.js",
+      "generator": "createMetroStationEntrance",
+      "dimensions_m": [
+        2.7,
+        2.48,
+        2.6
+      ],
+      "design_focus": "Covered station entrance with descending steps, overhead emblem and railings",
+      "usage": "metro",
+      "part_count": 22
+    },
+    {
+      "id": "electronics.mini-server-cabinet.001",
+      "slug": "mini-server-cabinet",
+      "title": "Mini Server Cabinet",
+      "title_zh": "迷你服务器机柜",
+      "category": "electronics",
+      "source_path": "src/models/mini_server_cabinet.js",
+      "generator": "createMiniServerCabinet",
+      "dimensions_m": [
+        0.57,
+        1.05,
+        0.69
+      ],
+      "design_focus": "Network equipment cabinet with ventilation grilles, eight modules, front door and cables",
+      "usage": "server",
+      "part_count": 41
+    },
+    {
+      "id": "urban.modular-street-vending-kiosk.001",
+      "slug": "modular-street-vending-kiosk",
+      "title": "Modular Street Vending Kiosk",
+      "title_zh": "城市街头零售亭",
+      "category": "urban",
+      "source_path": "src/models/modular_street_vending_kiosk.js",
+      "generator": "createModularStreetVendingKiosk",
+      "dimensions_m": [
+        2.12,
+        2.52,
+        1.43
+      ],
+      "design_focus": "Tiny retail booth with service window, awning, counter, signs and shelves",
+      "usage": "kiosk",
+      "part_count": 20
+    },
+    {
+      "id": "furniture.nesting-side-table-set.001",
+      "slug": "nesting-side-table-set",
+      "title": "Nesting Side Table Set",
+      "title_zh": "套叠边几组合",
+      "category": "furniture",
+      "source_path": "src/models/nesting_side_table_set.js",
+      "generator": "createNestingSideTableSet",
+      "dimensions_m": [
+        1.24,
+        0.69,
+        0.47
+      ],
+      "design_focus": "Three-height steel nesting side tables with rounded stone-like tops",
+      "usage": "table",
+      "part_count": 19
+    },
+    {
+      "id": "scifi.orbital-docking-ring.001",
+      "slug": "orbital-docking-ring",
+      "title": "Orbital Docking Ring",
+      "title_zh": "轨道空间站对接口环",
+      "category": "scifi",
+      "source_path": "src/models/orbital_docking_ring.js",
+      "generator": "createOrbitalDockingRing",
+      "dimensions_m": [
+        2.87,
+        2.86,
+        0.79
+      ],
+      "design_focus": "Space-station docking gateway with concentric steel rings, twelve seals, beacon lights and mounting gantry",
+      "usage": "orbital",
+      "part_count": 27
+    },
+    {
+      "id": "characters.park-ranger-mannequin.001",
+      "slug": "park-ranger-mannequin",
+      "title": "Park Ranger Mannequin",
+      "title_zh": "国家公园护林员原型",
+      "category": "characters",
+      "source_path": "src/models/park_ranger_mannequin.js",
+      "generator": "createParkRangerMannequin",
+      "dimensions_m": [
+        0.96,
+        1.91,
+        0.68
+      ],
+      "design_focus": "Unrigged forest ranger with brimmed hat, radio, khaki uniform and hiking boots",
+      "usage": "ranger",
+      "part_count": 17
     }
   ]
 }
