@@ -5971,6 +5971,276 @@
       "collection": "v0.7",
       "preview_path": "public/thumbs/mountain-cable-car-gondola.webp",
       "accent": "#aac2c7"
+    },
+    {
+      "id": "electronics.omnidirectional-conference-camera.001",
+      "slug": "omnidirectional-conference-camera",
+      "title": "Omnidirectional Conference Camera",
+      "title_zh": "全向会议摄像机",
+      "summary": "360-degree conference camera with four radial lenses, sound pickup ring and indicator base",
+      "category": "electronics",
+      "tags": [
+        "conference",
+        "camera",
+        "meeting"
+      ],
+      "dimensions_m": [
+        0.22,
+        0.35,
+        0.23
+      ],
+      "generator": "createOmnidirectionalConferenceCamera",
+      "source_path": "src/models/omnidirectional_conference_camera.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/omnidirectional-conference-camera.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "scifi.orbital-hydroponic-growing-tower.001",
+      "slug": "orbital-hydroponic-growing-tower",
+      "title": "Orbital Hydroponic Growing Tower",
+      "title_zh": "轨道空间站水培塔",
+      "summary": "Vertical space hydroponic grower with LED bars, stacked trays, transparent reservoir and leafy food crops",
+      "category": "scifi",
+      "tags": [
+        "hydroponic",
+        "orbital",
+        "agriculture"
+      ],
+      "dimensions_m": [
+        1.33,
+        2.62,
+        1.26
+      ],
+      "generator": "createOrbitalHydroponicGrowingTower",
+      "source_path": "src/models/orbital_hydroponic_growing_tower.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/orbital-hydroponic-growing-tower.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "characters.orchestra-conductor-mannequin.001",
+      "slug": "orchestra-conductor-mannequin",
+      "title": "Orchestra Conductor Mannequin",
+      "title_zh": "交响乐团指挥人物原型",
+      "summary": "Unrigged stage conductor in tailcoat carrying baton and pocket square",
+      "category": "characters",
+      "tags": [
+        "conductor",
+        "music",
+        "character"
+      ],
+      "dimensions_m": [
+        1.08,
+        1.95,
+        0.69
+      ],
+      "generator": "createOrchestraConductorMannequin",
+      "source_path": "src/models/orchestra_conductor_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/orchestra-conductor-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "characters.paramedic-mannequin.001",
+      "slug": "paramedic-mannequin",
+      "title": "Paramedic Mannequin",
+      "title_zh": "急救医护人员原型",
+      "summary": "Unrigged paramedic wearing reflective uniform, medical satchel and portable radio",
+      "category": "characters",
+      "tags": [
+        "paramedic",
+        "rescue",
+        "character"
+      ],
+      "dimensions_m": [
+        0.99,
+        1.91,
+        0.74
+      ],
+      "generator": "createParamedicMannequin",
+      "source_path": "src/models/paramedic_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/paramedic-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "urban.playground-spiral-slide.001",
+      "slug": "playground-spiral-slide",
+      "title": "Playground Spiral Slide",
+      "title_zh": "儿童游乐旋转滑梯",
+      "summary": "Children's playground slide with raised deck, helical-style descending ramp, ladder and guard rails",
+      "category": "urban",
+      "tags": [
+        "playground",
+        "slide",
+        "park"
+      ],
+      "dimensions_m": [
+        2.38,
+        2.64,
+        2.26
+      ],
+      "generator": "createPlaygroundSpiralSlide",
+      "source_path": "src/models/playground_spiral_slide.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/playground-spiral-slide.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "electronics.portable-digital-oscilloscope.001",
+      "slug": "portable-digital-oscilloscope",
+      "title": "Portable Digital Oscilloscope",
+      "title_zh": "便携数字示波器",
+      "summary": "Benchtop waveform oscilloscope with dual probe ports, side knobs and carry handle",
+      "category": "electronics",
+      "tags": [
+        "oscilloscope",
+        "measurement",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.44,
+        0.31,
+        0.21
+      ],
+      "generator": "createPortableDigitalOscilloscope",
+      "source_path": "src/models/portable_digital_oscilloscope.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/portable-digital-oscilloscope.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "bathroom.recessed-shower-shelf-niche.001",
+      "slug": "recessed-shower-shelf-niche",
+      "title": "Recessed Shower Shelf Niche",
+      "title_zh": "淋浴墙体内嵌置物格",
+      "summary": "Tile-lined wall niche with two recessed compartments, skincare bottles and LED rim",
+      "category": "bathroom",
+      "tags": [
+        "shower",
+        "niche",
+        "storage"
+      ],
+      "dimensions_m": [
+        0.91,
+        1.42,
+        0.27
+      ],
+      "generator": "createRecessedShowerShelfNiche",
+      "source_path": "src/models/recessed_shower_shelf_niche.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/recessed-shower-shelf-niche.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "vehicles.retro-ice-cream-truck.001",
+      "slug": "retro-ice-cream-truck",
+      "title": "Retro Ice Cream Truck",
+      "title_zh": "复古冰淇淋售卖车",
+      "summary": "Pastel mobile ice cream van with service hatch, striped canopy, freezer counter and wheels",
+      "category": "vehicles",
+      "tags": [
+        "ice-cream",
+        "truck",
+        "street-food"
+      ],
+      "dimensions_m": [
+        2.13,
+        2.61,
+        4.02
+      ],
+      "generator": "createRetroIceCreamTruck",
+      "source_path": "src/models/retro_ice_cream_truck.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/retro-ice-cream-truck.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "electronics.smart-robot-floor-vacuum.001",
+      "slug": "smart-robot-floor-vacuum",
+      "title": "Smart Robot Floor Vacuum",
+      "title_zh": "智能扫地清洁机器人",
+      "summary": "Disk robot vacuum with lidar turret, bumper, wheel housings, brush and docking marker",
+      "category": "electronics",
+      "tags": [
+        "robot",
+        "vacuum",
+        "home"
+      ],
+      "dimensions_m": [
+        0.37,
+        0.21,
+        0.37
+      ],
+      "generator": "createSmartRobotFloorVacuum",
+      "source_path": "src/models/smart_robot_floor_vacuum.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/smart-robot-floor-vacuum.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "nature.snowy-fir-grove.001",
+      "slug": "snowy-fir-grove",
+      "title": "Snowy Fir Grove",
+      "title_zh": "积雪冷杉树林",
+      "summary": "Cluster of five fir trees with multi-tiered conifer foliage, snow caps and icy terrain",
+      "category": "nature",
+      "tags": [
+        "winter",
+        "fir",
+        "forest"
+      ],
+      "dimensions_m": [
+        2.75,
+        3.21,
+        2.17
+      ],
+      "generator": "createSnowyFirGrove",
+      "source_path": "src/models/snowy_fir_grove.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/snowy-fir-grove.webp",
+      "accent": "#a9c59e"
     }
   ]
 }
