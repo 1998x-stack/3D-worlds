@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": "furniture",
+      "label": "家具",
+      "sort_order": 10
+    },
+    {
+      "id": "bathroom",
+      "label": "卫浴",
+      "sort_order": 20
+    },
+    {
+      "id": "characters",
+      "label": "人物原型",
+      "sort_order": 30
+    },
+    {
+      "id": "nature",
+      "label": "自然环境",
+      "sort_order": 40
+    },
+    {
+      "id": "vehicles",
+      "label": "交通载具",
+      "sort_order": 50
+    },
+    {
+      "id": "electronics",
+      "label": "电子设备",
+      "sort_order": 60
+    },
+    {
+      "id": "decor",
+      "label": "装饰绿植",
+      "sort_order": 70
+    }
+  ]
+}

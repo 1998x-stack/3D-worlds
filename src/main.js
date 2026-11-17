@@ -1,4 +1,5 @@
 import catalog from '../catalog/models.json';
+import categoryCatalog from '../catalog/categories.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
 // Vite auto-discovers procedural modules; new models need no hard-coded registry.
@@ -19,7 +20,7 @@ const sourceFiles = Object.fromEntries(
   ])
 );
 const primitiveSource = sources['./models/primitives.js'];
-const labels = { all: '全部模型', furniture: '家具', bathroom: '卫浴', characters: '人物原型' };
+const labels = Object.fromEntries([['all', '全部模型'], ...categoryCatalog.categories.map(c => [c.id, c.label])]);
 let category = 'all', search = '', sorting = 'featured';
 let activeAsset = null, viewer = null, lastFocus = null;
 const thumbs = new Map();
@@ -48,7 +49,7 @@ root.innerHTML = `
     </section>
     <section class="catalog-section" id="collection">
       <div class="section-intro">
-        <div><span class="section-kicker">THE COLLECTION / V 0.1</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
+        <div><span class="section-kicker">THE COLLECTION / V 0.2</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
         <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">05 ASSETS</span></div>
       </div>
       <div class="catalog-layout">
@@ -97,7 +98,7 @@ function toast(message) {
 }
 
 function renderFilters() {
-  const counts = { all: assets.length, furniture: 0, bathroom: 0, characters: 0 };
+  const counts = Object.fromEntries(Object.keys(labels).map(key => [key, key === 'all' ? assets.length : 0]));
   for (const item of assets) counts[item.category] = (counts[item.category] || 0) + 1;
   document.getElementById('category-filters').innerHTML = Object.entries(labels).map(([key, label]) => `<button class="filter-item ${category === key ? 'selected' : ''}" data-category="${key}" aria-pressed="${category === key}"><span>${label}</span><span class="filter-count">${String(counts[key] || 0).padStart(2, '0')}</span></button>`).join('');
 }

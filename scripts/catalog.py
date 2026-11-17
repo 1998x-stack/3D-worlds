@@ -19,9 +19,8 @@ MANIFEST = ROOT / "catalog" / "models.json"
 SCHEMA = ROOT / "db" / "schema.sql"
 DEFAULT_DB = ROOT / "data" / "catalog.sqlite"
 CATEGORIES = {
-    "furniture": ("家具", 10),
-    "bathroom": ("卫浴", 20),
-    "characters": ("人物原型", 30),
+    item["id"]: (item["label"], item["sort_order"])
+    for item in json.loads((ROOT / "catalog" / "categories.json").read_text(encoding="utf-8"))["categories"]
 }
 IDENTIFIER = re.compile(r"^[a-z0-9][a-z0-9._-]{2,119}$")
 SPDX = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.\-+]*$")
