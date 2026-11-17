@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v0.8",
+  "title": "Fifty New Original Procedural Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 10,
+  "category_count": 10,
+  "category_counts": {
+    "bathroom": 1,
+    "characters": 1,
+    "decor": 1,
+    "electronics": 1,
+    "furniture": 1,
+    "kitchen": 1,
+    "scifi": 1,
+    "sports": 1,
+    "urban": 1,
+    "vehicles": 1
+  },
+  "assets": [
+    {
+      "id": "bathroom.accessible-shower-transfer-seat.001",
+      "slug": "accessible-shower-transfer-seat",
+      "title": "Accessible Shower Transfer Seat",
+      "title_zh": "无障碍淋浴转移座椅",
+      "category": "bathroom",
+      "source_path": "src/models/accessible_shower_transfer_seat.js",
+      "generator": "createAccessibleShowerTransferSeat",
+      "dimensions_m": [
+        0.92,
+        1.18,
+        0.68
+      ],
+      "design_focus": "Accessible shower seat with foldable seat deck, drainage and grab rail",
+      "usage": "accessible",
+      "part_count": 20
+    },
+    {
+      "id": "characters.airline-pilot-mannequin.001",
+      "slug": "airline-pilot-mannequin",
+      "title": "Airline Pilot Mannequin",
+      "title_zh": "民航飞行员人物原型",
+      "category": "characters",
+      "source_path": "src/models/airline_pilot_mannequin.js",
+      "generator": "createAirlinePilotMannequin",
+      "dimensions_m": [
+        1,
+        1.95,
+        0.73
+      ],
+      "design_focus": "Unrigged airline pilot wearing peaked cap, rank bars and rolling suitcase",
+      "usage": "pilot",
+      "part_count": 24
+    },
+    {
+      "id": "vehicles.amphibious-research-boat.001",
+      "slug": "amphibious-research-boat",
+      "title": "Amphibious Research Boat",
+      "title_zh": "两栖科考船",
+      "category": "vehicles",
+      "source_path": "src/models/amphibious_research_boat.js",
+      "generator": "createAmphibiousResearchBoat",
+      "dimensions_m": [
+        2.21,
+        2.83,
+        4.13
+      ],
+      "design_focus": "Marine science amphibious boat with cabin, sensor mast and sample deck",
+      "usage": "research",
+      "part_count": 27
+    },
+    {
+      "id": "scifi.asteroid-refinery-module.001",
+      "slug": "asteroid-refinery-module",
+      "title": "Asteroid Refinery Module",
+      "title_zh": "小行星资源精炼模块",
+      "category": "scifi",
+      "source_path": "src/models/asteroid_refinery_module.js",
+      "generator": "createAsteroidRefineryModule",
+      "dimensions_m": [
+        3.12,
+        2.83,
+        2.67
+      ],
+      "design_focus": "Nonweapon sci-fi mining refinery with ore hopper, conveyor, pressure cylinders and control bay",
+      "usage": "asteroid",
+      "part_count": 24
+    },
+    {
+      "id": "sports.badminton-court-net-set.001",
+      "slug": "badminton-court-net-set",
+      "title": "Badminton Court Net Set",
+      "title_zh": "羽毛球场球网组合",
+      "category": "sports",
+      "source_path": "src/models/badminton_court_net_set.js",
+      "generator": "createBadmintonCourtNetSet",
+      "dimensions_m": [
+        3.62,
+        1.6,
+        0.83
+      ],
+      "design_focus": "Badminton net set with posts, tension ropes, shuttlecocks and court markings",
+      "usage": "badminton",
+      "part_count": 31
+    },
+    {
+      "id": "electronics.broadcast-audio-mixing-console.001",
+      "slug": "broadcast-audio-mixing-console",
+      "title": "Broadcast Audio Mixing Console",
+      "title_zh": "广播调音控制台",
+      "category": "electronics",
+      "source_path": "src/models/broadcast_audio_mixing_console.js",
+      "generator": "createBroadcastAudioMixingConsole",
+      "dimensions_m": [
+        1.08,
+        0.3,
+        0.65
+      ],
+      "design_focus": "Studio mixing desk with individual channel faders and VU meters",
+      "usage": "audio",
+      "part_count": 35
+    },
+    {
+      "id": "decor.ceramic-tea-ceremony-set.001",
+      "slug": "ceramic-tea-ceremony-set",
+      "title": "Ceramic Tea Ceremony Set",
+      "title_zh": "陶瓷茶道摆件",
+      "category": "decor",
+      "source_path": "src/models/ceramic_tea_ceremony_set.js",
+      "generator": "createCeramicTeaCeremonySet",
+      "dimensions_m": [
+        0.95,
+        0.42,
+        0.66
+      ],
+      "design_focus": "Minimalist tea ritual tray with pot, five cups, bamboo scoop and ornaments",
+      "usage": "ceramic",
+      "part_count": 17
+    },
+    {
+      "id": "furniture.classroom-folding-lecture-desk.001",
+      "slug": "classroom-folding-lecture-desk",
+      "title": "Classroom Folding Lecture Desk",
+      "title_zh": "教室翻板演讲桌",
+      "category": "furniture",
+      "source_path": "src/models/classroom_folding_lecture_desk.js",
+      "generator": "createClassroomFoldingLectureDesk",
+      "dimensions_m": [
+        1.18,
+        1.17,
+        0.67
+      ],
+      "design_focus": "Mobile folding seminar desk with writing surface, modesty panel, book rack and casters",
+      "usage": "classroom",
+      "part_count": 19
+    },
+    {
+      "id": "kitchen.commercial-dough-mixer.001",
+      "slug": "commercial-dough-mixer",
+      "title": "Commercial Dough Mixer",
+      "title_zh": "商用立式和面搅拌机",
+      "category": "kitchen",
+      "source_path": "src/models/commercial_dough_mixer.js",
+      "generator": "createCommercialDoughMixer",
+      "dimensions_m": [
+        0.74,
+        1.25,
+        0.71
+      ],
+      "design_focus": "Commercial planetary dough mixer with raised bowl, mixing hooks, emergency stop and motor head",
+      "usage": "dough",
+      "part_count": 15
+    },
+    {
+      "id": "urban.community-garden-planter-station.001",
+      "slug": "community-garden-planter-station",
+      "title": "Community Garden Planter Station",
+      "title_zh": "社区共享种植花箱站",
+      "category": "urban",
+      "source_path": "src/models/community_garden_planter_station.js",
+      "generator": "createCommunityGardenPlanterStation",
+      "dimensions_m": [
+        2.09,
+        1.43,
+        1.23
+      ],
+      "design_focus": "Shared neighborhood planting station with tiered planters, watering tank and labels",
+      "usage": "community",
+      "part_count": 33
+    }
+  ]
+}
