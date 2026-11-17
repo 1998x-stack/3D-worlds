@@ -8,7 +8,8 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [UI design](docs/ui-design.md) ·
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
-[50 newest assets · v0.8](docs/50-assets-v08.md) ·
+[50 newest assets · v0.9](docs/50-assets-v09.md) ·
+[50 previous assets · v0.8](docs/50-assets-v08.md) ·
 [50 previous assets · v0.7](docs/50-assets-v07.md) ·
 [50 previous assets · v0.6](docs/50-assets-v06.md) ·
 [50 previous assets · v0.5](docs/50-assets-v05.md) ·
@@ -47,7 +48,19 @@ Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
 resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
 broken local links.
 
-## V0.8 — 50 additional editable original scene assets
+## V0.9 — 50 new source-backed modular scene assets
+
+V0.9 adds **50 original independent Three.js models** to the V0.8 baseline of 285,
+reaching **335 source-backed procedural assets across 13 categories**. The new
+furniture, accessible bathroom, professional characters, biomes, vehicles,
+electronics, urban infrastructure, workshop and science assets have 1,068
+individually named editable mesh parts. Existing IDs and source paths remain stable.
+
+- [V0.9 full bilingual inventory](docs/50-assets-v09.md)
+- [V0.9 machine-readable collection](catalog/collections/v09.json)
+- [V0.9 regression and publishing requirements](docs/verification-v09.md)
+
+## V0.8 — 50 previous editable original scene assets
 
 V0.8 expands the original **235 source-editable Three.js generators** by **50 new original models** to **285 assets / 13 categories**, retaining all historical IDs and geometry files. The collection adds health, professional transport, industrial equipment, modular architecture, urban facilities and science scenes.
 
@@ -99,7 +112,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
 
 ## Capabilities
 
-- **285 original procedural models across 13 categories:** 235 historical assets plus 50 new V0.8 scene models, each with editable native Three.js source.
+- **335 original procedural models across 13 categories:** 285 historical assets plus 50 new V0.9 scene models, each with editable native Three.js source.
 - **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
   model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
@@ -115,7 +128,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v0.8, 285 editable original generators. CI generates real
+> **Status:** v0.9, 335 editable original generators. CI generates real
 > WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
 > S3/MinIO implementation is configurable but requires your credentials and
 > external deployment; remote MCP hosting and real 50K-asset load testing
