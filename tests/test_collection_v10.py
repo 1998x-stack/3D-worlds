@@ -25,8 +25,8 @@ class V10CollectionTests(unittest.TestCase):
         self.assertEqual(len({a["slug"] for a in self.assets}), 485)
         self.assertEqual(len([a for a in self.assets if a.get("collection") not in ("v1.0", "v1.1", "v1.2")]), 335)
         cats = {x["id"] for x in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), cats - {"print-commerce"})
-        self.assertEqual({x["category"] for x in c["assets"]}, cats - {"print-commerce"})
+        self.assertEqual(set(c["category_counts"]), cats)
+        self.assertEqual({x["category"] for x in c["assets"]}, cats)
         self.assertEqual(sum(c["category_counts"].values()), 50)
         self.assertEqual(sorted(c["category_counts"].values()), [3, 3] + [4] * 11)
         self.assertEqual(sum(x["part_count"] for x in c["assets"]), 1232)

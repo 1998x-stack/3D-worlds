@@ -26,8 +26,8 @@ class V11CollectionTests(unittest.TestCase):
         self.assertEqual(len([a for a in self.assets if a.get("collection") not in ("v1.1", "v1.2")]),385)
         self.assertEqual(len([a for a in self.assets if a.get("collection") == "v1.1"]),50)
         cats={x["id"] for x in json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]),cats - {"print-commerce"})
-        self.assertEqual({a["category"] for a in c["assets"]},cats - {"print-commerce"})
+        self.assertEqual(set(c["category_counts"]),cats)
+        self.assertEqual({a["category"] for a in c["assets"]},cats)
         self.assertEqual(sorted(c["category_counts"].values()),[3,3]+[4]*11)
         self.assertEqual(sum(x["part_count"] for x in c["assets"]),1465)
         self.assertIn("furniture.table.oak-study-001",self.by_id)

@@ -37,6 +37,8 @@ for asset_id in (
     "architecture.underground-utility-tunnel.001",
     "scifi.orbital-navigation-beacon.001",
     "scifi.orbital-research-airlock-module.001",
+    "scifi.orbital-debris-collector-drone.001",
+    "architecture.modular-disaster-relief-clinic.001",
     "architecture.subway-platform-edge-module.001",
 ):
     for level in (0, 1, 2):
@@ -44,7 +46,7 @@ for asset_id in (
         assert metadata and "error" not in metadata, metadata
         assert metadata["url"].startswith("/api/v1/objects/"), metadata
         assert store.exists(metadata["sha256"]), metadata
-assert len(get_categories()) == 14
+assert len(get_categories()) == 13
 all_ids = []
 cursor = ""
 while True:

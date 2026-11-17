@@ -26,10 +26,10 @@ class V07CollectionTests(unittest.TestCase):
         self.assertEqual(len(self.by_id), len(self.assets))
         self.assertEqual(len({a["slug"] for a in self.assets}), len(self.assets))
         categories = {x["id"] for x in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), categories - {"print-commerce"})
+        self.assertEqual(set(c["category_counts"]), categories)
         self.assertEqual(sum(c["category_counts"].values()), 50)
         self.assertGreaterEqual(min(c["category_counts"].values()), 3)
-        self.assertEqual({a["category"] for a in c["assets"]}, categories - {"print-commerce"})
+        self.assertEqual({a["category"] for a in c["assets"]}, categories)
         self.assertEqual(len([a for a in self.assets if a.get("collection") == "v0.7"]), 50)
 
     def test_real_3d_geometry_and_provenance(self):

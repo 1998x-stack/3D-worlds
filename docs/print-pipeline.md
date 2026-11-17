@@ -4,15 +4,6 @@
 > Do not mark all 385 scene assets as printable. Preserve Three.js/GLB as the
 > editable visual source of truth.
 
-## V1.2 print-commerce CAD sources
-
-The new 50-product `print-commerce` category provides individual original
-OpenSCAD sources in `printables/` and a batch STL/3MF generator
-(`python3 scripts/export_print_commerce.py --format stl`).
-Those CAD files, rather than Three.js preview geometry, are the manufacturing
-design authority for this product line. Slicer and physical validation remain
-required. See [market and design research](print-commerce-v12.md).
-
 ## Why direct GLB → STL is not enough
 
 Models in `src/models/` are predominantly assembled Three.js primitives,

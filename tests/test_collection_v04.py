@@ -23,7 +23,7 @@ class CollectionV04Tests(unittest.TestCase):
         self.assertEqual(len(set(row["id"] for row in data["assets"])),40)
         self.assertGreaterEqual(len(self.assets),85)
         categories=json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]
-        expected={x["id"] for x in categories if x["id"] != "print-commerce"}
+        expected={x["id"] for x in categories}
         self.assertEqual({row["category"] for row in data["assets"]},expected)
         for category in expected:
             self.assertGreaterEqual(sum(a["category"]==category for a in data["assets"]),2)

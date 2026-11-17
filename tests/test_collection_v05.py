@@ -23,8 +23,8 @@ class CollectionV05Tests(unittest.TestCase):
         self.assertEqual(len(self.by_id), len(self.assets))
         self.assertEqual(len(set(a["slug"] for a in self.assets)), len(self.assets))
         categories = {a["id"] for a in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf-8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), categories - {"print-commerce"})
-        self.assertEqual({a["category"] for a in c["assets"]}, categories - {"print-commerce"})
+        self.assertEqual(set(c["category_counts"]), categories)
+        self.assertEqual({a["category"] for a in c["assets"]}, categories)
         self.assertEqual(sum(c["category_counts"].values()), 50)
         self.assertGreaterEqual(min(c["category_counts"].values()), 3)
 

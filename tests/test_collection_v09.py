@@ -25,9 +25,9 @@ class V09CollectionTests(unittest.TestCase):
         self.assertEqual(len({a["slug"] for a in self.assets}), 485)
         self.assertEqual(len([a for a in self.assets if a.get("collection") not in ("v0.9", "v1.0", "v1.1", "v1.2")]), 285)
         categories = {c["id"] for c in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf8"))["categories"]}
-        self.assertEqual(set(c["category_counts"]), categories - {"print-commerce"})
+        self.assertEqual(set(c["category_counts"]), categories)
         self.assertEqual(sum(c["category_counts"].values()), 50)
-        self.assertEqual({x["category"] for x in c["assets"]}, categories - {"print-commerce"})
+        self.assertEqual({x["category"] for x in c["assets"]}, categories)
         self.assertEqual(sum(x["part_count"] for x in c["assets"]), 1068)
         self.assertIn("furniture.table.oak-study-001", self.by_id)
         self.assertIn("scifi.orbital-navigation-beacon.001", self.by_id)
