@@ -3427,6 +3427,195 @@
       "collection": "v0.5",
       "preview_path": "public/thumbs/industrial-spiral-staircase.webp",
       "accent": "#c9c9c1"
+    },
+    {
+      "id": "urban.public-bicycle-parking-rack.001",
+      "slug": "public-bicycle-parking-rack",
+      "title": "Public Bicycle Parking Rack",
+      "title_zh": "公共自行车停放架",
+      "summary": "Four steel bicycle parking loops anchored to a concrete curb.",
+      "category": "urban",
+      "tags": [
+        "bike",
+        "parking",
+        "public"
+      ],
+      "dimensions_m": [
+        2.09,
+        0.84,
+        0.72
+      ],
+      "generator": "createPublicBicycleParkingRack",
+      "source_path": "src/models/public_bicycle_parking_rack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/public-bicycle-parking-rack.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "urban.heritage-street-mailbox.001",
+      "slug": "heritage-street-mailbox",
+      "title": "Heritage Street Mailbox",
+      "title_zh": "复古街头邮筒",
+      "summary": "Red public mailbox with letter aperture, postal emblem and service door.",
+      "category": "urban",
+      "tags": [
+        "mail",
+        "postbox",
+        "urban"
+      ],
+      "dimensions_m": [
+        0.65,
+        1.55,
+        0.59
+      ],
+      "generator": "createHeritageStreetMailbox",
+      "source_path": "src/models/heritage_street_mailbox.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/heritage-street-mailbox.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "urban.pedestrian-crosswalk-sign.001",
+      "slug": "pedestrian-crosswalk-sign",
+      "title": "Pedestrian Crosswalk Sign",
+      "title_zh": "人行横道标识牌",
+      "summary": "Reflective street sign with pedestrian symbol and mounting post.",
+      "category": "urban",
+      "tags": [
+        "crosswalk",
+        "pedestrian",
+        "sign"
+      ],
+      "dimensions_m": [
+        0.84,
+        2.68,
+        0.3
+      ],
+      "generator": "createPedestrianCrosswalkSign",
+      "source_path": "src/models/pedestrian_crosswalk_sign.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/pedestrian-crosswalk-sign.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "urban.roadside-safety-bollards.001",
+      "slug": "roadside-safety-bollards",
+      "title": "Roadside Safety Bollards",
+      "title_zh": "道路安全防撞柱组",
+      "summary": "Three heavy steel bollards with reflective yellow stripes.",
+      "category": "urban",
+      "tags": [
+        "bollard",
+        "barrier",
+        "traffic"
+      ],
+      "dimensions_m": [
+        1.73,
+        0.94,
+        0.46
+      ],
+      "generator": "createRoadsideSafetyBollards",
+      "source_path": "src/models/roadside_safety_bollards.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/roadside-safety-bollards.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "tools.steel-garden-wheelbarrow.001",
+      "slug": "steel-garden-wheelbarrow",
+      "title": "Steel Garden Wheelbarrow",
+      "title_zh": "园艺独轮手推车",
+      "summary": "Outdoor single wheelbarrow with steel tray, handles and kickstand.",
+      "category": "tools",
+      "tags": [
+        "wheelbarrow",
+        "garden",
+        "construction"
+      ],
+      "dimensions_m": [
+        0.8,
+        0.81,
+        1.57
+      ],
+      "generator": "createSteelGardenWheelbarrow",
+      "source_path": "src/models/steel_garden_wheelbarrow.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/steel-garden-wheelbarrow.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "tools.carpenters-hand-saw.001",
+      "slug": "carpenters-hand-saw",
+      "title": "Carpenter Hand Saw",
+      "title_zh": "木工手锯",
+      "summary": "Riveted wooden grip and traditional toothed steel hand saw.",
+      "category": "tools",
+      "tags": [
+        "saw",
+        "carpentry",
+        "woodworking"
+      ],
+      "dimensions_m": [
+        0.67,
+        0.26,
+        0.1
+      ],
+      "generator": "createCarpentersHandSaw",
+      "source_path": "src/models/carpenters_hand_saw.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/carpenters-hand-saw.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "tools.industrial-welding-mask.001",
+      "slug": "industrial-welding-mask",
+      "title": "Industrial Welding Mask",
+      "title_zh": "工业焊接防护面罩",
+      "summary": "Protective welding visor with dark viewing pane, vents and headband.",
+      "category": "tools",
+      "tags": [
+        "mask",
+        "welding",
+        "safety"
+      ],
+      "dimensions_m": [
+        0.29,
+        0.43,
+        0.34
+      ],
+      "generator": "createIndustrialWeldingMask",
+      "source_path": "src/models/industrial_welding_mask.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/industrial-welding-mask.webp",
+      "accent": "#c7bdad"
     }
   ]
 }

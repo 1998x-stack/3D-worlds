@@ -5,8 +5,8 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 36,
-  "category_count": 9,
+  "asset_count": 43,
+  "category_count": 11,
   "category_counts": {
     "architecture": 4,
     "bathroom": 4,
@@ -16,6 +16,8 @@
     "furniture": 4,
     "kitchen": 4,
     "nature": 4,
+    "tools": 3,
+    "urban": 4,
     "vehicles": 4
   },
   "assets": [
@@ -630,6 +632,125 @@
       "design_focus": "Circular steel stair tower with radial treads, central pole, handrail and platforms.",
       "usage": "spiral",
       "part_count": 58
+    },
+    {
+      "id": "urban.public-bicycle-parking-rack.001",
+      "slug": "public-bicycle-parking-rack",
+      "title": "Public Bicycle Parking Rack",
+      "title_zh": "公共自行车停放架",
+      "category": "urban",
+      "source_path": "src/models/public_bicycle_parking_rack.js",
+      "generator": "createPublicBicycleParkingRack",
+      "dimensions_m": [
+        2.09,
+        0.84,
+        0.72
+      ],
+      "design_focus": "Four steel bicycle parking loops anchored to a concrete curb.",
+      "usage": "bike",
+      "part_count": 25
+    },
+    {
+      "id": "urban.heritage-street-mailbox.001",
+      "slug": "heritage-street-mailbox",
+      "title": "Heritage Street Mailbox",
+      "title_zh": "复古街头邮筒",
+      "category": "urban",
+      "source_path": "src/models/heritage_street_mailbox.js",
+      "generator": "createHeritageStreetMailbox",
+      "dimensions_m": [
+        0.65,
+        1.55,
+        0.59
+      ],
+      "design_focus": "Red public mailbox with letter aperture, postal emblem and service door.",
+      "usage": "mail",
+      "part_count": 9
+    },
+    {
+      "id": "urban.pedestrian-crosswalk-sign.001",
+      "slug": "pedestrian-crosswalk-sign",
+      "title": "Pedestrian Crosswalk Sign",
+      "title_zh": "人行横道标识牌",
+      "category": "urban",
+      "source_path": "src/models/pedestrian_crosswalk_sign.js",
+      "generator": "createPedestrianCrosswalkSign",
+      "dimensions_m": [
+        0.84,
+        2.68,
+        0.3
+      ],
+      "design_focus": "Reflective street sign with pedestrian symbol and mounting post.",
+      "usage": "crosswalk",
+      "part_count": 12
+    },
+    {
+      "id": "urban.roadside-safety-bollards.001",
+      "slug": "roadside-safety-bollards",
+      "title": "Roadside Safety Bollards",
+      "title_zh": "道路安全防撞柱组",
+      "category": "urban",
+      "source_path": "src/models/roadside_safety_bollards.js",
+      "generator": "createRoadsideSafetyBollards",
+      "dimensions_m": [
+        1.73,
+        0.94,
+        0.46
+      ],
+      "design_focus": "Three heavy steel bollards with reflective yellow stripes.",
+      "usage": "bollard",
+      "part_count": 16
+    },
+    {
+      "id": "tools.steel-garden-wheelbarrow.001",
+      "slug": "steel-garden-wheelbarrow",
+      "title": "Steel Garden Wheelbarrow",
+      "title_zh": "园艺独轮手推车",
+      "category": "tools",
+      "source_path": "src/models/steel_garden_wheelbarrow.js",
+      "generator": "createSteelGardenWheelbarrow",
+      "dimensions_m": [
+        0.8,
+        0.81,
+        1.57
+      ],
+      "design_focus": "Outdoor single wheelbarrow with steel tray, handles and kickstand.",
+      "usage": "wheelbarrow",
+      "part_count": 14
+    },
+    {
+      "id": "tools.carpenters-hand-saw.001",
+      "slug": "carpenters-hand-saw",
+      "title": "Carpenter Hand Saw",
+      "title_zh": "木工手锯",
+      "category": "tools",
+      "source_path": "src/models/carpenters_hand_saw.js",
+      "generator": "createCarpentersHandSaw",
+      "dimensions_m": [
+        0.67,
+        0.26,
+        0.1
+      ],
+      "design_focus": "Riveted wooden grip and traditional toothed steel hand saw.",
+      "usage": "saw",
+      "part_count": 18
+    },
+    {
+      "id": "tools.industrial-welding-mask.001",
+      "slug": "industrial-welding-mask",
+      "title": "Industrial Welding Mask",
+      "title_zh": "工业焊接防护面罩",
+      "category": "tools",
+      "source_path": "src/models/industrial_welding_mask.js",
+      "generator": "createIndustrialWeldingMask",
+      "dimensions_m": [
+        0.29,
+        0.43,
+        0.34
+      ],
+      "design_focus": "Protective welding visor with dark viewing pane, vents and headband.",
+      "usage": "mask",
+      "part_count": 12
     }
   ]
 }
