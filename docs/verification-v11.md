@@ -18,3 +18,7 @@
 7. Merge after successful PR CI; confirm the **main** commit and Pages deployment independently.
 
 Not verified without separate work: commercial PBR quality, rigging, UV unwrapping, 3D-print water-tightness, production S3/MinIO credentials.
+
+## Dependency reproducibility
+
+V1.1 pins transitive Rollup to `4.68.3` via `package.json#overrides` because the unpinned npm resolver selected an unavailable `4.68.5` tarball (HTTP 404 on Nov 17, 2026). Re-run the full pipeline before merge and review/remove this override in a dedicated dependency update when registry issues are resolved.
