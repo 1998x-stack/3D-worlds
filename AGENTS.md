@@ -25,3 +25,14 @@ This is a public, reusable **asset platform**, not a one-off scene demo.
 
 Read `docs/architecture.md`, `docs/threejs-research.md` and
 `.codex/skills/threejs-model-builder/SKILL.md` for the workflow.
+
+## P0/P1/P2 quality gate
+
+- At 45 models, all card images **must** be real build-time renderer outputs,
+  not live 45-context WebGL cards or AI-generated stock images.
+- Run `npm run generate:assets && npm run verify:assets && npm run build && npm run test:gallery` before deploy.
+- Report actual Meshopt binary sizes and LOD triangle counts; LOD ratios are approximate targets.
+- `THREED_WORLDS_STORE=s3` must never contain hardcoded API keys or public bucket ACLs.
+- Remote API uses a cursor/pagination; do not bundle 50K records into one static JS payload.
+- For copied recipe assets, provide `recipe_engine.js` and all required helpers.
+- Read `docs/p0-p1-p2-delivery.md` before modifying renderer, optimizer, or object storage.

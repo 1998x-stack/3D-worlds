@@ -82,6 +82,18 @@ for 3D printing, or professional game readiness; those require separate
 review. Models that exceed the repository size budget belong in a future
 object-storage pipeline, not directly in Git history.
 
+
+## P0/P1/P2 publishing gate
+
+After creating or changing a generator, run `npm run generate:assets` to
+render **real 3D WebP/AVIF** cards and export GLB. Then run
+`npm run verify:assets` and `npm run build`. For binary variants, confirm
+LOD0/1/2 SHA, triangles, and that compressed files load with MeshoptDecoder.
+For an S3/MinIO delivery run `python scripts/publish_objects.py` as a dry
+run first; use `--apply` only with explicit storage credentials configured.
+For 50K-scale searches, use API cursor pagination rather than loading all
+assets from the JSON into the browser. See `docs/p0-p1-p2-delivery.md`.
+
 ## Output checklist
 
 - [ ] Original source module works as a pure `THREE.Group` factory.
