@@ -18,7 +18,14 @@ window.__capture={
    const module=await imports['./models/'+item.source_path.split('/').pop()]();
    const factory=module[item.generator];
    if(typeof factory!=='function')throw Error('Model factory missing '+id);
-   const canvas=document.getElementById('capture-canvas');
+   // Force-disposing WebGL contexts intentionally invalidates their canvas.
+   // Allocate a fresh canvas for every asset (never reuse a lost context).
+   const previous=document.getElementById('capture-canvas');
+   const canvas=document.createElement('canvas');
+   canvas.id='capture-canvas';
+   canvas.width=640;canvas.height=640;
+   canvas.style.width='640px';canvas.style.height='640px';
+   previous.replaceWith(canvas);
    const view=createScene(canvas,factory,{interactive:false});
    let png,glb=null;
    try{
