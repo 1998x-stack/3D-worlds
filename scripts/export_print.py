@@ -187,16 +187,101 @@ def export_3mf(path: Path, meshes: list[trimesh.Trimesh], title: str) -> None:
         _write_zip(archive, '3D/3dmodel.model', _xml(model))
 
 
+def read_profile(profile_id: str) -> dict:
+    """Profiles describe the equipment envelope and reviewer guidance, never a certification."""
+    data = json.loads((ROOT / 'catalog/print_policy.json').read_text(encoding='utf-8'))
+    try:
+        entry = data['printers'][profile_id]
+    except KeyError as exc:
+        raise ValueError(f'Unknown print profile: {profile_id}') from exc
+    return {**entry, 'id': profile_id}
+
+
+def geometry_guidance(meshes: list[trimesh.Trimesh], profile: dict,
+                      desired_clearance_mm: float | None) -> tuple[dict, list[str]]:
+    """Conservative bbox and surface indicators; no actual wall/contact validation."""
+    warnings: list[str] = []
+    minimum = float(min(float(min(m.extents)) for m in meshes))
+    feature = profile.get('feature_hint_mm')
+    if feature is not None and minimum < feature:
+        warnings.append(
+            f'small_component_bbox_extent: {minimum:.3f}mm < '
+            f'{feature:.3f}mm guideline; not a true wall-thickness test')
+    faces = sum(len(m.faces) for m in meshes)
+    down_faces = 0
+    bottom = min(float(m.bounds[0][2]) for m in meshes)
+    for mesh in meshes:
+        # Exclude triangles very close to print bed; this is not a support generator.
+        centers = mesh.triangles_center
+        normals = mesh.face_normals
+        down_faces += int(np.sum(
+            (normals[:, 2] < -math.cos(math.pi / 4))
+            & (centers[:, 2] > bottom + 0.5)))
+    ratio = down_faces / max(1, faces)
+    if ratio > 0.02:
+        warnings.append(
+            f'downward_faces_above_bed: {ratio:.1%} of triangles '
+            'are downward-facing; support requirement is not determined')
+    potential_overlap = 0
+    # Bounding boxes can overlap even when parts themselves do not intersect.
+    for i, left in enumerate(meshes):
+        for right in meshes[i + 1:]:
+            x = np.minimum(left.bounds[1], right.bounds[1]) - np.maximum(
+                left.bounds[0], right.bounds[0])
+            if np.all(x > 1e-6):
+                potential_overlap += 1
+    if potential_overlap:
+        warnings.append(
+            f'potential_aabb_overlap_pairs: {potential_overlap}; '
+            'not a boolean intersection or physical mating check')
+    if desired_clearance_mm is not None:
+        warnings.append(
+            f'desired_assembly_clearance_mm={desired_clearance_mm:.3f} is '
+            'documented only; CAD geometry has NOT been offset or verified')
+    result = {
+        'minimum_component_bbox_extent_mm': round(minimum, 4),
+        'downward_facing_triangle_ratio': round(ratio, 5),
+        'potential_bbox_overlap_pairs': potential_overlap,
+        'desired_clearance_mm': desired_clearance_mm,
+        'wall_thickness': 'not_checked',
+        'feature_fidelity': 'not_checked',
+        'supports': 'not_checked',
+        'part_connectivity': 'not_checked',
+        'hole_fit_and_clearance': 'not_checked',
+        'material_strength': 'not_checked',
+        'slicer_review': 'not_checked',
+        'physical_print': 'not_checked',
+    }
+    return result, warnings
+
+
 def export_print(input_path: Path, output_dir: Path, slug: str,
                  *, longest_mm: float | None = None,
                  bed_mm: list[float] | None = None,
                  mode: str = 'parts', repair_normals: bool = False,
-                 max_triangles: int = 1_000_000) -> dict:
-    if mode not in {'parts', 'fused'}:
-        raise ValueError('mode must be parts or fused')
+                 max_triangles: int = 1_000_000,
+                 profile_id: str = 'fdm-220',
+                 material: str | None = None,
+                 desired_clearance_mm: float | None = None,
+                 audit_only: bool = False) -> dict:
+    if mode not in {'parts', 'fused', 'separated'}:
+        raise ValueError('mode must be parts, separated or fused')
     if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,119}', slug):
         raise ValueError('Unsafe output slug')
-    # Content provenance stays stable even if names/IDs are later changed.
+    if max_triangles < 1:
+        raise ValueError('Maximum triangles must be positive')
+    profile = read_profile(profile_id)
+    if material is not None and material not in profile['materials']:
+        raise ValueError(f'Material not supported by selected preset: {material}')
+    if desired_clearance_mm is not None and (
+        not math.isfinite(desired_clearance_mm) or
+        desired_clearance_mm < 0 or desired_clearance_mm > 10
+    ):
+        raise ValueError('Design clearance must be 0–10 mm')
+    effective_bed = bed_mm if bed_mm is not None else profile['build_volume_mm']
+    if len(effective_bed) != 3 or any(not math.isfinite(v) or v <= 0 for v in effective_bed):
+        raise ValueError('Build envelope must contain three positive finite dimensions')
+    # Content provenance stays stable even if names/IDs later change.
     with input_path.open('rb') as source:
         source_sha256 = hashlib.file_digest(source, 'sha256').hexdigest()
     meshes, dims = normalize(load_meshes(input_path), longest_mm, repair_normals)
@@ -204,41 +289,65 @@ def export_print(input_path: Path, output_dir: Path, slug: str,
         try:
             merged = trimesh.boolean.union(meshes, engine='manifold')
         except (ImportError, ValueError, RuntimeError) as exc:
-            raise ValueError('Boolean failed; install manifold3d and ensure each mesh is closed') from exc
+            raise ValueError('Boolean failed; install manifold3d and check each mesh') from exc
         if merged is None or not isinstance(merged, trimesh.Trimesh):
             raise ValueError('Boolean union produced no mesh')
         meshes = [merged]
-    parts, errors, warnings = audit(meshes, max_triangles, bed_mm)
-    if errors:
-        return {
-            'status': 'blocked', 'source': str(input_path), 'source_sha256': source_sha256, 'asset': slug,
-            'mode': mode, **dims, 'parts': parts, 'errors': errors,
-            'warnings': warnings, 'files': {},
-        }
+    parts, errors, warnings = audit(meshes, max_triangles, effective_bed)
+    indicators, extra_warnings = geometry_guidance(
+        meshes, profile, desired_clearance_mm)
+    warnings.extend(extra_warnings)
+    warnings.append('Print process and material presets do NOT alter mesh geometry.')
+    report = {
+        'status': 'blocked' if errors else 'geometry_pass_manual_review_required',
+        'source': str(input_path),
+        'source_sha256': source_sha256,
+        'asset': slug, 'mode': mode, **dims,
+        'parts': parts, 'errors': errors, 'warnings': warnings,
+        'files': {}, 'manufacturing_certified': False,
+        'unit': 'millimeter', 'up_axis': 'Z',
+        'printer_profile': profile_id,
+        'process': profile['process'], 'material': material,
+        'build_volume_mm': effective_bed,
+        'audit_only': bool(audit_only),
+        'indicators_not_manufacturing_checks': indicators,
+    }
+    if audit_only:
+        return report
     output_dir.mkdir(parents=True, exist_ok=True)
     stl = output_dir / f'{slug}.stl'
     threemf = output_dir / f'{slug}.3mf'
-    combined = trimesh.util.concatenate(meshes)
-    stl.write_bytes(combined.export(file_type='stl'))
-    export_3mf(threemf, meshes, slug)
-    files = {}
-    for file in (stl, threemf):
-        files[file.suffix[1:]] = {
-            'path': str(file), 'bytes': file.stat().st_size,
-            'sha256': hashlib.sha256(file.read_bytes()).hexdigest(),
-        }
-    report = {
-        'status': 'geometry_pass_manual_review_required',
-        'source': str(input_path), 'source_sha256': source_sha256,
-        'asset': slug, 'mode': mode, **dims,
-        'parts': parts, 'errors': errors, 'warnings': warnings, 'files': files,
-        'manufacturing_certified': False, 'unit': 'millimeter', 'up_axis': 'Z',
-    }
+    if errors:
+        # Prevent stale output from an earlier accepted run being reused as current.
+        for artifact in (stl, threemf):
+            artifact.unlink(missing_ok=True)
+        for artifact in output_dir.glob(f'{slug}-part-*.stl'):
+            artifact.unlink()
+    else:
+        combined = trimesh.util.concatenate(meshes)
+        stl.write_bytes(combined.export(file_type='stl'))
+        export_3mf(threemf, meshes, slug)
+        report['files']['stl'] = {
+            'path': str(stl), 'bytes': stl.stat().st_size,
+            'sha256': hashlib.sha256(stl.read_bytes()).hexdigest()}
+        report['files']['3mf'] = {
+            'path': str(threemf), 'bytes': threemf.stat().st_size,
+            'sha256': hashlib.sha256(threemf.read_bytes()).hexdigest()}
+        if mode == 'separated':
+            # Independent parts are translated to their local build-plate origin;
+            # the 3MF continues to preserve the original assembled placements.
+            for index, source in enumerate(meshes, start=1):
+                part = source.copy()
+                part.apply_translation(-part.bounds[0])
+                dest = output_dir / f'{slug}-part-{index:03d}.stl'
+                dest.write_bytes(part.export(file_type='stl'))
+                report['files'][f'part_{index:03d}'] = {
+                    'path': str(dest), 'bytes': dest.stat().st_size,
+                    'sha256': hashlib.sha256(dest.read_bytes()).hexdigest()}
     (output_dir / f'{slug}.print-report.json').write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + '\n',
         encoding='utf-8')
     return report
-
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -249,7 +358,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--slug', help='Output slug, required for --input')
     parser.add_argument('--longest-mm', type=float, help='Scale longest side to this length in mm')
     parser.add_argument('--bed-mm', type=float, nargs=3, metavar=('X', 'Y', 'Z'))
-    parser.add_argument('--mode', choices=['parts', 'fused'], default='parts')
+    parser.add_argument('--mode', choices=['parts', 'separated', 'fused'], default='parts')
+    parser.add_argument('--profile', default='fdm-220',
+                        help='Preset from catalog/print_policy.json')
+    parser.add_argument('--material', help='Material label for manual review (no mesh changes)')
+    parser.add_argument('--clearance-mm', type=float,
+                        help='Desired CAD assembly clearance (recorded, NOT applied)')
+    parser.add_argument('--audit-only', action='store_true',
+                        help='Inspect mesh and print JSON without writing STL/3MF')
     parser.add_argument('--repair-normals', action='store_true')
     parser.add_argument('--max-triangles', type=int, default=1_000_000)
     args = parser.parse_args(argv)
@@ -271,6 +387,9 @@ def main(argv: list[str] | None = None) -> int:
             longest_mm=args.longest_mm, bed_mm=args.bed_mm,
             mode=args.mode, repair_normals=args.repair_normals,
             max_triangles=args.max_triangles,
+            profile_id=args.profile, material=args.material,
+            desired_clearance_mm=args.clearance_mm,
+            audit_only=args.audit_only,
         )
         if asset:
             report['asset_id'] = asset['id']
