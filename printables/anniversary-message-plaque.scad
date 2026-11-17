@@ -1,6 +1,9 @@
-// Anniversary Message Plaque | 纪念日祝福牌 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// anniversary-message-plaque | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 150 x 73 x 12.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([150,73,12],auto=false)
-    commercial_form(family="gift",variant=4,label="CUSTOM");
+use <lib/refined_batch03_forms.scad>
+w = 150; d = 73; h = 12;
+label = "LOVE ALWAYS";
+refined_batch03_form(slug="anniversary-message-plaque",family="gift",variant=4,w=w,d=d,h=h,label=label);

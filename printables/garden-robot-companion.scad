@@ -1,6 +1,9 @@
-// Garden Robot Companion | 园艺机器人摆件 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// garden-robot-companion | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 101 x 89 x 137.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([101,89,137],auto=false)
-    commercial_form(family="figurine",variant=4);
+use <lib/refined_batch03_forms.scad>
+w = 101; d = 89; h = 137;
+label = "CUSTOM";
+refined_batch03_form(slug="garden-robot-companion",family="figurine",variant=4,w=w,d=d,h=h,label=label);

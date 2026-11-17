@@ -1,6 +1,9 @@
-// Bracelet Display Arch | 手镯拱形陈列架 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// bracelet-display-arch | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 118 x 88 x 107.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([118,88,107],auto=false)
-    commercial_form(family="jewelry",variant=3);
+use <lib/refined_batch03_forms.scad>
+w = 118; d = 88; h = 107;
+label = "CUSTOM";
+refined_batch03_form(slug="bracelet-display-arch",family="jewelry",variant=3,w=w,d=d,h=h,label=label);

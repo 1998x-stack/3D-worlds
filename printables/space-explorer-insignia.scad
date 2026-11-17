@@ -1,6 +1,9 @@
-// Space Explorer Insignia | 太空探索徽记 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// space-explorer-insignia | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 81 x 81 x 11.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([81,81,11],auto=false)
-    commercial_form(family="cosplay",variant=3);
+use <lib/refined_batch03_forms.scad>
+w = 81; d = 81; h = 11;
+label = "CUSTOM";
+refined_batch03_form(slug="space-explorer-insignia",family="cosplay",variant=3,w=w,d=d,h=h,label=label);

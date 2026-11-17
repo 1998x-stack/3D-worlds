@@ -1,6 +1,9 @@
-// Lunar Fox Bust | 月狐半身像 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// lunar-fox-bust | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 98 x 86 x 133.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([98,86,133],auto=false)
-    commercial_form(family="figurine",variant=3);
+use <lib/refined_batch03_forms.scad>
+w = 98; d = 86; h = 133;
+label = "CUSTOM";
+refined_batch03_form(slug="lunar-fox-bust",family="figurine",variant=3,w=w,d=d,h=h,label=label);

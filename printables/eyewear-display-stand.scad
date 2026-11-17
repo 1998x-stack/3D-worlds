@@ -1,6 +1,9 @@
-// Eyewear Display Stand | 眼镜展示托架 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// eyewear-display-stand | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 122 x 112 x 101.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([122,112,101],auto=false)
-    commercial_form(family="display",variant=5);
+use <lib/refined_batch03_forms.scad>
+w = 122; d = 112; h = 101;
+label = "CUSTOM";
+refined_batch03_form(slug="eyewear-display-stand",family="display",variant=5,w=w,d=d,h=h,label=label);

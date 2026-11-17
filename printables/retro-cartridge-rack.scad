@@ -1,6 +1,9 @@
-// Retro Cartridge Rack | 复古游戏卡带架 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// retro-cartridge-rack | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 138 x 103 x 78.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([138,103,78],auto=false)
-    commercial_form(family="gaming",variant=2);
+use <lib/refined_batch03_forms.scad>
+w = 138; d = 103; h = 78;
+label = "CUSTOM";
+refined_batch03_form(slug="retro-cartridge-rack",family="gaming",variant=2,w=w,d=d,h=h,label=label);
