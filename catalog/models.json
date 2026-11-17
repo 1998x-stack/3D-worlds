@@ -5701,6 +5701,276 @@
       "collection": "v0.7",
       "preview_path": "public/thumbs/hanging-macrame-planter.webp",
       "accent": "#d7c1b3"
+    },
+    {
+      "id": "bathroom.heated-wall-towel-rail.001",
+      "slug": "heated-wall-towel-rail",
+      "title": "Heated Wall Towel Rail",
+      "title_zh": "壁挂式电热毛巾架",
+      "summary": "Stainless electric ladder-style towel heater with vertical pipes and towel drape",
+      "category": "bathroom",
+      "tags": [
+        "towel",
+        "heater",
+        "bathroom"
+      ],
+      "dimensions_m": [
+        0.77,
+        1.22,
+        0.19
+      ],
+      "generator": "createHeatedWallTowelRail",
+      "source_path": "src/models/heated_wall_towel_rail.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/heated-wall-towel-rail.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "tools.hydraulic-floor-jack.001",
+      "slug": "hydraulic-floor-jack",
+      "title": "Hydraulic Floor Jack",
+      "title_zh": "液压汽车地牛千斤顶",
+      "summary": "Low-profile wheeled car jack with hydraulic cylinder, lifting saddle and long pumping handle",
+      "category": "tools",
+      "tags": [
+        "jack",
+        "automotive",
+        "hydraulic"
+      ],
+      "dimensions_m": [
+        0.47,
+        0.5,
+        0.99
+      ],
+      "generator": "createHydraulicFloorJack",
+      "source_path": "src/models/hydraulic_floor_jack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/hydraulic-floor-jack.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "characters.industrial-mechanic-mannequin.001",
+      "slug": "industrial-mechanic-mannequin",
+      "title": "Industrial Mechanic Mannequin",
+      "title_zh": "工业机械维修师原型",
+      "summary": "Unrigged industrial mechanic with coveralls, safety visor, tool belt and wrench",
+      "category": "characters",
+      "tags": [
+        "mechanic",
+        "maintenance",
+        "character"
+      ],
+      "dimensions_m": [
+        1.09,
+        1.92,
+        0.75
+      ],
+      "generator": "createIndustrialMechanicMannequin",
+      "source_path": "src/models/industrial_mechanic_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/industrial-mechanic-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "decor.kinetic-balance-sculpture.001",
+      "slug": "kinetic-balance-sculpture",
+      "title": "Kinetic Balance Sculpture",
+      "title_zh": "动感平衡艺术雕塑",
+      "summary": "Kinetic desktop mobile with counterweighted rods, fins and stone pedestal",
+      "category": "decor",
+      "tags": [
+        "kinetic",
+        "sculpture",
+        "balance"
+      ],
+      "dimensions_m": [
+        1.25,
+        1.65,
+        0.87
+      ],
+      "generator": "createKineticBalanceSculpture",
+      "source_path": "src/models/kinetic_balance_sculpture.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/kinetic-balance-sculpture.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "nature.mangrove-root-island.001",
+      "slug": "mangrove-root-island",
+      "title": "Mangrove Root Island",
+      "title_zh": "红树林气根小岛",
+      "summary": "Coastal mangrove with stilt roots, branching trunk and shallow blue tidal water",
+      "category": "nature",
+      "tags": [
+        "mangrove",
+        "wetland",
+        "coastal"
+      ],
+      "dimensions_m": [
+        2.16,
+        2.61,
+        1.9
+      ],
+      "generator": "createMangroveRootIsland",
+      "source_path": "src/models/mangrove_root_island.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mangrove-root-island.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "sports.mini-golf-putting-green.001",
+      "slug": "mini-golf-putting-green",
+      "title": "Mini Golf Putting Green",
+      "title_zh": "迷你高尔夫推杆练习场",
+      "summary": "Portable putting green with synthetic turf, two ball holes, flag, golf balls and edge rail",
+      "category": "sports",
+      "tags": [
+        "golf",
+        "putting",
+        "sport"
+      ],
+      "dimensions_m": [
+        2.43,
+        0.37,
+        1.54
+      ],
+      "generator": "createMiniGolfPuttingGreen",
+      "source_path": "src/models/mini_golf_putting_green.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mini-golf-putting-green.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "tools.mobile-welding-tool-cart.001",
+      "slug": "mobile-welding-tool-cart",
+      "title": "Mobile Welding Tool Cart",
+      "title_zh": "移动焊接工具车",
+      "summary": "Steel welding cart with gas cylinder cradle, hose reel, welding machine and pushbar",
+      "category": "tools",
+      "tags": [
+        "welding",
+        "cart",
+        "workshop"
+      ],
+      "dimensions_m": [
+        0.88,
+        1.21,
+        0.61
+      ],
+      "generator": "createMobileWeldingToolCart",
+      "source_path": "src/models/mobile_welding_tool_cart.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mobile-welding-tool-cart.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "architecture.modular-glass-curtain-wall.001",
+      "slug": "modular-glass-curtain-wall",
+      "title": "Modular Glass Curtain Wall",
+      "title_zh": "建筑玻璃幕墙模块",
+      "summary": "Reusable office facade tile with aluminum mullions, glass panes and anchors",
+      "category": "architecture",
+      "tags": [
+        "curtain-wall",
+        "facade",
+        "architecture"
+      ],
+      "dimensions_m": [
+        2.45,
+        3.02,
+        0.31
+      ],
+      "generator": "createModularGlassCurtainWall",
+      "source_path": "src/models/modular_glass_curtain_wall.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/modular-glass-curtain-wall.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "furniture.modular-stair-storage-cabinet.001",
+      "slug": "modular-stair-storage-cabinet",
+      "title": "Modular Stair Storage Cabinet",
+      "title_zh": "阶梯式组合储物柜",
+      "summary": "Three-level stepped storage cabinet with cubbies, drawer pulls and contrasting stair tread",
+      "category": "furniture",
+      "tags": [
+        "storage",
+        "modular",
+        "stair"
+      ],
+      "dimensions_m": [
+        1.65,
+        1.56,
+        0.49
+      ],
+      "generator": "createModularStairStorageCabinet",
+      "source_path": "src/models/modular_stair_storage_cabinet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/modular-stair-storage-cabinet.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "vehicles.mountain-cable-car-gondola.001",
+      "slug": "mountain-cable-car-gondola",
+      "title": "Mountain Cable Car Gondola",
+      "title_zh": "山地缆车吊厢",
+      "summary": "Suspended passenger gondola with panoramic glass, overhead hanger and cable clamp",
+      "category": "vehicles",
+      "tags": [
+        "gondola",
+        "mountain",
+        "transit"
+      ],
+      "dimensions_m": [
+        1.82,
+        2.53,
+        1.98
+      ],
+      "generator": "createMountainCableCarGondola",
+      "source_path": "src/models/mountain_cable_car_gondola.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/mountain-cable-car-gondola.webp",
+      "accent": "#aac2c7"
     }
   ]
 }

@@ -5,20 +5,21 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 20,
-  "category_count": 11,
+  "asset_count": 30,
+  "category_count": 12,
   "category_counts": {
-    "architecture": 2,
-    "bathroom": 1,
-    "characters": 1,
-    "decor": 2,
-    "furniture": 1,
+    "architecture": 3,
+    "bathroom": 2,
+    "characters": 2,
+    "decor": 3,
+    "furniture": 2,
     "kitchen": 4,
+    "nature": 1,
     "scifi": 1,
-    "sports": 1,
-    "tools": 2,
+    "sports": 2,
+    "tools": 4,
     "urban": 3,
-    "vehicles": 2
+    "vehicles": 3
   },
   "assets": [
     {
@@ -360,6 +361,176 @@
       "design_focus": "Braided macrame suspension with clay plant pot and trailing vines",
       "usage": "macrame",
       "part_count": 46
+    },
+    {
+      "id": "bathroom.heated-wall-towel-rail.001",
+      "slug": "heated-wall-towel-rail",
+      "title": "Heated Wall Towel Rail",
+      "title_zh": "壁挂式电热毛巾架",
+      "category": "bathroom",
+      "source_path": "src/models/heated_wall_towel_rail.js",
+      "generator": "createHeatedWallTowelRail",
+      "dimensions_m": [
+        0.77,
+        1.22,
+        0.19
+      ],
+      "design_focus": "Stainless electric ladder-style towel heater with vertical pipes and towel drape",
+      "usage": "towel",
+      "part_count": 20
+    },
+    {
+      "id": "tools.hydraulic-floor-jack.001",
+      "slug": "hydraulic-floor-jack",
+      "title": "Hydraulic Floor Jack",
+      "title_zh": "液压汽车地牛千斤顶",
+      "category": "tools",
+      "source_path": "src/models/hydraulic_floor_jack.js",
+      "generator": "createHydraulicFloorJack",
+      "dimensions_m": [
+        0.47,
+        0.5,
+        0.99
+      ],
+      "design_focus": "Low-profile wheeled car jack with hydraulic cylinder, lifting saddle and long pumping handle",
+      "usage": "jack",
+      "part_count": 14
+    },
+    {
+      "id": "characters.industrial-mechanic-mannequin.001",
+      "slug": "industrial-mechanic-mannequin",
+      "title": "Industrial Mechanic Mannequin",
+      "title_zh": "工业机械维修师原型",
+      "category": "characters",
+      "source_path": "src/models/industrial_mechanic_mannequin.js",
+      "generator": "createIndustrialMechanicMannequin",
+      "dimensions_m": [
+        1.09,
+        1.92,
+        0.75
+      ],
+      "design_focus": "Unrigged industrial mechanic with coveralls, safety visor, tool belt and wrench",
+      "usage": "mechanic",
+      "part_count": 19
+    },
+    {
+      "id": "decor.kinetic-balance-sculpture.001",
+      "slug": "kinetic-balance-sculpture",
+      "title": "Kinetic Balance Sculpture",
+      "title_zh": "动感平衡艺术雕塑",
+      "category": "decor",
+      "source_path": "src/models/kinetic_balance_sculpture.js",
+      "generator": "createKineticBalanceSculpture",
+      "dimensions_m": [
+        1.25,
+        1.65,
+        0.87
+      ],
+      "design_focus": "Kinetic desktop mobile with counterweighted rods, fins and stone pedestal",
+      "usage": "kinetic",
+      "part_count": 19
+    },
+    {
+      "id": "nature.mangrove-root-island.001",
+      "slug": "mangrove-root-island",
+      "title": "Mangrove Root Island",
+      "title_zh": "红树林气根小岛",
+      "category": "nature",
+      "source_path": "src/models/mangrove_root_island.js",
+      "generator": "createMangroveRootIsland",
+      "dimensions_m": [
+        2.16,
+        2.61,
+        1.9
+      ],
+      "design_focus": "Coastal mangrove with stilt roots, branching trunk and shallow blue tidal water",
+      "usage": "mangrove",
+      "part_count": 41
+    },
+    {
+      "id": "sports.mini-golf-putting-green.001",
+      "slug": "mini-golf-putting-green",
+      "title": "Mini Golf Putting Green",
+      "title_zh": "迷你高尔夫推杆练习场",
+      "category": "sports",
+      "source_path": "src/models/mini_golf_putting_green.js",
+      "generator": "createMiniGolfPuttingGreen",
+      "dimensions_m": [
+        2.43,
+        0.37,
+        1.54
+      ],
+      "design_focus": "Portable putting green with synthetic turf, two ball holes, flag, golf balls and edge rail",
+      "usage": "golf",
+      "part_count": 24
+    },
+    {
+      "id": "tools.mobile-welding-tool-cart.001",
+      "slug": "mobile-welding-tool-cart",
+      "title": "Mobile Welding Tool Cart",
+      "title_zh": "移动焊接工具车",
+      "category": "tools",
+      "source_path": "src/models/mobile_welding_tool_cart.js",
+      "generator": "createMobileWeldingToolCart",
+      "dimensions_m": [
+        0.88,
+        1.21,
+        0.61
+      ],
+      "design_focus": "Steel welding cart with gas cylinder cradle, hose reel, welding machine and pushbar",
+      "usage": "welding",
+      "part_count": 18
+    },
+    {
+      "id": "architecture.modular-glass-curtain-wall.001",
+      "slug": "modular-glass-curtain-wall",
+      "title": "Modular Glass Curtain Wall",
+      "title_zh": "建筑玻璃幕墙模块",
+      "category": "architecture",
+      "source_path": "src/models/modular_glass_curtain_wall.js",
+      "generator": "createModularGlassCurtainWall",
+      "dimensions_m": [
+        2.45,
+        3.02,
+        0.31
+      ],
+      "design_focus": "Reusable office facade tile with aluminum mullions, glass panes and anchors",
+      "usage": "curtain-wall",
+      "part_count": 28
+    },
+    {
+      "id": "furniture.modular-stair-storage-cabinet.001",
+      "slug": "modular-stair-storage-cabinet",
+      "title": "Modular Stair Storage Cabinet",
+      "title_zh": "阶梯式组合储物柜",
+      "category": "furniture",
+      "source_path": "src/models/modular_stair_storage_cabinet.js",
+      "generator": "createModularStairStorageCabinet",
+      "dimensions_m": [
+        1.65,
+        1.56,
+        0.49
+      ],
+      "design_focus": "Three-level stepped storage cabinet with cubbies, drawer pulls and contrasting stair tread",
+      "usage": "storage",
+      "part_count": 22
+    },
+    {
+      "id": "vehicles.mountain-cable-car-gondola.001",
+      "slug": "mountain-cable-car-gondola",
+      "title": "Mountain Cable Car Gondola",
+      "title_zh": "山地缆车吊厢",
+      "category": "vehicles",
+      "source_path": "src/models/mountain_cable_car_gondola.js",
+      "generator": "createMountainCableCarGondola",
+      "dimensions_m": [
+        1.82,
+        2.53,
+        1.98
+      ],
+      "design_focus": "Suspended passenger gondola with panoramic glass, overhead hanger and cable clamp",
+      "usage": "gondola",
+      "part_count": 16
     }
   ]
 }
