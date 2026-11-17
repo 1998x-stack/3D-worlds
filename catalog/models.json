@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_name": "3D Worlds Open Asset Library",
+  "assets": [
+    {
+      "id": "furniture.table.oak-study-001",
+      "slug": "oak-study-table",
+      "title": "Oak Study Table",
+      "title_zh": "原木书桌",
+      "summary": "Warm oak tabletop with powder-coated legs, handcrafted using Three.js primitives.",
+      "category": "furniture",
+      "tags": [
+        "table",
+        "desk",
+        "wood",
+        "interior",
+        "low-poly"
+      ],
+      "generator": "createTable",
+      "source_path": "src/models/table.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.62,
+        0.81,
+        0.88
+      ],
+      "accent": "#dcc09b",
+      "style": "Parametric"
+    },
+    {
+      "id": "furniture.chair.linen-001",
+      "slug": "linen-dining-chair",
+      "title": "Linen Dining Chair",
+      "title_zh": "亚麻餐椅",
+      "summary": "Minimal linen upholstered seat and timber frame.",
+      "category": "furniture",
+      "tags": [
+        "chair",
+        "linen",
+        "interior",
+        "furniture",
+        "low-poly"
+      ],
+      "generator": "createChair",
+      "source_path": "src/models/chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.56,
+        1.18,
+        0.55
+      ],
+      "accent": "#d6c6b1",
+      "style": "Parametric"
+    },
+    {
+      "id": "bathroom.toilet.ceramic-001",
+      "slug": "ceramic-toilet",
+      "title": "Ceramic Toilet",
+      "title_zh": "陶瓷马桶",
+      "summary": "Editable modern bathroom fixture with tank, seat and hardware.",
+      "category": "bathroom",
+      "tags": [
+        "toilet",
+        "ceramic",
+        "bathroom",
+        "fixture",
+        "low-poly"
+      ],
+      "generator": "createToilet",
+      "source_path": "src/models/toilet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.72,
+        1.11,
+        0.98
+      ],
+      "accent": "#d5e5e9",
+      "style": "Parametric"
+    },
+    {
+      "id": "characters.man.study-001",
+      "slug": "male-character-study",
+      "title": "Male Character Study",
+      "title_zh": "男性人物原型",
+      "summary": "Neutral stylized mannequin assembled from primitive meshes; unrigged.",
+      "category": "characters",
+      "tags": [
+        "man",
+        "male",
+        "character",
+        "human",
+        "prototype",
+        "unrigged"
+      ],
+      "generator": "createMan",
+      "source_path": "src/models/man.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.84,
+        1.83,
+        0.37
+      ],
+      "accent": "#bdd4ca",
+      "style": "Stylized"
+    },
+    {
+      "id": "characters.woman.study-001",
+      "slug": "female-character-study",
+      "title": "Female Character Study",
+      "title_zh": "女性人物原型",
+      "summary": "Simple full-body character for scene blockouts; unrigged.",
+      "category": "characters",
+      "tags": [
+        "woman",
+        "female",
+        "character",
+        "human",
+        "prototype",
+        "unrigged"
+      ],
+      "generator": "createWoman",
+      "source_path": "src/models/woman.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.8,
+        1.84,
+        0.36
+      ],
+      "accent": "#e7c0ba",
+      "style": "Stylized"
+    }
+  ]
+}
