@@ -1,9 +1,28 @@
 # Print Commerce · CAD source / 海外3D打印商品
 
 **50 original prototype designs**, each with a dedicated `.scad` source that
-calls the parametric construction library in `lib/commerce_forms.scad`.
+calls either `lib/commerce_forms.scad` or the ten-SKU detailed
+`lib/refined_forms.scad` construction library.
 OpenSCAD uses **millimeters and Z-up**; Three.js gallery uses **meters and Y-up**.
 Gallery preview meshes are stylized representations, not a manufacturing mesh.
+
+
+## Overseas refined batch 01 · ten dimensional designs
+
+The ten refined `.scad` entry files use `lib/refined_forms.scad` with explicit
+`width_mm`, `depth_mm` and `height_mm`, **not** a global `resize()` that
+silently changes functional clearances. The other 40 source designs continue
+to use the original `commerce_forms.scad`.
+
+```bash
+python3 scripts/audit_refined_commerce.py
+python3 scripts/audit_refined_commerce.py --only ribbed-succulent-pot
+python3 scripts/export_print_commerce.py --only handheld-console-stand --format 3mf
+```
+
+The audit requires OpenSCAD and Python `trimesh`; its JSON report checks only
+basic mesh topology and envelopes. **Not a slicer or real-print certification.**
+See the [design, fit and safety checklist](../docs/overseas-refinement-batch-01.md).
 
 ## Export
 

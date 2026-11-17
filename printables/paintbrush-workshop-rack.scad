@@ -1,6 +1,9 @@
-// Paintbrush Workshop Rack | 手工画笔整理架 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
-use <lib/commerce_forms.scad>
-resize([136,93,80],auto=false)
-    commercial_form(family="organizer",variant=3);
+// SPDX-License-Identifier: MIT
+// Paintbrush Workshop Rack | Refined batch 01 | OpenSCAD mm/Z-up.
+// Prototype: slicer, fit, material, stability and safety remain UNVERIFIED.
+use <lib/commerce_forms.scad> // v1.3 compatibility; other SKUs retain their original template.
+use <lib/refined_forms.scad>
+width_mm = 136;
+depth_mm = 93;
+height_mm = 80;
+refined_form(slug="paintbrush-workshop-rack", family="organizer", variant=3, w=width_mm, d=depth_mm, h=height_mm);
