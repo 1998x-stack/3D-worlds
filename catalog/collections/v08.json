@@ -5,17 +5,17 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 40,
+  "asset_count": 50,
   "category_count": 13,
   "category_counts": {
-    "architecture": 2,
-    "bathroom": 3,
-    "characters": 2,
+    "architecture": 4,
+    "bathroom": 4,
+    "characters": 4,
     "decor": 4,
     "electronics": 4,
-    "furniture": 3,
-    "kitchen": 2,
-    "nature": 2,
+    "furniture": 4,
+    "kitchen": 4,
+    "nature": 4,
     "scifi": 3,
     "sports": 3,
     "tools": 4,
@@ -702,6 +702,176 @@
       "design_focus": "Competition kayak with tapered hull, seat, footrest, paddle and spray deck",
       "usage": "kayak",
       "part_count": 18
+    },
+    {
+      "id": "characters.railway-dispatcher-mannequin.001",
+      "slug": "railway-dispatcher-mannequin",
+      "title": "Railway Dispatcher Mannequin",
+      "title_zh": "铁路调度员人物原型",
+      "category": "characters",
+      "source_path": "src/models/railway_dispatcher_mannequin.js",
+      "generator": "createRailwayDispatcherMannequin",
+      "dimensions_m": [
+        1.04,
+        1.94,
+        0.76
+      ],
+      "design_focus": "Unrigged railway dispatcher with signal paddle, reflective vest and radio",
+      "usage": "dispatcher",
+      "part_count": 24
+    },
+    {
+      "id": "kitchen.ramen-noodle-service-counter.001",
+      "slug": "ramen-noodle-service-counter",
+      "title": "Ramen Noodle Service Counter",
+      "title_zh": "日式拉面出餐台",
+      "category": "kitchen",
+      "source_path": "src/models/ramen_noodle_service_counter.js",
+      "generator": "createRamenNoodleServiceCounter",
+      "dimensions_m": [
+        1.68,
+        1.53,
+        0.79
+      ],
+      "design_focus": "Ramen serving counter with bowls, noodle strainer baskets, toppings and menu board",
+      "usage": "ramen",
+      "part_count": 25
+    },
+    {
+      "id": "kitchen.refrigerated-sushi-conveyor.001",
+      "slug": "refrigerated-sushi-conveyor",
+      "title": "Refrigerated Sushi Conveyor",
+      "title_zh": "寿司回转输送展示柜",
+      "category": "kitchen",
+      "source_path": "src/models/refrigerated_sushi_conveyor.js",
+      "generator": "createRefrigeratedSushiConveyor",
+      "dimensions_m": [
+        2.34,
+        1.15,
+        1.14
+      ],
+      "design_focus": "Compact sushi conveyor lane with glass sneeze guard, colorful dishes and cooling base",
+      "usage": "sushi",
+      "part_count": 34
+    },
+    {
+      "id": "furniture.salon-reclining-chair.001",
+      "slug": "salon-reclining-chair",
+      "title": "Salon Reclining Chair",
+      "title_zh": "美发沙龙可调座椅",
+      "category": "furniture",
+      "source_path": "src/models/salon_reclining_chair.js",
+      "generator": "createSalonRecliningChair",
+      "dimensions_m": [
+        1.15,
+        1.64,
+        1.13
+      ],
+      "design_focus": "Swivel salon chair with hydraulic pedestal, tilting back and foot support",
+      "usage": "salon",
+      "part_count": 19
+    },
+    {
+      "id": "nature.savanna-acacia-grove.001",
+      "slug": "savanna-acacia-grove",
+      "title": "Savanna Acacia Grove",
+      "title_zh": "稀树草原金合欢林",
+      "category": "nature",
+      "source_path": "src/models/savanna_acacia_grove.js",
+      "generator": "createSavannaAcaciaGrove",
+      "dimensions_m": [
+        2.81,
+        2.78,
+        2.27
+      ],
+      "design_focus": "Acacia grove with umbrella canopy and dry grass tufts",
+      "usage": "savanna",
+      "part_count": 28
+    },
+    {
+      "id": "architecture.timber-torii-gate.001",
+      "slug": "timber-torii-gate",
+      "title": "Timber Torii Gate",
+      "title_zh": "传统木质鸟居门架",
+      "category": "architecture",
+      "source_path": "src/models/timber_torii_gate.js",
+      "generator": "createTimberToriiGate",
+      "dimensions_m": [
+        3.08,
+        3.1,
+        0.75
+      ],
+      "design_focus": "Traditional wooden ceremonial gateway with twin uprights, curved top beam and plaques",
+      "usage": "torii",
+      "part_count": 15
+    },
+    {
+      "id": "bathroom.touchless-commercial-hand-dryer.001",
+      "slug": "touchless-commercial-hand-dryer",
+      "title": "Touchless Commercial Hand Dryer",
+      "title_zh": "商用感应干手机",
+      "category": "bathroom",
+      "source_path": "src/models/touchless_commercial_hand_dryer.js",
+      "generator": "createTouchlessCommercialHandDryer",
+      "dimensions_m": [
+        0.4,
+        0.56,
+        0.32
+      ],
+      "design_focus": "Commercial hand dryer with air slots, motion sensor, status LEDs and wall mounting",
+      "usage": "dryer",
+      "part_count": 24
+    },
+    {
+      "id": "architecture.underground-utility-tunnel.001",
+      "slug": "underground-utility-tunnel",
+      "title": "Underground Utility Tunnel",
+      "title_zh": "地下综合管廊模块",
+      "category": "architecture",
+      "source_path": "src/models/underground_utility_tunnel.js",
+      "generator": "createUndergroundUtilityTunnel",
+      "dimensions_m": [
+        2.94,
+        2.63,
+        3.35
+      ],
+      "design_focus": "Underground concrete utility tunnel with accessible walkway, cable troughs, water lines and lamps",
+      "usage": "tunnel",
+      "part_count": 25
+    },
+    {
+      "id": "characters.urban-cyclist-mannequin.001",
+      "slug": "urban-cyclist-mannequin",
+      "title": "Urban Cyclist Mannequin",
+      "title_zh": "城市骑行者人物原型",
+      "category": "characters",
+      "source_path": "src/models/urban_cyclist_mannequin.js",
+      "generator": "createUrbanCyclistMannequin",
+      "dimensions_m": [
+        1.13,
+        1.88,
+        0.91
+      ],
+      "design_focus": "Unrigged cyclist in protective helmet, hi-vis jersey, bike glasses and water bottle",
+      "usage": "cyclist",
+      "part_count": 26
+    },
+    {
+      "id": "nature.volcanic-lava-field.001",
+      "slug": "volcanic-lava-field",
+      "title": "Volcanic Lava Field",
+      "title_zh": "火山熔岩地表",
+      "category": "nature",
+      "source_path": "src/models/volcanic_lava_field.js",
+      "generator": "createVolcanicLavaField",
+      "dimensions_m": [
+        2.7,
+        1.05,
+        2.39
+      ],
+      "design_focus": "Jagged basalt volcanic plain with orange lava fissures and vents",
+      "usage": "volcano",
+      "part_count": 31
     }
   ]
 }

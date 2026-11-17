@@ -7591,6 +7591,276 @@
       "collection": "v0.8",
       "preview_path": "public/thumbs/racing-single-kayak.webp",
       "accent": "#b6c4c7"
+    },
+    {
+      "id": "characters.railway-dispatcher-mannequin.001",
+      "slug": "railway-dispatcher-mannequin",
+      "title": "Railway Dispatcher Mannequin",
+      "title_zh": "铁路调度员人物原型",
+      "summary": "Unrigged railway dispatcher with signal paddle, reflective vest and radio",
+      "category": "characters",
+      "tags": [
+        "dispatcher",
+        "railway",
+        "uniform"
+      ],
+      "dimensions_m": [
+        1.04,
+        1.94,
+        0.76
+      ],
+      "generator": "createRailwayDispatcherMannequin",
+      "source_path": "src/models/railway_dispatcher_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/railway-dispatcher-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "kitchen.ramen-noodle-service-counter.001",
+      "slug": "ramen-noodle-service-counter",
+      "title": "Ramen Noodle Service Counter",
+      "title_zh": "日式拉面出餐台",
+      "summary": "Ramen serving counter with bowls, noodle strainer baskets, toppings and menu board",
+      "category": "kitchen",
+      "tags": [
+        "ramen",
+        "noodle",
+        "counter"
+      ],
+      "dimensions_m": [
+        1.68,
+        1.53,
+        0.79
+      ],
+      "generator": "createRamenNoodleServiceCounter",
+      "source_path": "src/models/ramen_noodle_service_counter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/ramen-noodle-service-counter.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "kitchen.refrigerated-sushi-conveyor.001",
+      "slug": "refrigerated-sushi-conveyor",
+      "title": "Refrigerated Sushi Conveyor",
+      "title_zh": "寿司回转输送展示柜",
+      "summary": "Compact sushi conveyor lane with glass sneeze guard, colorful dishes and cooling base",
+      "category": "kitchen",
+      "tags": [
+        "sushi",
+        "conveyor",
+        "restaurant"
+      ],
+      "dimensions_m": [
+        2.34,
+        1.15,
+        1.14
+      ],
+      "generator": "createRefrigeratedSushiConveyor",
+      "source_path": "src/models/refrigerated_sushi_conveyor.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/refrigerated-sushi-conveyor.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "furniture.salon-reclining-chair.001",
+      "slug": "salon-reclining-chair",
+      "title": "Salon Reclining Chair",
+      "title_zh": "美发沙龙可调座椅",
+      "summary": "Swivel salon chair with hydraulic pedestal, tilting back and foot support",
+      "category": "furniture",
+      "tags": [
+        "salon",
+        "chair",
+        "swivel"
+      ],
+      "dimensions_m": [
+        1.15,
+        1.64,
+        1.13
+      ],
+      "generator": "createSalonRecliningChair",
+      "source_path": "src/models/salon_reclining_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/salon-reclining-chair.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "nature.savanna-acacia-grove.001",
+      "slug": "savanna-acacia-grove",
+      "title": "Savanna Acacia Grove",
+      "title_zh": "稀树草原金合欢林",
+      "summary": "Acacia grove with umbrella canopy and dry grass tufts",
+      "category": "nature",
+      "tags": [
+        "savanna",
+        "acacia",
+        "grassland"
+      ],
+      "dimensions_m": [
+        2.81,
+        2.78,
+        2.27
+      ],
+      "generator": "createSavannaAcaciaGrove",
+      "source_path": "src/models/savanna_acacia_grove.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/savanna-acacia-grove.webp",
+      "accent": "#a9c59e"
+    },
+    {
+      "id": "architecture.timber-torii-gate.001",
+      "slug": "timber-torii-gate",
+      "title": "Timber Torii Gate",
+      "title_zh": "传统木质鸟居门架",
+      "summary": "Traditional wooden ceremonial gateway with twin uprights, curved top beam and plaques",
+      "category": "architecture",
+      "tags": [
+        "torii",
+        "gateway",
+        "timber"
+      ],
+      "dimensions_m": [
+        3.08,
+        3.1,
+        0.75
+      ],
+      "generator": "createTimberToriiGate",
+      "source_path": "src/models/timber_torii_gate.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/timber-torii-gate.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "bathroom.touchless-commercial-hand-dryer.001",
+      "slug": "touchless-commercial-hand-dryer",
+      "title": "Touchless Commercial Hand Dryer",
+      "title_zh": "商用感应干手机",
+      "summary": "Commercial hand dryer with air slots, motion sensor, status LEDs and wall mounting",
+      "category": "bathroom",
+      "tags": [
+        "dryer",
+        "touchless",
+        "washroom"
+      ],
+      "dimensions_m": [
+        0.4,
+        0.56,
+        0.32
+      ],
+      "generator": "createTouchlessCommercialHandDryer",
+      "source_path": "src/models/touchless_commercial_hand_dryer.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/touchless-commercial-hand-dryer.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "architecture.underground-utility-tunnel.001",
+      "slug": "underground-utility-tunnel",
+      "title": "Underground Utility Tunnel",
+      "title_zh": "地下综合管廊模块",
+      "summary": "Underground concrete utility tunnel with accessible walkway, cable troughs, water lines and lamps",
+      "category": "architecture",
+      "tags": [
+        "tunnel",
+        "utility",
+        "infrastructure"
+      ],
+      "dimensions_m": [
+        2.94,
+        2.63,
+        3.35
+      ],
+      "generator": "createUndergroundUtilityTunnel",
+      "source_path": "src/models/underground_utility_tunnel.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/underground-utility-tunnel.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "characters.urban-cyclist-mannequin.001",
+      "slug": "urban-cyclist-mannequin",
+      "title": "Urban Cyclist Mannequin",
+      "title_zh": "城市骑行者人物原型",
+      "summary": "Unrigged cyclist in protective helmet, hi-vis jersey, bike glasses and water bottle",
+      "category": "characters",
+      "tags": [
+        "cyclist",
+        "helmet",
+        "commuter"
+      ],
+      "dimensions_m": [
+        1.13,
+        1.88,
+        0.91
+      ],
+      "generator": "createUrbanCyclistMannequin",
+      "source_path": "src/models/urban_cyclist_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/urban-cyclist-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "nature.volcanic-lava-field.001",
+      "slug": "volcanic-lava-field",
+      "title": "Volcanic Lava Field",
+      "title_zh": "火山熔岩地表",
+      "summary": "Jagged basalt volcanic plain with orange lava fissures and vents",
+      "category": "nature",
+      "tags": [
+        "volcano",
+        "lava",
+        "terrain"
+      ],
+      "dimensions_m": [
+        2.7,
+        1.05,
+        2.39
+      ],
+      "generator": "createVolcanicLavaField",
+      "source_path": "src/models/volcanic_lava_field.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/volcanic-lava-field.webp",
+      "accent": "#a9c59e"
     }
   ]
 }
