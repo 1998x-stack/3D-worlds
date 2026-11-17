@@ -9,7 +9,8 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 [Three.js research](docs/threejs-research.md) ·
 [P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
 [STL / 3MF printing pipeline](docs/print-pipeline.md) ·
-[50 newest assets · v1.2](docs/50-assets-v12.md) ·
+[30 newest maker-market assets · v1.3](docs/30-assets-v13.md) ·
+[50 previous assets · v1.2](docs/50-assets-v12.md) ·
 [50 previous assets · v1.1](docs/50-assets-v11.md) ·
 [50 previous assets · v1.0](docs/50-assets-v10.md) ·
 [50 previous assets · v0.9](docs/50-assets-v09.md) ·
@@ -75,6 +76,14 @@ python3 .codex/skills/threejs-model-builder/scripts/preflight.py --json
 Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
 resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
 broken local links.
+
+## V1.3 — 30 original maker-market inspired models
+
+V1.3 increases the catalog from **485 to 515 independently editable models across all 13 categories**. The new release covers modular desktop organizers, mathematical textile patterns, maker electronics, original display figurines, indoor plant accessories and nonweapon science concepts. Each of the 30 designs is an original procedural Three.js source, not a republished Amazon/eBay/HN mesh. These are stylized visual assets, not validated manufacturing CAD.
+
+- [V1.3 bilingual inventory and research references](docs/30-assets-v13.md)
+- [V1.3 machine-readable collection](catalog/collections/v13.json)
+- [V1.3 quality and printing acceptance](docs/verification-v13.md)
 
 ## V1.2 — 50 original source-backed Three.js models
 
@@ -164,7 +173,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
 
 ## Capabilities
 
-- **485 original procedural models across 13 categories:** 435 historical assets plus 50 new V1.2 scene models, each with editable native Three.js source.
+- **515 original procedural models across 13 categories:** 485 historical assets plus 30 new V1.3 maker-market models, each with editable native Three.js source.
 - **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
   model inspector and optional cursor-paginated search API.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
@@ -181,7 +190,7 @@ machine-readable [collection specification](catalog/collections/v04.json).
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v1.2, 485 editable original generators. CI generates real
+> **Status:** v1.3, 515 editable original generators. CI generates real
 > WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
 > S3/MinIO implementation is configurable but requires your credentials and
 > external deployment; remote MCP hosting and real 50K-asset load testing

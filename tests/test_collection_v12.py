@@ -14,16 +14,16 @@ class V12CollectionTests(unittest.TestCase):
         cls.assets=json.loads((ROOT/"catalog/models.json").read_text(encoding="utf8"))["assets"]
         cls.by_id={a["id"]:a for a in cls.assets}
 
-    def test_total_485_and_historical_435(self):
+    def test_total_515_and_historical_435(self):
         c=self.collection
-        self.assertEqual(c["version"],"v1.2")
+        self.assertEqual(c["version"],"v1.2", "v1.3")
         self.assertEqual(c["asset_count"],50)
         self.assertEqual(c["category_count"],13)
         self.assertEqual(len(c["assets"]),50)
-        self.assertEqual(len(self.assets),485)
-        self.assertEqual(len(self.by_id),485)
-        self.assertEqual(len({a["slug"] for a in self.assets}),485)
-        self.assertEqual(sum(a.get("collection")!="v1.2" for a in self.assets),435)
+        self.assertEqual(len(self.assets),515)
+        self.assertEqual(len(self.by_id),515)
+        self.assertEqual(len({a["slug"] for a in self.assets}),515)
+        self.assertEqual(sum(a.get("collection") not in ("v1.2", "v1.3") for a in self.assets),435)
         self.assertEqual(sum(a.get("collection")=="v1.2" for a in self.assets),50)
         categories={x["id"] for x in json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]}
         self.assertEqual(set(c["category_counts"]),categories)
@@ -38,7 +38,7 @@ class V12CollectionTests(unittest.TestCase):
         for e in self.collection["assets"]:
             with self.subTest(id=e["id"]):
                 a=self.by_id[e["id"]]
-                self.assertEqual(a["collection"],"v1.2")
+                self.assertEqual(a["collection"],"v1.2", "v1.3")
                 self.assertEqual(a["kind"],"procedural")
                 self.assertEqual(a["license"],"MIT")
                 self.assertEqual(a["author"],"3D Worlds")
