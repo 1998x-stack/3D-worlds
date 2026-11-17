@@ -4621,6 +4621,276 @@
       "collection": "v0.6",
       "preview_path": "public/thumbs/park-ranger-mannequin.webp",
       "accent": "#c6bbab"
+    },
+    {
+      "id": "electronics.pen-tablet-workstation.001",
+      "slug": "pen-tablet-workstation",
+      "title": "Pen Tablet Workstation",
+      "title_zh": "数位屏绘画工作台",
+      "summary": "Artist pen display with stand, stylus, side shortcut buttons and a drawing interface",
+      "category": "electronics",
+      "tags": [
+        "tablet",
+        "drawing",
+        "studio"
+      ],
+      "dimensions_m": [
+        0.78,
+        0.56,
+        0.46
+      ],
+      "generator": "createPenTabletWorkstation",
+      "source_path": "src/models/pen_tablet_workstation.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/pen-tablet-workstation.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "tools.portable-air-compressor.001",
+      "slug": "portable-air-compressor",
+      "title": "Portable Air Compressor",
+      "title_zh": "便携式空气压缩机",
+      "summary": "Workshop air compressor with pressure tank, gauge, hose coil, motor and wheels",
+      "category": "tools",
+      "tags": [
+        "compressor",
+        "pneumatic",
+        "workshop"
+      ],
+      "dimensions_m": [
+        0.77,
+        0.64,
+        0.47
+      ],
+      "generator": "createPortableAirCompressor",
+      "source_path": "src/models/portable_air_compressor.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/portable-air-compressor.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "urban.public-drinking-fountain.001",
+      "slug": "public-drinking-fountain",
+      "title": "Public Drinking Fountain",
+      "title_zh": "公共饮水台",
+      "summary": "Accessible public drinking fountain with lower pet station, spouts and drainage",
+      "category": "urban",
+      "tags": [
+        "drinking",
+        "water",
+        "public"
+      ],
+      "dimensions_m": [
+        0.76,
+        1.18,
+        0.57
+      ],
+      "generator": "createPublicDrinkingFountain",
+      "source_path": "src/models/public_drinking_fountain.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/public-drinking-fountain.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "scifi.robotic-mining-excavator.001",
+      "slug": "robotic-mining-excavator",
+      "title": "Robotic Mining Excavator",
+      "title_zh": "机器人采矿挖掘车",
+      "summary": "Nonweapon autonomous mining crawler with articulated boom, digging bucket and sensors",
+      "category": "scifi",
+      "tags": [
+        "mining",
+        "excavator",
+        "robot"
+      ],
+      "dimensions_m": [
+        2.25,
+        2.46,
+        3.36
+      ],
+      "generator": "createRoboticMiningExcavator",
+      "source_path": "src/models/robotic_mining_excavator.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/robotic-mining-excavator.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "furniture.rolling-library-ladder.001",
+      "slug": "rolling-library-ladder",
+      "title": "Rolling Library Ladder",
+      "title_zh": "图书馆滑轨木梯",
+      "summary": "Angled walnut step ladder with sliding rail hooks and eight treads",
+      "category": "furniture",
+      "tags": [
+        "library",
+        "ladder",
+        "bookcase"
+      ],
+      "dimensions_m": [
+        0.69,
+        2.52,
+        0.86
+      ],
+      "generator": "createRollingLibraryLadder",
+      "source_path": "src/models/rolling_library_ladder.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/rolling-library-ladder.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "tools.rotary-angle-grinder.001",
+      "slug": "rotary-angle-grinder",
+      "title": "Rotary Angle Grinder",
+      "title_zh": "手持角磨机",
+      "summary": "Workshop angle grinder with metal cutoff wheel, protective cover and side grip",
+      "category": "tools",
+      "tags": [
+        "grinder",
+        "workshop",
+        "rotary"
+      ],
+      "dimensions_m": [
+        0.4,
+        0.21,
+        0.55
+      ],
+      "generator": "createRotaryAngleGrinder",
+      "source_path": "src/models/rotary_angle_grinder.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/rotary-angle-grinder.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "sports.rowing-fitness-ergometer.001",
+      "slug": "rowing-fitness-ergometer",
+      "title": "Rowing Fitness Ergometer",
+      "title_zh": "室内划船训练器",
+      "summary": "Indoor rowing machine with track, sliding seat, flywheel, pedals and pull handle",
+      "category": "sports",
+      "tags": [
+        "rowing",
+        "ergometer",
+        "fitness"
+      ],
+      "dimensions_m": [
+        0.67,
+        1.13,
+        2.13
+      ],
+      "generator": "createRowingFitnessErgometer",
+      "source_path": "src/models/rowing_fitness_ergometer.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/rowing-fitness-ergometer.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "characters.scuba-diver-mannequin.001",
+      "slug": "scuba-diver-mannequin",
+      "title": "Scuba Diver Mannequin",
+      "title_zh": "潜水员人物原型",
+      "summary": "Unrigged scuba diver with mask, tank, flippers, weighted belt and air hoses",
+      "category": "characters",
+      "tags": [
+        "diver",
+        "marine",
+        "character"
+      ],
+      "dimensions_m": [
+        1.2,
+        1.92,
+        0.72
+      ],
+      "generator": "createScubaDiverMannequin",
+      "source_path": "src/models/scuba_diver_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/scuba-diver-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "decor.stained-glass-panel.001",
+      "slug": "stained-glass-panel",
+      "title": "Stained Glass Panel",
+      "title_zh": "彩色铅条玻璃屏",
+      "summary": "Decorative colored leaded glass grid with central rosette",
+      "category": "decor",
+      "tags": [
+        "stained-glass",
+        "window",
+        "art"
+      ],
+      "dimensions_m": [
+        1.21,
+        1.77,
+        0.11
+      ],
+      "generator": "createStainedGlassPanel",
+      "source_path": "src/models/stained_glass_panel.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/stained-glass-panel.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "kitchen.stainless-two-slot-toaster.001",
+      "slug": "stainless-two-slot-toaster",
+      "title": "Stainless Two Slot Toaster",
+      "title_zh": "双槽不锈钢烤面包机",
+      "summary": "Compact countertop toaster with extended bread and shade control",
+      "category": "kitchen",
+      "tags": [
+        "toaster",
+        "breakfast",
+        "appliance"
+      ],
+      "dimensions_m": [
+        0.35,
+        0.27,
+        0.24
+      ],
+      "generator": "createStainlessTwoSlotToaster",
+      "source_path": "src/models/stainless_two_slot_toaster.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.6",
+      "preview_path": "public/thumbs/stainless-two-slot-toaster.webp",
+      "accent": "#cbbca3"
     }
   ]
 }

@@ -5,20 +5,21 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 30,
-  "category_count": 12,
+  "asset_count": 40,
+  "category_count": 13,
   "category_counts": {
     "architecture": 3,
     "bathroom": 1,
-    "characters": 3,
-    "decor": 2,
-    "electronics": 3,
-    "furniture": 2,
-    "kitchen": 2,
+    "characters": 4,
+    "decor": 3,
+    "electronics": 4,
+    "furniture": 3,
+    "kitchen": 3,
     "nature": 3,
-    "scifi": 2,
-    "sports": 2,
-    "urban": 3,
+    "scifi": 3,
+    "sports": 3,
+    "tools": 2,
+    "urban": 4,
     "vehicles": 4
   },
   "assets": [
@@ -531,6 +532,176 @@
       "design_focus": "Unrigged forest ranger with brimmed hat, radio, khaki uniform and hiking boots",
       "usage": "ranger",
       "part_count": 17
+    },
+    {
+      "id": "electronics.pen-tablet-workstation.001",
+      "slug": "pen-tablet-workstation",
+      "title": "Pen Tablet Workstation",
+      "title_zh": "数位屏绘画工作台",
+      "category": "electronics",
+      "source_path": "src/models/pen_tablet_workstation.js",
+      "generator": "createPenTabletWorkstation",
+      "dimensions_m": [
+        0.78,
+        0.56,
+        0.46
+      ],
+      "design_focus": "Artist pen display with stand, stylus, side shortcut buttons and a drawing interface",
+      "usage": "tablet",
+      "part_count": 16
+    },
+    {
+      "id": "tools.portable-air-compressor.001",
+      "slug": "portable-air-compressor",
+      "title": "Portable Air Compressor",
+      "title_zh": "便携式空气压缩机",
+      "category": "tools",
+      "source_path": "src/models/portable_air_compressor.js",
+      "generator": "createPortableAirCompressor",
+      "dimensions_m": [
+        0.77,
+        0.64,
+        0.47
+      ],
+      "design_focus": "Workshop air compressor with pressure tank, gauge, hose coil, motor and wheels",
+      "usage": "compressor",
+      "part_count": 15
+    },
+    {
+      "id": "urban.public-drinking-fountain.001",
+      "slug": "public-drinking-fountain",
+      "title": "Public Drinking Fountain",
+      "title_zh": "公共饮水台",
+      "category": "urban",
+      "source_path": "src/models/public_drinking_fountain.js",
+      "generator": "createPublicDrinkingFountain",
+      "dimensions_m": [
+        0.76,
+        1.18,
+        0.57
+      ],
+      "design_focus": "Accessible public drinking fountain with lower pet station, spouts and drainage",
+      "usage": "drinking",
+      "part_count": 12
+    },
+    {
+      "id": "scifi.robotic-mining-excavator.001",
+      "slug": "robotic-mining-excavator",
+      "title": "Robotic Mining Excavator",
+      "title_zh": "机器人采矿挖掘车",
+      "category": "scifi",
+      "source_path": "src/models/robotic_mining_excavator.js",
+      "generator": "createRoboticMiningExcavator",
+      "dimensions_m": [
+        2.25,
+        2.46,
+        3.36
+      ],
+      "design_focus": "Nonweapon autonomous mining crawler with articulated boom, digging bucket and sensors",
+      "usage": "mining",
+      "part_count": 25
+    },
+    {
+      "id": "furniture.rolling-library-ladder.001",
+      "slug": "rolling-library-ladder",
+      "title": "Rolling Library Ladder",
+      "title_zh": "图书馆滑轨木梯",
+      "category": "furniture",
+      "source_path": "src/models/rolling_library_ladder.js",
+      "generator": "createRollingLibraryLadder",
+      "dimensions_m": [
+        0.69,
+        2.52,
+        0.86
+      ],
+      "design_focus": "Angled walnut step ladder with sliding rail hooks and eight treads",
+      "usage": "library",
+      "part_count": 18
+    },
+    {
+      "id": "tools.rotary-angle-grinder.001",
+      "slug": "rotary-angle-grinder",
+      "title": "Rotary Angle Grinder",
+      "title_zh": "手持角磨机",
+      "category": "tools",
+      "source_path": "src/models/rotary_angle_grinder.js",
+      "generator": "createRotaryAngleGrinder",
+      "dimensions_m": [
+        0.4,
+        0.21,
+        0.55
+      ],
+      "design_focus": "Workshop angle grinder with metal cutoff wheel, protective cover and side grip",
+      "usage": "grinder",
+      "part_count": 13
+    },
+    {
+      "id": "sports.rowing-fitness-ergometer.001",
+      "slug": "rowing-fitness-ergometer",
+      "title": "Rowing Fitness Ergometer",
+      "title_zh": "室内划船训练器",
+      "category": "sports",
+      "source_path": "src/models/rowing_fitness_ergometer.js",
+      "generator": "createRowingFitnessErgometer",
+      "dimensions_m": [
+        0.67,
+        1.13,
+        2.13
+      ],
+      "design_focus": "Indoor rowing machine with track, sliding seat, flywheel, pedals and pull handle",
+      "usage": "rowing",
+      "part_count": 14
+    },
+    {
+      "id": "characters.scuba-diver-mannequin.001",
+      "slug": "scuba-diver-mannequin",
+      "title": "Scuba Diver Mannequin",
+      "title_zh": "潜水员人物原型",
+      "category": "characters",
+      "source_path": "src/models/scuba_diver_mannequin.js",
+      "generator": "createScubaDiverMannequin",
+      "dimensions_m": [
+        1.2,
+        1.92,
+        0.72
+      ],
+      "design_focus": "Unrigged scuba diver with mask, tank, flippers, weighted belt and air hoses",
+      "usage": "diver",
+      "part_count": 15
+    },
+    {
+      "id": "decor.stained-glass-panel.001",
+      "slug": "stained-glass-panel",
+      "title": "Stained Glass Panel",
+      "title_zh": "彩色铅条玻璃屏",
+      "category": "decor",
+      "source_path": "src/models/stained_glass_panel.js",
+      "generator": "createStainedGlassPanel",
+      "dimensions_m": [
+        1.21,
+        1.77,
+        0.11
+      ],
+      "design_focus": "Decorative colored leaded glass grid with central rosette",
+      "usage": "stained-glass",
+      "part_count": 25
+    },
+    {
+      "id": "kitchen.stainless-two-slot-toaster.001",
+      "slug": "stainless-two-slot-toaster",
+      "title": "Stainless Two Slot Toaster",
+      "title_zh": "双槽不锈钢烤面包机",
+      "category": "kitchen",
+      "source_path": "src/models/stainless_two_slot_toaster.js",
+      "generator": "createStainlessTwoSlotToaster",
+      "dimensions_m": [
+        0.35,
+        0.27,
+        0.24
+      ],
+      "design_focus": "Compact countertop toaster with extended bread and shade control",
+      "usage": "toaster",
+      "part_count": 15
     }
   ]
 }
