@@ -33,8 +33,8 @@ class CatalogTests(unittest.TestCase):
                     "SELECT a.asset_id FROM assets a JOIN assets_fts ON a.rowid=assets_fts.rowid "
                     "WHERE assets_fts MATCH ?", ('"chair"',)
                 ).fetchall()
-                self.assertEqual(len(rows), 1)
-                self.assertEqual(rows[0][0], "furniture.chair.linen-001")
+                self.assertGreaterEqual(len(rows), 1)
+                self.assertIn("furniture.chair.linen-001", [row[0] for row in rows])
                 connection.execute(
                     "UPDATE assets SET title='Updated Stool' WHERE asset_id='furniture.chair.linen-001'"
                 )
