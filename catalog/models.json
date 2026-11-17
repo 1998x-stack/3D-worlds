@@ -3616,6 +3616,201 @@
       "collection": "v0.5",
       "preview_path": "public/thumbs/industrial-welding-mask.webp",
       "accent": "#c7bdad"
+    },
+    {
+      "id": "tools.retractable-tape-measure.001",
+      "slug": "retractable-tape-measure",
+      "title": "Retractable Tape Measure",
+      "title_zh": "伸缩卷尺",
+      "summary": "Compact metric tape with polymer case, extended measurement ribbon and hook.",
+      "category": "tools",
+      "tags": [
+        "measure",
+        "tape",
+        "construction"
+      ],
+      "dimensions_m": [
+        0.21,
+        0.14,
+        0.29
+      ],
+      "generator": "createRetractableTapeMeasure",
+      "source_path": "src/models/retractable_tape_measure.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/retractable-tape-measure.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "sports.portable-football-goal.001",
+      "slug": "portable-football-goal",
+      "title": "Portable Football Goal",
+      "title_zh": "便携式足球球门",
+      "summary": "Training soccer goal with metal framing, net and diagonal brace supports.",
+      "category": "sports",
+      "tags": [
+        "football",
+        "soccer",
+        "goal",
+        "sports"
+      ],
+      "dimensions_m": [
+        3.18,
+        2.04,
+        1.28
+      ],
+      "generator": "createPortableFootballGoal",
+      "source_path": "src/models/portable_football_goal.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/portable-football-goal.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "sports.outdoor-table-tennis.001",
+      "slug": "outdoor-table-tennis",
+      "title": "Outdoor Table Tennis",
+      "title_zh": "户外乒乓球台",
+      "summary": "Regulation-shaped fixed public ping-pong table with center net and paddle.",
+      "category": "sports",
+      "tags": [
+        "table-tennis",
+        "ping-pong",
+        "recreation",
+        "sports"
+      ],
+      "dimensions_m": [
+        2.74,
+        0.91,
+        1.55
+      ],
+      "generator": "createOutdoorTableTennis",
+      "source_path": "src/models/outdoor_table_tennis.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/outdoor-table-tennis.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "sports.gym-dumbbell-storage-rack.001",
+      "slug": "gym-dumbbell-storage-rack",
+      "title": "Gym Dumbbell Storage Rack",
+      "title_zh": "健身哑铃存放架",
+      "summary": "A-frame gym rack holding six matched dumbbells on three tiers.",
+      "category": "sports",
+      "tags": [
+        "gym",
+        "dumbbell",
+        "fitness",
+        "sports"
+      ],
+      "dimensions_m": [
+        1.37,
+        1.13,
+        0.61
+      ],
+      "generator": "createGymDumbbellStorageRack",
+      "source_path": "src/models/gym_dumbbell_storage_rack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/gym-dumbbell-storage-rack.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "scifi.six-wheel-exploration-rover.001",
+      "slug": "six-wheel-exploration-rover",
+      "title": "Six Wheel Exploration Rover",
+      "title_zh": "六轮科考探测车",
+      "summary": "Six-wheel noncombat robotic rover with solar panels, suspension, stereo camera and sample bin.",
+      "category": "scifi",
+      "tags": [
+        "rover",
+        "exploration",
+        "sci-fi",
+        "robotics"
+      ],
+      "dimensions_m": [
+        2,
+        1.66,
+        2.65
+      ],
+      "generator": "createSixWheelExplorationRover",
+      "source_path": "src/models/six_wheel_exploration_rover.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/six-wheel-exploration-rover.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "scifi.cryogenic-sleep-pod.001",
+      "slug": "cryogenic-sleep-pod",
+      "title": "Cryogenic Sleep Pod",
+      "title_zh": "低温休眠舱",
+      "summary": "Spacecraft sleep pod with mattress, curved translucent lid, locks and control touchscreen.",
+      "category": "scifi",
+      "tags": [
+        "cryo",
+        "sleep",
+        "pod",
+        "spaceship"
+      ],
+      "dimensions_m": [
+        1.04,
+        1.18,
+        2.52
+      ],
+      "generator": "createCryogenicSleepPod",
+      "source_path": "src/models/cryogenic_sleep_pod.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/cryogenic-sleep-pod.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "scifi.holographic-command-console.001",
+      "slug": "holographic-command-console",
+      "title": "Holographic Command Console",
+      "title_zh": "全息指挥控制台",
+      "summary": "Sci-fi holographic workbench with six-by-six light grid, controls and flank modules.",
+      "category": "scifi",
+      "tags": [
+        "hologram",
+        "console",
+        "command",
+        "sci-fi"
+      ],
+      "dimensions_m": [
+        1.76,
+        1.49,
+        1
+      ],
+      "generator": "createHolographicCommandConsole",
+      "source_path": "src/models/holographic_command_console.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/holographic-command-console.webp",
+      "accent": "#a8cad6"
     }
   ]
 }

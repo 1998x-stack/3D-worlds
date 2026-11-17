@@ -5,8 +5,8 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 43,
-  "category_count": 11,
+  "asset_count": 50,
+  "category_count": 13,
   "category_counts": {
     "architecture": 4,
     "bathroom": 4,
@@ -16,7 +16,9 @@
     "furniture": 4,
     "kitchen": 4,
     "nature": 4,
-    "tools": 3,
+    "scifi": 3,
+    "sports": 3,
+    "tools": 4,
     "urban": 4,
     "vehicles": 4
   },
@@ -751,6 +753,125 @@
       "design_focus": "Protective welding visor with dark viewing pane, vents and headband.",
       "usage": "mask",
       "part_count": 12
+    },
+    {
+      "id": "tools.retractable-tape-measure.001",
+      "slug": "retractable-tape-measure",
+      "title": "Retractable Tape Measure",
+      "title_zh": "伸缩卷尺",
+      "category": "tools",
+      "source_path": "src/models/retractable_tape_measure.js",
+      "generator": "createRetractableTapeMeasure",
+      "dimensions_m": [
+        0.21,
+        0.14,
+        0.29
+      ],
+      "design_focus": "Compact metric tape with polymer case, extended measurement ribbon and hook.",
+      "usage": "measure",
+      "part_count": 13
+    },
+    {
+      "id": "sports.portable-football-goal.001",
+      "slug": "portable-football-goal",
+      "title": "Portable Football Goal",
+      "title_zh": "便携式足球球门",
+      "category": "sports",
+      "source_path": "src/models/portable_football_goal.js",
+      "generator": "createPortableFootballGoal",
+      "dimensions_m": [
+        3.18,
+        2.04,
+        1.28
+      ],
+      "design_focus": "Training soccer goal with metal framing, net and diagonal brace supports.",
+      "usage": "football",
+      "part_count": 40
+    },
+    {
+      "id": "sports.outdoor-table-tennis.001",
+      "slug": "outdoor-table-tennis",
+      "title": "Outdoor Table Tennis",
+      "title_zh": "户外乒乓球台",
+      "category": "sports",
+      "source_path": "src/models/outdoor_table_tennis.js",
+      "generator": "createOutdoorTableTennis",
+      "dimensions_m": [
+        2.74,
+        0.91,
+        1.55
+      ],
+      "design_focus": "Regulation-shaped fixed public ping-pong table with center net and paddle.",
+      "usage": "table-tennis",
+      "part_count": 23
+    },
+    {
+      "id": "sports.gym-dumbbell-storage-rack.001",
+      "slug": "gym-dumbbell-storage-rack",
+      "title": "Gym Dumbbell Storage Rack",
+      "title_zh": "健身哑铃存放架",
+      "category": "sports",
+      "source_path": "src/models/gym_dumbbell_storage_rack.js",
+      "generator": "createGymDumbbellStorageRack",
+      "dimensions_m": [
+        1.37,
+        1.13,
+        0.61
+      ],
+      "design_focus": "A-frame gym rack holding six matched dumbbells on three tiers.",
+      "usage": "gym",
+      "part_count": 26
+    },
+    {
+      "id": "scifi.six-wheel-exploration-rover.001",
+      "slug": "six-wheel-exploration-rover",
+      "title": "Six Wheel Exploration Rover",
+      "title_zh": "六轮科考探测车",
+      "category": "scifi",
+      "source_path": "src/models/six_wheel_exploration_rover.js",
+      "generator": "createSixWheelExplorationRover",
+      "dimensions_m": [
+        2,
+        1.66,
+        2.65
+      ],
+      "design_focus": "Six-wheel noncombat robotic rover with solar panels, suspension, stereo camera and sample bin.",
+      "usage": "rover",
+      "part_count": 27
+    },
+    {
+      "id": "scifi.cryogenic-sleep-pod.001",
+      "slug": "cryogenic-sleep-pod",
+      "title": "Cryogenic Sleep Pod",
+      "title_zh": "低温休眠舱",
+      "category": "scifi",
+      "source_path": "src/models/cryogenic_sleep_pod.js",
+      "generator": "createCryogenicSleepPod",
+      "dimensions_m": [
+        1.04,
+        1.18,
+        2.52
+      ],
+      "design_focus": "Spacecraft sleep pod with mattress, curved translucent lid, locks and control touchscreen.",
+      "usage": "cryo",
+      "part_count": 20
+    },
+    {
+      "id": "scifi.holographic-command-console.001",
+      "slug": "holographic-command-console",
+      "title": "Holographic Command Console",
+      "title_zh": "全息指挥控制台",
+      "category": "scifi",
+      "source_path": "src/models/holographic_command_console.js",
+      "generator": "createHolographicCommandConsole",
+      "dimensions_m": [
+        1.76,
+        1.49,
+        1
+      ],
+      "design_focus": "Sci-fi holographic workbench with six-by-six light grid, controls and flank modules.",
+      "usage": "hologram",
+      "part_count": 30
     }
   ]
 }
