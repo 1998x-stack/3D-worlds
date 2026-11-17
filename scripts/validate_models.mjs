@@ -55,5 +55,5 @@ for (const asset of manifest.assets) {
   checked += 1;
   console.log('OK', asset.id, { meshes, vertices, triangles: Math.round(triangles), dimensions });
 }
-if (checked < 5) throw new Error('Expected at least five authored starter assets');
+if (checked < 15) throw new Error('Expected at least fifteen authored asset models');
 console.log('Verified', checked, 'procedural models');

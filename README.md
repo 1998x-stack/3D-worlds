@@ -13,21 +13,24 @@ gallery paired with a local, searchable SQLite catalog and MCP server.
 
 ## Capabilities
 
-- **Five original procedural models:** oak desk, linen dining chair, ceramic
-  toilet, male-presenting mannequin, female-presenting mannequin.
+- **Fifteen original procedural models:** five v0.1 assets plus sofa,
+  bookshelf, bed, floor lamp, sink, bathtub, garden tree, electric car,
+  laptop and potted plant. Seven categories.
 - **Web Gallery:** responsive cards, bilingual text search, categories and sorting.
 - **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
 - **Portable output:** copy self-contained Three.js source or generate a downloadable GLB.
+- **GLB batch ingestion:** Khronos specification validation, budgets,
+  license/source evidence, content hashes, dry run and explicit publishing.
 - **SQLite catalog:** normalized categories, tags, files, provenance, relations
   and incremental-search FTS5 index.
 - **MCP:** search/get/source/import tools for an AI game-building assistant,
   served from a local read-only SQLite connection.
 - **Skills:** mirrored for Codex, Pi and Claude.
 
-> **Status:** v0.1 MVP. Source-copy and browser GLB export work for the five
-> authored generators. The people are stylized, unrigged placeholders. The
-> MCP server runs locally, **not** on GitHub Pages. Bulk GLB ingestion, hosted
-> binary search, and remote MCP are future capabilities.
+> **Status:** v0.2 engineering iteration. All 15 original generators can be
+> inspected, copied and exported as GLB. The included GLB batch import pipeline
+> accepts small self-contained local GLB files; large-scale CDN storage and a
+> hosted MCP service remain future capabilities. The humanoids are unrigged.
 
 ## Local run
 
@@ -83,7 +86,8 @@ interpreter with absolute paths in the client configuration):
 
 MCP actions: `search_models(query, category, limit, offset)`,
 `get_model(asset_id)`, `list_categories()`,
-`get_threejs_source(asset_id)`, `get_import_recipe(asset_id, target)`.
+`get_threejs_source(asset_id)`, `get_import_recipe(asset_id, target)`,
+`get_asset_download(asset_id)` for an already published binary.
 Resource `3dworlds://asset/{asset_id}`; prompt `place_asset_in_game`.
 
 Example agent workflow: `search_models("chair")` → `get_model(id)` →
@@ -105,6 +109,30 @@ The script creates the generator and adds a catalog record; the Gallery's
 Vite model registry auto-discovers it. Follow the [Skill](.codex/skills/threejs-model-builder/SKILL.md)
 for quality and provenance checks.
 
+## Batch import verified GLB files
+
+The batch importer operates on local files under `ingest/staging/` and is
+**dry-run only by default**. Every asset must provide an author, license,
+category, dimensions and source evidence for third-party work. The tool
+runs structural checks plus the Khronos glTF Validator; only self-contained
+GLB 2.0 files are accepted.
+
+```bash
+# Copy a legally sourced GLB into ingest/staging/
+cp /PATH/TO/MODEL.glb ingest/staging/example.glb
+cp ingest/batch.example.json ingest/my-batch.json
+# Edit the batch fields, especially file, license evidence and dimensions
+node scripts/ingest_glb.mjs --batch ingest/my-batch.json
+# Only after inspecting the quality report:
+node scripts/ingest_glb.mjs --batch ingest/my-batch.json --apply
+python3 scripts/catalog.py build
+npm run build
+```
+
+See [GLB ingestion architecture](docs/ingestion-architecture.md),
+[Ten new asset briefs](docs/asset-designs-v02.md) and
+[glTF Validator](https://github.com/KhronosGroup/glTF-Validator).
+
 ## Publish to GitHub Pages
 
 Commit to `main`; workflow `.github/workflows/pages.yml` validates catalog,
@@ -121,13 +149,16 @@ not yet active, check Actions and Pages settings before treating it as live.
 ├── .codex/skills/threejs-model-builder/SKILL.md
 ├── .pi/skills/threejs-model-builder/SKILL.md
 ├── .claude/skills/threejs-model-builder/SKILL.md
-├── catalog/models.json          # versioned source of truth
+├── catalog/{models,categories}.json # asset and category source of truth
 ├── db/schema.sql                # SQLite relations, triggers and FTS5
 ├── data/catalog.sqlite          # generated locally, ignored by git
 ├── docs/{architecture,threejs-research,ui-design}.md
 ├── scripts/{catalog,new_model}.py
+├── scripts/{audit_glb,ingest_glb,test_ingest}.mjs
+├── ingest/{batch.example.json,staging/}
+├── public/assets/               # imported GLBs, content-addressed
 ├── services/mcp_server.py
-├── src/models/{primitives,table,chair,toilet,man,woman}.js
+├── src/models/*.js              # 15 original parametric assets
 ├── src/{main,scene,styles}.*
 ├── tests/test_catalog.py
 ├── package.json / vite.config.js

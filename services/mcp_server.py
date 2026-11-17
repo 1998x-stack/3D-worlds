@@ -47,6 +47,11 @@ def item_detail(conn: sqlite3.Connection, row: sqlite3.Row) -> dict[str, Any]:
             "FROM asset_files WHERE asset_id=? ORDER BY variant_key", (asset["asset_id"],)
         )
     ]
+    provenance = conn.execute(
+        "SELECT source_name,source_url,original_author,license_evidence_url,notes "
+        "FROM asset_provenance WHERE asset_id=?", (asset["asset_id"],)
+    ).fetchone()
+    asset["provenance"] = dict(provenance) if provenance else None
     return asset
 
 
@@ -171,12 +176,33 @@ def get_import_recipe(asset_id: str, target: str = "threejs") -> dict:
                           f"Invoke {asset['generator']}() and add it to scene",
                           "Optionally export a .glb from the Gallery web inspector"],
                 "scale_unit": asset["unit"], "up_axis": asset["up_axis"]}
-    path = asset.get("binary_path") or "PATH_TO_MODEL.glb"
+    filename = asset["slug"] + ".glb"
     return {"asset_id": asset["asset_id"], "target": target,
+            "steps": ["Download the binary from get_asset_download",
+                      f"Copy it into your game's public/assets/{filename}",
+                      "Use GLTFLoader to instantiate and position it"],
             "code": ("import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';\n"
-                     f"const gltf = await new GLTFLoader().loadAsync('{path}');\n"
+                     f"const gltf = await new GLTFLoader().loadAsync('/assets/{filename}');\n"
                      "scene.add(gltf.scene);"),
             "license": asset["license_spdx"]}
+
+
+@mcp.tool()
+def get_asset_download(asset_id: str) -> dict:
+    """Get immutable download URL, SHA-256 and license for an imported GLB."""
+    asset = lookup(asset_id)
+    if "error" in asset:
+        return asset
+    if asset["kind"] != "glb" or not asset.get("binary_path"):
+        return {"error": "not_prebuilt_glb", "asset_id": asset_id,
+                "hint": "For procedural models call get_threejs_source or export GLB in the Gallery"}
+    path = asset["binary_path"].removeprefix("public/")
+    return {"asset_id": asset["asset_id"],
+            "url": "https://1998x-stack.github.io/3D-worlds/" + path,
+            "sha256": asset.get("content_sha256"),
+            "bytes": asset.get("file_size_bytes"),
+            "license": asset["license_spdx"],
+            "provenance": asset.get("provenance")}
 
 
 @mcp.resource("3dworlds://asset/{asset_id}")

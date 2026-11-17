@@ -8,8 +8,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "check:catalog": "python3 scripts/catalog.py validate",
-    "build:catalog": "python3 scripts/catalog.py build"
+    "build:catalog": "python3 scripts/catalog.py build",
+    "audit:glb": "node scripts/audit_glb.mjs",
+    "ingest:glb": "node scripts/ingest_glb.mjs",
+    "test:ingest": "node scripts/test_ingest.mjs"
   },
-  "dependencies": {"three": "0.180.0"},
-  "devDependencies": {"vite": "7.1.10"}
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "7.1.10",
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
 }

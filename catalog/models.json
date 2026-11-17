@@ -138,6 +138,275 @@
       ],
       "accent": "#e7c0ba",
       "style": "Stylized"
+    },
+    {
+      "id": "furniture.sofa.clay-linen-001",
+      "slug": "clay-linen-sofa",
+      "title": "Clay Linen Sofa",
+      "title_zh": "陶土色双人沙发",
+      "summary": "Two-seat clay sofa with separate cushions, wood feet and accent pillow.",
+      "category": "furniture",
+      "tags": [
+        "sofa",
+        "upholstery",
+        "living-room",
+        "low-poly"
+      ],
+      "generator": "createSofa",
+      "source_path": "src/models/sofa.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        2.05,
+        0.89,
+        0.89
+      ],
+      "accent": "#d7aaa0",
+      "style": "Stylized"
+    },
+    {
+      "id": "furniture.bookshelf.oak-studio-001",
+      "slug": "oak-studio-bookshelf",
+      "title": "Oak Studio Bookshelf",
+      "title_zh": "原木书架",
+      "summary": "Tall bookcase with four populated shelves of individually named books.",
+      "category": "furniture",
+      "tags": [
+        "bookshelf",
+        "books",
+        "wood",
+        "study",
+        "storage"
+      ],
+      "generator": "createBookshelf",
+      "source_path": "src/models/bookshelf.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.14,
+        1.98,
+        0.34
+      ],
+      "accent": "#d8b998",
+      "style": "Stylized"
+    },
+    {
+      "id": "furniture.bed.coastal-queen-001",
+      "slug": "coastal-queen-bed",
+      "title": "Coastal Queen Bed",
+      "title_zh": "海岸风双人床",
+      "summary": "Queen bed with headboard, soft pillows, mattress and layered duvet.",
+      "category": "furniture",
+      "tags": [
+        "bed",
+        "bedroom",
+        "pillow",
+        "furniture",
+        "linen"
+      ],
+      "generator": "createBed",
+      "source_path": "src/models/bed.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.72,
+        0.92,
+        2.12
+      ],
+      "accent": "#b9d1cb",
+      "style": "Stylized"
+    },
+    {
+      "id": "furniture.lamp.flared-floor-001",
+      "slug": "flared-floor-lamp",
+      "title": "Flared Floor Lamp",
+      "title_zh": "锥形落地灯",
+      "summary": "Metal floor lamp with warm tapered shade; non-emissive prototype.",
+      "category": "furniture",
+      "tags": [
+        "lamp",
+        "floor-lamp",
+        "lighting",
+        "interior",
+        "metal"
+      ],
+      "generator": "createFloorLamp",
+      "source_path": "src/models/floor_lamp.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.66,
+        1.83,
+        0.66
+      ],
+      "accent": "#e2d0a6",
+      "style": "Stylized"
+    },
+    {
+      "id": "bathroom.sink.vessel-vanity-001",
+      "slug": "vessel-sink-vanity",
+      "title": "Vessel Sink Vanity",
+      "title_zh": "台上盆浴室柜",
+      "summary": "Stone vessel basin with wood drawers and chrome faucet.",
+      "category": "bathroom",
+      "tags": [
+        "sink",
+        "bathroom",
+        "vanity",
+        "faucet",
+        "ceramic"
+      ],
+      "generator": "createWashbasin",
+      "source_path": "src/models/washbasin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.96,
+        1.12,
+        0.57
+      ],
+      "accent": "#cfc2b8",
+      "style": "Stylized"
+    },
+    {
+      "id": "bathroom.bath.freestanding-001",
+      "slug": "freestanding-oval-bath",
+      "title": "Freestanding Oval Bath",
+      "title_zh": "独立式浴缸",
+      "summary": "Freestanding oval bathtub with visible water surface.",
+      "category": "bathroom",
+      "tags": [
+        "bathtub",
+        "bathroom",
+        "ceramic",
+        "water",
+        "fixture"
+      ],
+      "generator": "createBathtub",
+      "source_path": "src/models/bathtub.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.76,
+        0.7,
+        0.86
+      ],
+      "accent": "#d7e3e0",
+      "style": "Stylized"
+    },
+    {
+      "id": "nature.tree.green-canopy-001",
+      "slug": "green-canopy-tree",
+      "title": "Green Canopy Tree",
+      "title_zh": "庭院阔叶树",
+      "summary": "Layered green deciduous tree for low-poly outdoor environments.",
+      "category": "nature",
+      "tags": [
+        "tree",
+        "nature",
+        "plant",
+        "outdoor",
+        "environment"
+      ],
+      "generator": "createTree",
+      "source_path": "src/models/tree.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.85,
+        2.72,
+        1.4
+      ],
+      "accent": "#98b7a2",
+      "style": "Stylized"
+    },
+    {
+      "id": "vehicles.car.city-electric-001",
+      "slug": "city-electric-sedan",
+      "title": "City Electric Sedan",
+      "title_zh": "城市电动轿车",
+      "summary": "Stylized electric sedan with independent wheels, glass and lights; not rigged.",
+      "category": "vehicles",
+      "tags": [
+        "car",
+        "vehicle",
+        "transport",
+        "city",
+        "electric"
+      ],
+      "generator": "createCar",
+      "source_path": "src/models/car.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        1.96,
+        1.33,
+        3.31
+      ],
+      "accent": "#a7c2c5",
+      "style": "Stylized"
+    },
+    {
+      "id": "electronics.laptop.studio-001",
+      "slug": "studio-laptop",
+      "title": "Minimal Laptop",
+      "title_zh": "轻薄笔记本电脑",
+      "summary": "Open laptop with modeled keys, trackpad and display.",
+      "category": "electronics",
+      "tags": [
+        "laptop",
+        "computer",
+        "electronics",
+        "office",
+        "technology"
+      ],
+      "generator": "createLaptop",
+      "source_path": "src/models/laptop.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.35,
+        0.27,
+        0.25
+      ],
+      "accent": "#aebcc3",
+      "style": "Stylized"
+    },
+    {
+      "id": "decor.plant.monstera-pot-001",
+      "slug": "monstera-pot",
+      "title": "Monstera Pot",
+      "title_zh": "室内绿植盆栽",
+      "summary": "Ceramic planter with stems and six stylized leaves.",
+      "category": "decor",
+      "tags": [
+        "plant",
+        "pot",
+        "indoor",
+        "decor",
+        "greenery"
+      ],
+      "generator": "createPlant",
+      "source_path": "src/models/plant.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "dimensions_m": [
+        0.84,
+        1.1,
+        0.8
+      ],
+      "accent": "#b8cba6",
+      "style": "Stylized"
     }
   ]
 }

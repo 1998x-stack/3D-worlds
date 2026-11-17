@@ -14,8 +14,8 @@ class CatalogTests(unittest.TestCase):
     def test_manifest_validates_assets(self):
         data = validate_manifest()
         self.assertEqual(data["schema_version"], "1.0.0")
-        self.assertGreaterEqual(len(data["assets"]), 5)
-        self.assertEqual({a["category"] for a in data["assets"]}, {"furniture", "bathroom", "characters"})
+        self.assertGreaterEqual(len(data["assets"]), 15)
+        self.assertTrue({"furniture", "bathroom", "characters", "nature", "vehicles", "electronics", "decor"}.issubset({a["category"] for a in data["assets"]}))
 
     def test_database_schema_relations_and_fts(self):
         with tempfile.TemporaryDirectory() as directory:

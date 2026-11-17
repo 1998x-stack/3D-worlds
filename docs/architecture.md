@@ -57,7 +57,7 @@ SQL queries are parameterized; limits and offsets are bounded.
 ## 4. Query and delivery at 50,000 models
 
 The site must **not** import 50,000 procedural JavaScript modules or open 50,000
-WebGL canvases. The starter uses five authored procedural generators and
+WebGL canvases. The starter uses fifteen authored procedural generators and
 lazily paints visible thumbnails. For scale:
 
 1. Accept source, `.glb`, image previews, SPDX license and provenance.
@@ -97,14 +97,19 @@ The correct split is metadata index vs object storage vs small static site.
 
 ## 6. Expansion milestones
 
-**V0.1 implemented:** Five generators, gallery, inspect/copy/GLB export,
+**V0.1 implemented:** Five initial generators, gallery, inspect/copy/GLB export,
 versioned JSON, schema, SQLite builder, local read-only MCP v2 tools, tests.
 
-**V0.2 planned:** Batch asset importer, prebuilt GLB in public assets,
-thumbnail generation, metadata editor, upload validation, GLTFLoader-backed
-binary inspector and pagination.
+**V0.2 implemented:** Fifteen procedural assets, dynamic seven-category taxonomy,
+batch GLB validation/ingestion, SHA-256 content paths, SQLite quality metrics,
+GLTFLoader-backed binary detail view and captured preview thumbnails. Binary
+previews require user-supplied images; automatic thumbnail generation and
+pagination are not yet implemented.
 
-**V0.3 planned:** Object storage, image search/embeddings, CDN, stronger
+**V0.3 planned:** Prebuilt image thumbnail workflow, metadata editor,
+large-catalog pagination, storage adapters and stronger human review controls.
+
+**V0.4 planned:** Object storage, image search/embeddings, CDN, stronger
 licensing workflow, remote MCP, per-asset metrics and preview automation.
 
 **V1.0 planned:** Automated review queue, version API, game-engine
