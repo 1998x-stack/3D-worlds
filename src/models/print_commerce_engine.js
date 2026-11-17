@@ -86,7 +86,7 @@ export function buildCommerceModel(spec) {
       for(let i of [-1,1])box('bench-leg-'+i,[i*.30,.23,.15],[.07,.18,.07],dark);
       box('sign',[0,.74,-.16],[.37,.12,.035],light);
     }
-  } else if(f==='organizer') {  } else if(f==='organizer') {
+  } else if(f==='organizer') {
     box('base',[0,.04,0],[1.27,.08,.81],dark);
     for(let i=0;i<2;i++)box('long-wall-'+i,[0,.33,(i?1:-1)*.38],[1.27,.59,.065],a);
     for(let i=0;i<2;i++)box('side-wall-'+i,[(i?1:-1)*.61,.33,0],[.06,.59,.78],a);
