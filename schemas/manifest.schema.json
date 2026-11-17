@@ -133,6 +133,34 @@
         "style": {
           "type": "string",
           "maxLength": 100
+        },
+        "license_evidence_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "provenance_note": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "file_size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "triangle_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "vertex_count": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "qa_warnings": {
+          "type": "integer",
+          "minimum": 0
         }
       },
       "allOf": [
@@ -164,7 +192,11 @@
           },
           "then": {
             "required": [
-              "binary_path"
+              "binary_path",
+              "content_sha256",
+              "file_size_bytes",
+              "triangle_count",
+              "vertex_count"
             ]
           }
         }
