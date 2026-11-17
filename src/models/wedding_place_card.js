@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/wedding_place_card.js",
   "generator": "createWeddingPlaceCard",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gift",
   "variant": 2,
   "cad_path": "printables/wedding-place-card.scad",

@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/space_explorer_insignia.js",
   "generator": "createSpaceExplorerInsignia",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "cosplay",
   "variant": 3,
   "cad_path": "printables/space-explorer-insignia.scad",

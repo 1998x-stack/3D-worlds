@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/alchemist_costume_brooch.js",
   "generator": "createAlchemistCostumeBrooch",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "cosplay",
   "variant": 4,
   "cad_path": "printables/alchemist-costume-brooch.scad",

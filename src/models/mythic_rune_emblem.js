@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/mythic_rune_emblem.js",
   "generator": "createMythicRuneEmblem",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "cosplay",
   "variant": 5,
   "cad_path": "printables/mythic-rune-emblem.scad",

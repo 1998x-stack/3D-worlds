@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/anniversary_message_plaque.js",
   "generator": "createAnniversaryMessagePlaque",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gift",
   "variant": 4,
   "cad_path": "printables/anniversary-message-plaque.scad",

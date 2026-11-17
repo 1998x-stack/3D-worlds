@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/fantasy_crest_badge.js",
   "generator": "createFantasyCrestBadge",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "cosplay",
   "variant": 2,
   "cad_path": "printables/fantasy-crest-badge.scad",

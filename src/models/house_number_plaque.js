@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/house_number_plaque.js",
   "generator": "createHouseNumberPlaque",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gift",
   "variant": 3,
   "cad_path": "printables/house-number-plaque.scad",

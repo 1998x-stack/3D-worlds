@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/monogram_desk_coaster.js",
   "generator": "createMonogramDeskCoaster",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gift",
   "variant": 5,
   "cad_path": "printables/monogram-desk-coaster.scad",

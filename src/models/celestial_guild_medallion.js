@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/celestial_guild_medallion.js",
   "generator": "createCelestialGuildMedallion",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "cosplay",
   "variant": 1,
   "cad_path": "printables/celestial-guild-medallion.scad",

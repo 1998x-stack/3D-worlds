@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/custom_desk_nameplate.js",
   "generator": "createCustomDeskNameplate",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "gift",
   "variant": 1,
   "cad_path": "printables/custom-desk-nameplate.scad",
