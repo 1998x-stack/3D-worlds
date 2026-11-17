@@ -7,7 +7,7 @@ export const assetMeta = {
   "summary": "Outdoor EV charger with touch display, payment terminal, cable loop and plug",
   "category": "urban",
   "tags": [
-    "ev",
+    "electric-vehicle",
     "charger",
     "infrastructure"
   ],
