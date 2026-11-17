@@ -25,8 +25,9 @@ try{
  await page.locator('#close-detail').click();
  const recent = page.locator('[data-id="vehicles.coastal-sailboat.001"]');
  if(await recent.count()!==1)throw Error('New v0.4 asset missing in gallery');
- const imgOk=await recent.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0);
- if(!imgOk)throw Error('V0.4 preview image missing');
+ await recent.scrollIntoViewIfNeeded();
+ // Gallery image loading is lazy; scrolling is necessary before naturalWidth is available.
+ await recent.locator('img').evaluate(img=>img.decode());
  await recent.click();
  await page.locator('.detail-modal').waitFor({state:'visible'});
  await page.locator('#close-detail').click();
