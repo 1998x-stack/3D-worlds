@@ -9,7 +9,6 @@ export const assetMeta = {
   "category": "electronics",
   "tags": [
     "edge",
-    "ai",
     "sensor",
     "hub",
     "electronics",

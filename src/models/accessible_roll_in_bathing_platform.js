@@ -10,7 +10,6 @@ export const assetMeta = {
   "tags": [
     "accessible",
     "roll",
-    "in",
     "bathing",
     "platform",
     "bathroom",
