@@ -39,14 +39,22 @@ class CatalogTests(unittest.TestCase):
                     "UPDATE assets SET title='Updated Stool' WHERE asset_id='furniture.chair.linen-001'"
                 )
                 self.assertEqual(
-                    connection.execute("SELECT count(*) FROM assets_fts WHERE assets_fts MATCH 'Stool'").fetchone()[0],
+                    connection.execute(
+                        "SELECT count(*) FROM assets a JOIN assets_fts ON a.rowid=assets_fts.rowid "
+                        "WHERE a.asset_id=? AND assets_fts MATCH 'Stool'",
+                        ("furniture.chair.linen-001",)
+                    ).fetchone()[0],
                     1
                 )
                 connection.execute(
                     "DELETE FROM assets WHERE asset_id='furniture.chair.linen-001'"
                 )
                 self.assertEqual(
-                    connection.execute("SELECT count(*) FROM assets_fts WHERE assets_fts MATCH 'Stool'").fetchone()[0],
+                    connection.execute(
+                        "SELECT count(*) FROM assets a JOIN assets_fts ON a.rowid=assets_fts.rowid "
+                        "WHERE a.asset_id=? AND assets_fts MATCH 'Stool'",
+                        ("furniture.chair.linen-001",)
+                    ).fetchone()[0],
                     0
                 )
 
