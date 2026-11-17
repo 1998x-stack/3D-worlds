@@ -56,6 +56,10 @@ jobs:
         env:
           QT_QPA_PLATFORM: offscreen
         run: python3 scripts/audit_refined_commerce.py --output .cache/print/refined-batch-01-audit.json
+      - name: Audit twenty additional refined overseas CAD designs
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_refined_commerce_batch02.py --output .cache/print/refined-batch-02-audit.json
       - name: Verify parameterized CAD 3MF export
         env:
           QT_QPA_PLATFORM: offscreen
@@ -89,6 +93,7 @@ jobs:
           path: |
             .cache/print/catalog-*.json
             .cache/print/refined-batch-01-audit.json
+            .cache/print/refined-batch-02-audit.json
           retention-days: 7
       - name: P2 mirror all actual LOD binaries into immutable local object storage
         run: python scripts/smoke_p2.py

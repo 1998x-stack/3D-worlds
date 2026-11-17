@@ -23,6 +23,7 @@
 - [What is 3D Worlds?](#what-is-3d-worlds)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
 - [Explore the platform](#explore-the-platform)
+- [Overseas print-commerce detail refinement: 20 additional models](#overseas-print-commerce-detail-refinement--batch-02-20-more)
 - [Quick start](#quick-start)
 - [Capabilities and boundaries](#capabilities-and-boundaries)
 - [System architecture](#system-architecture)
@@ -95,6 +96,14 @@ physically print-verified.
 
 [Ten-SKU dimensional refinement and release checks](docs/overseas-refinement-batch-01.md) ·
 [Geometry audit source](scripts/audit_refined_commerce.py)
+
+## Overseas print-commerce detail refinement · batch 02 (20 more)
+
+**30 of the existing 50 overseas print-commerce prototypes now have SKU-specific detail geometry** (10 in batch 01 + 20 in batch 02). Batch 02 adds twenty original, dimensioned OpenSCAD designs and separate named-mesh Three.js previews, spanning non-electrical lamps, original figurines, miniature scenery, organizing, stands, gaming, jewelry, horticulture, customizable gifts, and costume ornaments. The other twenty still use family templates; no new asset IDs were added.
+
+**Engineering status:** the twenty CAD sources passed geometry-only checks for connected, watertight positive-volume meshes and outer bounds; this does **not** verify printed fit, minimum wall thickness, slice supports, safe use, legal compliance, or marketplace sales.
+
+[Detailed 20-SKU design inventory and manual gates](docs/overseas-refinement-batch-02.md) · [CAD source + topology audit](scripts/audit_refined_commerce_batch02.py) · [Batch 01 report](docs/overseas-refinement-batch-01.md)
 
 ## Quick start
 

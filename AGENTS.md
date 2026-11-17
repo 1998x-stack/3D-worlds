@@ -331,3 +331,10 @@ Do **not**:
 ---
 
 **Agent principle:** Build assets that can be inspected and reproduced, make all evidence traceable, and distinguish what the software can measure from what only a human or real-world test can establish.
+
+## Overseas detail refinement batch 02 · twenty additional CAD/preview pairs
+
+- Keep the first ten refined v1.3 products and all other published IDs stable. Batch 02 replaces generic geometry only for its [twenty named SKUs](docs/overseas-refinement-batch-02.md), leaving 20 original family-level prototypes unchanged.
+- The source-of-truth manufacturing candidate is `printables/<slug>.scad` using `printables/lib/refined_batch02_forms.scad` with explicit millimeter dimensions. The gallery engine `src/models/refined_commerce_batch02.js` generates approximated Y-up Three.js previews; never approve its GLBs as slicer-ready manufacturing geometry.
+- Keep preexisting `use <lib/commerce_forms.scad>` references and `family`/`variant` metadata in wrappers for v1.3 regression compatibility. Do not add global `resize()` around fit-sensitive CAD features.
+- Run `python3 -m unittest tests/test_refined_commerce_batch02.py -v`, `npm run test:refined-commerce` and `python3 scripts/audit_refined_commerce_batch02.py` (OpenSCAD + trimesh) for changes in this batch. Only state measured topology/bounds results and explicitly require physical fit, safety and slicer tests.

@@ -1,6 +1,10 @@
-// Alchemist Costume Brooch | 炼金师服装胸针 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// Alchemist Costume Brooch | 3D Worlds overseas batch 02 | original, unverified CAD.
+// Millimeters; Z-up; fixed published envelope W x D x H = 84 x 84 x 12.
+// Retain previous v1.3 family/variant metadata for compatible exporter validation.
 use <lib/commerce_forms.scad>
-resize([84,84,12],auto=false)
-    commercial_form(family="cosplay",variant=4);
+use <lib/refined_batch02_forms.scad>
+w = 84; d = 84; h = 12;
+// Edit label below where applicable. Do not assume lettering / openings fit every input.
+label = "CUSTOM";
+refined_batch02_form(slug="alchemist-costume-brooch",family="cosplay",variant=4,w=w,d=d,h=h,label=label);
