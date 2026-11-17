@@ -64,3 +64,11 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - Each new asset must have editable Three.js `assetMeta` and `buildRecipe` source, >=8 uniquely named meshes, dimensions in meters, and explicit MIT license.
 - Run `tests/test_collection_v05.py` and verify 135 GLB0/GLB1/GLB2 outputs and 270 thumbnails.
 - Search API has a hard per-request page cap of 100; audit 135+ assets through cursor pagination, never via a single `limit=100` request.
+
+## V0.6 collection integrity (185 assets)
+- `catalog/collections/v06.json`: 50 original source-backed procedural models, no overlap with prior 135 IDs or slugs.
+- Preserve existing v0.1–v0.5 source paths, ID semantics and category taxonomy; never silently replace earlier published geometry.
+- Every v0.6 asset has `assetMeta`, standalone generator, real `buildRecipe`, ≥9 uniquely named mesh parts, dimensions in meters, and MIT author/license details.
+- Run `tests/test_collection_v06.py` and full asset pipeline: 185 WebP, 185 AVIF, 555 GLB variants.
+- API limit is 100 per request. Validate 185 model records with keyset pagination, not a single page.
+- Keep the portable Codex, Claude and Pi Skill v2 bundles unchanged unless mirrored validation is run.
