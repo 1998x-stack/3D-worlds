@@ -1,6 +1,9 @@
 import { buildRecipe } from './recipe_engine.js';
+import { buildRefinedCommerceModel } from './refined_commerce_engine.js';
 // 3D gallery preview, NOT a sliced/manufacturing STL. Canonical CAD lives in printables/*.scad.
 export function buildCommerceModel(spec) {
+  const refined = buildRefinedCommerceModel(spec);
+  if (refined) return refined;
   const v=spec.variant, f=spec.commerce_family, parts=[];
   const a=Number.parseInt(spec.accent.slice(1),16), dark=0x405369, light=0xe7dac1, mid=0x89a5a4;
   const box=(n,p,s,c=a)=>parts.push({t:'box',n,p,s,c});

@@ -52,6 +52,10 @@ jobs:
           for slug in moon-phase-light-sleeve cloud-whale-totem harbor-cargo-diorama modular-pencil-caddy collectible-display-plinth universal-controller-cradle arc-earring-display ribbed-succulent-pot custom-desk-nameplate celestial-guild-medallion; do
             python3 scripts/export_print_commerce.py --only "$slug" --format stl --out .cache/print-cad-test
           done
+      - name: Audit ten refined overseas CAD designs
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_refined_commerce.py --output .cache/print/refined-batch-01-audit.json
       - name: Verify parameterized CAD 3MF export
         env:
           QT_QPA_PLATFORM: offscreen
@@ -66,6 +70,8 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Check model geometry and coordinates
         run: node scripts/validate_models.mjs
+      - name: Validate refined Three.js detail geometry and canonical dimensions
+        run: npm run test:refined-commerce
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
       - name: Install headless Chromium for asset rendering
@@ -80,7 +86,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: 3d-worlds-print-audit-evidence
-          path: .cache/print/catalog-*.json
+          path: |
+            .cache/print/catalog-*.json
+            .cache/print/refined-batch-01-audit.json
           retention-days: 7
       - name: P2 mirror all actual LOD binaries into immutable local object storage
         run: python scripts/smoke_p2.py

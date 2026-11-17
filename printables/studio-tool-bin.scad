@@ -1,6 +1,9 @@
-// Studio Tool Bin | 工作室多格工具盒 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
-use <lib/commerce_forms.scad>
-resize([142,99,88],auto=false)
-    commercial_form(family="organizer",variant=5);
+// SPDX-License-Identifier: MIT
+// Studio Tool Bin | Refined batch 01 | OpenSCAD mm/Z-up.
+// Prototype: slicer, fit, material, stability and safety remain UNVERIFIED.
+use <lib/commerce_forms.scad> // v1.3 compatibility; other SKUs retain their original template.
+use <lib/refined_forms.scad>
+width_mm = 142;
+depth_mm = 99;
+height_mm = 88;
+refined_form(slug="studio-tool-bin", family="organizer", variant=5, w=width_mm, d=depth_mm, h=height_mm);

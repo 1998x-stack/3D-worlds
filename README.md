@@ -67,6 +67,21 @@ The static gallery supports category/search discovery, model detail inspection, 
 
 Amazon/eBay product listings and Hacker News maker discussions are **inspiration/research signals**, not proof of demand, permission to copy third-party geometry, endorsement, or product-safety certification. See [the v1.4 source notes](docs/30-assets-v14.md) and [CAD/HN technical research](docs/codex-cad-3d-printing-hn-research-2026.md).
 
+
+### Overseas detail refinement · batch 01 (10 designs)
+
+Ten existing overseas prototypes now have **SKU-specific Three.js geometry and
+dimensioned OpenSCAD CAD** rather than only generic family silhouettes: two
+non-electrical light sleeves, modular pencil storage, cable and paintbrush
+organizers, a six-bay tool bin, trading-card and handheld-console stands, a
+ribbed succulent pot and a propagation-vial holder. The **565-asset count and
+stable IDs are preserved**. The CAD was checked for watertightness,
+connectivity and dimension envelopes, but has **not** been slicer- or
+physically print-verified.
+
+[Ten-SKU dimensional refinement and release checks](docs/overseas-refinement-batch-01.md) ·
+[Geometry audit source](scripts/audit_refined_commerce.py)
+
 ## Quick start
 
 **Requirements:** Node.js **22+**, a modern WebGL-capable browser, and Python **3.11+** for catalog/CLI tooling. Chromium/Playwright is required for reproducible preview and GLB generation; OpenSCAD is required only for the CAD-backed print-commerce workflow.

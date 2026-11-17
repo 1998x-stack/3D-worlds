@@ -1,6 +1,9 @@
-// Cable Sort Desk Hub | 桌面线材分拣座 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
-use <lib/commerce_forms.scad>
-resize([133,90,76],auto=false)
-    commercial_form(family="organizer",variant=2);
+// SPDX-License-Identifier: MIT
+// Cable Sort Desk Hub | Refined batch 01 | OpenSCAD mm/Z-up.
+// Prototype: slicer, fit, material, stability and safety remain UNVERIFIED.
+use <lib/commerce_forms.scad> // v1.3 compatibility; other SKUs retain their original template.
+use <lib/refined_forms.scad>
+width_mm = 133;
+depth_mm = 90;
+height_mm = 76;
+refined_form(slug="cable-sort-desk-hub", family="organizer", variant=2, w=width_mm, d=depth_mm, h=height_mm);
