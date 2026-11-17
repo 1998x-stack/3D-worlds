@@ -5431,6 +5431,276 @@
       "collection": "v0.7",
       "preview_path": "public/thumbs/castle-crenellated-wall-module.webp",
       "accent": "#c9c9c1"
+    },
+    {
+      "id": "vehicles.coastal-rescue-hovercraft.001",
+      "slug": "coastal-rescue-hovercraft",
+      "title": "Coastal Rescue Hovercraft",
+      "title_zh": "海上救援气垫船",
+      "summary": "Rescue hovercraft with inflatable skirt, cabin, fan guard, searchlight and deck equipment",
+      "category": "vehicles",
+      "tags": [
+        "hovercraft",
+        "rescue",
+        "marine"
+      ],
+      "dimensions_m": [
+        2.51,
+        1.91,
+        3.86
+      ],
+      "generator": "createCoastalRescueHovercraft",
+      "source_path": "src/models/coastal_rescue_hovercraft.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/coastal-rescue-hovercraft.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "bathroom.compact-cedar-sauna-cabin.001",
+      "slug": "compact-cedar-sauna-cabin",
+      "title": "Compact Cedar Sauna Cabin",
+      "title_zh": "小型雪松桑拿房",
+      "summary": "Cedar mini-sauna enclosure with glazing, stacked benches, heater and ventilation slats",
+      "category": "bathroom",
+      "tags": [
+        "sauna",
+        "cedar",
+        "wellness"
+      ],
+      "dimensions_m": [
+        1.73,
+        2.2,
+        1.44
+      ],
+      "generator": "createCompactCedarSaunaCabin",
+      "source_path": "src/models/compact_cedar_sauna_cabin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/compact-cedar-sauna-cabin.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "kitchen.countertop-food-processor.001",
+      "slug": "countertop-food-processor",
+      "title": "Countertop Food Processor",
+      "title_zh": "台式多功能料理机",
+      "summary": "Transparent blender processor with chopping blades, feed tube and LCD control",
+      "category": "kitchen",
+      "tags": [
+        "processor",
+        "food-prep",
+        "appliance"
+      ],
+      "dimensions_m": [
+        0.32,
+        0.58,
+        0.37
+      ],
+      "generator": "createCountertopFoodProcessor",
+      "source_path": "src/models/countertop_food_processor.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/countertop-food-processor.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.digital-multimeter-kit.001",
+      "slug": "digital-multimeter-kit",
+      "title": "Digital Multimeter Kit",
+      "title_zh": "数字万用表检测套装",
+      "summary": "Handheld electrical multimeter with LCD, rotary range switch and pair of probe leads",
+      "category": "tools",
+      "tags": [
+        "multimeter",
+        "measurement",
+        "electronics"
+      ],
+      "dimensions_m": [
+        0.24,
+        0.51,
+        0.23
+      ],
+      "generator": "createDigitalMultimeterKit",
+      "source_path": "src/models/digital_multimeter_kit.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/digital-multimeter-kit.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "kitchen.digital-rice-cooker.001",
+      "slug": "digital-rice-cooker",
+      "title": "Digital Rice Cooker",
+      "title_zh": "智能电饭煲",
+      "summary": "Smart kitchen rice cooker with sealed lid, digital display and serving scoop",
+      "category": "kitchen",
+      "tags": [
+        "rice",
+        "cooker",
+        "appliance"
+      ],
+      "dimensions_m": [
+        0.42,
+        0.43,
+        0.39
+      ],
+      "generator": "createDigitalRiceCooker",
+      "source_path": "src/models/digital_rice_cooker.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/digital-rice-cooker.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "characters.field-botanist-mannequin.001",
+      "slug": "field-botanist-mannequin",
+      "title": "Field Botanist Mannequin",
+      "title_zh": "野外植物学家原型",
+      "summary": "Unrigged botanist with brim hat, herbarium case, field notebook and walking boots",
+      "category": "characters",
+      "tags": [
+        "botanist",
+        "research",
+        "character"
+      ],
+      "dimensions_m": [
+        1.02,
+        1.89,
+        0.8
+      ],
+      "generator": "createFieldBotanistMannequin",
+      "source_path": "src/models/field_botanist_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/field-botanist-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "urban.folding-newsstand-kiosk.001",
+      "slug": "folding-newsstand-kiosk",
+      "title": "Folding Newsstand Kiosk",
+      "title_zh": "街头报刊售卖亭",
+      "summary": "Outdoor press kiosk with folding newspaper racks, awning, price strip and shutters",
+      "category": "urban",
+      "tags": [
+        "newsstand",
+        "retail",
+        "street"
+      ],
+      "dimensions_m": [
+        1.97,
+        2.34,
+        1.35
+      ],
+      "generator": "createFoldingNewsstandKiosk",
+      "source_path": "src/models/folding_newsstand_kiosk.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/folding-newsstand-kiosk.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "decor.glass-desert-terrarium.001",
+      "slug": "glass-desert-terrarium",
+      "title": "Glass Desert Terrarium",
+      "title_zh": "玻璃沙漠微景观",
+      "summary": "Glass succulent terrarium with sand layers and pebbles",
+      "category": "decor",
+      "tags": [
+        "terrarium",
+        "plant",
+        "glass"
+      ],
+      "dimensions_m": [
+        0.58,
+        0.61,
+        0.48
+      ],
+      "generator": "createGlassDesertTerrarium",
+      "source_path": "src/models/glass_desert_terrarium.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/glass-desert-terrarium.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "architecture.glass-greenhouse-bay.001",
+      "slug": "glass-greenhouse-bay",
+      "title": "Glass Greenhouse Bay",
+      "title_zh": "玻璃温室单元",
+      "summary": "Modular greenhouse with glass roof, irrigated planters and door",
+      "category": "architecture",
+      "tags": [
+        "greenhouse",
+        "architecture",
+        "modular"
+      ],
+      "dimensions_m": [
+        2.41,
+        2.63,
+        2.13
+      ],
+      "generator": "createGlassGreenhouseBay",
+      "source_path": "src/models/glass_greenhouse_bay.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/glass-greenhouse-bay.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "decor.hanging-macrame-planter.001",
+      "slug": "hanging-macrame-planter",
+      "title": "Hanging Macrame Planter",
+      "title_zh": "编织吊篮绿植",
+      "summary": "Braided macrame suspension with clay plant pot and trailing vines",
+      "category": "decor",
+      "tags": [
+        "macrame",
+        "hanger",
+        "plant"
+      ],
+      "dimensions_m": [
+        0.79,
+        1.36,
+        0.75
+      ],
+      "generator": "createHangingMacramePlanter",
+      "source_path": "src/models/hanging_macrame_planter.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/hanging-macrame-planter.webp",
+      "accent": "#d7c1b3"
     }
   ]
 }
