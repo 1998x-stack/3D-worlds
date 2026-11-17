@@ -107,7 +107,7 @@ root.innerHTML = `
       <div class="detail-topbar"><span>ASSET INSPECTOR <span class="detail-topbar-id" id="detail-id"></span></span><button id="close-detail" class="icon-button" aria-label="关闭详情">×</button></div>
       <div class="detail-layout">
         <div class="detail-viewer"><canvas id="detail-canvas" aria-label="可拖动旋转缩放的 3D 模型"></canvas><span class="viewer-badge">LIVE 3D VIEW</span><div class="viewer-controls"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><button id="reset-view" type="button">↺ 重置视角</button></div></div>
-        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
+        <div class="detail-info"><div class="detail-category" id="detail-category"></div><h2 id="detail-title"></h2><p class="detail-summary" id="detail-summary"></p><div class="detail-specs" id="detail-specs"></div><div class="detail-actions"><button id="copy-model" class="button button-primary" type="button">⧉ 复制 Three.js 源码</button><button id="export-glb" class="button button-dark" type="button">↓ 下载 GLB 模型</button><button id="copy-loader" class="button button-soft" type="button">⧉ 复制 GLB 导入示例</button><div class="lod-row" id="lod-row"><label for="lod-level">优化等级</label><select id="lod-level" aria-label="下载 LOD 等级"><option value="0">LOD0 · High</option><option value="1">LOD1 · Medium</option><option value="2">LOD2 · Low</option></select><button id="download-optimized" class="button button-soft" type="button">↓ 获取优化 GLB</button></div><div class="print-export-panel"><div class="print-export-heading">3D 打印导出 · STL 草稿</div><label class="print-export-label" for="print-size-mm">模型最长边 (mm) <input id="print-size-mm" type="number" min="5" max="1000" step="5" value="120" inputmode="decimal"/></label><button id="print-stl" class="button button-dark" type="button">↓ 下载 STL 草稿</button><p class="print-export-note">自动按比例缩放并转换为 Z-up / mm；不含材质、壁厚或流形审核。请使用仓库打印流水线复核 STL/3MF，再导入切片软件。</p><a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/print-pipeline.md" target="_blank" rel="noopener noreferrer">查看 STL / 3MF 审核操作指南 ↗</a></div><button id="copy-link" class="button button-soft" type="button">↗ 复制详情链接</button></div><div class="detail-note">程序化模型提供源码与 GLB 导出；外部 GLB 仅提供授权元数据与模型文件。人物原型未绑定骨骼。</div></div>
       </div>
     </section>
   </div>
@@ -116,7 +116,7 @@ root.innerHTML = `
 
 const grid = document.getElementById('asset-grid');
 const overlay = document.getElementById('detail-overlay');
-const focusables = () => [...overlay.querySelectorAll('button:not([disabled]), a[href]')];
+const focusables = () => [...overlay.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled])')];
 
 function toast(message) {
   const node = document.getElementById('toast');
@@ -241,6 +241,10 @@ async function openAsset(id, { updateHistory = true } = {}) {
   document.getElementById('copy-model').title = isProcedural ? '复制原始 Three.js 生成函数' : '二进制资产不提供程序化源码';
   document.getElementById('export-glb').textContent = isProcedural ? '↓ 导出 GLB 模型' : '↓ 下载原始 GLB';
   document.getElementById('lod-row').hidden = !isProcedural;
+  document.getElementById('print-stl').disabled = !isProcedural;
+  document.getElementById('print-stl').title = isProcedural
+    ? '直接下载未经制造审核的 STL 几何草稿'
+    : '外部 GLB 请使用 Python 打印流水线进行转换和审核';
   document.getElementById('detail-specs').innerHTML = [
     ['LICENSE', asset.license], ['FORMAT', asset.kind === 'procedural' ? 'Three.js / GLB' : 'Binary GLB'], ['DIMENSIONS', asset.dimensions_m.map(n => Number(n).toFixed(2)).join(' × ') + ' m'], ['IDENTIFIER', asset.id]
   ].map(([name, value]) => `<div><span>${safe(name)}</span><strong>${safe(value)}</strong></div>`).join('');
@@ -307,6 +311,32 @@ document.getElementById('copy-model').addEventListener('click', async () => {
 });
 document.getElementById('copy-loader').addEventListener('click', () => activeAsset && copyText(loaderSnippet(activeAsset), 'GLB 导入示例已复制'));
 document.getElementById('copy-link').addEventListener('click', () => activeAsset && copyText(getUrl(activeAsset.id).href, '模型链接已复制'));
+document.getElementById('print-stl').addEventListener('click', async event => {
+  if (!activeAsset || activeAsset.kind !== 'procedural') return;
+  const button = event.currentTarget;
+  const asset = activeAsset;
+  const longestMm = Number(document.getElementById('print-size-mm').value);
+  if (!Number.isFinite(longestMm) || longestMm < 5 || longestMm > 1000) {
+    toast('请输入 5–1000 mm 范围内的最长边尺寸');
+    return;
+  }
+  button.disabled = true;
+  button.textContent = '正在生成 STL 草稿…';
+  try {
+    const [{ downloadPrintDraftStl }, factory] = await Promise.all([
+      import('./print-export.js'), getFactory(asset),
+    ]);
+    const result = await downloadPrintDraftStl(factory, asset.slug, longestMm);
+    toast('已导出 STL 草稿（未经制造审核）；请先检查壁厚、封闭性及切片预览');
+    console.info('STL draft dimensions (mm)', result.dimensions_mm);
+  } catch (error) {
+    console.error(error);
+    toast('STL 草稿导出失败：' + error.message);
+  } finally {
+    button.disabled = !activeAsset || activeAsset.kind !== 'procedural';
+    button.textContent = '↓ 下载 STL 草稿';
+  }
+});
 document.getElementById('export-glb').addEventListener('click', async event => {
   if (!activeAsset) return;
   const asset = activeAsset;

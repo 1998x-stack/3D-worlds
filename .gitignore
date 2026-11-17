@@ -13,6 +13,7 @@ coverage/
 public/thumbs/*.webp
 public/thumbs/*.avif
 public/thumbs/capture-report.json
+public/thumbs/capture-report-*.json
 public/generated/*.glb
 public/generated/index.json
 

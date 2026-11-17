@@ -15,8 +15,13 @@ const models=catalog.assets.filter(item=>item.kind==='procedural');
 const args=process.argv.slice(2);
 const limitPos=args.indexOf('--limit');
 const limit=limitPos>=0?Number(args[limitPos+1]):models.length;
-const selected=models.slice(0,limit);
 if(!Number.isInteger(limit)||limit<1||limit>10000)throw Error('Invalid --limit');
+const idPos=args.indexOf('--id');
+const assetId=idPos>=0?args[idPos+1]:null;
+if(idPos>=0 && (!assetId || assetId.startsWith('--')))throw Error('Missing --id value');
+if(idPos>=0 && limitPos>=0)throw Error('Use --id or --limit, not both');
+const selected=assetId?models.filter(item=>item.id===assetId):models.slice(0,limit);
+if(!selected.length)throw Error('Unknown procedural asset ID: '+assetId);
 const onlyImages=args.includes('--only-images');
 const thumbs=resolve(ROOT,'public/thumbs');
 const originals=resolve(ROOT,'.cache/raw');
@@ -50,7 +55,8 @@ try{
    report.push({id:asset.id,slug:asset.slug,webp_bytes:webp.length,avif_bytes:avif.length,raw_glb_bytes:rawBytes});
    console.log('CAPTURED',asset.slug,webp.length,avif.length,rawBytes);
  }
- await writeFile(resolve(thumbs,'capture-report.json'),JSON.stringify({count:report.length,entries:report},null,2)+'\n');
+ const reportName=assetId?'capture-report-'+selected[0].slug+'.json':'capture-report.json';
+ await writeFile(resolve(thumbs,reportName),JSON.stringify({count:report.length,entries:report},null,2)+'\n');
  console.log('P0 complete:',report.length,'true 3D thumbnails in WebP + AVIF');
 }finally{
  await browser?.close();
