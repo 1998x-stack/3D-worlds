@@ -262,8 +262,9 @@ export function buildRefinedCommerceBatch02(spec){
     break;
   }
   case 'geo-cactus-planter':{
-    tapered('faceted-cactus-shell',45,53,100,0,50,0,'shell',12);
-    wallRing('inward-upper-shadow',49.5,1.1,99,'shadow',3.3);
+    add('open-faceted-outer-wall',new THREE.CylinderGeometry(53,43,99,12,1,true),0,50.5,0,'shell');
+    add('visible-inner-pot-wall',new THREE.CylinderGeometry(49,39,99,12,1,true),0,50.5,0,'shadow');
+    wallRing('visible-drainage-floor',43,3.5,0,'dark',4.2);
     wallRing('reinforced-faceted-lip',53.5,4,100,'trim',5);
     for(let i=0;i<12;i++){
       const a=i*Math.PI/6;rod('facet-ridge-'+i,[45*Math.cos(a),5,45*Math.sin(a)],[53*Math.cos(a),98,53*Math.sin(a)],1.0,'matte');
@@ -277,8 +278,20 @@ export function buildRefinedCommerceBatch02(spec){
       tor('mount-recess-'+s,2.5,.7,s*57,7,0,'dark');
       box('perimeter-stripe-'+s,2,1,56,s*62,7,0,'trim');
     }
-    for(let i=0;i<6;i++){
-      box('editable-placeholder-stroke-'+i,3,2,19,-40+i*16,8.2,0,'bright');
+    const glyphs={
+      C:[[[-5,4],[-3,6],[3,6],[5,4]],[[-5,4],[-5,-4]],[[-5,-4],[-3,-6],[3,-6],[5,-4]]],
+      U:[[[-5,6],[-5,-4],[-3,-6],[3,-6],[5,-4],[5,6]]],
+      S:[[[5,4],[3,6],[-3,6],[-5,3],[-3,0],[3,0],[5,-3],[3,-6],[-3,-6],[-5,-4]]],
+      T:[[[-5,6],[5,6]],[[0,6],[0,-6]]],
+      O:[[[-3,6],[3,6],[5,3],[5,-3],[3,-6],[-3,-6],[-5,-3],[-5,3],[-3,6]]],
+      M:[[[-5,-6],[-5,6],[0,0],[5,6],[5,-6]]]
+    };
+    for(const [i,letter] of [...'CUSTOM'].entries()){
+      for(const [j,stroke] of glyphs[letter].entries()) for(let k=1;k<stroke.length;k++){
+        const a=stroke[k-1],b=stroke[k],x=-40+i*16;
+        rod('nameplate-letter-'+i+'-'+j+'-'+k,[x+a[0],8.4,a[1]],
+            [x+b[0],8.4,b[1]],1.35,'bright');
+      }
       box('label-underline-'+i,13,.7,1.5,-40+i*16,7.5,15,'dark');
     }
     box('lower-inlay-border',115,.8,1,0,7.2,-28,'trim');
@@ -289,8 +302,8 @@ export function buildRefinedCommerceBatch02(spec){
     for(let z of [-30,30])box('parallel-metal-line-'+z,130,2,2,0,9,z,'trim');
     for(let s of [-1,1])tor('screw-seat-'+s,3.3,.7,s*63,9,0,'dark');
     box('digit-one-vertical',6,3,29,-29,10.5,0,'bright');
-    const zero=tor('zero-outline',14,2.3,-1,11.0,0,'bright');zero.rotation.x=0;
-    for(let z of [-13,13]){const eight=tor('eight-loop-'+z,7.5,2.1,29,11,z,'bright');eight.rotation.x=0;}
+    tor('zero-outline',14,2.3,-1,11.0,0,'bright');
+    for(let z of [-13,13]){tor('eight-loop-'+z,7.5,2.1,29,11,z,'bright');}
     for(let i=0;i<8;i++)ball('number-plate-rivet-'+i,1.4,-50+i*14,10,32,'dark');
     break;
   }
