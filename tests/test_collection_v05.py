@@ -19,9 +19,9 @@ class CollectionV05Tests(unittest.TestCase):
         c = self.c
         self.assertEqual(c["asset_count"], 50)
         self.assertEqual(len(c["assets"]), 50)
-        self.assertEqual(len(self.assets), 135)
-        self.assertEqual(len(self.by_id), 135)
-        self.assertEqual(len(set(a["slug"] for a in self.assets)), 135)
+        self.assertGreaterEqual(len(self.assets), 135)
+        self.assertEqual(len(self.by_id), len(self.assets))
+        self.assertEqual(len(set(a["slug"] for a in self.assets)), len(self.assets))
         categories = {a["id"] for a in json.loads((ROOT / "catalog/categories.json").read_text(encoding="utf-8"))["categories"]}
         self.assertEqual(set(c["category_counts"]), categories)
         self.assertEqual({a["category"] for a in c["assets"]}, categories)
@@ -63,7 +63,7 @@ class CollectionV05Tests(unittest.TestCase):
                         self.assertTrue(all(v > 0 for v in part["s"]))
 
     def test_legacy_85_models_remain(self):
-        old = [a for a in self.assets if a.get("collection") != "v0.5"]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.5", "v0.6")]
         self.assertEqual(len(old), 85)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.4"]), 40)
         self.assertIn("furniture.table.oak-study-001", {a["id"] for a in old})

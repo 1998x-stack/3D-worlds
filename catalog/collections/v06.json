@@ -1,0 +1,877 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v0.6",
+  "title": "Fifty New Modular Scene Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 50,
+  "category_count": 13,
+  "category_counts": {
+    "architecture": 4,
+    "bathroom": 4,
+    "characters": 4,
+    "decor": 4,
+    "electronics": 4,
+    "furniture": 4,
+    "kitchen": 4,
+    "nature": 4,
+    "scifi": 3,
+    "sports": 3,
+    "tools": 4,
+    "urban": 4,
+    "vehicles": 4
+  },
+  "assets": [
+    {
+      "id": "vehicles.agricultural-field-tractor.001",
+      "slug": "agricultural-field-tractor",
+      "title": "Agricultural Field Tractor",
+      "title_zh": "农业田间拖拉机",
+      "category": "vehicles",
+      "source_path": "src/models/agricultural_field_tractor.js",
+      "generator": "createAgriculturalFieldTractor",
+      "dimensions_m": [
+        1.84,
+        2.31,
+        3.28
+      ],
+      "design_focus": "Farm utility tractor with large rear tires, enclosed cabin, exhaust and front counterweight",
+      "usage": "tractor",
+      "part_count": 17
+    },
+    {
+      "id": "nature.alpine-waterfall-cliff.001",
+      "slug": "alpine-waterfall-cliff",
+      "title": "Alpine Waterfall Cliff",
+      "title_zh": "高山瀑布岩壁",
+      "category": "nature",
+      "source_path": "src/models/alpine_waterfall_cliff.js",
+      "generator": "createAlpineWaterfallCliff",
+      "dimensions_m": [
+        2.48,
+        2.17,
+        1.47
+      ],
+      "design_focus": "Rock wall with sloped terraces, suspended vertical waterfall ribbons and pool",
+      "usage": "waterfall",
+      "part_count": 19
+    },
+    {
+      "id": "decor.antique-grandfather-clock.001",
+      "slug": "antique-grandfather-clock",
+      "title": "Antique Grandfather Clock",
+      "title_zh": "复古落地摆钟",
+      "category": "decor",
+      "source_path": "src/models/antique_grandfather_clock.js",
+      "generator": "createAntiqueGrandfatherClock",
+      "dimensions_m": [
+        0.64,
+        2.18,
+        0.39
+      ],
+      "design_focus": "Grandfather clock with decorated dial and weighted pendulum",
+      "usage": "clock",
+      "part_count": 24
+    },
+    {
+      "id": "sports.archery-practice-target.001",
+      "slug": "archery-practice-target",
+      "title": "Archery Practice Target",
+      "title_zh": "射箭练习靶架",
+      "category": "sports",
+      "source_path": "src/models/archery_practice_target.js",
+      "generator": "createArcheryPracticeTarget",
+      "dimensions_m": [
+        1.15,
+        1.68,
+        0.76
+      ],
+      "design_focus": "Freestanding sport target butt with concentric colored scoring rings and A-frame supports; no bow or arrows",
+      "usage": "archery",
+      "part_count": 13
+    },
+    {
+      "id": "furniture.bamboo-shoe-bench.001",
+      "slug": "bamboo-shoe-bench",
+      "title": "Bamboo Shoe Bench",
+      "title_zh": "竹制换鞋凳",
+      "category": "furniture",
+      "source_path": "src/models/bamboo_shoe_bench.js",
+      "generator": "createBambooShoeBench",
+      "dimensions_m": [
+        1.18,
+        0.61,
+        0.45
+      ],
+      "design_focus": "Entryway seat with bamboo slatted top, twin shelves and four crossbraced supports",
+      "usage": "shoe",
+      "part_count": 22
+    },
+    {
+      "id": "decor.bonsai-ceramic-display.001",
+      "slug": "bonsai-ceramic-display",
+      "title": "Bonsai Ceramic Display",
+      "title_zh": "盆景陶瓷展示树",
+      "category": "decor",
+      "source_path": "src/models/bonsai_ceramic_display.js",
+      "generator": "createBonsaiCeramicDisplay",
+      "dimensions_m": [
+        0.76,
+        0.83,
+        0.66
+      ],
+      "design_focus": "Asymmetric sculptural bonsai with shallow glazed pot and branch pads",
+      "usage": "bonsai",
+      "part_count": 21
+    },
+    {
+      "id": "vehicles.city-electric-scooter.001",
+      "slug": "city-electric-scooter",
+      "title": "City Electric Scooter",
+      "title_zh": "城市电动滑板车",
+      "category": "vehicles",
+      "source_path": "src/models/city_electric_scooter.js",
+      "generator": "createCityElectricScooter",
+      "dimensions_m": [
+        0.64,
+        1.19,
+        1.25
+      ],
+      "design_focus": "Standing commuter scooter with split forks, platform battery, handlebars and brake",
+      "usage": "scooter",
+      "part_count": 13
+    },
+    {
+      "id": "vehicles.commuter-passenger-train.001",
+      "slug": "commuter-passenger-train",
+      "title": "Commuter Passenger Train",
+      "title_zh": "城市通勤轨道列车",
+      "category": "vehicles",
+      "source_path": "src/models/commuter_passenger_train.js",
+      "generator": "createCommuterPassengerTrain",
+      "dimensions_m": [
+        2.68,
+        3.1,
+        7.25
+      ],
+      "design_focus": "One stylized commuter rail car with multiple passenger windows, bogies and roof pantograph",
+      "usage": "train",
+      "part_count": 31
+    },
+    {
+      "id": "architecture.construction-scaffolding-bay.001",
+      "slug": "construction-scaffolding-bay",
+      "title": "Construction Scaffolding Bay",
+      "title_zh": "建筑施工脚手架单元",
+      "category": "architecture",
+      "source_path": "src/models/construction_scaffolding_bay.js",
+      "generator": "createConstructionScaffoldingBay",
+      "dimensions_m": [
+        2.43,
+        3.02,
+        1.34
+      ],
+      "design_focus": "Reusable scaffolding module with crossbraces, two work decks and guard rails",
+      "usage": "scaffold",
+      "part_count": 22
+    },
+    {
+      "id": "bathroom.copper-clawfoot-bathtub.001",
+      "slug": "copper-clawfoot-bathtub",
+      "title": "Copper Clawfoot Bathtub",
+      "title_zh": "复古铜质四足浴缸",
+      "category": "bathroom",
+      "source_path": "src/models/copper_clawfoot_bathtub.js",
+      "generator": "createCopperClawfootBathtub",
+      "dimensions_m": [
+        1.63,
+        0.76,
+        0.83
+      ],
+      "design_focus": "Copper freestanding bathtub with contrasting enamel interior and four ornate feet",
+      "usage": "bathtub",
+      "part_count": 13
+    },
+    {
+      "id": "kitchen.countertop-vacuum-sealer.001",
+      "slug": "countertop-vacuum-sealer",
+      "title": "Countertop Vacuum Sealer",
+      "title_zh": "桌面真空食品封口机",
+      "category": "kitchen",
+      "source_path": "src/models/countertop_vacuum_sealer.js",
+      "generator": "createCountertopVacuumSealer",
+      "dimensions_m": [
+        0.47,
+        0.25,
+        0.36
+      ],
+      "design_focus": "Countertop vacuum packer with transparent lid, control keys, heating seal and food bag",
+      "usage": "vacuum",
+      "part_count": 15
+    },
+    {
+      "id": "nature.dense-bamboo-grove.001",
+      "slug": "dense-bamboo-grove",
+      "title": "Dense Bamboo Grove",
+      "title_zh": "竹林竹丛",
+      "category": "nature",
+      "source_path": "src/models/dense_bamboo_grove.js",
+      "generator": "createDenseBambooGrove",
+      "dimensions_m": [
+        1.35,
+        3.17,
+        1.28
+      ],
+      "design_focus": "Layered cluster of green bamboo canes with node rings and horizontal leaves",
+      "usage": "bamboo",
+      "part_count": 77
+    },
+    {
+      "id": "electronics.desktop-laser-engraver.001",
+      "slug": "desktop-laser-engraver",
+      "title": "Desktop Laser Engraver",
+      "title_zh": "桌面激光雕刻机",
+      "category": "electronics",
+      "source_path": "src/models/desktop_laser_engraver.js",
+      "generator": "createDesktopLaserEngraver",
+      "dimensions_m": [
+        0.63,
+        0.57,
+        0.6
+      ],
+      "design_focus": "Enclosed compact laser engraver with X-Y bridge, safety shroud, bed and fume tube",
+      "usage": "laser",
+      "part_count": 14
+    },
+    {
+      "id": "electronics.digital-stage-keyboard.001",
+      "slug": "digital-stage-keyboard",
+      "title": "Digital Stage Keyboard",
+      "title_zh": "电子舞台键盘",
+      "category": "electronics",
+      "source_path": "src/models/digital_stage_keyboard.js",
+      "generator": "createDigitalStageKeyboard",
+      "dimensions_m": [
+        1.25,
+        0.83,
+        0.43
+      ],
+      "design_focus": "Portable stage piano with 28 keys, control knobs, display and X-frame stand",
+      "usage": "piano",
+      "part_count": 48
+    },
+    {
+      "id": "urban.electric-vehicle-charging-pillar.001",
+      "slug": "electric-vehicle-charging-pillar",
+      "title": "Electric Vehicle Charging Pillar",
+      "title_zh": "电动车公共充电桩",
+      "category": "urban",
+      "source_path": "src/models/electric_vehicle_charging_pillar.js",
+      "generator": "createElectricVehicleChargingPillar",
+      "dimensions_m": [
+        0.58,
+        1.78,
+        0.47
+      ],
+      "design_focus": "Outdoor EV charger with touch display, payment terminal, cable loop and plug",
+      "usage": "ev",
+      "part_count": 15
+    },
+    {
+      "id": "vehicles.festival-hot-air-balloon.001",
+      "slug": "festival-hot-air-balloon",
+      "title": "Festival Hot Air Balloon",
+      "title_zh": "节庆热气球",
+      "category": "vehicles",
+      "source_path": "src/models/festival_hot_air_balloon.js",
+      "generator": "createFestivalHotAirBalloon",
+      "dimensions_m": [
+        2.57,
+        4.4,
+        2.48
+      ],
+      "design_focus": "Bright striped hot-air balloon with basket, four suspension ropes and central burner",
+      "usage": "balloon",
+      "part_count": 25
+    },
+    {
+      "id": "kitchen.freestanding-gas-range-oven.001",
+      "slug": "freestanding-gas-range-oven",
+      "title": "Freestanding Gas Range Oven",
+      "title_zh": "独立式燃气炉灶烤箱",
+      "category": "kitchen",
+      "source_path": "src/models/freestanding_gas_range_oven.js",
+      "generator": "createFreestandingGasRangeOven",
+      "dimensions_m": [
+        0.68,
+        0.89,
+        0.68
+      ],
+      "design_focus": "Gas cooktop and oven combination with burner grates and control dials",
+      "usage": "oven",
+      "part_count": 31
+    },
+    {
+      "id": "architecture.gothic-stone-arch-module.001",
+      "slug": "gothic-stone-arch-module",
+      "title": "Gothic Stone Arch Module",
+      "title_zh": "尖拱石门建筑模块",
+      "category": "architecture",
+      "source_path": "src/models/gothic_stone_arch_module.js",
+      "generator": "createGothicStoneArchModule",
+      "dimensions_m": [
+        2.24,
+        3.28,
+        0.55
+      ],
+      "design_focus": "Pointed sandstone portal with voussoirs, carved bosses and threshold",
+      "usage": "gothic",
+      "part_count": 22
+    },
+    {
+      "id": "sports.indoor-bouldering-wall.001",
+      "slug": "indoor-bouldering-wall",
+      "title": "Indoor Bouldering Wall",
+      "title_zh": "室内抱石攀岩墙",
+      "category": "sports",
+      "source_path": "src/models/indoor_bouldering_wall.js",
+      "generator": "createIndoorBoulderingWall",
+      "dimensions_m": [
+        2.73,
+        3.07,
+        0.95
+      ],
+      "design_focus": "Overhanging bouldering wall with color-coded holds, crash mat and support frames",
+      "usage": "climbing",
+      "part_count": 31
+    },
+    {
+      "id": "characters.laboratory-technician-mannequin.001",
+      "slug": "laboratory-technician-mannequin",
+      "title": "Laboratory Technician Mannequin",
+      "title_zh": "实验室技术员原型",
+      "category": "characters",
+      "source_path": "src/models/laboratory_technician_mannequin.js",
+      "generator": "createLaboratoryTechnicianMannequin",
+      "dimensions_m": [
+        0.95,
+        1.92,
+        0.68
+      ],
+      "design_focus": "Unrigged scientist wearing goggles, lab coat, nitrile gloves and microscope clipboard",
+      "usage": "scientist",
+      "part_count": 19
+    },
+    {
+      "id": "nature.lavender-field-patch.001",
+      "slug": "lavender-field-patch",
+      "title": "Lavender Field Patch",
+      "title_zh": "薰衣草田地块",
+      "category": "nature",
+      "source_path": "src/models/lavender_field_patch.js",
+      "generator": "createLavenderFieldPatch",
+      "dimensions_m": [
+        1.57,
+        0.77,
+        1.26
+      ],
+      "design_focus": "Six dense rows of purple lavender spikes above shallow soil and green stems",
+      "usage": "lavender",
+      "part_count": 94
+    },
+    {
+      "id": "scifi.lunar-habitat-module.001",
+      "slug": "lunar-habitat-module",
+      "title": "Lunar Habitat Module",
+      "title_zh": "月面居住舱模块",
+      "category": "scifi",
+      "source_path": "src/models/lunar_habitat_module.js",
+      "generator": "createLunarHabitatModule",
+      "dimensions_m": [
+        3.17,
+        2.32,
+        3.44
+      ],
+      "design_focus": "Modular pressurized lunar habitat with solar wing, airlock, windows and anchor feet",
+      "usage": "lunar",
+      "part_count": 23
+    },
+    {
+      "id": "characters.mail-carrier-mannequin.001",
+      "slug": "mail-carrier-mannequin",
+      "title": "Mail Carrier Mannequin",
+      "title_zh": "邮政投递员原型",
+      "category": "characters",
+      "source_path": "src/models/mail_carrier_mannequin.js",
+      "generator": "createMailCarrierMannequin",
+      "dimensions_m": [
+        0.99,
+        1.88,
+        0.68
+      ],
+      "design_focus": "Unrigged delivery worker with satchel, uniform cap, envelope and walking shoes",
+      "usage": "courier",
+      "part_count": 16
+    },
+    {
+      "id": "architecture.masonry-brick-chimney.001",
+      "slug": "masonry-brick-chimney",
+      "title": "Masonry Brick Chimney",
+      "title_zh": "砖砌屋顶烟囱",
+      "category": "architecture",
+      "source_path": "src/models/masonry_brick_chimney.js",
+      "generator": "createMasonryBrickChimney",
+      "dimensions_m": [
+        0.85,
+        2.31,
+        0.82
+      ],
+      "design_focus": "Brickwork flue with mortar pattern, cap supports and metal rain cover",
+      "usage": "chimney",
+      "part_count": 29
+    },
+    {
+      "id": "urban.metro-station-entrance.001",
+      "slug": "metro-station-entrance",
+      "title": "Metro Station Entrance",
+      "title_zh": "地铁站出入口",
+      "category": "urban",
+      "source_path": "src/models/metro_station_entrance.js",
+      "generator": "createMetroStationEntrance",
+      "dimensions_m": [
+        2.7,
+        2.48,
+        2.6
+      ],
+      "design_focus": "Covered station entrance with descending steps, overhead emblem and railings",
+      "usage": "metro",
+      "part_count": 22
+    },
+    {
+      "id": "electronics.mini-server-cabinet.001",
+      "slug": "mini-server-cabinet",
+      "title": "Mini Server Cabinet",
+      "title_zh": "迷你服务器机柜",
+      "category": "electronics",
+      "source_path": "src/models/mini_server_cabinet.js",
+      "generator": "createMiniServerCabinet",
+      "dimensions_m": [
+        0.57,
+        1.05,
+        0.69
+      ],
+      "design_focus": "Network equipment cabinet with ventilation grilles, eight modules, front door and cables",
+      "usage": "server",
+      "part_count": 41
+    },
+    {
+      "id": "urban.modular-street-vending-kiosk.001",
+      "slug": "modular-street-vending-kiosk",
+      "title": "Modular Street Vending Kiosk",
+      "title_zh": "城市街头零售亭",
+      "category": "urban",
+      "source_path": "src/models/modular_street_vending_kiosk.js",
+      "generator": "createModularStreetVendingKiosk",
+      "dimensions_m": [
+        2.12,
+        2.52,
+        1.43
+      ],
+      "design_focus": "Tiny retail booth with service window, awning, counter, signs and shelves",
+      "usage": "kiosk",
+      "part_count": 20
+    },
+    {
+      "id": "furniture.nesting-side-table-set.001",
+      "slug": "nesting-side-table-set",
+      "title": "Nesting Side Table Set",
+      "title_zh": "套叠边几组合",
+      "category": "furniture",
+      "source_path": "src/models/nesting_side_table_set.js",
+      "generator": "createNestingSideTableSet",
+      "dimensions_m": [
+        1.24,
+        0.69,
+        0.47
+      ],
+      "design_focus": "Three-height steel nesting side tables with rounded stone-like tops",
+      "usage": "table",
+      "part_count": 19
+    },
+    {
+      "id": "scifi.orbital-docking-ring.001",
+      "slug": "orbital-docking-ring",
+      "title": "Orbital Docking Ring",
+      "title_zh": "轨道空间站对接口环",
+      "category": "scifi",
+      "source_path": "src/models/orbital_docking_ring.js",
+      "generator": "createOrbitalDockingRing",
+      "dimensions_m": [
+        2.87,
+        2.86,
+        0.79
+      ],
+      "design_focus": "Space-station docking gateway with concentric steel rings, twelve seals, beacon lights and mounting gantry",
+      "usage": "orbital",
+      "part_count": 27
+    },
+    {
+      "id": "characters.park-ranger-mannequin.001",
+      "slug": "park-ranger-mannequin",
+      "title": "Park Ranger Mannequin",
+      "title_zh": "国家公园护林员原型",
+      "category": "characters",
+      "source_path": "src/models/park_ranger_mannequin.js",
+      "generator": "createParkRangerMannequin",
+      "dimensions_m": [
+        0.96,
+        1.91,
+        0.68
+      ],
+      "design_focus": "Unrigged forest ranger with brimmed hat, radio, khaki uniform and hiking boots",
+      "usage": "ranger",
+      "part_count": 17
+    },
+    {
+      "id": "electronics.pen-tablet-workstation.001",
+      "slug": "pen-tablet-workstation",
+      "title": "Pen Tablet Workstation",
+      "title_zh": "数位屏绘画工作台",
+      "category": "electronics",
+      "source_path": "src/models/pen_tablet_workstation.js",
+      "generator": "createPenTabletWorkstation",
+      "dimensions_m": [
+        0.78,
+        0.56,
+        0.46
+      ],
+      "design_focus": "Artist pen display with stand, stylus, side shortcut buttons and a drawing interface",
+      "usage": "tablet",
+      "part_count": 16
+    },
+    {
+      "id": "tools.portable-air-compressor.001",
+      "slug": "portable-air-compressor",
+      "title": "Portable Air Compressor",
+      "title_zh": "便携式空气压缩机",
+      "category": "tools",
+      "source_path": "src/models/portable_air_compressor.js",
+      "generator": "createPortableAirCompressor",
+      "dimensions_m": [
+        0.77,
+        0.64,
+        0.47
+      ],
+      "design_focus": "Workshop air compressor with pressure tank, gauge, hose coil, motor and wheels",
+      "usage": "compressor",
+      "part_count": 15
+    },
+    {
+      "id": "urban.public-drinking-fountain.001",
+      "slug": "public-drinking-fountain",
+      "title": "Public Drinking Fountain",
+      "title_zh": "公共饮水台",
+      "category": "urban",
+      "source_path": "src/models/public_drinking_fountain.js",
+      "generator": "createPublicDrinkingFountain",
+      "dimensions_m": [
+        0.76,
+        1.18,
+        0.57
+      ],
+      "design_focus": "Accessible public drinking fountain with lower pet station, spouts and drainage",
+      "usage": "drinking",
+      "part_count": 12
+    },
+    {
+      "id": "scifi.robotic-mining-excavator.001",
+      "slug": "robotic-mining-excavator",
+      "title": "Robotic Mining Excavator",
+      "title_zh": "机器人采矿挖掘车",
+      "category": "scifi",
+      "source_path": "src/models/robotic_mining_excavator.js",
+      "generator": "createRoboticMiningExcavator",
+      "dimensions_m": [
+        2.25,
+        2.46,
+        3.36
+      ],
+      "design_focus": "Nonweapon autonomous mining crawler with articulated boom, digging bucket and sensors",
+      "usage": "mining",
+      "part_count": 25
+    },
+    {
+      "id": "furniture.rolling-library-ladder.001",
+      "slug": "rolling-library-ladder",
+      "title": "Rolling Library Ladder",
+      "title_zh": "图书馆滑轨木梯",
+      "category": "furniture",
+      "source_path": "src/models/rolling_library_ladder.js",
+      "generator": "createRollingLibraryLadder",
+      "dimensions_m": [
+        0.69,
+        2.52,
+        0.86
+      ],
+      "design_focus": "Angled walnut step ladder with sliding rail hooks and eight treads",
+      "usage": "library",
+      "part_count": 18
+    },
+    {
+      "id": "tools.rotary-angle-grinder.001",
+      "slug": "rotary-angle-grinder",
+      "title": "Rotary Angle Grinder",
+      "title_zh": "手持角磨机",
+      "category": "tools",
+      "source_path": "src/models/rotary_angle_grinder.js",
+      "generator": "createRotaryAngleGrinder",
+      "dimensions_m": [
+        0.4,
+        0.21,
+        0.55
+      ],
+      "design_focus": "Workshop angle grinder with metal cutoff wheel, protective cover and side grip",
+      "usage": "grinder",
+      "part_count": 13
+    },
+    {
+      "id": "sports.rowing-fitness-ergometer.001",
+      "slug": "rowing-fitness-ergometer",
+      "title": "Rowing Fitness Ergometer",
+      "title_zh": "室内划船训练器",
+      "category": "sports",
+      "source_path": "src/models/rowing_fitness_ergometer.js",
+      "generator": "createRowingFitnessErgometer",
+      "dimensions_m": [
+        0.67,
+        1.13,
+        2.13
+      ],
+      "design_focus": "Indoor rowing machine with track, sliding seat, flywheel, pedals and pull handle",
+      "usage": "rowing",
+      "part_count": 14
+    },
+    {
+      "id": "characters.scuba-diver-mannequin.001",
+      "slug": "scuba-diver-mannequin",
+      "title": "Scuba Diver Mannequin",
+      "title_zh": "潜水员人物原型",
+      "category": "characters",
+      "source_path": "src/models/scuba_diver_mannequin.js",
+      "generator": "createScubaDiverMannequin",
+      "dimensions_m": [
+        1.2,
+        1.92,
+        0.72
+      ],
+      "design_focus": "Unrigged scuba diver with mask, tank, flippers, weighted belt and air hoses",
+      "usage": "diver",
+      "part_count": 15
+    },
+    {
+      "id": "decor.stained-glass-panel.001",
+      "slug": "stained-glass-panel",
+      "title": "Stained Glass Panel",
+      "title_zh": "彩色铅条玻璃屏",
+      "category": "decor",
+      "source_path": "src/models/stained_glass_panel.js",
+      "generator": "createStainedGlassPanel",
+      "dimensions_m": [
+        1.21,
+        1.77,
+        0.11
+      ],
+      "design_focus": "Decorative colored leaded glass grid with central rosette",
+      "usage": "stained-glass",
+      "part_count": 25
+    },
+    {
+      "id": "kitchen.stainless-two-slot-toaster.001",
+      "slug": "stainless-two-slot-toaster",
+      "title": "Stainless Two Slot Toaster",
+      "title_zh": "双槽不锈钢烤面包机",
+      "category": "kitchen",
+      "source_path": "src/models/stainless_two_slot_toaster.js",
+      "generator": "createStainlessTwoSlotToaster",
+      "dimensions_m": [
+        0.35,
+        0.27,
+        0.24
+      ],
+      "design_focus": "Compact countertop toaster with extended bread and shade control",
+      "usage": "toaster",
+      "part_count": 15
+    },
+    {
+      "id": "tools.surveying-camera-tripod.001",
+      "slug": "surveying-camera-tripod",
+      "title": "Surveying Camera Tripod",
+      "title_zh": "野外测绘三脚架",
+      "category": "tools",
+      "source_path": "src/models/surveying_camera_tripod.js",
+      "generator": "createSurveyingCameraTripod",
+      "dimensions_m": [
+        1.11,
+        1.69,
+        1.08
+      ],
+      "design_focus": "Adjustable survey tripod with telescopic legs, rotation head and bubble level",
+      "usage": "survey",
+      "part_count": 19
+    },
+    {
+      "id": "nature.tidal-rock-pool.001",
+      "slug": "tidal-rock-pool",
+      "title": "Tidal Rock Pool",
+      "title_zh": "海滨潮汐礁石池",
+      "category": "nature",
+      "source_path": "src/models/tidal_rock_pool.js",
+      "generator": "createTidalRockPool",
+      "dimensions_m": [
+        1.74,
+        0.56,
+        1.45
+      ],
+      "design_focus": "Natural shallow tide pool with rock ring, aquatic plants, and starfish details",
+      "usage": "tidepool",
+      "part_count": 23
+    },
+    {
+      "id": "decor.tiered-candle-centerpiece.001",
+      "slug": "tiered-candle-centerpiece",
+      "title": "Tiered Candle Centerpiece",
+      "title_zh": "错层蜡烛烛台组合",
+      "category": "decor",
+      "source_path": "src/models/tiered_candle_centerpiece.js",
+      "generator": "createTieredCandleCenterpiece",
+      "dimensions_m": [
+        0.79,
+        0.74,
+        0.57
+      ],
+      "design_focus": "Three differing-height brass candlesticks with ivory wax",
+      "usage": "candle",
+      "part_count": 19
+    },
+    {
+      "id": "architecture.timber-balcony-module.001",
+      "slug": "timber-balcony-module",
+      "title": "Timber Balcony Module",
+      "title_zh": "木质外挑阳台模块",
+      "category": "architecture",
+      "source_path": "src/models/timber_balcony_module.js",
+      "generator": "createTimberBalconyModule",
+      "dimensions_m": [
+        2.62,
+        1.57,
+        1.5
+      ],
+      "design_focus": "Modular balcony with deck planking, wall fasteners, railings and support corbels",
+      "usage": "balcony",
+      "part_count": 29
+    },
+    {
+      "id": "bathroom.timber-bath-tray.001",
+      "slug": "timber-bath-tray",
+      "title": "Timber Bath Tray",
+      "title_zh": "实木浴缸托盘",
+      "category": "bathroom",
+      "source_path": "src/models/timber_bath_tray.js",
+      "generator": "createTimberBathTray",
+      "dimensions_m": [
+        0.94,
+        0.21,
+        0.3
+      ],
+      "design_focus": "Slatted bath caddy with book rest, glass stem holder and small soap bowl",
+      "usage": "caddy",
+      "part_count": 17
+    },
+    {
+      "id": "bathroom.triple-mirror-medicine-cabinet.001",
+      "slug": "triple-mirror-medicine-cabinet",
+      "title": "Triple Mirror Medicine Cabinet",
+      "title_zh": "三门镜面药柜",
+      "category": "bathroom",
+      "source_path": "src/models/triple_mirror_medicine_cabinet.js",
+      "generator": "createTripleMirrorMedicineCabinet",
+      "dimensions_m": [
+        0.88,
+        0.67,
+        0.19
+      ],
+      "design_focus": "Wall medicine cabinet with three mirrored doors, shelf insets and side pull tabs",
+      "usage": "medicine",
+      "part_count": 16
+    },
+    {
+      "id": "furniture.velvet-chaise-lounge.001",
+      "slug": "velvet-chaise-lounge",
+      "title": "Velvet Chaise Lounge",
+      "title_zh": "丝绒贵妃躺椅",
+      "category": "furniture",
+      "source_path": "src/models/velvet_chaise_lounge.js",
+      "generator": "createVelvetChaiseLounge",
+      "dimensions_m": [
+        1.7,
+        0.87,
+        0.76
+      ],
+      "design_focus": "Low asymmetric chaise lounge with sculpted curved pillow and brass feet",
+      "usage": "chaise",
+      "part_count": 14
+    },
+    {
+      "id": "bathroom.wall-hung-toilet.001",
+      "slug": "wall-hung-toilet",
+      "title": "Wall Hung Toilet",
+      "title_zh": "壁挂式马桶",
+      "category": "bathroom",
+      "source_path": "src/models/wall_hung_toilet.js",
+      "generator": "createWallHungToilet",
+      "dimensions_m": [
+        0.39,
+        0.78,
+        0.64
+      ],
+      "design_focus": "Wall-mounted tankless ceramic toilet with floating bowl, flush panel and hinges",
+      "usage": "toilet",
+      "part_count": 12
+    },
+    {
+      "id": "kitchen.wood-fired-pizza-oven.001",
+      "slug": "wood-fired-pizza-oven",
+      "title": "Wood Fired Pizza Oven",
+      "title_zh": "柴火石砌披萨炉",
+      "category": "kitchen",
+      "source_path": "src/models/wood_fired_pizza_oven.js",
+      "generator": "createWoodFiredPizzaOven",
+      "dimensions_m": [
+        1.45,
+        1.36,
+        1.29
+      ],
+      "design_focus": "Outdoor pizzeria masonry oven with domed hearth, brick apron, chimney and bread peel",
+      "usage": "pizza",
+      "part_count": 19
+    },
+    {
+      "id": "tools.woodworking-bench-vise.001",
+      "slug": "woodworking-bench-vise",
+      "title": "Woodworking Bench Vise",
+      "title_zh": "木工台钳",
+      "category": "tools",
+      "source_path": "src/models/woodworking_bench_vise.js",
+      "generator": "createWoodworkingBenchVise",
+      "dimensions_m": [
+        0.41,
+        0.32,
+        0.57
+      ],
+      "design_focus": "Heavy bench vise with twin jaws, tightening screw, swiveling handle and mounting foot",
+      "usage": "vise",
+      "part_count": 12
+    }
+  ]
+}

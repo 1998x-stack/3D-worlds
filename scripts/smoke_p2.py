@@ -27,6 +27,9 @@ for asset_id in (
     "scifi.ancient-portal-gateway.001",
     "urban.public-bicycle-parking-rack.001",
     "scifi.holographic-command-console.001",
+    "nature.alpine-waterfall-cliff.001",
+    "architecture.timber-balcony-module.001",
+    "scifi.robotic-mining-excavator.001",
 ):
     for level in (0, 1, 2):
         metadata = download_metadata(asset_id, level)
