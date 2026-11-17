@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { buildPrintPlan, validatePrintPolicy } from '../src/print-planner.js';
 const policy=JSON.parse(readFileSync(new URL('../catalog/print_policy.json',import.meta.url),'utf8'));
 const catalog=JSON.parse(readFileSync(new URL('../catalog/models.json',import.meta.url),'utf8'));
-test('print policy covers all 13 catalog categories',()=>{
+test('print policy covers all 14 catalog categories',()=>{
   assert.equal(validatePrintPolicy(policy),true);
   assert.equal(new Set(catalog.assets.map(x=>x.category)).size,13);
   for(const cat of new Set(catalog.assets.map(x=>x.category)))assert.ok(policy.categories[cat]);
