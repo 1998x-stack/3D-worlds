@@ -5161,6 +5161,276 @@
       "collection": "v0.6",
       "preview_path": "public/thumbs/woodworking-bench-vise.webp",
       "accent": "#c7bdad"
+    },
+    {
+      "id": "furniture.acoustic-reading-pod-chair.001",
+      "slug": "acoustic-reading-pod-chair",
+      "title": "Acoustic Reading Pod Chair",
+      "title_zh": "隔音阅读舱座椅",
+      "summary": "High-sided private reading chair with upholstered alcove, cushion and integrated reading light",
+      "category": "furniture",
+      "tags": [
+        "reading",
+        "chair",
+        "privacy"
+      ],
+      "dimensions_m": [
+        1.25,
+        1.72,
+        1.03
+      ],
+      "generator": "createAcousticReadingPodChair",
+      "source_path": "src/models/acoustic_reading_pod_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/acoustic-reading-pod-chair.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "vehicles.airport-baggage-tug.001",
+      "slug": "airport-baggage-tug",
+      "title": "Airport Baggage Tug",
+      "title_zh": "机场行李牵引车",
+      "summary": "Small airport tug with tow hitch, cabin, orange safety beacon and four wheels",
+      "category": "vehicles",
+      "tags": [
+        "airport",
+        "baggage",
+        "tug"
+      ],
+      "dimensions_m": [
+        1.6,
+        1.79,
+        2.44
+      ],
+      "generator": "createAirportBaggageTug",
+      "source_path": "src/models/airport_baggage_tug.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/airport-baggage-tug.webp",
+      "accent": "#aac2c7"
+    },
+    {
+      "id": "scifi.alien-botanical-specimen.001",
+      "slug": "alien-botanical-specimen",
+      "title": "Alien Botanical Specimen",
+      "title_zh": "外星植物研究标本",
+      "summary": "Fictional alien bioluminescent plant with spiral stalk, luminous pods and transparent sample vessel",
+      "category": "scifi",
+      "tags": [
+        "alien",
+        "botanical",
+        "specimen"
+      ],
+      "dimensions_m": [
+        1.34,
+        2.04,
+        1.18
+      ],
+      "generator": "createAlienBotanicalSpecimen",
+      "source_path": "src/models/alien_botanical_specimen.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/alien-botanical-specimen.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "urban.automated-parcel-locker-wall.001",
+      "slug": "automated-parcel-locker-wall",
+      "title": "Automated Parcel Locker Wall",
+      "title_zh": "智能快递自提柜墙",
+      "summary": "Self-service parcel locker station with compartment doors, scanner and touchscreen",
+      "category": "urban",
+      "tags": [
+        "parcel",
+        "locker",
+        "urban"
+      ],
+      "dimensions_m": [
+        2.12,
+        2.11,
+        0.62
+      ],
+      "generator": "createAutomatedParcelLockerWall",
+      "source_path": "src/models/automated_parcel_locker_wall.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/automated-parcel-locker-wall.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "urban.automatic-parking-barrier.001",
+      "slug": "automatic-parking-barrier",
+      "title": "Automatic Parking Barrier",
+      "title_zh": "停车场自动道闸",
+      "summary": "Parking lot gate with hinged striped beam, control cabinet, infrared sensor and road anchors",
+      "category": "urban",
+      "tags": [
+        "parking",
+        "barrier",
+        "gate"
+      ],
+      "dimensions_m": [
+        3.38,
+        1.14,
+        0.51
+      ],
+      "generator": "createAutomaticParkingBarrier",
+      "source_path": "src/models/automatic_parking_barrier.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/automatic-parking-barrier.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "kitchen.bakery-bread-display-rack.001",
+      "slug": "bakery-bread-display-rack",
+      "title": "Bakery Bread Display Rack",
+      "title_zh": "面包店展示货架",
+      "summary": "Open bakery bread stand with angled shelves, loaves and price tags",
+      "category": "kitchen",
+      "tags": [
+        "bakery",
+        "bread",
+        "display"
+      ],
+      "dimensions_m": [
+        1.33,
+        1.48,
+        0.7
+      ],
+      "generator": "createBakeryBreadDisplayRack",
+      "source_path": "src/models/bakery_bread_display_rack.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bakery-bread-display-rack.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "kitchen.bamboo-dimsum-steamer-set.001",
+      "slug": "bamboo-dimsum-steamer-set",
+      "title": "Bamboo Dimsum Steamer Set",
+      "title_zh": "竹制蒸笼点心组合",
+      "summary": "Stacked bamboo dim sum steamers with woven rings, dumplings and serving tray",
+      "category": "kitchen",
+      "tags": [
+        "dimsum",
+        "steamer",
+        "bamboo"
+      ],
+      "dimensions_m": [
+        0.49,
+        0.59,
+        0.52
+      ],
+      "generator": "createBambooDimsumSteamerSet",
+      "source_path": "src/models/bamboo_dimsum_steamer_set.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bamboo-dimsum-steamer-set.webp",
+      "accent": "#cbbca3"
+    },
+    {
+      "id": "tools.bench-belt-sander.001",
+      "slug": "bench-belt-sander",
+      "title": "Bench Belt Sander",
+      "title_zh": "台式砂带打磨机",
+      "summary": "Stationary belt sander with abrasive loop, motor, work rest and dust exhaust port",
+      "category": "tools",
+      "tags": [
+        "sander",
+        "abrasive",
+        "workshop"
+      ],
+      "dimensions_m": [
+        0.58,
+        0.63,
+        0.81
+      ],
+      "generator": "createBenchBeltSander",
+      "source_path": "src/models/bench_belt_sander.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/bench-belt-sander.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "sports.boxing-heavy-bag-station.001",
+      "slug": "boxing-heavy-bag-station",
+      "title": "Boxing Heavy Bag Station",
+      "title_zh": "拳击沙袋训练站",
+      "summary": "Standing exercise bag rig with steel top arm, chains, reinforced heavy bag and floor mat",
+      "category": "sports",
+      "tags": [
+        "boxing",
+        "bag",
+        "training"
+      ],
+      "dimensions_m": [
+        1.28,
+        2.45,
+        1.11
+      ],
+      "generator": "createBoxingHeavyBagStation",
+      "source_path": "src/models/boxing_heavy_bag_station.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/boxing-heavy-bag-station.webp",
+      "accent": "#b6c4c7"
+    },
+    {
+      "id": "architecture.castle-crenellated-wall-module.001",
+      "slug": "castle-crenellated-wall-module",
+      "title": "Castle Crenellated Wall Module",
+      "title_zh": "城堡垛口墙模块",
+      "summary": "Medieval masonry battlement wall tile with merlons and arrow slit",
+      "category": "architecture",
+      "tags": [
+        "castle",
+        "fortress",
+        "masonry"
+      ],
+      "dimensions_m": [
+        3.2,
+        2.76,
+        0.81
+      ],
+      "generator": "createCastleCrenellatedWallModule",
+      "source_path": "src/models/castle_crenellated_wall_module.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.7",
+      "preview_path": "public/thumbs/castle-crenellated-wall-module.webp",
+      "accent": "#c9c9c1"
     }
   ]
 }

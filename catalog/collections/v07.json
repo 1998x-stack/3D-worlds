@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v0.7",
+  "title": "Fifty New Original 3D Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 10,
+  "category_count": 8,
+  "category_counts": {
+    "architecture": 1,
+    "furniture": 1,
+    "kitchen": 2,
+    "scifi": 1,
+    "sports": 1,
+    "tools": 1,
+    "urban": 2,
+    "vehicles": 1
+  },
+  "assets": [
+    {
+      "id": "furniture.acoustic-reading-pod-chair.001",
+      "slug": "acoustic-reading-pod-chair",
+      "title": "Acoustic Reading Pod Chair",
+      "title_zh": "隔音阅读舱座椅",
+      "category": "furniture",
+      "source_path": "src/models/acoustic_reading_pod_chair.js",
+      "generator": "createAcousticReadingPodChair",
+      "dimensions_m": [
+        1.25,
+        1.72,
+        1.03
+      ],
+      "design_focus": "High-sided private reading chair with upholstered alcove, cushion and integrated reading light",
+      "usage": "reading",
+      "part_count": 15
+    },
+    {
+      "id": "vehicles.airport-baggage-tug.001",
+      "slug": "airport-baggage-tug",
+      "title": "Airport Baggage Tug",
+      "title_zh": "机场行李牵引车",
+      "category": "vehicles",
+      "source_path": "src/models/airport_baggage_tug.js",
+      "generator": "createAirportBaggageTug",
+      "dimensions_m": [
+        1.6,
+        1.79,
+        2.44
+      ],
+      "design_focus": "Small airport tug with tow hitch, cabin, orange safety beacon and four wheels",
+      "usage": "airport",
+      "part_count": 19
+    },
+    {
+      "id": "scifi.alien-botanical-specimen.001",
+      "slug": "alien-botanical-specimen",
+      "title": "Alien Botanical Specimen",
+      "title_zh": "外星植物研究标本",
+      "category": "scifi",
+      "source_path": "src/models/alien_botanical_specimen.js",
+      "generator": "createAlienBotanicalSpecimen",
+      "dimensions_m": [
+        1.34,
+        2.04,
+        1.18
+      ],
+      "design_focus": "Fictional alien bioluminescent plant with spiral stalk, luminous pods and transparent sample vessel",
+      "usage": "alien",
+      "part_count": 34
+    },
+    {
+      "id": "urban.automated-parcel-locker-wall.001",
+      "slug": "automated-parcel-locker-wall",
+      "title": "Automated Parcel Locker Wall",
+      "title_zh": "智能快递自提柜墙",
+      "category": "urban",
+      "source_path": "src/models/automated_parcel_locker_wall.js",
+      "generator": "createAutomatedParcelLockerWall",
+      "dimensions_m": [
+        2.12,
+        2.11,
+        0.62
+      ],
+      "design_focus": "Self-service parcel locker station with compartment doors, scanner and touchscreen",
+      "usage": "parcel",
+      "part_count": 41
+    },
+    {
+      "id": "urban.automatic-parking-barrier.001",
+      "slug": "automatic-parking-barrier",
+      "title": "Automatic Parking Barrier",
+      "title_zh": "停车场自动道闸",
+      "category": "urban",
+      "source_path": "src/models/automatic_parking_barrier.js",
+      "generator": "createAutomaticParkingBarrier",
+      "dimensions_m": [
+        3.38,
+        1.14,
+        0.51
+      ],
+      "design_focus": "Parking lot gate with hinged striped beam, control cabinet, infrared sensor and road anchors",
+      "usage": "parking",
+      "part_count": 24
+    },
+    {
+      "id": "kitchen.bakery-bread-display-rack.001",
+      "slug": "bakery-bread-display-rack",
+      "title": "Bakery Bread Display Rack",
+      "title_zh": "面包店展示货架",
+      "category": "kitchen",
+      "source_path": "src/models/bakery_bread_display_rack.js",
+      "generator": "createBakeryBreadDisplayRack",
+      "dimensions_m": [
+        1.33,
+        1.48,
+        0.7
+      ],
+      "design_focus": "Open bakery bread stand with angled shelves, loaves and price tags",
+      "usage": "bakery",
+      "part_count": 36
+    },
+    {
+      "id": "kitchen.bamboo-dimsum-steamer-set.001",
+      "slug": "bamboo-dimsum-steamer-set",
+      "title": "Bamboo Dimsum Steamer Set",
+      "title_zh": "竹制蒸笼点心组合",
+      "category": "kitchen",
+      "source_path": "src/models/bamboo_dimsum_steamer_set.js",
+      "generator": "createBambooDimsumSteamerSet",
+      "dimensions_m": [
+        0.49,
+        0.59,
+        0.52
+      ],
+      "design_focus": "Stacked bamboo dim sum steamers with woven rings, dumplings and serving tray",
+      "usage": "dimsum",
+      "part_count": 26
+    },
+    {
+      "id": "tools.bench-belt-sander.001",
+      "slug": "bench-belt-sander",
+      "title": "Bench Belt Sander",
+      "title_zh": "台式砂带打磨机",
+      "category": "tools",
+      "source_path": "src/models/bench_belt_sander.js",
+      "generator": "createBenchBeltSander",
+      "dimensions_m": [
+        0.58,
+        0.63,
+        0.81
+      ],
+      "design_focus": "Stationary belt sander with abrasive loop, motor, work rest and dust exhaust port",
+      "usage": "sander",
+      "part_count": 18
+    },
+    {
+      "id": "sports.boxing-heavy-bag-station.001",
+      "slug": "boxing-heavy-bag-station",
+      "title": "Boxing Heavy Bag Station",
+      "title_zh": "拳击沙袋训练站",
+      "category": "sports",
+      "source_path": "src/models/boxing_heavy_bag_station.js",
+      "generator": "createBoxingHeavyBagStation",
+      "dimensions_m": [
+        1.28,
+        2.45,
+        1.11
+      ],
+      "design_focus": "Standing exercise bag rig with steel top arm, chains, reinforced heavy bag and floor mat",
+      "usage": "boxing",
+      "part_count": 19
+    },
+    {
+      "id": "architecture.castle-crenellated-wall-module.001",
+      "slug": "castle-crenellated-wall-module",
+      "title": "Castle Crenellated Wall Module",
+      "title_zh": "城堡垛口墙模块",
+      "category": "architecture",
+      "source_path": "src/models/castle_crenellated_wall_module.js",
+      "generator": "createCastleCrenellatedWallModule",
+      "dimensions_m": [
+        3.2,
+        2.76,
+        0.81
+      ],
+      "design_focus": "Medieval masonry battlement wall tile with merlons and arrow slit",
+      "usage": "castle",
+      "part_count": 34
+    }
+  ]
+}
