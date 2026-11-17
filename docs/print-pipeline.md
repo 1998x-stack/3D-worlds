@@ -20,7 +20,7 @@ precision. Converting their triangles to STL does NOT repair topology.
 | Browser `*-draft-120mm.stl` | Full procedural factory | Immediate geometry-only draft; no mesh-health test or print guarantee |
 | CLI `<slug>.stl` | Source GLB (`.cache/raw`) | Blocks nonwatertight/nonpositive-volume components |
 | CLI `<slug>.3mf` | Same normalized, checked geometry | 3MF Core ZIP, explicit millimeter units, objects and build items |
-| CLI `<slug>.print-report.json` | Audit results | SHA-256, actual extents, topology outcome, warnings, no certification |
+| CLI `<slug>.print-report.json` | Audit results | Source/output SHA-256, actual extents, topology outcome, warnings, no certification |
 
 The first release **does not** emit G-code, CAD STEP, slicer project
 profiles, printer-specific commands, color/multimaterial objects, hollowing,
