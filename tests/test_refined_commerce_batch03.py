@@ -48,8 +48,8 @@ class Batch03Tests(unittest.TestCase):
             with self.subTest(slug=slug):
                 self.assertIn(f'slug=="{slug}"', cad)
                 self.assertIn(f"case '{slug}':", preview)
-                self.assertIn(f"'desktop-herb-planter'", preview)
-                self.assertIn(f"'desktop-herb-planter'", audit)
+                self.assertIn(f"'{slug}'", preview)
+                self.assertIn(f"'{slug}'", audit)
 
     def test_first_two_batches_remain_separate_and_twenty_skus_were_remaining(self):
         first = (ROOT / "src/models/refined_commerce_engine.js").read_text(encoding="utf-8")
@@ -69,8 +69,8 @@ class Batch03Tests(unittest.TestCase):
                       "ring-cone-tower", "geo-cactus-planter",
                       "custom-desk-nameplate", "house-number-plaque",
                       "celestial-guild-medallion", "alchemist-costume-brooch"]
-        self.assertTrue(all(f"'desktop-herb-planter'" in first for slug in first_ids))
-        self.assertTrue(all(f"'desktop-herb-planter'" in second for slug in second_ids))
+        self.assertTrue(all(f"'{slug}'" in first for slug in first_ids))
+        self.assertTrue(all(f"'{slug}'" in second for slug in second_ids))
         self.assertFalse(set(EXPECTED).intersection(first_ids + second_ids))
         self.assertEqual(len(self.collection) - len(first_ids) - len(second_ids) - len(EXPECTED), 0)
 
