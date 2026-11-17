@@ -103,7 +103,7 @@ When adding a single model or a batch, avoid producing cosmetic clones, renamed 
 - Update the appropriate additive collection manifest and related release note when working as a numbered batch. Do not rewrite old collection membership to make a count pass.
 - Validate exact factory export names, dimensions, tags, categories, and references.
 - Capture a real preview and rotate/inspect the model from multiple viewpoints. Check silhouettes, intersections, missing pieces, z-fighting, hovering parts, clipping and camera framing.
-- Use the full relevant quality gate in [``9`](#9-verification-matrix) below.
+- Use the full relevant quality gate in [Section 9](#9-verification-matrix) below.
 - Report **actual** test status and the number of generated/validated models. A manifest count is not proof that all rendered successfully.
 
 ### Batch acceptance evidence
