@@ -14,7 +14,9 @@
     "test:ingest": "node scripts/test_ingest.mjs",
     "generate:previews": "node scripts/render_assets.mjs --only-images",
     "generate:assets": "node scripts/render_assets.mjs && node scripts/optimize_assets.mjs",
-    "optimize:glb": "node scripts/optimize_assets.mjs"
+    "optimize:glb": "node scripts/optimize_assets.mjs",
+    "verify:assets": "node scripts/verify_generated.mjs",
+    "test:gallery": "node scripts/smoke_gallery.mjs"
   },
   "dependencies": {
     "three": "0.180.0",
