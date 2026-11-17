@@ -70,6 +70,20 @@ def validate_manifest(path: Path = MANIFEST) -> dict:
                     raise ValueError(f"Unsafe or missing path: {raw}")
         if item["kind"] == "procedural" and (not source or not item.get("generator")):
             raise ValueError(f"Procedural asset missing source/generator: {item['id']}")
+        if item["kind"] == "glb":
+            if not binary or not binary.startswith("public/assets/") or not binary.endswith(".glb"):
+                raise ValueError(f"GLB must be a published binary under public/assets/: {item['id']}")
+            import hashlib
+            actual_hash = hashlib.sha256((ROOT / binary).read_bytes()).hexdigest()
+            if item.get("content_sha256") != actual_hash:
+                raise ValueError(f"GLB hash mismatch: {item['id']}")
+            for key in ("triangle_count", "vertex_count", "file_size_bytes"):
+                if not isinstance(item.get(key), int) or item[key] < 0:
+                    raise ValueError(f"Missing GLB QA metric {key}: {item['id']}")
+            if item["file_size_bytes"] != (ROOT / binary).stat().st_size:
+                raise ValueError(f"Incorrect file_size_bytes: {item['id']}")
+            if item["author"] != "3D Worlds" and not item.get("license_evidence_url", "").startswith("https://"):
+                raise ValueError(f"Missing third-party license evidence: {item['id']}")
         if not isinstance(item.get("tags", []), list) or not all(
             isinstance(tag, str) and tag and IDENTIFIER.fullmatch(tag) for tag in item.get("tags", [])
         ):
@@ -100,14 +114,16 @@ def build_catalog(db_path: Path = DEFAULT_DB, manifest_path: Path = MANIFEST) ->
                     """INSERT INTO assets
                     (asset_id,slug,title,title_zh,description,search_terms,category_id,kind,
                      license_spdx,creator,source_url,source_path,generator,binary_path,
-                     preview_path,width,height,depth,style,accent)
-                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                     preview_path,width,height,depth,style,accent,triangle_count,vertex_count,file_size_bytes,content_sha256)
+                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (asset["id"], asset["slug"], asset["title"], asset.get("title_zh", ""),
                      asset.get("summary", ""), " ".join(asset.get("tags", [])),
                      asset["category"], asset["kind"], asset["license"], asset["author"],
                      asset.get("source_url"), asset.get("source_path"), asset.get("generator"),
                      asset.get("binary_path"), asset.get("preview_path"),
-                     w, h, d, asset.get("style", ""), asset.get("accent", ""))
+                     w, h, d, asset.get("style", ""), asset.get("accent", ""),
+                     asset.get("triangle_count"), asset.get("vertex_count"),
+                     asset.get("file_size_bytes"), asset.get("content_sha256"))
                 )
                 for tag in sorted(set(asset.get("tags", []))):
                     conn.execute("INSERT OR IGNORE INTO tags(tag_id,label) VALUES (?,?)", (tag, tag))
@@ -119,13 +135,18 @@ def build_catalog(db_path: Path = DEFAULT_DB, manifest_path: Path = MANIFEST) ->
                 ):
                     if path:
                         conn.execute(
-                            "INSERT INTO asset_files(asset_id,variant_key,role,format,repository_path) VALUES (?,?,?,?,?)",
-                            (asset["id"], key, role, fmt, path)
+                            "INSERT INTO asset_files(asset_id,variant_key,role,format,repository_path,sha256,bytes) VALUES (?,?,?,?,?,?,?)",
+                            (asset["id"], key, role, fmt, path,
+                             asset.get("content_sha256") if key == "model" else None,
+                             asset.get("file_size_bytes") if key == "model" else None)
                         )
                 conn.execute(
-                    "INSERT INTO asset_provenance(asset_id,source_name,original_author,notes) VALUES (?,?,?,?)",
-                    (asset["id"], "3D Worlds original procedural source", asset["author"],
-                     "MIT licensed procedural geometry; generated GLB inherits source terms.")
+                    "INSERT INTO asset_provenance(asset_id,source_name,original_author,source_url,license_evidence_url,notes) VALUES (?,?,?,?,?,?)",
+                    (asset["id"],
+                     "3D Worlds original procedural source" if asset["kind"] == "procedural" else "Imported binary GLB",
+                     asset["author"],
+                     asset.get("source_url"), asset.get("license_evidence_url"),
+                     asset.get("provenance_note", "Original procedural asset" if asset["kind"] == "procedural" else "Imported with license evidence"))
                 )
             conn.commit()
             failed = conn.execute("PRAGMA integrity_check").fetchone()[0]
