@@ -79,3 +79,9 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - V0.7 generator requires source-backed `assetMeta`, `buildRecipe`, Y-up meter dimensions, MIT author/license and at least nine unique named geometry parts.
 - End-to-end acceptance: 235 WebP, 235 AVIF previews; 705 verified Meshopt GLB binaries; 705 local content-addressed published objects; SQLite and remote cursor pagination to 235 unique IDs; Gallery browser smoke and MCP v2.
 - Run `tests/test_collection_v07.py` and all legacy collection tests. Preserve and preflight the portable Codex/Claude/Pi Skill v2 mirrors.
+
+## V0.8 collection integrity (285 assets)
+- `catalog/collections/v08.json` indexes 50 new original source-backed procedural models in all 13 categories. Historical 235 IDs are immutable.
+- Require unique `assetMeta` and createXxx() export, an actual buildRecipe() with >=9 named geometry parts, Y-up meter dimensions and MIT license.
+- Acceptance requires tests/test_collection_v08.py, full previous collection tests, 285 Three.js geometry checks, 285 WebP plus 285 AVIF previews, 855 GLB LOD0/1/2 files, SHA-256 verification, 285-asset cursor pagination and real Chromium Gallery smoke.
+- Keep the existing Codex/Pi/Claude Skill v2 mirrors and source paths unchanged.
