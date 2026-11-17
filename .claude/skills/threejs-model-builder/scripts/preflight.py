@@ -9,7 +9,7 @@ import re
 import sys
 
 SKILL = Path(__file__).resolve().parent.parent
-ROOT = SKILL.parents[3]  # /repo/.codex/skills/skill -> /repo
+ROOT = SKILL.parents[2]  # /repo/.codex/skills/skill -> /repo
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 REQUIRED = (
     "SKILL.md",

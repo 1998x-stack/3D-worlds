@@ -43,3 +43,17 @@ Read `docs/architecture.md`, `docs/threejs-research.md` and
 - For any new kind of primitive, add geometry creation in `src/models/recipe_engine.js` and ensure the copy-to-game snippet includes this engine.
 - Do not treat an unrigged stylized humanoid or scene prop as manufacturing-grade CAD.
 - Run `tests/test_collection_v04.py` for each new asset to validate source-backed recipes before rendering.
+
+
+## Portable Skill v2 contract
+
+- The canonical authoring bundle is `.codex/skills/threejs-model-builder/`.
+  `.claude/skills/threejs-model-builder/` and `.pi/skills/threejs-model-builder/`
+  must have the **same entire resource tree and content**, not just matching
+  `SKILL.md`.
+- When changing model workflows, choose and read the relevant
+  `references/*.md` on demand. Use `assets/` templates for briefs/reports and
+  do not treat example.org license placeholders as real evidence.
+- Run `python3 scripts/verify_skill_mirrors.py` and the read-only
+  `python3 .codex/skills/threejs-model-builder/scripts/preflight.py` on
+  every Skill change. See `docs/skill-architecture.md` for design decisions.
