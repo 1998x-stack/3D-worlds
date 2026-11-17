@@ -78,8 +78,8 @@ root.innerHTML = `
     </section>
     <section class="catalog-section" id="collection">
       <div class="section-intro">
-        <div><span class="section-kicker">THE COLLECTION / V 1.0</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
-        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">385 ASSETS</span></div>
+        <div><span class="section-kicker">THE COLLECTION / V 1.1</span><h2>Explore the library<span class="heading-period">.</span></h2></div>
+        <div class="section-intro-right"><span>探索、预览、获取模型。</span><span class="count-pill" id="total-count">435 ASSETS</span></div>
       </div>
       <div class="catalog-layout">
         <aside class="filters" aria-label="模型分类">
@@ -93,7 +93,7 @@ root.innerHTML = `
             <label class="search-box"><span aria-hidden="true">⌕</span><input id="asset-search" type="search" placeholder="搜索模型、名称或标签..." aria-label="搜索模型" autocomplete="off"/><kbd>/</kbd></label>
             <div class="sort-box"><span>排序</span><select id="sort-select" aria-label="模型排序"><option value="featured">精选推荐</option><option value="name">名称 A–Z</option><option value="category">分类</option></select></div>
           </div>
-          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">385 RESULTS</span></div>
+          <div class="result-line"><span id="result-caption">ALL OBJECTS</span><span id="result-count">435 RESULTS</span></div>
           <div id="asset-grid" class="asset-grid"></div><div class="load-more-box" id="load-more-box" hidden><button id="load-more" class="button button-soft" type="button">加载更多模型 ↓</button></div>
           <div class="catalog-footer"><span>Built for the makers, by the makers.</span><span>GLB / THREE.JS / MCP / SQLITE</span></div>
         </div>
