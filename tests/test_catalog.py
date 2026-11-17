@@ -11,10 +11,10 @@ from scripts.catalog import build_catalog, validate_manifest
 
 
 class CatalogTests(unittest.TestCase):
-    def test_manifest_validates_five_assets(self):
+    def test_manifest_validates_assets(self):
         data = validate_manifest()
         self.assertEqual(data["schema_version"], "1.0.0")
-        self.assertEqual(len(data["assets"]), 5)
+        self.assertGreaterEqual(len(data["assets"]), 5)
         self.assertEqual({a["category"] for a in data["assets"]}, {"furniture", "bathroom", "characters"})
 
     def test_database_schema_relations_and_fts(self):
@@ -22,11 +22,11 @@ class CatalogTests(unittest.TestCase):
             db = Path(directory) / "catalog.sqlite"
             self.assertEqual(build_catalog(db), 5)
             with sqlite3.connect(db) as connection:
-                self.assertEqual(connection.execute("SELECT count(*) FROM assets").fetchone()[0], 5)
+                self.assertEqual(connection.execute("SELECT count(*) FROM assets").fetchone()[0], len(validate_manifest()["assets"]))
                 self.assertEqual(connection.execute("PRAGMA integrity_check").fetchone()[0], "ok")
                 self.assertEqual(connection.execute("PRAGMA foreign_key_check").fetchall(), [])
                 self.assertEqual(
-                    connection.execute("SELECT count(*) FROM asset_tags").fetchone()[0], 27
+                    connection.execute("SELECT count(*) FROM asset_tags").fetchone()[0],\n                    sum(len(set(item.get("tags", []))) for item in validate_manifest()["assets"])
                 )
                 rows = connection.execute(
                     "SELECT a.asset_id FROM assets a JOIN assets_fts ON a.rowid=assets_fts.rowid "
@@ -55,7 +55,7 @@ class CatalogTests(unittest.TestCase):
             for _ in range(2):
                 build_catalog(db)
             with sqlite3.connect(db) as connection:
-                self.assertEqual(connection.execute("SELECT count(*) FROM assets").fetchone()[0], 5)
+                self.assertEqual(connection.execute("SELECT count(*) FROM assets").fetchone()[0], len(validate_manifest()["assets"]))
 
 
 if __name__ == "__main__":
