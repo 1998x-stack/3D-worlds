@@ -44,7 +44,7 @@ for asset_id in (
         assert metadata and "error" not in metadata, metadata
         assert metadata["url"].startswith("/api/v1/objects/"), metadata
         assert store.exists(metadata["sha256"]), metadata
-assert len(get_categories()) == 13
+assert len(get_categories()) == 14
 all_ids = []
 cursor = ""
 while True:
