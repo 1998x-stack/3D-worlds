@@ -1,369 +1,200 @@
-# 3D Worlds · Open Asset Infrastructure
+<div align="center">
 
-**Explore, inspect, copy, export and integrate 3D assets.** A public Three.js
-gallery paired with a local, searchable SQLite catalog and MCP server.
+# 3D Worlds
 
-**[Live Gallery](https://1998x-stack.github.io/3D-worlds/)** ·
-[Architecture](docs/architecture.md) ·
-[UI design](docs/ui-design.md) ·
-[Three.js research](docs/threejs-research.md) ·
-[P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) ·
-[STL / 3MF printing pipeline](docs/print-pipeline.md) ·
-[50 overseas printable product concepts · v1.3](docs/print-commerce-v13.md) ·
-[50 newest assets · v1.2](docs/50-assets-v12.md) ·
-[50 previous assets · v1.1](docs/50-assets-v11.md) ·
-[50 previous assets · v1.0](docs/50-assets-v10.md) ·
-[50 previous assets · v0.9](docs/50-assets-v09.md) ·
-[50 previous assets · v0.8](docs/50-assets-v08.md) ·
-[50 previous assets · v0.7](docs/50-assets-v07.md) ·
-[50 previous assets · v0.6](docs/50-assets-v06.md) ·
-[50 previous assets · v0.5](docs/50-assets-v05.md) ·
-[40 previous assets · v0.4](docs/40-assets-v04.md) ·
-[30 previous assets · v0.3](docs/30-assets-v03.md) ·
-[MCP contract](docs/mcp-contract.md) ·
-[Manifest schema](schemas/manifest.schema.json) ·
-[Model-building Skill v2](.codex/skills/threejs-model-builder/SKILL.md) ·
-[Skill architecture](docs/skill-architecture.md)
+**Open 3D asset infrastructure — inspectable Three.js scenes, reproducible GLB outputs, and honest 3D printing candidates.**
 
+[**Explore the gallery**](https://1998x-stack.github.io/3D-worlds/) · [**3D Print Workbench**](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [**中文文档**](README.zh-CN.md) · [**Architecture**](docs/architecture.md)
 
-## 3D Printing / STL / 3MF (experimental)
+[![Verify and Deploy Pages](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml/badge.svg)](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml) [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-The Gallery now offers a **dimension-aware STL draft** download for each
-procedural model. Enter the intended longest dimension in millimeters; the
-browser converts Y-up models to Z-up, uniformly scales the model and emits
-binary STL. **Browser STL is not manufacturing-validated.**
+</div>
 
-For checked exports, first produce a full-resolution `.cache/raw/*.glb`
-using `node scripts/render_assets.mjs --id furniture.chair.linen-001`, then install the optional Trimesh dependency
-and run the offline print exporter:
+> **Manufacturing safety:** Browser STL output is an **unverified geometry draft**. Passing CLI mesh checks does not certify printability, physical strength, safe use, or printer compatibility.
 
-```bash
-python3 -m pip install -r requirements-print.txt
-python3 scripts/export_print.py --asset-id furniture.chair.linen-001 \\
-  --longest-mm 120 --bed-mm 220 220 250
-```
+## Overview
 
-If each mesh component passes basic manifoldness, orientation, volume and bed
-checks, this writes STL, 3MF (explicit millimeter units) and a SHA-256
-print-quality report to `.cache/print/`. Failed geometry is **blocked**.
-Separate parts may intersect, and wall thickness, stability and slicer
-compatibility still require review. See the
-[full print pipeline, commands, limitations and roadmap](docs/print-pipeline.md).
+3D Worlds connects a catalog of **535 original, source-editable procedural models across 14 categories** to a static Three.js gallery, content-addressed GLB/LOD artifacts, searchable SQLite/MCP integrations, and an optional offline STL/3MF preparation workflow. It is an **asset platform**, not a native parametric CAD program or a slicer.
 
-## Three.js Model Builder · Skill v2
+| Layer | Key capability | Delivery |
+|---|---|---|
+| Catalog | 535 model generators, stable IDs, bilingual labels, physical dimensions, provenance | `catalog/models.json` · `src/models/` |
+| Gallery | Real WebP/AVIF thumbnails, interactive model inspector, category search | [GitHub Pages](https://1998x-stack.github.io/3D-worlds/) |
+| Game assets | GLB generation and Meshopt LOD0/LOD1/LOD2 optimization | Local build / CI artifact |
+| 3D print workbench | Printer-bed dimensions, scaled size estimate, P0/P1/P2 category guidance, STL draft | Browser · **not audited** |
+| Print QA | Topology, winding, volume, file hashes, STL/3MF candidates, split part STLs | Optional Python CLI |
+| Integrations | SQLite FTS5, read-only MCP tools, paginated API, optional local/S3 object storage | Self-hosted |
 
-The model-building Agent Skill now ships as a **complete, portable directory**
-for Codex, Claude and Pi — not only a single `SKILL.md`. Each mirror includes:
+**P0/P1/P2 are workflow priorities, not quality grades.** The catalog does not label any generated model as physically verified.
 
-- `SKILL.md`: task routing, safe defaults and execution/acceptance rules.
-- `references/`: procedural modeling, category taxonomy, catalog/provenance,
-  GLB ingestion, thumbnails/LOD, Pages/MCP/storage, QA and official external sources.
-- `assets/`: model design brief, acceptance report, import-batch manifest and
-  working recipe module template.
-- `examples/`: procedural furniture design and audited GLB import walk-through.
-- `scripts/preflight.py`: read-only project integration and reference checks.
+## Overseas print-commerce · v1.3
 
-Begin at [the canonical Skill](.codex/skills/threejs-model-builder/SKILL.md)
-and [Skill architecture](docs/skill-architecture.md). All Markdown references
-use **paths relative to the Skill root**; external authoritative URLs are
-collected in [EXTERNAL-SOURCES.md](.codex/skills/threejs-model-builder/references/EXTERNAL-SOURCES.md).
+An independent **海外3D打印商品 / print-commerce** collection adds 50 original
+CAD-backed product hypotheses (total **535 models / 14 categories**), preserving
+all 485 preexisting scenes. Each product has a procedural Three.js preview,
+a dedicated editable `.scad` source (dimensions in millimeters), and market
+evidence fields. Its CAD file can be exported to STL or 3MF with OpenSCAD.
+No model has been physically tested or certified for sale.
 
-```bash
-python3 scripts/verify_skill_mirrors.py
-python3 .codex/skills/threejs-model-builder/scripts/preflight.py --json
-```
+[Overseas customer preference research and all 50 original candidates](docs/print-commerce-v13.md) ·
+[Machine-readable product collection](catalog/collections/print-commerce-v13.json) ·
+[STL / 3MF CAD export](printables/README.md)
 
-Contributors edit `.codex/skills/threejs-model-builder/`, then copy **all**
-resources (not just `SKILL.md`) to `.claude/` and `.pi/`. CI rejects drift or
-broken local links.
+~~~bash
+python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve
+~~~
 
-## V1.3 — 50 original overseas print-commerce product prototypes
+## Quick start
 
-This independent **海外3D打印商品 / print-commerce** category includes 50
-editable original CAD-backed concept models, raising the catalog to **535
-models in 14 categories** without replacing the 485 models already in main.
-Each SKU includes a separate Three.js preview generator in `src/models/`
-and an editable, dimension-aware OpenSCAD source in `printables/`.
+Requires Node.js 22+, Python 3.11+, and a modern browser.
 
-- [2026 overseas buyer research, product preferences and all 50 model concepts](docs/print-commerce-v13.md)
-- [Printable CAD sources and export guide](printables/README.md)
-- [Machine-readable collection of 50 design hypotheses](catalog/collections/print-commerce-v13.json)
-- `python3 scripts/export_print_commerce.py --format stl --only moon-phase-light-sleeve`
-
-These are design and CAD export prototypes, **not** product safety-certified
-or validated as commercially successful products. Real print and slicer
-checks are required before selling.
-
-## V1.2 — 50 original source-backed Three.js models
-
-V1.2 expands the library from **435 to 485 independently editable Three.js models across all 13 categories**. The 50 new generators add **1,414 named geometry parts** (minimum 18 per model) and preserve the preexisting 435 original sources. It adds accessible facilities, natural biomes, environmental research, robotics, transit, public spaces, sports and nonweapon orbital science.
-
-- [V1.2 bilingual inventory](docs/50-assets-v12.md)
-- [V1.2 collection manifest](catalog/collections/v12.json)
-- [V1.2 acceptance checklist](docs/verification-v12.md)
-
-## V1.1 — 50 previous original procedural scene assets
-
-V1.1 expands the open catalog from **385** to **435 editable Three.js models across 13 categories**. This release includes **50 individual source modules** with distinct editable geometry recipes and **1,465 named Mesh parts**, with durable IDs, bilingual metadata, physical dimensions, and original MIT authorship. The focus is on transit infrastructure, accessible facilities, architectural scenes, research instruments, natural biomes, vehicles and nonweapon science fiction.
-
-- [V1.1 bilingual design inventory](docs/50-assets-v11.md)
-- [V1.1 machine-readable collection](catalog/collections/v11.json)
-- [V1.1 verification requirements](docs/verification-v11.md)
-
-## V1.0 — 50 previous source-editable models across every category
-
-V1.0 expands the complete model catalog from **335** to **385 original Three.js procedural assets**, maintaining every historical ID and source path. The new batch includes public services, accessibility, research instrumentation, clean transport, modular construction, home interiors, recreation and nonweapon sci-fi environments. Each of the **50 new independent generators** has its own geometry recipe, bilingual metadata, metric dimensions and MIT license; together they contain **1,232 unique named Mesh parts**.
-
-- [V1.0 full bilingual design inventory](docs/50-assets-v10.md)
-- [V1.0 machine-readable collection](catalog/collections/v10.json)
-- [V1.0 release acceptance gate](docs/verification-v10.md)
-
-## V0.9 — 50 previous source-backed modular scene assets
-
-V0.9 adds **50 original independent Three.js models** to the V0.8 baseline of 285,
-reaching **335 source-backed procedural assets across 13 categories**. The new
-furniture, accessible bathroom, professional characters, biomes, vehicles,
-electronics, urban infrastructure, workshop and science assets have 1,068
-individually named editable mesh parts. Existing IDs and source paths remain stable.
-
-- [V0.9 full bilingual inventory](docs/50-assets-v09.md)
-- [V0.9 machine-readable collection](catalog/collections/v09.json)
-- [V0.9 regression and publishing requirements](docs/verification-v09.md)
-
-## V0.8 — 50 previous editable original scene assets
-
-V0.8 expands the original **235 source-editable Three.js generators** by **50 new original models** to **285 assets / 13 categories**, retaining all historical IDs and geometry files. The collection adds health, professional transport, industrial equipment, modular architecture, urban facilities and science scenes.
-
-- [V0.8 full bilingual catalog](docs/50-assets-v08.md)
-- [Machine-readable V0.8 collection](catalog/collections/v08.json)
-- [V0.8 verification gate](docs/verification-v08.md)
-
-## V0.7 — previous 50 procedural scene assets
-
-V0.7 extends the existing 185 models with **50 original Three.js procedural scene assets**
-across all 13 categories: **235 source-editable assets** in total, including new
-modular architecture, equipment and landscape props. All prior model IDs remain
-stable; CI renders 235 WebP, 235 AVIF and 705 optimized GLB LOD0/1/2 variants.
-
-- [Full bilingual V0.7 50-asset design catalog](docs/50-assets-v07.md)
-- [Machine-readable V0.7 collection](catalog/collections/v07.json)
-- [V0.7 verification and publishing gate](docs/verification-v07.md)
-
-## V0.6 — previous 50 original scene assets
-
-V0.6 expands the original **135** source-editable models with **50 more
-individually authored Three.js generators** to **185 assets / 13 categories**.
-All prior stable IDs remain valid, with full Gallery, SQLite, MCP and
-WebP/AVIF + Meshopt LOD pipelines retained.
-
-- [Full bilingual 50-asset design inventory](docs/50-assets-v06.md)
-- [V0.6 machine-readable collection](catalog/collections/v06.json)
-
-## V0.5 — 50 previous scene assets
-
-V0.5 extends the original 85 source-backed Three.js models to **135 assets
-across all 13 categories**, with 50 new original generators.
-All 50 new assets have bilingual names, editable Mesh components and an
-independent collection inventory. The original 85 IDs remain stable.
-CI generates 135 WebP previews, 135 AVIF previews and 405 Meshopt GLB LOD files.
-
-- [Read the full 50-asset design and QA specification](docs/50-assets-v05.md)
-- [Machine-readable v0.5 collection](catalog/collections/v05.json)
-
-## V0.4 — 40 previous scene assets
-
-This release adds **40 original scene props** across every existing category:
-furniture (4), bathroom (3), characters (3), nature (3), vehicles (4),
-electronics (3), decor (3), kitchen (3), architecture (3), urban (3),
-tools (3), sports (2) and sci-fi (3).
-
-Review [the full bilingual design inventory](docs/40-assets-v04.md) and the
-machine-readable [collection specification](catalog/collections/v04.json).
-
-## Capabilities
-
-- **485 original procedural models across 13 categories:** 435 historical assets plus 50 new V1.2 scene models, each with editable native Three.js source.
-- **Web Gallery:** pre-rendered 3D WebP/AVIF cards, bilingual category search,
-  model inspector and optional cursor-paginated search API.
-- **3D Inspector:** drag to rotate, scroll to zoom, reset, copy deep link.
-- **3D printing (experimental):** Browser STL draft and CLI-audited STL/3MF candidate exports.
-- **Portable output:** copy self-contained Three.js source or export GLB; build
-  pipeline publishes Meshopt compressed GLB LOD0/1/2 variants.
-- **GLB batch ingestion:** Khronos specification validation, budgets,
-  license/source evidence, content hashes, dry run and explicit publishing.
-- **P2 object storage:** content-addressed local/S3/MinIO adapters, signed
-  downloads and paginated SQLite search API (optional separate server).
-- **SQLite catalog:** normalized categories, tags, files, provenance, relations
-  and incremental-search FTS5 index.
-- **MCP:** search/get/source/import tools for an AI game-building assistant,
-  served from a local read-only SQLite connection.
-- **Skills:** mirrored for Codex, Pi and Claude.
-
-> **Status:** v1.2, 485 editable original generators. CI generates real
-> WebP/AVIF thumbnails and three optimized GLB LOD variants per generator.
-> S3/MinIO implementation is configurable but requires your credentials and
-> external deployment; remote MCP hosting and real 50K-asset load testing
-> are not claimed. Humanoid prototypes remain unrigged.
-
-## Local run
-
-Requires Node.js 20.19+ or 22.12+ for Vite 7 and Python 3.11+.
-
-```bash
+~~~bash
 git clone https://github.com/1998x-stack/3D-worlds.git
 cd 3D-worlds
 npm install
 npm run dev
-```
+~~~
 
-Open the local address printed by Vite. Use the UI to inspect/export assets.
+The Vite server prints the local gallery URL. To regenerate full previews and raw source GLBs (GPU-backed Chromium required):
 
-### Build SQLite
+~~~bash
+npx playwright install --with-deps chromium
+npm run generate:assets
+npm run verify:assets
+npm run build
+~~~
 
-```bash
+Generated previews, LOD binaries and SQLite files are build outputs, not tracked source artifacts.
+
+## From Three.js to 3D printing
+
+The [online Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow) offers a conservative build-volume estimate for a selected printer preset and a **draft** binary STL. The browser does not run Python, inspect true wall thickness, generate supports or approve manufacturing.
+
+For geometry-audited **candidate** STL/3MF output:
+
+~~~bash
+python3 -m pip install -r requirements-print.txt
+
+# Export the original GLB for one model, never a simplified game LOD.
+node scripts/render_assets.mjs --id furniture.chair.linen-001
+
+# P0: standard assembly, longest printed dimension 120 mm.
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220
+
+# P1: preserve a multi-object 3MF while also exporting separate per-part STLs.
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220 --mode separated
+
+# P2: specify material and record a desired clearance for manual engineering review.
+python3 scripts/export_print.py \
+  --asset-id furniture.chair.linen-001 \
+  --longest-mm 120 --profile fdm-220 \
+  --material PETG --clearance-mm 0.25
+~~~
+
+**Important:** `--clearance-mm` records a design requirement; it **does not modify** CAD geometry or guarantee the actual clearance. Successful candidates are written under `.cache/print/` as STL, 3MF (explicit millimeter units), and a JSON source/geometry report. Rejected geometry produces a blocked JSON report without usable new STL/3MF output.
+
+### Catalog-wide audit
+
+~~~bash
+# Validate all category mappings; every asset remains "not_audited".
+python3 scripts/audit_print_catalog.py --metadata-only
+
+# Audit at most ten local original source GLBs; missing sources stay "missing_source".
+python3 scripts/audit_print_catalog.py --limit 10 --longest-mm 120
+
+# Fail the script when missing, blocked or errored sources are detected.
+python3 scripts/audit_print_catalog.py --category furniture --strict
+~~~
+
+The JSON summary distinguishes `not_audited`, `missing_source`, `blocked`, `audit_error` and `geometry_pass_manual_review_required`. None means slicer-reviewed or physically printed.
+
+## Manufacturing readiness tracks
+
+| Priority | Asset groups | Implemented automation | Mandatory human review |
+|---|---|---|---|
+| **P0 · Geometry** | Decor, miniature furniture, simple accessories | Meter→mm, Y-up→Z-up, manifold/winding/volume gates, nominal bed-envelope check | Real thickness, stable build-plate contact, slicer layers |
+| **P1 · Assembly** | Characters, nature, sci-fi, vehicles, architecture, urban models | Separate-part STL, 3MF build items, optional Boolean union, overlap/down-facing indicators | Supports, physical connections, actual part separation and fit |
+| **P2 · Functional** | Electronics housings, tools, structural equipment | Generic printer/material presets, recorded desired CAD clearance, unresolved checks | Precise holes, native CAD constraints, material shrinkage, stress and fatigue |
+
+**No** automatic G-code, exact thin-wall analysis, manufacturability guarantee, slicer review, physical printing certificate, or STEP reconstruction is included. STL has no trustworthy units; use millimeters in the slicer.
+
+- [Print pipeline, API and exact CLI behavior](docs/print-pipeline.md)
+- [P0/P1/P2 engineering acceptance checklist](docs/print-engineering.md)
+- [Machine-readable workflow policy](catalog/print_policy.json)
+- [3MF Consortium's Core specification](https://3mf.io/spec/)
+
+## Architecture
+
+~~~mermaid
+flowchart LR
+    A["Three.js generators<br/>catalog/models.json"] --> B["Gallery on Pages"]
+    A --> C["Original GLB"]
+    C --> D["Meshopt LOD0/1/2<br/>for realtime 3D"]
+    C --> E["Offline print audit<br/>Trimesh + profiles"]
+    E --> F{"Core mesh checks pass?"}
+    F -->|yes| G["STL / 3MF candidates<br/>manual slicer review"]
+    F -->|no| H["Blocked report"]
+    A --> I["SQLite + MCP + Search API"]
+~~~
+
+| Directory | Responsibility |
+|---|---|
+| `catalog/` · `schemas/` | Canonical manifests, categories and validation schemas |
+| `src/models/` · `src/` | Source-editable generators and gallery/print UI |
+| `scripts/` · `tests/` | Rendering, verification, printing and regression tests |
+| `services/` · `db/` | MCP, search, storage and SQLite |
+| `docs/` | Architecture, QA runbooks and [historic batch notes](docs/release-history.md) |
+| `.codex/` · `.pi/` · `.claude/` | Mirrored portable model-building skills |
+
+## Verify the repository
+
+~~~bash
 python3 scripts/catalog.py validate
 python3 scripts/catalog.py build
-python3 scripts/catalog.py stats
+npm run test:print
 python3 -m unittest discover -s tests -v
-npm install && node scripts/validate_models.mjs
-```
+node scripts/validate_models.mjs
+npm run generate:assets && npm run verify:assets
+npm run build && npm run test:gallery
+~~~
 
-Database is generated as `data/catalog.sqlite` and ignored by Git. CI also
-publishes the compiled SQLite file as a 30-day downloadable Actions artifact
-(`3d-worlds-catalog-sqlite`). Metadata
-source of truth is `catalog/models.json`. Rebuild after changing the manifest.
+Tests validate catalog integrity, source-backed generators, preview/LOD structure, browser STL draft dimensions, basic 3MF interoperability, and conservative readiness reports. **Automated tests do not replace test printing.**
 
-### Start MCP server
+### Extend the library
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-mcp.txt
-python services/mcp_server.py
-```
+~~~bash
+python3 scripts/new_model.py \
+  --slug side-table --category furniture \
+  --title "Side Table" --title-zh "边桌" \
+  --dimensions 0.8 0.6 0.8
+# Edit the generated src/models/side_table.js.
+python3 scripts/catalog.py validate
+node scripts/validate_models.mjs
+~~~
 
-Configure a stdio MCP client with this shape (replace working directory and
-interpreter with absolute paths in the client configuration):
+Each asset needs immutable IDs, meaningful editable source, license/provenance evidence and dimensions in **meters, Y-up**. See [Contributing](CONTRIBUTING.md), [Agent instructions](AGENTS.md), [Model Builder Skill](.codex/skills/threejs-model-builder/SKILL.md) and [release history](docs/release-history.md).
 
-```json
-{
-  "mcpServers": {
-    "3d-worlds": {
-      "command": "/ABS/PATH/3D-worlds/.venv/bin/python",
-      "args": ["/ABS/PATH/3D-worlds/services/mcp_server.py"],
-      "env": {"THREED_WORLDS_HOME": "/ABS/PATH/3D-worlds"}
-    }
-  }
-}
-```
+## Deploy and integrate
 
-MCP actions: `search_models(query, category, limit, offset)`,
-`get_model(asset_id)`, `list_categories()`,
-`get_threejs_source(asset_id)`, `get_import_recipe(asset_id, target)`,
-`get_asset_download(asset_id)` for an already published binary.
-Resource `3dworlds://asset/{asset_id}`; prompt `place_asset_in_game`.
+[GitHub Actions](.github/workflows/pages.yml) builds verified static Pages output from the default branch. External S3/MinIO and search/MCP services need separate hosting and credentials; they are **not** provided by GitHub Pages. Read [MCP contract](docs/mcp-contract.md), [ingestion and provenance](docs/ingestion-architecture.md), and [deployment runbook](docs/p0-p1-p2-delivery.md). Never commit credentials or bypass asset licensing.
 
-Example agent workflow: `search_models("chair")` → `get_model(id)` →
-`get_threejs_source(id)` → paste the complete module into user's game,
-`scene.add(createChair())`. The MCP server returns code; **it does not
-automatically edit the caller's project**.
+## Project maturity & limitations
 
-## Create a model
+| Verified automatically | Not verified automatically |
+|---|---|
+| Catalog & recipe integrity, browser inspector and binary STL dimensions | Successful printer operation, build adhesion, safe loads |
+| Trimesh watertightness, orientation and positive volume | Exact wall-thickness maps, supports, functional stress |
+| 3MF ZIP structure, millimeter units and Trimesh readback fixtures | Real-world printer/slicer-specific 3MF compatibility |
+| Source SHA-256 and explicit `not_checked` indicators | CAD hole tolerances, material shrinkage and dimensional accuracy |
 
-```bash
-python3 scripts/new_model.py --slug side-table --category furniture \
-  --title "Side Table" --title-zh "边桌" --dimensions 0.8 0.6 0.8
-# Edit generated src/models/side_table.js
-python3 scripts/catalog.py build
-npm run build
-```
+## Community, credits, license
 
-The script creates the generator and adds a catalog record; the Gallery's
-Vite model registry auto-discovers it. Follow the [Skill](.codex/skills/threejs-model-builder/SKILL.md)
-for quality and provenance checks.
+For bugs or improvements, see [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). Useful reports include an asset ID, exact command, affected printer profile, saved JSON output, expected behavior and reproduction steps.
 
-## Batch import verified GLB files
+Built with [Three.js](https://threejs.org/), [glTF Transform](https://gltf-transform.dev/), [Meshoptimizer](https://github.com/zeux/meshoptimizer), [Trimesh](https://trimesh.org/) and [Playwright](https://playwright.dev/). Documentation layout draws on the clear onboarding and capability boundaries of [FreeCAD](https://github.com/FreeCAD/FreeCAD), [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer), [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) and GitHub's repository guidance; 3D Worlds is an independent project.
 
-The batch importer operates on local files under `ingest/staging/` and is
-**dry-run only by default**. Every asset must provide an author, license,
-category, dimensions and source evidence for third-party work. The tool
-runs structural checks plus the Khronos glTF Validator; only self-contained
-GLB 2.0 files are accepted.
-
-```bash
-# Copy a legally sourced GLB into ingest/staging/
-cp /PATH/TO/MODEL.glb ingest/staging/example.glb
-cp ingest/batch.example.json ingest/my-batch.json
-# Edit the batch fields, especially file, license evidence and dimensions
-node scripts/ingest_glb.mjs --batch ingest/my-batch.json
-# Only after inspecting the quality report:
-node scripts/ingest_glb.mjs --batch ingest/my-batch.json --apply
-python3 scripts/catalog.py build
-npm run build
-```
-
-See [GLB ingestion architecture](docs/ingestion-architecture.md),
-[Ten new asset briefs](docs/asset-designs-v02.md) and
-[glTF Validator](https://github.com/KhronosGroup/glTF-Validator).
-
-## P0/P1/P2 — production pipeline
-
-```bash
-npm install
-npx playwright install --with-deps chromium
-npm run generate:assets    # WebP/AVIF + raw GLB + Meshopt LOD0/1/2
-npm run verify:assets      # image formats, SHA-256 and decodable GLBs
-npm run build
-npm run test:gallery       # real Chromium Pages smoke
-python3 scripts/catalog.py build
-python3 services/search_api.py  # P2 separate local query server
-```
-
-See [the P0/P1/P2 runbook](docs/p0-p1-p2-delivery.md) for object storage,
-import and S3/MinIO configurations. Generated binaries and thumbnails are
-build artifacts, not source files committed to Git.
-
-## Publish to GitHub Pages
-
-Commit to `main`; workflow `.github/workflows/pages.yml` validates catalog,
-runs tests, builds Vite and deploys `dist/`. In GitHub repository
-**Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
-The Vite `base` is `/3D-worlds/` for a project Pages site. If the URL is
-not yet active, check Actions and Pages settings before treating it as live.
-
-## Project tree
-
-```text
-3D-worlds/
-├── .github/workflows/pages.yml
-├── .codex/skills/threejs-model-builder/SKILL.md
-├── .pi/skills/threejs-model-builder/SKILL.md
-├── .claude/skills/threejs-model-builder/SKILL.md
-├── catalog/{models,categories}.json # asset and category source of truth
-├── db/schema.sql                # SQLite relations, triggers and FTS5
-├── data/catalog.sqlite          # generated locally, ignored by git
-├── docs/{architecture,threejs-research,ui-design}.md
-├── scripts/{catalog,new_model}.py
-├── scripts/{audit_glb,ingest_glb,test_ingest}.mjs
-├── ingest/{batch.example.json,staging/}
-├── public/assets/               # imported GLBs, content-addressed
-├── services/mcp_server.py
-├── src/models/*.js              # 15 original parametric assets
-├── src/{main,scene,styles}.*
-├── tests/test_catalog.py
-├── package.json / vite.config.js
-└── index.html
-```
-
-## Contribution policy
-
-Each model requires dimensions, ID/slug, description, tags, license and author.
-Never upload unverified licensed third-party models. Every object must
-stand on the y=0 floor plane at meaningful meter scale. More details in
-[AGENTS.md](AGENTS.md).
-
-## License
-
-MIT for source code and original procedural assets in this repository.
-External models contributed later may have different SPDX identifiers;
-always inspect each asset's metadata before reuse.
+The project's original code is distributed under [MIT](LICENSE); third-party imported meshes require **per-asset** redistribution permission. The repository license does not override external authors' rights.

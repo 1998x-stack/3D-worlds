@@ -24,6 +24,18 @@ try{
  await page.locator('.detail-modal').waitFor({state:'visible'});
  const canvas=page.locator('#detail-canvas');
  if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('Inspector WebGL canvas missing');
+ // P0/P1/P2 printing panel must make audit status and printer fit explicit.
+ const printPlan = page.locator('#print-plan-summary');
+ const firstPlan = await printPlan.innerText();
+ if(!firstPlan.includes('处理路线 P0') || !firstPlan.includes('未审核')) {
+   throw Error('Print Workbench must disclose category workflow and unverified status: '+firstPlan);
+ }
+ await page.locator('#print-printer').selectOption('resin-192');
+ await page.locator('#print-size-mm').fill('1000');
+ if(!(await printPlan.innerText()).includes('尺寸预计超出台面'))throw Error('Oversized print should be warned');
+ await page.locator('#print-size-mm').fill('80');
+ if(!(await printPlan.innerText()).includes('包围盒预计可放入'))throw Error('Print size planner not refreshed');
+ if(!await page.locator('#copy-print-command').isVisible())throw Error('Local CLI guidance missing');
  // The STL draft action must genuinely produce a binary STL scaled in mm.
  await page.locator('#print-size-mm').fill('80');
  const draftDownload = page.waitForEvent('download',{timeout:30000});

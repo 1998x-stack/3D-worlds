@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "disclaimer_zh": "P0/P1/P2 是建模与审核工作优先级，不代表模型已通过打印验证。所有模型默认未审核。",
+  "categories": {
+    "decor": {
+      "priority": "P0",
+      "goal_zh": "摆件与装饰绿植",
+      "focus_zh": [
+        "封闭网格与壳体",
+        "可落地的平整底面",
+        "缩小后叶片/枝干厚度"
+      ]
+    },
+    "furniture": {
+      "priority": "P0",
+      "goal_zh": "家具缩比模型",
+      "focus_zh": [
+        "缩尺后最小特征",
+        "底面稳定性",
+        "零件是否连接"
+      ]
+    },
+    "kitchen": {
+      "priority": "P0",
+      "goal_zh": "简单厨房道具",
+      "focus_zh": [
+        "曲面封闭",
+        "薄边缘",
+        "底面接触"
+      ]
+    },
+    "bathroom": {
+      "priority": "P0",
+      "goal_zh": "卫浴缩比摆件",
+      "focus_zh": [
+        "封闭壳体",
+        "排水开口和内部空腔",
+        "尺寸缩放"
+      ]
+    },
+    "characters": {
+      "priority": "P1",
+      "goal_zh": "人物手办",
+      "focus_zh": [
+        "细小四肢及支撑",
+        "倒悬区域",
+        "分件及涂装"
+      ]
+    },
+    "nature": {
+      "priority": "P1",
+      "goal_zh": "自然景观",
+      "focus_zh": [
+        "树枝与细长特征",
+        "孤立组件",
+        "支撑与中空"
+      ]
+    },
+    "scifi": {
+      "priority": "P1",
+      "goal_zh": "科幻模型",
+      "focus_zh": [
+        "悬空细节",
+        "支撑评估",
+        "拆件和装配"
+      ]
+    },
+    "vehicles": {
+      "priority": "P1",
+      "goal_zh": "载具缩比模型",
+      "focus_zh": [
+        "分件输出",
+        "轮组连接",
+        "装配余量"
+      ]
+    },
+    "architecture": {
+      "priority": "P1",
+      "goal_zh": "建筑构件",
+      "focus_zh": [
+        "模块拆分",
+        "连接节点",
+        "打印方向"
+      ]
+    },
+    "urban": {
+      "priority": "P1",
+      "goal_zh": "城市设施",
+      "focus_zh": [
+        "拆件和排版",
+        "桥接和细杆",
+        "装配公差"
+      ]
+    },
+    "electronics": {
+      "priority": "P2",
+      "goal_zh": "电子外壳",
+      "focus_zh": [
+        "参数化孔位",
+        "壁厚实测",
+        "PCB/紧固件公差"
+      ]
+    },
+    "tools": {
+      "priority": "P2",
+      "goal_zh": "功能性工具",
+      "focus_zh": [
+        "受力方向",
+        "材料与结构强度",
+        "孔槽实测"
+      ]
+    },
+    "sports": {
+      "priority": "P2",
+      "goal_zh": "运动器具",
+      "focus_zh": [
+        "材料疲劳",
+        "使用载荷",
+        "连接与公差"
+      ]
+    },
+    "print-commerce": {
+      "priority": "P0",
+      "goal_zh": "海外原创3D打印商品候选（按系列细分审核）",
+      "focus_zh": [
+        "CAD源文件尺寸与单元一致性",
+        "最小壁厚与流形性及可落地底面",
+        "有支撑需求及强度/热安全测试",
+        "商用原创性与目标市场合规"
+      ]
+    }
+  },
+  "printers": {
+    "fdm-220": {
+      "label_zh": "FDM 通用 220 × 220 × 250 mm",
+      "process": "FDM",
+      "build_volume_mm": [
+        220,
+        220,
+        250
+      ],
+      "nozzle_mm": 0.4,
+      "feature_hint_mm": 0.8,
+      "materials": [
+        "PLA",
+        "PETG"
+      ]
+    },
+    "fdm-300": {
+      "label_zh": "FDM 大平台 300 × 300 × 300 mm",
+      "process": "FDM",
+      "build_volume_mm": [
+        300,
+        300,
+        300
+      ],
+      "nozzle_mm": 0.4,
+      "feature_hint_mm": 0.8,
+      "materials": [
+        "PLA",
+        "PETG"
+      ]
+    },
+    "resin-192": {
+      "label_zh": "树脂光固化参考 192 × 120 × 200 mm",
+      "process": "MSLA",
+      "build_volume_mm": [
+        192,
+        120,
+        200
+      ],
+      "nozzle_mm": null,
+      "feature_hint_mm": null,
+      "materials": [
+        "resin"
+      ]
+    }
+  }
+}
