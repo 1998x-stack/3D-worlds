@@ -7321,6 +7321,276 @@
       "collection": "v0.8",
       "preview_path": "public/thumbs/modular-factory-sawtooth-roof.webp",
       "accent": "#c9c9c1"
+    },
+    {
+      "id": "characters.museum-curator-mannequin.001",
+      "slug": "museum-curator-mannequin",
+      "title": "Museum Curator Mannequin",
+      "title_zh": "博物馆策展人原型",
+      "summary": "Unrigged museum curator in blazer, badge, tablet and folded exhibition pamphlet",
+      "category": "characters",
+      "tags": [
+        "curator",
+        "museum",
+        "character"
+      ],
+      "dimensions_m": [
+        0.96,
+        1.91,
+        0.72
+      ],
+      "generator": "createMuseumCuratorMannequin",
+      "source_path": "src/models/museum_curator_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/museum-curator-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "furniture.museum-display-plinth.001",
+      "slug": "museum-display-plinth",
+      "title": "Museum Display Plinth",
+      "title_zh": "博物馆展陈基座",
+      "summary": "Glass-topped museum showcase with artifact, plinth and information plate",
+      "category": "furniture",
+      "tags": [
+        "museum",
+        "artifact",
+        "display"
+      ],
+      "dimensions_m": [
+        0.78,
+        1.68,
+        0.72
+      ],
+      "generator": "createMuseumDisplayPlinth",
+      "source_path": "src/models/museum_display_plinth.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/museum-display-plinth.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "decor.museum-fossil-display.001",
+      "slug": "museum-fossil-display",
+      "title": "Museum Fossil Display",
+      "title_zh": "博物馆史前化石展台",
+      "summary": "Museum mounted fossil specimen in protective case with ribcage study and labels",
+      "category": "decor",
+      "tags": [
+        "fossil",
+        "museum",
+        "specimen"
+      ],
+      "dimensions_m": [
+        1.77,
+        1.74,
+        0.91
+      ],
+      "generator": "createMuseumFossilDisplay",
+      "source_path": "src/models/museum_fossil_display.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/museum-fossil-display.webp",
+      "accent": "#d7c1b3"
+    },
+    {
+      "id": "scifi.orbital-navigation-beacon.001",
+      "slug": "orbital-navigation-beacon",
+      "title": "Orbital Navigation Beacon",
+      "title_zh": "轨道导航信标",
+      "summary": "Orbital route guidance beacon with toroidal antenna, luminous fins and stabilizer thrusters",
+      "category": "scifi",
+      "tags": [
+        "orbital",
+        "beacon",
+        "navigation"
+      ],
+      "dimensions_m": [
+        1.69,
+        3.31,
+        1.61
+      ],
+      "generator": "createOrbitalNavigationBeacon",
+      "source_path": "src/models/orbital_navigation_beacon.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/orbital-navigation-beacon.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "urban.pedestrian-cycle-lane-divider.001",
+      "slug": "pedestrian-cycle-lane-divider",
+      "title": "Pedestrian Cycle Lane Divider",
+      "title_zh": "人行与自行车道分隔设施",
+      "summary": "Modular raised cycle lane safety divider with reflective posts and arrows",
+      "category": "urban",
+      "tags": [
+        "cycle",
+        "divider",
+        "street"
+      ],
+      "dimensions_m": [
+        2.69,
+        0.94,
+        0.67
+      ],
+      "generator": "createPedestrianCycleLaneDivider",
+      "source_path": "src/models/pedestrian_cycle_lane_divider.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/pedestrian-cycle-lane-divider.webp",
+      "accent": "#bdcdd0"
+    },
+    {
+      "id": "architecture.pedestrian-steel-footbridge.001",
+      "slug": "pedestrian-steel-footbridge",
+      "title": "Pedestrian Steel Footbridge",
+      "title_zh": "钢结构行人天桥模块",
+      "summary": "Steel footbridge segment with open grating, side trusses and guard rails",
+      "category": "architecture",
+      "tags": [
+        "footbridge",
+        "walkway",
+        "steel"
+      ],
+      "dimensions_m": [
+        3.78,
+        1.86,
+        1.55
+      ],
+      "generator": "createPedestrianSteelFootbridge",
+      "source_path": "src/models/pedestrian_steel_footbridge.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/pedestrian-steel-footbridge.webp",
+      "accent": "#c9c9c1"
+    },
+    {
+      "id": "scifi.planetary-weather-sensor-array.001",
+      "slug": "planetary-weather-sensor-array",
+      "title": "Planetary Weather Sensor Array",
+      "title_zh": "行星气象探测阵列",
+      "summary": "Futuristic planetary science meteorological mast with solar wings, radar pods and ground sensors",
+      "category": "scifi",
+      "tags": [
+        "planetary",
+        "weather",
+        "sensor"
+      ],
+      "dimensions_m": [
+        2.23,
+        2.81,
+        2.14
+      ],
+      "generator": "createPlanetaryWeatherSensorArray",
+      "source_path": "src/models/planetary_weather_sensor_array.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/planetary-weather-sensor-array.webp",
+      "accent": "#a8cad6"
+    },
+    {
+      "id": "electronics.portable-medical-ultrasound.001",
+      "slug": "portable-medical-ultrasound",
+      "title": "Portable Medical Ultrasound",
+      "title_zh": "便携医学超声仪",
+      "summary": "Portable clinical ultrasound diagnostic console and sensor probe",
+      "category": "electronics",
+      "tags": [
+        "ultrasound",
+        "medical",
+        "diagnostic"
+      ],
+      "dimensions_m": [
+        0.54,
+        0.65,
+        0.46
+      ],
+      "generator": "createPortableMedicalUltrasound",
+      "source_path": "src/models/portable_medical_ultrasound.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/portable-medical-ultrasound.webp",
+      "accent": "#aec3cb"
+    },
+    {
+      "id": "tools.precision-bench-drill-press.001",
+      "slug": "precision-bench-drill-press",
+      "title": "Precision Bench Drill Press",
+      "title_zh": "精密台式钻床",
+      "summary": "Bench drill press with vertical column, sliding worktable, drill bit and protective motor housing",
+      "category": "tools",
+      "tags": [
+        "drill",
+        "press",
+        "precision"
+      ],
+      "dimensions_m": [
+        0.71,
+        1.25,
+        0.77
+      ],
+      "generator": "createPrecisionBenchDrillPress",
+      "source_path": "src/models/precision_bench_drill_press.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/precision-bench-drill-press.webp",
+      "accent": "#c7bdad"
+    },
+    {
+      "id": "sports.racing-single-kayak.001",
+      "slug": "racing-single-kayak",
+      "title": "Racing Single Kayak",
+      "title_zh": "竞速单人皮划艇",
+      "summary": "Competition kayak with tapered hull, seat, footrest, paddle and spray deck",
+      "category": "sports",
+      "tags": [
+        "kayak",
+        "racing",
+        "water"
+      ],
+      "dimensions_m": [
+        0.82,
+        0.52,
+        3.91
+      ],
+      "generator": "createRacingSingleKayak",
+      "source_path": "src/models/racing_single_kayak.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.8",
+      "preview_path": "public/thumbs/racing-single-kayak.webp",
+      "accent": "#b6c4c7"
     }
   ]
 }

@@ -5,21 +5,21 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 30,
+  "asset_count": 40,
   "category_count": 13,
   "category_counts": {
-    "architecture": 1,
+    "architecture": 2,
     "bathroom": 3,
-    "characters": 1,
-    "decor": 3,
-    "electronics": 3,
-    "furniture": 2,
+    "characters": 2,
+    "decor": 4,
+    "electronics": 4,
+    "furniture": 3,
     "kitchen": 2,
     "nature": 2,
-    "scifi": 1,
-    "sports": 2,
-    "tools": 3,
-    "urban": 3,
+    "scifi": 3,
+    "sports": 3,
+    "tools": 4,
+    "urban": 4,
     "vehicles": 4
   },
   "assets": [
@@ -532,6 +532,176 @@
       "design_focus": "Modular industrial roof structure with repeated sawtooth skylights and steel trusses",
       "usage": "factory",
       "part_count": 20
+    },
+    {
+      "id": "characters.museum-curator-mannequin.001",
+      "slug": "museum-curator-mannequin",
+      "title": "Museum Curator Mannequin",
+      "title_zh": "博物馆策展人原型",
+      "category": "characters",
+      "source_path": "src/models/museum_curator_mannequin.js",
+      "generator": "createMuseumCuratorMannequin",
+      "dimensions_m": [
+        0.96,
+        1.91,
+        0.72
+      ],
+      "design_focus": "Unrigged museum curator in blazer, badge, tablet and folded exhibition pamphlet",
+      "usage": "curator",
+      "part_count": 24
+    },
+    {
+      "id": "furniture.museum-display-plinth.001",
+      "slug": "museum-display-plinth",
+      "title": "Museum Display Plinth",
+      "title_zh": "博物馆展陈基座",
+      "category": "furniture",
+      "source_path": "src/models/museum_display_plinth.js",
+      "generator": "createMuseumDisplayPlinth",
+      "dimensions_m": [
+        0.78,
+        1.68,
+        0.72
+      ],
+      "design_focus": "Glass-topped museum showcase with artifact, plinth and information plate",
+      "usage": "museum",
+      "part_count": 18
+    },
+    {
+      "id": "decor.museum-fossil-display.001",
+      "slug": "museum-fossil-display",
+      "title": "Museum Fossil Display",
+      "title_zh": "博物馆史前化石展台",
+      "category": "decor",
+      "source_path": "src/models/museum_fossil_display.js",
+      "generator": "createMuseumFossilDisplay",
+      "dimensions_m": [
+        1.77,
+        1.74,
+        0.91
+      ],
+      "design_focus": "Museum mounted fossil specimen in protective case with ribcage study and labels",
+      "usage": "fossil",
+      "part_count": 22
+    },
+    {
+      "id": "scifi.orbital-navigation-beacon.001",
+      "slug": "orbital-navigation-beacon",
+      "title": "Orbital Navigation Beacon",
+      "title_zh": "轨道导航信标",
+      "category": "scifi",
+      "source_path": "src/models/orbital_navigation_beacon.js",
+      "generator": "createOrbitalNavigationBeacon",
+      "dimensions_m": [
+        1.69,
+        3.31,
+        1.61
+      ],
+      "design_focus": "Orbital route guidance beacon with toroidal antenna, luminous fins and stabilizer thrusters",
+      "usage": "orbital",
+      "part_count": 26
+    },
+    {
+      "id": "urban.pedestrian-cycle-lane-divider.001",
+      "slug": "pedestrian-cycle-lane-divider",
+      "title": "Pedestrian Cycle Lane Divider",
+      "title_zh": "人行与自行车道分隔设施",
+      "category": "urban",
+      "source_path": "src/models/pedestrian_cycle_lane_divider.js",
+      "generator": "createPedestrianCycleLaneDivider",
+      "dimensions_m": [
+        2.69,
+        0.94,
+        0.67
+      ],
+      "design_focus": "Modular raised cycle lane safety divider with reflective posts and arrows",
+      "usage": "cycle",
+      "part_count": 22
+    },
+    {
+      "id": "architecture.pedestrian-steel-footbridge.001",
+      "slug": "pedestrian-steel-footbridge",
+      "title": "Pedestrian Steel Footbridge",
+      "title_zh": "钢结构行人天桥模块",
+      "category": "architecture",
+      "source_path": "src/models/pedestrian_steel_footbridge.js",
+      "generator": "createPedestrianSteelFootbridge",
+      "dimensions_m": [
+        3.78,
+        1.86,
+        1.55
+      ],
+      "design_focus": "Steel footbridge segment with open grating, side trusses and guard rails",
+      "usage": "footbridge",
+      "part_count": 35
+    },
+    {
+      "id": "scifi.planetary-weather-sensor-array.001",
+      "slug": "planetary-weather-sensor-array",
+      "title": "Planetary Weather Sensor Array",
+      "title_zh": "行星气象探测阵列",
+      "category": "scifi",
+      "source_path": "src/models/planetary_weather_sensor_array.js",
+      "generator": "createPlanetaryWeatherSensorArray",
+      "dimensions_m": [
+        2.23,
+        2.81,
+        2.14
+      ],
+      "design_focus": "Futuristic planetary science meteorological mast with solar wings, radar pods and ground sensors",
+      "usage": "planetary",
+      "part_count": 21
+    },
+    {
+      "id": "electronics.portable-medical-ultrasound.001",
+      "slug": "portable-medical-ultrasound",
+      "title": "Portable Medical Ultrasound",
+      "title_zh": "便携医学超声仪",
+      "category": "electronics",
+      "source_path": "src/models/portable_medical_ultrasound.js",
+      "generator": "createPortableMedicalUltrasound",
+      "dimensions_m": [
+        0.54,
+        0.65,
+        0.46
+      ],
+      "design_focus": "Portable clinical ultrasound diagnostic console and sensor probe",
+      "usage": "ultrasound",
+      "part_count": 26
+    },
+    {
+      "id": "tools.precision-bench-drill-press.001",
+      "slug": "precision-bench-drill-press",
+      "title": "Precision Bench Drill Press",
+      "title_zh": "精密台式钻床",
+      "category": "tools",
+      "source_path": "src/models/precision_bench_drill_press.js",
+      "generator": "createPrecisionBenchDrillPress",
+      "dimensions_m": [
+        0.71,
+        1.25,
+        0.77
+      ],
+      "design_focus": "Bench drill press with vertical column, sliding worktable, drill bit and protective motor housing",
+      "usage": "drill",
+      "part_count": 14
+    },
+    {
+      "id": "sports.racing-single-kayak.001",
+      "slug": "racing-single-kayak",
+      "title": "Racing Single Kayak",
+      "title_zh": "竞速单人皮划艇",
+      "category": "sports",
+      "source_path": "src/models/racing_single_kayak.js",
+      "generator": "createRacingSingleKayak",
+      "dimensions_m": [
+        0.82,
+        0.52,
+        3.91
+      ],
+      "design_focus": "Competition kayak with tapered hull, seat, footrest, paddle and spray deck",
+      "usage": "kayak",
+      "part_count": 18
     }
   ]
 }
