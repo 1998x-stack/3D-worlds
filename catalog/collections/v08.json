@@ -5,19 +5,20 @@
   "license": "MIT",
   "units": "m",
   "up_axis": "Y",
-  "asset_count": 10,
-  "category_count": 10,
+  "asset_count": 20,
+  "category_count": 11,
   "category_counts": {
-    "bathroom": 1,
+    "bathroom": 3,
     "characters": 1,
-    "decor": 1,
+    "decor": 2,
     "electronics": 1,
-    "furniture": 1,
+    "furniture": 2,
     "kitchen": 1,
+    "nature": 1,
     "scifi": 1,
-    "sports": 1,
-    "urban": 1,
-    "vehicles": 1
+    "sports": 2,
+    "urban": 2,
+    "vehicles": 4
   },
   "assets": [
     {
@@ -189,6 +190,176 @@
       "design_focus": "Shared neighborhood planting station with tiered planters, watering tank and labels",
       "usage": "community",
       "part_count": 33
+    },
+    {
+      "id": "vehicles.commuter-tram-car.001",
+      "slug": "commuter-tram-car",
+      "title": "Commuter Tram Car",
+      "title_zh": "城市有轨电车",
+      "category": "vehicles",
+      "source_path": "src/models/commuter_tram_car.js",
+      "generator": "createCommuterTramCar",
+      "dimensions_m": [
+        2.58,
+        3.31,
+        6.41
+      ],
+      "design_focus": "Low-floor city tram with passenger glazing, wheel bogies and overhead pantograph",
+      "usage": "tram",
+      "part_count": 39
+    },
+    {
+      "id": "bathroom.dual-basin-vanity-console.001",
+      "slug": "dual-basin-vanity-console",
+      "title": "Dual Basin Vanity Console",
+      "title_zh": "双盆浴室洗漱台",
+      "category": "bathroom",
+      "source_path": "src/models/dual_basin_vanity_console.js",
+      "generator": "createDualBasinVanityConsole",
+      "dimensions_m": [
+        1.73,
+        1.22,
+        0.61
+      ],
+      "design_focus": "Double vanity unit with symmetric ceramic basins, faucets, mirrored splashback and cabinet",
+      "usage": "vanity",
+      "part_count": 21
+    },
+    {
+      "id": "vehicles.electric-delivery-moped.001",
+      "slug": "electric-delivery-moped",
+      "title": "Electric Delivery Moped",
+      "title_zh": "电动配送轻便摩托",
+      "category": "vehicles",
+      "source_path": "src/models/electric_delivery_moped.js",
+      "generator": "createElectricDeliveryMoped",
+      "dimensions_m": [
+        0.89,
+        1.5,
+        1.86
+      ],
+      "design_focus": "Electric food courier moped with cargo case, fork and steering grips",
+      "usage": "delivery",
+      "part_count": 10
+    },
+    {
+      "id": "urban.elevated-road-camera-gantry.001",
+      "slug": "elevated-road-camera-gantry",
+      "title": "Elevated Road Camera Gantry",
+      "title_zh": "道路监控龙门架",
+      "category": "urban",
+      "source_path": "src/models/elevated_road_camera_gantry.js",
+      "generator": "createElevatedRoadCameraGantry",
+      "dimensions_m": [
+        3.54,
+        3.18,
+        0.76
+      ],
+      "design_focus": "Traffic surveillance gantry with twin columns, horizontal span, camera sensors and solar panel",
+      "usage": "road",
+      "part_count": 22
+    },
+    {
+      "id": "vehicles.fire-department-ladder-truck.001",
+      "slug": "fire-department-ladder-truck",
+      "title": "Fire Department Ladder Truck",
+      "title_zh": "消防云梯救援车",
+      "category": "vehicles",
+      "source_path": "src/models/fire_department_ladder_truck.js",
+      "generator": "createFireDepartmentLadderTruck",
+      "dimensions_m": [
+        2.49,
+        3.24,
+        5.68
+      ],
+      "design_focus": "Red fire rescue truck with ladder sections, six wheels and equipment lockers",
+      "usage": "fire",
+      "part_count": 33
+    },
+    {
+      "id": "bathroom.freestanding-rainfall-shower-column.001",
+      "slug": "freestanding-rainfall-shower-column",
+      "title": "Freestanding Rainfall Shower Column",
+      "title_zh": "独立雨淋淋浴柱",
+      "category": "bathroom",
+      "source_path": "src/models/freestanding_rainfall_shower_column.js",
+      "generator": "createFreestandingRainfallShowerColumn",
+      "dimensions_m": [
+        0.82,
+        2.4,
+        0.76
+      ],
+      "design_focus": "Tall shower column with overhead shower disk, removable handset, thermostat and tray",
+      "usage": "shower",
+      "part_count": 25
+    },
+    {
+      "id": "nature.glacial-ice-cave.001",
+      "slug": "glacial-ice-cave",
+      "title": "Glacial Ice Cave",
+      "title_zh": "冰川蓝冰洞穴",
+      "category": "nature",
+      "source_path": "src/models/glacial_ice_cave.js",
+      "generator": "createGlacialIceCave",
+      "dimensions_m": [
+        2.95,
+        2.17,
+        2.68
+      ],
+      "design_focus": "Arched translucent-looking glacier cavern with icicles and frozen pool",
+      "usage": "glacier",
+      "part_count": 21
+    },
+    {
+      "id": "sports.gymnastics-balance-beam.001",
+      "slug": "gymnastics-balance-beam",
+      "title": "Gymnastics Balance Beam",
+      "title_zh": "竞技体操平衡木",
+      "category": "sports",
+      "source_path": "src/models/gymnastics_balance_beam.js",
+      "generator": "createGymnasticsBalanceBeam",
+      "dimensions_m": [
+        4.12,
+        1.29,
+        0.69
+      ],
+      "design_focus": "Gymnastics balance beam with padded top, steel supports and stabilizing pads",
+      "usage": "gymnastics",
+      "part_count": 16
+    },
+    {
+      "id": "decor.hanging-paper-lantern-cluster.001",
+      "slug": "hanging-paper-lantern-cluster",
+      "title": "Hanging Paper Lantern Cluster",
+      "title_zh": "中式纸灯笼悬挂组合",
+      "category": "decor",
+      "source_path": "src/models/hanging_paper_lantern_cluster.js",
+      "generator": "createHangingPaperLanternCluster",
+      "dimensions_m": [
+        1.64,
+        2.47,
+        1.31
+      ],
+      "design_focus": "Cluster of lanterns hanging from beam with tassels, ribs and warm shades",
+      "usage": "lantern",
+      "part_count": 28
+    },
+    {
+      "id": "furniture.hospital-adjustable-bed.001",
+      "slug": "hospital-adjustable-bed",
+      "title": "Hospital Adjustable Bed",
+      "title_zh": "医疗电动护理床",
+      "category": "furniture",
+      "source_path": "src/models/hospital_adjustable_bed.js",
+      "generator": "createHospitalAdjustableBed",
+      "dimensions_m": [
+        2.28,
+        1.62,
+        1.38
+      ],
+      "design_focus": "Hospital patient care bed with adjustable backrest, guard rails and lockable casters",
+      "usage": "hospital",
+      "part_count": 22
     }
   ]
 }
