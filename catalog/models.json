@@ -2419,6 +2419,342 @@
       "style": "Stylized",
       "preview_path": "public/thumbs/cargo-loading-mech.webp",
       "collection": "v0.4"
+    },
+    {
+      "id": "furniture.electric-standing-desk.001",
+      "slug": "electric-standing-desk",
+      "title": "Electric Standing Desk",
+      "title_zh": "电动升降办公桌",
+      "summary": "Dual motor lifting columns, oak worktop, crossbar and height controls.",
+      "category": "furniture",
+      "tags": [
+        "desk",
+        "office",
+        "adjustable",
+        "home"
+      ],
+      "dimensions_m": [
+        1.5,
+        1.22,
+        0.77
+      ],
+      "generator": "createElectricStandingDesk",
+      "source_path": "src/models/electric_standing_desk.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/electric-standing-desk.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "furniture.folding-camping-chair.001",
+      "slug": "folding-camping-chair",
+      "title": "Folding Camping Chair",
+      "title_zh": "折叠露营椅",
+      "summary": "Portable X-frame chair with contrasting fabric seat and arm slings.",
+      "category": "furniture",
+      "tags": [
+        "camping",
+        "chair",
+        "folding",
+        "outdoor"
+      ],
+      "dimensions_m": [
+        0.74,
+        0.99,
+        0.73
+      ],
+      "generator": "createFoldingCampingChair",
+      "source_path": "src/models/folding_camping_chair.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/folding-camping-chair.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "furniture.hallway-coat-tree.001",
+      "slug": "hallway-coat-tree",
+      "title": "Hallway Coat Tree",
+      "title_zh": "玄关立式衣帽架",
+      "summary": "Freestanding pole with tiered coat hooks, umbrella ring and round base.",
+      "category": "furniture",
+      "tags": [
+        "hanger",
+        "coat",
+        "entryway",
+        "storage"
+      ],
+      "dimensions_m": [
+        0.76,
+        1.91,
+        0.75
+      ],
+      "generator": "createHallwayCoatTree",
+      "source_path": "src/models/hallway_coat_tree.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/hallway-coat-tree.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "furniture.tufted-storage-ottoman.001",
+      "slug": "tufted-storage-ottoman",
+      "title": "Tufted Storage Ottoman",
+      "title_zh": "软包储物脚凳",
+      "summary": "Upholstered lift-top storage bench, quilted buttons and four wooden legs.",
+      "category": "furniture",
+      "tags": [
+        "ottoman",
+        "bench",
+        "upholstery",
+        "storage"
+      ],
+      "dimensions_m": [
+        1.14,
+        0.53,
+        0.49
+      ],
+      "generator": "createTuftedStorageOttoman",
+      "source_path": "src/models/tufted_storage_ottoman.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/tufted-storage-ottoman.webp",
+      "accent": "#c8b3a4"
+    },
+    {
+      "id": "bathroom.wall-soap-dispenser.001",
+      "slug": "wall-soap-dispenser",
+      "title": "Wall Soap Dispenser",
+      "title_zh": "壁挂皂液机",
+      "summary": "Wall-mounted refillable dispenser with pump head, translucent reservoir and drip tray.",
+      "category": "bathroom",
+      "tags": [
+        "soap",
+        "dispenser",
+        "wall",
+        "washroom"
+      ],
+      "dimensions_m": [
+        0.19,
+        0.31,
+        0.17
+      ],
+      "generator": "createWallSoapDispenser",
+      "source_path": "src/models/wall_soap_dispenser.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/wall-soap-dispenser.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "bathroom.woven-laundry-hamper.001",
+      "slug": "woven-laundry-hamper",
+      "title": "Woven Laundry Hamper",
+      "title_zh": "藤编洗衣篮",
+      "summary": "Cylindrical wicker hamper with repeated woven bands, soft lid and side grips.",
+      "category": "bathroom",
+      "tags": [
+        "laundry",
+        "basket",
+        "wicker",
+        "bathroom"
+      ],
+      "dimensions_m": [
+        0.49,
+        0.74,
+        0.49
+      ],
+      "generator": "createWovenLaundryHamper",
+      "source_path": "src/models/woven_laundry_hamper.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/woven-laundry-hamper.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "bathroom.double-towel-hook.001",
+      "slug": "double-towel-hook",
+      "title": "Double Towel Hook",
+      "title_zh": "双挂钩毛巾挂架",
+      "summary": "Porcelain wall plate, two metal prongs and hanging striped hand towels.",
+      "category": "bathroom",
+      "tags": [
+        "towel",
+        "hook",
+        "bathroom",
+        "wall"
+      ],
+      "dimensions_m": [
+        0.39,
+        0.26,
+        0.24
+      ],
+      "generator": "createDoubleTowelHook",
+      "source_path": "src/models/double_towel_hook.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/double-towel-hook.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "bathroom.compact-ceramic-bidet.001",
+      "slug": "compact-ceramic-bidet",
+      "title": "Compact Ceramic Bidet",
+      "title_zh": "独立陶瓷坐浴盆",
+      "summary": "Standalone compact bidet with ceramic rim, bowl, drain and metal faucet assembly.",
+      "category": "bathroom",
+      "tags": [
+        "bidet",
+        "ceramic",
+        "plumbing",
+        "bathroom"
+      ],
+      "dimensions_m": [
+        0.39,
+        0.42,
+        0.65
+      ],
+      "generator": "createCompactCeramicBidet",
+      "source_path": "src/models/compact_ceramic_bidet.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/compact-ceramic-bidet.webp",
+      "accent": "#bed7d4"
+    },
+    {
+      "id": "characters.firefighter-mannequin.001",
+      "slug": "firefighter-mannequin",
+      "title": "Firefighter Mannequin",
+      "title_zh": "消防员人物原型",
+      "summary": "Unrigged firefighter with protective helmet, reflective jacket, boots and oxygen tank.",
+      "category": "characters",
+      "tags": [
+        "firefighter",
+        "safety",
+        "uniform",
+        "character"
+      ],
+      "dimensions_m": [
+        0.95,
+        1.91,
+        0.65
+      ],
+      "generator": "createFirefighterMannequin",
+      "source_path": "src/models/firefighter_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/firefighter-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "characters.construction-worker-mannequin.001",
+      "slug": "construction-worker-mannequin",
+      "title": "Construction Worker Mannequin",
+      "title_zh": "建筑工人人物原型",
+      "summary": "Unrigged worker with hardhat, reflective vest, utility belt and protective boots.",
+      "category": "characters",
+      "tags": [
+        "worker",
+        "construction",
+        "helmet",
+        "character"
+      ],
+      "dimensions_m": [
+        0.92,
+        1.93,
+        0.64
+      ],
+      "generator": "createConstructionWorkerMannequin",
+      "source_path": "src/models/construction_worker_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/construction-worker-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "characters.beekeeper-mannequin.001",
+      "slug": "beekeeper-mannequin",
+      "title": "Beekeeper Mannequin",
+      "title_zh": "养蜂人防护服原型",
+      "summary": "Unrigged beekeeper in pale coveralls with broad mesh veil, gloves and boots.",
+      "category": "characters",
+      "tags": [
+        "beekeeper",
+        "protective",
+        "agriculture",
+        "character"
+      ],
+      "dimensions_m": [
+        0.97,
+        1.89,
+        0.73
+      ],
+      "generator": "createBeekeeperMannequin",
+      "source_path": "src/models/beekeeper_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/beekeeper-mannequin.webp",
+      "accent": "#c6bbab"
+    },
+    {
+      "id": "characters.chef-mannequin.001",
+      "slug": "chef-mannequin",
+      "title": "Chef Mannequin",
+      "title_zh": "厨师人物原型",
+      "summary": "Unrigged culinary character with tall toque, double-button jacket and apron.",
+      "category": "characters",
+      "tags": [
+        "chef",
+        "culinary",
+        "kitchen",
+        "character"
+      ],
+      "dimensions_m": [
+        0.96,
+        1.94,
+        0.65
+      ],
+      "generator": "createChefMannequin",
+      "source_path": "src/models/chef_mannequin.js",
+      "kind": "procedural",
+      "license": "MIT",
+      "author": "3D Worlds",
+      "style": "Stylized",
+      "collection": "v0.5",
+      "preview_path": "public/thumbs/chef-mannequin.webp",
+      "accent": "#c6bbab"
     }
   ]
 }

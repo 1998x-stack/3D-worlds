@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v0.5",
+  "title": "Fifty New World-Building Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 12,
+  "category_count": 3,
+  "category_counts": {
+    "bathroom": 4,
+    "characters": 4,
+    "furniture": 4
+  },
+  "assets": [
+    {
+      "id": "furniture.electric-standing-desk.001",
+      "slug": "electric-standing-desk",
+      "title": "Electric Standing Desk",
+      "title_zh": "电动升降办公桌",
+      "category": "furniture",
+      "source_path": "src/models/electric_standing_desk.js",
+      "generator": "createElectricStandingDesk",
+      "dimensions_m": [
+        1.5,
+        1.22,
+        0.77
+      ],
+      "design_focus": "Dual motor lifting columns, oak worktop, crossbar and height controls.",
+      "usage": "desk",
+      "part_count": 14
+    },
+    {
+      "id": "furniture.folding-camping-chair.001",
+      "slug": "folding-camping-chair",
+      "title": "Folding Camping Chair",
+      "title_zh": "折叠露营椅",
+      "category": "furniture",
+      "source_path": "src/models/folding_camping_chair.js",
+      "generator": "createFoldingCampingChair",
+      "dimensions_m": [
+        0.74,
+        0.99,
+        0.73
+      ],
+      "design_focus": "Portable X-frame chair with contrasting fabric seat and arm slings.",
+      "usage": "camping",
+      "part_count": 12
+    },
+    {
+      "id": "furniture.hallway-coat-tree.001",
+      "slug": "hallway-coat-tree",
+      "title": "Hallway Coat Tree",
+      "title_zh": "玄关立式衣帽架",
+      "category": "furniture",
+      "source_path": "src/models/hallway_coat_tree.js",
+      "generator": "createHallwayCoatTree",
+      "dimensions_m": [
+        0.76,
+        1.91,
+        0.75
+      ],
+      "design_focus": "Freestanding pole with tiered coat hooks, umbrella ring and round base.",
+      "usage": "hanger",
+      "part_count": 15
+    },
+    {
+      "id": "furniture.tufted-storage-ottoman.001",
+      "slug": "tufted-storage-ottoman",
+      "title": "Tufted Storage Ottoman",
+      "title_zh": "软包储物脚凳",
+      "category": "furniture",
+      "source_path": "src/models/tufted_storage_ottoman.js",
+      "generator": "createTuftedStorageOttoman",
+      "dimensions_m": [
+        1.14,
+        0.53,
+        0.49
+      ],
+      "design_focus": "Upholstered lift-top storage bench, quilted buttons and four wooden legs.",
+      "usage": "ottoman",
+      "part_count": 14
+    },
+    {
+      "id": "bathroom.wall-soap-dispenser.001",
+      "slug": "wall-soap-dispenser",
+      "title": "Wall Soap Dispenser",
+      "title_zh": "壁挂皂液机",
+      "category": "bathroom",
+      "source_path": "src/models/wall_soap_dispenser.js",
+      "generator": "createWallSoapDispenser",
+      "dimensions_m": [
+        0.19,
+        0.31,
+        0.17
+      ],
+      "design_focus": "Wall-mounted refillable dispenser with pump head, translucent reservoir and drip tray.",
+      "usage": "soap",
+      "part_count": 8
+    },
+    {
+      "id": "bathroom.woven-laundry-hamper.001",
+      "slug": "woven-laundry-hamper",
+      "title": "Woven Laundry Hamper",
+      "title_zh": "藤编洗衣篮",
+      "category": "bathroom",
+      "source_path": "src/models/woven_laundry_hamper.js",
+      "generator": "createWovenLaundryHamper",
+      "dimensions_m": [
+        0.49,
+        0.74,
+        0.49
+      ],
+      "design_focus": "Cylindrical wicker hamper with repeated woven bands, soft lid and side grips.",
+      "usage": "laundry",
+      "part_count": 20
+    },
+    {
+      "id": "bathroom.double-towel-hook.001",
+      "slug": "double-towel-hook",
+      "title": "Double Towel Hook",
+      "title_zh": "双挂钩毛巾挂架",
+      "category": "bathroom",
+      "source_path": "src/models/double_towel_hook.js",
+      "generator": "createDoubleTowelHook",
+      "dimensions_m": [
+        0.39,
+        0.26,
+        0.24
+      ],
+      "design_focus": "Porcelain wall plate, two metal prongs and hanging striped hand towels.",
+      "usage": "towel",
+      "part_count": 11
+    },
+    {
+      "id": "bathroom.compact-ceramic-bidet.001",
+      "slug": "compact-ceramic-bidet",
+      "title": "Compact Ceramic Bidet",
+      "title_zh": "独立陶瓷坐浴盆",
+      "category": "bathroom",
+      "source_path": "src/models/compact_ceramic_bidet.js",
+      "generator": "createCompactCeramicBidet",
+      "dimensions_m": [
+        0.39,
+        0.42,
+        0.65
+      ],
+      "design_focus": "Standalone compact bidet with ceramic rim, bowl, drain and metal faucet assembly.",
+      "usage": "bidet",
+      "part_count": 10
+    },
+    {
+      "id": "characters.firefighter-mannequin.001",
+      "slug": "firefighter-mannequin",
+      "title": "Firefighter Mannequin",
+      "title_zh": "消防员人物原型",
+      "category": "characters",
+      "source_path": "src/models/firefighter_mannequin.js",
+      "generator": "createFirefighterMannequin",
+      "dimensions_m": [
+        0.95,
+        1.91,
+        0.65
+      ],
+      "design_focus": "Unrigged firefighter with protective helmet, reflective jacket, boots and oxygen tank.",
+      "usage": "firefighter",
+      "part_count": 19
+    },
+    {
+      "id": "characters.construction-worker-mannequin.001",
+      "slug": "construction-worker-mannequin",
+      "title": "Construction Worker Mannequin",
+      "title_zh": "建筑工人人物原型",
+      "category": "characters",
+      "source_path": "src/models/construction_worker_mannequin.js",
+      "generator": "createConstructionWorkerMannequin",
+      "dimensions_m": [
+        0.92,
+        1.93,
+        0.64
+      ],
+      "design_focus": "Unrigged worker with hardhat, reflective vest, utility belt and protective boots.",
+      "usage": "worker",
+      "part_count": 17
+    },
+    {
+      "id": "characters.beekeeper-mannequin.001",
+      "slug": "beekeeper-mannequin",
+      "title": "Beekeeper Mannequin",
+      "title_zh": "养蜂人防护服原型",
+      "category": "characters",
+      "source_path": "src/models/beekeeper_mannequin.js",
+      "generator": "createBeekeeperMannequin",
+      "dimensions_m": [
+        0.97,
+        1.89,
+        0.73
+      ],
+      "design_focus": "Unrigged beekeeper in pale coveralls with broad mesh veil, gloves and boots.",
+      "usage": "beekeeper",
+      "part_count": 20
+    },
+    {
+      "id": "characters.chef-mannequin.001",
+      "slug": "chef-mannequin",
+      "title": "Chef Mannequin",
+      "title_zh": "厨师人物原型",
+      "category": "characters",
+      "source_path": "src/models/chef_mannequin.js",
+      "generator": "createChefMannequin",
+      "dimensions_m": [
+        0.96,
+        1.94,
+        0.65
+      ],
+      "design_focus": "Unrigged culinary character with tall toque, double-button jacket and apron.",
+      "usage": "chef",
+      "part_count": 20
+    }
+  ]
+}
