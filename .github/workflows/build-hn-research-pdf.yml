@@ -54,5 +54,18 @@ jobs:
             echo "PDF already up to date"
           else
             git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "docs: publish generated Codex CAD Hacker News research PDF"
-            git push
+            # A concurrent docs/README commit may move main while this job runs.
+            # Rebase the single generated-file commit instead of force-pushing.
+            pushed=false
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                pushed=true
+                break
+              fi
+              echo "Push conflicted with a newer commit; retrying ($attempt/3)"
+              sleep 2
+            done
+            test "$pushed" = true
           fi
