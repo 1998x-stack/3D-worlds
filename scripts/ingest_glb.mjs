@@ -12,7 +12,7 @@ import { dirname,basename,resolve,relative,sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { auditGlb } from './audit_glb.mjs';
 
-const ROOT=fileURLToPath(new URL('../',import.meta.url));
+const ROOT=resolve(fileURLToPath(new URL('../',import.meta.url)));
 const STAGING=resolve(ROOT,'ingest/staging');
 const MANIFEST=resolve(ROOT,'catalog/models.json');
 const CAT_FILE=resolve(ROOT,'catalog/categories.json');

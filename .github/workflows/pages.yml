@@ -41,6 +41,8 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Check model geometry and coordinates
         run: node scripts/validate_models.mjs
+      - name: Test GLB validator and batch ingest
+        run: node scripts/test_ingest.mjs
       - name: Build Vite static site
         run: npm run build
       - name: Validate MCP Python SDK v2 integration
