@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/desert_roadway_diorama.js",
   "generator": "createDesertRoadwayDiorama",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "scenery",
   "variant": 2,
   "cad_path": "printables/desert-roadway-diorama.scad",

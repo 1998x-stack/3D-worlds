@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/alpine_cabin_miniature.js",
   "generator": "createAlpineCabinMiniature",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "scenery",
   "variant": 3,
   "cad_path": "printables/alpine-cabin-miniature.scad",

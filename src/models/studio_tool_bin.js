@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/studio_tool_bin.js",
   "generator": "createStudioToolBin",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "organizer",
   "variant": 5,
   "cad_path": "printables/studio-tool-bin.scad",

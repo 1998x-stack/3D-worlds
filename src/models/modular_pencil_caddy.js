@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/modular_pencil_caddy.js",
   "generator": "createModularPencilCaddy",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "organizer",
   "variant": 1,
   "cad_path": "printables/modular-pencil-caddy.scad",

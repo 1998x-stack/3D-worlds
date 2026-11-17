@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/harbor_cargo_diorama.js",
   "generator": "createHarborCargoDiorama",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "scenery",
   "variant": 1,
   "cad_path": "printables/harbor-cargo-diorama.scad",

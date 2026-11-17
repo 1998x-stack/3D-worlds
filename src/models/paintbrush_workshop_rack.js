@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/paintbrush_workshop_rack.js",
   "generator": "createPaintbrushWorkshopRack",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "organizer",
   "variant": 3,
   "cad_path": "printables/paintbrush-workshop-rack.scad",

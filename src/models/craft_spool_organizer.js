@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/craft_spool_organizer.js",
   "generator": "createCraftSpoolOrganizer",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "organizer",
   "variant": 4,
   "cad_path": "printables/craft-spool-organizer.scad",

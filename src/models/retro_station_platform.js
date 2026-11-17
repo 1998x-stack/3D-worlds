@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/retro_station_platform.js",
   "generator": "createRetroStationPlatform",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "scenery",
   "variant": 5,
   "cad_path": "printables/retro-station-platform.scad",

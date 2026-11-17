@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/urban_street_corner.js",
   "generator": "createUrbanStreetCorner",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "scenery",
   "variant": 4,
   "cad_path": "printables/urban-street-corner.scad",

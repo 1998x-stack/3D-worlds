@@ -12,7 +12,7 @@ export const assetMeta = {
   ],
   "source_path": "src/models/cable_sort_desk_hub.js",
   "generator": "createCableSortDeskHub",
-  "collection": "v1.2",
+  "collection": "v1.3",
   "commerce_family": "organizer",
   "variant": 2,
   "cad_path": "printables/cable-sort-desk-hub.scad",
