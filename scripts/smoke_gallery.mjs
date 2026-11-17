@@ -38,12 +38,20 @@ try{
  await newest.click();
  await page.locator('.detail-modal').waitFor({state:'visible'});
  await page.locator('#close-detail').click();
+ const next = page.locator('[data-id="scifi.robotic-mining-excavator.001"]');
+ if(await next.count()!==1)throw Error('V0.6 robotic mining excavator missing in gallery');
+ await next.scrollIntoViewIfNeeded();
+ await next.locator('img').evaluate(img=>img.decode());
+ await next.click();
+ await page.locator('.detail-modal').waitFor({state:'visible'});
+ if(!await canvas.evaluate(el=>el.width>0&&el.height>0))throw Error('V0.6 inspector canvas missing');
+ await page.locator('#close-detail').click();
  await page.locator('#asset-search').fill('仙人掌');
  // The Gallery debounces input before updating its cards.
  await page.waitForFunction(() => document.querySelectorAll('.asset-card').length === 1,
    null, {timeout:5000});
  if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
- console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5 inspectors and Chinese search');
+ console.log('PAGES SMOKE OK:',expected,'cards, original 3D previews, v0.4/v0.5/v0.6 inspectors and Chinese search');
 }finally{
  await browser?.close();
  await new Promise(resolve=>server?.httpServer?.close(resolve)??resolve());
