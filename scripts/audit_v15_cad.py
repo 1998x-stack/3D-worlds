@@ -38,7 +38,7 @@ def audit(output: Path) -> dict:
             raise AssertionError(f"{slug}: mesh is not one watertight, winding-consistent solid")
         if not mesh.volume > 0 or not np.allclose(extents,dims,atol=0.25) or abs(mesh.bounds[0,2])>0.25:
             raise AssertionError(f"{slug}: invalid volume / declared mm dimensions / ground contact")
-        rows.append({"slug":slug,"file":str(target.relative_to(ROOT)),
+        rows.append({"slug":slug,"file":str(target.relative_to(output.parent)),
                      "source_sha256":hashlib.sha256(source.read_bytes()).hexdigest(),
                      "stl_sha256":hashlib.sha256(target.read_bytes()).hexdigest(),
                      "faces":int(len(mesh.faces)),"connected_components":len(components),
