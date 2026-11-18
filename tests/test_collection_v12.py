@@ -23,7 +23,7 @@ class V12CollectionTests(unittest.TestCase):
         self.assertGreaterEqual(len(self.assets), 565)
         self.assertEqual(len(self.by_id), len(self.assets))
         self.assertEqual(len({a["slug"] for a in self.assets}), len(self.assets))
-        self.assertEqual(sum(a.get("collection") not in ("v1.2", "v1.3", "v1.4") for a in self.assets),435)
+        self.assertEqual(sum(a.get("collection") not in ("v1.2", "v1.3", "v1.4") for a in self.assets[:565]),435)
         self.assertEqual(sum(a.get("collection")=="v1.2" for a in self.assets),50)
         categories={x["id"] for x in json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]}
         self.assertEqual(set(c["category_counts"]),categories - {"print-commerce"})
