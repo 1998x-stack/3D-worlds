@@ -22,6 +22,7 @@
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
+- [V1.4.3 CAD fit coupons and offline slicing](#v143--two-cad-pilots-geometry-and-toolpaths)
 - [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
 - [Explore the platform](#explore-the-platform)
 - [Overseas print-commerce detail refinement: 20 additional models](#overseas-print-commerce-detail-refinement--batch-02-20-more)
@@ -66,6 +67,24 @@ All **30 previously released V1.4 maker-scene models** have undergone an origina
 [Full bilingual 30-model refinement report](docs/v14-fine-detail-refinement.md) ·
 [V1.4 manifest / revision metadata](catalog/collections/v14.json) ·
 [Verification gates](docs/verification-v14.md)
+
+## V1.4.3 · Two CAD pilots: geometry and toolpaths
+
+The 30 original V1.4 GLB scenes remain **blocked** for print manufacturing.
+The next focused step revises the **two distinct OpenSCAD pilots**:
+the soap bridge uses a corrected **side-entry C-profile** with a measured
+14.4-mm nominal lip gap, and the hex bit rack has measured 6.85-mm AF
+pockets and a 6.0-mm pocket floor. Two CAD bodies and two three-clearance coupon strips (four STL solids)
+undergo actual triangle cross-section checks, and CI runs an
+**offline Slic3r toolpath export** (no printer connection).
+
+**NOT tested:** real rim and driver-bit dimensions, physical printed
+coupons, part-load strength, global min wall thickness, human slicer layer
+review, and product safety or commercial certification. Toolpaths are
+not approved printer instructions.
+
+[CAD measurement and offline-slicing report](docs/v14-cad-fit-coupons.md) ·
+[Physical-fit recording form](docs/templates/v14-coupon-physical-fit-log.md)
 
 ## V1.4.2 · 30-model print risk survey and CAD pilots
 
