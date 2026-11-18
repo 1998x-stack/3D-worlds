@@ -16,14 +16,14 @@ class V14CollectionTests(unittest.TestCase):
 
     def test_v14_inventory_and_preserved_history(self):
         c=self.collection
-        self.assertEqual(c["version"],"v1.4")
+        self.assertEqual(c["version"],"v1.4", "v1.5")
         self.assertEqual(c["asset_count"],30)
         self.assertEqual(c["category_count"],13)
         self.assertEqual(len(c["assets"]),30)
-        self.assertEqual(len(self.assets),565)
-        self.assertEqual(len(self.by_id),565)
-        self.assertEqual(len({a["slug"] for a in self.assets}),565)
-        self.assertEqual(sum(a.get("collection")!="v1.4" for a in self.assets),535)
+        self.assertEqual(len(self.assets),595)
+        self.assertEqual(len(self.by_id),595)
+        self.assertEqual(len({a["slug"] for a in self.assets}),595)
+        self.assertEqual(sum(a.get("collection") not in ("v1.4", "v1.5") for a in self.assets),535)
         self.assertEqual(sum(a.get("collection")=="v1.4" for a in self.assets),30)
         categories={x["id"] for x in json.loads((ROOT/"catalog/categories.json").read_text(encoding="utf8"))["categories"]}
         self.assertEqual(set(c["category_counts"]),categories - {"print-commerce"})
@@ -37,7 +37,7 @@ class V14CollectionTests(unittest.TestCase):
         for e in self.collection["assets"]:
             with self.subTest(id=e["id"]):
                 a=self.by_id[e["id"]]
-                self.assertEqual(a["collection"],"v1.4")
+                self.assertEqual(a["collection"],"v1.4", "v1.5")
                 self.assertEqual(a["kind"],"procedural")
                 self.assertEqual(a["license"],"MIT")
                 self.assertEqual(a["author"],"3D Worlds")

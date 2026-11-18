@@ -76,3 +76,10 @@ orientation, scale, non-manifold faces, holes, layer adhesion, supports and fit.
 
 `catalog/collections/print-commerce-v13.json` records each design and its
 market hypothesis. More research: `docs/print-commerce-v13.md`.
+
+### V1.5 candidate product CAD (not sale/print certified)
+
+- `v15/camera-battery-organizer.scad`: configurable six generic battery pockets, label reliefs and nominal floor. **Not a safety housing or charging dock**.
+- `v15/label-front-parts-bin.scad`: three compartments, positive-wall partitions, shallow label recess and configurable outer envelope.
+
+Run `python3 scripts/audit_v15_cad.py --output .cache/print/v15-cad-audit.json` after installing OpenSCAD and trimesh. The STL candidates generated in `.cache/print/v15-cad-stl/` require independent slicing, material, fit, dimensional and physical-print approval. No compatibility with third-party branded hardware is assumed.
