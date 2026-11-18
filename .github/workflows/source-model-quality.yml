@@ -1,0 +1,62 @@
+name: Source Catalog and Model Geometry Fast Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'catalog/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'AGENTS.md'
+      - 'README*'
+      - '.github/workflows/source-model-quality.yml'
+  pull_request:
+    paths:
+      - 'catalog/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.codex/**'
+      - '.claude/**'
+      - '.pi/**'
+      - 'AGENTS.md'
+      - 'README*'
+      - '.github/workflows/source-model-quality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-model-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry-audit Python dependencies
+        run: python -m pip install -r requirements-print.txt
+      - name: Verify mirrored Skills and Python canonical catalog
+        run: |
+          python3 scripts/verify_skill_mirrors.py
+          python3 scripts/catalog.py validate
+          python3 scripts/catalog.py build
+          python3 scripts/export_static_catalog.py
+      - name: Run Python collection and historical compatibility tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Install frontend dependencies
+        run: npm install --no-audit --no-fund
+      - name: Check 3D mesh geometry, names and bounds
+        run: node scripts/validate_models.mjs
+      - name: Compile Vite static gallery
+        run: npm run build
