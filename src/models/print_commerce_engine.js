@@ -1,8 +1,11 @@
 import { buildRecipe } from './recipe_engine.js';
 import { buildRefinedCommerceModel } from './refined_commerce_engine.js';
 import { buildRefinedCommerceBatch02 } from './refined_commerce_batch02.js';
+import { buildRefinedCommerceBatch03 } from './refined_commerce_batch03.js';
 // 3D gallery preview, NOT a sliced/manufacturing STL. Canonical CAD lives in printables/*.scad.
 export function buildCommerceModel(spec) {
+  const batch03 = buildRefinedCommerceBatch03(spec);
+  if (batch03) return batch03;
   const batch02 = buildRefinedCommerceBatch02(spec);
   if (batch02) return batch02;
   const refined = buildRefinedCommerceModel(spec);

@@ -26,6 +26,7 @@
 - [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
 - [Explore the platform](#explore-the-platform)
 - [Overseas print-commerce detail refinement: 20 additional models](#overseas-print-commerce-detail-refinement--batch-02-20-more)
+- [Overseas print-commerce detail refinement: final 20 models](#overseas-print-commerce-detail-refinement--batch-03-final-20)
 - [Quick start](#quick-start)
 - [Capabilities and boundaries](#capabilities-and-boundaries)
 - [System architecture](#system-architecture)
@@ -139,11 +140,19 @@ physically print-verified.
 
 ## Overseas print-commerce detail refinement · batch 02 (20 more)
 
-**30 of the existing 50 overseas print-commerce prototypes now have SKU-specific detail geometry** (10 in batch 01 + 20 in batch 02). Batch 02 adds twenty original, dimensioned OpenSCAD designs and separate named-mesh Three.js previews, spanning non-electrical lamps, original figurines, miniature scenery, organizing, stands, gaming, jewelry, horticulture, customizable gifts, and costume ornaments. The other twenty still use family templates; no new asset IDs were added.
+**30 of the existing 50 overseas print-commerce prototypes now have SKU-specific detail geometry** (10 in batch 01 + 20 in batch 02). Batch 02 adds twenty original, dimensioned OpenSCAD designs and separate named-mesh Three.js previews, spanning non-electrical lamps, original figurines, miniature scenery, organizing, stands, gaming, jewelry, horticulture, customizable gifts, and costume ornaments. The final twenty were subsequently refined in batch 03; no new asset IDs were added.
 
 **Engineering status:** the twenty CAD sources passed geometry-only checks for connected, watertight positive-volume meshes and outer bounds; this does **not** verify printed fit, minimum wall thickness, slice supports, safe use, legal compliance, or marketplace sales.
 
 [Detailed 20-SKU design inventory and manual gates](docs/overseas-refinement-batch-02.md) · [CAD source + topology audit](scripts/audit_refined_commerce_batch02.py) · [Batch 01 report](docs/overseas-refinement-batch-01.md)
+
+## Overseas print-commerce detail refinement · batch 03 (final 20)
+
+Across all three refinement batches, **50/50 existing overseas concepts** now have SKU-specific Three.js previews and native OpenSCAD forms. The final 20 additionally received a second detail pass. Catalog count remains **565**, IDs/dimensions and `prototype_unverified` status remain stable.
+
+Recorded Batch 03 GitHub Actions logs show **20/20 CAD meshes passed geometry-only checks** (watertight, connected, positive volume, consistent winding, envelopes within ±0.5 mm). They are **not** certified for slicer layers, wall thickness, clearance, physical fit, load, safety, or sale. GLB/LOD/browser and V1.4 CAD integration are separate release gates.
+
+[Final 20 design and limits](docs/overseas-refinement-batch-03.md) · [CAD geometry audit](scripts/audit_refined_commerce_batch03.py)
 
 ## Quick start
 

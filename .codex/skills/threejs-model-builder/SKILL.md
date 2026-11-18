@@ -21,6 +21,7 @@ This Skill is a **repository-specific operator contract**, not a general-purpose
 | Produce previews, compressed GLBs or LOD variants | [Rendering & LOD](references/RENDER-LOD.md), [QA](references/QA-TROUBLESHOOTING.md) |
 | Publish Pages, SQLite, MCP, storage or API | [Publishing & MCP](references/PUBLISH-MCP.md), [QA](references/QA-TROUBLESHOOTING.md) |
 | Investigate broken geometry, exports or CI | [QA & troubleshooting](references/QA-TROUBLESHOOTING.md), then the workflow-specific guide |
+| Review an existing PR or reconcile new mainline manufacturing CI | [PR integration](references/PR-INTEGRATION.md), [PR acceptance checklist](assets/pr-review-checklist.md) |
 | Verify upstream authority for a design decision | [External sources](references/EXTERNAL-SOURCES.md) |
 
 **Never read every reference by default.** Load only the selected workflow and related reference(s), then inspect actual repository code. These files augment, not override, `AGENTS.md` and existing code.

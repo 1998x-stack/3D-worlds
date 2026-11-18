@@ -1,6 +1,9 @@
-// Wedding Place Card | 婚礼席位姓名牌 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// wedding-place-card | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 140 x 69 x 10.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([140,69,10],auto=false)
-    commercial_form(family="gift",variant=2,label="CUSTOM");
+use <lib/refined_batch03_v2_details.scad>
+w = 140; d = 69; h = 10;
+label = "TABLE";
+refined_batch03_v2_form(slug="wedding-place-card",family="gift",variant=2,w=w,d=d,h=h,label=label);

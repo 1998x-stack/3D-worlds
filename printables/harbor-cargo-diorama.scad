@@ -1,6 +1,9 @@
-// Harbor Cargo Diorama | 港口集装箱微景观 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// harbor-cargo-diorama | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 130 x 87 x 71.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([130,87,71],auto=false)
-    commercial_form(family="scenery",variant=1);
+use <lib/refined_batch03_v2_details.scad>
+w = 130; d = 87; h = 71;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="harbor-cargo-diorama",family="scenery",variant=1,w=w,d=d,h=h,label=label);
