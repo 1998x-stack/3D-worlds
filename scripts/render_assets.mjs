@@ -5,6 +5,7 @@
 import { createServer } from 'vite';
 import { chromium } from 'playwright';
 import sharp from 'sharp';
+import {fingerprintAsset,loadBuildState,saveBuildState} from './asset_fingerprints.mjs';
 import { readFile,writeFile,mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -23,6 +24,25 @@ if(idPos>=0 && limitPos>=0)throw Error('Use --id or --limit, not both');
 const selected=assetId?models.filter(item=>item.id===assetId):models.slice(0,limit);
 if(!selected.length)throw Error('Unknown procedural asset ID: '+assetId);
 const onlyImages=args.includes('--only-images');
+const incremental=args.includes('--incremental');
+const state=await loadBuildState();
+const exists=async path=>(await import('node:fs/promises')).stat(path).then(s=>s.isFile()&&s.size>0).catch(()=>false);
+const work=[];
+for(const asset of selected){
+  const fingerprint=(await fingerprintAsset(asset)).sha256;
+  const ready=await Promise.all([
+    exists(resolve(ROOT,'public/thumbs',asset.slug+'.webp')),
+    exists(resolve(ROOT,'public/thumbs',asset.slug+'.avif')),
+    onlyImages?Promise.resolve(true):exists(resolve(ROOT,'.cache/raw',asset.slug+'.glb'))
+  ]);
+  if(incremental && ready.every(Boolean) && state.capture[asset.id]?.fingerprint===fingerprint){
+    console.log('REUSED CAPTURE',asset.slug);
+    continue;
+  }
+  work.push({asset,fingerprint});
+}
+if(!work.length){console.log('INCREMENTAL CAPTURE: '+selected.length+' assets unchanged');process.exit(0);}
+
 const thumbs=resolve(ROOT,'public/thumbs');
 const originals=resolve(ROOT,'.cache/raw');
 await Promise.all([mkdir(thumbs,{recursive:true}),mkdir(originals,{recursive:true})]);
@@ -36,7 +56,7 @@ try{
  page.on('console',msg=>{if(msg.type()==='error')console.error('Browser:',msg.text());});
  await page.goto('http://127.0.0.1:5178/capture.html',{waitUntil:'networkidle',timeout:45000});
  await page.waitForFunction(()=>Boolean(window.__capture),{timeout:30000});
- for(const asset of selected){
+ for(const {asset,fingerprint} of work){
    const out=await page.evaluate(async({id,includeGlb})=>window.__capture.render(id,{includeGlb}),{id:asset.id,includeGlb:!onlyImages});
    const png=Buffer.from(out.png,'base64');
    // Transparency flattening makes consistent matte cards in all browsers.
@@ -53,6 +73,8 @@ try{
      await writeFile(resolve(originals,asset.slug+'.glb'),buffer);
    }
    report.push({id:asset.id,slug:asset.slug,webp_bytes:webp.length,avif_bytes:avif.length,raw_glb_bytes:rawBytes});
+   state.capture[asset.id]={fingerprint,webp_bytes:webp.length,avif_bytes:avif.length,raw_glb_bytes:rawBytes};
+   await saveBuildState(state);
    console.log('CAPTURED',asset.slug,webp.length,avif.length,rawBytes);
  }
  const reportName=assetId?'capture-report-'+selected[0].slug+'.json':'capture-report.json';

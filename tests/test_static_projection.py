@@ -24,6 +24,21 @@ class StaticCatalogTest(unittest.TestCase):
             self.assertIn("scifi.ion-propulsion-test-platform.001",
                           {a["id"] for a in public["assets"]})
 
+    def test_all_assets_are_present_in_sharded_static_index(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target=Path(directory)/"static.json"
+            out=export(target=target,shard_size=47)
+            manifest=json.loads((Path(directory)/"shards/index.json").read_text())
+            source=json.loads((ROOT/"catalog/models.json").read_text())["assets"]
+            observed=[]
+            for shard in manifest["shards"]:
+                chunk=json.loads((Path(directory)/"shards"/shard["path"]).read_text())
+                self.assertEqual(shard["count"],len(chunk["assets"]))
+                observed.extend(chunk["assets"])
+            self.assertEqual(out["shard_count"],len(manifest["shards"]))
+            self.assertEqual(manifest["total_assets"],len(source))
+            self.assertEqual(observed,source)
+
     def test_projection_is_bounded(self):
         with tempfile.TemporaryDirectory() as directory:
             path=Path(directory)/"public.json"

@@ -1,4 +1,3 @@
-import catalog from '../catalog/public_models.json';
 import categoryCatalog from '../catalog/categories.json';
 import './styles.css';
 import { createScene, downloadAsGlb } from './scene.js';
@@ -7,8 +6,8 @@ import { buildPrintPlan } from './print-planner.js';
 // Lazy Three.js modules: adding 30 assets must not pull all geometry into initial page.
 const moduleLoaders = import.meta.glob('./models/*.js');
 const sourceLoaders = import.meta.glob('./models/*.js', { query: '?raw', import: 'default' });
-const assets = catalog.assets;
-const assetMap = new Map(assets.map(item => [item.id,item]));
+const assets = [];
+const assetMap = new Map();
 const factoryCache = new Map();
 const API_BASE = (import.meta.env.VITE_CATALOG_API_URL || '').replace(/[/]+$/, '');
 let remoteResults = API_BASE ? [] : null;
@@ -153,7 +152,9 @@ function renderFilters() {
     counts.all = remoteCategories.reduce((sum,item)=>sum+item.count,0);
     for (const item of remoteCategories) counts[item.id] = item.count;
   }
-  for (const item of assets) counts[item.category] = (counts[item.category] || 0) + 1;
+  if (!remoteCategories) {
+    for (const item of assets) counts[item.category] = (counts[item.category] || 0) + 1;
+  }
   document.getElementById('category-filters').innerHTML = Object.entries(labels).map(([key, label]) => `<button class="filter-item ${category === key ? 'selected' : ''}" data-category="${key}" aria-pressed="${category === key}"><span>${label}</span><span class="filter-count">${String(counts[key] || 0).padStart(2, '0')}</span></button>`).join('');
 }
 
@@ -486,8 +487,45 @@ async function initRemote(){
   await loadRemote(true);
 }
 
+/** Fetch only JSON slices at runtime; never bundle the 625+ record manifest into JS. */
+async function initStatic() {
+  try {
+    const base=import.meta.env.BASE_URL+'catalog/';
+    const response=await fetch(base+'index.json');
+    if(!response.ok)throw Error('Static catalog index HTTP '+response.status);
+    const manifest=await response.json();
+    if(manifest.schema_version!=='1.0.0' || !Array.isArray(manifest.shards))
+      throw Error('Unsupported static catalog manifest');
+    const chunks=await Promise.all(manifest.shards.map(async shard=>{
+      if(!/^shard-[0-9]{4}\.json$/.test(shard.path))throw Error('Unsafe static shard path');
+      const r=await fetch(base+shard.path);
+      if(!r.ok)throw Error('Missing static shard '+shard.path);
+      const data=await r.json();
+      if(!Array.isArray(data.assets)||data.assets.length!==shard.count)
+        throw Error('Static shard count mismatch '+shard.path);
+      return data.assets;
+    }));
+    const incoming=chunks.flat();
+    if(incoming.length!==manifest.total_assets ||
+       new Set(incoming.map(a=>a.id)).size!==incoming.length)
+      throw Error('Static catalog lost or duplicated asset identifiers');
+    assets.splice(0,assets.length,...incoming);
+    for(const asset of incoming)assetMap.set(asset.id,asset);
+    document.getElementById('total-count').textContent=String(assets.length).padStart(2,'0')+' ASSETS';
+    renderFilters();renderGrid();
+    const initial=new URL(window.location.href).searchParams.get('model');
+    if(initial)openAsset(initial,{updateHistory:false});
+  }catch(error){
+    console.error('Static catalog hydration failed',error);
+    toast('静态目录加载失败，请刷新页面');
+  }
+}
 renderFilters();
-if (API_BASE) initRemote();
-else renderGrid();
-const initial = new URL(window.location.href).searchParams.get('model');
-if (initial) openAsset(initial, { updateHistory: false });
+if(API_BASE){
+  initRemote();
+  const initial=new URL(window.location.href).searchParams.get('model');
+  if(initial)openAsset(initial,{updateHistory:false});
+}else{
+  renderGrid();
+  initStatic();
+}
