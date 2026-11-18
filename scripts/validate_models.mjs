@@ -13,7 +13,7 @@ function arg(name, fallback) {
   const index = args.indexOf(name);
   if(index<0)return fallback;
   const raw=args[index+1];
-  if(!/^\\d+$/.test(raw||''))throw Error('Expected integer after '+name);
+  if(!/^\d+$/.test(raw||''))throw Error('Expected integer after '+name);
   return Number(raw);
 }
 const idPos=args.indexOf('--id');
