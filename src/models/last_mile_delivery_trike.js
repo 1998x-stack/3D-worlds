@@ -269,9 +269,9 @@ export function createLastMileDeliveryTrike() { return buildRecipe({
       "t": "cylinder",
       "n": "wheels-0-tire-0",
       "p": [
-        -0.62,
+        -0.87,
         0.39,
-        0.59
+        0
       ],
       "s": [
         0.48,
@@ -290,51 +290,9 @@ export function createLastMileDeliveryTrike() { return buildRecipe({
       "t": "cylinder",
       "n": "wheels-0-hub-0",
       "p": [
-        -0.62,
+        -0.87,
         0.39,
-        0.59
-      ],
-      "s": [
-        0.18,
-        0.15,
-        0.18
-      ],
-      "c": 11847118,
-      "finish": "metal",
-      "rot": [
-        0,
-        0,
-        1.5707963267948966
-      ]
-    },
-    {
-      "t": "cylinder",
-      "n": "wheels-0-tire-1",
-      "p": [
-        -0.62,
-        0.39,
-        -0.59
-      ],
-      "s": [
-        0.48,
-        0.14,
-        0.48
-      ],
-      "c": 2437178,
-      "finish": "rubber",
-      "rot": [
-        0,
-        0,
-        1.5707963267948966
-      ]
-    },
-    {
-      "t": "cylinder",
-      "n": "wheels-0-hub-1",
-      "p": [
-        -0.62,
-        0.39,
-        -0.59
+        0
       ],
       "s": [
         0.18,

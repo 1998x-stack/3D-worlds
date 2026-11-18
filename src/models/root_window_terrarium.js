@@ -913,6 +913,262 @@ export function createRootWindowTerrarium() { return buildRecipe({
       ],
       "c": 7714187,
       "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-root-window-front",
+      "p": [
+        0,
+        0.74,
+        0.63
+      ],
+      "s": [
+        1.66,
+        1.07,
+        0.037
+      ],
+      "c": 8439513,
+      "finish": "glass"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-root-window-back",
+      "p": [
+        0,
+        0.74,
+        -0.63
+      ],
+      "s": [
+        1.66,
+        1.07,
+        0.037
+      ],
+      "c": 8439513,
+      "finish": "glass"
+    },
+    {
+      "t": "rounded-box",
+      "n": "glass-side-left",
+      "p": [
+        -0.84,
+        0.85,
+        0
+      ],
+      "s": [
+        0.035,
+        1.21,
+        1.13
+      ],
+      "c": 8439513,
+      "finish": "glass"
+    },
+    {
+      "t": "rounded-box",
+      "n": "glass-side-right",
+      "p": [
+        0.84,
+        0.85,
+        0
+      ],
+      "s": [
+        0.035,
+        1.21,
+        1.13
+      ],
+      "c": 8439513,
+      "finish": "glass"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-window-pillar--0.86--0.64",
+      "p": [
+        -0.86,
+        0.95,
+        -0.64
+      ],
+      "s": [
+        0.082,
+        1.51,
+        0.082
+      ],
+      "c": 3365207,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-window-pillar--0.86-0.64",
+      "p": [
+        -0.86,
+        0.95,
+        0.64
+      ],
+      "s": [
+        0.082,
+        1.51,
+        0.082
+      ],
+      "c": 3365207,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-window-pillar-0.86--0.64",
+      "p": [
+        0.86,
+        0.95,
+        -0.64
+      ],
+      "s": [
+        0.082,
+        1.51,
+        0.082
+      ],
+      "c": 3365207,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "clear-window-pillar-0.86-0.64",
+      "p": [
+        0.86,
+        0.95,
+        0.64
+      ],
+      "s": [
+        0.082,
+        1.51,
+        0.082
+      ],
+      "c": 3365207,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "removable-service-hatch",
+      "p": [
+        0,
+        1.68,
+        0.02
+      ],
+      "s": [
+        1.68,
+        0.12,
+        1.35
+      ],
+      "c": 6262400,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-0",
+      "p": [
+        -0.66,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 15851162,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-1",
+      "p": [
+        -0.45000000000000007,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 13676664,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-2",
+      "p": [
+        -0.24000000000000005,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 15851162,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-3",
+      "p": [
+        -0.030000000000000027,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 13676664,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-4",
+      "p": [
+        0.17999999999999994,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 15851162,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-5",
+      "p": [
+        0.39,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 13676664,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "soil-layer-index-6",
+      "p": [
+        0.6,
+        0.31,
+        0.69
+      ],
+      "s": [
+        0.06,
+        0.06,
+        0.035
+      ],
+      "c": 15851162,
+      "finish": "matte"
     }
   ]
 }); }

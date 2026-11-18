@@ -649,6 +649,280 @@ export function createRazorAirflowCantilever() { return buildRecipe({
       "r": 0.034,
       "c": 11847118,
       "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "razor-grip--1",
+      "from": [
+        -0.42,
+        0.93,
+        0.36
+      ],
+      "to": [
+        -0.42,
+        1.59,
+        0.37
+      ],
+      "r": 0.056,
+      "c": 3427165,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "razor-head--1",
+      "p": [
+        -0.42,
+        1.69,
+        0.37
+      ],
+      "s": [
+        0.38,
+        0.12,
+        0.16
+      ],
+      "c": 11190218,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "razor-blade-placeholder--1",
+      "p": [
+        -0.42,
+        1.75,
+        0.4
+      ],
+      "s": [
+        0.33,
+        0.035,
+        0.045
+      ],
+      "c": 2700858,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interchangeable-rail-stop--1",
+      "p": [
+        -0.63,
+        0.69,
+        0.61
+      ],
+      "s": [
+        0.17,
+        0.12,
+        0.15
+      ],
+      "c": 14795407,
+      "finish": "anodized"
+    },
+    {
+      "t": "rod",
+      "n": "razor-grip-1",
+      "from": [
+        0.42,
+        0.93,
+        0.36
+      ],
+      "to": [
+        0.42,
+        1.59,
+        0.37
+      ],
+      "r": 0.056,
+      "c": 3427165,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "razor-head-1",
+      "p": [
+        0.42,
+        1.69,
+        0.37
+      ],
+      "s": [
+        0.38,
+        0.12,
+        0.16
+      ],
+      "c": 11190218,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "razor-blade-placeholder-1",
+      "p": [
+        0.42,
+        1.75,
+        0.4
+      ],
+      "s": [
+        0.33,
+        0.035,
+        0.045
+      ],
+      "c": 2700858,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "interchangeable-rail-stop-1",
+      "p": [
+        0.63,
+        0.69,
+        0.61
+      ],
+      "s": [
+        0.17,
+        0.12,
+        0.15
+      ],
+      "c": 14795407,
+      "finish": "anodized"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-0",
+      "p": [
+        -0.63,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-1",
+      "p": [
+        -0.47,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-2",
+      "p": [
+        -0.31,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-3",
+      "p": [
+        -0.15000000000000002,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-4",
+      "p": [
+        0.010000000000000009,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-5",
+      "p": [
+        0.17000000000000004,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-6",
+      "p": [
+        0.32999999999999996,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-7",
+      "p": [
+        0.4900000000000001,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "runoff-guidance-8",
+      "p": [
+        0.65,
+        0.31,
+        0.49
+      ],
+      "s": [
+        0.06,
+        0.034,
+        0.22
+      ],
+      "c": 3108211,
+      "finish": "matte"
     }
   ]
 }); }

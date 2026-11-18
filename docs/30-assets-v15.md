@@ -1,6 +1,6 @@
 # V1.5 — 30 original, market-inspired 3D visual assets
 
-**Source authored:** 30 distinct Three.js recipe modules, 13 existing categories, 565 → 595 catalog entries. **Not yet physically printed, manufacturing-approved or market-sales validated.**
+**Source authored; eight semantic geometry refinements:** 30 distinct Three.js recipe modules, 13 existing categories, 565 → 595 catalog entries. **Not yet physically printed, manufacturing-approved or market-sales validated.**
 
 ## Research inputs (2026-11-18)
 
@@ -19,25 +19,25 @@ Ideas are **new structural compositions**, not reproductions of marketplace phot
 | 1 | furniture | `adaptive-bookend-clamp-desk` | Adaptive Bookend Clamp Desk / 自适应书挡夹持台 | 38 | amazon | bookends + gauge |
 | 2 | furniture | `vertical-controller-valet` | Vertical Controller Valet / 竖置手柄收纳站 | 36 | ebay | cradle + console |
 | 3 | furniture | `slide-track-accessory-riser` | Slide Track Accessory Riser / 滑轨桌面配件台 | 36 | amazon | frame + tray |
-| 4 | bathroom | `razor-airflow-cantilever` | Razor Airflow Cantilever / 剃须刀通风悬臂架 | 38 | amazon | drain + cradle |
-| 5 | bathroom | `squeegee-pivot-dock` | Squeegee Pivot Dock / 刮水器旋转停靠座 | 43 | ebay | hinge + drain |
+| 4 | bathroom | `razor-airflow-cantilever` | Razor Airflow Cantilever / 剃须刀通风悬臂架 | 55 | amazon | drain + cradle |
+| 5 | bathroom | `squeegee-pivot-dock` | Squeegee Pivot Dock / 刮水器旋转停靠座 | 57 | ebay | hinge + drain |
 | 6 | characters | `filament-scout-figurine` | Filament Scout Figurine / 耗材巡检机器人 | 39 | hacker-news | robot + spool |
-| 7 | characters | `pollinator-gardener-figurine` | Pollinator Gardener Figurine / 授粉园丁摆件 | 50 | hacker-news | robot + plant |
+| 7 | characters | `pollinator-gardener-figurine` | Pollinator Gardener Figurine / 授粉园丁摆件 | 68 | hacker-news | robot + plant |
 | 8 | nature | `pollinator-corridor-habitat` | Pollinator Corridor Habitat / 传粉昆虫栖地微景观 | 57 | ebay | hex + plant |
-| 9 | nature | `root-window-terrarium` | Root Window Terrarium / 透明根系观察缸 | 53 | hacker-news | root + plant |
-| 10 | vehicles | `last-mile-delivery-trike` | Last Mile Delivery Trike / 末端配送三轮车 | 34 | ebay | wheels + crate |
+| 9 | nature | `root-window-terrarium` | Root Window Terrarium / 透明根系观察缸 | 69 | hacker-news | root + plant |
+| 10 | vehicles | `last-mile-delivery-trike` | Last Mile Delivery Trike / 末端配送三轮车 | 32 | ebay | wheels + crate |
 | 11 | vehicles | `warehouse-tug-micro-ev` | Warehouse Tug Micro EV / 仓储牵引微型车 | 33 | hacker-news | wheels + cab |
 | 12 | electronics | `macro-pad-command-deck` | Macro Pad Command Deck / 宏键指令控制台 | 45 | hacker-news | console + grid |
-| 13 | electronics | `vented-router-suspension-bracket` | Vented Router Suspension Bracket / 通风路由器悬挂架 | 36 | amazon | frame + drain |
+| 13 | electronics | `vented-router-suspension-bracket` | Vented Router Suspension Bracket / 通风路由器悬挂架 | 59 | amazon | frame + drain |
 | 14 | electronics | `electronics-repair-sorting-tray` | Electronics Repair Sorting Tray / 电子维修分区托盘 | 47 | ebay | tray + grid |
 | 15 | decor | `kinetic-moire-desk-orbit` | Kinetic Moire Desk Orbit / 莫尔纹桌面星环 | 47 | hacker-news | ring + gauge |
 | 16 | decor | `celestial-shadow-lattice` | Celestial Shadow Lattice / 星象投影格栅摆件 | 45 | amazon | ring + panel |
 | 17 | decor | `stacked-ripple-vase-display` | Stacked Ripple Vase Display / 层叠涟漪花器 | 54 | ebay | vase + plant |
 | 18 | kitchen | `sponge-airlift-drain-bridge` | Sponge Airlift Drain Bridge / 悬浮海绵沥水桥 | 46 | amazon | drain + tray |
 | 19 | kitchen | `tea-sachet-flip-library` | Tea Sachet Flip Library / 翻页茶包收纳柜 | 44 | ebay | tray + panel |
-| 20 | architecture | `kinetic-privacy-facade` | Kinetic Privacy Facade / 动态隐私立面 | 34 | hacker-news | panel + frame |
+| 20 | architecture | `kinetic-privacy-facade` | Kinetic Privacy Facade / 动态隐私立面 | 71 | hacker-news | panel + frame |
 | 21 | architecture | `cross-laminate-joint-study` | Cross Laminate Joint Study / 交错层板榫接研究 | 32 | hacker-news | frame + joinery |
-| 22 | urban | `micro-mobility-parking-node` | Micro Mobility Parking Node / 微出行停靠节点 | 35 | ebay | roof + wheels |
+| 22 | urban | `micro-mobility-parking-node` | Micro Mobility Parking Node / 微出行停靠节点 | 26 | ebay | roof + wheels |
 | 23 | urban | `urban-bioswale-measurement-bay` | Urban Bioswale Measurement Bay / 城市雨水花园观测单元 | 55 | hacker-news | plant + gauge |
 | 24 | tools | `fastener-calibration-rack` | Fastener Calibration Rack / 紧固件规格展示架 | 48 | ebay | hex + gauge |
 | 25 | tools | `clamp-jaw-fixture-library` | Clamp Jaw Fixture Library / 可换钳口夹具库 | 38 | hacker-news | cradle + tool |
