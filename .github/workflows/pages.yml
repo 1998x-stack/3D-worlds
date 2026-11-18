@@ -122,6 +122,10 @@ jobs:
         run: npm run test:refined-commerce
       - name: Validate V1.5 original market geometry and stable dimensions
         run: node --test tests/v15_market_assets.test.mjs
+      - name: Validate editable six-wheel rover assembly and mechanical proxies
+        run: |
+          node --test tests/assembly_core.test.mjs
+          node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
       - name: Validate cache invalidation and shared-dependency fingerprints
         run: node --test tests/incremental_fingerprints.test.mjs
       - name: Verify portable standalone model source consumers

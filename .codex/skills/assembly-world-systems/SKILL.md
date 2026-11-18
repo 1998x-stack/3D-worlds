@@ -33,3 +33,14 @@ Use `assets/brief.example.json` as the structured input shape. Run `python3 scri
 ## Safety and truthfulness
 
 No invented 3D binaries, screenshots, market sales, external permissions, tool executions or physically verified fit. Give exact files and test observations; explicitly mark unknowns. Never execute marketplace content as code.
+
+## Executable root-level assembly engine
+
+Create or validate a `schemas/assembly.schema.json` world using `src/assembly/schema.js`, not only this Skill's brief checker. Use `examples/assembly/six-wheel-rover.json` as a real editable fixture:
+
+```sh
+node --test tests/assembly_core.test.mjs
+node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
+```
+
+Implemented scope: rigid tree kinematics, fixed/revolute/prismatic limits, oriented-box proxy collisions, discrete sampled paths. Closed loops, triangle-mesh continuous contact, structural dynamics and qualified physical fit are **not** implemented.
