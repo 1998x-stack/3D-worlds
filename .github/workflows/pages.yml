@@ -128,6 +128,8 @@ jobs:
           node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
       - name: Verify deterministic assembly-step order
         run: node --test tests/assembly_steps.test.mjs
+      - name: Validate release catalog / LOD / shard consistency
+        run: node --test tests/release_index.test.mjs
       - name: Validate cache invalidation and shared-dependency fingerprints
         run: node --test tests/incremental_fingerprints.test.mjs
       - name: Verify portable standalone model source consumers
@@ -191,6 +193,10 @@ jobs:
             public/thumbs/
             public/generated/
           retention-days: 7
+      - name: Build and hash complete published asset release manifest
+        run: |
+          python3 scripts/export_static_catalog.py
+          npm run build:release-index
       - name: Build Vite static site
         run: npm run build
       - name: Verify interactive Assembly Lab in a real Chromium browser

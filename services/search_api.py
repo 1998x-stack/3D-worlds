@@ -286,12 +286,12 @@ class Handler(BaseHTTPRequestHandler):
                     counts = dict(_METRICS["requests"])
                     sent = _METRICS["bytes"]
                     uptime = max(0, int(time.monotonic() - _METRICS["started"]))
-                metrics = "# HELP 3dworlds_requests_total HTTP request count by status\\n"
-                metrics += "# TYPE 3dworlds_requests_total counter\\n"
+                metrics = "# HELP threedworlds_requests_total HTTP request count by status\\n"
+                metrics += "# TYPE threedworlds_requests_total counter\\n"
                 for status, value in sorted(counts.items()):
-                    metrics += f'3dworlds_requests_total{{status="{status}"}} {value}\\n'
-                metrics += f"3dworlds_response_bytes_total {sent}\\n"
-                metrics += f"3dworlds_uptime_seconds {uptime}\\n"
+                    metrics += f'threedworlds_requests_total{{status="{status}"}} {value}\\n'
+                metrics += f"threedworlds_response_bytes_total {sent}\\n"
+                metrics += f"threedworlds_uptime_seconds {uptime}\\n"
                 body = metrics.encode("utf-8")
                 self.send_response(200)
                 self.send_header("Content-Type", "text/plain; version=0.0.4")
