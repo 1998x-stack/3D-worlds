@@ -71,6 +71,58 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
+  geometry-part-0:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 0 through 159
+        run: node scripts/validate_models.mjs --offset 0 --limit 160
+
+  geometry-part-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 160 through 319
+        run: node scripts/validate_models.mjs --offset 160 --limit 160
+
+  geometry-part-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 320 through 479
+        run: node scripts/validate_models.mjs --offset 320 --limit 160
+
+  geometry-part-3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 480 through 639
+        run: node scripts/validate_models.mjs --offset 480 --limit 160
+
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 120
@@ -116,8 +168,11 @@ jobs:
           retention-days: 30
       - name: Install frontend dependencies
         run: npm install --no-audit --no-fund
-      - name: Check model geometry and coordinates
-        run: node scripts/validate_models.mjs
+      - name: Targeted generator regression: stalled SKU and new releases
+        run: |
+          node scripts/validate_models.mjs --id print-commerce.eyewear-display-stand.001
+          node scripts/validate_models.mjs --id furniture.monitor-cantilever-bridge.001
+          node scripts/validate_models.mjs --id furniture.modular-rail-desk-shelf.001
       - name: Validate refined Three.js detail geometry and canonical dimensions
         run: npm run test:refined-commerce
       - name: Validate V1.5 original market geometry and stable dimensions
@@ -128,6 +183,8 @@ jobs:
           node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
       - name: Verify deterministic assembly-step order
         run: node --test tests/assembly_steps.test.mjs
+      - name: Validate release catalog / LOD / shard consistency
+        run: node --test tests/release_index.test.mjs
       - name: Validate cache invalidation and shared-dependency fingerprints
         run: node --test tests/incremental_fingerprints.test.mjs
       - name: Verify portable standalone model source consumers
@@ -191,6 +248,10 @@ jobs:
             public/thumbs/
             public/generated/
           retention-days: 7
+      - name: Build and hash complete published asset release manifest
+        run: |
+          python3 scripts/export_static_catalog.py
+          npm run build:release-index
       - name: Build Vite static site
         run: npm run build
       - name: Verify interactive Assembly Lab in a real Chromium browser
@@ -212,7 +273,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [verify, cad-audit]
+    needs: [verify, cad-audit, geometry-part-0, geometry-part-1, geometry-part-2, geometry-part-3]
     runs-on: ubuntu-latest
     permissions:
       contents: read

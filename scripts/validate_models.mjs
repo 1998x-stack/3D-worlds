@@ -7,9 +7,26 @@ import { resolve } from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const manifest = JSON.parse(readFileSync(new URL('../catalog/models.json', import.meta.url), 'utf8'));
+const all = manifest.assets.filter(asset => asset.kind === 'procedural');
+const args = process.argv.slice(2);
+function arg(name, fallback) {
+  const index = args.indexOf(name);
+  if(index<0)return fallback;
+  const raw=args[index+1];
+  if(!/^\d+$/.test(raw||''))throw Error('Expected integer after '+name);
+  return Number(raw);
+}
+const idPos=args.indexOf('--id');
+const assetId=idPos>=0?args[idPos+1]:null;
+const offset=arg('--offset',0);
+const limit=arg('--limit',all.length);
+if(assetId && (args.includes('--offset')||args.includes('--limit')))throw Error('Cannot combine --id and --offset/--limit');
+if(offset<0||limit<1||limit>10000||offset>=all.length)throw Error('Invalid validation shard range');
+const selected=assetId?all.filter(x=>x.id===assetId):all.slice(offset,offset+limit);
+if(!selected.length)throw Error('No procedural models selected');
 let checked = 0;
-for (const asset of manifest.assets) {
-  if (asset.kind !== 'procedural') continue;
+for (const asset of selected) {
+  console.log('CHECK',asset.id);
   const filepath = resolve(root, asset.source_path);
   if (!filepath.startsWith(resolve(root, 'src/models') + '/')) {
     throw new Error('Unsafe model source path: ' + asset.id);
@@ -59,7 +76,7 @@ for (const asset of manifest.assets) {
   checked += 1;
   console.log('OK', asset.id, { meshes, vertices, triangles: Math.round(triangles), dimensions });
 }
-if (checked !== manifest.assets.filter(asset => asset.kind === 'procedural').length || checked < 485) {
-  throw new Error('Expected all 485+ registered procedural models to validate; found ' + checked);
+if (checked !== selected.length || (!assetId && !args.includes('--offset') && !args.includes('--limit') && checked < 485)) {
+  throw new Error('Validated shard count differs from selected procedural models: '+checked+'/'+selected.length);
 }
-console.log('Verified', checked, 'procedural models');
+console.log('Verified', checked, 'procedural models',JSON.stringify({offset,limit,id:assetId||null,total:all.length}));

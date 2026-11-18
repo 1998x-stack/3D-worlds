@@ -18,4 +18,4 @@ public/generated/*.glb
 public/generated/index.json
 
 data/object_manifest.json
-\n# Generated static metadata shards; catalog/models.json is authoritative\npublic/catalog/*.json\n
+\n# Generated static metadata shards; catalog/models.json is authoritative\npublic/catalog/*.json\n\npublic/release/*.json\n

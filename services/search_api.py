@@ -8,6 +8,11 @@ TLS and an operational S3/MinIO bucket.
 from __future__ import annotations
 import base64
 import hashlib
+import hmac
+import secrets
+import threading
+import time
+from functools import lru_cache
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
@@ -29,6 +34,17 @@ INDEX = Path(os.environ.get(
 ASSET_ID = re.compile(r"^[a-z0-9][a-z0-9._-]{2,119}$")
 TOKEN = re.compile(r"[^\s\"']+")
 MAX_LIMIT = 100
+
+
+# Process-local counters and optional per-client throttling. No user queries are
+# retained in metrics; use an API gateway for distributed rate limiting.
+_METRICS_LOCK = threading.Lock()
+_METRICS = {"requests": {}, "bytes": 0, "started": time.monotonic()}
+_RATE_BUCKETS: dict[str, tuple[float, int]] = {}
+
+@lru_cache(maxsize=3)
+def _read_variant_index(mtime_ns: int, size: int) -> dict:
+    return json.loads(INDEX.read_text(encoding="utf8"))
 
 
 def connect() -> sqlite3.Connection:
@@ -155,7 +171,8 @@ def variant_for(asset: dict, lod: int = 0) -> dict | None:
                 "path": asset["binary_path"], "level": 0}
     if not INDEX.is_file():
         return None
-    index = json.loads(INDEX.read_text(encoding="utf8"))
+    stat = INDEX.stat()
+    index = _read_variant_index(stat.st_mtime_ns, stat.st_size)
     match = next((entry for entry in index.get("entries", [])
                   if entry["asset_id"] == asset["asset_id"]), None)
     if not match:
@@ -186,14 +203,54 @@ def download_metadata(asset_id: str, lod: int = 0) -> dict | None:
 class Handler(BaseHTTPRequestHandler):
     server_version = "3DWorldsAPI/1.0"
 
+    def _observe(self, status: int, size: int = 0):
+        with _METRICS_LOCK:
+            key = str(status)
+            _METRICS["requests"][key] = _METRICS["requests"].get(key, 0) + 1
+            _METRICS["bytes"] += size
+
+    def log_request(self, code="-", size="-"):
+        # Avoid printing raw search queries, cursors or auth headers.
+        self.log_message("%s %s -> %s %s", self.command,
+                         urlsplit(self.path).path, code, size)
+
+    def _rate_allowed(self) -> bool:
+        limit = max(0, int(os.environ.get("THREED_WORLDS_RATE_LIMIT_PER_MIN", "0")))
+        if not limit:
+            return True
+        now = time.monotonic()
+        address = self.client_address[0]
+        with _METRICS_LOCK:
+            start, count = _RATE_BUCKETS.get(address, (now, 0))
+            if now - start >= 60:
+                start, count = now, 0
+            _RATE_BUCKETS[address] = (start, count + 1)
+            if len(_RATE_BUCKETS) > 10000:
+                _RATE_BUCKETS.clear()
+            return count < limit
+
+    def _authorized(self) -> bool:
+        token = os.environ.get("THREED_WORLDS_API_TOKEN", "")
+        if not token:
+            return True
+        candidate = self.headers.get("Authorization", "")
+        if hmac.compare_digest(candidate, "Bearer " + token):
+            return True
+        self.respond({"error": "unauthorized"}, 401)
+        return False
+
     def respond(self, value: dict | list, status: int = 200):
         body = json.dumps(value, ensure_ascii=False).encode("utf8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
-        self.send_header("Cache-Control", "public,max-age=30")
+        self.send_header("X-Request-ID", getattr(self, "request_id", ""))
+        self.send_header("Cache-Control", "no-store" if status >= 400 else "public,max-age=30")
         self.cors()
+        if status == 429:
+            self.send_header("Retry-After", "60")
         self.end_headers()
+        self._observe(status, len(body))
         self.wfile.write(body)
 
     def cors(self):
@@ -210,14 +267,41 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(204)
         self.cors()
         self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization")
         self.end_headers()
 
     def do_GET(self):
+        self.request_id = secrets.token_hex(8)
         url = urlsplit(self.path)
         route = unquote(url.path)
         args = parse_qs(url.query, keep_blank_values=True)
         try:
+            if route.startswith("/api/") or route == "/metrics":
+                if not self._rate_allowed():
+                    return self.respond({"error": "rate_limited"}, 429)
+                if not self._authorized():
+                    return
+            if route == "/metrics":
+                with _METRICS_LOCK:
+                    counts = dict(_METRICS["requests"])
+                    sent = _METRICS["bytes"]
+                    uptime = max(0, int(time.monotonic() - _METRICS["started"]))
+                metrics = "# HELP threedworlds_requests_total HTTP request count by status\\n"
+                metrics += "# TYPE threedworlds_requests_total counter\\n"
+                for status, value in sorted(counts.items()):
+                    metrics += f'threedworlds_requests_total{{status="{status}"}} {value}\\n'
+                metrics += f"threedworlds_response_bytes_total {sent}\\n"
+                metrics += f"threedworlds_uptime_seconds {uptime}\\n"
+                body = metrics.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/plain; version=0.0.4")
+                self.send_header("Content-Length", str(len(body)))
+                self.send_header("Cache-Control", "no-store")
+                self.cors()
+                self.end_headers()
+                self._observe(200, len(body))
+                self.wfile.write(body)
+                return
             if route == "/healthz":
                 with connect() as conn:
                     count = conn.execute("SELECT COUNT(*) FROM assets").fetchone()[0]
@@ -244,15 +328,27 @@ class Handler(BaseHTTPRequestHandler):
                 if not store.exists(sha):
                     return self.respond({"error": "object_not_found"}, 404)
                 path = store.path(sha)
-                with path.open("rb") as f:
-                    body = f.read()
+                etag = '"' + sha + '"'
+                if self.headers.get("If-None-Match") == etag:
+                    self.send_response(304)
+                    self.send_header("ETag", etag)
+                    self.cors()
+                    self.end_headers()
+                    self._observe(304, 0)
+                    return
+                length = path.stat().st_size
                 self.send_response(200)
                 self.send_header("Content-Type", "model/gltf-binary")
-                self.send_header("Content-Length", str(len(body)))
+                self.send_header("Content-Length", str(length))
+                self.send_header("ETag", etag)
+                self.send_header("X-Request-ID", self.request_id)
                 self.send_header("Cache-Control", "public,max-age=31536000,immutable")
                 self.cors()
                 self.end_headers()
-                self.wfile.write(body)
+                self._observe(200, length)
+                with path.open("rb") as f:
+                    while chunk := f.read(1024 * 1024):
+                        self.wfile.write(chunk)
                 return
             if route.startswith("/api/v1/assets/"):
                 tail = route.removeprefix("/api/v1/assets/")
@@ -277,6 +373,8 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def serve(host: str = "127.0.0.1", port: int = 8071):
+    if host not in {"127.0.0.1", "localhost", "::1"} and not os.environ.get("THREED_WORLDS_API_TOKEN") and os.environ.get("THREED_WORLDS_ALLOW_UNAUTHENTICATED_PRIVATE") != "1":
+        raise RuntimeError("Non-loopback bind requires an API token or explicit local-container override")
     server = ThreadingHTTPServer((host, port), Handler)
     print(f"3D Worlds read-only API http://{host}:{port}", flush=True)
     server.serve_forever()
