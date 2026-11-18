@@ -108,7 +108,7 @@ jobs:
           path: data/catalog.sqlite
           retention-days: 30
       - name: Install frontend dependencies
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
       - name: Check model geometry and coordinates
         run: node scripts/validate_models.mjs
       - name: Validate refined Three.js detail geometry and canonical dimensions
