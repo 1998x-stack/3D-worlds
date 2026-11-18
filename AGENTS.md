@@ -360,3 +360,23 @@ Do **not**:
   pipeline completed honestly; it is NOT a certification or manual signoff.
 - Only completed human [print/fit review forms](docs/templates/v14-print-release-review.md)
   with actual slicer and print results can support later per-asset claims.
+
+## V1.4.3 CAD fit geometry and slicer-run evidence boundary
+
+- Keep separate Three.js V1.4.1 scene assets and OpenSCAD V1.4.3
+  `printables/v14/` engineering prototypes. The scene models remain
+  blocked for manufacturing, even when CAD-specific checks pass.
+- `scripts/audit_v14_cad_fit.py` renders **four** measured solids:
+  two bodies + two connected three-clearance fit coupon strips.
+  Verify exact STL triangle cross-sections for soap drainage webs,
+  clip opening direction/upper-lower arms, hex opening AF, floors
+  and all three test clearances. Do not call selected cross-sections
+  global wall-thickness metrology.
+- For offline slicing CI installs Ubuntu `slic3r`; run
+  `python3 scripts/audit_v14_cad_fit.py --with-slicer`.
+  A G-code file **must not** be sent to any printer: generated machine
+  assumptions are generic and have not received human layer review.
+- A successful CI check never promotes a manufacturing review stage:
+  final fit, creep, hygiene, load, slicer profile, material and physical
+  testing are all unverified. Use
+  `docs/templates/v14-coupon-physical-fit-log.md` for real tests.

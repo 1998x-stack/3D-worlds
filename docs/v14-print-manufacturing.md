@@ -93,8 +93,8 @@ geometry-risk findings: those findings are the *purpose* of the assessment.
 ### Clip-on soap drainage bridge
 
 Nominal OpenSCAD parameters: 128×85 mm drainage tray, 5 mm structural plate,
-4.8 mm through drainage openings at 11 mm pitch, two print-in-place
-upstanding U-shaped lip clips, 4 mm clip cheeks, and a
+4.8 mm through drainage openings at 11 mm pitch, two integrated rear-open rigid C-cradles (V1.4.3 corrected the
+formerly misaligned entry axis), 4-mm upper/lower jaws, and a
 `target_lip_thickness_mm=14` / `lip_clearance_mm=0.4` **assumed**
 total gap. The 14 mm lip **has not been measured** and is not a universal
 sink dimension. A mesh topology check does not demonstrate clip elasticity,
@@ -153,3 +153,13 @@ includes dimensional-fit tasks and 90 reviewer actions, for example:
 
 Model-specific tests require measured physical dimensions; assumptions in
 OpenSCAD defaults are starting hypotheses, never actual fit-test evidence.
+
+## V1.4.3 addendum — actual candidate cross-sections and offline slicing
+
+A subsequent [V1.4.3 pilot runbook](v14-cad-fit-coupons.md) corrects
+the soap clip's mating-axis error, verifies selected actual STL
+cross-sections on two fully separate CAD bodies and two fit-test strips,
+and adds an offline Slic3r G-code generation CI gate. Only software
+topology and selected geometry sections are measured. The 30 original
+V1.4 scene GLBs remain `mesh_blocked`, and no successful slice export
+implies G3 human approval, G4 physical fit, or G5 release readiness.

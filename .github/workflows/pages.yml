@@ -44,7 +44,7 @@ jobs:
       - name: Install OpenSCAD CAD compiler
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends openscad
+          sudo apt-get install -y --no-install-recommends openscad slic3r
       - name: Verify representative product CAD STL exports
         env:
           QT_QPA_PLATFORM: offscreen
@@ -66,6 +66,10 @@ jobs:
         run: python3 scripts/export_print_commerce.py --only monogram-desk-coaster --format 3mf --out .cache/print-cad-test
       - name: Validate two original V1.4.2 CAD pilot solids (not print-certified)
         run: python3 scripts/audit_v14_cad_pilots.py --output .cache/print/v14-cad-pilots.json
+      - name: Verify V1.4.3 STL cross-section geometry and offline toolpaths
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_v14_cad_fit.py --with-slicer --output .cache/print/v14-cad-fit-sections.json
       - name: Archive generated SQLite catalog
         uses: actions/upload-artifact@v4
         with:
@@ -100,12 +104,21 @@ jobs:
             .cache/print/refined-batch-02-audit.json
             .cache/print/v14-manufacturing-risk.json
             .cache/print/v14-cad-pilots.json
+            .cache/print/v14-cad-fit-sections.json
           retention-days: 7
       - name: Archive explicitly untested V1.4 CAD pilot STL candidates
         uses: actions/upload-artifact@v4
         with:
           name: v14-cad-prototypes-not-manufacturing-certified
-          path: .cache/print/cad-pilot-stl/*.stl
+          path: |
+            .cache/print/cad-pilot-stl/*.stl
+            .cache/print/cad-fit-stl/*.stl
+          retention-days: 7
+      - name: Archive offline G-code for HUMAN REVIEW only (DO NOT send to printer)
+        uses: actions/upload-artifact@v4
+        with:
+          name: v14-review-only-offline-gcode-NOT-PRINTER-QUALIFIED
+          path: .cache/print/cad-fit-toolpaths/*.gcode
           retention-days: 7
       - name: P2 mirror all actual LOD binaries into immutable local object storage
         run: python scripts/smoke_p2.py

@@ -1,9 +1,8 @@
-// V1.4.2 · ORIGINAL dimensioned OpenSCAD print PROTOTYPE, units = mm, Z-up.
-// Independent of the gallery's 180x60x130 mm visual mesh dimensions.
-// Unverified: no physical clip fit, hygiene, UV, heat, wet durability or slicer sign-off.
-// Author: 3D Worlds, MIT. Use a calibration coupon and measure the target lip.
+// V1.4.3 / OpenSCAD engineering pilot / MIT / mm / Z-up.
+// WARNING: this is a rigid open-sided lip cradle, NOT a proven snap clip.
+// Target lip dimensions, material strength, and sink use are not validated.
 $fn = 48;
-mode = "body";              // "body" or "coupon"
+mode = "body"; // "body" or "coupon"; override by CLI -D 'mode="coupon"'
 tray_width_mm = 128;
 tray_depth_mm = 85;
 tray_thickness_mm = 5;
@@ -12,81 +11,104 @@ drain_slot_width_mm = 4.8;
 drain_slot_pitch_mm = 11;
 drain_slot_length_mm = 58;
 drain_slot_count = 9;
-target_lip_thickness_mm = 14;  // USER MEASUREMENT REQUIRED
-lip_clearance_mm = 0.4;        // uncalibrated total nominal gap allowance
+target_lip_thickness_mm = 14;     // placeholder: measure target physical lip
+lip_clearance_mm = 0.4;          // clearance across Z, nominal total gap
 clip_wall_mm = 4;
 clip_width_mm = 18;
 clip_height_mm = 28;
-clip_extra_mm = 0.2;          // positive join allowance
-assert(tray_thickness_mm >= 3.6, "tray base below design minimum");
-assert(clip_wall_mm >= 3.2, "clip walls below design minimum");
-assert(drain_slot_pitch_mm - drain_slot_width_mm >= 3.2,
-       "drain slat too narrow");
-assert(target_lip_thickness_mm > 3 && lip_clearance_mm >= 0,
-       "invalid clip fit input");
+clip_reach_mm = 18;
+clip_web_depth_mm = 5;
+clip_joint_overlap_mm = 1.2;
+coupon_gap_allowances_mm = [0.2, 0.4, 0.6];  // three total clearance tests
+
+assert(tray_thickness_mm >= 3.6 && clip_wall_mm >= 3.2,
+       "insufficient declared main-web thickness");
+assert(drain_slot_pitch_mm - drain_slot_width_mm >= 3.2 &&
+       drain_slot_width_mm >= 3.0, "drainage webs/holes too narrow");
 assert(drain_slot_count >= 3 &&
-       drain_slot_count * drain_slot_pitch_mm < tray_width_mm - 15,
-       "slots consume rim");
+       (drain_slot_count-1)*drain_slot_pitch_mm + drain_slot_width_mm <=
+       tray_width_mm - 2 * corner_radius_mm - 4,
+       "drainage slots exceed plate's straight web");
+assert(target_lip_thickness_mm >= 4 && target_lip_thickness_mm <= 35,
+       "target lip outside prototyping envelope");
+assert(lip_clearance_mm >= 0.0 && lip_clearance_mm <= 1.5,
+       "nominal test gap out of range");
+assert(clip_height_mm >= 2*clip_wall_mm + target_lip_thickness_mm +
+       lip_clearance_mm, "rear web does not contain clip opening");
+assert(clip_web_depth_mm > clip_joint_overlap_mm &&
+       clip_reach_mm >= 10, "invalid rear jaw geometry");
 
 module rounded_plate(w, d, h, r) {
   hull() {
-    for (x = [-w / 2 + r, w / 2 - r])
-      for (y = [-d / 2 + r, d / 2 - r])
-        translate([x, y, 0]) cylinder(h = h, r = r);
+    for (x=[-w/2+r, w/2-r]) for (y=[-d/2+r,d/2-r])
+      translate([x,y,0]) cylinder(h=h,r=r);
   }
 }
 
 module draining_tray() {
   difference() {
-    rounded_plate(tray_width_mm, tray_depth_mm,
-                  tray_thickness_mm, corner_radius_mm);
-    // The slots are true voids through the material, not dark thin overlays.
-    for (i = [0 : drain_slot_count - 1]) {
-      x = (i - (drain_slot_count - 1) / 2) * drain_slot_pitch_mm;
-      translate([x - drain_slot_width_mm / 2,
-                 -drain_slot_length_mm / 2, -1])
-        cube([drain_slot_width_mm, drain_slot_length_mm,
-              tray_thickness_mm + 2]);
+    rounded_plate(tray_width_mm,tray_depth_mm,tray_thickness_mm,corner_radius_mm);
+    // TRUE open drainage slots right through the 5 mm main tray, not color marks.
+    for (i=[0:drain_slot_count-1]) {
+      x=(i-(drain_slot_count-1)/2)*drain_slot_pitch_mm;
+      translate([x-drain_slot_width_mm/2,-drain_slot_length_mm/2,-1])
+        cube([drain_slot_width_mm, drain_slot_length_mm,tray_thickness_mm+2]);
     }
   }
 }
 
-module clip_at(x, extra_clearance = 0) {
-  open_gap = target_lip_thickness_mm + lip_clearance_mm + extra_clearance;
-  outside_depth = open_gap + 2 * clip_wall_mm;
-  near_y = tray_depth_mm / 2 - 13;
-  // Two printed uprights rise from the main tray.
-  // The upward slot is OPEN: no hidden ceiling/support assumption.
-  difference() {
-    translate([x - clip_width_mm / 2, near_y, 0])
-      cube([clip_width_mm, outside_depth, clip_height_mm]);
-    translate([x - clip_width_mm / 2 - 1,
-               near_y + clip_wall_mm,
-               tray_thickness_mm + clip_extra_mm])
-      cube([clip_width_mm + 2, open_gap,
-            clip_height_mm - tray_thickness_mm + 2]);
+// Side-entry opening must be aligned with LIP THICKNESS along Z. In V1.4.2,
+// the void was accidentally along Y and open toward +Z, an incorrect fit axis.
+// This revised rigid C-profile opens toward the rear (+Y).
+module side_entry_cradle(x, allowance_mm=lip_clearance_mm,
+                         origin_y=tray_depth_mm/2-7) {
+  gap_z=target_lip_thickness_mm+allowance_mm;
+  lower_top=clip_wall_mm;
+  upper_bottom=lower_top+gap_z;
+  assert(clip_height_mm >= upper_bottom+clip_wall_mm);
+  union() {
+    // Full-height backstop: at the inboard end of the open-sided C profile.
+    translate([x-clip_width_mm/2,origin_y,0])
+      cube([clip_width_mm,clip_web_depth_mm,clip_height_mm]);
+    // Two jaws that reach OUTWARDS in Y. The opening is open on +Y.
+    translate([x-clip_width_mm/2,
+               origin_y+clip_web_depth_mm-clip_joint_overlap_mm,0])
+      cube([clip_width_mm,clip_reach_mm,clip_wall_mm]);
+    translate([x-clip_width_mm/2,
+               origin_y+clip_web_depth_mm-clip_joint_overlap_mm,upper_bottom])
+      cube([clip_width_mm,clip_reach_mm,clip_wall_mm]);
   }
 }
 
 module body() {
   union() {
     draining_tray();
-    for (x = [-42, 42]) clip_at(x);
+    for (x=[-42,42]) side_entry_cradle(x);
   }
 }
 
-// Printed alongside the main design ONLY as a separately selected object.
-// Three gap variants (0.2, 0.4, 0.6 mm extra) require real sink-lip fit tests.
+// A single CONNECTED three-width test strip on the bed at z=0. Physical
+// insertion, retention and creep ARE NOT proven by a successful STL export.
 module coupon() {
-  for (i = [0:2]) {
-    translate([i * 27 - 27, 0, 0])
-    difference() {
-      cube([20, target_lip_thickness_mm + lip_clearance_mm + 9, 12],
-           center = true);
-      translate([0, 0, 2])
-        cube([22, target_lip_thickness_mm + lip_clearance_mm +
-              i * 0.2, 11], center = true);
+  w=16;
+  web=4;
+  reach=13;
+  origin_y=-3;
+  union() {
+    // Plate connects all 3 C-shaped samples so they travel as one test strip.
+    translate([-41,-13,0]) cube([82,12,clip_wall_mm]);
+    for (i=[0:2]) {
+      x=(i-1)*28;
+      gap_z=target_lip_thickness_mm+coupon_gap_allowances_mm[i];
+      upper_bottom=clip_wall_mm+gap_z;
+      translate([x-w/2,origin_y,0])
+        cube([w,web,clip_height_mm]);
+      translate([x-w/2,origin_y+web-clip_joint_overlap_mm,0])
+        cube([w,reach,clip_wall_mm]);
+      translate([x-w/2,origin_y+web-clip_joint_overlap_mm,upper_bottom])
+        cube([w,reach,clip_wall_mm]);
     }
   }
 }
-if (mode == "coupon") coupon(); else body();
+
+if (mode=="coupon") coupon(); else body();
