@@ -21,6 +21,7 @@
 ## Contents
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
+- [V1.6 30 functional models](#v16--30-functional-original-research-led-models)
 - [V1.5 market-inspired original visual assets](#v15--30-market-inspired-original-visual-assets)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
 - [V1.4.3 CAD fit coupons and offline slicing](#v143--two-cad-pilots-geometry-and-toolpaths)
@@ -55,6 +56,10 @@ The project serves several different audiences:
 | AI coding agents | [`AGENTS.md`](AGENTS.md), [portable Skill](.codex/skills/threejs-model-builder/SKILL.md), local MCP | Searchable IDs, attribution-aware source and import guidance |
 | Designers and makers | [Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow), `printables/` | Initial geometric drafts and editable CAD prototypes |
 | Contributors and maintainers | `catalog/`, `scripts/`, `tests/` and GitHub Actions | A reproducible path to add, validate, review, and publish assets |
+
+## V1.6 · 30 functional, original, research-led models
+
+The [v1.6 collection](docs/30-assets-v16.md) adds 30 new function-first, independently editable Three.js models across 13 categories. This is a stacked development branch depending on v1.5 PR #39: catalog target **625** (595 prior + 30 new). The models are **visual prototypes**, not fit-tested, manufacturing-certified, or sales-validated CAD products; generated preview/GLB/LOD evidence must be confirmed by CI.
 
 ## V1.5 · 30 market-inspired original visual assets
 

@@ -116,7 +116,7 @@ For each batch, provide or retain:
 - A few deliberately chosen visual inspections covering high-detail, high-risk and atypical categories.
 - Manufacturing status per asset only where it has actually been evaluated, with all unverified items explicitly labeled as such.
 
-Historic v0.4–v1.4 batch requirements live in `catalog/collections/` and `docs/release-history.md`. Do not paste older release counts into evergreen rules, and do not re-run an obsolete exact-count assertion as if it describes the new current corpus.
+Historic v0.4–v1.6 batch requirements live in `catalog/collections/` and `docs/release-history.md`. Do not paste older release counts into evergreen rules, and do not re-run an obsolete exact-count assertion as if it describes the new current corpus.
 
 ## 4. Rendering, optimization and website discipline
 
