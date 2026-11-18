@@ -22,8 +22,11 @@
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
+- [V1.4.3 CAD fit coupons and offline slicing](#v143--two-cad-pilots-geometry-and-toolpaths)
+- [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
 - [Explore the platform](#explore-the-platform)
 - [Overseas print-commerce detail refinement: 20 additional models](#overseas-print-commerce-detail-refinement--batch-02-20-more)
+- [Overseas print-commerce detail refinement: final 20 models](#overseas-print-commerce-detail-refinement--batch-03-final-20)
 - [Quick start](#quick-start)
 - [Capabilities and boundaries](#capabilities-and-boundaries)
 - [System architecture](#system-architecture)
@@ -66,6 +69,44 @@ All **30 previously released V1.4 maker-scene models** have undergone an origina
 [V1.4 manifest / revision metadata](catalog/collections/v14.json) ·
 [Verification gates](docs/verification-v14.md)
 
+## V1.4.3 · Two CAD pilots: geometry and toolpaths
+
+The 30 original V1.4 GLB scenes remain **blocked** for print manufacturing.
+The next focused step revises the **two distinct OpenSCAD pilots**:
+the soap bridge uses a corrected **side-entry C-profile** with a measured
+14.4-mm nominal lip gap, and the hex bit rack has measured 6.85-mm AF
+pockets and a 6.0-mm pocket floor. Two CAD bodies and two three-clearance coupon strips (four STL solids)
+undergo actual triangle cross-section checks, and CI runs an
+**offline PrusaSlicer toolpath export** (no printer connection).
+
+**NOT tested:** real rim and driver-bit dimensions, physical printed
+coupons, part-load strength, global min wall thickness, human slicer layer
+review, and product safety or commercial certification. Toolpaths are
+not approved printer instructions.
+
+[CAD measurement and offline-slicing report](docs/v14-cad-fit-coupons.md) ·
+[Physical-fit recording form](docs/templates/v14-coupon-physical-fit-log.md)
+
+## V1.4.2 · 30-model print risk survey and CAD pilots
+
+**New manufacturing evidence, not a new visual asset batch:** the same 30 V1.4
+models are now covered by a source-hashed, full-resolution GLB risk survey and
+**30 individual dimension/fit review plans**. CI runs topology, envelope,
+tiny-component proxy, overhang and bed-contact heuristics after building GLBs.
+**No wall thickness, mating clearance, toolpath, strength or real print is
+certified by this step.**
+
+Two separately authored **parametric OpenSCAD geometry prototypes** are provided:
+a **clip-on soap drainage bridge** (measure lip thickness first) and a
+**1/4-inch hex bit rack** (print its three-clearance fit coupon first).
+Their real mm-scale CAD source is **not** a renamed version of the Three.js
+scene mesh. Machine-generated STL audits cover only topology, envelope
+and positive volume; operator slicer and real fit testing remain required.
+
+[Full engineering scope, commands and acceptance gates](docs/v14-print-manufacturing.md) ·
+[30 unique acceptance intents](catalog/v14_manufacturing_intent.json) ·
+[Human print review template](docs/templates/v14-print-release-review.md)
+
 ## Explore the platform
 
 **Live experience:** https://1998x-stack.github.io/3D-worlds/
@@ -99,11 +140,19 @@ physically print-verified.
 
 ## Overseas print-commerce detail refinement · batch 02 (20 more)
 
-**30 of the existing 50 overseas print-commerce prototypes now have SKU-specific detail geometry** (10 in batch 01 + 20 in batch 02). Batch 02 adds twenty original, dimensioned OpenSCAD designs and separate named-mesh Three.js previews, spanning non-electrical lamps, original figurines, miniature scenery, organizing, stands, gaming, jewelry, horticulture, customizable gifts, and costume ornaments. The other twenty still use family templates; no new asset IDs were added.
+**30 of the existing 50 overseas print-commerce prototypes now have SKU-specific detail geometry** (10 in batch 01 + 20 in batch 02). Batch 02 adds twenty original, dimensioned OpenSCAD designs and separate named-mesh Three.js previews, spanning non-electrical lamps, original figurines, miniature scenery, organizing, stands, gaming, jewelry, horticulture, customizable gifts, and costume ornaments. The final twenty were subsequently refined in batch 03; no new asset IDs were added.
 
 **Engineering status:** the twenty CAD sources passed geometry-only checks for connected, watertight positive-volume meshes and outer bounds; this does **not** verify printed fit, minimum wall thickness, slice supports, safe use, legal compliance, or marketplace sales.
 
 [Detailed 20-SKU design inventory and manual gates](docs/overseas-refinement-batch-02.md) · [CAD source + topology audit](scripts/audit_refined_commerce_batch02.py) · [Batch 01 report](docs/overseas-refinement-batch-01.md)
+
+## Overseas print-commerce detail refinement · batch 03 (final 20)
+
+Across all three refinement batches, **50/50 existing overseas concepts** now have SKU-specific Three.js previews and native OpenSCAD forms. The final 20 additionally received a second detail pass. Catalog count remains **565**, IDs/dimensions and `prototype_unverified` status remain stable.
+
+Recorded Batch 03 GitHub Actions logs show **20/20 CAD meshes passed geometry-only checks** (watertight, connected, positive volume, consistent winding, envelopes within ±0.5 mm). They are **not** certified for slicer layers, wall thickness, clearance, physical fit, load, safety, or sale. GLB/LOD/browser and V1.4 CAD integration are separate release gates.
+
+[Final 20 design and limits](docs/overseas-refinement-batch-03.md) · [CAD geometry audit](scripts/audit_refined_commerce_batch03.py)
 
 ## Quick start
 

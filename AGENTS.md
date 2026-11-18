@@ -338,3 +338,45 @@ Do **not**:
 - The source-of-truth manufacturing candidate is `printables/<slug>.scad` using `printables/lib/refined_batch02_forms.scad` with explicit millimeter dimensions. The gallery engine `src/models/refined_commerce_batch02.js` generates approximated Y-up Three.js previews; never approve its GLBs as slicer-ready manufacturing geometry.
 - Keep preexisting `use <lib/commerce_forms.scad>` references and `family`/`variant` metadata in wrappers for v1.3 regression compatibility. Do not add global `resize()` around fit-sensitive CAD features.
 - Run `python3 -m unittest tests/test_refined_commerce_batch02.py -v`, `npm run test:refined-commerce` and `python3 scripts/audit_refined_commerce_batch02.py` (OpenSCAD + trimesh) for changes in this batch. Only state measured topology/bounds results and explicitly require physical fit, safety and slicer tests.
+
+## V1.4.2 scene manufacturability and CAD pilot evidence
+
+- There are exactly **30 V1.4.1 visual scene models** and **two separate OpenSCAD
+  prototype designs**, not thirty audited dimensioned product CAD files.
+- `catalog/v14_manufacturing_intent.json` contains all 30 unique unreviewed fit
+  questions and 90 acceptance actions. A model's stage stays `unreviewed`
+  regardless of automatic risk scan findings.
+- Use the **original raw GLB** and `scripts/audit_v14_manufacturing.py`; do not
+  interpret component bounding-box extents as true wall thickness, AABB overlap
+  as verified solid interference, or downward triangles as a support plan.
+- The two `printables/v14/*.scad` prototypes use independent mm/Z-up CAD
+  geometry. Their nominal clip and bit-fit values require caliper measurements
+  and actual clearance coupons; they do not change the Gallery scene geometry.
+- Run `python -m unittest tests/test_v14_manufacturing.py -v` and the full
+  existing test suite. After GLB generation, run
+  `python scripts/audit_v14_manufacturing.py --require-all-sources`.
+  With OpenSCAD installed, run `python scripts/audit_v14_cad_pilots.py`.
+- CI may **pass while geometry risk rows are blocked**: it means the reporting
+  pipeline completed honestly; it is NOT a certification or manual signoff.
+- Only completed human [print/fit review forms](docs/templates/v14-print-release-review.md)
+  with actual slicer and print results can support later per-asset claims.
+
+## V1.4.3 CAD fit geometry and slicer-run evidence boundary
+
+- Keep separate Three.js V1.4.1 scene assets and OpenSCAD V1.4.3
+  `printables/v14/` engineering prototypes. The scene models remain
+  blocked for manufacturing, even when CAD-specific checks pass.
+- `scripts/audit_v14_cad_fit.py` renders **four** measured solids:
+  two bodies + two connected three-clearance fit coupon strips.
+  Verify exact STL triangle cross-sections for soap drainage webs,
+  clip opening direction/upper-lower arms, hex opening AF, floors
+  and all three test clearances. Do not call selected cross-sections
+  global wall-thickness metrology.
+- For offline slicing CI installs Ubuntu 26.04 `prusa-slicer` (with legacy `slic3r` CLI fallback); run
+  `python3 scripts/audit_v14_cad_fit.py --with-slicer`.
+  A G-code file **must not** be sent to any printer: generated machine
+  assumptions are generic and have not received human layer review.
+- A successful CI check never promotes a manufacturing review stage:
+  final fit, creep, hygiene, load, slicer profile, material and physical
+  testing are all unverified. Use
+  `docs/templates/v14-coupon-physical-fit-log.md` for real tests.

@@ -34,8 +34,18 @@ def audit_one(slug, bounds, work, trimesh):
     envelope_ok = all(abs(a-b) <= 0.5 for a,b in zip(measured,bounds))
     passed = bool(mesh.is_watertight and mesh.is_winding_consistent and
                   connected == 1 and mesh.volume > 0 and envelope_ok)
+    # Hash all model inputs, not merely an output STL, for review provenance.
+    libraries = (
+        ROOT / "printables" / "lib" / "refined_batch03_forms.scad",
+        ROOT / "printables" / "lib" / "refined_batch03_v2_details.scad",
+    )
+    source_hashes = {
+        str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in (source, *libraries)
+    }
     return {
         "slug": slug, "declared_bounds_mm": list(bounds),
+        "cad_source_hashes": source_hashes,
         "measured_bounds_mm": measured, "faces": int(len(mesh.faces)),
         "watertight": bool(mesh.is_watertight),
         "winding_consistent": bool(mesh.is_winding_consistent),

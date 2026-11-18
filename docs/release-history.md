@@ -1,5 +1,29 @@
 # Catalog release history
 
+## V1.4.3 — CAD sections, three-clearance test coupons, offline slicer
+
+Two *independent* OpenSCAD candidates gain: a physically oriented
+soap-rim side-entry C, measured 14.4-mm nominal gap and 4-mm arms;
+6.85-mm AF driver-bit pockets with 6-mm nominal base; four watertight
+body/coupon STL test meshes; independent STL plane sections for hole,
+floor, drainage and jaw geometry; and an offline CLI PrusaSlicer G-code
+generation gate. The **30 original visual GLBs remain blocked for
+manufacturing**. Human slicer review, actual fit samples, print safety,
+and material/load validation remain unperformed.
+[Measurement and slice review report](v14-cad-fit-coupons.md).
+
+## V1.4.2 — physical manufacturing risk & CAD pilot work (no new catalog assets)
+
+A batch source-GLB audit now processes all 30 original V1.4 models, recording
+topology, scale/bed bounds, small geometry proxies, support-orientation indicators
+and source hashes. Two independent OpenSCAD mm/Z-up prototypes—soap drainage clip
+and hex-driver dock—have automated STL topology/envelope checks and a clearance
+fit coupon option. The model catalog stays unchanged. This **does not**
+certify wall thickness, slicer paths, dimensional assembly fit, print strength
+or commercial sale. [Engineering runbook](v14-print-manufacturing.md).
+
+
+
 ## V1.4 — 30 original maker-market scene models
 
 **V1.4.1 detail refresh:** 30/30 scene models receive revision metadata,
