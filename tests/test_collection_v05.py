@@ -63,7 +63,7 @@ class CollectionV05Tests(unittest.TestCase):
                         self.assertTrue(all(v > 0 for v in part["s"]))
 
     def test_legacy_85_models_remain(self):
-        old = [a for a in self.assets if a.get("collection") not in ("v0.5", "v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1", "v1.2", "v1.3", "v1.4")]
+        old = [a for a in self.assets if a.get("collection") not in ("v0.5", "v0.6", "v0.7", "v0.8", "v0.9", "v1.0", "v1.1", "v1.2", "v1.3", "v1.4", "v1.5")]
         self.assertEqual(len(old), 85)
         self.assertEqual(len([a for a in old if a.get("collection") == "v0.4"]), 40)
         self.assertIn("furniture.table.oak-study-001", {a["id"] for a in old})
