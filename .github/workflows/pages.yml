@@ -71,6 +71,24 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
+  geometry-shard:
+    name: Geometry validation ${{ matrix.shard }}/7
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate 100 original assets in an isolated Node process
+        run: node scripts/validate_models.mjs --offset $(( ${{ matrix.shard }} * 100 )) --limit 100
+
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 120
@@ -116,8 +134,11 @@ jobs:
           retention-days: 30
       - name: Install frontend dependencies
         run: npm install --no-audit --no-fund
-      - name: Check model geometry and coordinates
-        run: node scripts/validate_models.mjs
+      - name: Targeted generator regression: stalled SKU and new releases
+        run: |
+          node scripts/validate_models.mjs --id print-commerce.eyewear-display-stand.001
+          node scripts/validate_models.mjs --id furniture.monitor-cantilever-bridge.001
+          node scripts/validate_models.mjs --id furniture.modular-rail-desk-shelf.001
       - name: Validate refined Three.js detail geometry and canonical dimensions
         run: npm run test:refined-commerce
       - name: Validate V1.5 original market geometry and stable dimensions
@@ -218,7 +239,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [verify, cad-audit]
+    needs: [verify, cad-audit, geometry-shard]
     runs-on: ubuntu-latest
     permissions:
       contents: read
