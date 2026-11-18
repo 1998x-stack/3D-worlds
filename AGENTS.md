@@ -41,6 +41,13 @@ Follow, in order:
 | OpenSCAD commercial prototypes | `printables/`, `scripts/export_print_commerce.py`, `printables/README.md` | CAD-backed prototype and truthful status |
 | Documentation/release | `README.md`, `README.zh-CN.md`, `CONTRIBUTING.md`, `docs/release-history.md` | Accurate commands/capabilities, stable links and synchronized public claims |
 | Skill updates | `.codex/skills/threejs-model-builder/`, `.claude/skills/`, `.pi/skills/` | Byte-identical portable bundles + preflight/mirror checks |
+| PR integration / release gate repair | PR diff, reviews, checks and `.github/workflows/pages.yml` | Conflict-safe mainline integration, correct failure diagnosis, complete verification |
+
+### Pull-request integration and CI requirements
+
+For an existing PR, inspect current head SHA, target SHA, merge-base, changed files, review threads and actual workflow logs **before** editing. Resolve overlaps by keeping both feature checks and mainline checks: print-commerce STL topology is separate from V1.4 original-GLB manufacturing scans, dimensional CAD fit and offline PrusaSlicer steps. For CI splitting, require `verify` **and** `cad-audit` before Pages deploy. Production Pages must deploy only `refs/heads/main`, with privileged permissions restricted to `deploy`. Do not force push over a collaborator's head; use an expected-head lease. Missing artifact `path` means configuration failure; exit 143 from runner shutdown does not establish a model assertion failure. Track **verified**, **interrupted**, **not run** and **physically unverified** distinctly.
+
+Use the [portable PR integration procedure](.codex/skills/threejs-model-builder/references/PR-INTEGRATION.md) and its [review checklist](.codex/skills/threejs-model-builder/assets/pr-review-checklist.md).
 
 Start by inspecting **real files** and the latest relevant collection. Do not generate a parallel framework, replace proven tooling or invent file paths before checking the tree.
 
