@@ -122,12 +122,25 @@ jobs:
         run: npm run test:refined-commerce
       - name: Validate V1.5 original market geometry and stable dimensions
         run: node --test tests/v15_market_assets.test.mjs
+      - name: Validate cache invalidation and shared-dependency fingerprints
+        run: node --test tests/incremental_fingerprints.test.mjs
       - name: Verify portable standalone model source consumers
         run: node --test tests/portable_source.test.mjs
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
       - name: Install headless Chromium for asset rendering
         run: npx playwright install --with-deps chromium
+      - name: Restore content-fingerprinted asset build cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/raw/
+            .cache/asset-build-state.json
+            public/thumbs/
+            public/generated/
+          key: asset-pipeline-${{ runner.os }}-${{ hashFiles('package.json') }}-${{ github.sha }}
+          restore-keys: |
+            asset-pipeline-${{ runner.os }}-${{ hashFiles('package.json') }}-
       - name: P0 generate WebP/AVIF thumbnails and P1 Meshopt LOD0/1/2
         run: npm run generate:assets
       - name: Verify P0 previews, LOD hashes and decodable GLBs
