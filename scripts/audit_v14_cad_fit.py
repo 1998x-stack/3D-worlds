@@ -189,7 +189,10 @@ def compile_openscad(source:Path, output:Path, mode:str,
 
 def slice_offline(stl:Path, output:Path)->dict:
     output.unlink(missing_ok=True)
-    cmd=["slic3r","--export-gcode", "--layer-height","0.2",
+    slicer = shutil.which("prusa-slicer") or shutil.which("slic3r")
+    if slicer is None:
+        raise RuntimeError("No offline PrusaSlicer or Slic3r available")
+    cmd=[slicer,"--export-gcode", "--layer-height","0.2",
          "--perimeters","3", "--nozzle-diameter","0.4",
          "--filament-diameter","1.75", "--fill-density","20%",
          "--output",str(output),str(stl)]
@@ -210,7 +213,7 @@ def slice_offline(stl:Path, output:Path)->dict:
         raise ValueError(f"No useful toolpath: E moves={extrusion}, Z levels={len(zset)}")
     return {
         "status":"offline_gcode_generated_not_human_approved",
-        "slicer":"Slic3r CLI; settings are illustrative not printer-qualified",
+        "slicer":Path(slicer).name+" CLI; settings are illustrative not printer-qualified",
         "slicer_extruding_moves":extrusion,
         "observed_distinct_z_moves":len(zset),
         "toolpath_sha256":sha256(output),
@@ -225,8 +228,8 @@ def run_audit(*,root:Path=ROOT,output:Path,
               with_slicer:bool=False)->dict:
     if not shutil.which("openscad"):
         raise RuntimeError("Missing OpenSCAD CLI")
-    if with_slicer and not shutil.which("slic3r"):
-        raise RuntimeError("Missing Slic3r CLI: no simulated slicer success")
+    if with_slicer and not (shutil.which("prusa-slicer") or shutil.which("slic3r")):
+        raise RuntimeError("Missing offline PrusaSlicer/Slic3r CLI: no simulated slicer success")
     output.parent.mkdir(parents=True,exist_ok=True)
     stems=output.parent/"cad-fit-stl";stems.mkdir(exist_ok=True)
     toolpaths=output.parent/"cad-fit-toolpaths";toolpaths.mkdir(exist_ok=True)

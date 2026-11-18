@@ -44,7 +44,7 @@ jobs:
       - name: Install OpenSCAD CAD compiler
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends openscad slic3r
+          sudo apt-get install -y --no-install-recommends openscad prusa-slicer
       - name: Verify representative product CAD STL exports
         env:
           QT_QPA_PLATFORM: offscreen
