@@ -12,12 +12,12 @@ class PrintCommerceTests(unittest.TestCase):
         cls.catalog=json.loads((ROOT/"catalog/models.json").read_text(encoding="utf8"))["assets"]
         cls.ids={x["id"]:x for x in cls.catalog}
     def test_50_unique_ids_preserve_485_history(self):
-        self.assertEqual(len(self.catalog),595)
-        self.assertEqual(len(self.ids),595)
-        self.assertEqual(len({x["slug"] for x in self.catalog}),595)
+        self.assertEqual(len(self.catalog),625)
+        self.assertEqual(len(self.ids),625)
+        self.assertEqual(len({x["slug"] for x in self.catalog}),625)
         new=[x for x in self.catalog if x.get("collection")=="v1.3"]
         self.assertEqual(len(new),50)
-        self.assertEqual(len([x for x in self.catalog if x.get("collection") not in ("v1.3","v1.4", "v1.5")]),485)
+        self.assertEqual(len([x for x in self.catalog if x.get("collection") not in ("v1.3","v1.4", "v1.5", "v1.6")]),485)
         self.assertEqual(len({x["commerce_family"] for x in self.collection["assets"]}),10)
         self.assertEqual(set(self.collection["families"].values()),{5})
         self.assertEqual(len(self.collection["assets"]),50)

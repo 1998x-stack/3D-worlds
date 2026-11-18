@@ -12,9 +12,9 @@ class Batch15Test(unittest.TestCase):
         cls.lookup={a["id"]:a for a in cls.assets}
 
     def test_inventory(self):
-        self.assertEqual(len(self.assets),595)
-        self.assertEqual(len(self.lookup),595)
-        self.assertEqual(len({a["slug"] for a in self.assets}),595)
+        self.assertEqual(len(self.assets),625)
+        self.assertEqual(len(self.lookup),625)
+        self.assertEqual(len({a["slug"] for a in self.assets}),625)
         self.assertEqual(self.batch["asset_count"],30)
         self.assertEqual(len(self.batch["assets"]),30)
         self.assertEqual(self.batch["category_count"],13)
