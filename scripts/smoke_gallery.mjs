@@ -15,6 +15,8 @@ try{
  const errors=[];
  page.on('pageerror',error=>errors.push(error.message));
  await page.goto('http://127.0.0.1:4180/3D-worlds/',{waitUntil:'networkidle'});
+ await page.waitForFunction(total=>document.querySelectorAll('.asset-card').length===total,
+  expected,{timeout:15000});
  const cards=page.locator('.asset-card');
  if(await cards.count()!==expected)throw Error('Gallery card count mismatch: ' + await cards.count() + '/' + expected);
  const first=cards.first();
