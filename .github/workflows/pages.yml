@@ -122,6 +122,8 @@ jobs:
         run: npm run test:refined-commerce
       - name: Validate V1.5 original market geometry and stable dimensions
         run: node --test tests/v15_market_assets.test.mjs
+      - name: Verify portable standalone model source consumers
+        run: node --test tests/portable_source.test.mjs
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
       - name: Install headless Chromium for asset rendering

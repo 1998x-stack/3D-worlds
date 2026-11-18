@@ -136,26 +136,15 @@ def get_threejs_source(asset_id: str) -> dict:
         return asset
     if asset["kind"] != "procedural" or not asset.get("source_path"):
         return {"error": "not_procedural", "asset_id": asset_id}
-    model_dir = (ROOT / "src" / "models").resolve()
-    source = (ROOT / asset["source_path"]).resolve()
-    helpers = model_dir / "primitives.js"
-    if not source.is_relative_to(model_dir) or source.suffix != ".js" or not source.is_file():
-        return {"error": "unsafe_or_missing_source", "asset_id": asset_id}
-    model_code = re.sub(r"^import[^\n]+\n", "", source.read_text(encoding="utf-8"), flags=re.M)
-    helper_code = re.sub(
-        r"^import\s+\*\s+as\s+THREE\s+from\s+['\"]three['\"];?\s*",
-        "", helpers.read_text(encoding="utf-8"), count=1, flags=re.M
-    )
-    code = (
-        "// 3D Worlds original asset · MIT license\n"
-        "// npm install three\n"
-        "import * as THREE from 'three';\n\n"
-        + helper_code + "\n" + model_code + "\n"
-        + f"// In an existing THREE.Scene: scene.add({asset['generator']}());\n"
-    )
+    from services.portable_source import bundle_source
+    try:
+        package = bundle_source(ROOT, asset["source_path"], title=asset.get("title", ""))
+    except (ValueError, OSError) as exc:
+        return {"error": "unportable_source", "asset_id": asset_id,
+                "detail": str(exc)}
     return {"asset_id": asset["asset_id"], "language": "javascript",
-            "module": code, "license": asset["license_spdx"]}
-
+            "module": package["module"], "dependencies": package["dependencies"],
+            "complete": True, "license": asset["license_spdx"]}
 
 @mcp.tool()
 def get_import_recipe(asset_id: str, target: str = "threejs") -> dict:
