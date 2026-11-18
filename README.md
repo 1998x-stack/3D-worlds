@@ -21,6 +21,7 @@
 ## Contents
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
+- [V1.5 market-inspired original visual assets](#v15--30-market-inspired-original-visual-assets)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
 - [V1.4.3 CAD fit coupons and offline slicing](#v143--two-cad-pilots-geometry-and-toolpaths)
 - [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
@@ -54,6 +55,10 @@ The project serves several different audiences:
 | AI coding agents | [`AGENTS.md`](AGENTS.md), [portable Skill](.codex/skills/threejs-model-builder/SKILL.md), local MCP | Searchable IDs, attribution-aware source and import guidance |
 | Designers and makers | [Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow), `printables/` | Initial geometric drafts and editable CAD prototypes |
 | Contributors and maintainers | `catalog/`, `scripts/`, `tests/` and GitHub Actions | A reproducible path to add, validate, review, and publish assets |
+
+## V1.5 · 30 market-inspired original visual assets
+
+A new [v1.5 collection](docs/30-assets-v15.md) adds **30 source-authored scenes across 13 categories** (catalog target: **595** assets). Original market-problem-inspired geometries are named, adjustable at source level and registered for Gallery/GLB generation. These are **visual prototypes**, not physically printed or proven commercial designs; pipeline and manual validation gates are documented in the collection report.
 
 ## V1.4.1 · Maker model fine-detail refresh
 
