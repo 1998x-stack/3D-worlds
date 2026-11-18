@@ -22,6 +22,7 @@
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
+- [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
 - [Explore the platform](#explore-the-platform)
 - [Overseas print-commerce detail refinement: 20 additional models](#overseas-print-commerce-detail-refinement--batch-02-20-more)
 - [Quick start](#quick-start)
@@ -65,6 +66,26 @@ All **30 previously released V1.4 maker-scene models** have undergone an origina
 [Full bilingual 30-model refinement report](docs/v14-fine-detail-refinement.md) ·
 [V1.4 manifest / revision metadata](catalog/collections/v14.json) ·
 [Verification gates](docs/verification-v14.md)
+
+## V1.4.2 · 30-model print risk survey and CAD pilots
+
+**New manufacturing evidence, not a new visual asset batch:** the same 30 V1.4
+models are now covered by a source-hashed, full-resolution GLB risk survey and
+**30 individual dimension/fit review plans**. CI runs topology, envelope,
+tiny-component proxy, overhang and bed-contact heuristics after building GLBs.
+**No wall thickness, mating clearance, toolpath, strength or real print is
+certified by this step.**
+
+Two separately authored **parametric OpenSCAD geometry prototypes** are provided:
+a **clip-on soap drainage bridge** (measure lip thickness first) and a
+**1/4-inch hex bit rack** (print its three-clearance fit coupon first).
+Their real mm-scale CAD source is **not** a renamed version of the Three.js
+scene mesh. Machine-generated STL audits cover only topology, envelope
+and positive volume; operator slicer and real fit testing remain required.
+
+[Full engineering scope, commands and acceptance gates](docs/v14-print-manufacturing.md) ·
+[30 unique acceptance intents](catalog/v14_manufacturing_intent.json) ·
+[Human print review template](docs/templates/v14-print-release-review.md)
 
 ## Explore the platform
 

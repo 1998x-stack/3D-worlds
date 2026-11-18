@@ -1,5 +1,17 @@
 # Catalog release history
 
+## V1.4.2 — physical manufacturing risk & CAD pilot work (no new catalog assets)
+
+A batch source-GLB audit now processes all 30 original V1.4 models, recording
+topology, scale/bed bounds, small geometry proxies, support-orientation indicators
+and source hashes. Two independent OpenSCAD mm/Z-up prototypes—soap drainage clip
+and hex-driver dock—have automated STL topology/envelope checks and a clearance
+fit coupon option. The model catalog stays unchanged. This **does not**
+certify wall thickness, slicer paths, dimensional assembly fit, print strength
+or commercial sale. [Engineering runbook](v14-print-manufacturing.md).
+
+
+
 ## V1.4 — 30 original maker-market scene models
 
 **V1.4.1 detail refresh:** 30/30 scene models receive revision metadata,
