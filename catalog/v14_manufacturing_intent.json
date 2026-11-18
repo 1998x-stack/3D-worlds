@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "v1.4",
+  "visual_geometry_revision": "1.4.1",
+  "notes": "Manufacturing questions and unverified CAD pilots; not approvals. No print or slicer review evidence is recorded.",
+  "default_target_longest_side_mm": 120,
+  "typical_fdm_nozzle_mm": 0.4,
+  "reference_two_perimeter_feature_mm": 0.9,
+  "cad_pilot_count": 2,
+  "models": [
+    {
+      "asset_id": "furniture.origami-laptop-riser.001",
+      "category": "furniture",
+      "intended_use": "desk accessory",
+      "critical_fit_test": "Measure intended laptop foot width, tilt-load stability, hinge retention and cable clearance",
+      "validation_actions": [
+        "Create parametric hinges and flex/strength test specimen",
+        "Slicer-review bed support, span and orientation",
+        "Load-test with actual laptop before use"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "furniture.honeycomb-desk-tidy.001",
+      "category": "furniture",
+      "intended_use": "desk organizer",
+      "critical_fit_test": "Verify stationery compartment actual opening and bottom drainage",
+      "validation_actions": [
+        "Replace visual solid hex cells with CAD cavities",
+        "Check each well minimum wall thickness in slicer",
+        "Print a compartment and evaluate fit"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "furniture.stackable-mini-drawer-tower.001",
+      "category": "furniture",
+      "intended_use": "modular storage",
+      "critical_fit_test": "Check drawer slide play, stack latch clearance and stop retention",
+      "validation_actions": [
+        "Create CAD rails/stops with toleranced sliding fits",
+        "Slicer-check bridge regions and wall loops",
+        "Print two drawers and perform cycling test"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "bathroom.clip-on-soap-drainage-bridge.001",
+      "category": "bathroom",
+      "intended_use": "bathroom clip-on accessory",
+      "critical_fit_test": "Measure installation lip thickness and clip elastic fit",
+      "validation_actions": [
+        "Compare clip channel to an actual sink/rail measurement",
+        "Slice lip-clip coupon and verify 2+ perimeter walls",
+        "Wet-load and cleaning/durability trial with printed pilot"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": "printables/v14/clip_on_soap_drainage_bridge.scad"
+    },
+    {
+      "asset_id": "bathroom.refillable-toothbrush-station.001",
+      "category": "bathroom",
+      "intended_use": "bathroom storage",
+      "critical_fit_test": "Check removable caps, water traps, sanitary cleaning surfaces",
+      "validation_actions": [
+        "Make drain paths open in watertight CAD",
+        "Review material suitability and cleaning protocol",
+        "Print water test and inspect crevices"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "characters.micro-maker-robot-mascot.001",
+      "category": "characters",
+      "intended_use": "collectible figurine",
+      "critical_fit_test": "Check detachable limbs and fragile antenna against intended scale",
+      "validation_actions": [
+        "Simplify sub-nozzle components for the chosen scale",
+        "Prepare support orientation and color separation",
+        "Print a miniature and inspect fragility"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "characters.terrarium-gardener-figurine.001",
+      "category": "characters",
+      "intended_use": "collectible figurine",
+      "critical_fit_test": "Check watering-can spout, arms and petals for fragile islands",
+      "validation_actions": [
+        "Thicken tiny limbs/foliage",
+        "Slicer-review overhangs and support scars",
+        "Print and manually inspect attachment strength"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "nature.mushroom-propagation-log.001",
+      "category": "nature",
+      "intended_use": "nature diorama",
+      "critical_fit_test": "Check mushroom stems/gills and log bark are continuous print volumes",
+      "validation_actions": [
+        "Boolean-union or deliberately separate caps and stems",
+        "Remove below-two-perimeter details",
+        "Print log fragment to assess support needs"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "nature.tidal-pool-ecology-diorama.001",
+      "category": "nature",
+      "intended_use": "nature diorama",
+      "critical_fit_test": "Check all tidepool pieces attach to the base and water is decorative",
+      "validation_actions": [
+        "Choose opaque printable water geometry instead of glass material",
+        "Join or key rocks and organisms",
+        "Review supports and paint plan"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "vehicles.compact-seed-library-cart.001",
+      "category": "vehicles",
+      "intended_use": "toy-scale vehicle",
+      "critical_fit_test": "Check wheels' axles and cart-deck joining clearances",
+      "validation_actions": [
+        "Create separate axle/rolling-wheel CAD components",
+        "Review wheel-to-frame fit and tip stability",
+        "Print-wheel fit and roll tests"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "vehicles.folding-cargo-bicycle-miniature.001",
+      "category": "vehicles",
+      "intended_use": "toy-scale vehicle",
+      "critical_fit_test": "Check frame hinge and wheel clearance; miniature not rideable",
+      "validation_actions": [
+        "Model toleranced axle and folding joint in separate CAD parts",
+        "Slice fine spoke geometry conservatively",
+        "Print assembly and verify motion"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "electronics.microcontroller-learning-blocks.001",
+      "category": "electronics",
+      "intended_use": "educational module",
+      "critical_fit_test": "Measure real MCU PCB and cable connector keep-out zones",
+      "validation_actions": [
+        "Create parameterized authentic connector and PCB mounting datum",
+        "Slicer-check mounting posts and holes",
+        "Dry fit the actual board without powering it"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "electronics.constellation-cable-dock.001",
+      "category": "electronics",
+      "intended_use": "cable desk dock",
+      "critical_fit_test": "Verify cable OD, minimum bend radius and charging device clearance",
+      "validation_actions": [
+        "Create open channels with specified cable diameter",
+        "Check slots in slicer for bridging",
+        "Test actual cable insertion and strain"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "electronics.solar-mesh-sensor-gateway.001",
+      "category": "electronics",
+      "intended_use": "electronics enclosure",
+      "critical_fit_test": "Verify seal and mounting points with actual sensor and solar module",
+      "validation_actions": [
+        "Design real enclosure wall/boss geometry with clearances",
+        "Review outdoor UV/weather material needs",
+        "Test physical sensor fit and sealing"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "decor.truchet-hex-fabric-tile.001",
+      "category": "decor",
+      "intended_use": "decorative fabric tile",
+      "critical_fit_test": "Check actual substrate adhesion, tile hole/edge sizing and fabric safety",
+      "validation_actions": [
+        "Generate true flat 2.5D CAD and separate attachment zones",
+        "Slice on a fabric-printer profile or substrate coupon",
+        "Test flex, laundering and adhesion in material"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "decor.hex-vine-trellis-kit.001",
+      "category": "decor",
+      "intended_use": "plant trellis",
+      "critical_fit_test": "Check joining clips, staking tip and soil exposure",
+      "validation_actions": [
+        "Create mechanical clip and socket as separate CAD parts",
+        "Slicer-review vertical rod buckling and UV durability",
+        "Perform clip insertion and plant-load test"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "decor.lunar-phase-gyro-lamp.001",
+      "category": "decor",
+      "intended_use": "decor lamp shade",
+      "critical_fit_test": "Check all lamp power/heat and diffuser separation",
+      "validation_actions": [
+        "Create electrical-free standalone decorative geometry first",
+        "Do not mount near a powered lamp without heat/safety review",
+        "Test ambient heat only after electrical certification plan"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "kitchen.rotary-spice-pod-display.001",
+      "category": "kitchen",
+      "intended_use": "spice container display",
+      "critical_fit_test": "Verify lid closure, carousel bearing and food-contact material claims",
+      "validation_actions": [
+        "Create separate printed external stand; exclude food-contact jars",
+        "Check rotational clearance in CAD and slicer",
+        "Fit-test jar and bearing using known commercial containers"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "kitchen.pour-over-coffee-filter-tree.001",
+      "category": "kitchen",
+      "intended_use": "coffee filter holder",
+      "critical_fit_test": "Check cone seat radius and wet-safe drainage route",
+      "validation_actions": [
+        "Model measured holder diameter and drip-tray recess",
+        "Orient printed part to keep cups upright",
+        "Perform dry-fit and water splash test"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "architecture.parametric-shade-brick-screen.001",
+      "category": "architecture",
+      "intended_use": "architecture model",
+      "critical_fit_test": "Check perforation walls and modular support attachments",
+      "validation_actions": [
+        "Boolean-union each louver perimeter into printable CAD",
+        "Analyze bridges at real size",
+        "Print one perforated test cell"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "architecture.modular-mini-greenhouse-bay.001",
+      "category": "architecture",
+      "intended_use": "greenhouse miniature",
+      "critical_fit_test": "Check glazing panel thickness, ridge vent and clip clearances",
+      "validation_actions": [
+        "Use measured replaceable panels in CAD",
+        "Slicer-review roof overhangs and supports",
+        "Assemble physical mini-bay and check stability"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "urban.e-waste-sortation-kiosk.001",
+      "category": "urban",
+      "intended_use": "urban miniature",
+      "critical_fit_test": "Verify refuse-slot dimensions, door hinges and display inserts",
+      "validation_actions": [
+        "Make service doors separate printables with fit gaps",
+        "Check edge radii and support",
+        "Build scale demonstration print"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "urban.parcel-pickup-locker-wall.001",
+      "category": "urban",
+      "intended_use": "urban miniature",
+      "critical_fit_test": "Check each door's fit, hinge pin and keypad tolerances",
+      "validation_actions": [
+        "Split doors and frame with dimensioned hinges",
+        "Slicer-review repeated fine embossed labels",
+        "Print a door/frame coupon and test repeated access"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "tools.caliper-protection-stand.001",
+      "category": "tools",
+      "intended_use": "precision accessory",
+      "critical_fit_test": "Check actual caliper measurement jaw sizes and holder contact pressure",
+      "validation_actions": [
+        "Measure caliper body and define protective seating geometry",
+        "Check FDM support soft contact pads",
+        "Fit-test with real caliper without flexing jaws"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "tools.hex-driver-bit-index-dock.001",
+      "category": "tools",
+      "intended_use": "hex-bit holder",
+      "critical_fit_test": "Validate actual 1/4in bit across-flats and fit allowance",
+      "validation_actions": [
+        "Export OpenSCAD dock and three-clearance coupon",
+        "Slice pocket floors and outer walls before printing",
+        "Print coupon and test real bits before full holder"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": "printables/v14/hex_driver_bit_index_dock.scad"
+    },
+    {
+      "asset_id": "tools.rotary-calculation-cuff.001",
+      "category": "tools",
+      "intended_use": "wearable scale prop",
+      "critical_fit_test": "Measure actual wrist circumference and moving scale gaps",
+      "validation_actions": [
+        "Create openable wearable CAD with safe radii",
+        "Avoid sharp thin detents and test skin-contact material",
+        "Print a scaled cuff and trial-fit without load"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "sports.compact-bouldering-training-board.001",
+      "category": "sports",
+      "intended_use": "decorative bouldering model",
+      "critical_fit_test": "Not a load-rated hold; check mounting and human-safety labeling",
+      "validation_actions": [
+        "Retain explicit non-load-bearing mini-diorama intent",
+        "Thicken color holds for printing if needed",
+        "Print a tabletop display only, never body-load test"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "sports.table-tennis-paddle-display.001",
+      "category": "sports",
+      "intended_use": "sports display rack",
+      "critical_fit_test": "Check paddle blade thickness, handle channel and ball seating",
+      "validation_actions": [
+        "Caliper-measure real paddles and map support locations",
+        "Slicer-review ball seat and weight distribution",
+        "Dry fit and tip-over test"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "scifi.orbital-seed-archive-rover.001",
+      "category": "scifi",
+      "intended_use": "science-fiction prop",
+      "critical_fit_test": "Check modular wheel pods, vault caps and fragile antenna",
+      "validation_actions": [
+        "Define connection keys for detachable rover pods",
+        "Slicer-evaluate small joints and unsupported antenna",
+        "Print and assemble a scaled diorama"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    },
+    {
+      "asset_id": "scifi.deep-ocean-luminescence-lab.001",
+      "category": "scifi",
+      "intended_use": "science-fiction diorama",
+      "critical_fit_test": "Check transparent shell separation and sample vials' tolerances",
+      "validation_actions": [
+        "Design opaque printed dome support plus separately sourced lens",
+        "Slicer-review thin external arms",
+        "Print/display proof without pressure claims"
+      ],
+      "review_stage": "unreviewed",
+      "candidate_cad": null
+    }
+  ]
+}
