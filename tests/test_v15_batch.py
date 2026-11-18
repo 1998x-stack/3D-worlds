@@ -20,6 +20,13 @@ class V15Batch(unittest.TestCase):
         self.assertEqual(len(set(a["id"] for a in self.all)),595)
         self.assertEqual(len(set(a["slug"] for a in self.all)),595)
 
+    def test_slug_tags_follow_catalog_regex(self):
+        import re
+        for a in self.all:
+            if a.get("collection") == "v1.5":
+                for tag in a["tags"]:
+                    self.assertRegex(tag, r"^[a-z0-9][a-z0-9._-]{2,119}$")
+
     def test_all_14_categories(self):
         categories=set(a["id"] for a in load("catalog/categories.json")["categories"])
         observed={a["category"] for a in self.batch["assets"]}
