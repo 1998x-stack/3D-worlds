@@ -1,6 +1,9 @@
-// Mythic Rune Emblem | 神话符文装饰徽章 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// mythic-rune-emblem | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 87 x 87 x 13.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([87,87,13],auto=false)
-    commercial_form(family="cosplay",variant=5);
+use <lib/refined_batch03_v2_details.scad>
+w = 87; d = 87; h = 13;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="mythic-rune-emblem",family="cosplay",variant=5,w=w,d=d,h=h,label=label);

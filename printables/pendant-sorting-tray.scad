@@ -1,6 +1,9 @@
-// Pendant Sorting Tray | 吊坠分格托盘 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// pendant-sorting-tray | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 121 x 91 x 111.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([121,91,111],auto=false)
-    commercial_form(family="jewelry",variant=4);
+use <lib/refined_batch03_v2_details.scad>
+w = 121; d = 91; h = 111;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="pendant-sorting-tray",family="jewelry",variant=4,w=w,d=d,h=h,label=label);

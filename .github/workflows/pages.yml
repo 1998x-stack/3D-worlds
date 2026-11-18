@@ -8,16 +8,66 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  cad-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install print geometry dependencies
+        run: python -m pip install -r requirements-print.txt
+      - name: Install OpenSCAD
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends openscad
+      - name: Verify representative product CAD STL exports
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          for slug in moon-phase-light-sleeve cloud-whale-totem harbor-cargo-diorama modular-pencil-caddy collectible-display-plinth universal-controller-cradle arc-earring-display ribbed-succulent-pot custom-desk-nameplate celestial-guild-medallion; do
+            python3 scripts/export_print_commerce.py --only "$slug" --format stl --out .cache/print-cad-test
+          done
+      - name: Audit ten refined overseas CAD designs
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_refined_commerce.py --output .cache/print/refined-batch-01-audit.json
+      - name: Audit twenty additional refined overseas CAD designs
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_refined_commerce_batch02.py --output .cache/print/refined-batch-02-audit.json
+      - name: Verify parameterized CAD 3MF export
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/export_print_commerce.py --only monogram-desk-coaster --format 3mf --out .cache/print-cad-test
+      - name: Audit final twenty refined overseas CAD designs
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_refined_commerce_batch03.py --output .cache/print/refined-batch-03-audit.json
+      - name: Archive independently checked CAD reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-worlds-refined-cad-evidence
+          path: |
+            .cache/print/refined-batch-01-audit.json
+            .cache/print/refined-batch-02-audit.json
+            .cache/print/refined-batch-03-audit.json
+            .cache/print-cad-test/*.stl
+            .cache/print-cad-test/*.3mf
+          if-no-files-found: warn
+          retention-days: 7
+
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,25 +95,6 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends openscad prusa-slicer
-      - name: Verify representative product CAD STL exports
-        env:
-          QT_QPA_PLATFORM: offscreen
-        run: |
-          for slug in moon-phase-light-sleeve cloud-whale-totem harbor-cargo-diorama modular-pencil-caddy collectible-display-plinth universal-controller-cradle arc-earring-display ribbed-succulent-pot custom-desk-nameplate celestial-guild-medallion; do
-            python3 scripts/export_print_commerce.py --only "$slug" --format stl --out .cache/print-cad-test
-          done
-      - name: Audit ten refined overseas CAD designs
-        env:
-          QT_QPA_PLATFORM: offscreen
-        run: python3 scripts/audit_refined_commerce.py --output .cache/print/refined-batch-01-audit.json
-      - name: Audit twenty additional refined overseas CAD designs
-        env:
-          QT_QPA_PLATFORM: offscreen
-        run: python3 scripts/audit_refined_commerce_batch02.py --output .cache/print/refined-batch-02-audit.json
-      - name: Verify parameterized CAD 3MF export
-        env:
-          QT_QPA_PLATFORM: offscreen
-        run: python3 scripts/export_print_commerce.py --only monogram-desk-coaster --format 3mf --out .cache/print-cad-test
       - name: Validate two original V1.4.2 CAD pilot solids (not print-certified)
         run: python3 scripts/audit_v14_cad_pilots.py --output .cache/print/v14-cad-pilots.json
       - name: Verify V1.4.3 STL cross-section geometry and offline toolpaths
@@ -148,9 +179,13 @@ jobs:
           retention-days: 7
 
   deploy:
-    if: github.event_name != 'pull_request'
-    needs: verify
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: [verify, cad-audit]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -1,6 +1,9 @@
-// Desktop Herb Planter | 桌面香草盆 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// desktop-herb-planter | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 119 x 119 x 116.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([119,119,116],auto=false)
-    commercial_form(family="planter",variant=5);
+use <lib/refined_batch03_v2_details.scad>
+w = 119; d = 119; h = 116;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="desktop-herb-planter",family="planter",variant=5,w=w,d=d,h=h,label=label);

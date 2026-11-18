@@ -1,6 +1,9 @@
-// Bonsai Display Pot | 盆景展示盆 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// bonsai-display-pot | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 116 x 116 x 112.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([116,116,112],auto=false)
-    commercial_form(family="planter",variant=4);
+use <lib/refined_batch03_v2_details.scad>
+w = 116; d = 116; h = 112;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="bonsai-display-pot",family="planter",variant=4,w=w,d=d,h=h,label=label);

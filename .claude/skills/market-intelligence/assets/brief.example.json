@@ -1,0 +1,16 @@
+{
+  "slug": "example-label-track",
+  "problem": "Custom-width organizers waste drawer space",
+  "original_angle": "Removable index lip and independent divider pitch",
+  "source_signals": [
+    {
+      "channel": "hacker-news",
+      "url": "https://news.ycombinator.com/item?id=44419091",
+      "observed_on": "2026-11-18",
+      "observation": "Maker comments emphasize nonstandard drawer dimensions",
+      "evidence_level": "discussion"
+    }
+  ],
+  "sales_status": "not_measured",
+  "ip_review": "original_geometry_required"
+}
