@@ -57,7 +57,7 @@ export function createIntertidalTidepoolStudy() { return buildRecipe({
     },
     {
       "t": "cylinder",
-      "n": "rock-basin-0",
+      "n": "tidal-pool-0",
       "p": [
         -0.73,
         0.31,
@@ -89,7 +89,7 @@ export function createIntertidalTidepoolStudy() { return buildRecipe({
     },
     {
       "t": "cylinder",
-      "n": "rock-basin-1",
+      "n": "tidal-pool-1",
       "p": [
         -0.37,
         0.31,
@@ -121,7 +121,7 @@ export function createIntertidalTidepoolStudy() { return buildRecipe({
     },
     {
       "t": "cylinder",
-      "n": "rock-basin-2",
+      "n": "tidal-pool-2",
       "p": [
         -0.01,
         0.31,
@@ -153,7 +153,7 @@ export function createIntertidalTidepoolStudy() { return buildRecipe({
     },
     {
       "t": "cylinder",
-      "n": "rock-basin-3",
+      "n": "tidal-pool-3",
       "p": [
         0.35,
         0.31,
@@ -185,7 +185,7 @@ export function createIntertidalTidepoolStudy() { return buildRecipe({
     },
     {
       "t": "cylinder",
-      "n": "rock-basin-4",
+      "n": "tidal-pool-4",
       "p": [
         0.71,
         0.31,
