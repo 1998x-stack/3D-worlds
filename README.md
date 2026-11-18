@@ -514,3 +514,7 @@ For a release, review the commit diff, run the right gates, inspect representati
 ---
 
 **Build original assets. Keep provenance inspectable. Verify what you can measure. Never mistake a visual preview for physical-world certification.**
+
+## V1.5 — 30 market-inspired original detailed models (2026-11-18)
+
+The additive [V1.5 collection](catalog/collections/v15.json) contains **30 individually named, editable Three.js models** across all **14 categories** (565 → 595 total). Product ideas were informed by qualitative Amazon seller research, eBay listings, and Hacker News maker discussions. These are original designs, **not copied product geometries**, and no demand/sales metrics are claimed. Read the [design inventory and evidence](docs/30-assets-v15.md). Two organizer models also include new **mm/Z-up parametric OpenSCAD CAD prototypes** in [`printables/v15/`](printables/v15/), audited for watertightness and nominal bounds, but **not sliced, printed, fit-tested or sale certified**. All other V1.5 GLBs are visual scene assets, not manufacturing authority.
