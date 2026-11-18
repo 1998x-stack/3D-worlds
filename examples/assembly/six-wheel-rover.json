@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "system_id": "six-wheel-rover",
+  "name": "Editable six-wheel robotic rover assembly (proxy geometry only)",
+  "units": "m",
+  "up_axis": "Y",
+  "root_part": "chassis",
+  "parts": [
+    {
+      "id": "chassis",
+      "name": "Six-Wheel Rover Chassis",
+      "pose": {
+        "position_m": [
+          0,
+          0.65,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "colliders": [
+        {
+          "id": "body",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            1.1,
+            0.2,
+            1.55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-left-front",
+      "name": "left front wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-left-middle",
+      "name": "left middle wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-left-rear",
+      "name": "left rear wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-right-front",
+      "name": "right front wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-right-middle",
+      "name": "right middle wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-right-rear",
+      "name": "right rear wheel",
+      "colliders": [
+        {
+          "id": "wheel-proxy",
+          "shape": "box",
+          "center_m": [
+            0,
+            0,
+            0
+          ],
+          "size_m": [
+            0.16,
+            0.66,
+            0.54
+          ]
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "id": "axle-left-front",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-left-front",
+      "parent_frame": {
+        "position_m": [
+          -0.68,
+          -0.3,
+          -0.62
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    },
+    {
+      "id": "axle-left-middle",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-left-middle",
+      "parent_frame": {
+        "position_m": [
+          -0.68,
+          -0.3,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    },
+    {
+      "id": "axle-left-rear",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-left-rear",
+      "parent_frame": {
+        "position_m": [
+          -0.68,
+          -0.3,
+          0.62
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    },
+    {
+      "id": "axle-right-front",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-right-front",
+      "parent_frame": {
+        "position_m": [
+          0.68,
+          -0.3,
+          -0.62
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    },
+    {
+      "id": "axle-right-middle",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-right-middle",
+      "parent_frame": {
+        "position_m": [
+          0.68,
+          -0.3,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    },
+    {
+      "id": "axle-right-rear",
+      "type": "revolute",
+      "parent": "chassis",
+      "child": "wheel-right-rear",
+      "parent_frame": {
+        "position_m": [
+          0.68,
+          -0.3,
+          0.62
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "child_frame": {
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "default": 0
+    }
+  ],
+  "collision_exclusions": []
+}
