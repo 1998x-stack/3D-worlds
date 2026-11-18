@@ -11,3 +11,7 @@ Use right-handed +Y up Three.js frames; record any conversion to print Z-up or e
 ## Integration points
 
 Root `AGENTS.md` defines precedence; `catalog/models.json` defines identities and `catalog/collections/` defines release membership. Prefer existing `scripts/` and `tests/` implementations over duplicated logic. Document exceptions and maintain cross-agent reproducibility.
+
+## Actual Assembly Engine v1
+
+Runtime checks in `src/assembly/schema.js`; versioned JSON contract `schemas/assembly.schema.json`. `src/assembly/kinematics.js` implements tree FK (fixed/revolute/prismatic). `src/assembly/collision.js` uses AABB broad phase and oriented-box SAT narrow phase on authored box proxies only. Finite sampled paths can detect collisions but cannot prove continuous clearance. Frames are meters/Y-up with `position_m` and normalized `quaternion_xyzw`; revolute angles are radians. No closed-loop dynamics, structural loads or physical certification.
