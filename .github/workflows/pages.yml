@@ -16,31 +16,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify:
+  cad-audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Validate three portable Skill packages and references
-        run: |
-          python scripts/verify_skill_mirrors.py
-          python .codex/skills/threejs-model-builder/scripts/preflight.py --json
-      - name: Install opt-in print geometry test dependencies
+      - name: Install CAD topology dependencies
         run: python -m pip install -r requirements-print.txt
-      - name: Validate P0/P1/P2 print policy and unreviewed catalog readiness
-        run: |
-          npm run test:print
-          python scripts/audit_print_catalog.py --metadata-only --output .cache/print/catalog-metadata.json
-      - name: Validate and build SQLite catalog
-        run: |
-          python scripts/catalog.py validate
-          python scripts/catalog.py build
-          python -m unittest discover -s tests -v
       - name: Install OpenSCAD CAD compiler
         run: |
           sudo apt-get update -qq
@@ -68,6 +53,39 @@ jobs:
         env:
           QT_QPA_PLATFORM: offscreen
         run: python3 scripts/export_print_commerce.py --only monogram-desk-coaster --format 3mf --out .cache/print-cad-test
+      - name: Archive independently validated CAD reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-worlds-refined-cad-evidence
+          path: |
+          retention-days: 7
+
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate three portable Skill packages and references
+        run: |
+          python scripts/verify_skill_mirrors.py
+          python .codex/skills/threejs-model-builder/scripts/preflight.py --json
+      - name: Install opt-in print geometry test dependencies
+        run: python -m pip install -r requirements-print.txt
+      - name: Validate P0/P1/P2 print policy and unreviewed catalog readiness
+        run: |
+          npm run test:print
+          python scripts/audit_print_catalog.py --metadata-only --output .cache/print/catalog-metadata.json
+      - name: Validate and build SQLite catalog
+        run: |
+          python scripts/catalog.py validate
+          python scripts/catalog.py build
+          python -m unittest discover -s tests -v
       - name: Archive generated SQLite catalog
         uses: actions/upload-artifact@v4
         with:
@@ -96,9 +114,6 @@ jobs:
           name: 3d-worlds-print-audit-evidence
           path: |
             .cache/print/catalog-*.json
-            .cache/print/refined-batch-01-audit.json
-            .cache/print/refined-batch-02-audit.json
-            .cache/print/refined-batch-03-audit.json
           retention-days: 7
       - name: P2 mirror all actual LOD binaries into immutable local object storage
         run: python scripts/smoke_p2.py
@@ -129,7 +144,7 @@ jobs:
 
   deploy:
     if: github.event_name != 'pull_request'
-    needs: verify
+    needs: [verify, cad-audit]
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -78,3 +78,62 @@ functional claims.
 - Lighting and electronics are not included in this batch.
 - For jewelry and cosplay parts, verify skin-contact materials, edges, pin/hook
   attachment, and local consumer product rules before use.
+
+## Audit follow-up · second detail pass (2026-11-18)
+
+Following the first PR audit, each of the same **20 existing** batch-03 SKUs
+received a second, SKU-specific CAD/preview detail pass. This is not a new set
+of products: all 50 overseas v1.3 products have now received a dedicated first
+pass across three batches, and this final set of 20 received a further pass.
+Stable IDs, source modules, original catalogue bounds, licensing and the
+**565-model total** remain unchanged.
+
+- Source of manufacturing geometry:
+  `printables/lib/refined_batch03_forms.scad` plus
+  `printables/lib/refined_batch03_v2_details.scad`. Every batch-03 `.scad`
+  entry point now selects `refined_batch03_v2_form(...)` without global resizing.
+- Three.js presentation: `src/models/refined_commerce_batch03.js` adds the
+  product-specific details from `refined_commerce_batch03_v2.js` *before*
+  restoring the catalogue bounds. It keeps separate named meshes, PBR materials
+  and `manufacturingStatus='unverified'`.
+- Actual CAD changes include ear and cheek reliefs, robot face and boot details,
+  stone carving, container door locks and crane joints, desert roadway edge
+  markings, storefront mullions, plinth fluting and a shallow display recess,
+  contact rails for eyewear, cartridge dividers, bracelet/hook supports,
+  six-pocket jewelry pads, planter lip relief, stable nonoverhanging herb labels,
+  wedding and anniversary embossing, and refined original insignia glyphs.
+- Corrected a previously almost-zero-height monogram lettering extrusion:
+  source uses a meaningful 1.1 mm extrude, staying within the published envelope.
+- Fixed initial second-pass union errors by connecting all decorations to their
+  structural base; also moved out-of-bounds labels and fixed an accidental
+  radial coordinate transform that expanded the coaster envelope.
+
+### Repeatable verification
+
+```sh
+python3 -m unittest discover -s tests -p 'test_refined_commerce_batch03*.py' -v
+node --test tests/refined_commerce_batch03.test.mjs tests/refined_commerce_batch03_v2.test.mjs
+python3 scripts/audit_refined_commerce_batch03.py --output .cache/print/refined-batch-03-audit.json
+npm run build
+```
+
+The second-pass local STL QA re-rendered each source using OpenSCAD and tested
+with trimesh. **20/20** passed watertightness, consistent winding, positive
+volume, a single connected component and matching dimensions within ±0.5 mm.
+All 20 resulting mesh SHA-256 values differ from the previous batch-03 geometry,
+with total triangle count increasing from **71,804** to **96,352**. More triangles
+reflect authored detail, *not* better game performance, functional fitness or
+printer compatibility. The model LOD/glTF workflow remains separate from CAD.
+
+The prior CI run for PR #27 failed after completing CAD checks; it did **not**
+verify all remaining steps. CAD checks are separated into a parallel CI job in
+this revision, with deployment gated on both CAD and gallery verification.
+If either fails, deployment must not be treated as successful.
+
+### Product safety limitations
+
+These are CAD and surface-geometry candidates, not photographs or tested
+manufactured goods. No SKU has verified minimal thickness, bridging and support
+conditions, slicer layers, impact/wear/thermal performance, device fit, adhesion,
+food/water contact or marketplace/region-specific compliance. Product buyers
+must not be told any of these designs are sale-ready or print-certified.

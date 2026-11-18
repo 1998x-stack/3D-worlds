@@ -365,7 +365,7 @@ module b3_monogram_coaster(w=155,d=75,h=13,label="A") {
       b3_rr(w,d,9,8);
       for(x=[-39,39]) translate([x,0,8.7]) b3_ring(27,23,4.3);
       translate([0,0,8.7]) cylinder(r=13,h=4.3,$fn=48);
-      translate([0,0,13]) linear_extrude(height=0.01)
+      translate([0,0,11.9]) linear_extrude(height=1.1)
         text(label,size=18,halign="center",valign="center",font="Liberation Sans:style=Bold");
     }
     for(x=[-39,39]) translate([x,0,4]) cylinder(r=20,h=6,$fn=64);

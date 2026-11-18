@@ -2,6 +2,7 @@
 // Batch 03: SKU-specific Three.js gallery previews for the final 20 overseas prototypes.
 // Stylized visual assemblies only; dimensioned OpenSCAD is the manufacturing source.
 import * as THREE from 'three';
+import {addBatch03SecondPassDetails} from './refined_commerce_batch03_v2.js';
 
 export const REFINED_COMMERCE_BATCH03_SLUGS = Object.freeze([
   'lunar-fox-bust','garden-robot-companion','mountain-spirit-figurine',
@@ -25,6 +26,7 @@ export function buildRefinedCommerceBatch03(spec) {
     dark: new THREE.MeshStandardMaterial({color:0x344353,roughness:.67,metalness:.12}),
     light: new THREE.MeshStandardMaterial({color:0xf1e4c8,roughness:.56,metalness:.04}),
     green: new THREE.MeshStandardMaterial({color:0x72977d,roughness:.74,metalness:.02}),
+    sand: new THREE.MeshStandardMaterial({color:0xc7a477,roughness:.87,metalness:.01}),
     glass: new THREE.MeshStandardMaterial({color:0x88aeb0,roughness:.25,metalness:.12,transparent:true,opacity:.72}),
   };
   function mesh(name,geometry,x=0,y=0,z=0,tone='shell') {
@@ -398,6 +400,7 @@ export function buildRefinedCommerceBatch03(spec) {
   }
   default: throw new Error('Missing batch-03 preview for '+spec.slug);
   }
+  const secondPassParts=addBatch03SecondPassDetails(root,spec);
   const bounds=new THREE.Box3().setFromObject(root);
   const size=bounds.getSize(new THREE.Vector3());
   if(size.x<=0||size.y<=0||size.z<=0) throw new Error('Degenerate batch-03 preview '+spec.slug);
@@ -405,6 +408,6 @@ export function buildRefinedCommerceBatch03(spec) {
   root.scale.set(w/size.x,h/size.y,d/size.z);
   root.position.set(-.5*(bounds.min.x+bounds.max.x)*root.scale.x,
     -bounds.min.y*root.scale.y,-.5*(bounds.min.z+bounds.max.z)*root.scale.z);
-  root.userData={cadSource:spec.cad_path,refinedBatch:'03',manufacturingStatus:'unverified'};
+  root.userData={cadSource:spec.cad_path,refinedBatch:'03',detailPass:2,secondPassParts,manufacturingStatus:'unverified'};
   return root;
 }
