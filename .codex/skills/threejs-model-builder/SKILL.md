@@ -4,7 +4,7 @@ description: Create, extend, inspect, import, optimize, validate and publish lic
 license: MIT
 metadata:
   author: 3D Worlds
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Three.js Model Builder — 3D Worlds Skill v2
@@ -16,6 +16,7 @@ This Skill is a **repository-specific operator contract**, not a general-purpose
 | User goal | Read before modifying files |
 | --- | --- |
 | Create a primitive, stylized prop, or named assembly | [Workflows](references/WORKFLOWS.md), [Geometry contract](references/MODEL-GEOMETRY.md), [Taxonomy](references/TAXONOMY.md) |
+| Build an original Amazon / eBay / Hacker News-inspired collection | [Market research and originality](references/MARKET-ORIGINALITY.md), [Workflows](references/WORKFLOWS.md), [Catalog & provenance](references/CATALOG-PROVENANCE.md) |
 | Add many recipe-based assets or an entire category | [Workflows](references/WORKFLOWS.md), [Taxonomy](references/TAXONOMY.md), [Catalog & provenance](references/CATALOG-PROVENANCE.md) |
 | Import someone else's GLB or a batch | [GLB ingestion](references/GLB-INGESTION.md), [Catalog & provenance](references/CATALOG-PROVENANCE.md) |
 | Produce previews, compressed GLBs or LOD variants | [Rendering & LOD](references/RENDER-LOD.md), [QA](references/QA-TROUBLESHOOTING.md) |
@@ -74,7 +75,7 @@ A change is **done** only when the model is original or licensed for its documen
 
 ## Bundled resources
 
-- [Workflow playbooks](references/WORKFLOWS.md), [geometry](references/MODEL-GEOMETRY.md), [category design](references/TAXONOMY.md), [catalog & provenance](references/CATALOG-PROVENANCE.md)
+- [Market originality and market evidence](references/MARKET-ORIGINALITY.md), [Workflow playbooks](references/WORKFLOWS.md), [geometry](references/MODEL-GEOMETRY.md), [category design](references/TAXONOMY.md), [catalog & provenance](references/CATALOG-PROVENANCE.md)
 - [GLB ingest](references/GLB-INGESTION.md), [render/LOD](references/RENDER-LOD.md), [publish/MCP](references/PUBLISH-MCP.md), [QA/recovery](references/QA-TROUBLESHOOTING.md), [official external links](references/EXTERNAL-SOURCES.md)
 - [Model brief](assets/model-brief.md), [acceptance report](assets/acceptance-report.md), [import manifest example](assets/import-batch.example.json), [recipe source template](assets/recipe-example.js)
 - [New furniture example](examples/procedural-furniture.md), [GLB audit example](examples/imported-glb.md), [read-only preflight](scripts/preflight.py)
