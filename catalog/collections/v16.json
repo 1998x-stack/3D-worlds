@@ -1,0 +1,599 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v1.6",
+  "title": "30 Original Function-First Maker-Market Visual Assets",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 30,
+  "category_count": 13,
+  "category_counts": {
+    "furniture": 3,
+    "bathroom": 2,
+    "characters": 2,
+    "nature": 2,
+    "vehicles": 2,
+    "electronics": 3,
+    "decor": 3,
+    "kitchen": 2,
+    "architecture": 2,
+    "urban": 2,
+    "tools": 3,
+    "sports": 2,
+    "scifi": 2
+  },
+  "assets": [
+    {
+      "id": "furniture.articulated-sketchbook-lectern.001",
+      "slug": "articulated-sketchbook-lectern",
+      "category": "furniture",
+      "title": "Articulated Sketchbook Lectern",
+      "title_zh": "可调式素描本阅读架",
+      "dimensions_m": [
+        0.34,
+        0.25,
+        0.27
+      ],
+      "source_path": "src/models/articulated_sketchbook_lectern.js",
+      "generator": "createArticulatedSketchbookLectern",
+      "part_count": 33,
+      "inspiration_channel": "amazon",
+      "design_focus": "Tilting drawing lectern, split hinges, page clips and angle ticks",
+      "market_hypothesis": "desk",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "furniture.under-desk-modular-cassette.001",
+      "slug": "under-desk-modular-cassette",
+      "category": "furniture",
+      "title": "Under-Desk Modular Cassette",
+      "title_zh": "桌下模块化抽屉盒",
+      "dimensions_m": [
+        0.3,
+        0.16,
+        0.28
+      ],
+      "source_path": "src/models/under_desk_modular_cassette.js",
+      "generator": "createUnderDeskModularCassette",
+      "part_count": 35,
+      "inspiration_channel": "ebay",
+      "design_focus": "Underslung cassette with bearing rails and removable dividers",
+      "market_hypothesis": "storage",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "furniture.crescent-book-display-plinth.001",
+      "slug": "crescent-book-display-plinth",
+      "category": "furniture",
+      "title": "Crescent Book Display Plinth",
+      "title_zh": "新月弧形书籍陈列台",
+      "dimensions_m": [
+        0.33,
+        0.21,
+        0.22
+      ],
+      "source_path": "src/models/crescent_book_display_plinth.js",
+      "generator": "createCrescentBookDisplayPlinth",
+      "part_count": 36,
+      "inspiration_channel": "amazon",
+      "design_focus": "Open book pedestal with graduated crescent slats and leaf stays",
+      "market_hypothesis": "display",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "bathroom.shower-grout-detail-caddy.001",
+      "slug": "shower-grout-detail-caddy",
+      "category": "bathroom",
+      "title": "Shower Grout Detail Caddy",
+      "title_zh": "浴室缝隙清洁工具挂架",
+      "dimensions_m": [
+        0.2,
+        0.27,
+        0.16
+      ],
+      "source_path": "src/models/shower_grout_detail_caddy.js",
+      "generator": "createShowerGroutDetailCaddy",
+      "part_count": 34,
+      "inspiration_channel": "amazon",
+      "design_focus": "Ventilated shower organizer, brush racks and lower drainage",
+      "market_hypothesis": "bath",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "bathroom.ventilated-towel-arc-ladder.001",
+      "slug": "ventilated-towel-arc-ladder",
+      "category": "bathroom",
+      "title": "Ventilated Towel Arc Ladder",
+      "title_zh": "弧形通风毛巾梯架",
+      "dimensions_m": [
+        0.27,
+        0.36,
+        0.17
+      ],
+      "source_path": "src/models/ventilated_towel_arc_ladder.js",
+      "generator": "createVentilatedTowelArcLadder",
+      "part_count": 35,
+      "inspiration_channel": "ebay",
+      "design_focus": "Air gap towel drying ladder with offset arced rungs",
+      "market_hypothesis": "bath",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "characters.lunar-sample-courier-mascot.001",
+      "slug": "lunar-sample-courier-mascot",
+      "category": "characters",
+      "title": "Lunar Sample Courier Mascot",
+      "title_zh": "月面样本运输机器人角色",
+      "dimensions_m": [
+        0.2,
+        0.29,
+        0.18
+      ],
+      "source_path": "src/models/lunar_sample_courier_mascot.js",
+      "generator": "createLunarSampleCourierMascot",
+      "part_count": 27,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Original robot mascot with visor, pod carriers and boots",
+      "market_hypothesis": "figure",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "characters.field-botanical-archivist.001",
+      "slug": "field-botanical-archivist",
+      "category": "characters",
+      "title": "Field Botanical Archivist",
+      "title_zh": "野外植物档案员角色",
+      "dimensions_m": [
+        0.2,
+        0.29,
+        0.19
+      ],
+      "source_path": "src/models/field_botanical_archivist.js",
+      "generator": "createFieldBotanicalArchivist",
+      "part_count": 29,
+      "inspiration_channel": "ebay",
+      "design_focus": "Original botanist figure with folio, lens and vial",
+      "market_hypothesis": "figure",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "nature.intertidal-tidepool-study.001",
+      "slug": "intertidal-tidepool-study",
+      "category": "nature",
+      "title": "Intertidal Tidepool Study",
+      "title_zh": "潮间带生态观察台",
+      "dimensions_m": [
+        0.35,
+        0.16,
+        0.28
+      ],
+      "source_path": "src/models/intertidal_tidepool_study.js",
+      "generator": "createIntertidalTidepoolStudy",
+      "part_count": 55,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Tidepool cross-section: stone basins, plants and wildlife",
+      "market_hypothesis": "habitat",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "nature.alpine-snowmelt-watershed-slice.001",
+      "slug": "alpine-snowmelt-watershed-slice",
+      "category": "nature",
+      "title": "Alpine Snowmelt Watershed Slice",
+      "title_zh": "高山融雪分水岭剖面",
+      "dimensions_m": [
+        0.39,
+        0.27,
+        0.28
+      ],
+      "source_path": "src/models/alpine_snowmelt_watershed_slice.js",
+      "generator": "createAlpineSnowmeltWatershedSlice",
+      "part_count": 51,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Mountain hydrology slice: peaks, snow and runoff readings",
+      "market_hypothesis": "terrain",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "vehicles.canal-litter-skimmer-boat.001",
+      "slug": "canal-litter-skimmer-boat",
+      "category": "vehicles",
+      "title": "Canal Litter Skimmer Boat",
+      "title_zh": "运河漂浮垃圾清理船",
+      "dimensions_m": [
+        0.43,
+        0.24,
+        0.26
+      ],
+      "source_path": "src/models/canal_litter_skimmer_boat.js",
+      "generator": "createCanalLitterSkimmerBoat",
+      "part_count": 50,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Twin hull trash skimmer with front rake and service deck",
+      "market_hypothesis": "vehicle",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "vehicles.folding-warehouse-dolly.001",
+      "slug": "folding-warehouse-dolly",
+      "category": "vehicles",
+      "title": "Folding Warehouse Dolly",
+      "title_zh": "可折叠仓储手推车",
+      "dimensions_m": [
+        0.34,
+        0.3,
+        0.19
+      ],
+      "source_path": "src/models/folding_warehouse_dolly.js",
+      "generator": "createFoldingWarehouseDolly",
+      "part_count": 31,
+      "inspiration_channel": "ebay",
+      "design_focus": "Two-wheel foldaway hand truck with noseplate and locking braces",
+      "market_hypothesis": "vehicle",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "electronics.e-paper-ambient-dashboard.001",
+      "slug": "e-paper-ambient-dashboard",
+      "category": "electronics",
+      "title": "E-Paper Ambient Dashboard",
+      "title_zh": "电子墨水桌面信息站",
+      "dimensions_m": [
+        0.27,
+        0.19,
+        0.17
+      ],
+      "source_path": "src/models/e_paper_ambient_dashboard.js",
+      "generator": "createEPaperAmbientDashboard",
+      "part_count": 40,
+      "inspiration_channel": "amazon",
+      "design_focus": "Angled e-ink console with structured data display and selector",
+      "market_hypothesis": "device",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "electronics.lab-probe-connector-bay.001",
+      "slug": "lab-probe-connector-bay",
+      "category": "electronics",
+      "title": "Lab Probe Connector Bay",
+      "title_zh": "实验室探针接口分线台",
+      "dimensions_m": [
+        0.3,
+        0.14,
+        0.2
+      ],
+      "source_path": "src/models/lab_probe_connector_bay.js",
+      "generator": "createLabProbeConnectorBay",
+      "part_count": 41,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Benchtop connector panel with color-coded terminals and probe rests",
+      "market_hypothesis": "device",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "electronics.compact-microscope-focus-stage.001",
+      "slug": "compact-microscope-focus-stage",
+      "category": "electronics",
+      "title": "Compact Microscope Focus Stage",
+      "title_zh": "显微镜精密调焦平台",
+      "dimensions_m": [
+        0.25,
+        0.28,
+        0.22
+      ],
+      "source_path": "src/models/compact_microscope_focus_stage.js",
+      "generator": "createCompactMicroscopeFocusStage",
+      "part_count": 41,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Focus stage with vertical guide rails, twin knobs and glass slide",
+      "market_hypothesis": "instrument",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "decor.penrose-tile-kaleidoscope.001",
+      "slug": "penrose-tile-kaleidoscope",
+      "category": "decor",
+      "title": "Penrose Tile Kaleidoscope",
+      "title_zh": "彭罗斯拼花几何展台",
+      "dimensions_m": [
+        0.28,
+        0.27,
+        0.25
+      ],
+      "source_path": "src/models/penrose_tile_kaleidoscope.js",
+      "generator": "createPenroseTileKaleidoscope",
+      "part_count": 47,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Aperiodic rhombus field with hovering optical arcs",
+      "market_hypothesis": "geometry",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "decor.terraced-shadow-screen-sculpture.001",
+      "slug": "terraced-shadow-screen-sculpture",
+      "category": "decor",
+      "title": "Terraced Shadow Screen Sculpture",
+      "title_zh": "阶梯式光影屏风摆件",
+      "dimensions_m": [
+        0.29,
+        0.34,
+        0.2
+      ],
+      "source_path": "src/models/terraced_shadow_screen_sculpture.js",
+      "generator": "createTerracedShadowScreenSculpture",
+      "part_count": 80,
+      "inspiration_channel": "amazon",
+      "design_focus": "Five staggered light-shadow louver screens",
+      "market_hypothesis": "geometry",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "decor.ribbon-orbit-desktop-mobile.001",
+      "slug": "ribbon-orbit-desktop-mobile",
+      "category": "decor",
+      "title": "Ribbon Orbit Desktop Mobile",
+      "title_zh": "丝带轨道桌面风动摆饰",
+      "dimensions_m": [
+        0.27,
+        0.33,
+        0.25
+      ],
+      "source_path": "src/models/ribbon_orbit_desktop_mobile.js",
+      "generator": "createRibbonOrbitDesktopMobile",
+      "part_count": 44,
+      "inspiration_channel": "ebay",
+      "design_focus": "Sculptural orbit ribbons, guy-wires and counterweights",
+      "market_hypothesis": "geometry",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "kitchen.label-forward-pantry-bin-rail.001",
+      "slug": "label-forward-pantry-bin-rail",
+      "category": "kitchen",
+      "title": "Label-Forward Pantry Bin Rail",
+      "title_zh": "前置标签食品收纳轨道",
+      "dimensions_m": [
+        0.32,
+        0.16,
+        0.24
+      ],
+      "source_path": "src/models/label_forward_pantry_bin_rail.js",
+      "generator": "createLabelForwardPantryBinRail",
+      "part_count": 41,
+      "inspiration_channel": "amazon",
+      "design_focus": "Modular pantry compartments with protruding label faces",
+      "market_hypothesis": "organizer",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "kitchen.reusable-bag-clip-library.001",
+      "slug": "reusable-bag-clip-library",
+      "category": "kitchen",
+      "title": "Reusable Bag Clip Library",
+      "title_zh": "可重复使用封袋夹收纳架",
+      "dimensions_m": [
+        0.28,
+        0.16,
+        0.18
+      ],
+      "source_path": "src/models/reusable_bag_clip_library.js",
+      "generator": "createReusableBagClipLibrary",
+      "part_count": 59,
+      "inspiration_channel": "ebay",
+      "design_focus": "Library of graduated snap clips with visible jaws and hinge stops",
+      "market_hypothesis": "organizer",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "architecture.seismic-cross-brace-study.001",
+      "slug": "seismic-cross-brace-study",
+      "category": "architecture",
+      "title": "Seismic Cross-Brace Study",
+      "title_zh": "抗震交叉支撑结构研究",
+      "dimensions_m": [
+        0.35,
+        0.35,
+        0.2
+      ],
+      "source_path": "src/models/seismic_cross_brace_study.js",
+      "generator": "createSeismicCrossBraceStudy",
+      "part_count": 53,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Educational X-braced structure with column joints and gussets",
+      "market_hypothesis": "structure",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "architecture.vaulted-rain-pavilion-miniature.001",
+      "slug": "vaulted-rain-pavilion-miniature",
+      "category": "architecture",
+      "title": "Vaulted Rain Pavilion Miniature",
+      "title_zh": "拱顶雨水庭院微缩建筑",
+      "dimensions_m": [
+        0.33,
+        0.33,
+        0.27
+      ],
+      "source_path": "src/models/vaulted_rain_pavilion_miniature.js",
+      "generator": "createVaultedRainPavilionMiniature",
+      "part_count": 62,
+      "inspiration_channel": "amazon",
+      "design_focus": "Rain-catching masonry vault with roof gutters and barrels",
+      "market_hypothesis": "structure",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "urban.adaptive-cycle-lane-bollard-node.001",
+      "slug": "adaptive-cycle-lane-bollard-node",
+      "category": "urban",
+      "title": "Adaptive Cycle Lane Bollard Node",
+      "title_zh": "自行车道弹性隔离节点",
+      "dimensions_m": [
+        0.42,
+        0.18,
+        0.3
+      ],
+      "source_path": "src/models/adaptive_cycle_lane_bollard_node.js",
+      "generator": "createAdaptiveCycleLaneBollardNode",
+      "part_count": 62,
+      "inspiration_channel": "amazon",
+      "design_focus": "Separated cycle path, reflective bollards and drainage curb",
+      "market_hypothesis": "city",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "urban.reverse-logistics-return-kiosk.001",
+      "slug": "reverse-logistics-return-kiosk",
+      "category": "urban",
+      "title": "Reverse Logistics Return Kiosk",
+      "title_zh": "逆向物流智能回收柜",
+      "dimensions_m": [
+        0.3,
+        0.32,
+        0.24
+      ],
+      "source_path": "src/models/reverse_logistics_return_kiosk.js",
+      "generator": "createReverseLogisticsReturnKiosk",
+      "part_count": 48,
+      "inspiration_channel": "ebay",
+      "design_focus": "Self-service package-return kiosk with intake slot and access panel",
+      "market_hypothesis": "city",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "tools.torque-driver-calibration-bench.001",
+      "slug": "torque-driver-calibration-bench",
+      "category": "tools",
+      "title": "Torque Driver Calibration Bench",
+      "title_zh": "扭矩起子检定工作台",
+      "dimensions_m": [
+        0.31,
+        0.2,
+        0.21
+      ],
+      "source_path": "src/models/torque_driver_calibration_bench.js",
+      "generator": "createTorqueDriverCalibrationBench",
+      "part_count": 41,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Demonstrator torque rig with shaft, dial ticks and driver nests",
+      "market_hypothesis": "workshop",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "tools.solder-fume-channel-demo.001",
+      "slug": "solder-fume-channel-demo",
+      "category": "tools",
+      "title": "Solder Fume Channel Demo",
+      "title_zh": "焊接排烟流道结构展示",
+      "dimensions_m": [
+        0.3,
+        0.24,
+        0.22
+      ],
+      "source_path": "src/models/solder_fume_channel_demo.js",
+      "generator": "createSolderFumeChannelDemo",
+      "part_count": 48,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Illustrative fume extraction geometry with hood, ducts and filter",
+      "market_hypothesis": "workshop",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "tools.collet-size-inspection-carousel.001",
+      "slug": "collet-size-inspection-carousel",
+      "category": "tools",
+      "title": "Collet Size Inspection Carousel",
+      "title_zh": "夹头规格检验转盘",
+      "dimensions_m": [
+        0.26,
+        0.19,
+        0.24
+      ],
+      "source_path": "src/models/collet_size_inspection_carousel.js",
+      "generator": "createColletSizeInspectionCarousel",
+      "part_count": 55,
+      "inspiration_channel": "ebay",
+      "design_focus": "Circular machine collet library and graded bore identifiers",
+      "market_hypothesis": "workshop",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "sports.arrow-fletching-alignment-jig.001",
+      "slug": "arrow-fletching-alignment-jig",
+      "category": "sports",
+      "title": "Arrow Fletching Alignment Jig",
+      "title_zh": "箭羽定位装配治具",
+      "dimensions_m": [
+        0.35,
+        0.17,
+        0.15
+      ],
+      "source_path": "src/models/arrow_fletching_alignment_jig.js",
+      "generator": "createArrowFletchingAlignmentJig",
+      "part_count": 44,
+      "inspiration_channel": "ebay",
+      "design_focus": "Shaft alignment jig with fin clamps and index scale",
+      "market_hypothesis": "sport",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "sports.climbing-chalk-brush-station.001",
+      "slug": "climbing-chalk-brush-station",
+      "category": "sports",
+      "title": "Climbing Chalk Brush Station",
+      "title_zh": "攀岩镁粉刷具工作站",
+      "dimensions_m": [
+        0.25,
+        0.27,
+        0.2
+      ],
+      "source_path": "src/models/climbing_chalk_brush_station.js",
+      "generator": "createClimbingChalkBrushStation",
+      "part_count": 41,
+      "inspiration_channel": "amazon",
+      "design_focus": "Bouldering brush rack and chalk-bag cradle",
+      "market_hypothesis": "sport",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "scifi.meteor-shield-array-satellite.001",
+      "slug": "meteor-shield-array-satellite",
+      "category": "scifi",
+      "title": "Meteor Shield Array Satellite",
+      "title_zh": "陨石防护阵列卫星",
+      "dimensions_m": [
+        0.34,
+        0.34,
+        0.32
+      ],
+      "source_path": "src/models/meteor_shield_array_satellite.js",
+      "generator": "createMeteorShieldArraySatellite",
+      "part_count": 48,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Original orbital craft with articulated shield arrays",
+      "market_hypothesis": "scifi",
+      "manufacturing_status": "not_audited"
+    },
+    {
+      "id": "scifi.alien-microbe-observation-vault.001",
+      "slug": "alien-microbe-observation-vault",
+      "category": "scifi",
+      "title": "Alien Microbe Observation Vault",
+      "title_zh": "外星微生物观测密室",
+      "dimensions_m": [
+        0.3,
+        0.32,
+        0.29
+      ],
+      "source_path": "src/models/alien_microbe_observation_vault.js",
+      "generator": "createAlienMicrobeObservationVault",
+      "part_count": 63,
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Speculative containment laboratory with separate specimen pods",
+      "market_hypothesis": "scifi",
+      "manufacturing_status": "not_audited"
+    }
+  ],
+  "manufacturing_status": "not_audited",
+  "sales_status": "not_measured"
+}
