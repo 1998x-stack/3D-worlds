@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "system_id": "six-wheel-rover",
+  "steps": [
+    {
+      "id": "chassis",
+      "label": "安装底盘",
+      "part_ids": [
+        "chassis"
+      ]
+    },
+    {
+      "id": "front",
+      "label": "装配前轮",
+      "part_ids": [
+        "chassis",
+        "wheel-left-front",
+        "wheel-right-front"
+      ]
+    },
+    {
+      "id": "middle",
+      "label": "装配中轮",
+      "part_ids": [
+        "chassis",
+        "wheel-left-front",
+        "wheel-right-front",
+        "wheel-left-middle",
+        "wheel-right-middle"
+      ]
+    },
+    {
+      "id": "complete",
+      "label": "安装后轮并完成六轮总成",
+      "part_ids": [
+        "chassis",
+        "wheel-left-front",
+        "wheel-right-front",
+        "wheel-left-middle",
+        "wheel-right-middle",
+        "wheel-left-rear",
+        "wheel-right-rear"
+      ]
+    }
+  ]
+}
