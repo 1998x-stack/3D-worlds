@@ -47,7 +47,7 @@ but the actual bit brand, wear and press-fit remain unknown.
 ## Offline slicer is NOT the printer
 
 Local prerequisites: OpenSCAD, Python dependencies from
-`requirements-print.txt` and optionally Ubuntu's `slic3r` CLI.
+`requirements-print.txt` and optionally Ubuntu's `prusa-slicer` CLI (or `slic3r` on supported older systems).
 
 ```bash
 # Cross-section, topology, volume, axis and envelopes — no slicer:
@@ -61,10 +61,10 @@ python3 scripts/audit_v14_cad_fit.py --with-slicer \
 
 The CLI uses demonstrative (not printer-qualified) parameters:
 **0.4-mm nozzle, 0.2-mm layers, 1.75-mm filament, three perimeters, 20% fill**.
-It checks that Slic3r produced real extrusions and multiple Z layers and
+It checks that the installed PrusaSlicer (or Slic3r fallback) produced real extrusions and multiple Z layers and
 records G-code hashes/size. Generated artifacts are for **human toolpath
 review only; never directly send to a printer**. See the
-[official Slic3r CLI usage](https://manual.slic3r.org/advanced/command-line).
+[PrusaSlicer Ubuntu 26.04 package](https://packages.ubuntu.com/resolute/amd64/prusa-slicer) and [Slic3r-compatible CLI usage](https://manual.slic3r.org/advanced/command-line).
 Neither producing G-code nor sampling selected STL sections qualifies as
 human layer inspection. All automated checks keep physical print and
 manufacturing certification fields at false/zero.

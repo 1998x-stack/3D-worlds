@@ -6,7 +6,7 @@ Two *independent* OpenSCAD candidates gain: a physically oriented
 soap-rim side-entry C, measured 14.4-mm nominal gap and 4-mm arms;
 6.85-mm AF driver-bit pockets with 6-mm nominal base; four watertight
 body/coupon STL test meshes; independent STL plane sections for hole,
-floor, drainage and jaw geometry; and an offline CLI Slic3r G-code
+floor, drainage and jaw geometry; and an offline CLI PrusaSlicer G-code
 generation gate. The **30 original visual GLBs remain blocked for
 manufacturing**. Human slicer review, actual fit samples, print safety,
 and material/load validation remain unperformed.

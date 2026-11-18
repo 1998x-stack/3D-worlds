@@ -159,7 +159,7 @@ OpenSCAD defaults are starting hypotheses, never actual fit-test evidence.
 A subsequent [V1.4.3 pilot runbook](v14-cad-fit-coupons.md) corrects
 the soap clip's mating-axis error, verifies selected actual STL
 cross-sections on two fully separate CAD bodies and two fit-test strips,
-and adds an offline Slic3r G-code generation CI gate. Only software
+and adds an offline PrusaSlicer G-code generation CI gate. Only software
 topology and selected geometry sections are measured. The 30 original
 V1.4 scene GLBs remain `mesh_blocked`, and no successful slice export
 implies G3 human approval, G4 physical fit, or G5 release readiness.
