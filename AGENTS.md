@@ -16,6 +16,22 @@ An acceptable agent change:
 
 **Never claim a successful test, production deploy, model count, LOD compression improvement, printer fit, physical test, legal clearance or commercial sales result without evidence from the actual run/source.**
 
+## V1.5 skill matrix and complex-system extension
+
+The canonical executable and metadata implementations remain in root `src/`, `catalog/`, `printables/` and `scripts/`; the new portable skills route work and provide verifiable structured inputs, not forked source-of-truth geometry engines.
+
+| User goal | Additional skill |
+| --- | --- |
+| Amazon/eBay/Hacker News inspired 30-model collection | `market-intelligence` before `procedural-model-design` |
+| Add/refine visually distinctive Three.js scene geometry | `procedural-model-design` + existing `threejs-model-builder` |
+| Create mm-dimensioned STL/3MF CAD prototypes | `parametric-print-cad` |
+| Future cars, aircraft, buildings, articulated mechanical systems | `assembly-world-systems` |
+| Test, review, release, deploy, catalog publication | `qa-and-release` |
+
+All five new skill types must be mirrored byte-for-byte in `.codex/skills/`, `.pi/skills/`, `.claude/skills/` including `SKILL.md`, `references/CONTRACT.md`, `scripts/check.py`, and `assets/brief.example.json`. Execute `python3 scripts/verify_skill_packages_v15.py` in addition to the legacy mirror checker. Follow [Architecture and proof gates](docs/skill-architecture-v15.md).
+
+Use release gate labels precisely: `source_committed`, `geometry_validated`, `rendered`, `cad_compiled`, `slicer_checked`, `physically_tested`. A visual GLB does not prove CAD printability or fit. The V1.5 batch records 30 original visual models across all 14 categories, with two optional CAD prototypes and no print-manufacturing approval.
+
 ## 1. Instruction precedence and where to read
 
 Follow, in order:
@@ -380,3 +396,7 @@ Do **not**:
   final fit, creep, hygiene, load, slicer profile, material and physical
   testing are all unverified. Use
   `docs/templates/v14-coupon-physical-fit-log.md` for real tests.
+
+## Release-integrity integration rules
+
+When merging independent asset PRs, preserve **all unique asset IDs** and source files, use separate release collections, and validate source metadata against the canonical catalog. The V1.5 and V1.6 integration has 30 non-overlapping models in each. Run `python scripts/catalog.py validate`, `python -m unittest discover -s tests`, `python scripts/verify_skill_packages_v15.py`, `node --test tests/v15_market_assets.test.mjs`, and both CAD/GLB pipeline gates. These gates do not authorize manufacturing claims. Never use `npm ci` without a committed npm lockfile; a future lockfile should replace non-reproducible installs.

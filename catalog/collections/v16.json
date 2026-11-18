@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v1.6",
+  "title": "V1.6 · Thirty Original Market-Signal 3D Scene Assets and Two CAD Candidates",
+  "license": "MIT",
+  "units": "m",
+  "up_axis": "Y",
+  "asset_count": 30,
+  "category_count": 14,
+  "category_counts": {
+    "furniture": 2,
+    "bathroom": 2,
+    "characters": 2,
+    "nature": 2,
+    "vehicles": 2,
+    "electronics": 3,
+    "decor": 2,
+    "kitchen": 2,
+    "architecture": 2,
+    "urban": 2,
+    "tools": 3,
+    "sports": 2,
+    "scifi": 2,
+    "print-commerce": 2
+  },
+  "assets": [
+    {
+      "category": "furniture",
+      "slug": "modular-rail-desk-shelf",
+      "title": "Modular Rail Desk Shelf",
+      "title_zh": "模块化轨道桌面层架",
+      "id": "furniture.modular-rail-desk-shelf.001",
+      "source_path": "src/models/modular_rail_desk_shelf.js",
+      "generator": "createModularRailDeskShelf",
+      "dimensions_m": [
+        0.42,
+        0.22,
+        0.23
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Dual-tier modular desk shelf with visible sliding bin channels and cable pass-through",
+      "refinement_focus": "双层轨道、滑动抽盒、背面理线",
+      "part_count": 21,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "furniture",
+      "slug": "pivot-book-display-stand",
+      "title": "Pivot Book Display Stand",
+      "title_zh": "可旋转书本陈列支架",
+      "id": "furniture.pivot-book-display-stand.001",
+      "source_path": "src/models/pivot_book_display_stand.js",
+      "generator": "createPivotBookDisplayStand",
+      "dimensions_m": [
+        0.3,
+        0.25,
+        0.23
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Angled manuscript book stand with twin pivot supports and elastic-looking page guards",
+      "refinement_focus": "倾斜书托、书页挡边、双侧轴套",
+      "part_count": 18,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "bathroom",
+      "slug": "vented-razor-drying-tower",
+      "title": "Vented Razor Drying Tower",
+      "title_zh": "镂空剃须刀晾置塔",
+      "id": "bathroom.vented-razor-drying-tower.001",
+      "source_path": "src/models/vented_razor_drying_tower.js",
+      "generator": "createVentedRazorDryingTower",
+      "dimensions_m": [
+        0.16,
+        0.27,
+        0.15
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Slatted bath-side drying tower with drip basin and tool cradle",
+      "refinement_focus": "纵向通风翼、滴水盆、独立刀柄槽",
+      "part_count": 24,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "bathroom",
+      "slug": "stackable-cotton-pad-caddy",
+      "title": "Stackable Cotton Pad Caddy",
+      "title_zh": "可叠放棉片整理塔",
+      "id": "bathroom.stackable-cotton-pad-caddy.001",
+      "source_path": "src/models/stackable_cotton_pad_caddy.js",
+      "generator": "createStackableCottonPadCaddy",
+      "dimensions_m": [
+        0.19,
+        0.22,
+        0.17
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Two offset open-sided dispensers and a handle loop for bathroom cotton pads",
+      "refinement_focus": "上下层开口、纸片导向柱、底部抽取槽",
+      "part_count": 19,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "characters",
+      "slug": "miniature-cartographer-bot",
+      "title": "Miniature Cartographer Bot",
+      "title_zh": "微型测绘机器人",
+      "id": "characters.miniature-cartographer-bot.001",
+      "source_path": "src/models/miniature_cartographer_bot.js",
+      "generator": "createMiniatureCartographerBot",
+      "dimensions_m": [
+        0.18,
+        0.27,
+        0.16
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Original explorer robot with rolled map drum, articulated legs and illuminated field display",
+      "refinement_focus": "地图卷筒、测距头、膝轴、背部工具背包",
+      "part_count": 28,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "characters",
+      "slug": "forest-seed-courier-figurine",
+      "title": "Forest Seed Courier Figurine",
+      "title_zh": "森林种子信使摆件",
+      "id": "characters.forest-seed-courier-figurine.001",
+      "source_path": "src/models/forest_seed_courier_figurine.js",
+      "generator": "createForestSeedCourierFigurine",
+      "dimensions_m": [
+        0.17,
+        0.28,
+        0.18
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Botanical messenger figurine with seed satchel, cape and layered leaf hood",
+      "refinement_focus": "种子背包、披风纹路、叶帽、木质路标",
+      "part_count": 30,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "nature",
+      "slug": "moss-terrace-rock-garden",
+      "title": "Moss Terrace Rock Garden",
+      "title_zh": "苔藓台地石景",
+      "id": "nature.moss-terrace-rock-garden.001",
+      "source_path": "src/models/moss_terrace_rock_garden.js",
+      "generator": "createMossTerraceRockGarden",
+      "dimensions_m": [
+        0.37,
+        0.16,
+        0.27
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Layered mossland sample terrain with stepped shale, stone boulders and tiny fungi",
+      "refinement_focus": "三级地形、页岩断层、苔藓簇和蘑菇",
+      "part_count": 35,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "nature",
+      "slug": "tidal-barnacle-study-tile",
+      "title": "Tidal Barnacle Study Tile",
+      "title_zh": "潮间带藤壶观察板",
+      "id": "nature.tidal-barnacle-study-tile.001",
+      "source_path": "src/models/tidal_barnacle_study_tile.js",
+      "generator": "createTidalBarnacleStudyTile",
+      "dimensions_m": [
+        0.35,
+        0.13,
+        0.25
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Rock pool specimen tile with starfish spokes, barnacle ring and algae bands",
+      "refinement_focus": "岩池、藤壶孔缘、海藻脊纹、海星",
+      "part_count": 33,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "vehicles",
+      "slug": "solar-campus-delivery-trike",
+      "title": "Solar Campus Delivery Trike",
+      "title_zh": "太阳能校园配送三轮车",
+      "id": "vehicles.solar-campus-delivery-trike.001",
+      "source_path": "src/models/solar_campus_delivery_trike.js",
+      "generator": "createSolarCampusDeliveryTrike",
+      "dimensions_m": [
+        0.36,
+        0.3,
+        0.25
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Utility cargo trike scene with rear loading basket, three wheels and canopy solar tiles",
+      "refinement_focus": "前独轮、后双轮、货箱格栅、车顶太阳能片",
+      "part_count": 26,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "vehicles",
+      "slug": "modular-rail-maintenance-cart",
+      "title": "Modular Rail Maintenance Cart",
+      "title_zh": "模块化轨道检修车",
+      "id": "vehicles.modular-rail-maintenance-cart.001",
+      "source_path": "src/models/modular_rail_maintenance_cart.js",
+      "generator": "createModularRailMaintenanceCart",
+      "dimensions_m": [
+        0.39,
+        0.28,
+        0.26
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Compact maintenance rail cart with removable tool pod and coil cable reel",
+      "refinement_focus": "轨距车轮、检修平台、线卷和警示条",
+      "part_count": 28,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "electronics",
+      "slug": "field-sensor-weather-node",
+      "title": "Field Sensor Weather Node",
+      "title_zh": "野外气象传感节点",
+      "id": "electronics.field-sensor-weather-node.001",
+      "source_path": "src/models/field_sensor_weather_node.js",
+      "generator": "createFieldSensorWeatherNode",
+      "dimensions_m": [
+        0.18,
+        0.33,
+        0.17
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Sculptural weather-sensing mockup with louvered radiation shield and service window",
+      "refinement_focus": "遮光百叶、传感帽、状态窗和安装脚",
+      "part_count": 29,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "electronics",
+      "slug": "slotted-mini-pc-airflow-case",
+      "title": "Slotted Mini PC Airflow Case",
+      "title_zh": "镂空迷你电脑散热机箱",
+      "id": "electronics.slotted-mini-pc-airflow-case.001",
+      "source_path": "src/models/slotted_mini_pc_airflow_case.js",
+      "generator": "createSlottedMiniPcAirflowCase",
+      "dimensions_m": [
+        0.22,
+        0.13,
+        0.23
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Original vented desktop mini-PC enclosure mockup with raised feet and rear connector panel",
+      "refinement_focus": "散热叶片、脚垫、端口面板、拆装螺钉",
+      "part_count": 40,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "electronics",
+      "slug": "cassette-wave-audio-dock",
+      "title": "Cassette Wave Audio Dock",
+      "title_zh": "磁带波形桌面音频座",
+      "id": "electronics.cassette-wave-audio-dock.001",
+      "source_path": "src/models/cassette_wave_audio_dock.js",
+      "generator": "createCassetteWaveAudioDock",
+      "dimensions_m": [
+        0.25,
+        0.22,
+        0.16
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Retro-futurist audio desk cradle with cassette-like front window and radial speaker grille",
+      "refinement_focus": "音频旋钮、磁带窗、栅格扬声口和托架",
+      "part_count": 30,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "decor",
+      "slug": "spiral-shadow-planter-plinth",
+      "title": "Spiral Shadow Planter Plinth",
+      "title_zh": "螺旋投影花盆底座",
+      "id": "decor.spiral-shadow-planter-plinth.001",
+      "source_path": "src/models/spiral_shadow_planter_plinth.js",
+      "generator": "createSpiralShadowPlanterPlinth",
+      "dimensions_m": [
+        0.24,
+        0.28,
+        0.24
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Botanical display pedestal with helical open ribs and a floating-look pot bowl",
+      "refinement_focus": "环形灯影格栅、悬浮盆托、螺旋叶瓣",
+      "part_count": 37,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "decor",
+      "slug": "constellation-wall-key-rack",
+      "title": "Constellation Wall Key Rack",
+      "title_zh": "星图式墙挂钥匙架",
+      "id": "decor.constellation-wall-key-rack.001",
+      "source_path": "src/models/constellation_wall_key_rack.js",
+      "generator": "createConstellationWallKeyRack",
+      "dimensions_m": [
+        0.32,
+        0.18,
+        0.08
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Night-sky board with branching constellation hooks and numbered entry badges",
+      "refinement_focus": "星图点线、挂钩列、悬挂定位孔",
+      "part_count": 25,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "kitchen",
+      "slug": "pour-over-brewing-display",
+      "title": "Pour-Over Brewing Display",
+      "title_zh": "手冲咖啡展示组件",
+      "id": "kitchen.pour-over-brewing-display.001",
+      "source_path": "src/models/pour_over_brewing_display.js",
+      "generator": "createPourOverBrewingDisplay",
+      "dimensions_m": [
+        0.25,
+        0.32,
+        0.22
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Stylized non-food-contact pour-over station scene with dripper, cup and height gauge",
+      "refinement_focus": "滤杯、环形支架、玻璃杯、滴液刻度",
+      "part_count": 26,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "kitchen",
+      "slug": "countertop-spice-index-carousel",
+      "title": "Countertop Spice Index Carousel",
+      "title_zh": "台式香料索引转盘",
+      "id": "kitchen.countertop-spice-index-carousel.001",
+      "source_path": "src/models/countertop_spice_index_carousel.js",
+      "generator": "createCountertopSpiceIndexCarousel",
+      "dimensions_m": [
+        0.25,
+        0.23,
+        0.24
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Rotating-look spice organizer with angled label faces and multi-ring bottle grouping",
+      "refinement_focus": "双环瓶位、索引刻度、中央把手",
+      "part_count": 39,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "architecture",
+      "slug": "modular-green-roof-corner",
+      "title": "Modular Green Roof Corner",
+      "title_zh": "模块化绿化屋顶转角",
+      "id": "architecture.modular-green-roof-corner.001",
+      "source_path": "src/models/modular_green_roof_corner.js",
+      "generator": "createModularGreenRoofCorner",
+      "dimensions_m": [
+        0.36,
+        0.25,
+        0.32
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Corner architectural section showing recycled rainwater channels and planted roof cassettes",
+      "refinement_focus": "梁柱、集雨槽、绿色屋顶、排水口",
+      "part_count": 40,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "architecture",
+      "slug": "parametric-stair-landing-bay",
+      "title": "Parametric Stair Landing Bay",
+      "title_zh": "参数化楼梯平台舱段",
+      "id": "architecture.parametric-stair-landing-bay.001",
+      "source_path": "src/models/parametric_stair_landing_bay.js",
+      "generator": "createParametricStairLandingBay",
+      "dimensions_m": [
+        0.38,
+        0.32,
+        0.26
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Architectural stair module with stepped treads, balustrades and landing edge",
+      "refinement_focus": "踏步阵列、扶手、踢面和平台对接梁",
+      "part_count": 30,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "urban",
+      "slug": "bike-repair-street-station",
+      "title": "Bike Repair Street Station",
+      "title_zh": "城市自行车修理站",
+      "id": "urban.bike-repair-street-station.001",
+      "source_path": "src/models/bike_repair_street_station.js",
+      "generator": "createBikeRepairStreetStation",
+      "dimensions_m": [
+        0.24,
+        0.36,
+        0.22
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Streetside DIY bike service pillar with tethered tool silhouettes and pump",
+      "refinement_focus": "轮托、气泵、工具挂点、维修指示牌",
+      "part_count": 27,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "urban",
+      "slug": "solar-wayfinding-bollard",
+      "title": "Solar Wayfinding Bollard",
+      "title_zh": "太阳能导视路桩",
+      "id": "urban.solar-wayfinding-bollard.001",
+      "source_path": "src/models/solar_wayfinding_bollard.js",
+      "generator": "createSolarWayfindingBollard",
+      "dimensions_m": [
+        0.15,
+        0.4,
+        0.16
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Low-energy-looking street orientation beacon with directional arrows and solar panel cap",
+      "refinement_focus": "导向箭头、太阳能冠盖、反光圈和螺栓脚座",
+      "part_count": 26,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "tools",
+      "slug": "precision-bit-calibration-tray",
+      "title": "Precision Bit Calibration Tray",
+      "title_zh": "精密批头分度托盘",
+      "id": "tools.precision-bit-calibration-tray.001",
+      "source_path": "src/models/precision_bit_calibration_tray.js",
+      "generator": "createPrecisionBitCalibrationTray",
+      "dimensions_m": [
+        0.26,
+        0.09,
+        0.16
+      ],
+      "inspiration_channel": "amazon",
+      "design_focus": "Bit storage gauge mockup with graded channels and individual index tabs",
+      "refinement_focus": "多规格夹槽、编号区、挡边、抓取凹位",
+      "part_count": 39,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "tools",
+      "slug": "folding-maker-clamp-jig",
+      "title": "Folding Maker Clamp Jig",
+      "title_zh": "折叠创客夹具治具",
+      "id": "tools.folding-maker-clamp-jig.001",
+      "source_path": "src/models/folding_maker_clamp_jig.js",
+      "generator": "createFoldingMakerClampJig",
+      "dimensions_m": [
+        0.25,
+        0.21,
+        0.19
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Non-load-rated visual jig with parallel jaws, lead screw and pivot lugs",
+      "refinement_focus": "双夹爪、丝杆螺纹、锁止轴、导轨底板",
+      "part_count": 33,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "tools",
+      "slug": "modular-soldering-helping-hands",
+      "title": "Modular Soldering Helping Hands",
+      "title_zh": "模块化焊接第三只手",
+      "id": "tools.modular-soldering-helping-hands.001",
+      "source_path": "src/models/modular_soldering_helping_hands.js",
+      "generator": "createModularSolderingHelpingHands",
+      "dimensions_m": [
+        0.27,
+        0.28,
+        0.22
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Electronics workholding display with four articulated cable arms and magnifier ring",
+      "refinement_focus": "四支万向臂、夹持爪、放大镜圈与托盘",
+      "part_count": 29,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "sports",
+      "slug": "climbing-grip-training-tile",
+      "title": "Climbing Grip Training Tile",
+      "title_zh": "攀岩抓点训练板",
+      "id": "sports.climbing-grip-training-tile.001",
+      "source_path": "src/models/climbing_grip_training_tile.js",
+      "generator": "createClimbingGripTrainingTile",
+      "dimensions_m": [
+        0.31,
+        0.32,
+        0.1
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Mini bouldering wall panel with handholds, footholds, mounting anchors and route markers",
+      "refinement_focus": "手点、脚点、路线色标、面板固定螺帽",
+      "part_count": 36,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "sports",
+      "slug": "portable-disc-golf-basket-mini",
+      "title": "Portable Disc Golf Basket Mini",
+      "title_zh": "便携飞盘高尔夫球篮模型",
+      "id": "sports.portable-disc-golf-basket-mini.001",
+      "source_path": "src/models/portable_disc_golf_basket_mini.js",
+      "generator": "createPortableDiscGolfBasketMini",
+      "dimensions_m": [
+        0.24,
+        0.32,
+        0.24
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "Decorative practice basket scale model with radial chain proxy and number plate",
+      "refinement_focus": "立柱、篮圈、链条挂点、编号牌",
+      "part_count": 41,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "scifi",
+      "slug": "lunar-seed-vault-pod",
+      "title": "Lunar Seed Vault Pod",
+      "title_zh": "月面种子档案舱",
+      "id": "scifi.lunar-seed-vault-pod.001",
+      "source_path": "src/models/lunar_seed_vault_pod.js",
+      "generator": "createLunarSeedVaultPod",
+      "dimensions_m": [
+        0.3,
+        0.26,
+        0.27
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Peaceful lunar botanical storage pod with sealed-looking capsule and sample armatures",
+      "refinement_focus": "圆顶仓体、种子匣、月岩底座、舱门铰链",
+      "part_count": 28,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "scifi",
+      "slug": "deep-space-observation-relay",
+      "title": "Deep Space Observation Relay",
+      "title_zh": "深空观测中继器",
+      "id": "scifi.deep-space-observation-relay.001",
+      "source_path": "src/models/deep_space_observation_relay.js",
+      "generator": "createDeepSpaceObservationRelay",
+      "dimensions_m": [
+        0.34,
+        0.31,
+        0.33
+      ],
+      "inspiration_channel": "hacker-news",
+      "design_focus": "Non-weapon orbital observation platform with dish antenna and articulated-looking solar wings",
+      "refinement_focus": "抛物面天线、光伏翼、姿态喷口和桁架",
+      "part_count": 45,
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "print-commerce",
+      "slug": "micro-screw-bin-lattice",
+      "title": "Micro Screw Bin Lattice",
+      "title_zh": "微型螺丝分格盒",
+      "id": "print-commerce.micro-screw-bin-lattice.001",
+      "source_path": "src/models/micro_screw_bin_lattice.js",
+      "generator": "createMicroScrewBinLattice",
+      "dimensions_m": [
+        0.148,
+        0.028,
+        0.092
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "CAD-backed eight-pocket micro fastener tray with raised front labels",
+      "refinement_focus": "2×4分格、独立标签、壁厚参数、可测量放置面",
+      "part_count": 29,
+      "cad_path": "printables/v15/micro-screw-bin-lattice.scad",
+      "manufacturing_status": "unverified_visual"
+    },
+    {
+      "category": "print-commerce",
+      "slug": "paint-pipette-drying-rack",
+      "title": "Paint Pipette Drying Rack",
+      "title_zh": "颜料滴管整理晾置座",
+      "id": "print-commerce.paint-pipette-drying-rack.001",
+      "source_path": "src/models/paint_pipette_drying_rack.js",
+      "generator": "createPaintPipetteDryingRack",
+      "dimensions_m": [
+        0.132,
+        0.02,
+        0.086
+      ],
+      "inspiration_channel": "ebay",
+      "design_focus": "CAD-backed paint-pipette socket rack with row labels and drainage-minded open slots",
+      "refinement_focus": "3×7孔位、前侧标识、无负重认证、清洗边界",
+      "part_count": 57,
+      "cad_path": "printables/v15/paint-pipette-drying-rack.scad",
+      "manufacturing_status": "unverified_visual"
+    }
+  ],
+  "reference_note": "Amazon public seller guidance, eBay listings and Hacker News technical discussions are qualitative cues, not orders, commercial permission or verified printed function.",
+  "source_evidence": "docs/30-assets-v16.md",
+  "release_stage": "source_candidate",
+  "visual_qa": "pending_runtime_CI",
+  "physical_testing": "not_performed"
+}

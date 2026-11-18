@@ -1,0 +1,32 @@
+{
+  "system_id": "example-six-wheel-rover",
+  "root_part": "chassis",
+  "parts": [
+    {
+      "id": "chassis",
+      "frame": "right-handed-y-up"
+    },
+    {
+      "id": "wheel-front-left",
+      "frame": "right-handed-y-up"
+    }
+  ],
+  "joints": [
+    {
+      "id": "front-axle",
+      "a": "chassis",
+      "b": "wheel-front-left",
+      "type": "revolute",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "limit_rad": [
+        -6.283,
+        6.283
+      ]
+    }
+  ],
+  "validation_stage": "graph_only"
+}

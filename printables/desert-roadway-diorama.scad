@@ -1,6 +1,9 @@
-// Desert Roadway Diorama | 沙漠公路微景观 | original parametric CAD prototype
-// CAD uses millimeters/Z-up; target dimensions [width,depth,height] mm.
-// Product hypothesis only; full slicer/manifold and real-print checks required.
+// SPDX-License-Identifier: MIT
+// desert-roadway-diorama | Overseas detail refinement batch 03 | original parametric prototype.
+// Millimeters, Z-up. Published envelope W x D x H = 133 x 90 x 75.
+// Keep this SKU's catalogue identity and family/variant unchanged.
 use <lib/commerce_forms.scad>
-resize([133,90,75],auto=false)
-    commercial_form(family="scenery",variant=2);
+use <lib/refined_batch03_v2_details.scad>
+w = 133; d = 90; h = 75;
+label = "CUSTOM";
+refined_batch03_v2_form(slug="desert-roadway-diorama",family="scenery",variant=2,w=w,d=d,h=h,label=label);
