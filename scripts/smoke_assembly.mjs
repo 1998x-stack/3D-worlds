@@ -14,7 +14,9 @@ try{
  if(await page.locator('#assembly-joints input[type=range]').count()!==6)throw Error('Expected six rotatable joints');
  await page.locator('#assembly-prev').click();
  if(!(await page.locator('#assembly-step-label').innerText()).includes('3/4'))throw Error('Assembly step failed');
- await page.locator('#assembly-explode').fill('0.45');
+ await page.locator('#assembly-explode').evaluate(el=>{
+  el.value='0.45';el.dispatchEvent(new Event('input',{bubbles:true}));
+ });
  if(!(await page.locator('#explode-value').innerText()).includes('0.45'))throw Error('Exploded view failed');
  await page.locator('#assembly-check').click();
  if(!(await page.locator('#assembly-status').innerText()).includes('代理盒体检测'))throw Error('Collision report missing');

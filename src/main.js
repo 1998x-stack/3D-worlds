@@ -61,7 +61,7 @@ root.innerHTML = `
   <header class="site-header">
     <a class="brand" href="./" aria-label="3D Worlds 首页"><span class="brand-mark">◈</span><span>3D<span class="brand-light">WORLDS</span></span><span class="brand-divider"></span><span class="brand-caption">ASSET LIBRARY</span></a>
     <nav class="header-links" aria-label="站点链接">
-      <a href="#collection" class="active-link">Explore</a><a href="#print-workflow">3D Print</a>
+      <a href="#collection" class="active-link">Explore</a><a href="./assembly.html">Assembly Lab</a><a href="#print-workflow">3D Print</a>
       <a href="https://github.com/1998x-stack/3D-worlds" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href="https://github.com/1998x-stack/3D-worlds/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer">Documentation ↗</a>
     </nav>

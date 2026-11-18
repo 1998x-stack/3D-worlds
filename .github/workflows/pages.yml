@@ -126,6 +126,8 @@ jobs:
         run: |
           node --test tests/assembly_core.test.mjs
           node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
+      - name: Verify deterministic assembly-step order
+        run: node --test tests/assembly_steps.test.mjs
       - name: Validate cache invalidation and shared-dependency fingerprints
         run: node --test tests/incremental_fingerprints.test.mjs
       - name: Verify portable standalone model source consumers
@@ -191,6 +193,8 @@ jobs:
           retention-days: 7
       - name: Build Vite static site
         run: npm run build
+      - name: Verify interactive Assembly Lab in a real Chromium browser
+        run: node scripts/smoke_assembly.mjs
       - name: Browser end-to-end smoke test
         run: node scripts/smoke_gallery.mjs
       - name: P2 browser integration against SQLite search API
