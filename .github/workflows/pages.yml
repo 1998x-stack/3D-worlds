@@ -71,14 +71,9 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
 
-  geometry-shard:
-    name: Validate geometry shard
+  geometry-part-0:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    strategy:
-      fail-fast: false
-      matrix:
-        offset: [0, 100, 200, 300, 400, 500, 600]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -86,10 +81,47 @@ jobs:
           node-version: '22'
       - name: Install geometry dependencies
         run: npm install --no-audit --no-fund
-      - name: Validate 100 original assets in isolated process
-        env:
-          GEOMETRY_OFFSET: ${{ matrix.offset }}
-        run: node scripts/validate_models.mjs --offset "$GEOMETRY_OFFSET" --limit 100
+      - name: Validate procedural assets 0 through 159
+        run: node scripts/validate_models.mjs --offset 0 --limit 160
+
+  geometry-part-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 160 through 319
+        run: node scripts/validate_models.mjs --offset 160 --limit 160
+
+  geometry-part-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 320 through 479
+        run: node scripts/validate_models.mjs --offset 320 --limit 160
+
+  geometry-part-3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install geometry dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate procedural assets 480 through 639
+        run: node scripts/validate_models.mjs --offset 480 --limit 160
 
   verify:
     runs-on: ubuntu-latest
@@ -241,7 +273,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [verify, cad-audit, geometry-shard]
+    needs: [verify, cad-audit, geometry-part-0, geometry-part-1, geometry-part-2, geometry-part-3]
     runs-on: ubuntu-latest
     permissions:
       contents: read
