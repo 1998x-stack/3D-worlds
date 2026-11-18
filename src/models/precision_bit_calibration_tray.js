@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Precision Bit Calibration Tray. 多规格夹槽、编号区、挡边、抓取凹位. Not physically print-tested. */
+/** V1.6 original visual design: Precision Bit Calibration Tray. 多规格夹槽、编号区、挡边、抓取凹位. Not physically print-tested. */
 export const assetMeta = {
   "id": "tools.precision-bit-calibration-tray.001",
   "slug": "precision-bit-calibration-tray",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "tray",
     "tools",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/precision-bit-calibration-tray.webp",
   "accent": "#8ca7c5",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

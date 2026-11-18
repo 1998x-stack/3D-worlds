@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Climbing Grip Training Tile. 手点、脚点、路线色标、面板固定螺帽. Not physically print-tested. */
+/** V1.6 original visual design: Climbing Grip Training Tile. 手点、脚点、路线色标、面板固定螺帽. Not physically print-tested. */
 export const assetMeta = {
   "id": "sports.climbing-grip-training-tile.001",
   "slug": "climbing-grip-training-tile",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "tile",
     "sports",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/climbing-grip-training-tile.webp",
   "accent": "#d2a586",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
