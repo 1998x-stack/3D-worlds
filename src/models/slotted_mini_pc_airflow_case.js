@@ -10,7 +10,6 @@ export const assetMeta = {
   "tags": [
     "slotted",
     "mini",
-    "pc",
     "airflow",
     "case",
     "electronics",

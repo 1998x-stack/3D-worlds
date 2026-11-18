@@ -14,11 +14,13 @@ class V15Batch(unittest.TestCase):
         cls.by_id={a["id"]:a for a in cls.all}
 
     def test_count_and_preserved_ids(self):
-        self.assertEqual(len(self.all),595)
+        self.assertGreaterEqual(len(self.all),595)
         self.assertEqual(self.batch["asset_count"],30)
         self.assertEqual(len(self.batch["assets"]),30)
-        self.assertEqual(len(set(a["id"] for a in self.all)),595)
-        self.assertEqual(len(set(a["slug"] for a in self.all)),595)
+        self.assertEqual(len(set(a["id"] for a in self.all)),len(self.all))
+        self.assertEqual(len(set(a["slug"] for a in self.all)),len(self.all))
+        self.assertEqual([a["id"] for a in self.all[565:595]],
+                         [a["id"] for a in self.batch["assets"]])
 
     def test_slug_tags_follow_catalog_regex(self):
         import re
@@ -67,6 +69,13 @@ class V15Batch(unittest.TestCase):
             self.assertIn("buildMarketV15",source)
             self.assertIn("export function "+a["generator"]+"()",source)
             self.assertIn("export const assetMeta",source)
+            meta=json.loads(source.split("export const assetMeta = ",1)[1]
+                            .split(";\nexport function",1)[0])
+            # Two-way source/manifest comparison prevents silent browsing vs API drift.
+            for key in ("id","slug","title","title_zh","summary","category","tags",
+                        "dimensions_m","generator","source_path","kind","license",
+                        "author","style","collection","preview_path","accent","provenance_note"):
+                self.assertEqual(meta[key],a[key],f"{a['id']} mismatched {key}")
         cad=[item for item in self.batch["assets"] if item.get("cad_path")]
         self.assertEqual(len(cad),2)
         for item in cad:
