@@ -190,22 +190,10 @@ function renderGrid() {
 }
 
 async function codeSnippet(asset) {
-  if (asset.kind !== 'procedural') throw Error('Imported GLB has no procedural source');
-  const helpers = stripImports(await getRawSource('primitives.js'));
-  const modelCode = stripImports(await getRawSource(asset.source_path.split('/').pop()));
-  const recipe = modelCode.includes('buildRecipe(') ?
-    stripImports(await getRawSource('recipe_engine.js')) + String.fromCharCode(10) : '';
-  return `// 3D Worlds · ${asset.title} · ${asset.license}
-// npm install three
-import * as THREE from 'three';
-
-${helpers}
-${recipe}
-${modelCode}
-// Add the model to your own THREE.Scene:
-const model = ${asset.generator}();
-scene.add(model);
-`;
+  if (asset.kind !== 'procedural' || !asset.source_path) throw Error('No procedural model source');
+  const { composePortableSource } = await import('./portable-source.js');
+  const filename = asset.source_path.split('/').pop();
+  return composePortableSource(filename, getRawSource, { title: asset.title, license: asset.license });
 }
 
 function loaderSnippet(asset) {
