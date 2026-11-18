@@ -38,7 +38,7 @@ class Batch02Tests(unittest.TestCase):
 
     def test_unmodified_published_ids_and_mm_envelopes(self):
         self.assertEqual(len(EXPECTED),20)
-        self.assertEqual(len(self.catalog),565)
+        self.assertEqual(len(self.catalog),595)
         for slug, (w, d, h) in EXPECTED.items():
             with self.subTest(slug=slug):
                 spec = self.catalog[slug]

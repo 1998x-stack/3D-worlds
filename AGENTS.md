@@ -84,7 +84,7 @@ When adding a single model or a batch, avoid producing cosmetic clones, renamed 
 1. Run or inspect `python3 scripts/catalog.py validate` and the latest `catalog/collections/` records.
 2. Determine currently occupied IDs, slugs, categories and source paths. **Compute counts from the manifest; do not copy a snapshot number from README into tests.**
 3. Classify each proposal by user value, geometric identity, expected use case, detail burden and print-risk category.
-4. For market-inspired suggestions, record only the **qualitative** observation and original design intent. Amazon/eBay/Hacker News are research channels, not model file sources or proof of purchases.
+4. For market-inspired suggestions, record only the **qualitative** observation and original design intent. Amazon/eBay/Hacker News are research channels, not model file sources or proof of purchases. For batch market research use [market-originality Skill protocol](.codex/skills/threejs-model-builder/references/MARKET-ORIGINALITY.md).
 5. Check any proposed asset name against the catalog to avoid duplicates and unintended derivatives.
 
 ### Step B — author a cohesive design

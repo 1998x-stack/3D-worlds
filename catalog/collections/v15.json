@@ -1,0 +1,667 @@
+{
+  "schema_version": "1.0.0",
+  "version": "v1.5",
+  "title": "Thirty Original Market-Inspired Procedural Scenes",
+  "units": "m",
+  "up_axis": "Y",
+  "license": "MIT",
+  "asset_count": 30,
+  "category_count": 13,
+  "category_counts": {
+    "furniture": 3,
+    "bathroom": 2,
+    "characters": 2,
+    "nature": 2,
+    "vehicles": 2,
+    "electronics": 3,
+    "decor": 3,
+    "kitchen": 2,
+    "architecture": 2,
+    "urban": 2,
+    "tools": 3,
+    "sports": 2,
+    "scifi": 2
+  },
+  "assets": [
+    {
+      "id": "furniture.adaptive-bookend-clamp-desk.001",
+      "category": "furniture",
+      "slug": "adaptive-bookend-clamp-desk",
+      "title": "Adaptive Bookend Clamp Desk",
+      "title_zh": "自适应书挡夹持台",
+      "source_path": "src/models/adaptive_bookend_clamp_desk.js",
+      "generator": "createAdaptiveBookendClampDesk",
+      "dimensions_m": [
+        0.32,
+        0.19,
+        0.18
+      ],
+      "part_count": 38,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "bookends",
+        "gauge"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "furniture.vertical-controller-valet.001",
+      "category": "furniture",
+      "slug": "vertical-controller-valet",
+      "title": "Vertical Controller Valet",
+      "title_zh": "竖置手柄收纳站",
+      "source_path": "src/models/vertical_controller_valet.js",
+      "generator": "createVerticalControllerValet",
+      "dimensions_m": [
+        0.22,
+        0.29,
+        0.16
+      ],
+      "part_count": 36,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "cradle",
+        "console"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "furniture.slide-track-accessory-riser.001",
+      "category": "furniture",
+      "slug": "slide-track-accessory-riser",
+      "title": "Slide Track Accessory Riser",
+      "title_zh": "滑轨桌面配件台",
+      "source_path": "src/models/slide_track_accessory_riser.js",
+      "generator": "createSlideTrackAccessoryRiser",
+      "dimensions_m": [
+        0.35,
+        0.15,
+        0.26
+      ],
+      "part_count": 36,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "frame",
+        "tray"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "bathroom.razor-airflow-cantilever.001",
+      "category": "bathroom",
+      "slug": "razor-airflow-cantilever",
+      "title": "Razor Airflow Cantilever",
+      "title_zh": "剃须刀通风悬臂架",
+      "source_path": "src/models/razor_airflow_cantilever.js",
+      "generator": "createRazorAirflowCantilever",
+      "dimensions_m": [
+        0.19,
+        0.19,
+        0.12
+      ],
+      "part_count": 55,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "drain",
+        "cradle"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "bathroom.squeegee-pivot-dock.001",
+      "category": "bathroom",
+      "slug": "squeegee-pivot-dock",
+      "title": "Squeegee Pivot Dock",
+      "title_zh": "刮水器旋转停靠座",
+      "source_path": "src/models/squeegee_pivot_dock.js",
+      "generator": "createSqueegeePivotDock",
+      "dimensions_m": [
+        0.18,
+        0.24,
+        0.13
+      ],
+      "part_count": 57,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "hinge",
+        "drain"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "characters.filament-scout-figurine.001",
+      "category": "characters",
+      "slug": "filament-scout-figurine",
+      "title": "Filament Scout Figurine",
+      "title_zh": "耗材巡检机器人",
+      "source_path": "src/models/filament_scout_figurine.js",
+      "generator": "createFilamentScoutFigurine",
+      "dimensions_m": [
+        0.19,
+        0.28,
+        0.19
+      ],
+      "part_count": 39,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "robot",
+        "spool"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "characters.pollinator-gardener-figurine.001",
+      "category": "characters",
+      "slug": "pollinator-gardener-figurine",
+      "title": "Pollinator Gardener Figurine",
+      "title_zh": "授粉园丁摆件",
+      "source_path": "src/models/pollinator_gardener_figurine.js",
+      "generator": "createPollinatorGardenerFigurine",
+      "dimensions_m": [
+        0.18,
+        0.28,
+        0.17
+      ],
+      "part_count": 68,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "robot",
+        "plant"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "nature.pollinator-corridor-habitat.001",
+      "category": "nature",
+      "slug": "pollinator-corridor-habitat",
+      "title": "Pollinator Corridor Habitat",
+      "title_zh": "传粉昆虫栖地微景观",
+      "source_path": "src/models/pollinator_corridor_habitat.js",
+      "generator": "createPollinatorCorridorHabitat",
+      "dimensions_m": [
+        0.29,
+        0.27,
+        0.2
+      ],
+      "part_count": 57,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "hex",
+        "plant"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "nature.root-window-terrarium.001",
+      "category": "nature",
+      "slug": "root-window-terrarium",
+      "title": "Root Window Terrarium",
+      "title_zh": "透明根系观察缸",
+      "source_path": "src/models/root_window_terrarium.js",
+      "generator": "createRootWindowTerrarium",
+      "dimensions_m": [
+        0.25,
+        0.28,
+        0.19
+      ],
+      "part_count": 69,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "root",
+        "plant"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "vehicles.last-mile-delivery-trike.001",
+      "category": "vehicles",
+      "slug": "last-mile-delivery-trike",
+      "title": "Last Mile Delivery Trike",
+      "title_zh": "末端配送三轮车",
+      "source_path": "src/models/last_mile_delivery_trike.js",
+      "generator": "createLastMileDeliveryTrike",
+      "dimensions_m": [
+        0.39,
+        0.24,
+        0.22
+      ],
+      "part_count": 40,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "wheels",
+        "crate"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "vehicles.warehouse-tug-micro-ev.001",
+      "category": "vehicles",
+      "slug": "warehouse-tug-micro-ev",
+      "title": "Warehouse Tug Micro EV",
+      "title_zh": "仓储牵引微型车",
+      "source_path": "src/models/warehouse_tug_micro_ev.js",
+      "generator": "createWarehouseTugMicroEv",
+      "dimensions_m": [
+        0.41,
+        0.22,
+        0.24
+      ],
+      "part_count": 33,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "wheels",
+        "cab"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "electronics.macro-pad-command-deck.001",
+      "category": "electronics",
+      "slug": "macro-pad-command-deck",
+      "title": "Macro Pad Command Deck",
+      "title_zh": "宏键指令控制台",
+      "source_path": "src/models/macro_pad_command_deck.js",
+      "generator": "createMacroPadCommandDeck",
+      "dimensions_m": [
+        0.24,
+        0.09,
+        0.18
+      ],
+      "part_count": 45,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "console",
+        "grid"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "electronics.vented-router-suspension-bracket.001",
+      "category": "electronics",
+      "slug": "vented-router-suspension-bracket",
+      "title": "Vented Router Suspension Bracket",
+      "title_zh": "通风路由器悬挂架",
+      "source_path": "src/models/vented_router_suspension_bracket.js",
+      "generator": "createVentedRouterSuspensionBracket",
+      "dimensions_m": [
+        0.27,
+        0.19,
+        0.17
+      ],
+      "part_count": 59,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "frame",
+        "drain"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "electronics.electronics-repair-sorting-tray.001",
+      "category": "electronics",
+      "slug": "electronics-repair-sorting-tray",
+      "title": "Electronics Repair Sorting Tray",
+      "title_zh": "电子维修分区托盘",
+      "source_path": "src/models/electronics_repair_sorting_tray.js",
+      "generator": "createElectronicsRepairSortingTray",
+      "dimensions_m": [
+        0.31,
+        0.075,
+        0.22
+      ],
+      "part_count": 47,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "tray",
+        "grid"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "decor.kinetic-moire-desk-orbit.001",
+      "category": "decor",
+      "slug": "kinetic-moire-desk-orbit",
+      "title": "Kinetic Moire Desk Orbit",
+      "title_zh": "莫尔纹桌面星环",
+      "source_path": "src/models/kinetic_moire_desk_orbit.js",
+      "generator": "createKineticMoireDeskOrbit",
+      "dimensions_m": [
+        0.26,
+        0.32,
+        0.23
+      ],
+      "part_count": 47,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "ring",
+        "gauge"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "decor.celestial-shadow-lattice.001",
+      "category": "decor",
+      "slug": "celestial-shadow-lattice",
+      "title": "Celestial Shadow Lattice",
+      "title_zh": "星象投影格栅摆件",
+      "source_path": "src/models/celestial_shadow_lattice.js",
+      "generator": "createCelestialShadowLattice",
+      "dimensions_m": [
+        0.25,
+        0.31,
+        0.25
+      ],
+      "part_count": 45,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "ring",
+        "panel"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "decor.stacked-ripple-vase-display.001",
+      "category": "decor",
+      "slug": "stacked-ripple-vase-display",
+      "title": "Stacked Ripple Vase Display",
+      "title_zh": "层叠涟漪花器",
+      "source_path": "src/models/stacked_ripple_vase_display.js",
+      "generator": "createStackedRippleVaseDisplay",
+      "dimensions_m": [
+        0.22,
+        0.32,
+        0.22
+      ],
+      "part_count": 54,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "vase",
+        "plant"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "kitchen.sponge-airlift-drain-bridge.001",
+      "category": "kitchen",
+      "slug": "sponge-airlift-drain-bridge",
+      "title": "Sponge Airlift Drain Bridge",
+      "title_zh": "悬浮海绵沥水桥",
+      "source_path": "src/models/sponge_airlift_drain_bridge.js",
+      "generator": "createSpongeAirliftDrainBridge",
+      "dimensions_m": [
+        0.23,
+        0.11,
+        0.17
+      ],
+      "part_count": 46,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "drain",
+        "tray"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "kitchen.tea-sachet-flip-library.001",
+      "category": "kitchen",
+      "slug": "tea-sachet-flip-library",
+      "title": "Tea Sachet Flip Library",
+      "title_zh": "翻页茶包收纳柜",
+      "source_path": "src/models/tea_sachet_flip_library.js",
+      "generator": "createTeaSachetFlipLibrary",
+      "dimensions_m": [
+        0.28,
+        0.18,
+        0.2
+      ],
+      "part_count": 44,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "tray",
+        "panel"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "architecture.kinetic-privacy-facade.001",
+      "category": "architecture",
+      "slug": "kinetic-privacy-facade",
+      "title": "Kinetic Privacy Facade",
+      "title_zh": "动态隐私立面",
+      "source_path": "src/models/kinetic_privacy_facade.js",
+      "generator": "createKineticPrivacyFacade",
+      "dimensions_m": [
+        0.32,
+        0.34,
+        0.13
+      ],
+      "part_count": 71,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "panel",
+        "frame"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "architecture.cross-laminate-joint-study.001",
+      "category": "architecture",
+      "slug": "cross-laminate-joint-study",
+      "title": "Cross Laminate Joint Study",
+      "title_zh": "交错层板榫接研究",
+      "source_path": "src/models/cross_laminate_joint_study.js",
+      "generator": "createCrossLaminateJointStudy",
+      "dimensions_m": [
+        0.32,
+        0.26,
+        0.23
+      ],
+      "part_count": 32,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "frame",
+        "joinery"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "urban.micro-mobility-parking-node.001",
+      "category": "urban",
+      "slug": "micro-mobility-parking-node",
+      "title": "Micro Mobility Parking Node",
+      "title_zh": "微出行停靠节点",
+      "source_path": "src/models/micro_mobility_parking_node.js",
+      "generator": "createMicroMobilityParkingNode",
+      "dimensions_m": [
+        0.42,
+        0.24,
+        0.28
+      ],
+      "part_count": 44,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "roof",
+        "wheels"
+      ],
+      "stage": "visual_prototype_unverified",
+      "geometry_revision": "1.5.1"
+    },
+    {
+      "id": "urban.urban-bioswale-measurement-bay.001",
+      "category": "urban",
+      "slug": "urban-bioswale-measurement-bay",
+      "title": "Urban Bioswale Measurement Bay",
+      "title_zh": "城市雨水花园观测单元",
+      "source_path": "src/models/urban_bioswale_measurement_bay.js",
+      "generator": "createUrbanBioswaleMeasurementBay",
+      "dimensions_m": [
+        0.43,
+        0.24,
+        0.29
+      ],
+      "part_count": 55,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "plant",
+        "gauge"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "tools.fastener-calibration-rack.001",
+      "category": "tools",
+      "slug": "fastener-calibration-rack",
+      "title": "Fastener Calibration Rack",
+      "title_zh": "紧固件规格展示架",
+      "source_path": "src/models/fastener_calibration_rack.js",
+      "generator": "createFastenerCalibrationRack",
+      "dimensions_m": [
+        0.29,
+        0.11,
+        0.18
+      ],
+      "part_count": 48,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "hex",
+        "gauge"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "tools.clamp-jaw-fixture-library.001",
+      "category": "tools",
+      "slug": "clamp-jaw-fixture-library",
+      "title": "Clamp Jaw Fixture Library",
+      "title_zh": "可换钳口夹具库",
+      "source_path": "src/models/clamp_jaw_fixture_library.js",
+      "generator": "createClampJawFixtureLibrary",
+      "dimensions_m": [
+        0.3,
+        0.16,
+        0.2
+      ],
+      "part_count": 38,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "cradle",
+        "tool"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "tools.drill-depth-reference-gauge.001",
+      "category": "tools",
+      "slug": "drill-depth-reference-gauge",
+      "title": "Drill Depth Reference Gauge",
+      "title_zh": "钻孔深度基准尺",
+      "source_path": "src/models/drill_depth_reference_gauge.js",
+      "generator": "createDrillDepthReferenceGauge",
+      "dimensions_m": [
+        0.22,
+        0.28,
+        0.17
+      ],
+      "part_count": 46,
+      "inspiration_channel": "amazon",
+      "motifs": [
+        "gauge",
+        "tool"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "sports.pickleball-paddle-care-tree.001",
+      "category": "sports",
+      "slug": "pickleball-paddle-care-tree",
+      "title": "Pickleball Paddle Care Tree",
+      "title_zh": "匹克球拍保养挂架",
+      "source_path": "src/models/pickleball_paddle_care_tree.js",
+      "generator": "createPickleballPaddleCareTree",
+      "dimensions_m": [
+        0.26,
+        0.29,
+        0.2
+      ],
+      "part_count": 36,
+      "inspiration_channel": "ebay",
+      "motifs": [
+        "paddle",
+        "cradle"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "sports.cycle-chain-service-valet.001",
+      "category": "sports",
+      "slug": "cycle-chain-service-valet",
+      "title": "Cycle Chain Service Valet",
+      "title_zh": "自行车链条保养台",
+      "source_path": "src/models/cycle_chain_service_valet.js",
+      "generator": "createCycleChainServiceValet",
+      "dimensions_m": [
+        0.28,
+        0.19,
+        0.19
+      ],
+      "part_count": 54,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "chain",
+        "tool"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "scifi.orbital-cartography-console.001",
+      "category": "scifi",
+      "slug": "orbital-cartography-console",
+      "title": "Orbital Cartography Console",
+      "title_zh": "轨道制图导航台",
+      "source_path": "src/models/orbital_cartography_console.js",
+      "generator": "createOrbitalCartographyConsole",
+      "dimensions_m": [
+        0.31,
+        0.32,
+        0.28
+      ],
+      "part_count": 45,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "ring",
+        "console"
+      ],
+      "stage": "visual_prototype_unverified"
+    },
+    {
+      "id": "scifi.bio-lumen-explorer-pod.001",
+      "category": "scifi",
+      "slug": "bio-lumen-explorer-pod",
+      "title": "Bio Lumen Explorer Pod",
+      "title_zh": "生物光探测舱",
+      "source_path": "src/models/bio_lumen_explorer_pod.js",
+      "generator": "createBioLumenExplorerPod",
+      "dimensions_m": [
+        0.32,
+        0.3,
+        0.31
+      ],
+      "part_count": 49,
+      "inspiration_channel": "hacker-news",
+      "motifs": [
+        "pod",
+        "ring"
+      ],
+      "stage": "visual_prototype_unverified"
+    }
+  ],
+  "manufacturing_status": "not_audited",
+  "sales_status": "not_measured"
+}
