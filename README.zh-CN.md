@@ -2,7 +2,7 @@
 
 **[English](README.md) · [在线模型库](https://1998x-stack.github.io/3D-worlds/) · [打印工作台](https://1998x-stack.github.io/3D-worlds/#print-workflow) · [CI 状态](https://github.com/1998x-stack/3D-worlds/actions/workflows/pages.yml)**
 
-3D Worlds 将 **565 个可编辑程序化 Three.js 模型、14 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
+3D Worlds 将 **625 个可编辑程序化 Three.js 模型、14 个类别、GLB 游戏资产、SQLite/MCP 和 STL/3MF 制造候选文件**整合到同一开源项目。网页负责交互式预览与未审核 STL 草稿；本地 Python 负责基础网格审查、3MF 打包、分件和报告。
 
 > **关键：** P0/P1/P2 是工程任务优先级，不是可打印性评分；通过 CLI 几何审核也不等于切片或实体打印成功。当前模型默认未经制造验证。
 
@@ -53,7 +53,7 @@ CI 还会尝试生成离线 PrusaSlicer G-code 供人工分层审查。
 
 
 在原有 535 个模型的基础上新增 30 个原创、可编辑的 Three.js 创意资产，
-现为 **565 个模型 / 14 个类别**（新增模型覆盖 13 个通用场景类别）。
+现为 **625 个模型 / 14 个类别**（新增模型覆盖 13 个通用场景类别）。
 研究方向包括 Amazon/eBay 桌面收纳与园艺配件，以及 Hacker News
 中的 OpenSCAD、Build123d 和模块化电子设计。均为原创可视化模型，
 不是未经校验就可以销售或实际承重的 3D 打印文件。
@@ -173,3 +173,7 @@ npm run test:gallery
 ## V1.5 · 30 款市场启发的原创精细模型（2026-11-18）
 
 新增 [V1.5 原创系列](catalog/collections/v15.json)，覆盖全部 **14 类别、30 个独立可编辑 Three.js 模型**（登记总量 565 → 595）。参考 Amazon 卖家研究、eBay 在售细分类目及 Hacker News 创客讨论，但**不复制第三方模型，不声称取得销量数据**。详细设计与工程边界见 [30 款资产说明](docs/30-assets-v15.md)。其中两款收纳产品另有 [OpenSCAD 参数化候选 CAD](printables/v15/)（mm / Z 向上），可进行几何审查；尚未经过切片、实体打印、配合与商业销售认证。其他 28 款是视觉场景模型，不能直接视为制造级 STL。
+
+## V1.6 · 新增第二批 30 款原创模型与五类可移植 Skills
+
+集成分支将原 565 个资产、V1.5 的 30 款，以及 **另一套不重复的 V1.6 30 款**合并，总数为 **625**。两批各有独立集合文件：[V1.5](catalog/collections/v15.json)、[V1.6](catalog/collections/v16.json)；五类 Skills 同步于 `.codex/`、`.claude/` 和 `.pi/`。V1.5/V1.6 的四款 CAD 仍为未认证候选，不能将 Three.js 可视化模型视为可制造产品。

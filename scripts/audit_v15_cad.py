@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile two original V1.5 CAD prototypes and audit STL geometry, not physical fitness."""
+"""Compile four original V1.5/V1.6 CAD prototypes and audit STL geometry, not physical fitness."""
 from __future__ import annotations
 import argparse, hashlib, json, os, shutil, subprocess
 from pathlib import Path
@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 SPECS={
     "camera-battery-organizer": (150.0,96.0,22.0),
     "label-front-parts-bin": (124.0,84.0,36.0),
+    "micro-screw-bin-lattice": (148.0,92.0,28.0),
+    "paint-pipette-drying-rack": (132.0,86.0,20.0),
 }
 
 def audit(output: Path) -> dict:
@@ -56,4 +58,4 @@ if __name__=="__main__":
     ap.add_argument("--output",type=Path,default=ROOT/".cache/print/v15-cad-audit.json")
     args=ap.parse_args()
     report=audit(args.output)
-    print("V1.5 CAD geometry only:",report["models_checked"],"STL candidates; NOT print certified")
+    print("V1.5/V1.6 CAD geometry only:",report["models_checked"],"STL candidates; NOT print certified")

@@ -51,6 +51,10 @@ jobs:
         env:
           QT_QPA_PLATFORM: offscreen
         run: python3 scripts/audit_refined_commerce_batch03.py --output .cache/print/refined-batch-03-audit.json
+      - name: Audit all four V1.5 + V1.6 CAD candidates (geometry only)
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python3 scripts/audit_v15_cad.py --output .cache/print/v15-cad-audit.json
       - name: Archive independently checked CAD reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -60,6 +64,8 @@ jobs:
             .cache/print/refined-batch-01-audit.json
             .cache/print/refined-batch-02-audit.json
             .cache/print/refined-batch-03-audit.json
+            .cache/print/v15-cad-audit.json
+            .cache/print/v15-cad-stl/*.stl
             .cache/print-cad-test/*.stl
             .cache/print-cad-test/*.3mf
           if-no-files-found: warn
@@ -79,6 +85,7 @@ jobs:
       - name: Validate three portable Skill packages and references
         run: |
           python scripts/verify_skill_mirrors.py
+          python scripts/verify_skill_packages_v15.py
           python .codex/skills/threejs-model-builder/scripts/preflight.py --json
       - name: Install opt-in print geometry test dependencies
         run: python -m pip install -r requirements-print.txt
@@ -113,6 +120,8 @@ jobs:
         run: node scripts/validate_models.mjs
       - name: Validate refined Three.js detail geometry and canonical dimensions
         run: npm run test:refined-commerce
+      - name: Validate V1.5 original market geometry and stable dimensions
+        run: node --test tests/v15_market_assets.test.mjs
       - name: Test GLB validator and batch ingest
         run: node scripts/test_ingest.mjs
       - name: Install headless Chromium for asset rendering

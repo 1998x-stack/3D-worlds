@@ -396,3 +396,7 @@ Do **not**:
   final fit, creep, hygiene, load, slicer profile, material and physical
   testing are all unverified. Use
   `docs/templates/v14-coupon-physical-fit-log.md` for real tests.
+
+## Release-integrity integration rules
+
+When merging independent asset PRs, preserve **all unique asset IDs** and source files, use separate release collections, and validate source metadata against the canonical catalog. The V1.5 and V1.6 integration has 30 non-overlapping models in each. Run `python scripts/catalog.py validate`, `python -m unittest discover -s tests`, `python scripts/verify_skill_packages_v15.py`, `node --test tests/v15_market_assets.test.mjs`, and both CAD/GLB pipeline gates. These gates do not authorize manufacturing claims. Never use `npm ci` without a committed npm lockfile; a future lockfile should replace non-reproducible installs.

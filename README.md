@@ -523,3 +523,11 @@ For a release, review the commit diff, run the right gates, inspect representati
 ---
 
 **Build original assets. Keep provenance inspectable. Verify what you can measure. Never mistake a visual preview for physical-world certification.**
+
+## Integrated V1.5 + V1.6 candidate batches (review branch)
+
+The release-integrity integration preserves **625 unique procedural model IDs** across 14 categories: the existing 565 historical assets, 30 V1.5 refined market models (PR #31) and 30 *different* V1.6 skill-guided originals (PR #32). See [V1.5](catalog/collections/v15.json), [V1.6](catalog/collections/v16.json), [design notes](docs/30-assets-v15.md) and [V1.6 briefs](docs/30-assets-v16.md).
+
+Both sets remain independently authored visual geometry, not manufacturing CAD. Four separate original OpenSCAD CAD **candidates** are in `printables/v15/`; they require measured wall, slicer, fit, materials and physical review before any functional claim. PR #27's final 20 overseas detail refinements are included in this integration. CI checks original geometry, all portable Skills, all four CAD candidates and browser builds; no physical testing is claimed.
+
+For new batches use new release collections (e.g. V1.7), never replace existing IDs or silently reinterpret an existing collection.
