@@ -201,7 +201,7 @@ export function createPaintPipetteDryingRack() {
       ],
       "d": [
         0.23,
-        0,
+        0.08,
         0
       ],
       "s": [

@@ -33,6 +33,26 @@ class V15Batch(unittest.TestCase):
         self.assertEqual(observed,categories)
         self.assertEqual(sum(self.batch["category_counts"].values()),30)
 
+    def test_unique_layout_footprint_and_source_part_counts(self):
+        for detail in self.batch["assets"]:
+            a=self.by_id[detail["id"]]
+            src=(ROOT/a["source_path"]).read_text(encoding="utf-8")
+            spec=json.loads(src.split("return buildMarketV15(",1)[1].split(");\n}",1)[0])
+            patterns=spec["patterns"]
+            self.assertGreaterEqual(len(patterns),2)
+            count=len(spec["body"])+sum(
+                p["nx"]*p["nz"] if p["k"]=="grid" else p["count"]
+                for p in patterns
+            )
+            self.assertEqual(count,detail["part_count"])
+            for p in patterns:
+                with self.subTest(slug=detail["slug"],pattern=p["n"]):
+                    if p["k"]=="grid" and p["nz"]>1:
+                        self.assertTrue(p["d"][1]!=0 or p["d"][2]!=0,
+                                        "Overlapping repeated grid rows")
+                    if p["k"]=="line" and p["count"]>1:
+                        self.assertTrue(any(step != 0 for step in p["d"]))
+
     def test_source_metadata_and_separate_cad(self):
         for detail in self.batch["assets"]:
             a=self.by_id[detail["id"]]

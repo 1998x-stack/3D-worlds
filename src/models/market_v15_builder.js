@@ -32,7 +32,12 @@ export function buildMarketV15(config) {
     for(let i=0;i<count;i++){
       let p;
       if(k==='line') p=o.map((v,axis)=>v+pattern.d[axis]*i);
-      else if(k==='grid') p=o.map((v,axis)=>v+pattern.d[axis]*(axis===2?Math.floor(i/pattern.nx):axis===0?i%pattern.nx:0));
+      else if(k==='grid') {
+        const row=Math.floor(i/pattern.nx), column=i%pattern.nx;
+        if (pattern.d[1]===0 && pattern.d[2]===0 && pattern.nz>1)
+          throw Error('Grid rows overlap in '+config.title+'/'+n);
+        p=[o[0]+pattern.d[0]*column, o[1]+pattern.d[1]*row, o[2]+pattern.d[2]*row];
+      }
       else if(k==='radial') {const a=2*Math.PI*i/count;p=[o[0]+Math.cos(a)*pattern.r,o[1],o[2]+Math.sin(a)*pattern.r];}
       else throw Error('Unknown layout '+k);
       // Pattern rods have a documented upright stick envelope, unlike fused solid geometry.

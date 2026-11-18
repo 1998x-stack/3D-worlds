@@ -201,7 +201,7 @@ export function createMicroScrewBinLattice() {
       ],
       "d": [
         0.45,
-        0,
+        0.08,
         0
       ],
       "s": [
