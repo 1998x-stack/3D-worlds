@@ -76,7 +76,7 @@ the soap bridge uses a corrected **side-entry C-profile** with a measured
 14.4-mm nominal lip gap, and the hex bit rack has measured 6.85-mm AF
 pockets and a 6.0-mm pocket floor. Two CAD bodies and two three-clearance coupon strips (four STL solids)
 undergo actual triangle cross-section checks, and CI runs an
-**offline Slic3r toolpath export** (no printer connection).
+**offline PrusaSlicer toolpath export** (no printer connection).
 
 **NOT tested:** real rim and driver-bit dimensions, physical printed
 coupons, part-load strength, global min wall thickness, human slicer layer

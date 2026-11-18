@@ -372,7 +372,7 @@ Do **not**:
   clip opening direction/upper-lower arms, hex opening AF, floors
   and all three test clearances. Do not call selected cross-sections
   global wall-thickness metrology.
-- For offline slicing CI installs Ubuntu `slic3r`; run
+- For offline slicing CI installs Ubuntu 26.04 `prusa-slicer` (with legacy `slic3r` CLI fallback); run
   `python3 scripts/audit_v14_cad_fit.py --with-slicer`.
   A G-code file **must not** be sent to any printer: generated machine
   assumptions are generic and have not received human layer review.
