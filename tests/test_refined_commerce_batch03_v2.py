@@ -11,6 +11,8 @@ class SecondPassTests(unittest.TestCase):
     def setUpClass(cls):
         cls.catalog = {x['slug']: x for x in json.loads(
             (ROOT/'catalog/models.json').read_text(encoding='utf-8'))['assets']}
+        cls.collection = {x['slug']: x for x in json.loads(
+            (ROOT/'catalog/collections/print-commerce-v13.json').read_text(encoding='utf-8'))['assets']}
 
     def test_each_of_twenty_cad_models_has_second_pass_coverage(self):
         cad=(ROOT/'printables/lib/refined_batch03_v2_details.scad').read_text(encoding='utf-8')
@@ -26,7 +28,7 @@ class SecondPassTests(unittest.TestCase):
                 item=self.catalog[slug]
                 self.assertEqual(item['id'],f'print-commerce.{slug}.001')
                 self.assertEqual(item['dimensions_m'],[dim['w']/1000,dim['h']/1000,dim['d']/1000])
-                self.assertEqual(item['cad_path'],f'printables/{slug}.scad')
+                self.assertEqual(self.collection[slug]['cad_path'],f'printables/{slug}.scad')
 
     def test_second_pass_preview_matches_cad_dispatch(self):
         js=(ROOT/'src/models/refined_commerce_batch03_v2.js').read_text(encoding='utf-8')
