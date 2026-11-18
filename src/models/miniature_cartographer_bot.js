@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Miniature Cartographer Bot. 地图卷筒、测距头、膝轴、背部工具背包. Not physically print-tested. */
+/** V1.6 original visual design: Miniature Cartographer Bot. 地图卷筒、测距头、膝轴、背部工具背包. Not physically print-tested. */
 export const assetMeta = {
   "id": "characters.miniature-cartographer-bot.001",
   "slug": "miniature-cartographer-bot",
@@ -13,7 +13,7 @@ export const assetMeta = {
     "bot",
     "characters",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -27,7 +27,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/miniature-cartographer-bot.webp",
   "accent": "#81c7dc",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

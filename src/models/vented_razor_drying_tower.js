@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Vented Razor Drying Tower. 纵向通风翼、滴水盆、独立刀柄槽. Not physically print-tested. */
+/** V1.6 original visual design: Vented Razor Drying Tower. 纵向通风翼、滴水盆、独立刀柄槽. Not physically print-tested. */
 export const assetMeta = {
   "id": "bathroom.vented-razor-drying-tower.001",
   "slug": "vented-razor-drying-tower",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "tower",
     "bathroom",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/vented-razor-drying-tower.webp",
   "accent": "#7ac8bd",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

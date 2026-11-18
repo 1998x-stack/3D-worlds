@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Stackable Cotton Pad Caddy. 上下层开口、纸片导向柱、底部抽取槽. Not physically print-tested. */
+/** V1.6 original visual design: Stackable Cotton Pad Caddy. 上下层开口、纸片导向柱、底部抽取槽. Not physically print-tested. */
 export const assetMeta = {
   "id": "bathroom.stackable-cotton-pad-caddy.001",
   "slug": "stackable-cotton-pad-caddy",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "caddy",
     "bathroom",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/stackable-cotton-pad-caddy.webp",
   "accent": "#d9afb6",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

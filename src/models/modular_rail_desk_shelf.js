@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Modular Rail Desk Shelf. 双层轨道、滑动抽盒、背面理线. Not physically print-tested. */
+/** V1.6 original visual design: Modular Rail Desk Shelf. 双层轨道、滑动抽盒、背面理线. Not physically print-tested. */
 export const assetMeta = {
   "id": "furniture.modular-rail-desk-shelf.001",
   "slug": "modular-rail-desk-shelf",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "shelf",
     "furniture",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/modular-rail-desk-shelf.webp",
   "accent": "#c8a984",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

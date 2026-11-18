@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Pivot Book Display Stand. 倾斜书托、书页挡边、双侧轴套. Not physically print-tested. */
+/** V1.6 original visual design: Pivot Book Display Stand. 倾斜书托、书页挡边、双侧轴套. Not physically print-tested. */
 export const assetMeta = {
   "id": "furniture.pivot-book-display-stand.001",
   "slug": "pivot-book-display-stand",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "stand",
     "furniture",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/pivot-book-display-stand.webp",
   "accent": "#b0a6df",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
