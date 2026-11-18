@@ -60,3 +60,16 @@ Research observed **2026-11-18**. Signals are qualitative and non-exhaustive; Am
 ## Commercial differentiation and risk framing
 
 The selling points are hypothesis directions: configurable fit, readable indexing, approachable assembly, stylistic originality, organized workflow and source-editable geometry. Actual market value requires target-customer interviews, competing-product comparison, market permission checks and measured physical samples. The Blender/Three.js scene is not necessarily the printable geometry. Electrical/food-contact/structural products need appropriate safety/legal review; no unverified functionality is promised.
+
+## Actual V1.5 CAD geometry baseline (2026-11-18)
+
+The two candidate OpenSCAD designs were independently compiled locally using **OpenSCAD 2021.01** and audited with **trimesh 4.11.1**. Following correction of label flange envelope overshoot and a tangent rear-scoop surface, the final CAD sources now declare and compile the exact outer envelopes:
+
+| Original CAD | X × Y × Z mm | Mesh faces | Components | Watertight | Mesh volume mm³ |
+| --- | --- | ---: | ---: | --- | ---: |
+| `micro-screw-bin-lattice.scad` | 148 × 92 × 28 | 972 | 1 | yes | ≈101,172 |
+| `paint-pipette-drying-rack.scad` | 132 × 86 × 20 | 4,348 | 1 | yes | ≈197,781 |
+
+A further reproducible CI gate `python3 scripts/audit_v15_cad.py --output .cache/print/v15-cad-geometry.json` compiles **actual source files**, rejects compiler warnings and verifies envelope, manifold status, connectivity, winding and positive volume. The CAD master is in mm XYZ with Z up, while gallery metadata is width/height/depth in meters; note this is a coordinate remapping, not a promise that visual meshes equal CAD bodies.
+
+**Not completed:** full minimum-wall analysis, measured material shrinkage, interference/fit coupons, slicer toolpaths, real prints, practical stability/load test, chemical exposure assessment, sales research. No SKU is approved for production or sale.
