@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Paint Pipette Drying Rack. 3×7孔位、前侧标识、无负重认证、清洗边界. Not physically print-tested. */
+/** V1.6 original visual design: Paint Pipette Drying Rack. 3×7孔位、前侧标识、无负重认证、清洗边界. Not physically print-tested. */
 export const assetMeta = {
   "id": "print-commerce.paint-pipette-drying-rack.001",
   "slug": "paint-pipette-drying-rack",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "rack",
     "print-commerce",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/paint-pipette-drying-rack.webp",
   "accent": "#a9c7ac",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Deep Space Observation Relay. 抛物面天线、光伏翼、姿态喷口和桁架. Not physically print-tested. */
+/** V1.6 original visual design: Deep Space Observation Relay. 抛物面天线、光伏翼、姿态喷口和桁架. Not physically print-tested. */
 export const assetMeta = {
   "id": "scifi.deep-space-observation-relay.001",
   "slug": "deep-space-observation-relay",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "relay",
     "scifi",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/deep-space-observation-relay.webp",
   "accent": "#97b1e7",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
