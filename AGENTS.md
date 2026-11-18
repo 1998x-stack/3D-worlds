@@ -16,6 +16,22 @@ An acceptable agent change:
 
 **Never claim a successful test, production deploy, model count, LOD compression improvement, printer fit, physical test, legal clearance or commercial sales result without evidence from the actual run/source.**
 
+## V1.5 skill matrix and complex-system extension
+
+The canonical executable and metadata implementations remain in root `src/`, `catalog/`, `printables/` and `scripts/`; the new portable skills route work and provide verifiable structured inputs, not forked source-of-truth geometry engines.
+
+| User goal | Additional skill |
+| --- | --- |
+| Amazon/eBay/Hacker News inspired 30-model collection | `market-intelligence` before `procedural-model-design` |
+| Add/refine visually distinctive Three.js scene geometry | `procedural-model-design` + existing `threejs-model-builder` |
+| Create mm-dimensioned STL/3MF CAD prototypes | `parametric-print-cad` |
+| Future cars, aircraft, buildings, articulated mechanical systems | `assembly-world-systems` |
+| Test, review, release, deploy, catalog publication | `qa-and-release` |
+
+All five new skill types must be mirrored byte-for-byte in `.codex/skills/`, `.pi/skills/`, `.claude/skills/` including `SKILL.md`, `references/CONTRACT.md`, `scripts/check.py`, and `assets/brief.example.json`. Execute `python3 scripts/verify_skill_packages_v15.py` in addition to the legacy mirror checker. Follow [Architecture and proof gates](docs/skill-architecture-v15.md).
+
+Use release gate labels precisely: `source_committed`, `geometry_validated`, `rendered`, `cad_compiled`, `slicer_checked`, `physically_tested`. A visual GLB does not prove CAD printability or fit. The V1.5 batch records 30 original visual models across all 14 categories, with two optional CAD prototypes and no print-manufacturing approval.
+
 ## 1. Instruction precedence and where to read
 
 Follow, in order:

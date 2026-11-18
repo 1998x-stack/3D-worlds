@@ -1,0 +1,17 @@
+{
+  "id": "tools.example-measuring-stand.001",
+  "slug": "example-measuring-stand",
+  "category": "tools",
+  "dimensions_m": [
+    0.18,
+    0.14,
+    0.12
+  ],
+  "hero_parts": [
+    "support-plinth",
+    "measuring-track",
+    "indexed-sliders",
+    "retention-rails"
+  ],
+  "quality_gate": "source_geometry_review_required"
+}

@@ -1,0 +1,20 @@
+{
+  "batch": "v1.5",
+  "expected_count": 30,
+  "checks": [
+    {
+      "name": "catalog-validate",
+      "status": "pending"
+    },
+    {
+      "name": "geometry-validate",
+      "status": "pending"
+    },
+    {
+      "name": "browser-render",
+      "status": "pending"
+    }
+  ],
+  "publish_state": "pr_open",
+  "manufacturing_status": "unverified_scene_mesh"
+}

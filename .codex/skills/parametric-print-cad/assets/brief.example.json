@@ -1,0 +1,18 @@
+{
+  "slug": "example-coupon",
+  "cad_path": "printables/example-coupon.scad",
+  "units": "mm",
+  "material_assumption": "PLA trial only",
+  "dimensions_mm": [
+    80,
+    40,
+    15
+  ],
+  "stage": "cad_source_only",
+  "unverified": [
+    "printed-fit",
+    "global-min-wall",
+    "strength",
+    "slicer-approval"
+  ]
+}

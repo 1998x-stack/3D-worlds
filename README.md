@@ -21,6 +21,7 @@
 ## Contents
 
 - [What is 3D Worlds?](#what-is-3d-worlds)
+- [V1.5 extensible skills and 30-model batch](#v15--extensible-multi-agent-skills-and-30-category-market-research-batch)
 - [V1.4.1 maker model fine-detail refresh](#v141--maker-model-fine-detail-refresh)
 - [V1.4.3 CAD fit coupons and offline slicing](#v143--two-cad-pilots-geometry-and-toolpaths)
 - [V1.4.2 manufacturing risks and CAD prototypes](#v142--30-model-print-risk-survey-and-cad-pilots)
@@ -54,6 +55,12 @@ The project serves several different audiences:
 | AI coding agents | [`AGENTS.md`](AGENTS.md), [portable Skill](.codex/skills/threejs-model-builder/SKILL.md), local MCP | Searchable IDs, attribution-aware source and import guidance |
 | Designers and makers | [Print Workbench](https://1998x-stack.github.io/3D-worlds/#print-workflow), `printables/` | Initial geometric drafts and editable CAD prototypes |
 | Contributors and maintainers | `catalog/`, `scripts/`, `tests/` and GitHub Actions | A reproducible path to add, validate, review, and publish assets |
+
+## V1.5 · Extensible multi-agent skills and 30-category market research batch
+
+New work uses a five-skill domain system mirrored under `.codex/skills/`, `.claude/skills/` and `.pi/skills/`, alongside the preserved `threejs-model-builder`. See [Skill architecture](docs/skill-architecture-v15.md), [V1.5 model design and evidence](docs/30-assets-v15.md), and [release manifest](catalog/collections/v15.json).
+
+The V1.5 collection targets **30 original models across all 14 categories**, including two separately dimensioned, **unverified** OpenSCAD candidate CAD sources. The 565-model V1.4 catalog snapshot is historical; the additive V1.5 target is **595**. Marketplace listings and HN technical discussions are inspiration, not verified demand, copied geometry permissions or manufacturing sign-off. Run `python3 scripts/verify_skill_packages_v15.py` to verify portable bundles, then use the existing catalog and model/Pages pipeline.
 
 ## V1.4.1 · Maker model fine-detail refresh
 
