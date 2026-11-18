@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Moss Terrace Rock Garden. 三级地形、页岩断层、苔藓簇和蘑菇. Not physically print-tested. */
+/** V1.6 original visual design: Moss Terrace Rock Garden. 三级地形、页岩断层、苔藓簇和蘑菇. Not physically print-tested. */
 export const assetMeta = {
   "id": "nature.moss-terrace-rock-garden.001",
   "slug": "moss-terrace-rock-garden",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "garden",
     "nature",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/moss-terrace-rock-garden.webp",
   "accent": "#86bb91",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

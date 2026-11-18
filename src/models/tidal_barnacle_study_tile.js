@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Tidal Barnacle Study Tile. 岩池、藤壶孔缘、海藻脊纹、海星. Not physically print-tested. */
+/** V1.6 original visual design: Tidal Barnacle Study Tile. 岩池、藤壶孔缘、海藻脊纹、海星. Not physically print-tested. */
 export const assetMeta = {
   "id": "nature.tidal-barnacle-study-tile.001",
   "slug": "tidal-barnacle-study-tile",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "tile",
     "nature",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/tidal-barnacle-study-tile.webp",
   "accent": "#80b1c8",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

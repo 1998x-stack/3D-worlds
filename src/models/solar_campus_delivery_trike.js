@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Solar Campus Delivery Trike. 前独轮、后双轮、货箱格栅、车顶太阳能片. Not physically print-tested. */
+/** V1.6 original visual design: Solar Campus Delivery Trike. 前独轮、后双轮、货箱格栅、车顶太阳能片. Not physically print-tested. */
 export const assetMeta = {
   "id": "vehicles.solar-campus-delivery-trike.001",
   "slug": "solar-campus-delivery-trike",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "trike",
     "vehicles",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/solar-campus-delivery-trike.webp",
   "accent": "#e3b069",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

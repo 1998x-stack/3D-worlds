@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Modular Rail Maintenance Cart. 轨距车轮、检修平台、线卷和警示条. Not physically print-tested. */
+/** V1.6 original visual design: Modular Rail Maintenance Cart. 轨距车轮、检修平台、线卷和警示条. Not physically print-tested. */
 export const assetMeta = {
   "id": "vehicles.modular-rail-maintenance-cart.001",
   "slug": "modular-rail-maintenance-cart",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "cart",
     "vehicles",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/modular-rail-maintenance-cart.webp",
   "accent": "#d4a27a",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

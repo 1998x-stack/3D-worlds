@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Forest Seed Courier Figurine. 种子背包、披风纹路、叶帽、木质路标. Not physically print-tested. */
+/** V1.6 original visual design: Forest Seed Courier Figurine. 种子背包、披风纹路、叶帽、木质路标. Not physically print-tested. */
 export const assetMeta = {
   "id": "characters.forest-seed-courier-figurine.001",
   "slug": "forest-seed-courier-figurine",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "figurine",
     "characters",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/forest-seed-courier-figurine.webp",
   "accent": "#a8c386",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
