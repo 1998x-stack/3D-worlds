@@ -13,3 +13,9 @@ node scripts/audit_assembly.mjs examples/assembly/six-wheel-rover.json
 ```
 
 Next independent steps: closed-loop multi-constraint solver; GLB/CAD collision hulls; continuous swept-volume checks; forces, inertia, contact and physically measured assembly clearances. Keep verified stages and rejected stages separate.
+
+## Real browser viewer
+
+Open `/3D-worlds/assembly.html` after the multi-page Vite build. It draws the seven part proxies, supports part-tree selection, visibility, a nonphysical exploded visual offset, six live joint sliders, a four-step semantic assembly viewer and current-state proxy collision reporting. `scripts/smoke_assembly.mjs` drives a real Chromium browser to test these controls.
+
+The visual explosion offset is not passed to the kinematic solver or collision checker. Detected collisions reflect the original joint transforms and box proxies, not the exploded illustration.
