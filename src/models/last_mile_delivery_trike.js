@@ -582,6 +582,137 @@ export function createLastMileDeliveryTrike() { return buildRecipe({
       ],
       "c": 2569280,
       "finish": "matte"
+    },
+    {
+      "t": "rounded-box",
+      "n": "cargo-side-lid",
+      "p": [
+        0.27,
+        1.58,
+        0
+      ],
+      "s": [
+        1.19,
+        0.12,
+        0.9
+      ],
+      "c": 11713692,
+      "finish": "matte"
+    },
+    {
+      "t": "rod",
+      "n": "front-steering-fork",
+      "from": [
+        -0.87,
+        0.39,
+        0
+      ],
+      "to": [
+        -0.79,
+        1.41,
+        0
+      ],
+      "r": 0.052,
+      "c": 11848401,
+      "finish": "metal"
+    },
+    {
+      "t": "rod",
+      "n": "curved-handlebar",
+      "from": [
+        -1.11,
+        1.43,
+        -0.42
+      ],
+      "to": [
+        -1.11,
+        1.43,
+        0.42
+      ],
+      "r": 0.04,
+      "c": 2241341,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "rider-saddle",
+      "p": [
+        -0.37,
+        1.18,
+        0
+      ],
+      "s": [
+        0.48,
+        0.17,
+        0.33
+      ],
+      "c": 2437434,
+      "finish": "rubber"
+    },
+    {
+      "t": "cylinder",
+      "n": "front-lamp",
+      "p": [
+        -0.98,
+        1.16,
+        0
+      ],
+      "s": [
+        0.19,
+        0.15,
+        0.19
+      ],
+      "c": 16765566,
+      "finish": "glow"
+    },
+    {
+      "t": "rod",
+      "n": "pedal-axle",
+      "from": [
+        -0.26,
+        0.53,
+        -0.32
+      ],
+      "to": [
+        -0.26,
+        0.53,
+        0.32
+      ],
+      "r": 0.045,
+      "c": 10402755,
+      "finish": "metal"
+    },
+    {
+      "t": "rounded-box",
+      "n": "left-pedal",
+      "p": [
+        -0.28,
+        0.53,
+        -0.47
+      ],
+      "s": [
+        0.3,
+        0.05,
+        0.17
+      ],
+      "c": 2305589,
+      "finish": "rubber"
+    },
+    {
+      "t": "rounded-box",
+      "n": "right-pedal",
+      "p": [
+        -0.28,
+        0.53,
+        0.47
+      ],
+      "s": [
+        0.3,
+        0.05,
+        0.17
+      ],
+      "c": 2305589,
+      "finish": "rubber"
     }
   ]
 }); }
