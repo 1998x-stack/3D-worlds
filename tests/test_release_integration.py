@@ -33,9 +33,9 @@ class ReleaseIntegrationTests(unittest.TestCase):
 
     def test_release_gates_are_kept(self):
         workflow = (ROOT / ".github/workflows/pages.yml").read_text()
-        for marker in ("cad-audit:", "verify:", "geometry-shard:", "verify_skill_packages_v15.py",
+        for marker in ("cad-audit:", "verify:", "geometry-part-0:", "geometry-part-1:", "geometry-part-2:", "geometry-part-3:", "verify_skill_packages_v15.py",
                        "audit_v15_cad.py", "v15_market_assets.test.mjs",
-                       "audit_refined_commerce_batch03.py", "needs: [verify, cad-audit, geometry-shard]"):
+                       "audit_refined_commerce_batch03.py", "needs: [verify, cad-audit, geometry-part-0, geometry-part-1, geometry-part-2, geometry-part-3]"):
             self.assertIn(marker, workflow)
         self.assertNotIn("run: npm ci", workflow)
 
