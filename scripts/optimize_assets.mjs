@@ -6,6 +6,7 @@ import { NodeIO } from '@gltf-transform/core';
 import { EXTMeshoptCompression } from '@gltf-transform/extensions';
 import { prune,dedup,weld,simplify,meshopt } from '@gltf-transform/functions';
 import { MeshoptEncoder,MeshoptDecoder,MeshoptSimplifier } from 'meshoptimizer';
+import {fingerprintAsset,loadBuildState,saveBuildState} from './asset_fingerprints.mjs';
 import { readFile,writeFile,mkdir,stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
@@ -19,6 +20,12 @@ const ix=args.indexOf('--limit');
 const limit=ix<0?all.length:Number(args[ix+1]);
 if(!Number.isInteger(limit)||limit<1||limit>10000)throw Error('Invalid --limit');
 const assets=all.slice(0,limit);
+const incremental=args.includes('--incremental');
+const state=await loadBuildState();
+const oldIndex=await readFile(resolve(ROOT,'public/generated/index.json'),'utf8')
+  .then(s=>new Map(JSON.parse(s).entries.map(e=>[e.asset_id,e])))
+  .catch(error=>{if(error.code==='ENOENT')return new Map();throw error;});
+const present=async path=>stat(path).then(s=>s.isFile()&&s.size>0).catch(()=>false);
 await Promise.all([MeshoptEncoder.ready,MeshoptDecoder.ready]);
 const io=new NodeIO().registerExtensions([EXTMeshoptCompression])
  .registerDependencies({'meshopt.encoder':MeshoptEncoder,'meshopt.decoder':MeshoptDecoder});
@@ -36,6 +43,15 @@ function measure(doc){
 }
 const entries=[];
 for(const asset of assets){
+ const fingerprint=(await fingerprintAsset(asset,{stage:'lod'})).sha256;
+ const cached=oldIndex.get(asset.id);
+ if(incremental && state.lod[asset.id]?.fingerprint===fingerprint &&
+    cached?.variants?.length===3 &&
+    (await Promise.all(cached.variants.map(v=>present(resolve(ROOT,v.path))))).every(Boolean)){
+   entries.push(cached);
+   console.log('REUSED OPTIMIZED',asset.slug);
+   continue;
+ }
  const input=resolve(ROOT,'.cache/raw',asset.slug+'.glb');
  const inputBytes=(await stat(input)).size;
  const initial=await io.read(input);
@@ -56,6 +72,8 @@ for(const asset of assets){
  }
  entries.push({asset_id:asset.id,slug:asset.slug,original_bytes:inputBytes,variants,
    lod0_delta_percent:Math.round((1-variants[0].bytes/inputBytes)*10000)/100});
+ state.lod[asset.id]={fingerprint,variants:3};
+ await saveBuildState(state);
  console.log('OPTIMIZED',asset.slug,variants.map(v=>v.bytes),variants.map(v=>v.triangles));
 }
 await writeFile(resolve(outputDir,'index.json'),JSON.stringify({
