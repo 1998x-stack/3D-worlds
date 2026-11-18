@@ -14,7 +14,7 @@ test('30 new original assets are additive, unique and spread across all 14 categ
   assert.equal(new Set(items.map(x=>x.slug)).size,30);
   assert.equal(new Set(items.map(x=>x.category)).size,14);
   assert.deepEqual(new Set(items.map(x=>x.slug)),new Set(V15_KEYS));
-  assert.equal(catalog.assets.length,595);
+  assert.equal(catalog.assets.length,625);
   assert.equal(items.filter(x=>Boolean(x.cad_path)).length,2);
 });
 for(const item of items){
