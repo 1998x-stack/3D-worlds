@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Constellation Wall Key Rack. 星图点线、挂钩列、悬挂定位孔. Not physically print-tested. */
+/** V1.6 original visual design: Constellation Wall Key Rack. 星图点线、挂钩列、悬挂定位孔. Not physically print-tested. */
 export const assetMeta = {
   "id": "decor.constellation-wall-key-rack.001",
   "slug": "constellation-wall-key-rack",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "rack",
     "decor",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/constellation-wall-key-rack.webp",
   "accent": "#7db2bf",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."

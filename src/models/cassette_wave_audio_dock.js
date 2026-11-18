@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Cassette Wave Audio Dock. 音频旋钮、磁带窗、栅格扬声口和托架. Not physically print-tested. */
+/** V1.6 original visual design: Cassette Wave Audio Dock. 音频旋钮、磁带窗、栅格扬声口和托架. Not physically print-tested. */
 export const assetMeta = {
   "id": "electronics.cassette-wave-audio-dock.001",
   "slug": "cassette-wave-audio-dock",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "dock",
     "electronics",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/cassette-wave-audio-dock.webp",
   "accent": "#d9b485",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
