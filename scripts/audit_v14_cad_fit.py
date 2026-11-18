@@ -51,25 +51,30 @@ def scan_intervals(mesh: trimesh.Trimesh, *, plane_axis: int,
     origin[plane_axis] = plane_value
     segments = trimesh.intersections.mesh_plane(mesh, plane_normal=normal,
                                                  plane_origin=origin)
-    crossings = []
-    for line in segments:
-        t0, t1 = line[:, line_axis]
-        # Half-open rule excludes duplicate tangent crossings at vertices.
-        if abs(t0-t1) <= 1.e-8 or not min(t0, t1) <= line_value < max(t0, t1):
-            continue
-        mix = (line_value-t0)/(t1-t0)
-        x = line[0, measure_axis] + mix * (line[1, measure_axis]-line[0, measure_axis])
-        if not math.isfinite(x):
-            raise ValueError("Non-finite STL plane intersection")
-        crossings.append(float(x))
-    crossings.sort()
-    unique = []
-    for x in crossings:
-        if not unique or abs(unique[-1]-x) > 1.e-4:
-            unique.append(x)
-    if len(unique) % 2 or not unique:
-        raise ValueError(f"STL section has odd/empty intersection count: {len(unique)}")
-    return [(unique[i], unique[i+1]) for i in range(0,len(unique),2)]
+    # Triangle diagonal vertices may fall exactly on the queried line and
+    # appear on opposite sides by roundoff (~1e-15). Retry a tiny shift,
+    # far below our 0.065 mm geometry measurement tolerance.
+    last_count = 0
+    for probe in (line_value, line_value+1.e-5, line_value-1.e-5):
+        crossings = []
+        for line in segments:
+            t0, t1 = line[:, line_axis]
+            if abs(t0-t1) <= 1.e-8 or not min(t0,t1) <= probe < max(t0,t1):
+                continue
+            mix=(probe-t0)/(t1-t0)
+            x=line[0,measure_axis]+mix*(line[1,measure_axis]-line[0,measure_axis])
+            if not math.isfinite(x):
+                raise ValueError("Non-finite STL plane intersection")
+            crossings.append(float(x))
+        crossings.sort()
+        unique=[]
+        for x in crossings:
+            if not unique or abs(unique[-1]-x)>1.e-4:
+                unique.append(x)
+        if unique and len(unique)%2==0:
+            return [(unique[i],unique[i+1]) for i in range(0,len(unique),2)]
+        last_count=len(unique)
+    raise ValueError(f"STL section has odd/empty intersection count: {last_count}")
 
 
 def between_gaps(intervals):
