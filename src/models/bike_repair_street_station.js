@@ -1,5 +1,5 @@
 import { buildMarketV15 } from './market_v15_builder.js';
-/** V1.5 original visual design: Bike Repair Street Station. 轮托、气泵、工具挂点、维修指示牌. Not physically print-tested. */
+/** V1.6 original visual design: Bike Repair Street Station. 轮托、气泵、工具挂点、维修指示牌. Not physically print-tested. */
 export const assetMeta = {
   "id": "urban.bike-repair-street-station.001",
   "slug": "bike-repair-street-station",
@@ -14,7 +14,7 @@ export const assetMeta = {
     "station",
     "urban",
     "original",
-    "v15",
+    "v16",
     "market-inspired"
   ],
   "dimensions_m": [
@@ -28,7 +28,7 @@ export const assetMeta = {
   "license": "MIT",
   "author": "3D Worlds",
   "style": "Market Research Originals",
-  "collection": "v1.5",
+  "collection": "v1.6",
   "preview_path": "public/thumbs/bike-repair-street-station.webp",
   "accent": "#83b0a3",
   "provenance_note": "Original 3D Worlds scene inspired by qualitative public market/maker signals; no reused third-party geometry, verified demand, certified printability or physical testing."
